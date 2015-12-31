@@ -1,0 +1,1 @@
+typedef StructName = {nameAltString:String, nameFullString:String};

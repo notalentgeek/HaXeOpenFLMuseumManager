@@ -1,0 +1,1 @@
+enum EnumMuseumType{ EXH; FLR; ROM; }
