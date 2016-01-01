@@ -35,11 +35,12 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("CollectionGlobal","\x81","\x6a","\xb4","\x3d"); }
 
-		Array< ::Dynamic > visitorObjectArray;
+		int exhibitionFullThresholdInt;
 		Array< ::Dynamic > exhibitionObjectArray;
 		Array< ::Dynamic > floorObjectArray;
 		Array< ::Dynamic > roomObjectArray;
 		Array< ::Dynamic > tagObjectArray;
+		Array< ::Dynamic > visitorObjectArray;
 		virtual Void AddExhibitionObjectArrayVoid( ::ObjectMuseum _exhibitionObject);
 		Dynamic AddExhibitionObjectArrayVoid_dyn();
 
@@ -55,6 +56,12 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		virtual Void AddVisitorObjectArrayVoid( ::ObjectVisitor _visitorObject);
 		Dynamic AddVisitorObjectArrayVoid_dyn();
 
+		virtual Void DetermineExhibitionFullThresholdInt( );
+		Dynamic DetermineExhibitionFullThresholdInt_dyn();
+
+		virtual int GetExhibitionFullThresholdInt( );
+		Dynamic GetExhibitionFullThresholdInt_dyn();
+
 		virtual Array< ::Dynamic > GetExhibitionObjectArray( );
 		Dynamic GetExhibitionObjectArray_dyn();
 
@@ -69,6 +76,9 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 
 		virtual Array< ::Dynamic > GetVisitorObjectArray( );
 		Dynamic GetVisitorObjectArray_dyn();
+
+		virtual Void SetExhibitionFullThresholdInt( int _exhibitionFullThresholdInt);
+		Dynamic SetExhibitionFullThresholdInt_dyn();
 
 		virtual Void SetExhibitionObjectArrayVoid( Array< ::Dynamic > _exhibitionObjectArray);
 		Dynamic SetExhibitionObjectArrayVoid_dyn();
