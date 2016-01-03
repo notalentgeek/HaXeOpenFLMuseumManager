@@ -2,11 +2,25 @@
 <set name="HXCPP_API_LEVEL" value="321" />
 <files id="haxe">
 <compilerflag value="-Iinclude"/>
+  <file name="src/haxe/ds/ObjectMap.cpp">
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+  </file>
+  <file name="src/haxe/IMap.cpp">
+   <depend name="include/haxe/IMap.h"/>
+  </file>
   <file name="src/Std.cpp">
    <depend name="include/Std.h"/>
   </file>
   <file name="src/ObjectVisitor.cpp">
+   <depend name="include/CollectionFunction.h"/>
+   <depend name="include/CollectionGlobal.h"/>
+   <depend name="include/EnumMuseumType.h"/>
+   <depend name="include/ObjectMuseum.h"/>
+   <depend name="include/ObjectTag.h"/>
    <depend name="include/ObjectVisitor.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
   </file>
   <file name="src/ObjectTag.cpp">
    <depend name="include/ObjectTag.h"/>
@@ -34,6 +48,7 @@
    <depend name="include/CollectionGlobal.h"/>
    <depend name="include/EnumMuseumType.h"/>
    <depend name="include/ObjectMuseum.h"/>
+   <depend name="include/ObjectTag.h"/>
   </file>
   <file name="src/EnumMuseumType.cpp">
    <depend name="include/EnumMuseumType.h"/>

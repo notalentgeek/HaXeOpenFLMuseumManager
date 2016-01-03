@@ -9,6 +9,7 @@ HX_DECLARE_CLASS0(CollectionFunction)
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(EnumMuseumType)
 HX_DECLARE_CLASS0(ObjectMuseum)
+HX_DECLARE_CLASS0(ObjectTag)
 
 
 class HXCPP_CLASS_ATTRIBUTES  CollectionFunction_obj : public hx::Object{
@@ -34,8 +35,14 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionFunction_obj : public hx::Object{
 		static Void ClearArray( cpp::ArrayBase _dynamicArray);
 		static Dynamic ClearArray_dyn();
 
-		static ::ObjectMuseum FindMuseumNameObject( ::CollectionGlobal _collectionGlobal,::EnumMuseumType _enumMuseumType,::String _nameAlt);
-		static Dynamic FindMuseumNameObject_dyn();
+		static ::ObjectMuseum FindMuseumObject( ::CollectionGlobal _collectionGlobalObject,::EnumMuseumType _enumMuseumType,::String _nameAlt);
+		static Dynamic FindMuseumObject_dyn();
+
+		static ::ObjectTag FindTagObject( ::CollectionGlobal _collectionGlobalObject,::String _nameAlt);
+		static Dynamic FindTagObject_dyn();
+
+		static bool IsExistInArrayBool( cpp::ArrayBase _array,Dynamic _element);
+		static Dynamic IsExistInArrayBool_dyn();
 
 };
 

@@ -4,6 +4,7 @@ namespace hx {
 const char *__hxcpp_all_files[] = {
 #ifdef HXCPP_DEBUGGER
 "/usr/lib/haxe/std/cpp/_std/Std.hx",
+"/usr/lib/haxe/std/cpp/_std/haxe/ds/ObjectMap.hx",
 "CollectionFunction.hx",
 "CollectionGlobal.hx",
 "Main.hx",
@@ -16,6 +17,7 @@ const char *__hxcpp_all_files[] = {
 const char *__hxcpp_all_files_fullpath[] = {
 #ifdef HXCPP_DEBUGGER
 "/usr/lib/haxe/std/cpp/_std/Std.hx",
+"/usr/lib/haxe/std/cpp/_std/haxe/ds/ObjectMap.hx",
 "/home/notalentgeek/Desktop/Programming/HaXeMuseumSimulator/CollectionFunction.hx",
 "/home/notalentgeek/Desktop/Programming/HaXeMuseumSimulator/CollectionGlobal.hx",
 "/home/notalentgeek/Desktop/Programming/HaXeMuseumSimulator/Main.hx",
@@ -34,6 +36,7 @@ const char *__hxcpp_all_classes[] = {
 "ObjectTag",
 "ObjectVisitor",
 "Std",
+"haxe.ds.ObjectMap",
 #endif
  0 };
 } // namespace hx

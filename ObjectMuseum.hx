@@ -2,18 +2,18 @@ import      CollectionEnum      ;
 import      CollectionStruct    ;
 import      CollectionFunction  ;
 class       ObjectMuseum                                            {
-    private var childObjectArray            :Array<ObjectMuseum>    = new Array<ObjectMuseum>();
+    private var childStruct                 :StructChild            = { childMuseumObjectArray:new Array<ObjectMuseum>(), childVisitorObjectArray:new Array<ObjectVisitor>() };
     private var collectionGlobalObject      :CollectionGlobal       = null;
+    private var explanationStringArray      :Array<String>          = new Array<String>();
     private var fullBool                    :Bool                   = false;
-    private var indexGlobalInt              :Int                    = 0;
-    private var indexLocalInt               :Int                    = 0;
+    private var indexGlobalInt              :Int                    = -1;
+    private var indexLocalInt               :Int                    = -1;
     private var nameStruct                  :StructName             = { nameAltString:"", nameFullString:"" };
     private var parentObject                :ObjectMuseum           = null;
     private var siblingObjectArray          :Array<ObjectMuseum>    = new Array<ObjectMuseum>();
     private var tagObjectArray              :Array<ObjectTag>       = new Array<ObjectTag>();
     private var typeEnum                    :EnumMuseumType         = null;
     private var visitorCurrentInt           :Int                    = 0;
-    private var visitorObjectArray          :Array<ObjectVisitor>   = new Array<ObjectVisitor>();
     private var visitorTotalInt             :Int                    = 0;
     public      function new                                        (
         _collectionGlobalObject             :CollectionGlobal,
@@ -28,31 +28,21 @@ class       ObjectMuseum                                            {
         typeEnum                                                    =  _typeEnum;
         ChangeParentVoid                                            (  _parentNameAltString);
     }
+    private     function AddChildVisitorVoid                        (_visitorObject     :ObjectVisitor  ){ childStruct.childVisitorObjectArray.push(_visitorObject); }
+    private     function AddTagVoid                                 (_tagObject         :ObjectTag      ){ tagObjectArray.push(_tagObject); }
     private     function ChangeParentVoid                           (_parentNameAltString:String){
-             if(typeEnum == EXH)                                    { parentObject = (CollectionFunction.FindMuseumNameObject(collectionGlobalObject, ROM, _parentNameAltString)); } /*PENDING: Please add verification whether the program capable of finding the parent object or not.*/
-        else if(typeEnum == ROM)                                    { parentObject = (CollectionFunction.FindMuseumNameObject(collectionGlobalObject, FLR, _parentNameAltString)); } /*PENDING: Please add verification whether the program capable of finding the parent object or not.*/
-        else                                                        { parentObject = null; }
+             if(parentObject    != null)                            { parentObject  .GetChildStruct().childMuseumObjectArray.remove(this); }
+             if(typeEnum        == EXH )                            { parentObject  = (CollectionFunction.FindMuseumObject(collectionGlobalObject, ROM, _parentNameAltString)); } /*PENDING: Please add verification whether the program capable of finding the parent object or not.*/
+        else if(typeEnum        == ROM )                            { parentObject  = (CollectionFunction.FindMuseumObject(collectionGlobalObject, FLR, _parentNameAltString)); } /*PENDING: Please add verification whether the program capable of finding the parent object or not.*/
+        else                                                        { parentObject  = null; }
+             if(parentObject    != null)                            {
+            parentObject.DetermineChildVoid                         ();
+                         DetermineSiblingVoid                       ();
+        }
     }
-    private     function DetermineChildVoid                         (){
-        CollectionFunction.ClearArray                               (childObjectArray);
-             if (typeEnum == FLR){
-            var loopCounterInt = 0;
-            while(loopCounterInt < collectionGlobalObject.GetRoomObjectArray().length){
-                if(nameStruct.nameAltString                         == collectionGlobalObject.GetRoomObjectArray()[loopCounterInt].GetParentObject().GetNameStruct().nameAltString){
-                    childObjectArray.push                           (  collectionGlobalObject.GetRoomObjectArray()[loopCounterInt]);
-                }
-                loopCounterInt ++;
-            }
-        }
-        else if (typeEnum == ROM){
-            var loopCounterInt = 0;
-            while(loopCounterInt < collectionGlobalObject.GetExhibitionObjectArray().length){
-                if(nameStruct.nameAltString                         == collectionGlobalObject.GetExhibitionObjectArray()[loopCounterInt].GetParentObject().GetNameStruct().nameAltString){
-                    childObjectArray.push                           (  collectionGlobalObject.GetExhibitionObjectArray()[loopCounterInt]);
-                }
-                loopCounterInt ++;
-            }
-        }
+    private     function DetermineFullVoid                          (){
+             if(visitorCurrentInt >= collectionGlobalObject.GetExhibitionFullThresholdInt()){ fullBool = true ; }
+        else if(visitorCurrentInt <  collectionGlobalObject.GetExhibitionFullThresholdInt()){ fullBool = false; }
     }
     private     function DetermineIndexVoid                         (){
         DetermineIndexGlobalVoid                                    ();
@@ -100,11 +90,51 @@ class       ObjectMuseum                                            {
             loopCounterInt ++;
         }
     }
+    private     function RemoveTagByNameAltVoid                     (_nameAltString     :String         ){ tagObjectArray.remove(CollectionFunction.FindTagObject(collectionGlobalObject, _nameAltString)); }
+    private     function RemoveTagByObjectVoid                      (_tagObject         :ObjectTag      ){ tagObjectArray.remove(_tagObject); }
     private     function ResetVoid                                  (){
         fullBool                                                    =  false;
         visitorCurrentInt                                           =  0;
         visitorTotalInt                                             =  0;
     }
-    public      function GetNameStruct                              (){ return nameStruct       ; }
-    public      function GetParentObject                            (){ return parentObject     ; }
+    public      function DetermineChildVoid                         (){
+        CollectionFunction.ClearArray                               (childStruct.childMuseumObjectArray);
+        CollectionFunction.ClearArray                               (childStruct.childVisitorObjectArray);
+             if(typeEnum == EXH){
+            var   loopCounterInt = 0;
+            while(loopCounterInt < collectionGlobalObject.GetVisitorObjectArray().length){
+                if(nameStruct.nameAltString                         == collectionGlobalObject.GetVisitorObjectArray()[loopCounterInt].GetExhibitionCurrentObject().GetNameStruct().nameAltString){
+                    childStruct.childVisitorObjectArray.push        (  collectionGlobalObject.GetVisitorObjectArray()[loopCounterInt]);
+                }
+                loopCounterInt ++;
+            }
+        }
+        else if(typeEnum == FLR){
+            var   loopCounterInt = 0;
+            while(loopCounterInt < collectionGlobalObject.GetRoomObjectArray().length){
+                if(nameStruct.nameAltString                         == collectionGlobalObject.GetRoomObjectArray()[loopCounterInt].GetParentObject().GetNameStruct().nameAltString){
+                    childStruct.childMuseumObjectArray.push         (  collectionGlobalObject.GetRoomObjectArray()[loopCounterInt]);
+                }
+                loopCounterInt ++;
+            }
+        }
+        else if(typeEnum == ROM){
+            var   loopCounterInt = 0;
+            while(loopCounterInt < collectionGlobalObject.GetExhibitionObjectArray().length){
+                if(nameStruct.nameAltString                         == collectionGlobalObject.GetExhibitionObjectArray()[loopCounterInt].GetParentObject().GetNameStruct().nameAltString){
+                    childStruct.childMuseumObjectArray.push         (  collectionGlobalObject.GetExhibitionObjectArray()[loopCounterInt]);
+                }
+                loopCounterInt ++;
+            }
+        }
+    }
+    public      function GetChildStruct                             ()                          { return childStruct                ; }
+    public      function GetExplanationStringArray                  ()                          { return explanationStringArray     ; }
+    public      function GetNameStruct                              ()                          { return nameStruct                 ; }
+    public      function GetParentObject                            ()                          { return parentObject               ; }
+    public      function GetTagObjectArray                          ()                          { return tagObjectArray             ; }
+    public      function GetVisitorCurrentInt                       ()                          { return visitorCurrentInt          ; }
+    public      function GetVisitorTotalInt                         ()                          { return visitorTotalInt            ; }
+    public      function SetVisitorCurrentInt                       (_visitorCurrentInt :Int)   { visitorCurrentInt         = _visitorCurrentInt    ; }
+    public      function SetVisitorTotalInt                         (_visitorTotalInt   :Int)   { visitorTotalInt           = _visitorTotalInt      ; }
 }

@@ -35,11 +35,8 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectTag_obj : public hx::Object{
 		Dynamic nameStruct;
 		Array< ::String > tagStringArray;
 		::String typeString;
-		virtual ::String GetNameAltString( );
-		Dynamic GetNameAltString_dyn();
-
-		virtual ::String GetNameFullString( );
-		Dynamic GetNameFullString_dyn();
+		virtual Dynamic GetNameStruct( );
+		Dynamic GetNameStruct_dyn();
 
 		virtual Array< ::String > GetTagStringArray( );
 		Dynamic GetTagStringArray_dyn();

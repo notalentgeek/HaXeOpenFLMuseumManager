@@ -14,8 +14,7 @@ class       ObjectTag                                       {
         SetTagStringArrayVoid                               (_tagStringArray    );
         SetTypeStringVoid                                   (_typeString        );
     }
-    public      function GetNameAltString                   ()                                                      { return                    nameStruct.nameAltString    ; }
-    public      function GetNameFullString                  ()                                                      { return                    nameStruct.nameFullString   ; }
+    public      function GetNameStruct                      ()                                                      { return                    nameStruct                  ; }
     public      function GetTagStringArray                  ()                                                      { return                    tagStringArray              ; }
     public      function GetTypeString                      ()                                                      { return                    typeString                  ; }
     public      function SetNameAltStringVoid               (_nameAltString             :String                 )   { nameStruct.nameAltString  = _nameAltString            ; }

@@ -36,8 +36,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("ObjectMuseum","\x11","\x1f","\x35","\xe1"); }
 
-		Array< ::Dynamic > childObjectArray;
+		Dynamic childStruct;
 		::CollectionGlobal collectionGlobalObject;
+		Array< ::String > explanationStringArray;
 		bool fullBool;
 		int indexGlobalInt;
 		int indexLocalInt;
@@ -47,13 +48,18 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		Array< ::Dynamic > tagObjectArray;
 		::EnumMuseumType typeEnum;
 		int visitorCurrentInt;
-		Array< ::Dynamic > visitorObjectArray;
 		int visitorTotalInt;
+		virtual Void AddChildVisitorVoid( ::ObjectVisitor _visitorObject);
+		Dynamic AddChildVisitorVoid_dyn();
+
+		virtual Void AddTagVoid( ::ObjectTag _tagObject);
+		Dynamic AddTagVoid_dyn();
+
 		virtual Void ChangeParentVoid( ::String _parentNameAltString);
 		Dynamic ChangeParentVoid_dyn();
 
-		virtual Void DetermineChildVoid( );
-		Dynamic DetermineChildVoid_dyn();
+		virtual Void DetermineFullVoid( );
+		Dynamic DetermineFullVoid_dyn();
 
 		virtual Void DetermineIndexVoid( );
 		Dynamic DetermineIndexVoid_dyn();
@@ -67,14 +73,44 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Void DetermineSiblingVoid( );
 		Dynamic DetermineSiblingVoid_dyn();
 
+		virtual Void RemoveTagByNameAltVoid( ::String _nameAltString);
+		Dynamic RemoveTagByNameAltVoid_dyn();
+
+		virtual Void RemoveTagByObjectVoid( ::ObjectTag _tagObject);
+		Dynamic RemoveTagByObjectVoid_dyn();
+
 		virtual Void ResetVoid( );
 		Dynamic ResetVoid_dyn();
+
+		virtual Void DetermineChildVoid( );
+		Dynamic DetermineChildVoid_dyn();
+
+		virtual Dynamic GetChildStruct( );
+		Dynamic GetChildStruct_dyn();
+
+		virtual Array< ::String > GetExplanationStringArray( );
+		Dynamic GetExplanationStringArray_dyn();
 
 		virtual Dynamic GetNameStruct( );
 		Dynamic GetNameStruct_dyn();
 
 		virtual ::ObjectMuseum GetParentObject( );
 		Dynamic GetParentObject_dyn();
+
+		virtual Array< ::Dynamic > GetTagObjectArray( );
+		Dynamic GetTagObjectArray_dyn();
+
+		virtual int GetVisitorCurrentInt( );
+		Dynamic GetVisitorCurrentInt_dyn();
+
+		virtual int GetVisitorTotalInt( );
+		Dynamic GetVisitorTotalInt_dyn();
+
+		virtual Void SetVisitorCurrentInt( int _visitorCurrentInt);
+		Dynamic SetVisitorCurrentInt_dyn();
+
+		virtual Void SetVisitorTotalInt( int _visitorTotalInt);
+		Dynamic SetVisitorTotalInt_dyn();
 
 };
 

@@ -3,6 +3,12 @@
 #ifndef INCLUDED_EnumMuseumType
 #include <EnumMuseumType.h>
 #endif
+#ifndef INCLUDED_haxe_ds_ObjectMap
+#include <haxe/ds/ObjectMap.h>
+#endif
+#ifndef INCLUDED_haxe_IMap
+#include <haxe/IMap.h>
+#endif
 #ifndef INCLUDED_Std
 #include <Std.h>
 #endif
@@ -32,6 +38,8 @@ void __boot_all()
 __files__boot();
 hx::RegisterResources( hx::GetResources() );
 ::EnumMuseumType_obj::__register();
+::haxe::ds::ObjectMap_obj::__register();
+::haxe::IMap_obj::__register();
 ::Std_obj::__register();
 ::ObjectVisitor_obj::__register();
 ::ObjectTag_obj::__register();

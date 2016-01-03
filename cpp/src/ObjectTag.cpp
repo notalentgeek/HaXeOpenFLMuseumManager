@@ -63,38 +63,22 @@ Dynamic ObjectTag_obj::__Create(hx::DynamicArray inArgs)
 	_result_->__construct(inArgs[0],inArgs[1],inArgs[2],inArgs[3]);
 	return _result_;}
 
-::String ObjectTag_obj::GetNameAltString( ){
-	HX_STACK_FRAME("ObjectTag","GetNameAltString",0xf207f1cc,"ObjectTag.GetNameAltString","ObjectTag.hx",17,0x2198b4e3)
+Dynamic ObjectTag_obj::GetNameStruct( ){
+	HX_STACK_FRAME("ObjectTag","GetNameStruct",0x8d66b823,"ObjectTag.GetNameStruct","ObjectTag.hx",17,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(17)
 	Dynamic tmp = this->nameStruct;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(17)
-	::String tmp1 = tmp->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(17)
-	return tmp1;
+	return tmp;
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC0(ObjectTag_obj,GetNameAltString,return )
-
-::String ObjectTag_obj::GetNameFullString( ){
-	HX_STACK_FRAME("ObjectTag","GetNameFullString",0x41d7188e,"ObjectTag.GetNameFullString","ObjectTag.hx",18,0x2198b4e3)
-	HX_STACK_THIS(this)
-	HX_STACK_LINE(18)
-	Dynamic tmp = this->nameStruct;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(18)
-	::String tmp1 = tmp->__Field(HX_HCSTRING("nameFullString","\xeb","\xfd","\x77","\xd9"), hx::paccDynamic );		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(18)
-	return tmp1;
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(ObjectTag_obj,GetNameFullString,return )
+HX_DEFINE_DYNAMIC_FUNC0(ObjectTag_obj,GetNameStruct,return )
 
 Array< ::String > ObjectTag_obj::GetTagStringArray( ){
-	HX_STACK_FRAME("ObjectTag","GetTagStringArray",0x95a24171,"ObjectTag.GetTagStringArray","ObjectTag.hx",19,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","GetTagStringArray",0x95a24171,"ObjectTag.GetTagStringArray","ObjectTag.hx",18,0x2198b4e3)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(19)
+	HX_STACK_LINE(18)
 	return this->tagStringArray;
 }
 
@@ -102,11 +86,11 @@ Array< ::String > ObjectTag_obj::GetTagStringArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectTag_obj,GetTagStringArray,return )
 
 ::String ObjectTag_obj::GetTypeString( ){
-	HX_STACK_FRAME("ObjectTag","GetTypeString",0x8155a44e,"ObjectTag.GetTypeString","ObjectTag.hx",20,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","GetTypeString",0x8155a44e,"ObjectTag.GetTypeString","ObjectTag.hx",19,0x2198b4e3)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(20)
+	HX_STACK_LINE(19)
 	::String tmp = this->typeString;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(20)
+	HX_STACK_LINE(19)
 	return tmp;
 }
 
@@ -115,12 +99,12 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectTag_obj,GetTypeString,return )
 
 Void ObjectTag_obj::SetNameAltStringVoid( ::String _nameAltString){
 {
-		HX_STACK_FRAME("ObjectTag","SetNameAltStringVoid",0x0ef76eb4,"ObjectTag.SetNameAltStringVoid","ObjectTag.hx",21,0x2198b4e3)
+		HX_STACK_FRAME("ObjectTag","SetNameAltStringVoid",0x0ef76eb4,"ObjectTag.SetNameAltStringVoid","ObjectTag.hx",20,0x2198b4e3)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_nameAltString,"_nameAltString")
-		HX_STACK_LINE(21)
+		HX_STACK_LINE(20)
 		Dynamic tmp = this->nameStruct;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(21)
+		HX_STACK_LINE(20)
 		tmp->__FieldRef(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c")) = _nameAltString;
 	}
 return null();
@@ -131,12 +115,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetNameAltStringVoid,(void))
 
 Void ObjectTag_obj::SetNameFullStringVoid( ::String _nameFullString){
 {
-		HX_STACK_FRAME("ObjectTag","SetNameFullStringVoid",0x675f350e,"ObjectTag.SetNameFullStringVoid","ObjectTag.hx",22,0x2198b4e3)
+		HX_STACK_FRAME("ObjectTag","SetNameFullStringVoid",0x675f350e,"ObjectTag.SetNameFullStringVoid","ObjectTag.hx",21,0x2198b4e3)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_nameFullString,"_nameFullString")
-		HX_STACK_LINE(22)
+		HX_STACK_LINE(21)
 		Dynamic tmp = this->nameStruct;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(22)
+		HX_STACK_LINE(21)
 		tmp->__FieldRef(HX_HCSTRING("nameFullString","\xeb","\xfd","\x77","\xd9")) = _nameFullString;
 	}
 return null();
@@ -147,10 +131,10 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetNameFullStringVoid,(void))
 
 Void ObjectTag_obj::SetTagStringArrayVoid( Array< ::String > _tagStringArray){
 {
-		HX_STACK_FRAME("ObjectTag","SetTagStringArrayVoid",0xb7d40b71,"ObjectTag.SetTagStringArrayVoid","ObjectTag.hx",23,0x2198b4e3)
+		HX_STACK_FRAME("ObjectTag","SetTagStringArrayVoid",0xb7d40b71,"ObjectTag.SetTagStringArrayVoid","ObjectTag.hx",22,0x2198b4e3)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_tagStringArray,"_tagStringArray")
-		HX_STACK_LINE(23)
+		HX_STACK_LINE(22)
 		this->tagStringArray = _tagStringArray;
 	}
 return null();
@@ -161,10 +145,10 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetTagStringArrayVoid,(void))
 
 Void ObjectTag_obj::SetTypeStringVoid( ::String _typeString){
 {
-		HX_STACK_FRAME("ObjectTag","SetTypeStringVoid",0x4cd3aace,"ObjectTag.SetTypeStringVoid","ObjectTag.hx",24,0x2198b4e3)
+		HX_STACK_FRAME("ObjectTag","SetTypeStringVoid",0x4cd3aace,"ObjectTag.SetTypeStringVoid","ObjectTag.hx",23,0x2198b4e3)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_typeString,"_typeString")
-		HX_STACK_LINE(24)
+		HX_STACK_LINE(23)
 		this->typeString = _typeString;
 	}
 return null();
@@ -202,16 +186,13 @@ Dynamic ObjectTag_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 		if (HX_FIELD_EQ(inName,"typeString") ) { return typeString; }
 		break;
 	case 13:
+		if (HX_FIELD_EQ(inName,"GetNameStruct") ) { return GetNameStruct_dyn(); }
 		if (HX_FIELD_EQ(inName,"GetTypeString") ) { return GetTypeString_dyn(); }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"tagStringArray") ) { return tagStringArray; }
 		break;
-	case 16:
-		if (HX_FIELD_EQ(inName,"GetNameAltString") ) { return GetNameAltString_dyn(); }
-		break;
 	case 17:
-		if (HX_FIELD_EQ(inName,"GetNameFullString") ) { return GetNameFullString_dyn(); }
 		if (HX_FIELD_EQ(inName,"GetTagStringArray") ) { return GetTagStringArray_dyn(); }
 		if (HX_FIELD_EQ(inName,"SetTypeStringVoid") ) { return SetTypeStringVoid_dyn(); }
 		break;
@@ -260,8 +241,7 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("nameStruct","\x00","\x6b","\xb8","\x95"),
 	HX_HCSTRING("tagStringArray","\xce","\x26","\x43","\x2d"),
 	HX_HCSTRING("typeString","\x2b","\x57","\xa7","\x89"),
-	HX_HCSTRING("GetNameAltString","\xb9","\x2c","\x81","\xf0"),
-	HX_HCSTRING("GetNameFullString","\x01","\x6d","\x71","\xed"),
+	HX_HCSTRING("GetNameStruct","\x16","\x17","\x1b","\x3a"),
 	HX_HCSTRING("GetTagStringArray","\xe4","\x95","\x3c","\x41"),
 	HX_HCSTRING("GetTypeString","\x41","\x03","\x0a","\x2e"),
 	HX_HCSTRING("SetNameAltStringVoid","\x21","\x24","\x8d","\xf1"),
