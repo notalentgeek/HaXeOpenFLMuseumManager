@@ -44,6 +44,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMap_obj : public hx::Object{
 		virtual Void set( Dynamic key,Dynamic value);
 		Dynamic set_dyn();
 
+		virtual bool exists( Dynamic key);
+		Dynamic exists_dyn();
+
 
   inline void set(Dynamic key, ::null value) { __object_hash_set(h,key,value); }
   inline void set(Dynamic key, bool value) { __object_hash_set(h,key,value); }

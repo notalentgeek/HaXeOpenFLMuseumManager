@@ -42,13 +42,16 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		Array< ::Dynamic > exhibitionVisitedObjectArray;
 		Array< ::String > explanationStringArray;
 		bool finishedBool;
+		::ObjectMuseum floorCurrentObject;
 		int indexGlobalInt;
 		int indexLocalInt;
 		::String nameString;
+		::ObjectMuseum roomCurrentObject;
 		int scoreInt;
 		Array< ::String > sentenceStringArray;
 		cpp::ArrayBase tagCounterStructArray;
 		::haxe::ds::ObjectMap tagObjectMap;
+		int targetInt;
 		int timeExhibitionInt;
 		int timeMuseumInt;
 		bool visitedCorrectExhibitionBool;
@@ -65,7 +68,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual Void DetermineIndexLocalVoid( );
 		Dynamic DetermineIndexLocalVoid_dyn();
 
-		virtual Void GenerateExhibitionTargetVoid( );
+		virtual Void GenerateExhibitionTargetVoid( int _targetInt);
 		Dynamic GenerateExhibitionTargetVoid_dyn();
 
 		virtual ::String GenerateSentenceVoid( int _amount);
@@ -76,9 +79,6 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 
 		virtual ::ObjectMuseum GetExhibitionCurrentObject( );
 		Dynamic GetExhibitionCurrentObject_dyn();
-
-		virtual ::String GetNameString( );
-		Dynamic GetNameString_dyn();
 
 };
 

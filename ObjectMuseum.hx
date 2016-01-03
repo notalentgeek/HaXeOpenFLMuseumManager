@@ -130,6 +130,7 @@ class       ObjectMuseum                                            {
     }
     public      function GetChildStruct                             ()                          { return childStruct                ; }
     public      function GetExplanationStringArray                  ()                          { return explanationStringArray     ; }
+    public      function GetFullBool                                ()                          { return fullBool                   ; }
     public      function GetNameStruct                              ()                          { return nameStruct                 ; }
     public      function GetParentObject                            ()                          { return parentObject               ; }
     public      function GetTagObjectArray                          ()                          { return tagObjectArray             ; }

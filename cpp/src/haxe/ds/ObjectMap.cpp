@@ -54,6 +54,19 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC2(ObjectMap_obj,set,(void))
 
+bool ObjectMap_obj::exists( Dynamic key){
+	HX_STACK_FRAME("haxe.ds.ObjectMap","exists",0xc8930ca4,"haxe.ds.ObjectMap.exists","/usr/lib/haxe/std/cpp/_std/haxe/ds/ObjectMap.hx",61,0x941a7216)
+	HX_STACK_THIS(this)
+	HX_STACK_ARG(key,"key")
+	HX_STACK_LINE(62)
+	bool tmp = ::__object_hash_exists(this->h,key);		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(62)
+	return tmp;
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(ObjectMap_obj,exists,return )
+
 
 ObjectMap_obj::ObjectMap_obj()
 {
@@ -79,6 +92,9 @@ Dynamic ObjectMap_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 		break;
 	case 3:
 		if (HX_FIELD_EQ(inName,"set") ) { return set_dyn(); }
+		break;
+	case 6:
+		if (HX_FIELD_EQ(inName,"exists") ) { return exists_dyn(); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -109,6 +125,7 @@ static hx::StaticInfo *sStaticStorageInfo = 0;
 static ::String sMemberFields[] = {
 	HX_HCSTRING("h","\x68","\x00","\x00","\x00"),
 	HX_HCSTRING("set","\xa2","\x9b","\x57","\x00"),
+	HX_HCSTRING("exists","\xdc","\x1d","\xe0","\xbf"),
 	::String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {

@@ -91,6 +91,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Array< ::String > GetExplanationStringArray( );
 		Dynamic GetExplanationStringArray_dyn();
 
+		virtual bool GetFullBool( );
+		Dynamic GetFullBool_dyn();
+
 		virtual Dynamic GetNameStruct( );
 		Dynamic GetNameStruct_dyn();
 

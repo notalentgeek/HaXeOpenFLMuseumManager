@@ -7,13 +7,16 @@ class   ObjectVisitor{
     private     var exhibitionVisitedObjectArray            :Array<ObjectMuseum>                = new Array<ObjectMuseum>();
     private     var explanationStringArray                  :Array<String>                      = new Array<String>();
     private     var finishedBool                            :Bool                               = false;
+    private     var floorCurrentObject                      :ObjectMuseum                       = null;
     private     var indexGlobalInt                          :Int                                = -1;
     private     var indexLocalInt                           :Int                                = -1;
     private     var nameString                              :String                             = "";
+    private     var roomCurrentObject                       :ObjectMuseum                       = null;
     private     var scoreInt                                :Int                                = 0;
     private     var sentenceStringArray                     :Array<String>                      = new Array<String>();
     private     var tagCounterStructArray                   :Array<StructTagCounter>            = new Array<StructTagCounter>();
     private     var tagObjectMap                            :Map<ObjectTag, Bool>               = new Map<ObjectTag, Bool>();
+    private     var targetInt                               :Int                                = 3;
     private     var timeExhibitionInt                       :Int                                = 0;
     private     var timeMuseumInt                           :Int                                = 0;
     private     var visitedCorrectExhibitionBool            :Bool                               = false;
@@ -70,8 +73,8 @@ class   ObjectVisitor{
         SortTagCounterVoid                                  ();
     }
     private function ChangeExhibitionCurrentVoid            (_exhibitionTargetObject:ObjectMuseum){
-        var roomCurrentObject   :ObjectMuseum               = exhibitionCurrentObject   .GetParentObject();
-        var floorCurrentObject  :ObjectMuseum               = roomCurrentObject         .GetParentObject();
+        roomCurrentObject                                   = exhibitionCurrentObject   .GetParentObject();
+        floorCurrentObject                                  = roomCurrentObject         .GetParentObject();
         if(exhibitionCurrentObject == null){
             AddRemoveVisitorFromExhibitionVoid              (false);
             exhibitionCurrentObject .SetVisitorCurrentInt   (exhibitionCurrentObject    .GetVisitorCurrentInt() - 1);
@@ -120,7 +123,7 @@ class   ObjectVisitor{
         loopCounterInt                                      = 0;
         while(loopCounterInt < collectionGlobalObject.GetVisitorObjectArray().length){
             collectionGlobalObject.GetVisitorObjectArray()[loopCounterInt].DetermineIndexLocalVoid();
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounterInt].GenerateExhibitionTargetVoid();
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounterInt].GenerateExhibitionTargetVoid(targetInt);
             loopCounterInt                                  ++;
         }
         if(exhibitionVisitedObjectArray.length > 1){
@@ -131,12 +134,74 @@ class   ObjectVisitor{
     private function DetermineIndexLocalVoid                (){
         indexLocalInt                                       = exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.indexOf(this);
     }
-    private function GenerateExhibitionTargetVoid           (){
+    private function GenerateExhibitionTargetVoid           (_targetInt:Int){
+        var   loopCounterInt          :Int                  = 0;
+        /*Sort level 1.*/
+        while(loopCounterInt < collectionGlobalObject.GetExhibitionObjectArray().length){
+            if(exhibitionCurrentObject.GetNameStruct().nameAltString != collectionGlobalObject.GetExhibitionObjectArray()[loopCounterInt].GetNameStruct().nameAltString){
+                exhibitionTargetObjectArray.push(collectionGlobalObject.GetExhibitionObjectArray()[loopCounterInt]);
+            }
+            loopCounterInt                                  ++;
+        }
+        /*Sort level 2.*/
+        loopCounterInt                                      = 0;
+        while(loopCounterInt < exhibitionTargetObjectArray.length){
+            if( exhibitionTargetObjectArray[loopCounterInt].GetFullBool() == true){
+                exhibitionTargetObjectArray.remove          (exhibitionTargetObjectArray[loopCounterInt]);
+            }
+            if(exhibitionTargetObjectArray.length <= _targetInt){ break; }
+            loopCounterInt                                  ++;
+        }
+        /*Sort level 3.*/
+        loopCounterInt                                      = 0;
+        while(loopCounterInt < exhibitionTargetObjectArray.length){
+            var   loopCounter2Int         :Int                = 0;
+            while(loopCounter2Int < exhibitionVisitedObjectArray.length){
+                if(Math.random() > 0.9){
+                    exhibitionTargetObjectArray.remove(exhibitionVisitedObjectArray[loopCounter2Int]);
+                }
+                loopCounter2Int                             ++;
+            }
+            if(exhibitionTargetObjectArray.length <= _targetInt){ break; }
+            loopCounterInt                                  ++;
+        }
+        /*Sort level 4.*/
+        loopCounterInt                                      = 0;
+        while(loopCounterInt < exhibitionTargetObjectArray.length){
+            var   accumPercentageFloat      :Float          = 0;
+            var   basePercentageFloat       :Float          = 0.1;
+            var   loopCounter2Int           :Int            = 0;
+            var   tagSameCounterInt         :Int            = 0;
+            while(loopCounter2Int <   exhibitionTargetObjectArray[loopCounterInt].GetTagObjectArray().length){
+                if(tagObjectMap.exists(exhibitionTargetObjectArray[loopCounterInt].GetTagObjectArray()[loopCounter2Int])){
+                    tagSameCounterInt                       ++;
+                }
+                loopCounter2Int                             ++;
+            }
+            accumPercentageFloat                            = basePercentageFloat + (tagSameCounterInt/10);
+            if(accumPercentageFloat >= 1.0 )                { accumPercentageFloat = 1.0; }
+            if(Math.random() > accumPercentageFloat)        { exhibitionTargetObjectArray.remove(exhibitionTargetObjectArray[loopCounterInt]); }
+            if(exhibitionTargetObjectArray.length <= _targetInt){ break; }
+            loopCounterInt                                  ++;
+        }
+        /*Sort level 5.*/
+        loopCounterInt                                      = 0;
+        while(loopCounterInt < exhibitionTargetObjectArray.length){
+            var   sameCounterInt            :Int            = 0;
+            var   roomTargetObject          :ObjectMuseum   = exhibitionTargetObjectArray[loopCounterInt]   .GetParentObject();
+            var   floorTargetObject         :ObjectMuseum   = roomTargetObject                              .GetParentObject();
+                 if(roomTargetObject    == roomCurrentObject ){ sameCounterInt ++; }
+                 if(floorTargetObject   == floorCurrentObject){ sameCounterInt ++; }
+                 if(sameCounterInt      == 1)               { if(Math.random() > 0.50){ exhibitionTargetObjectArray.remove(exhibitionTargetObjectArray[loopCounterInt]); } }
+            else if(sameCounterInt      == 2)               { if(Math.random() > 0.25){ exhibitionTargetObjectArray.remove(exhibitionTargetObjectArray[loopCounterInt]); } }
+            if(exhibitionTargetObjectArray.length <= _targetInt){ break; }
+            loopCounterInt                                  ++;
+        }
+        while(exhibitionTargetObjectArray.length > _targetInt){ exhibitionTargetObjectArray.pop(); }
     }
     private function GenerateSentenceVoid                   (_amount:Int){ return ""; }
     private function SortTagCounterVoid                     (){
         tagCounterStructArray.sort(function(_a:StructTagCounter, _b:StructTagCounter){ return _a.tagCounterInt - _b.tagCounterInt; });
     }
     public  function GetExhibitionCurrentObject             (){ return exhibitionCurrentObject  ; }
-    public  function GetNameString                          (){ return nameString               ; }
 }
