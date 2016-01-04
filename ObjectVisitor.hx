@@ -34,7 +34,7 @@ class   ObjectVisitor{
         ChangeExhibitionCurrentVoid                         (_exhibitionCurrentObject);
         nameString                                          = _nameString;
         collectionGlobalObject.GetVisitorObjectArray().push (this);
-        //trace(exhibitionTargetObjectArray.length);
+        //trace("exhibitionTargetObjectArray.length = " + exhibitionTargetObjectArray.length);
     }
     private function AddRemoveVisitorFromExhibitionVoid     (_isAdd:Bool){
              if(_isAdd == true ){ exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.push     (this); }
@@ -148,7 +148,14 @@ class   ObjectVisitor{
             finishedBool                                    = true;
         }
         timeExhibitionInt                                   = 0;
-        trace(indexGlobalInt + " " + exhibitionCurrentObject.GetNameStruct().nameAltString + " " + exhibitionVisitedObjectArray.length + " " + collectionGlobalObject.GetExhibitionObjectArray().length);
+        /*
+        trace(
+            "indexGlobalInt = "                                             + indexGlobalInt                                            + " " +
+            "exhibitionCurrentObject.GetNameStruct().nameAltString = "      + exhibitionCurrentObject.GetNameStruct().nameAltString     + " " +
+            "exhibitionVisitedObjectArray.length = "                        + exhibitionVisitedObjectArray.length                       + " " +
+            "collectionGlobalObject.GetExhibitionObjectArray().length = "   + collectionGlobalObject.GetExhibitionObjectArray().length
+        );
+        */
     }
     private function DetermineIndexLocalVoid                (){
         indexLocalInt                                       = exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.indexOf(this);
@@ -156,12 +163,12 @@ class   ObjectVisitor{
     private function GenerateExhibitionTargetVoid           (_targetInt:Int){
         var   loopCounter1Int               :Int            = 0;
         /*Sort level 1.*/
-        //trace(collectionGlobalObject.GetExhibitionObjectArray().length);
+        //trace("collectionGlobalObject.GetExhibitionObjectArray().length = " + collectionGlobalObject.GetExhibitionObjectArray().length);
         while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
             if(exhibitionCurrentObject.GetNameStruct().nameAltString != collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameAltString){
                 exhibitionTargetObjectArray.push(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int]);
             }
-            //trace(exhibitionTargetObjectArray.length);
+            //trace("exhibitionTargetObjectArray.length = " + exhibitionTargetObjectArray.length);
             loopCounter1Int                                 ++;
         }
         /*Sort level 2.*/
@@ -228,11 +235,16 @@ class   ObjectVisitor{
         if(finishedBool == false){
             var randomFloat         :Float                  = Math.random();
             timeAIAutoExhibitionChangeFloat                 += 0.01;
-            //trace(randomFloat + " > " + (1.0 - timeAIAutoExhibitionChangeFloat) + " = " + (randomFloat > (1.0 - timeAIAutoExhibitionChangeFloat)));
+            /*
+            trace(
+                "randomFloat = "                                                + randomFloat                                               + " " +
+                "(1.0 - timeAIAutoExhibitionChangeFloat) = "                    + (1.0 - timeAIAutoExhibitionChangeFloat)                   + " " +
+                "(randomFloat > (1.0 - timeAIAutoExhibitionChangeFloat)) = "    + (randomFloat > (1.0 - timeAIAutoExhibitionChangeFloat))
+            );
+            */
             if(randomFloat > (1.0 - timeAIAutoExhibitionChangeFloat)){
-                //GenerateExhibitionTargetVoid                (targetInt);
+                //trace("exhibitionTargetObjectArray.length = " + exhibitionTargetObjectArray.length);
                 var randomInt       :Int                    = Math.round(Math.random()*(exhibitionTargetObjectArray.length - 1));
-                //trace(exhibitionTargetObjectArray.length);
                 ChangeExhibitionCurrentVoid                 (exhibitionTargetObjectArray[randomInt]);
                 timeAIAutoExhibitionChangeFloat             = 0;
             }
