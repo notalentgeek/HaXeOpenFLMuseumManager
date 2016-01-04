@@ -52,10 +52,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		cpp::ArrayBase tagCounterStructArray;
 		::haxe::ds::ObjectMap tagObjectMap;
 		int targetInt;
+		Float timeAIAutoExhibitionChangeFloat;
 		int timeExhibitionInt;
 		int timeMuseumInt;
 		bool visitedCorrectExhibitionBool;
-		cpp::ArrayBase visitStructArray;
+		cpp::ArrayBase visitExhibitionStructArray;
+		cpp::ArrayBase visitMuseumStructArray;
 		virtual Void AddRemoveVisitorFromExhibitionVoid( bool _isAdd);
 		Dynamic AddRemoveVisitorFromExhibitionVoid_dyn();
 
@@ -64,6 +66,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 
 		virtual Void ChangeExhibitionCurrentVoid( ::ObjectMuseum _exhibitionTargetObject);
 		Dynamic ChangeExhibitionCurrentVoid_dyn();
+
+		virtual Void AIAutoExhibitionChangeVoid( );
+		Dynamic AIAutoExhibitionChangeVoid_dyn();
 
 		virtual Void DetermineIndexLocalVoid( );
 		Dynamic DetermineIndexLocalVoid_dyn();

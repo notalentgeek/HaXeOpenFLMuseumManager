@@ -1,26 +1,28 @@
 import  CollectionFunction;
 import  CollectionStruct;
 class   ObjectVisitor{
-    private     var collectionGlobalObject                  :CollectionGlobal                   = null;
-    private     var exhibitionCurrentObject                 :ObjectMuseum                       = null;
-    private     var exhibitionTargetObjectArray             :Array<ObjectMuseum>                = new Array<ObjectMuseum>();
-    private     var exhibitionVisitedObjectArray            :Array<ObjectMuseum>                = new Array<ObjectMuseum>();
-    private     var explanationStringArray                  :Array<String>                      = new Array<String>();
-    private     var finishedBool                            :Bool                               = false;
-    private     var floorCurrentObject                      :ObjectMuseum                       = null;
-    private     var indexGlobalInt                          :Int                                = -1;
-    private     var indexLocalInt                           :Int                                = -1;
-    private     var nameString                              :String                             = "";
-    private     var roomCurrentObject                       :ObjectMuseum                       = null;
-    private     var scoreInt                                :Int                                = 0;
-    private     var sentenceStringArray                     :Array<String>                      = new Array<String>();
-    private     var tagCounterStructArray                   :Array<StructTagCounter>            = new Array<StructTagCounter>();
-    private     var tagObjectMap                            :Map<ObjectTag, Bool>               = new Map<ObjectTag, Bool>();
-    private     var targetInt                               :Int                                = 3;
-    private     var timeExhibitionInt                       :Int                                = 0;
-    private     var timeMuseumInt                           :Int                                = 0;
-    private     var visitedCorrectExhibitionBool            :Bool                               = false;
-    private     var visitStructArray                        :Array<StructVisitorVisitMuseum>    = new Array<StructVisitorVisitMuseum>();
+    private     var collectionGlobalObject                  :CollectionGlobal                       = null;
+    private     var exhibitionCurrentObject                 :ObjectMuseum                           = null;
+    private     var exhibitionTargetObjectArray             :Array<ObjectMuseum>                    = new Array<ObjectMuseum>();
+    private     var exhibitionVisitedObjectArray            :Array<ObjectMuseum>                    = new Array<ObjectMuseum>();
+    private     var explanationStringArray                  :Array<String>                          = new Array<String>();
+    private     var finishedBool                            :Bool                                   = false;
+    private     var floorCurrentObject                      :ObjectMuseum                           = null;
+    private     var indexGlobalInt                          :Int                                    = -1;
+    private     var indexLocalInt                           :Int                                    = -1;
+    private     var nameString                              :String                                 = "";
+    private     var roomCurrentObject                       :ObjectMuseum                           = null;
+    private     var scoreInt                                :Int                                    = 0;
+    private     var sentenceStringArray                     :Array<String>                          = new Array<String>();
+    private     var tagCounterStructArray                   :Array<StructTagCounter>                = new Array<StructTagCounter>();
+    private     var tagObjectMap                            :Map<ObjectTag, Bool>                   = new Map<ObjectTag, Bool>();
+    private     var targetInt                               :Int                                    = 3;
+    private     var timeAIAutoExhibitionChangeFloat         :Float                                  = 0;
+    private     var timeExhibitionInt                       :Int                                    = 0;
+    private     var timeMuseumInt                           :Int                                    = 0;
+    private     var visitedCorrectExhibitionBool            :Bool                                   = false;
+    private     var visitExhibitionStructArray              :Array<StructVisitorVisitExhibition>    = new Array<StructVisitorVisitExhibition>();
+    private     var visitMuseumStructArray                  :Array<StructVisitorVisitMuseum>        = new Array<StructVisitorVisitMuseum>();
     public  function new                                    (
         _collectionGlobalObject                             :CollectionGlobal   ,
         _exhibitionCurrentNameAltString                     :String             ,
@@ -28,7 +30,7 @@ class   ObjectVisitor{
         _nameString                                         :String
     ){
         collectionGlobalObject                              = _collectionGlobalObject;
-        exhibitionCurrentObject                             = CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, _exhibitionCurrentNameAltString);
+        ChangeExhibitionCurrentVoid                         (CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, _exhibitionCurrentNameAltString));
         indexGlobalInt                                      = _indexGlobalInt;
         nameString                                          = _nameString;
     }
@@ -73,6 +75,13 @@ class   ObjectVisitor{
         SortTagCounterVoid                                  ();
     }
     private function ChangeExhibitionCurrentVoid            (_exhibitionTargetObject:ObjectMuseum){
+        var visitorVisitExhibitionStruct    :StructVisitorVisitExhibition   = {
+            currentExhibitionTimeInt    :0,
+            exhibitionNameAltString     :""
+        };
+        visitorVisitExhibitionStruct.currentExhibitionTimeInt   = timeExhibitionInt;
+        visitorVisitExhibitionStruct.exhibitionNameAltString    = exhibitionCurrentObject.GetNameStruct().nameAltString;
+        visitExhibitionStructArray.push                     (visitorVisitExhibitionStruct);
         roomCurrentObject                                   = exhibitionCurrentObject   .GetParentObject();
         floorCurrentObject                                  = roomCurrentObject         .GetParentObject();
         if(exhibitionCurrentObject == null){
@@ -129,6 +138,21 @@ class   ObjectVisitor{
         if(exhibitionVisitedObjectArray.length > 1){
             var threeSentenceString :String                 = GenerateSentenceVoid(3);
             sentenceStringArray.push                        (threeSentenceString);
+        }
+        if(exhibitionVisitedObjectArray.length >= collectionGlobalObject.GetExhibitionObjectArray().length){
+            finishedBool                                    = true;
+        }
+        timeExhibitionInt                                   = 0;
+    }
+    private function AIAutoExhibitionChangeVoid             (){
+        if(finishedBool == false){
+            var randomFloat         :Float                  = Math.random();
+            timeAIAutoExhibitionChangeFloat                 ++;
+            if(randomFloat > (1.0 - timeAIAutoExhibitionChangeFloat)){
+                var randomInt       :Int                    = Math.round(Math.random()*(exhibitionTargetObjectArray.length - 1));
+                ChangeExhibitionCurrentVoid                 (exhibitionTargetObjectArray[randomInt]);
+                timeAIAutoExhibitionChangeFloat             = 0;
+            }
         }
     }
     private function DetermineIndexLocalVoid                (){
