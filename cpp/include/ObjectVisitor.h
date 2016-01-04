@@ -17,12 +17,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		typedef hx::Object super;
 		typedef ObjectVisitor_obj OBJ_;
 		ObjectVisitor_obj();
-		Void __construct(::CollectionGlobal _collectionGlobalObject,::String _exhibitionCurrentNameAltString,int _indexGlobalInt,::String _nameString);
+		Void __construct(::CollectionGlobal _collectionGlobalObject,::ObjectMuseum _exhibitionCurrentObject,int _indexGlobalInt,::String _nameString);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectVisitor")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectVisitor_obj > __new(::CollectionGlobal _collectionGlobalObject,::String _exhibitionCurrentNameAltString,int _indexGlobalInt,::String _nameString);
+		static hx::ObjectPtr< ObjectVisitor_obj > __new(::CollectionGlobal _collectionGlobalObject,::ObjectMuseum _exhibitionCurrentObject,int _indexGlobalInt,::String _nameString);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectVisitor_obj();
@@ -67,9 +67,6 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual Void ChangeExhibitionCurrentVoid( ::ObjectMuseum _exhibitionTargetObject);
 		Dynamic ChangeExhibitionCurrentVoid_dyn();
 
-		virtual Void AIAutoExhibitionChangeVoid( );
-		Dynamic AIAutoExhibitionChangeVoid_dyn();
-
 		virtual Void DetermineIndexLocalVoid( );
 		Dynamic DetermineIndexLocalVoid_dyn();
 
@@ -81,6 +78,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 
 		virtual Void SortTagCounterVoid( );
 		Dynamic SortTagCounterVoid_dyn();
+
+		virtual Void AIAutoExhibitionChangeVoid( );
+		Dynamic AIAutoExhibitionChangeVoid_dyn();
 
 		virtual ::ObjectMuseum GetExhibitionCurrentObject( );
 		Dynamic GetExhibitionCurrentObject_dyn();

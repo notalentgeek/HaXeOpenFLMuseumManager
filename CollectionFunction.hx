@@ -17,33 +17,38 @@ class   CollectionFunction{
              if(_enumMuseumType == EXH){ tempObjectArray            =  _collectionGlobalObject.GetExhibitionObjectArray   ()  ; }
         else if(_enumMuseumType == FLR){ tempObjectArray            =  _collectionGlobalObject.GetFloorObjectArray        ()  ; }
         else if(_enumMuseumType == ROM){ tempObjectArray            =  _collectionGlobalObject.GetRoomObjectArray         ()  ; }
-        var loopCounterInt      :Int                                =  0;
-        while(loopCounterInt < tempObjectArray.length){
-            if(_nameAlt == tempObjectArray[loopCounterInt].GetNameStruct().nameAltString){ return tempObjectArray[loopCounterInt]; break; }
-            loopCounterInt  ++;
+        var loopCounter1Int     :Int                                =  0;
+        while(loopCounter1Int < tempObjectArray.length){
+            if(_nameAlt == tempObjectArray[loopCounter1Int].GetNameStruct().nameAltString){ return tempObjectArray[loopCounter1Int]; break; }
+            loopCounter1Int                                         ++;
         }
         return null;
     }
     public static   function FindTagObject(
         _collectionGlobalObject :CollectionGlobal,
-        _nameAlt                :String
+        _nameAltString          :String
     ){
-        var loopCounterInt      :Int                                = 0;
-        while(loopCounterInt    <  _collectionGlobalObject.GetTagObjectArray().length){
-            if(_nameAlt         == _collectionGlobalObject.GetTagObjectArray()[loopCounterInt].GetNameStruct().nameAltString){
-                return             _collectionGlobalObject.GetTagObjectArray()[loopCounterInt];
+        var loopCounter1Int     :Int                                = 0;
+        while(loopCounter1Int    <  _collectionGlobalObject.GetTagObjectArray().length){
+            if(_nameAltString   == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameStruct().nameAltString){
+                return             _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int];
                 break;
             }
-            loopCounterInt  ++;
+            loopCounter1Int                                         ++;
         }
         return null;
     }
-    public static   function IsExistInArrayBool(_array:Array<Dynamic>, _element:Dynamic){
-        var loopCounterInt      :Int                                = 0;
-        while(loopCounterInt    < _array.length)                    {
-            if(_array[loopCounterInt] == _element)                  { return true; }
-            loopCounterInt                                          ++;
+    public static   function IsExistInArrayBool(_dynamicArray:Array<Dynamic>, _dynamicElement:Dynamic){
+        var loopCounter1Int     :Int                                = 0;
+        while(loopCounter1Int    < _dynamicArray.length)            {
+            if(_dynamicArray[loopCounter1Int] == _dynamicElement)   { return true; }
+            loopCounter1Int                                         ++;
         }
         return false;
+    }
+    public static   function PickRandomFromArrayT<T>(_tArray:Array<T>){
+        var randomInt           :Int                                = Math.round(Math.random()*(_tArray.length - 1));
+        var elementT            :T                                  = _tArray[randomInt];
+        return                                                      elementT;
     }
 }

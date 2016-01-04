@@ -38,11 +38,14 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionFunction_obj : public hx::Object{
 		static ::ObjectMuseum FindMuseumObject( ::CollectionGlobal _collectionGlobalObject,::EnumMuseumType _enumMuseumType,::String _nameAlt);
 		static Dynamic FindMuseumObject_dyn();
 
-		static ::ObjectTag FindTagObject( ::CollectionGlobal _collectionGlobalObject,::String _nameAlt);
+		static ::ObjectTag FindTagObject( ::CollectionGlobal _collectionGlobalObject,::String _nameAltString);
 		static Dynamic FindTagObject_dyn();
 
-		static bool IsExistInArrayBool( cpp::ArrayBase _array,Dynamic _element);
+		static bool IsExistInArrayBool( cpp::ArrayBase _dynamicArray,Dynamic _dynamicElement);
 		static Dynamic IsExistInArrayBool_dyn();
+
+		static Dynamic PickRandomFromArrayT( cpp::ArrayBase _tArray);
+		static Dynamic PickRandomFromArrayT_dyn();
 
 };
 

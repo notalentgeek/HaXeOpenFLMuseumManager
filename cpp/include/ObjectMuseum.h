@@ -55,6 +55,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Void AddTagVoid( ::ObjectTag _tagObject);
 		Dynamic AddTagVoid_dyn();
 
+		virtual Void AddThisToArray( ::EnumMuseumType _typeEnum);
+		Dynamic AddThisToArray_dyn();
+
 		virtual Void ChangeParentVoid( ::String _parentNameAltString);
 		Dynamic ChangeParentVoid_dyn();
 

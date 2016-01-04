@@ -38,6 +38,7 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		int exhibitionFullThresholdInt;
 		Array< ::Dynamic > exhibitionObjectArray;
 		Array< ::Dynamic > floorObjectArray;
+		int indexGlobalVisitorInt;
 		Array< ::Dynamic > roomObjectArray;
 		Array< ::Dynamic > tagObjectArray;
 		Array< ::Dynamic > visitorObjectArray;
@@ -76,6 +77,9 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 
 		virtual Array< ::Dynamic > GetVisitorObjectArray( );
 		Dynamic GetVisitorObjectArray_dyn();
+
+		virtual int PutIndexGlobalVisitorInt( );
+		Dynamic PutIndexGlobalVisitorInt_dyn();
 
 		virtual Void SetExhibitionFullThresholdInt( int _exhibitionFullThresholdInt);
 		Dynamic SetExhibitionFullThresholdInt_dyn();

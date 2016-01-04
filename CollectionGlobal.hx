@@ -3,6 +3,7 @@ class   CollectionGlobal{
     private var exhibitionFullThresholdInt      :Int                    = 0;
     private var exhibitionObjectArray           :Array<ObjectMuseum>    = new Array<ObjectMuseum>       ();
     private var floorObjectArray                :Array<ObjectMuseum>    = new Array<ObjectMuseum>       ();
+    private var indexGlobalVisitorInt           :Int                    = 0;
     private var roomObjectArray                 :Array<ObjectMuseum>    = new Array<ObjectMuseum>       ();
     private var tagObjectArray                  :Array<ObjectTag>       = new Array<ObjectTag>          ();
     private var visitorObjectArray              :Array<ObjectVisitor>   = new Array<ObjectVisitor>      ();
@@ -28,6 +29,11 @@ class   CollectionGlobal{
     public      function GetRoomObjectArray                             ()                                                          { return                                        roomObjectArray                     ; }
     public      function GetTagObjectArray                              ()                                                          { return                                        tagObjectArray                      ; }
     public      function GetVisitorObjectArray                          ()                                                          { return                                        visitorObjectArray                  ; }
+    public      function PutIndexGlobalVisitorInt                       ()                                                          {
+        var tempIndexGlobalVisitorInt           :Int                    = indexGlobalVisitorInt;
+        indexGlobalVisitorInt                                           ++;
+        return tempIndexGlobalVisitorInt;
+    }
     public      function SetExhibitionFullThresholdInt                  (_exhibitionFullThresholdInt    :Int                    )   { exhibitionFullThresholdInt                    = _exhibitionFullThresholdInt       ; }
     public      function SetExhibitionObjectArrayVoid                   (_exhibitionObjectArray         :Array<ObjectMuseum>    )   { exhibitionObjectArray                         = _exhibitionObjectArray            ; }
     public      function SetFloorObjectArrayVoid                        (_floorObjectArray              :Array<ObjectMuseum>    )   { floorObjectArray                              = _floorObjectArray                 ; }
