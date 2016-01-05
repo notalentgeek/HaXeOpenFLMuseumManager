@@ -81,9 +81,9 @@ class   ObjectVisitor{
             roomCurrentObject                               = exhibitionCurrentObject   .GetParentObject();
             floorCurrentObject                              = roomCurrentObject         .GetParentObject();
             AddRemoveVisitorFromExhibitionVoid              (false);
-            exhibitionCurrentObject .SetVisitorCurrentInt   (exhibitionCurrentObject    .GetVisitorCurrentInt() - 1);
-            roomCurrentObject       .SetVisitorCurrentInt   (roomCurrentObject          .GetVisitorCurrentInt() - 1);
-            floorCurrentObject      .SetVisitorCurrentInt   (floorCurrentObject         .GetVisitorCurrentInt() - 1);
+            exhibitionCurrentObject .SetVisitorCurrentIntVoid(exhibitionCurrentObject    .GetVisitorCurrentInt() - 1);
+            roomCurrentObject       .SetVisitorCurrentIntVoid(roomCurrentObject          .GetVisitorCurrentInt() - 1);
+            floorCurrentObject      .SetVisitorCurrentIntVoid(floorCurrentObject         .GetVisitorCurrentInt() - 1);
         }
         exhibitionCurrentObject                             = _exhibitionTargetObject;
         roomCurrentObject                                   = exhibitionCurrentObject   .GetParentObject();
@@ -121,12 +121,12 @@ class   ObjectVisitor{
         else if(visitedCorrectExhibitionBool == false)      { scoreInt --; }
         roomCurrentObject                                   = exhibitionCurrentObject   .GetParentObject();
         floorCurrentObject                                  = roomCurrentObject         .GetParentObject();
-        exhibitionCurrentObject     .SetVisitorCurrentInt   (exhibitionCurrentObject    .GetVisitorCurrentInt()     + 1);
-        exhibitionCurrentObject     .SetVisitorTotalInt     (exhibitionCurrentObject    .GetVisitorTotalInt()       + 1);
-        floorCurrentObject          .SetVisitorCurrentInt   (roomCurrentObject          .GetVisitorCurrentInt()     + 1);
-        floorCurrentObject          .SetVisitorTotalInt     (roomCurrentObject          .GetVisitorTotalInt()       + 1);
-        roomCurrentObject           .SetVisitorCurrentInt   (floorCurrentObject         .GetVisitorCurrentInt()     + 1);
-        roomCurrentObject           .SetVisitorTotalInt     (floorCurrentObject         .GetVisitorTotalInt()       + 1);
+        exhibitionCurrentObject .SetVisitorCurrentIntVoid   (exhibitionCurrentObject    .GetVisitorCurrentInt()     + 1);
+        exhibitionCurrentObject .SetVisitorTotalIntVoid     (exhibitionCurrentObject    .GetVisitorTotalInt()       + 1);
+        floorCurrentObject      .SetVisitorCurrentIntVoid   (roomCurrentObject          .GetVisitorCurrentInt()     + 1);
+        floorCurrentObject      .SetVisitorTotalIntVoid     (roomCurrentObject          .GetVisitorTotalInt()       + 1);
+        roomCurrentObject       .SetVisitorCurrentIntVoid   (floorCurrentObject         .GetVisitorCurrentInt()     + 1);
+        roomCurrentObject       .SetVisitorTotalIntVoid     (floorCurrentObject         .GetVisitorTotalInt()       + 1);
         loopCounter1Int                                     = 0;
         while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
             collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();

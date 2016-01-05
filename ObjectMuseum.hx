@@ -8,6 +8,7 @@ class       ObjectMuseum                                            {
     private var fullBool                    :Bool                   = false;
     private var indexGlobalInt              :Int                    = -1;
     private var indexLocalInt               :Int                    = -1;
+    private var markForDeleteBool           :Bool                   = false;
     private var nameStruct                  :StructName             = { nameAltString:"", nameFullString:"" };
     private var parentObject                :ObjectMuseum           = null;
     private var siblingObjectArray          :Array<ObjectMuseum>    = new Array<ObjectMuseum>();
@@ -141,8 +142,16 @@ class       ObjectMuseum                                            {
     public      function GetNameStruct                              ()                          { return nameStruct                 ; }
     public      function GetParentObject                            ()                          { return parentObject               ; }
     public      function GetTagObjectArray                          ()                          { return tagObjectArray             ; }
+    public      function GetTypeEnum                                ()                          { return typeEnum                   ; }
     public      function GetVisitorCurrentInt                       ()                          { return visitorCurrentInt          ; }
     public      function GetVisitorTotalInt                         ()                          { return visitorTotalInt            ; }
-    public      function SetVisitorCurrentInt                       (_visitorCurrentInt :Int)   { visitorCurrentInt         = _visitorCurrentInt    ; }
-    public      function SetVisitorTotalInt                         (_visitorTotalInt   :Int)   { visitorTotalInt           = _visitorTotalInt      ; }
+    public      function Reset                                      ()                          {
+            fullBool                                                = false;
+            markForDeleteBool                                       = false;
+            visitorCurrentInt                                       = 0;
+            visitorTotalInt                                         = 0;
+    }
+    public      function SetMarkForDeleteBool                       (_markForDeleteBool :Bool ) { markForDeleteBool         = _markForDeleteBool    ; }
+    public      function SetVisitorCurrentIntVoid                   (_visitorCurrentInt :Int  ) { visitorCurrentInt         = _visitorCurrentInt    ; }
+    public      function SetVisitorTotalIntVoid                     (_visitorTotalInt   :Int  ) { visitorTotalInt           = _visitorTotalInt      ; }
 }
