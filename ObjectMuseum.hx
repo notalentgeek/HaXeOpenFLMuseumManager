@@ -8,7 +8,7 @@ class       ObjectMuseum                                            {
     private var fullBool                    :Bool                   = false;
     private var indexGlobalInt              :Int                    = -1;
     private var indexLocalInt               :Int                    = -1;
-    private var markForDeleteBool           :Bool                   = false;
+    private var museumModeEnum              :EnumMuseumMode         = null;
     private var nameStruct                  :StructName             = { nameAltString:"", nameFullString:"" };
     private var parentObject                :ObjectMuseum           = null;
     private var siblingObjectArray          :Array<ObjectMuseum>    = new Array<ObjectMuseum>();
@@ -139,6 +139,7 @@ class       ObjectMuseum                                            {
     public      function GetChildStruct                             ()                          { return childStruct                ; }
     public      function GetExplanationStringArray                  ()                          { return explanationStringArray     ; }
     public      function GetFullBool                                ()                          { return fullBool                   ; }
+    public      function GetMuseumModeEnum                          ()                          { return museumModeEnum             ; }
     public      function GetNameStruct                              ()                          { return nameStruct                 ; }
     public      function GetParentObject                            ()                          { return parentObject               ; }
     public      function GetTagObjectArray                          ()                          { return tagObjectArray             ; }
@@ -147,11 +148,57 @@ class       ObjectMuseum                                            {
     public      function GetVisitorTotalInt                         ()                          { return visitorTotalInt            ; }
     public      function Reset                                      ()                          {
             fullBool                                                = false;
-            markForDeleteBool                                       = false;
+            museumModeEnum                                          = null;
             visitorCurrentInt                                       = 0;
             visitorTotalInt                                         = 0;
     }
-    public      function SetMarkForDeleteBool                       (_markForDeleteBool :Bool ) { markForDeleteBool         = _markForDeleteBool    ; }
-    public      function SetVisitorCurrentIntVoid                   (_visitorCurrentInt :Int  ) { visitorCurrentInt         = _visitorCurrentInt    ; }
-    public      function SetVisitorTotalIntVoid                     (_visitorTotalInt   :Int  ) { visitorTotalInt           = _visitorTotalInt      ; }
+    public      function SetMuseumModeEnumVoid                      (_museumModeEnum    :EnumMuseumMode ) { museumModeEnum      = _museumModeEnum       ; }
+    public      function SetVisitorCurrentIntVoid                   (_visitorCurrentInt :Int            ) { visitorCurrentInt   = _visitorCurrentInt    ; }
+    public      function SetVisitorTotalIntVoid                     (_visitorTotalInt   :Int            ) { visitorTotalInt     = _visitorTotalInt      ; }
+    public      function Update                                     (){
+        if(museumModeEnum == MRK_DEL)                               {
+            /*So here the museum object is already tagged to be deleted.
+            I need to do another checking whether the object has any children or not.*/
+            if(typeEnum == EXH){
+                if(childStruct.childVisitorObjectArray.length != 0){
+                    var loopCounter1Int:Int = 0;
+                    while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+                        if(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetFinishedBool() == true){
+                            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].ChangeExhibitionCurrentVoid(collectionGlobalObject.GetArchiveExhibitionObject());
+                        }
+                    }
+                }
+                else if(childStruct.childMuseumObjectArray.length == 0){ collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
+            }
+            else if(typeEnum == FLR){
+                if(childStruct.childMuseumObjectArray.length != 0){
+                    var counterLoop1Int:Int = 0;
+                    while(counterLoop1Int < collectionGlobalObject.GetRoomObjectArray().length){
+                        if(nameStruct.nameAltString == collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetParentObject().GetNameStruct().nameAltString){
+                            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].SetMuseumModeEnumVoid(REQ_CH_PARENT);
+                        }
+                        counterLoop1Int                             ++;
+                    }
+                }
+                else if(childStruct.childMuseumObjectArray.length == 0){ collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
+            }
+            else if(typeEnum == ROM){
+                if(childStruct.childMuseumObjectArray.length != 0){
+                    var counterLoop1Int:Int = 0;
+                    while(counterLoop1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
+                        if(nameStruct.nameAltString == collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetParentObject().GetNameStruct().nameAltString){
+                            collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].SetMuseumModeEnumVoid(REQ_CH_PARENT);
+                        }
+                        counterLoop1Int                             ++;
+                    }
+                }
+                else if(childStruct.childMuseumObjectArray.length == 0){ collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
+            }
+            if(child)
+            /*When the object is removed from the object array then it is deleted.
+            But I need to make sure the object does not have sibling or children object attached to it.*/
+            //collectionGlobalObject.GetExhibitionObjectArray().remove(this);
+            /*Change so that this every museum object that is removed will be not in the target exhibition.*/
+        }
+    }
 }

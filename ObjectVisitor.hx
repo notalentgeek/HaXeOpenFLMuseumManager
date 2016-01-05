@@ -77,85 +77,93 @@ class   ObjectVisitor{
         SortTagCounterVoid                                  ();
     }
     private function ChangeExhibitionCurrentVoid            (_exhibitionTargetObject:ObjectMuseum){
-        if(exhibitionCurrentObject != null){
-            roomCurrentObject                               = exhibitionCurrentObject   .GetParentObject();
-            floorCurrentObject                              = roomCurrentObject         .GetParentObject();
-            AddRemoveVisitorFromExhibitionVoid              (false);
-            exhibitionCurrentObject .SetVisitorCurrentIntVoid(exhibitionCurrentObject    .GetVisitorCurrentInt() - 1);
-            roomCurrentObject       .SetVisitorCurrentIntVoid(roomCurrentObject          .GetVisitorCurrentInt() - 1);
-            floorCurrentObject      .SetVisitorCurrentIntVoid(floorCurrentObject         .GetVisitorCurrentInt() - 1);
+        if(_exhibitionTargetObject.GetNameStruct().nameAltString == "EXH_000"){
+            exhibitionCurrentObject                         = _exhibitionTargetObject;
+            roomCurrentObject                               = exhibitionCurrentObject;
+            floorCurrentObject                              = exhibitionCurrentObject;
+            exhibitionVisitedObjectArray.push               (exhibitionCurrentObject);
         }
-        exhibitionCurrentObject                             = _exhibitionTargetObject;
-        roomCurrentObject                                   = exhibitionCurrentObject   .GetParentObject();
-        floorCurrentObject                                  = roomCurrentObject         .GetParentObject();
-        exhibitionVisitedObjectArray.push                   (exhibitionCurrentObject);
-        AddTagCounterVoid                                   ();
-        GenerateExhibitionTargetVoid                        (targetInt);
-        var indexIntArray       :Array<Int>                 = new Array<Int>();
-        var loopCounter1Int     :Int                        = 0;
-        while(loopCounter1Int < exhibitionCurrentObject.GetExplanationStringArray().length){
-            indexIntArray.push                              (loopCounter1Int);
-            loopCounter1Int                                 ++;
+        else{
+            if(exhibitionCurrentObject != null){
+                roomCurrentObject                               = exhibitionCurrentObject   .GetParentObject();
+                floorCurrentObject                              = roomCurrentObject         .GetParentObject();
+                AddRemoveVisitorFromExhibitionVoid              (false);
+                exhibitionCurrentObject .SetVisitorCurrentIntVoid(exhibitionCurrentObject    .GetVisitorCurrentInt() - 1);
+                roomCurrentObject       .SetVisitorCurrentIntVoid(roomCurrentObject          .GetVisitorCurrentInt() - 1);
+                floorCurrentObject      .SetVisitorCurrentIntVoid(floorCurrentObject         .GetVisitorCurrentInt() - 1);
+            }
+            exhibitionCurrentObject                             = _exhibitionTargetObject;
+            roomCurrentObject                                   = exhibitionCurrentObject   .GetParentObject();
+            floorCurrentObject                                  = roomCurrentObject         .GetParentObject();
+            exhibitionVisitedObjectArray.push                   (exhibitionCurrentObject);
+            AddTagCounterVoid                                   ();
+            GenerateExhibitionTargetVoid                        (targetInt);
+            var indexIntArray       :Array<Int>                 = new Array<Int>();
+            var loopCounter1Int     :Int                        = 0;
+            while(loopCounter1Int < exhibitionCurrentObject.GetExplanationStringArray().length){
+                indexIntArray.push                              (loopCounter1Int);
+                loopCounter1Int                                 ++;
+            }
+            var indexRandomInt      :Int                        = indexIntArray[Math.round(Math.random()*(indexIntArray.length - 1))];
+            indexIntArray.remove                                (indexRandomInt);
+            var explanationString   :String                     = exhibitionCurrentObject.GetExplanationStringArray()[indexRandomInt];
+            loopCounter1Int                                     = 0;
+            while(
+                (CollectionFunction.IsExistInArrayBool(explanationStringArray, explanationString) == true)                      &&
+                (loopCounter1Int                                < exhibitionCurrentObject.GetExplanationStringArray().length)
+            ){
+                indexRandomInt                                  = indexIntArray[Math.round(Math.random()*(indexIntArray.length - 1))];
+                indexIntArray.remove                            (indexRandomInt);
+                explanationString                               = exhibitionCurrentObject.GetExplanationStringArray()[indexRandomInt];
+                loopCounter1Int                                 ++;
+            }
+            explanationStringArray.push                         (explanationString);
+            visitedCorrectExhibitionBool                        = false;
+            loopCounter1Int                                     = 0;
+            while(loopCounter1Int < exhibitionTargetObjectArray.length){
+                if(exhibitionCurrentObject.GetNameStruct().nameAltString == exhibitionTargetObjectArray[loopCounter1Int].GetNameStruct().nameAltString){ visitedCorrectExhibitionBool = true; break; }
+                loopCounter1Int                                 ++;
+            }
+                 if(visitedCorrectExhibitionBool == true )      { scoreInt ++; }
+            else if(visitedCorrectExhibitionBool == false)      { scoreInt --; }
+            roomCurrentObject                                   = exhibitionCurrentObject   .GetParentObject();
+            floorCurrentObject                                  = roomCurrentObject         .GetParentObject();
+            exhibitionCurrentObject .SetVisitorCurrentIntVoid   (exhibitionCurrentObject    .GetVisitorCurrentInt()     + 1);
+            exhibitionCurrentObject .SetVisitorTotalIntVoid     (exhibitionCurrentObject    .GetVisitorTotalInt()       + 1);
+            floorCurrentObject      .SetVisitorCurrentIntVoid   (roomCurrentObject          .GetVisitorCurrentInt()     + 1);
+            floorCurrentObject      .SetVisitorTotalIntVoid     (roomCurrentObject          .GetVisitorTotalInt()       + 1);
+            roomCurrentObject       .SetVisitorCurrentIntVoid   (floorCurrentObject         .GetVisitorCurrentInt()     + 1);
+            roomCurrentObject       .SetVisitorTotalIntVoid     (floorCurrentObject         .GetVisitorTotalInt()       + 1);
+            loopCounter1Int                                     = 0;
+            while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+                collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
+                collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(targetInt);
+                loopCounter1Int                                 ++;
+            }
+            var visitorVisitExhibitionStruct    :StructVisitorVisitExhibition = {
+                currentExhibitionTimeInt        :0,
+                exhibitionNameAltString         :""
+            };
+            visitorVisitExhibitionStruct.currentExhibitionTimeInt   = timeExhibitionInt;
+            visitorVisitExhibitionStruct.exhibitionNameAltString    = exhibitionCurrentObject.GetNameStruct().nameAltString;
+            visitExhibitionStructArray.push                         (visitorVisitExhibitionStruct);
+            if(exhibitionVisitedObjectArray.length > 1){
+                var threeSentenceString :String                 = GenerateSentenceVoid(3);
+                sentenceStringArray.push                        (threeSentenceString);
+            }
+            if(exhibitionVisitedObjectArray.length >= collectionGlobalObject.GetExhibitionObjectArray().length){
+                finishedBool                                    = true;
+            }
+            timeExhibitionInt                                   = 0;
+            /*
+            trace(
+                "indexGlobalInt = "                                             + indexGlobalInt                                            + " " +
+                "exhibitionCurrentObject.GetNameStruct().nameAltString = "      + exhibitionCurrentObject.GetNameStruct().nameAltString     + " " +
+                "exhibitionVisitedObjectArray.length = "                        + exhibitionVisitedObjectArray.length                       + " " +
+                "collectionGlobalObject.GetExhibitionObjectArray().length = "   + collectionGlobalObject.GetExhibitionObjectArray().length
+            );
+            */
         }
-        var indexRandomInt      :Int                        = indexIntArray[Math.round(Math.random()*(indexIntArray.length - 1))];
-        indexIntArray.remove                                (indexRandomInt);
-        var explanationString   :String                     = exhibitionCurrentObject.GetExplanationStringArray()[indexRandomInt];
-        loopCounter1Int                                     = 0;
-        while(
-            (CollectionFunction.IsExistInArrayBool(explanationStringArray, explanationString) == true)                      &&
-            (loopCounter1Int                                < exhibitionCurrentObject.GetExplanationStringArray().length)
-        ){
-            indexRandomInt                                  = indexIntArray[Math.round(Math.random()*(indexIntArray.length - 1))];
-            indexIntArray.remove                            (indexRandomInt);
-            explanationString                               = exhibitionCurrentObject.GetExplanationStringArray()[indexRandomInt];
-            loopCounter1Int                                 ++;
-        }
-        explanationStringArray.push                         (explanationString);
-        visitedCorrectExhibitionBool                        = false;
-        loopCounter1Int                                     = 0;
-        while(loopCounter1Int < exhibitionTargetObjectArray.length){
-            if(exhibitionCurrentObject.GetNameStruct().nameAltString == exhibitionTargetObjectArray[loopCounter1Int].GetNameStruct().nameAltString){ visitedCorrectExhibitionBool = true; break; }
-            loopCounter1Int                                 ++;
-        }
-             if(visitedCorrectExhibitionBool == true )      { scoreInt ++; }
-        else if(visitedCorrectExhibitionBool == false)      { scoreInt --; }
-        roomCurrentObject                                   = exhibitionCurrentObject   .GetParentObject();
-        floorCurrentObject                                  = roomCurrentObject         .GetParentObject();
-        exhibitionCurrentObject .SetVisitorCurrentIntVoid   (exhibitionCurrentObject    .GetVisitorCurrentInt()     + 1);
-        exhibitionCurrentObject .SetVisitorTotalIntVoid     (exhibitionCurrentObject    .GetVisitorTotalInt()       + 1);
-        floorCurrentObject      .SetVisitorCurrentIntVoid   (roomCurrentObject          .GetVisitorCurrentInt()     + 1);
-        floorCurrentObject      .SetVisitorTotalIntVoid     (roomCurrentObject          .GetVisitorTotalInt()       + 1);
-        roomCurrentObject       .SetVisitorCurrentIntVoid   (floorCurrentObject         .GetVisitorCurrentInt()     + 1);
-        roomCurrentObject       .SetVisitorTotalIntVoid     (floorCurrentObject         .GetVisitorTotalInt()       + 1);
-        loopCounter1Int                                     = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(targetInt);
-            loopCounter1Int                                 ++;
-        }
-        var visitorVisitExhibitionStruct    :StructVisitorVisitExhibition = {
-            currentExhibitionTimeInt        :0,
-            exhibitionNameAltString         :""
-        };
-        visitorVisitExhibitionStruct.currentExhibitionTimeInt   = timeExhibitionInt;
-        visitorVisitExhibitionStruct.exhibitionNameAltString    = exhibitionCurrentObject.GetNameStruct().nameAltString;
-        visitExhibitionStructArray.push                         (visitorVisitExhibitionStruct);
-        if(exhibitionVisitedObjectArray.length > 1){
-            var threeSentenceString :String                 = GenerateSentenceVoid(3);
-            sentenceStringArray.push                        (threeSentenceString);
-        }
-        if(exhibitionVisitedObjectArray.length >= collectionGlobalObject.GetExhibitionObjectArray().length){
-            finishedBool                                    = true;
-        }
-        timeExhibitionInt                                   = 0;
-        /*
-        trace(
-            "indexGlobalInt = "                                             + indexGlobalInt                                            + " " +
-            "exhibitionCurrentObject.GetNameStruct().nameAltString = "      + exhibitionCurrentObject.GetNameStruct().nameAltString     + " " +
-            "exhibitionVisitedObjectArray.length = "                        + exhibitionVisitedObjectArray.length                       + " " +
-            "collectionGlobalObject.GetExhibitionObjectArray().length = "   + collectionGlobalObject.GetExhibitionObjectArray().length
-        );
-        */
     }
     private function DetermineIndexLocalVoid                (){
         indexLocalInt                                       = exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.indexOf(this);
@@ -169,6 +177,14 @@ class   ObjectVisitor{
                 exhibitionTargetObjectArray.push(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int]);
             }
             //trace("exhibitionTargetObjectArray.length = " + exhibitionTargetObjectArray.length);
+            loopCounter1Int                                 ++;
+        }
+        /*Sort level 2, remove every exhibitions that is marked for deletion.*/
+        loopCounter1Int                                     = 0;
+        while(loopCounter1Int < exhibitionTargetObjectArray.length){
+            if(exhibitionTargetObjectArray[loopCounter1Int].GetMuseumModeEnum() == MRK_DEL){
+                exhibitionTargetObjectArray.remove          (exhibitionTargetObjectArray[loopCounter1Int]);
+            }
             loopCounter1Int                                 ++;
         }
         /*Sort level 2.*/
@@ -251,4 +267,5 @@ class   ObjectVisitor{
         }
     }
     public  function GetExhibitionCurrentObject             (){ return exhibitionCurrentObject  ; }
+    public  function GetFinishedBool                        (){ return finishedBool             ; }
 }
