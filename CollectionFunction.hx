@@ -24,14 +24,14 @@ class   CollectionFunction{
         }
         return null;
     }
-    public static   function FindTagObject(
+    public static   function FindTagStruct(
         _collectionGlobalObject :CollectionGlobal,
         _nameAltString          :String
     ){
         var loopCounter1Int     :Int                                = 0;
-        while(loopCounter1Int    <  _collectionGlobalObject.GetTagObjectArray().length){
-            if(_nameAltString   == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameStruct().nameAltString){
-                return             _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int];
+        while(loopCounter1Int   <  _collectionGlobalObject.GetTagStructArray().length){
+            if(_nameAltString   == _collectionGlobalObject.GetTagStructArray()[loopCounter1Int].tagNameStruct.nameAltString){
+                return             _collectionGlobalObject.GetTagStructArray()[loopCounter1Int];
                 break;
             }
             loopCounter1Int                                         ++;

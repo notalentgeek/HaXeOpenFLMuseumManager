@@ -12,7 +12,7 @@ class       ObjectMuseum                                            {
     private var nameStruct                  :StructName             = { nameAltString:"", nameFullString:"" };
     private var parentObject                :ObjectMuseum           = null;
     private var siblingObjectArray          :Array<ObjectMuseum>    = new Array<ObjectMuseum>();
-    private var tagObjectArray              :Array<ObjectTag>       = new Array<ObjectTag>();
+    private var tagStructArray              :Array<TagStruct>       = new Array<TagStruct>();
     private var typeEnum                    :EnumMuseumType         = null;
     private var visitorCurrentInt           :Int                    = 0;
     private var visitorTotalInt             :Int                    = 0;
@@ -32,7 +32,7 @@ class       ObjectMuseum                                            {
 
     }
     private     function AddChildVisitorVoid                        (_visitorObject     :ObjectVisitor  ){ childStruct.childVisitorObjectArray.push(_visitorObject); }
-    private     function AddTagVoid                                 (_tagObject         :ObjectTag      ){ tagObjectArray.push(_tagObject); }
+    private     function AddTagVoid                                 (_tagStruct         :TagStruct      ){ tagStructArray.push(_tagStruct); }
     private     function AddThisToArray                             (_typeEnum:EnumMuseumType){
              if(_typeEnum == EXH){ collectionGlobalObject.GetExhibitionObjectArray().push(this); }
         else if(_typeEnum == FLR){ collectionGlobalObject.GetFloorObjectArray()     .push(this); }
@@ -98,8 +98,8 @@ class       ObjectMuseum                                            {
             loopCounter1Int                                         ++;
         }
     }
-    private     function RemoveTagByNameAltVoid                     (_nameAltString     :String         ){ tagObjectArray.remove(CollectionFunction.FindTagObject(collectionGlobalObject, _nameAltString)); }
-    private     function RemoveTagByObjectVoid                      (_tagObject         :ObjectTag      ){ tagObjectArray.remove(_tagObject); }
+    private     function RemoveTagByNameAltVoid                     (_nameAltString     :String         ){ tagStructArray.remove(CollectionFunction.FindTagStruct(collectionGlobalObject, _nameAltString)); }
+    private     function RemoveTagByStructVoid                      (_tagStruct         :TagStruct      ){ tagStructArray.remove(_tagStruct); }
     private     function ResetVoid                                  (){
         fullBool                                                    =  false;
         visitorCurrentInt                                           =  0;
@@ -142,10 +142,15 @@ class       ObjectMuseum                                            {
     public      function GetMuseumModeEnum                          ()                          { return museumModeEnum             ; }
     public      function GetNameStruct                              ()                          { return nameStruct                 ; }
     public      function GetParentObject                            ()                          { return parentObject               ; }
-    public      function GetTagObjectArray                          ()                          { return tagObjectArray             ; }
+    public      function GetTagStructArray                          ()                          { return tagStructArray             ; }
     public      function GetTypeEnum                                ()                          { return typeEnum                   ; }
     public      function GetVisitorCurrentInt                       ()                          { return visitorCurrentInt          ; }
     public      function GetVisitorTotalInt                         ()                          { return visitorTotalInt            ; }
+
+    public      function SetNameAltStringVoid(_nameAltString:String){ nameStruct.nameAlrString = _nameAltString; }
+    public      function SetNameFullStringVoid(_nameFullString:String){ nameStruct.nameFullString = _nameFullString; }
+    public      function SetParentObjectVoid(_parentObject:ObjectMuseum){ parentObject = _parentObject; }
+
     public      function Reset                                      ()                          {
             fullBool                                                = false;
             museumModeEnum                                          = null;

@@ -15,7 +15,7 @@ class   ObjectVisitor{
     private     var scoreInt                                :Int                                    = 0;
     private     var sentenceStringArray                     :Array<String>                          = new Array<String>();
     private     var tagCounterStructArray                   :Array<StructTagCounter>                = new Array<StructTagCounter>();
-    private     var tagObjectMap                            :Map<ObjectTag, Bool>                   = new Map<ObjectTag, Bool>();
+    private     var tagStructMap                            :Map<TagStruct, Bool>                   = new Map<TagStruct, Bool>();
     private     var targetInt                               :Int                                    = 3;
     private     var timeAIAutoExhibitionChangeFloat         :Float                                  = 0;
     private     var timeExhibitionInt                       :Int                                    = 0;
@@ -41,27 +41,27 @@ class   ObjectVisitor{
         else if(_isAdd == false){ exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.remove   (this); }
     }
     private function AddTagCounterVoid                      (){
-        tagObjectMap                                        = new Map<ObjectTag, Bool>();
+        tagStructMap                                        = new Map<TagStruct, Bool>();
         var   loopCounter1Int           :Int                = 0;
         if(exhibitionVisitedObjectArray.length >= 2){
-            while(loopCounter1Int < exhibitionVisitedObjectArray[exhibitionVisitedObjectArray.length - 2].GetTagObjectArray().length){
-                tagObjectMap.set                            (exhibitionVisitedObjectArray[exhibitionVisitedObjectArray.length - 2].GetTagObjectArray()[loopCounter1Int], true);
+            while(loopCounter1Int < exhibitionVisitedObjectArray[exhibitionVisitedObjectArray.length - 2].GetTagStructArray().length){
+                tagStructMap.set                            (exhibitionVisitedObjectArray[exhibitionVisitedObjectArray.length - 2].GetTagStructArray()[loopCounter1Int], true);
                 loopCounter1Int                             ++;
             }
         }
         loopCounter1Int                                     = 0;
-        while(loopCounter1Int < exhibitionCurrentObject.GetTagObjectArray().length){
+        while(loopCounter1Int < exhibitionCurrentObject.GetTagStructArray().length){
             var newTagBool              :Bool               = true;
             var tagCounterNameAltString :String             = "";
             var tagCounterStruct        :StructTagCounter   = {
-                tagObject                                   :null,
+                tagStruct                                   :null,
                 tagCounterInt                               :1
             };
             var tagIndexInt             :Int                = 0;
-            tagCounterStruct.tagObject                      = exhibitionCurrentObject       .GetTagObjectArray()[loopCounter1Int];
-            tagCounterNameAltString                         = tagCounterStruct.tagObject    .GetNameStruct().nameAltString;
+            tagCounterStruct.tagStruct                      = exhibitionCurrentObject       .GetTagStructArray()[loopCounter1Int];
+            tagCounterNameAltString                         = tagCounterStruct.tagStruct    .GetNameStruct().nameAltString;
             while(tagIndexInt < tagCounterStructArray.length){
-                if(tagCounterNameAltString                  == tagCounterStructArray[tagIndexInt].tagObject.GetNameStruct().nameAltString){ newTagBool = false; break; }
+                if(tagCounterNameAltString                  == tagCounterStructArray[tagIndexInt].tagStruct.GetNameStruct().nameAltString){ newTagBool = false; break; }
                 tagIndexInt                                 ++;
             }
 
@@ -72,7 +72,7 @@ class   ObjectVisitor{
                 tagCounterStructArray[tagIndexInt].tagCounterInt ++;
             }
             loopCounter1Int                                 ++;
-            tagObjectMap.set                                (tagCounterStruct.tagObject, true);
+            tagStructMap.set                                (tagCounterStruct.tagStruct, true);
         }
         SortTagCounterVoid                                  ();
     }
@@ -216,8 +216,8 @@ class   ObjectVisitor{
             var   basePercentageFloat       :Float          = 0.1;
             var   loopCounter2Int           :Int            = 0;
             var   tagSameCounterInt         :Int            = 0;
-            while(loopCounter2Int <    exhibitionTargetObjectArray[loopCounter1Int].GetTagObjectArray().length){
-                if(tagObjectMap.exists(exhibitionTargetObjectArray[loopCounter1Int].GetTagObjectArray()[loopCounter2Int])){
+            while(loopCounter2Int <    exhibitionTargetObjectArray[loopCounter1Int].GetTagStructArray().length){
+                if(tagStructMap.exists(exhibitionTargetObjectArray[loopCounter1Int].GetTagStructArray()[loopCounter2Int])){
                     tagSameCounterInt                       ++;
                 }
                 loopCounter2Int                             ++;

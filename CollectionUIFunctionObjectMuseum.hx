@@ -28,10 +28,16 @@ class CollectionUIFunctionObjectMuseum{
 	/*This is a function to edit informations from an museum object.
 	I need to add a function to edit tag.*/
 	public static 	function EditObject(
-		_nameAltString,
-		_nameFullString,
-		_parentNameAltString,
-	){}
+		_nameAltString:String,
+		_nameFullString:String,
+		_parentNameAltString:String
+	){
+		_collectionGlobalObject.GetSelectedMuseumObject().SetNameAltStringVoid(_nameAltString);
+		_collectionGlobalObject.GetSelectedMuseumObject().SetNameFullStringVoid(_nameFullString);
+		if(_collectionGlobalObject.GetSelectedMuseumObject().GetTypeEnum() == EXH){ _collectionGlobalObject.GetSelectedMuseumObject().SetParentObjectVoid(CollectionFunction.FindMuseumObject(_collectionGlobalObject, EXH, _parentNameAltString)); }
+		else if(_collectionGlobalObject.GetSelectedMuseumObject().GetTypeEnum() == FLR){ _collectionGlobalObject.GetSelectedMuseumObject().SetParentObjectVoid(CollectionFunction.FindMuseumObject(_collectionGlobalObject, FLR, _parentNameAltString)); }
+		else if(_collectionGlobalObject.GetSelectedMuseumObject().GetTypeEnum() == ROM){ _collectionGlobalObject.GetSelectedMuseumObject().SetParentObjectVoid(CollectionFunction.FindMuseumObject(_collectionGlobalObject, ROM, _parentNameAltString)); }
+	}
 	public static 	function RemoveObject(_collectionGlobalObject:CollectionGlobal){
 		/*Show confirmation box here.
 		Actually, I need to show confirmation box for evrytime I would like to delete an object.*/
