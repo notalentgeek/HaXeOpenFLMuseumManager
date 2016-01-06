@@ -26,6 +26,21 @@ class Main{
                 collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].AIAutoExhibitionChangeVoid();
                 loopCounter1Int                         ++;
             }
+            loopCounter1Int                             = 0;
+            while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
+                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].Update();
+                loopCounter1Int                         ++;
+            }
+            loopCounter1Int                             = 0;
+            while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
+                collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].Update();
+                loopCounter1Int                         ++;
+            }
+            loopCounter1Int                             = 0;
+            while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
+                collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].Update();
+                loopCounter1Int                         ++;
+            }
         }
     }
 }

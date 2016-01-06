@@ -155,6 +155,7 @@ class       ObjectMuseum                                            {
     public      function SetMuseumModeEnumVoid                      (_museumModeEnum    :EnumMuseumMode ) { museumModeEnum      = _museumModeEnum       ; }
     public      function SetVisitorCurrentIntVoid                   (_visitorCurrentInt :Int            ) { visitorCurrentInt   = _visitorCurrentInt    ; }
     public      function SetVisitorTotalIntVoid                     (_visitorTotalInt   :Int            ) { visitorTotalInt     = _visitorTotalInt      ; }
+    /*Update function is mainly to update all museum object in real time.*/
     public      function Update                                     (){
         if(museumModeEnum == MRK_DEL)                               {
             /*So here the museum object is already tagged to be deleted.
@@ -194,7 +195,6 @@ class       ObjectMuseum                                            {
                 }
                 else if(childStruct.childMuseumObjectArray.length == 0){ collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
             }
-            if(child)
             /*When the object is removed from the object array then it is deleted.
             But I need to make sure the object does not have sibling or children object attached to it.*/
             //collectionGlobalObject.GetExhibitionObjectArray().remove(this);

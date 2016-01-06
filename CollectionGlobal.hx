@@ -12,17 +12,6 @@ class   CollectionGlobal{
     private var tagObjectArray                  :Array<ObjectTag>       = new Array<ObjectTag>          ();
     private var visitorObjectArray              :Array<ObjectVisitor>   = new Array<ObjectVisitor>      ();
     public      function new                                            (){}
-    public      function AddExhibitionObjectArrayVoid                   (_exhibitionObject              :ObjectMuseum           )   {
-        exhibitionObjectArray.push                                      (_exhibitionObject);
-        DetermineExhibitionFullThresholdInt                             ();
-    }
-    public      function AddFloorObjectArrayVoid                        (_floorObject                   :ObjectMuseum           )   { floorObjectArray          .push               (_floorObject)                      ; }
-    public      function AddRoomObjectArrayVoid                         (_roomObject                    :ObjectMuseum           )   { roomObjectArray           .push               (_roomObject)                       ; }
-    public      function AddTagObjectArrayVoid                          (_tagObject                     :ObjectTag              )   { tagObjectArray            .push               (_tagObject)                        ; }
-    public      function AddVisitorObjectArrayVoid                      (_visitorObject                 :ObjectVisitor          )   {
-        visitorObjectArray.push                                         (_visitorObject);
-        DetermineExhibitionFullThresholdInt                             ();
-    }
     public      function DetermineExhibitionFullThresholdInt            ()                                                          {
              if(exhibitionObjectArray.length >= visitorObjectArray.length){ exhibitionFullThresholdInt = Math.ceil(exhibitionObjectArray    .length/visitorObjectArray      .length); }
         else if(exhibitionObjectArray.length <  visitorObjectArray.length){ exhibitionFullThresholdInt = Math.ceil(visitorObjectArray       .length/exhibitionObjectArray   .length); }
