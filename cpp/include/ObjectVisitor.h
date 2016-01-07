@@ -50,7 +50,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		int scoreInt;
 		Array< ::String > sentenceStringArray;
 		cpp::ArrayBase tagCounterStructArray;
-		::haxe::ds::ObjectMap tagObjectMap;
+		::haxe::ds::ObjectMap tagStructMap;
 		int targetInt;
 		Float timeAIAutoExhibitionChangeFloat;
 		int timeExhibitionInt;
@@ -84,6 +84,15 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 
 		virtual ::ObjectMuseum GetExhibitionCurrentObject( );
 		Dynamic GetExhibitionCurrentObject_dyn();
+
+		virtual bool GetFinishedBool( );
+		Dynamic GetFinishedBool_dyn();
+
+		virtual cpp::ArrayBase GetTagCounterStructArray( );
+		Dynamic GetTagCounterStructArray_dyn();
+
+		virtual ::haxe::ds::ObjectMap GetTagStructMap( );
+		Dynamic GetTagStructMap_dyn();
 
 };
 

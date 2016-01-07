@@ -6,9 +6,9 @@
 #endif
 
 HX_DECLARE_CLASS0(CollectionGlobal)
+HX_DECLARE_CLASS0(EnumMuseumMode)
 HX_DECLARE_CLASS0(EnumMuseumType)
 HX_DECLARE_CLASS0(ObjectMuseum)
-HX_DECLARE_CLASS0(ObjectTag)
 HX_DECLARE_CLASS0(ObjectVisitor)
 
 
@@ -17,12 +17,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		typedef hx::Object super;
 		typedef ObjectMuseum_obj OBJ_;
 		ObjectMuseum_obj();
-		Void __construct(::CollectionGlobal _collectionGlobalObject,::String _nameAltString,::String _nameFullString,::String _parentNameAltString,::EnumMuseumType _typeEnum);
+		Void __construct(::CollectionGlobal _collectionGlobalObject,::String _nameAltString,::String _nameFullString,::String _parentNameAltString,::EnumMuseumType _typeEnum,cpp::ArrayBase _tagStructArray);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectMuseum")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectMuseum_obj > __new(::CollectionGlobal _collectionGlobalObject,::String _nameAltString,::String _nameFullString,::String _parentNameAltString,::EnumMuseumType _typeEnum);
+		static hx::ObjectPtr< ObjectMuseum_obj > __new(::CollectionGlobal _collectionGlobalObject,::String _nameAltString,::String _nameFullString,::String _parentNameAltString,::EnumMuseumType _typeEnum,cpp::ArrayBase _tagStructArray);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectMuseum_obj();
@@ -42,17 +42,18 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		bool fullBool;
 		int indexGlobalInt;
 		int indexLocalInt;
+		::EnumMuseumMode museumModeEnum;
 		Dynamic nameStruct;
 		::ObjectMuseum parentObject;
 		Array< ::Dynamic > siblingObjectArray;
-		Array< ::Dynamic > tagObjectArray;
+		cpp::ArrayBase tagStructArray;
 		::EnumMuseumType typeEnum;
 		int visitorCurrentInt;
 		int visitorTotalInt;
 		virtual Void AddChildVisitorVoid( ::ObjectVisitor _visitorObject);
 		Dynamic AddChildVisitorVoid_dyn();
 
-		virtual Void AddTagVoid( ::ObjectTag _tagObject);
+		virtual Void AddTagVoid( Dynamic _tagStruct);
 		Dynamic AddTagVoid_dyn();
 
 		virtual Void AddThisToArray( ::EnumMuseumType _typeEnum);
@@ -79,8 +80,8 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Void RemoveTagByNameAltVoid( ::String _nameAltString);
 		Dynamic RemoveTagByNameAltVoid_dyn();
 
-		virtual Void RemoveTagByObjectVoid( ::ObjectTag _tagObject);
-		Dynamic RemoveTagByObjectVoid_dyn();
+		virtual Void RemoveTagByStructVoid( Dynamic _tagStruct);
+		Dynamic RemoveTagByStructVoid_dyn();
 
 		virtual Void ResetVoid( );
 		Dynamic ResetVoid_dyn();
@@ -97,14 +98,20 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual bool GetFullBool( );
 		Dynamic GetFullBool_dyn();
 
+		virtual ::EnumMuseumMode GetMuseumModeEnum( );
+		Dynamic GetMuseumModeEnum_dyn();
+
 		virtual Dynamic GetNameStruct( );
 		Dynamic GetNameStruct_dyn();
 
 		virtual ::ObjectMuseum GetParentObject( );
 		Dynamic GetParentObject_dyn();
 
-		virtual Array< ::Dynamic > GetTagObjectArray( );
-		Dynamic GetTagObjectArray_dyn();
+		virtual cpp::ArrayBase GetTagStructArray( );
+		Dynamic GetTagStructArray_dyn();
+
+		virtual ::EnumMuseumType GetTypeEnum( );
+		Dynamic GetTypeEnum_dyn();
 
 		virtual int GetVisitorCurrentInt( );
 		Dynamic GetVisitorCurrentInt_dyn();
@@ -112,11 +119,29 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual int GetVisitorTotalInt( );
 		Dynamic GetVisitorTotalInt_dyn();
 
-		virtual Void SetVisitorCurrentInt( int _visitorCurrentInt);
-		Dynamic SetVisitorCurrentInt_dyn();
+		virtual Void SetNameAltStringVoid( ::String _nameAltString);
+		Dynamic SetNameAltStringVoid_dyn();
 
-		virtual Void SetVisitorTotalInt( int _visitorTotalInt);
-		Dynamic SetVisitorTotalInt_dyn();
+		virtual Void SetNameFullStringVoid( ::String _nameFullString);
+		Dynamic SetNameFullStringVoid_dyn();
+
+		virtual Void SetParentObjectVoid( ::ObjectMuseum _parentObject);
+		Dynamic SetParentObjectVoid_dyn();
+
+		virtual Void Reset( );
+		Dynamic Reset_dyn();
+
+		virtual Void SetMuseumModeEnumVoid( ::EnumMuseumMode _museumModeEnum);
+		Dynamic SetMuseumModeEnumVoid_dyn();
+
+		virtual Void SetVisitorCurrentIntVoid( int _visitorCurrentInt);
+		Dynamic SetVisitorCurrentIntVoid_dyn();
+
+		virtual Void SetVisitorTotalIntVoid( int _visitorTotalInt);
+		Dynamic SetVisitorTotalIntVoid_dyn();
+
+		virtual Void Update( );
+		Dynamic Update_dyn();
 
 };
 

@@ -13,9 +13,6 @@
 #ifndef INCLUDED_ObjectMuseum
 #include <ObjectMuseum.h>
 #endif
-#ifndef INCLUDED_ObjectTag
-#include <ObjectTag.h>
-#endif
 
 Void CollectionFunction_obj::__construct()
 {
@@ -129,10 +126,10 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionFunction_obj,ClearArray,(void))
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC3(CollectionFunction_obj,FindMuseumObject,return )
 
-::ObjectTag CollectionFunction_obj::FindTagObject( ::CollectionGlobal _collectionGlobalObject,::String _nameAltString){
-	HX_STACK_FRAME("CollectionFunction","FindTagObject",0x91b45268,"CollectionFunction.FindTagObject","CollectionFunction.hx",30,0xbb6e90c8)
+Dynamic CollectionFunction_obj::FindTagStruct( ::CollectionGlobal _collectionGlobalObject,::String _tagString){
+	HX_STACK_FRAME("CollectionFunction","FindTagStruct",0x8dae0dfe,"CollectionFunction.FindTagStruct","CollectionFunction.hx",30,0xbb6e90c8)
 	HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
-	HX_STACK_ARG(_nameAltString,"_nameAltString")
+	HX_STACK_ARG(_tagString,"_tagString")
 	HX_STACK_LINE(31)
 	int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
 	HX_STACK_LINE(32)
@@ -140,7 +137,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(CollectionFunction_obj,FindMuseumObject,return )
 		HX_STACK_LINE(32)
 		int tmp = loopCounter1Int;		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(32)
-		int tmp1 = _collectionGlobalObject->GetTagObjectArray()->length;		HX_STACK_VAR(tmp1,"tmp1");
+		int tmp1 = _collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(32)
 		bool tmp2 = (tmp < tmp1);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(32)
@@ -151,21 +148,19 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(CollectionFunction_obj,FindMuseumObject,return )
 			break;
 		}
 		HX_STACK_LINE(33)
-		::String tmp4 = _nameAltString;		HX_STACK_VAR(tmp4,"tmp4");
+		::String tmp4 = _tagString;		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(33)
-		::ObjectTag tmp5 = _collectionGlobalObject->GetTagObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp5,"tmp5");
+		Dynamic tmp5 = _collectionGlobalObject->GetTagStructArray()->__GetItem(loopCounter1Int);		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(33)
-		Dynamic tmp6 = tmp5->GetNameStruct();		HX_STACK_VAR(tmp6,"tmp6");
+		::String tmp6 = tmp5->__Field(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3"), hx::paccDynamic )->__Field(HX_HCSTRING("tagString","\xcb","\x36","\x68","\x42"), hx::paccDynamic );		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(33)
-		::String tmp7 = tmp6->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp7,"tmp7");
+		bool tmp7 = (tmp4 == tmp6);		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(33)
-		bool tmp8 = (tmp4 == tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(33)
-		if ((tmp8)){
+		if ((tmp7)){
 			HX_STACK_LINE(34)
-			::ObjectTag tmp9 = _collectionGlobalObject->GetTagObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp9,"tmp9");
+			Dynamic tmp8 = _collectionGlobalObject->GetTagStructArray()->__GetItem(loopCounter1Int);		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(34)
-			return tmp9;
+			return tmp8;
 			HX_STACK_LINE(35)
 			break;
 		}
@@ -177,7 +172,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(CollectionFunction_obj,FindMuseumObject,return )
 }
 
 
-STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,FindTagObject,return )
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,FindTagStruct,return )
 
 bool CollectionFunction_obj::IsExistInArrayBool( cpp::ArrayBase _dynamicArray,Dynamic _dynamicElement){
 	HX_STACK_FRAME("CollectionFunction","IsExistInArrayBool",0xae352629,"CollectionFunction.IsExistInArrayBool","CollectionFunction.hx",41,0xbb6e90c8)
@@ -255,7 +250,7 @@ bool CollectionFunction_obj::__GetStatic(const ::String &inName, Dynamic &outVal
 		if (HX_FIELD_EQ(inName,"ClearArray") ) { outValue = ClearArray_dyn(); return true;  }
 		break;
 	case 13:
-		if (HX_FIELD_EQ(inName,"FindTagObject") ) { outValue = FindTagObject_dyn(); return true;  }
+		if (HX_FIELD_EQ(inName,"FindTagStruct") ) { outValue = FindTagStruct_dyn(); return true;  }
 		break;
 	case 16:
 		if (HX_FIELD_EQ(inName,"FindMuseumObject") ) { outValue = FindMuseumObject_dyn(); return true;  }
@@ -290,7 +285,7 @@ hx::Class CollectionFunction_obj::__mClass;
 static ::String sStaticFields[] = {
 	HX_HCSTRING("ClearArray","\xec","\xb0","\x4a","\xf1"),
 	HX_HCSTRING("FindMuseumObject","\x2a","\x8d","\x7d","\xe1"),
-	HX_HCSTRING("FindTagObject","\x20","\x9d","\x19","\x6f"),
+	HX_HCSTRING("FindTagStruct","\xb6","\x58","\x13","\x6b"),
 	HX_HCSTRING("IsExistInArrayBool","\x71","\x00","\x0e","\x1d"),
 	HX_HCSTRING("PickRandomFromArrayT","\xa9","\x28","\x68","\x63"),
 	::String(null()) };

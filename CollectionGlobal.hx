@@ -1,6 +1,7 @@
 import  CollectionFunction;
+import  CollectionStruct;
 class   CollectionGlobal{
-    private var archiveExhibitionObject         :MuseumObject           = new ObjectMuseum(this, "EXH_000", "EXH_000", "XXX_XXX", EXH);
+    private var archiveExhibitionObject         :ObjectMuseum           = null;
     private var exhibitionFullThresholdInt      :Int                    = 0;
     private var exhibitionObjectArray           :Array<ObjectMuseum>    = new Array<ObjectMuseum>       ();
     private var floorObjectArray                :Array<ObjectMuseum>    = new Array<ObjectMuseum>       ();
@@ -11,7 +12,9 @@ class   CollectionGlobal{
     private var selectedVisitorObject           :ObjectVisitor          = null; 
     private var tagStructArray                  :Array<StructTag>       = new Array<StructTag>          ();
     private var visitorObjectArray              :Array<ObjectVisitor>   = new Array<ObjectVisitor>      ();
-    public      function new                                            (){}
+    public      function new                                            (){
+        archiveExhibitionObject = new ObjectMuseum(this, "EXH_000", "EXH_000", "XXX_XXX", EXH, new Array<StructTag>());
+    }
     public      function DetermineExhibitionFullThresholdInt            ()                                                          {
              if(exhibitionObjectArray.length >= visitorObjectArray.length){ exhibitionFullThresholdInt = Math.ceil(exhibitionObjectArray    .length/visitorObjectArray      .length); }
         else if(exhibitionObjectArray.length <  visitorObjectArray.length){ exhibitionFullThresholdInt = Math.ceil(visitorObjectArray       .length/exhibitionObjectArray   .length); }

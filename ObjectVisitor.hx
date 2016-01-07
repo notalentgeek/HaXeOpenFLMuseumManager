@@ -15,7 +15,7 @@ class   ObjectVisitor{
     private     var scoreInt                                :Int                                    = 0;
     private     var sentenceStringArray                     :Array<String>                          = new Array<String>();
     private     var tagCounterStructArray                   :Array<StructTagCounter>                = new Array<StructTagCounter>();
-    private     var tagStructMap                            :Map<TagStruct, Bool>                   = new Map<TagStruct, Bool>();
+    private     var tagStructMap                            :Map<StructTag, Bool>                   = new Map<StructTag, Bool>();
     private     var targetInt                               :Int                                    = 3;
     private     var timeAIAutoExhibitionChangeFloat         :Float                                  = 0;
     private     var timeExhibitionInt                       :Int                                    = 0;
@@ -41,7 +41,7 @@ class   ObjectVisitor{
         else if(_isAdd == false){ exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.remove   (this); }
     }
     private function AddTagCounterVoid                      (){
-        tagStructMap                                        = new Map<TagStruct, Bool>();
+        tagStructMap                                        = new Map<StructTag, Bool>();
         var   loopCounter1Int           :Int                = 0;
         if(exhibitionVisitedObjectArray.length >= 2){
             while(loopCounter1Int < exhibitionVisitedObjectArray[exhibitionVisitedObjectArray.length - 2].GetTagStructArray().length){
@@ -49,24 +49,31 @@ class   ObjectVisitor{
                 loopCounter1Int                             ++;
             }
         }
+        /*ERROR: This is an error of which GetTagStructArray().length is always returned 0.
+        It is fixed!*/
+        //trace(exhibitionCurrentObject.GetTagStructArray().length);
         loopCounter1Int                                     = 0;
         while(loopCounter1Int < exhibitionCurrentObject.GetTagStructArray().length){
             var newTagBool              :Bool               = true;
-            var tagCounterNameAltString :String             = "";
+            var tagCounterEntry1String  :String             = "";
             var tagCounterStruct        :StructTagCounter   = {
                 tagStruct                                   :null,
                 tagCounterInt                               :1
             };
             var tagIndexInt             :Int                = 0;
-            tagCounterStruct.tagStruct                      = exhibitionCurrentObject       .GetTagStructArray()[loopCounter1Int];
-            tagCounterNameAltString                         = tagCounterStruct.tagStruct    .GetNameStruct().nameAltString;
+            tagCounterStruct.tagStruct                      = exhibitionCurrentObject.GetTagStructArray()[loopCounter1Int];
+            tagCounterEntry1String                          = tagCounterStruct.tagStruct.tagEntry1Struct.tagString;
             while(tagIndexInt < tagCounterStructArray.length){
-                if(tagCounterNameAltString                  == tagCounterStructArray[tagIndexInt].tagStruct.GetNameStruct().nameAltString){ newTagBool = false; break; }
+                if(tagCounterEntry1String                   == tagCounterStructArray[tagIndexInt].tagStruct.tagEntry1Struct.tagString){ newTagBool = false; break; }
                 tagIndexInt                                 ++;
             }
 
-                 if(newTagBool == true ){
+            /*ERROR: Tag is not "absorbed" from the museum object into the visitor.
+            It is fixed!*/
+            //trace(newTagBool);
+            if(newTagBool == true ){
                 tagCounterStructArray.push(tagCounterStruct);
+                trace(tagCounterStruct.tagStruct.tagEntry1Struct.tagString);
             }
             else if(newTagBool == false){
                 tagCounterStructArray[tagIndexInt].tagCounterInt ++;
@@ -76,7 +83,7 @@ class   ObjectVisitor{
         }
         SortTagCounterVoid                                  ();
     }
-    private function ChangeExhibitionCurrentVoid            (_exhibitionTargetObject:ObjectMuseum){
+    public function ChangeExhibitionCurrentVoid            (_exhibitionTargetObject:ObjectMuseum){
         if(_exhibitionTargetObject.GetNameStruct().nameAltString == "EXH_000"){
             exhibitionCurrentObject                         = _exhibitionTargetObject;
             roomCurrentObject                               = exhibitionCurrentObject;
@@ -268,4 +275,6 @@ class   ObjectVisitor{
     }
     public  function GetExhibitionCurrentObject             (){ return exhibitionCurrentObject  ; }
     public  function GetFinishedBool                        (){ return finishedBool             ; }
+    public  function GetTagCounterStructArray               (){ return tagCounterStructArray    ; }
+    public  function GetTagStructMap                        (){ return tagStructMap             ; }
 }

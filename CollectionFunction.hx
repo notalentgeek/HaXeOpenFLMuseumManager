@@ -26,11 +26,11 @@ class   CollectionFunction{
     }
     public static   function FindTagStruct(
         _collectionGlobalObject :CollectionGlobal,
-        _nameAltString          :String
+        _tagString              :String
     ){
         var loopCounter1Int     :Int                                = 0;
         while(loopCounter1Int   <  _collectionGlobalObject.GetTagStructArray().length){
-            if(_nameAltString   == _collectionGlobalObject.GetTagStructArray()[loopCounter1Int].tagNameStruct.nameAltString){
+            if(_tagString       == _collectionGlobalObject.GetTagStructArray()[loopCounter1Int].tagEntry1Struct.tagString){
                 return             _collectionGlobalObject.GetTagStructArray()[loopCounter1Int];
                 break;
             }

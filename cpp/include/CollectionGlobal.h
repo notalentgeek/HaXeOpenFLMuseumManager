@@ -7,7 +7,6 @@
 
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(ObjectMuseum)
-HX_DECLARE_CLASS0(ObjectTag)
 HX_DECLARE_CLASS0(ObjectVisitor)
 
 
@@ -35,30 +34,22 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("CollectionGlobal","\x81","\x6a","\xb4","\x3d"); }
 
+		::ObjectMuseum archiveExhibitionObject;
 		int exhibitionFullThresholdInt;
 		Array< ::Dynamic > exhibitionObjectArray;
 		Array< ::Dynamic > floorObjectArray;
 		int indexGlobalVisitorInt;
 		Array< ::Dynamic > roomObjectArray;
-		Array< ::Dynamic > tagObjectArray;
+		::ObjectMuseum selectedMuseumObject;
+		Dynamic selectedTagStruct;
+		::ObjectVisitor selectedVisitorObject;
+		cpp::ArrayBase tagStructArray;
 		Array< ::Dynamic > visitorObjectArray;
-		virtual Void AddExhibitionObjectArrayVoid( ::ObjectMuseum _exhibitionObject);
-		Dynamic AddExhibitionObjectArrayVoid_dyn();
-
-		virtual Void AddFloorObjectArrayVoid( ::ObjectMuseum _floorObject);
-		Dynamic AddFloorObjectArrayVoid_dyn();
-
-		virtual Void AddRoomObjectArrayVoid( ::ObjectMuseum _roomObject);
-		Dynamic AddRoomObjectArrayVoid_dyn();
-
-		virtual Void AddTagObjectArrayVoid( ::ObjectTag _tagObject);
-		Dynamic AddTagObjectArrayVoid_dyn();
-
-		virtual Void AddVisitorObjectArrayVoid( ::ObjectVisitor _visitorObject);
-		Dynamic AddVisitorObjectArrayVoid_dyn();
-
 		virtual Void DetermineExhibitionFullThresholdInt( );
 		Dynamic DetermineExhibitionFullThresholdInt_dyn();
+
+		virtual ::ObjectMuseum GetArchiveExhibitionObject( );
+		Dynamic GetArchiveExhibitionObject_dyn();
 
 		virtual int GetExhibitionFullThresholdInt( );
 		Dynamic GetExhibitionFullThresholdInt_dyn();
@@ -72,8 +63,17 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		virtual Array< ::Dynamic > GetRoomObjectArray( );
 		Dynamic GetRoomObjectArray_dyn();
 
-		virtual Array< ::Dynamic > GetTagObjectArray( );
-		Dynamic GetTagObjectArray_dyn();
+		virtual ::ObjectMuseum GetSelectedMuseumObject( );
+		Dynamic GetSelectedMuseumObject_dyn();
+
+		virtual Dynamic GetSelectedTagStruct( );
+		Dynamic GetSelectedTagStruct_dyn();
+
+		virtual ::ObjectVisitor GetSelectedVisitorObject( );
+		Dynamic GetSelectedVisitorObject_dyn();
+
+		virtual cpp::ArrayBase GetTagStructArray( );
+		Dynamic GetTagStructArray_dyn();
 
 		virtual Array< ::Dynamic > GetVisitorObjectArray( );
 		Dynamic GetVisitorObjectArray_dyn();
@@ -93,8 +93,17 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		virtual Void SetRoomObjectArrayVoid( Array< ::Dynamic > _roomObjectArray);
 		Dynamic SetRoomObjectArrayVoid_dyn();
 
-		virtual Void SetTagObjectArrayVoid( Array< ::Dynamic > _tagObjectArray);
-		Dynamic SetTagObjectArrayVoid_dyn();
+		virtual Void SetSelectedMuseumObjectVoid( ::ObjectMuseum _selectedMuseumObject);
+		Dynamic SetSelectedMuseumObjectVoid_dyn();
+
+		virtual Void SetSelectedTagStructVoid( Dynamic _selectedTagStruct);
+		Dynamic SetSelectedTagStructVoid_dyn();
+
+		virtual Void SetSelectedVisitorObjectVoid( ::ObjectVisitor _selectedVisitorObject);
+		Dynamic SetSelectedVisitorObjectVoid_dyn();
+
+		virtual Void SetTagStructArrayVoid( cpp::ArrayBase _tagStructArray);
+		Dynamic SetTagStructArrayVoid_dyn();
 
 		virtual Void SetVisitorObjectArrayVoid( Array< ::Dynamic > _visitorObjectArray);
 		Dynamic SetVisitorObjectArrayVoid_dyn();

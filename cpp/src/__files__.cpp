@@ -10,7 +10,6 @@ const char *__hxcpp_all_files[] = {
 "CollectionGlobal.hx",
 "Main.hx",
 "ObjectMuseum.hx",
-"ObjectTag.hx",
 "ObjectVisitor.hx",
 #endif
  0 };
@@ -20,12 +19,11 @@ const char *__hxcpp_all_files_fullpath[] = {
 "/usr/lib/haxe/std/cpp/_std/Std.hx",
 "/usr/lib/haxe/std/cpp/_std/haxe/ds/ObjectMap.hx",
 "/usr/lib/haxe/std/haxe/Log.hx",
-"/home/notalentgeek/Desktop/Programming/HaXeMuseumSimulator/CollectionFunction.hx",
-"/home/notalentgeek/Desktop/Programming/HaXeMuseumSimulator/CollectionGlobal.hx",
-"/home/notalentgeek/Desktop/Programming/HaXeMuseumSimulator/Main.hx",
-"/home/notalentgeek/Desktop/Programming/HaXeMuseumSimulator/ObjectMuseum.hx",
-"/home/notalentgeek/Desktop/Programming/HaXeMuseumSimulator/ObjectTag.hx",
-"/home/notalentgeek/Desktop/Programming/HaXeMuseumSimulator/ObjectVisitor.hx",
+"/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/CollectionFunction.hx",
+"/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/CollectionGlobal.hx",
+"/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/Main.hx",
+"/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/ObjectMuseum.hx",
+"/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/ObjectVisitor.hx",
 #endif
  0 };
 
@@ -35,7 +33,6 @@ const char *__hxcpp_all_classes[] = {
 "CollectionGlobal",
 "Main",
 "ObjectMuseum",
-"ObjectTag",
 "ObjectVisitor",
 "Std",
 "haxe.Log",
