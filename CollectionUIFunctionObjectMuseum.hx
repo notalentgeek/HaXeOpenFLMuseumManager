@@ -1,10 +1,10 @@
 import CollectionFunction;
 class CollectionUIFunctionObjectMuseum{
-	public  		function new(){}
+	public function new(){}
 	/*A function to add museum object into its corresponding array.
 	Still need to edit this function to add some tag.
 	So that is mean that I need to add tagging in ObjectMuseum constructor.*/
-	public static 	function AddObject(
+	public static function AddObject(
 		_collectionGlobalObject:CollectionGlobal,
 		_nameAltString:String,
 		_nameFullString:String,
@@ -27,7 +27,7 @@ class CollectionUIFunctionObjectMuseum{
 	}
 	/*This is a function to edit informations from an museum object.
 	I need to add a function to edit tag.*/
-	public static 	function EditObject(
+	public static function EditObject(
 		_nameAltString:String,
 		_nameFullString:String,
 		_parentNameAltString:String
@@ -38,15 +38,14 @@ class CollectionUIFunctionObjectMuseum{
 		else if(_collectionGlobalObject.GetSelectedMuseumObject().GetTypeEnum() == FLR){ _collectionGlobalObject.GetSelectedMuseumObject().SetParentObjectVoid(CollectionFunction.FindMuseumObject(_collectionGlobalObject, FLR, _parentNameAltString)); }
 		else if(_collectionGlobalObject.GetSelectedMuseumObject().GetTypeEnum() == ROM){ _collectionGlobalObject.GetSelectedMuseumObject().SetParentObjectVoid(CollectionFunction.FindMuseumObject(_collectionGlobalObject, ROM, _parentNameAltString)); }
 	}
-	public static 	function RemoveObject(_collectionGlobalObject:CollectionGlobal){
-		/*Show confirmation box here.
-		Actually, I need to show confirmation box for evrytime I would like to delete an object.*/
+	public static function RemoveObject(_collectionGlobalObject:CollectionGlobal){
+		/*Display confirmation box here.*/
 		_collectionGlobalObject.GetSelectedMuseumObject().SetMuseumModeEnumVoid(MRK_DEL);
 	}
-	public static 	function ResetObject(_collectionGlobalObject:CollectionGlobal){
+	public static function ResetObject(_collectionGlobalObject:CollectionGlobal){
 		_collectionGlobalObject.GetSelectedMuseumObject().Reset();
 	}
-	public static  	function SelectObject(_collectionGlobalObject:CollectionGlobal, _museumObject:ObjectMuseum){
+	public static function SelectObject(_collectionGlobalObject:CollectionGlobal, _museumObject:ObjectMuseum){
 		_collectionGlobalObject.SetSelectedMuseumObjectVoid(CollectionFunction.FindMuseumObject(_collectionGlobalObject, _museumObject.GetTypeEnum(), _museumObject.GetNameStruct().nameAltString));
 	}
 }

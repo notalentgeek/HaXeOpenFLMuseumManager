@@ -46,6 +46,12 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionFunction_obj : public hx::Object{
 		static Dynamic PickRandomFromArrayT( cpp::ArrayBase _tArray);
 		static Dynamic PickRandomFromArrayT_dyn();
 
+		static Float GenerateGreatestCommonDivisorFloat( Float _number1Float,Float _number2Float);
+		static Dynamic GenerateGreatestCommonDivisorFloat_dyn();
+
+		static Float GenerateLeastCommonMultipleFloat( Float _number1Float,Float _number2Float);
+		static Dynamic GenerateLeastCommonMultipleFloat_dyn();
+
 };
 
 

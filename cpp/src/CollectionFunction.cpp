@@ -238,6 +238,57 @@ Dynamic CollectionFunction_obj::PickRandomFromArrayT( cpp::ArrayBase _tArray){
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionFunction_obj,PickRandomFromArrayT,return )
 
+Float CollectionFunction_obj::GenerateGreatestCommonDivisorFloat( Float _number1Float,Float _number2Float){
+	HX_STACK_FRAME("CollectionFunction","GenerateGreatestCommonDivisorFloat",0x3f62c60f,"CollectionFunction.GenerateGreatestCommonDivisorFloat","CollectionFunction.hx",55,0xbb6e90c8)
+	HX_STACK_ARG(_number1Float,"_number1Float")
+	HX_STACK_ARG(_number2Float,"_number2Float")
+	HX_STACK_LINE(56)
+	bool tmp = (_number2Float == (int)0);		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(56)
+	if ((tmp)){
+		HX_STACK_LINE(56)
+		Float tmp1 = _number1Float;		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(56)
+		return tmp1;
+	}
+	else{
+		HX_STACK_LINE(57)
+		Float tmp1 = _number2Float;		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(57)
+		Float tmp2 = hx::Mod(_number1Float,_number2Float);		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(57)
+		Float tmp3 = ::CollectionFunction_obj::GenerateGreatestCommonDivisorFloat(tmp1,tmp2);		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(57)
+		return tmp3;
+	}
+	HX_STACK_LINE(56)
+	return ((Float)0.);
+}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,GenerateGreatestCommonDivisorFloat,return )
+
+Float CollectionFunction_obj::GenerateLeastCommonMultipleFloat( Float _number1Float,Float _number2Float){
+	HX_STACK_FRAME("CollectionFunction","GenerateLeastCommonMultipleFloat",0xeb3d0685,"CollectionFunction.GenerateLeastCommonMultipleFloat","CollectionFunction.hx",59,0xbb6e90c8)
+	HX_STACK_ARG(_number1Float,"_number1Float")
+	HX_STACK_ARG(_number2Float,"_number2Float")
+	HX_STACK_LINE(60)
+	Float tmp = (_number1Float * _number2Float);		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(60)
+	Float tmp1 = _number1Float;		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(60)
+	Float tmp2 = _number2Float;		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(60)
+	Float tmp3 = ::CollectionFunction_obj::GenerateGreatestCommonDivisorFloat(tmp1,tmp2);		HX_STACK_VAR(tmp3,"tmp3");
+	HX_STACK_LINE(60)
+	Float tmp4 = (Float(tmp) / Float(tmp3));		HX_STACK_VAR(tmp4,"tmp4");
+	HX_STACK_LINE(60)
+	return tmp4;
+}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,GenerateLeastCommonMultipleFloat,return )
+
 
 CollectionFunction_obj::CollectionFunction_obj()
 {
@@ -260,6 +311,12 @@ bool CollectionFunction_obj::__GetStatic(const ::String &inName, Dynamic &outVal
 		break;
 	case 20:
 		if (HX_FIELD_EQ(inName,"PickRandomFromArrayT") ) { outValue = PickRandomFromArrayT_dyn(); return true;  }
+		break;
+	case 32:
+		if (HX_FIELD_EQ(inName,"GenerateLeastCommonMultipleFloat") ) { outValue = GenerateLeastCommonMultipleFloat_dyn(); return true;  }
+		break;
+	case 34:
+		if (HX_FIELD_EQ(inName,"GenerateGreatestCommonDivisorFloat") ) { outValue = GenerateGreatestCommonDivisorFloat_dyn(); return true;  }
 	}
 	return false;
 }
@@ -288,6 +345,8 @@ static ::String sStaticFields[] = {
 	HX_HCSTRING("FindTagStruct","\xb6","\x58","\x13","\x6b"),
 	HX_HCSTRING("IsExistInArrayBool","\x71","\x00","\x0e","\x1d"),
 	HX_HCSTRING("PickRandomFromArrayT","\xa9","\x28","\x68","\x63"),
+	HX_HCSTRING("GenerateGreatestCommonDivisorFloat","\x57","\xb0","\xa2","\x53"),
+	HX_HCSTRING("GenerateLeastCommonMultipleFloat","\xcd","\x4e","\xe4","\xd0"),
 	::String(null()) };
 
 void CollectionFunction_obj::__register()

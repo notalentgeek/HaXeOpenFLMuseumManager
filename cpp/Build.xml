@@ -23,7 +23,6 @@
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectVisitor.h"/>
    <depend name="include/haxe/IMap.h"/>
-   <depend name="include/haxe/Log.h"/>
    <depend name="include/haxe/ds/ObjectMap.h"/>
   </file>
   <file name="src/ObjectMuseum.cpp">
@@ -43,9 +42,7 @@
    <depend name="include/Main.h"/>
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectVisitor.h"/>
-   <depend name="include/haxe/IMap.h"/>
    <depend name="include/haxe/Log.h"/>
-   <depend name="include/haxe/ds/ObjectMap.h"/>
   </file>
   <file name="src/CollectionGlobal.cpp">
    <depend name="include/CollectionGlobal.h"/>

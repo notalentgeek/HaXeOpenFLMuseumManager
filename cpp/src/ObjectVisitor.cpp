@@ -19,9 +19,6 @@
 #ifndef INCLUDED_haxe_IMap
 #include <haxe/IMap.h>
 #endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
-#endif
 #ifndef INCLUDED_haxe_ds_ObjectMap
 #include <haxe/ds/ObjectMap.h>
 #endif
@@ -324,14 +321,6 @@ Void ObjectVisitor_obj::AddTagCounterVoid( ){
 				Dynamic tmp13 = tagCounterStruct;		HX_STACK_VAR(tmp13,"tmp13");
 				HX_STACK_LINE(75)
 				this->tagCounterStructArray->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp13);
-				HX_STACK_LINE(76)
-				Dynamic tmp14 = tagCounterStruct->__Field(HX_HCSTRING("tagStruct","\x4f","\x48","\x71","\x42"), hx::paccDynamic )->__Field(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3"), hx::paccDynamic );		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(76)
-				::String tmp15 = tmp14->__Field(HX_HCSTRING("tagString","\xcb","\x36","\x68","\x42"), hx::paccDynamic );		HX_STACK_VAR(tmp15,"tmp15");
-				HX_STACK_LINE(76)
-				Dynamic tmp16 = hx::SourceInfo(HX_HCSTRING("ObjectVisitor.hx","\x8f","\x03","\x13","\xe7"),76,HX_HCSTRING("ObjectVisitor","\x8f","\x02","\xe3","\xd9"),HX_HCSTRING("AddTagCounterVoid","\x17","\x32","\xf9","\x30"));		HX_STACK_VAR(tmp16,"tmp16");
-				HX_STACK_LINE(76)
-				::haxe::Log_obj::trace(tmp15,tmp16);
 			}
 			else{
 				HX_STACK_LINE(78)
