@@ -21,14 +21,18 @@ class EnumTagTypeSub_obj : public hx::EnumBase_obj
 		::String GetEnumName( ) const { return HX_HCSTRING("EnumTagTypeSub","\x2d","\xba","\xee","\x2b"); }
 		::String __ToString() const { return HX_HCSTRING("EnumTagTypeSub.","\x61","\x2d","\xf4","\x44") + tag; }
 
-		static ::EnumTagTypeSub BASIC;
-		static inline ::EnumTagTypeSub BASIC_dyn() { return BASIC; }
+		static ::EnumTagTypeSub ADJ;
+		static inline ::EnumTagTypeSub ADJ_dyn() { return ADJ; }
+		static ::EnumTagTypeSub ADV;
+		static inline ::EnumTagTypeSub ADV_dyn() { return ADV; }
 		static ::EnumTagTypeSub NOUN;
 		static inline ::EnumTagTypeSub NOUN_dyn() { return NOUN; }
 		static ::EnumTagTypeSub NOUN_POS;
 		static inline ::EnumTagTypeSub NOUN_POS_dyn() { return NOUN_POS; }
 		static ::EnumTagTypeSub NOUN_S;
 		static inline ::EnumTagTypeSub NOUN_S_dyn() { return NOUN_S; }
+		static ::EnumTagTypeSub NOUN_S_POS;
+		static inline ::EnumTagTypeSub NOUN_S_POS_dyn() { return NOUN_S_POS; }
 		static ::EnumTagTypeSub VERB_1;
 		static inline ::EnumTagTypeSub VERB_1_dyn() { return VERB_1; }
 		static ::EnumTagTypeSub VERB_2;

@@ -29,12 +29,26 @@ class EnumTagType_obj : public hx::EnumBase_obj
 		static inline ::EnumTagType NOUN_ALIVE_ABSTRACT_dyn() { return NOUN_ALIVE_ABSTRACT; }
 		static ::EnumTagType NOUN_ALIVE_CONCRETE;
 		static inline ::EnumTagType NOUN_ALIVE_CONCRETE_dyn() { return NOUN_ALIVE_CONCRETE; }
-		static ::EnumTagType NOUN_INANIMATE_ABSTRACT;
-		static inline ::EnumTagType NOUN_INANIMATE_ABSTRACT_dyn() { return NOUN_INANIMATE_ABSTRACT; }
-		static ::EnumTagType NOUN_INANIMATE_CONCRETE;
-		static inline ::EnumTagType NOUN_INANIMATE_CONCRETE_dyn() { return NOUN_INANIMATE_CONCRETE; }
-		static ::EnumTagType VERB;
-		static inline ::EnumTagType VERB_dyn() { return VERB; }
+		static ::EnumTagType NOUN_INANIMATE_HOLD_ABSTRACT;
+		static inline ::EnumTagType NOUN_INANIMATE_HOLD_ABSTRACT_dyn() { return NOUN_INANIMATE_HOLD_ABSTRACT; }
+		static ::EnumTagType NOUN_INANIMATE_HOLD_CONCRETE;
+		static inline ::EnumTagType NOUN_INANIMATE_HOLD_CONCRETE_dyn() { return NOUN_INANIMATE_HOLD_CONCRETE; }
+		static ::EnumTagType NOUN_INANIMATE_PLACE_ABSTRACT;
+		static inline ::EnumTagType NOUN_INANIMATE_PLACE_ABSTRACT_dyn() { return NOUN_INANIMATE_PLACE_ABSTRACT; }
+		static ::EnumTagType NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER;
+		static inline ::EnumTagType NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER_dyn() { return NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER; }
+		static ::EnumTagType NOUN_INANIMATE_PLACE_CONCRETE_OWNER;
+		static inline ::EnumTagType NOUN_INANIMATE_PLACE_CONCRETE_OWNER_dyn() { return NOUN_INANIMATE_PLACE_CONCRETE_OWNER; }
+		static ::EnumTagType NOUN_INANIMATE_TITLE;
+		static inline ::EnumTagType NOUN_INANIMATE_TITLE_dyn() { return NOUN_INANIMATE_TITLE; }
+		static ::EnumTagType NOUN_INANIMATE_WEAR_ABSTRACT;
+		static inline ::EnumTagType NOUN_INANIMATE_WEAR_ABSTRACT_dyn() { return NOUN_INANIMATE_WEAR_ABSTRACT; }
+		static ::EnumTagType NOUN_INANIMATE_WEAR_CONCRETE;
+		static inline ::EnumTagType NOUN_INANIMATE_WEAR_CONCRETE_dyn() { return NOUN_INANIMATE_WEAR_CONCRETE; }
+		static ::EnumTagType VERB_INTRANSITIVE;
+		static inline ::EnumTagType VERB_INTRANSITIVE_dyn() { return VERB_INTRANSITIVE; }
+		static ::EnumTagType VERB_TRANSITIVE;
+		static inline ::EnumTagType VERB_TRANSITIVE_dyn() { return VERB_TRANSITIVE; }
 };
 
 

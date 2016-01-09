@@ -1,3 +1,4 @@
+import CollectionEnum;
 import CollectionFunction;
 import CollectionStruct;
 class CollectionGlobal{
@@ -13,7 +14,7 @@ class CollectionGlobal{
     private var tagStructArray:Array<StructTag> = new Array<StructTag>();
     private var visitorObjectArray:Array<ObjectVisitor> = new Array<ObjectVisitor>();
     public      function new                                            (){
-        archiveExhibitionObject = new ObjectMuseum(this, "EXH_ARC", "Exhibition Archive", "XXX_XXX", EXH, new Array<StructTag>());
+        archiveExhibitionObject = new ObjectMuseum(this, "EXH_ARC", "Exhibition Archive", "XXX_XXX", new Array<StructTag>(), EXH);
     }
     public function DetermineExhibitionFullThresholdInt            ()                                                          {
              if(exhibitionObjectArray.length >= visitorObjectArray.length){ exhibitionFullThresholdInt = Math.ceil(exhibitionObjectArray.length/visitorObjectArray.length); }

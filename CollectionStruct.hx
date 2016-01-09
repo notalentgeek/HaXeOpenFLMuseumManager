@@ -17,12 +17,13 @@ typedef StructTagEntry = {
 };
 /*I decided to use struct instead of normal class on how the Tag will be implemented.*/
 typedef StructTag = {
-    tagEntry1Struct         :StructTagEntry,
-    ?tagEntry2Struct        :StructTagEntry,
-    ?tagEntry3Struct        :StructTagEntry,
-    ?tagEntry4Struct        :StructTagEntry,
-    ?tagEntry5Struct        :StructTagEntry,
-    tagTypeEnum             :EnumTagType
+    ?tagEntry2Struct:StructTagEntry,
+    ?tagEntry3Struct:StructTagEntry,
+    ?tagEntry4Struct:StructTagEntry,
+    ?tagEntry5Struct:StructTagEntry,
+    tagEntry1Struct:StructTagEntry,
+    tagFeelEnum:EnumTagFeelType,
+    tagTypeEnum:EnumTagType
 };
 typedef StructVisitorVisitExhibition = { 
     currentExhibitionTimeInt:Int,

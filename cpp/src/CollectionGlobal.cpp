@@ -16,34 +16,34 @@
 
 Void CollectionGlobal_obj::__construct()
 {
-HX_STACK_FRAME("CollectionGlobal","new",0x069ddff3,"CollectionGlobal.new","CollectionGlobal.hx",3,0xb0d19edd)
+HX_STACK_FRAME("CollectionGlobal","new",0x069ddff3,"CollectionGlobal.new","CollectionGlobal.hx",4,0xb0d19edd)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(14)
+	HX_STACK_LINE(15)
 	this->visitorObjectArray = Array_obj< ::Dynamic >::__new();
-	HX_STACK_LINE(13)
+	HX_STACK_LINE(14)
 	this->tagStructArray = Dynamic( Array_obj<Dynamic>::__new() );
-	HX_STACK_LINE(12)
+	HX_STACK_LINE(13)
 	this->selectedVisitorObject = null();
-	HX_STACK_LINE(11)
+	HX_STACK_LINE(12)
 	this->selectedTagStruct = null();
-	HX_STACK_LINE(10)
+	HX_STACK_LINE(11)
 	this->selectedMuseumObject = null();
-	HX_STACK_LINE(9)
+	HX_STACK_LINE(10)
 	this->roomObjectArray = Array_obj< ::Dynamic >::__new();
-	HX_STACK_LINE(8)
+	HX_STACK_LINE(9)
 	this->indexGlobalVisitorInt = (int)0;
-	HX_STACK_LINE(7)
+	HX_STACK_LINE(8)
 	this->floorObjectArray = Array_obj< ::Dynamic >::__new();
-	HX_STACK_LINE(6)
+	HX_STACK_LINE(7)
 	this->exhibitionObjectArray = Array_obj< ::Dynamic >::__new();
-	HX_STACK_LINE(5)
+	HX_STACK_LINE(6)
 	this->exhibitionFullThresholdInt = (int)0;
-	HX_STACK_LINE(4)
+	HX_STACK_LINE(5)
 	this->archiveExhibitionObject = null();
-	HX_STACK_LINE(16)
-	::ObjectMuseum tmp = ::ObjectMuseum_obj::__new(hx::ObjectPtr<OBJ_>(this),HX_HCSTRING("EXH_000","\x26","\x62","\x7a","\x18"),HX_HCSTRING("EXH_000","\x26","\x62","\x7a","\x18"),HX_HCSTRING("XXX_XXX","\xb1","\xf7","\x19","\x65"),::EnumMuseumType_obj::EXH,Dynamic( Array_obj<Dynamic>::__new() ));		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(16)
+	HX_STACK_LINE(17)
+	::ObjectMuseum tmp = ::ObjectMuseum_obj::__new(hx::ObjectPtr<OBJ_>(this),HX_HCSTRING("EXH_ARC","\x28","\x66","\x87","\x18"),HX_HCSTRING("Exhibition Archive","\xf1","\x72","\xf3","\xb9"),HX_HCSTRING("XXX_XXX","\xb1","\xf7","\x19","\x65"),Dynamic( Array_obj<Dynamic>::__new() ),::EnumMuseumType_obj::EXH);		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(17)
 	this->archiveExhibitionObject = tmp;
 }
 ;
@@ -65,45 +65,45 @@ Dynamic CollectionGlobal_obj::__Create(hx::DynamicArray inArgs)
 
 Void CollectionGlobal_obj::DetermineExhibitionFullThresholdInt( ){
 {
-		HX_STACK_FRAME("CollectionGlobal","DetermineExhibitionFullThresholdInt",0x6ea45f88,"CollectionGlobal.DetermineExhibitionFullThresholdInt","CollectionGlobal.hx",18,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","DetermineExhibitionFullThresholdInt",0x6ea45f88,"CollectionGlobal.DetermineExhibitionFullThresholdInt","CollectionGlobal.hx",19,0xb0d19edd)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(19)
+		HX_STACK_LINE(20)
 		int tmp = this->exhibitionObjectArray->length;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(19)
+		HX_STACK_LINE(20)
 		int tmp1 = this->visitorObjectArray->length;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(19)
+		HX_STACK_LINE(20)
 		bool tmp2 = (tmp >= tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(19)
+		HX_STACK_LINE(20)
 		if ((tmp2)){
-			HX_STACK_LINE(19)
+			HX_STACK_LINE(20)
 			int tmp3 = this->exhibitionObjectArray->length;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(19)
+			HX_STACK_LINE(20)
 			int tmp4 = this->visitorObjectArray->length;		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(19)
+			HX_STACK_LINE(20)
 			Float tmp5 = (Float(tmp3) / Float(tmp4));		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(19)
+			HX_STACK_LINE(20)
 			int tmp6 = ::Math_obj::ceil(tmp5);		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(19)
+			HX_STACK_LINE(20)
 			this->exhibitionFullThresholdInt = tmp6;
 		}
 		else{
-			HX_STACK_LINE(20)
+			HX_STACK_LINE(21)
 			int tmp3 = this->exhibitionObjectArray->length;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(20)
+			HX_STACK_LINE(21)
 			int tmp4 = this->visitorObjectArray->length;		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(20)
+			HX_STACK_LINE(21)
 			bool tmp5 = (tmp3 < tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(20)
+			HX_STACK_LINE(21)
 			if ((tmp5)){
-				HX_STACK_LINE(20)
+				HX_STACK_LINE(21)
 				int tmp6 = this->visitorObjectArray->length;		HX_STACK_VAR(tmp6,"tmp6");
-				HX_STACK_LINE(20)
+				HX_STACK_LINE(21)
 				int tmp7 = this->exhibitionObjectArray->length;		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(20)
+				HX_STACK_LINE(21)
 				Float tmp8 = (Float(tmp6) / Float(tmp7));		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(20)
+				HX_STACK_LINE(21)
 				int tmp9 = ::Math_obj::ceil(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(20)
+				HX_STACK_LINE(21)
 				this->exhibitionFullThresholdInt = tmp9;
 			}
 		}
@@ -115,11 +115,11 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,DetermineExhibitionFullThresholdInt,(void))
 
 ::ObjectMuseum CollectionGlobal_obj::GetArchiveExhibitionObject( ){
-	HX_STACK_FRAME("CollectionGlobal","GetArchiveExhibitionObject",0xcdb59547,"CollectionGlobal.GetArchiveExhibitionObject","CollectionGlobal.hx",22,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","GetArchiveExhibitionObject",0xcdb59547,"CollectionGlobal.GetArchiveExhibitionObject","CollectionGlobal.hx",23,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(22)
+	HX_STACK_LINE(23)
 	::ObjectMuseum tmp = this->archiveExhibitionObject;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(22)
+	HX_STACK_LINE(23)
 	return tmp;
 }
 
@@ -127,11 +127,11 @@ HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,DetermineExhibitionFullThresholdInt
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetArchiveExhibitionObject,return )
 
 int CollectionGlobal_obj::GetExhibitionFullThresholdInt( ){
-	HX_STACK_FRAME("CollectionGlobal","GetExhibitionFullThresholdInt",0xa536b40b,"CollectionGlobal.GetExhibitionFullThresholdInt","CollectionGlobal.hx",23,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","GetExhibitionFullThresholdInt",0xa536b40b,"CollectionGlobal.GetExhibitionFullThresholdInt","CollectionGlobal.hx",24,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(23)
+	HX_STACK_LINE(24)
 	int tmp = this->exhibitionFullThresholdInt;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(23)
+	HX_STACK_LINE(24)
 	return tmp;
 }
 
@@ -139,9 +139,9 @@ int CollectionGlobal_obj::GetExhibitionFullThresholdInt( ){
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetExhibitionFullThresholdInt,return )
 
 Array< ::Dynamic > CollectionGlobal_obj::GetExhibitionObjectArray( ){
-	HX_STACK_FRAME("CollectionGlobal","GetExhibitionObjectArray",0xf6b3d382,"CollectionGlobal.GetExhibitionObjectArray","CollectionGlobal.hx",24,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","GetExhibitionObjectArray",0xf6b3d382,"CollectionGlobal.GetExhibitionObjectArray","CollectionGlobal.hx",25,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(24)
+	HX_STACK_LINE(25)
 	return this->exhibitionObjectArray;
 }
 
@@ -149,9 +149,9 @@ Array< ::Dynamic > CollectionGlobal_obj::GetExhibitionObjectArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetExhibitionObjectArray,return )
 
 Array< ::Dynamic > CollectionGlobal_obj::GetFloorObjectArray( ){
-	HX_STACK_FRAME("CollectionGlobal","GetFloorObjectArray",0xed42d217,"CollectionGlobal.GetFloorObjectArray","CollectionGlobal.hx",25,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","GetFloorObjectArray",0xed42d217,"CollectionGlobal.GetFloorObjectArray","CollectionGlobal.hx",26,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(25)
+	HX_STACK_LINE(26)
 	return this->floorObjectArray;
 }
 
@@ -159,9 +159,9 @@ Array< ::Dynamic > CollectionGlobal_obj::GetFloorObjectArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetFloorObjectArray,return )
 
 Array< ::Dynamic > CollectionGlobal_obj::GetRoomObjectArray( ){
-	HX_STACK_FRAME("CollectionGlobal","GetRoomObjectArray",0xad6bb5f6,"CollectionGlobal.GetRoomObjectArray","CollectionGlobal.hx",26,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","GetRoomObjectArray",0xad6bb5f6,"CollectionGlobal.GetRoomObjectArray","CollectionGlobal.hx",27,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(26)
+	HX_STACK_LINE(27)
 	return this->roomObjectArray;
 }
 
@@ -169,11 +169,11 @@ Array< ::Dynamic > CollectionGlobal_obj::GetRoomObjectArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetRoomObjectArray,return )
 
 ::ObjectMuseum CollectionGlobal_obj::GetSelectedMuseumObject( ){
-	HX_STACK_FRAME("CollectionGlobal","GetSelectedMuseumObject",0xd82a04d5,"CollectionGlobal.GetSelectedMuseumObject","CollectionGlobal.hx",27,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","GetSelectedMuseumObject",0xd82a04d5,"CollectionGlobal.GetSelectedMuseumObject","CollectionGlobal.hx",28,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(27)
+	HX_STACK_LINE(28)
 	::ObjectMuseum tmp = this->selectedMuseumObject;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(27)
+	HX_STACK_LINE(28)
 	return tmp;
 }
 
@@ -181,11 +181,11 @@ HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetRoomObjectArray,return )
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetSelectedMuseumObject,return )
 
 Dynamic CollectionGlobal_obj::GetSelectedTagStruct( ){
-	HX_STACK_FRAME("CollectionGlobal","GetSelectedTagStruct",0xbb12382b,"CollectionGlobal.GetSelectedTagStruct","CollectionGlobal.hx",28,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","GetSelectedTagStruct",0xbb12382b,"CollectionGlobal.GetSelectedTagStruct","CollectionGlobal.hx",29,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(28)
+	HX_STACK_LINE(29)
 	Dynamic tmp = this->selectedTagStruct;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(28)
+	HX_STACK_LINE(29)
 	return tmp;
 }
 
@@ -193,11 +193,11 @@ Dynamic CollectionGlobal_obj::GetSelectedTagStruct( ){
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetSelectedTagStruct,return )
 
 ::ObjectVisitor CollectionGlobal_obj::GetSelectedVisitorObject( ){
-	HX_STACK_FRAME("CollectionGlobal","GetSelectedVisitorObject",0xcac51ae9,"CollectionGlobal.GetSelectedVisitorObject","CollectionGlobal.hx",29,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","GetSelectedVisitorObject",0xcac51ae9,"CollectionGlobal.GetSelectedVisitorObject","CollectionGlobal.hx",30,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(29)
+	HX_STACK_LINE(30)
 	::ObjectVisitor tmp = this->selectedVisitorObject;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(29)
+	HX_STACK_LINE(30)
 	return tmp;
 }
 
@@ -205,9 +205,9 @@ HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetSelectedTagStruct,return )
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetSelectedVisitorObject,return )
 
 cpp::ArrayBase CollectionGlobal_obj::GetTagStructArray( ){
-	HX_STACK_FRAME("CollectionGlobal","GetTagStructArray",0x577490b3,"CollectionGlobal.GetTagStructArray","CollectionGlobal.hx",30,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","GetTagStructArray",0x577490b3,"CollectionGlobal.GetTagStructArray","CollectionGlobal.hx",31,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(30)
+	HX_STACK_LINE(31)
 	return this->tagStructArray;
 }
 
@@ -215,9 +215,9 @@ cpp::ArrayBase CollectionGlobal_obj::GetTagStructArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetTagStructArray,return )
 
 Array< ::Dynamic > CollectionGlobal_obj::GetVisitorObjectArray( ){
-	HX_STACK_FRAME("CollectionGlobal","GetVisitorObjectArray",0x304283b5,"CollectionGlobal.GetVisitorObjectArray","CollectionGlobal.hx",31,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","GetVisitorObjectArray",0x304283b5,"CollectionGlobal.GetVisitorObjectArray","CollectionGlobal.hx",32,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(31)
+	HX_STACK_LINE(32)
 	return this->visitorObjectArray;
 }
 
@@ -225,17 +225,17 @@ Array< ::Dynamic > CollectionGlobal_obj::GetVisitorObjectArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetVisitorObjectArray,return )
 
 int CollectionGlobal_obj::PutIndexGlobalVisitorInt( ){
-	HX_STACK_FRAME("CollectionGlobal","PutIndexGlobalVisitorInt",0x9d97beb4,"CollectionGlobal.PutIndexGlobalVisitorInt","CollectionGlobal.hx",32,0xb0d19edd)
+	HX_STACK_FRAME("CollectionGlobal","PutIndexGlobalVisitorInt",0x9d97beb4,"CollectionGlobal.PutIndexGlobalVisitorInt","CollectionGlobal.hx",33,0xb0d19edd)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(33)
-	int tmp = this->indexGlobalVisitorInt;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(33)
-	int tempIndexGlobalVisitorInt = tmp;		HX_STACK_VAR(tempIndexGlobalVisitorInt,"tempIndexGlobalVisitorInt");
 	HX_STACK_LINE(34)
+	int tmp = this->indexGlobalVisitorInt;		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(34)
+	int tempIndexGlobalVisitorInt = tmp;		HX_STACK_VAR(tempIndexGlobalVisitorInt,"tempIndexGlobalVisitorInt");
+	HX_STACK_LINE(35)
 	(this->indexGlobalVisitorInt)++;
-	HX_STACK_LINE(35)
+	HX_STACK_LINE(36)
 	int tmp1 = tempIndexGlobalVisitorInt;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(35)
+	HX_STACK_LINE(36)
 	return tmp1;
 }
 
@@ -244,10 +244,10 @@ HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,PutIndexGlobalVisitorInt,return )
 
 Void CollectionGlobal_obj::SetExhibitionFullThresholdInt( int _exhibitionFullThresholdInt){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetExhibitionFullThresholdInt",0x670e6e17,"CollectionGlobal.SetExhibitionFullThresholdInt","CollectionGlobal.hx",37,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetExhibitionFullThresholdInt",0x670e6e17,"CollectionGlobal.SetExhibitionFullThresholdInt","CollectionGlobal.hx",38,0xb0d19edd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_exhibitionFullThresholdInt,"_exhibitionFullThresholdInt")
-		HX_STACK_LINE(37)
+		HX_STACK_LINE(38)
 		this->exhibitionFullThresholdInt = _exhibitionFullThresholdInt;
 	}
 return null();
@@ -258,10 +258,10 @@ HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetExhibitionFullThresholdInt,(void
 
 Void CollectionGlobal_obj::SetExhibitionObjectArrayVoid( Array< ::Dynamic > _exhibitionObjectArray){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetExhibitionObjectArrayVoid",0x6f07f76a,"CollectionGlobal.SetExhibitionObjectArrayVoid","CollectionGlobal.hx",38,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetExhibitionObjectArrayVoid",0x6f07f76a,"CollectionGlobal.SetExhibitionObjectArrayVoid","CollectionGlobal.hx",39,0xb0d19edd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_exhibitionObjectArray,"_exhibitionObjectArray")
-		HX_STACK_LINE(38)
+		HX_STACK_LINE(39)
 		this->exhibitionObjectArray = _exhibitionObjectArray;
 	}
 return null();
@@ -272,10 +272,10 @@ HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetExhibitionObjectArrayVoid,(void)
 
 Void CollectionGlobal_obj::SetFloorObjectArrayVoid( Array< ::Dynamic > _floorObjectArray){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetFloorObjectArrayVoid",0x55d98217,"CollectionGlobal.SetFloorObjectArrayVoid","CollectionGlobal.hx",39,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetFloorObjectArrayVoid",0x55d98217,"CollectionGlobal.SetFloorObjectArrayVoid","CollectionGlobal.hx",40,0xb0d19edd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_floorObjectArray,"_floorObjectArray")
-		HX_STACK_LINE(39)
+		HX_STACK_LINE(40)
 		this->floorObjectArray = _floorObjectArray;
 	}
 return null();
@@ -286,10 +286,10 @@ HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetFloorObjectArrayVoid,(void))
 
 Void CollectionGlobal_obj::SetRoomObjectArrayVoid( Array< ::Dynamic > _roomObjectArray){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetRoomObjectArrayVoid",0xd75554de,"CollectionGlobal.SetRoomObjectArrayVoid","CollectionGlobal.hx",40,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetRoomObjectArrayVoid",0xd75554de,"CollectionGlobal.SetRoomObjectArrayVoid","CollectionGlobal.hx",41,0xb0d19edd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_roomObjectArray,"_roomObjectArray")
-		HX_STACK_LINE(40)
+		HX_STACK_LINE(41)
 		this->roomObjectArray = _roomObjectArray;
 	}
 return null();
@@ -300,10 +300,10 @@ HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetRoomObjectArrayVoid,(void))
 
 Void CollectionGlobal_obj::SetSelectedMuseumObjectVoid( ::ObjectMuseum _selectedMuseumObject){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetSelectedMuseumObjectVoid",0xef9b61d5,"CollectionGlobal.SetSelectedMuseumObjectVoid","CollectionGlobal.hx",41,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetSelectedMuseumObjectVoid",0xef9b61d5,"CollectionGlobal.SetSelectedMuseumObjectVoid","CollectionGlobal.hx",42,0xb0d19edd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_selectedMuseumObject,"_selectedMuseumObject")
-		HX_STACK_LINE(41)
+		HX_STACK_LINE(42)
 		this->selectedMuseumObject = _selectedMuseumObject;
 	}
 return null();
@@ -314,10 +314,10 @@ HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetSelectedMuseumObjectVoid,(void))
 
 Void CollectionGlobal_obj::SetSelectedTagStructVoid( Dynamic _selectedTagStruct){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetSelectedTagStructVoid",0x2ad09a93,"CollectionGlobal.SetSelectedTagStructVoid","CollectionGlobal.hx",42,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetSelectedTagStructVoid",0x2ad09a93,"CollectionGlobal.SetSelectedTagStructVoid","CollectionGlobal.hx",43,0xb0d19edd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_selectedTagStruct,"_selectedTagStruct")
-		HX_STACK_LINE(42)
+		HX_STACK_LINE(43)
 		this->selectedTagStruct = _selectedTagStruct;
 	}
 return null();
@@ -328,10 +328,10 @@ HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetSelectedTagStructVoid,(void))
 
 Void CollectionGlobal_obj::SetSelectedVisitorObjectVoid( ::ObjectVisitor _selectedVisitorObject){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetSelectedVisitorObjectVoid",0xe10e7e51,"CollectionGlobal.SetSelectedVisitorObjectVoid","CollectionGlobal.hx",43,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetSelectedVisitorObjectVoid",0xe10e7e51,"CollectionGlobal.SetSelectedVisitorObjectVoid","CollectionGlobal.hx",44,0xb0d19edd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_selectedVisitorObject,"_selectedVisitorObject")
-		HX_STACK_LINE(43)
+		HX_STACK_LINE(44)
 		this->selectedVisitorObject = _selectedVisitorObject;
 	}
 return null();
@@ -342,10 +342,10 @@ HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetSelectedVisitorObjectVoid,(void)
 
 Void CollectionGlobal_obj::SetTagStructArrayVoid( cpp::ArrayBase _tagStructArray){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetTagStructArrayVoid",0x72ec23b3,"CollectionGlobal.SetTagStructArrayVoid","CollectionGlobal.hx",44,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetTagStructArrayVoid",0x72ec23b3,"CollectionGlobal.SetTagStructArrayVoid","CollectionGlobal.hx",45,0xb0d19edd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_tagStructArray,"_tagStructArray")
-		HX_STACK_LINE(44)
+		HX_STACK_LINE(45)
 		this->tagStructArray = _tagStructArray;
 	}
 return null();
@@ -356,10 +356,10 @@ HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetTagStructArrayVoid,(void))
 
 Void CollectionGlobal_obj::SetVisitorObjectArrayVoid( Array< ::Dynamic > _visitorObjectArray){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetVisitorObjectArrayVoid",0xd44ab5b5,"CollectionGlobal.SetVisitorObjectArrayVoid","CollectionGlobal.hx",45,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetVisitorObjectArrayVoid",0xd44ab5b5,"CollectionGlobal.SetVisitorObjectArrayVoid","CollectionGlobal.hx",46,0xb0d19edd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_visitorObjectArray,"_visitorObjectArray")
-		HX_STACK_LINE(45)
+		HX_STACK_LINE(46)
 		this->visitorObjectArray = _visitorObjectArray;
 	}
 return null();

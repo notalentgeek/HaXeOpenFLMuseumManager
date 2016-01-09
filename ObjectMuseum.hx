@@ -11,7 +11,7 @@ class ObjectMuseum{
     private var museumModeEnum:EnumMuseumMode = null;
     private var nameStruct:StructName = { nameAltString:"", nameFullString:"" };
     private var parentObject:ObjectMuseum = null;
-    private var siblingObjectArray:Array<ObjectMuseum> = new Array<ObjectMuseum>();
+    private var siblingObjectArray:Array<ObjectMuseum> = new Array<ObjectMuseum>(); /*For floor, the sibling object will be the global variable of collectionGlobalObject.GetFloorObjectArray().*/
     private var tagStructArray:Array<StructTag> = new Array<StructTag>();
     private var typeEnum:EnumMuseumType = null;
     private var visitorCurrentInt:Int = 0;
@@ -42,10 +42,16 @@ class ObjectMuseum{
     private function ChangeParentVoid(_parentNameAltString:String){
         /*Remove this object from current parent object child object array.*/
         if(parentObject != null){ parentObject.GetChildStruct().childMuseumObjectArray.remove(this); }
-        if(typeEnum == EXH ){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, ROM, _parentNameAltString)); } /*PENDING: Please add verification whether the program capable of finding the parent object or not.*/
-        else if(typeEnum == ROM ){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, FLR, _parentNameAltString)); } /*PENDING: Please add verification whether the program capable of finding the parent object or not.*/
-        else{
+        if(typeEnum == EXH && nameStruct.nameAltString != "EXH_ARC"){
+            parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, ROM, _parentNameAltString));
+            parentObject.DetermineChildVoid();
+            DetermineSiblingVoid();
+        }
+        else if(typeEnum == FLR){
             parentObject = null;
+        }
+        else if(typeEnum == ROM){
+            parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, FLR, _parentNameAltString));
             parentObject.DetermineChildVoid();
             DetermineSiblingVoid();
         }

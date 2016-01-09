@@ -170,16 +170,16 @@ class ObjectVisitor{
             loopCounter1Int ++;
         }
         /*Sort level 3.*/
-        loopCounter1Int                                     = 0;
+        loopCounter1Int = 0;
         while(loopCounter1Int < exhibitionTargetObjectArray.length){
             if( exhibitionTargetObjectArray[loopCounter1Int].GetFullBool() == true){
                 exhibitionTargetObjectArray.remove(exhibitionTargetObjectArray[loopCounter1Int]);
             }
             if(exhibitionTargetObjectArray.length <= _targetInt){ break; }
-             ++;
+            loopCounter1Int ++;
         }
         /*Sort level 4.*/
-        loopCounter1Int                                     = 0;
+        loopCounter1Int = 0;
         while(loopCounter1Int < exhibitionTargetObjectArray.length){
             var   loopCounter2Int:Int = 0;
             while(loopCounter2Int < exhibitionVisitedObjectArray.length){
