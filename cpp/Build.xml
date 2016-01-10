@@ -6,6 +6,10 @@
    <depend name="include/haxe/IMap.h"/>
    <depend name="include/haxe/ds/ObjectMap.h"/>
   </file>
+  <file name="src/haxe/Log.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+  </file>
   <file name="src/haxe/IMap.cpp">
    <depend name="include/haxe/IMap.h"/>
   </file>
@@ -33,17 +37,36 @@
    <depend name="include/CollectionFunction.h"/>
    <depend name="include/CollectionGlobal.h"/>
    <depend name="include/CollectionPremade.h"/>
-   <depend name="include/EnumMuseumType.h"/>
+   <depend name="include/CollectionPremadeTag.h"/>
+   <depend name="include/CollectionTagGeneral.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectVisitor.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
   </file>
-  <file name="src/CollectionPremade.cpp">
+  <file name="src/CollectionTagGeneral.cpp">
    <depend name="include/CollectionGlobal.h"/>
-   <depend name="include/CollectionPremade.h"/>
+   <depend name="include/CollectionTagGeneral.h"/>
    <depend name="include/EnumTagFeelType.h"/>
    <depend name="include/EnumTagType.h"/>
    <depend name="include/EnumTagTypeSub.h"/>
+  </file>
+  <file name="src/CollectionPremadeTag.cpp">
+   <depend name="include/CollectionGlobal.h"/>
+   <depend name="include/CollectionPremadeTag.h"/>
+   <depend name="include/EnumTagFeelType.h"/>
+   <depend name="include/EnumTagType.h"/>
+   <depend name="include/EnumTagTypeSub.h"/>
+  </file>
+  <file name="src/CollectionPremade.cpp">
+   <depend name="include/CollectionFunction.h"/>
+   <depend name="include/CollectionGlobal.h"/>
+   <depend name="include/CollectionPremade.h"/>
+   <depend name="include/EnumMuseumType.h"/>
+   <depend name="include/ObjectMuseum.h"/>
+   <depend name="include/ObjectVisitor.h"/>
   </file>
   <file name="src/CollectionGlobal.cpp">
    <depend name="include/CollectionGlobal.h"/>
@@ -78,6 +101,7 @@
    <depend name="include/EnumTagFeelType.h"/>
    <depend name="include/EnumMuseumMode.h"/>
    <depend name="include/EnumMuseumType.h"/>
+   <depend name="include/haxe/Log.h"/>
   </file>
   <file name="src/__files__.cpp">
   </file>

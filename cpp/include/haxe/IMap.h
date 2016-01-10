@@ -14,6 +14,8 @@ class HXCPP_CLASS_ATTRIBUTES  IMap_obj : public hx::Interface{
 		typedef hx::Interface super;
 		typedef IMap_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
+		virtual Dynamic keys( )=0;
+virtual Dynamic keys_dyn()=0;
 };
 
 
@@ -27,6 +29,8 @@ class IMap_delegate_ : public IMap_obj
 		IMap_delegate_(IMPL *inDelegate) : mDelegate(inDelegate) {}
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
+		Dynamic keys( ) { return mDelegate->keys();}
+		Dynamic keys_dyn() { return mDelegate->keys_dyn();}
 };
 
 } // end namespace haxe

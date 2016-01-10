@@ -29,61 +29,16 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionPremade_obj : public hx::Object{
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("CollectionPremade","\x9a","\xa2","\xd1","\xe1"); }
 
-		static Void PremadeExhibitionObjectVoid( );
+		static Void PremadeExhibitionObjectVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeExhibitionObjectVoid_dyn();
 
-		static Void PremadeFloorObjectVoid( );
+		static Void PremadeFloorObjectVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeFloorObjectVoid_dyn();
 
-		static Void PremadeRoomObjectVoid( );
+		static Void PremadeRoomObjectVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeRoomObjectVoid_dyn();
 
-		static Void PremadeTagStructVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructVoid_dyn();
-
-		static Void PremadeTagStructAdjVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructAdjVoid_dyn();
-
-		static Void PremadeTagStructAdvVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructAdvVoid_dyn();
-
-		static Void PremadeTagStructNounAliveAbstractVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructNounAliveAbstractVoid_dyn();
-
-		static Void PremadeTagStructNounAliveConcreteVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructNounAliveConcreteVoid_dyn();
-
-		static Void PremadeTagStructNounInanimateHoldAbstractVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructNounInanimateHoldAbstractVoid_dyn();
-
-		static Void PremadeTagStructNounInanimateHoldConcreteVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructNounInanimateHoldConcreteVoid_dyn();
-
-		static Void PremadeTagStructNounInanimatePlaceAbstractVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructNounInanimatePlaceAbstractVoid_dyn();
-
-		static Void PremadeTagStructNounInanimatePlaceConcreteNoOwnerVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructNounInanimatePlaceConcreteNoOwnerVoid_dyn();
-
-		static Void PremadeTagStructNounInanimatePlaceConcreteOwnerVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructNounInanimatePlaceConcreteOwnerVoid_dyn();
-
-		static Void PremadeTagStructNounInanimateTitleAbstractVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructNounInanimateTitleAbstractVoid_dyn();
-
-		static Void PremadeTagStructNounInanimateWearAbstractVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructNounInanimateWearAbstractVoid_dyn();
-
-		static Void PremadeTagStructNounInanimateWearConcreteVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructNounInanimateWearConcreteVoid_dyn();
-
-		static Void PremadeTagStructVerbVoidIntransitiveVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructVerbVoidIntransitiveVoid_dyn();
-
-		static Void PremadeTagStructVerbVoidTransitiveVoid( ::CollectionGlobal _collectionGlobalObject);
-		static Dynamic PremadeTagStructVerbVoidTransitiveVoid_dyn();
-
-		static Void PremadeVisitorObjectVoid( ::CollectionGlobal _collectionGlobalObject);
+		static Void PremadeVisitorObjectVoid( int _amountInt,::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeVisitorObjectVoid_dyn();
 
 };

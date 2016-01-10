@@ -11,6 +11,7 @@ class CollectionGlobal{
     private var selectedMuseumObject:ObjectMuseum = null; 
     private var selectedTagStruct:StructTag = null; 
     private var selectedVisitorObject:ObjectVisitor = null; 
+    private var tagGeneralStructArray:Array<StructTag> = new Array<StructTag>();
     private var tagStructArray:Array<StructTag> = new Array<StructTag>();
     private var visitorObjectArray:Array<ObjectVisitor> = new Array<ObjectVisitor>();
     public      function new                                            (){
@@ -28,6 +29,7 @@ class CollectionGlobal{
     public function GetSelectedMuseumObject(){ return selectedMuseumObject; }
     public function GetSelectedTagStruct(){ return selectedTagStruct; }
     public function GetSelectedVisitorObject(){ return selectedVisitorObject; }
+    public function GetTagGeneralStructArray(){ return tagGeneralStructArray; }
     public function GetTagStructArray(){ return tagStructArray; }
     public function GetVisitorObjectArray(){ return visitorObjectArray; }
     public function PutIndexGlobalVisitorInt(){

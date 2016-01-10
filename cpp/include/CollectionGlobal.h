@@ -43,6 +43,7 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		::ObjectMuseum selectedMuseumObject;
 		Dynamic selectedTagStruct;
 		::ObjectVisitor selectedVisitorObject;
+		cpp::ArrayBase tagGeneralStructArray;
 		cpp::ArrayBase tagStructArray;
 		Array< ::Dynamic > visitorObjectArray;
 		virtual Void DetermineExhibitionFullThresholdInt( );
@@ -71,6 +72,9 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 
 		virtual ::ObjectVisitor GetSelectedVisitorObject( );
 		Dynamic GetSelectedVisitorObject_dyn();
+
+		virtual cpp::ArrayBase GetTagGeneralStructArray( );
+		Dynamic GetTagGeneralStructArray_dyn();
 
 		virtual cpp::ArrayBase GetTagStructArray( );
 		Dynamic GetTagStructArray_dyn();

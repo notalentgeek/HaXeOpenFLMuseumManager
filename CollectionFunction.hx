@@ -51,7 +51,10 @@ class CollectionFunction{
         var elementT:T = _tArray[randomInt];
         return elementT;
     }
-
+    public static function PickRandomTagObjectArray(){
+        var tempTagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
+        return tempTagObjectArray;
+    }
     public static function GenerateGreatestCommonDivisorFloat(_number1Float:Float, _number2Float:Float){
         if(_number2Float == 0){ return _number1Float; }
         else{ return GenerateGreatestCommonDivisorFloat(_number2Float, _number1Float%_number2Float); }

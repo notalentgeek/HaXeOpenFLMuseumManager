@@ -6,6 +6,10 @@
 namespace haxe{
 
 
+static ::String sMemberFields[] = {
+	HX_HCSTRING("keys","\xf4","\xe1","\x06","\x47"),
+	::String(null()) };
+
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(IMap_obj::__mClass,"__mClass");
 };
@@ -25,7 +29,7 @@ void IMap_obj::__register()
 	__mClass->mName = HX_HCSTRING("haxe.IMap","\x1b","\x07","\x35","\xeb");
 	__mClass->mSuper = &super::__SGetClass();
 	__mClass->mMarkFunc = sMarkStatics;
-	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);
+	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);
 	__mClass->mCanCast = hx::TCanCast< IMap_obj >;
 #ifdef HXCPP_VISIT_ALLOCS
 	__mClass->mVisitFunc = sVisitStatics;
