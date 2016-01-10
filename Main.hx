@@ -30,7 +30,10 @@ class Main{
                 for(_key in collectionGlobalObject.GetVisitorObjectArray()[0].GetTagStructMap().keys()){
                     debugString = debugString + " " + _key.tagEntry1Struct.tagString;
                 }
-                trace(debugString);
+                if(
+                    collectionGlobalObject.GetVisitorObjectArray()[0].GetFinishedBool() == false &&
+                    collectionGlobalObject.GetVisitorObjectArray()[0].GetJustChangeExhibitionBool() == true
+                ){ collectionGlobalObject.GetVisitorObjectArray()[0].SetJustChangeExhibitionBoolVoid(false); trace(debugString); }
             }
         }
     }

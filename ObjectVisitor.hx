@@ -10,6 +10,7 @@ class ObjectVisitor{
     private var floorCurrentObject:ObjectMuseum = null;
     private var indexGlobalInt:Int = -1;
     private var indexLocalInt:Int = -1;
+    private var justChangeExhibitionBool:Bool = false;
     private var nameString:String = "";
     private var roomCurrentObject:ObjectMuseum = null;
     private var scoreInt:Int = 0;
@@ -78,6 +79,7 @@ class ObjectVisitor{
             exhibitionVisitedObjectArray.push(exhibitionCurrentObject);
         }
         else{
+            justChangeExhibitionBool = true;
             if(exhibitionCurrentObject != null){
                 roomCurrentObject = exhibitionCurrentObject.GetParentObject();
                 floorCurrentObject = roomCurrentObject.GetParentObject();
@@ -239,8 +241,10 @@ class ObjectVisitor{
             }
         }
     }
-    public  function GetExhibitionCurrentObject(){ return exhibitionCurrentObject; }
-    public  function GetFinishedBool(){ return finishedBool; }
-    public  function GetTagCounterStructArray(){ return tagCounterStructArray; }
-    public  function GetTagStructMap(){ return tagStructMap; }
+    public function GetExhibitionCurrentObject(){ return exhibitionCurrentObject; }
+    public function GetFinishedBool(){ return finishedBool; }
+    public function GetJustChangeExhibitionBool(){ return justChangeExhibitionBool; }
+    public function GetTagCounterStructArray(){ return tagCounterStructArray; }
+    public function GetTagStructMap(){ return tagStructMap; }
+    public function SetJustChangeExhibitionBoolVoid(_justChangeExhibitionBool:Bool){ justChangeExhibitionBool = _justChangeExhibitionBool; }
 }

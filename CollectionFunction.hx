@@ -1,4 +1,5 @@
 import CollectionEnum;
+import CollectionStruct;
 class CollectionFunction{
     public function new(){}
     public static function ClearArray(_dynamicArray:Array<Dynamic>){
@@ -51,8 +52,18 @@ class CollectionFunction{
         var elementT:T = _tArray[randomInt];
         return elementT;
     }
-    public static function PickRandomTagObjectArray(){
-        var tempTagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
+    public static function PickRandomTagObjectArray(_collectionGlobalObject:CollectionGlobal){
+        var tempTagObjectArray:Array<StructTag> = new Array<StructTag>();
+        var chanceFloat:Float = 1.0;
+        while(chanceFloat > Math.random()){
+            var randomIndexInt:Int = Math.round(Math.random()*(_collectionGlobalObject.GetTagStructArray().length - 1));
+            while(tempTagObjectArray.indexOf(_collectionGlobalObject.GetTagStructArray()[randomIndexInt]) > -1){
+                randomIndexInt = Math.round(Math.random()*(_collectionGlobalObject.GetTagStructArray().length - 1));
+            }
+            tempTagObjectArray.push(_collectionGlobalObject.GetTagStructArray()[randomIndexInt]);
+            chanceFloat -= 0.05;
+        }
+        //trace(tempTagObjectArray);
         return tempTagObjectArray;
     }
     public static function GenerateGreatestCommonDivisorFloat(_number1Float:Float, _number2Float:Float){

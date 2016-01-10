@@ -45,6 +45,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		::ObjectMuseum floorCurrentObject;
 		int indexGlobalInt;
 		int indexLocalInt;
+		bool justChangeExhibitionBool;
 		::String nameString;
 		::ObjectMuseum roomCurrentObject;
 		int scoreInt;
@@ -88,11 +89,17 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual bool GetFinishedBool( );
 		Dynamic GetFinishedBool_dyn();
 
+		virtual bool GetJustChangeExhibitionBool( );
+		Dynamic GetJustChangeExhibitionBool_dyn();
+
 		virtual cpp::ArrayBase GetTagCounterStructArray( );
 		Dynamic GetTagCounterStructArray_dyn();
 
 		virtual ::haxe::ds::ObjectMap GetTagStructMap( );
 		Dynamic GetTagStructMap_dyn();
+
+		virtual Void SetJustChangeExhibitionBoolVoid( bool _justChangeExhibitionBool);
+		Dynamic SetJustChangeExhibitionBoolVoid_dyn();
 
 };
 

@@ -201,12 +201,44 @@ Void Main_obj::main( ){
 					}
 ;
 				}
+				HX_STACK_LINE(34)
+				::ObjectVisitor tmp37 = collectionGlobalObject->GetVisitorObjectArray()->__get((int)0).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp37,"tmp37");
+				HX_STACK_LINE(34)
+				bool tmp38 = tmp37->GetFinishedBool();		HX_STACK_VAR(tmp38,"tmp38");
+				HX_STACK_LINE(34)
+				bool tmp39 = (tmp38 == false);		HX_STACK_VAR(tmp39,"tmp39");
+				HX_STACK_LINE(34)
+				bool tmp40;		HX_STACK_VAR(tmp40,"tmp40");
+				HX_STACK_LINE(34)
+				if ((tmp39)){
+					HX_STACK_LINE(35)
+					::ObjectVisitor tmp41 = collectionGlobalObject->GetVisitorObjectArray()->__get((int)0).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp41,"tmp41");
+					HX_STACK_LINE(35)
+					::ObjectVisitor tmp42 = tmp41;		HX_STACK_VAR(tmp42,"tmp42");
+					HX_STACK_LINE(35)
+					bool tmp43 = tmp42->GetJustChangeExhibitionBool();		HX_STACK_VAR(tmp43,"tmp43");
+					HX_STACK_LINE(35)
+					bool tmp44 = tmp43;		HX_STACK_VAR(tmp44,"tmp44");
+					HX_STACK_LINE(35)
+					tmp40 = (tmp44 == true);
+				}
+				else{
+					HX_STACK_LINE(34)
+					tmp40 = false;
+				}
 				HX_STACK_LINE(33)
-				::String tmp37 = debugString;		HX_STACK_VAR(tmp37,"tmp37");
-				HX_STACK_LINE(33)
-				Dynamic tmp38 = hx::SourceInfo(HX_HCSTRING("Main.hx","\x05","\x5c","\x7e","\x08"),33,HX_HCSTRING("Main","\x59","\x64","\x2f","\x33"),HX_HCSTRING("main","\x39","\x38","\x56","\x48"));		HX_STACK_VAR(tmp38,"tmp38");
-				HX_STACK_LINE(33)
-				::haxe::Log_obj::trace(tmp37,tmp38);
+				if ((tmp40)){
+					HX_STACK_LINE(36)
+					::ObjectVisitor tmp41 = collectionGlobalObject->GetVisitorObjectArray()->__get((int)0).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp41,"tmp41");
+					HX_STACK_LINE(36)
+					tmp41->SetJustChangeExhibitionBoolVoid(false);
+					HX_STACK_LINE(36)
+					::String tmp42 = debugString;		HX_STACK_VAR(tmp42,"tmp42");
+					HX_STACK_LINE(36)
+					Dynamic tmp43 = hx::SourceInfo(HX_HCSTRING("Main.hx","\x05","\x5c","\x7e","\x08"),36,HX_HCSTRING("Main","\x59","\x64","\x2f","\x33"),HX_HCSTRING("main","\x39","\x38","\x56","\x48"));		HX_STACK_VAR(tmp43,"tmp43");
+					HX_STACK_LINE(36)
+					::haxe::Log_obj::trace(tmp42,tmp43);
+				}
 			}
 		}
 	}
