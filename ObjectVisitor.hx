@@ -8,6 +8,7 @@ class ObjectVisitor{
     private var explanationStringArray:Array<String> = new Array<String>();
     private var finishedBool:Bool = false;
     private var floorCurrentObject:ObjectMuseum = null;
+    private var generatorSentenceObject:ObjectGeneratorSentence = new ObjectGeneratorSentence();
     private var indexGlobalInt:Int = -1;
     private var indexLocalInt:Int = -1;
     private var justChangeExhibitionBool:Bool = false;
@@ -21,7 +22,7 @@ class ObjectVisitor{
     private var timeAIAutoExhibitionChangeFloat:Float = 0;
     private var timeExhibitionInt:Int = 0;
     private var timeMuseumInt:Int = 0;
-    private var visitedCorrectExhibitionBool:Bool = false;
+    private var visitedCorrectExhibitionBool:Bool = true;
     private var visitExhibitionStructArray:Array<StructVisitorVisitExhibition> = new Array<StructVisitorVisitExhibition>();
     private var visitMuseumStructArray:Array<StructVisitorVisitMuseum> = new Array<StructVisitorVisitMuseum>();
     public  function new(
@@ -131,6 +132,11 @@ class ObjectVisitor{
             roomCurrentObject.SetVisitorCurrentIntVoid(floorCurrentObject.GetVisitorCurrentInt() + 1);
             roomCurrentObject.SetVisitorTotalIntVoid(floorCurrentObject.GetVisitorTotalInt() + 1);
             loopCounter1Int = 0;
+
+            var threeSentenceString:String = generatorSentenceObject.GenerateSentence3String(collectionGlobalObject, this);
+            //trace("FROM VISITOR OBJECT " + threeSentenceString);
+            sentenceStringArray.push(threeSentenceString);
+            
             while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
                 collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
                 collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(targetInt);
@@ -244,7 +250,11 @@ class ObjectVisitor{
     public function GetExhibitionCurrentObject(){ return exhibitionCurrentObject; }
     public function GetFinishedBool(){ return finishedBool; }
     public function GetJustChangeExhibitionBool(){ return justChangeExhibitionBool; }
+    public function GetNameString(){ return nameString; }
+    public function GetScoreInt(){ return scoreInt; }
+    public function GetSentenceStringArray(){ return sentenceStringArray; }
     public function GetTagCounterStructArray(){ return tagCounterStructArray; }
     public function GetTagStructMap(){ return tagStructMap; }
+    public function GetVisitCorrectExhibitionBool(){ return visitedCorrectExhibitionBool; }
     public function SetJustChangeExhibitionBoolVoid(_justChangeExhibitionBool:Bool){ justChangeExhibitionBool = _justChangeExhibitionBool; }
 }

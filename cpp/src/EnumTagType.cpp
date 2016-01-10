@@ -22,6 +22,10 @@
 
 ::EnumTagType EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_OWNER;
 
+::EnumTagType EnumTagType_obj::NOUN_INANIMATE_SEE_ABSTRACT;
+
+::EnumTagType EnumTagType_obj::NOUN_INANIMATE_SEE_CONCRETE;
+
 ::EnumTagType EnumTagType_obj::NOUN_INANIMATE_TITLE;
 
 ::EnumTagType EnumTagType_obj::NOUN_INANIMATE_WEAR_ABSTRACT;
@@ -45,11 +49,13 @@ int EnumTagType_obj::__FindIndex(::String inName)
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_PLACE_ABSTRACT","\xe2","\xba","\xf0","\x84")) return 6;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER","\xcf","\x34","\x99","\x14")) return 7;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x59","\x2d","\x73","\xba")) return 8;
-	if (inName==HX_HCSTRING("NOUN_INANIMATE_TITLE","\x50","\x86","\xd3","\xe1")) return 9;
-	if (inName==HX_HCSTRING("NOUN_INANIMATE_WEAR_ABSTRACT","\xba","\xec","\x43","\xdf")) return 10;
-	if (inName==HX_HCSTRING("NOUN_INANIMATE_WEAR_CONCRETE","\x1d","\x46","\xaa","\xa4")) return 11;
-	if (inName==HX_HCSTRING("VERB_INTRANSITIVE","\xaa","\xd6","\xae","\xc7")) return 12;
-	if (inName==HX_HCSTRING("VERB_TRANSITIVE","\x85","\x6e","\x84","\xed")) return 13;
+	if (inName==HX_HCSTRING("NOUN_INANIMATE_SEE_ABSTRACT","\x96","\x1c","\xcd","\x4b")) return 9;
+	if (inName==HX_HCSTRING("NOUN_INANIMATE_SEE_CONCRETE","\xf9","\x75","\x33","\x11")) return 10;
+	if (inName==HX_HCSTRING("NOUN_INANIMATE_TITLE","\x50","\x86","\xd3","\xe1")) return 11;
+	if (inName==HX_HCSTRING("NOUN_INANIMATE_WEAR_ABSTRACT","\xba","\xec","\x43","\xdf")) return 12;
+	if (inName==HX_HCSTRING("NOUN_INANIMATE_WEAR_CONCRETE","\x1d","\x46","\xaa","\xa4")) return 13;
+	if (inName==HX_HCSTRING("VERB_INTRANSITIVE","\xaa","\xd6","\xae","\xc7")) return 14;
+	if (inName==HX_HCSTRING("VERB_TRANSITIVE","\x85","\x6e","\x84","\xed")) return 15;
 	return super::__FindIndex(inName);
 }
 
@@ -64,6 +70,8 @@ int EnumTagType_obj::__FindArgCount(::String inName)
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_PLACE_ABSTRACT","\xe2","\xba","\xf0","\x84")) return 0;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER","\xcf","\x34","\x99","\x14")) return 0;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x59","\x2d","\x73","\xba")) return 0;
+	if (inName==HX_HCSTRING("NOUN_INANIMATE_SEE_ABSTRACT","\x96","\x1c","\xcd","\x4b")) return 0;
+	if (inName==HX_HCSTRING("NOUN_INANIMATE_SEE_CONCRETE","\xf9","\x75","\x33","\x11")) return 0;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_TITLE","\x50","\x86","\xd3","\xe1")) return 0;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_WEAR_ABSTRACT","\xba","\xec","\x43","\xdf")) return 0;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_WEAR_CONCRETE","\x1d","\x46","\xaa","\xa4")) return 0;
@@ -83,6 +91,8 @@ Dynamic EnumTagType_obj::__Field(const ::String &inName,hx::PropertyAccess inCal
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_PLACE_ABSTRACT","\xe2","\xba","\xf0","\x84")) return NOUN_INANIMATE_PLACE_ABSTRACT;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER","\xcf","\x34","\x99","\x14")) return NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x59","\x2d","\x73","\xba")) return NOUN_INANIMATE_PLACE_CONCRETE_OWNER;
+	if (inName==HX_HCSTRING("NOUN_INANIMATE_SEE_ABSTRACT","\x96","\x1c","\xcd","\x4b")) return NOUN_INANIMATE_SEE_ABSTRACT;
+	if (inName==HX_HCSTRING("NOUN_INANIMATE_SEE_CONCRETE","\xf9","\x75","\x33","\x11")) return NOUN_INANIMATE_SEE_CONCRETE;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_TITLE","\x50","\x86","\xd3","\xe1")) return NOUN_INANIMATE_TITLE;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_WEAR_ABSTRACT","\xba","\xec","\x43","\xdf")) return NOUN_INANIMATE_WEAR_ABSTRACT;
 	if (inName==HX_HCSTRING("NOUN_INANIMATE_WEAR_CONCRETE","\x1d","\x46","\xaa","\xa4")) return NOUN_INANIMATE_WEAR_CONCRETE;
@@ -101,6 +111,8 @@ static ::String sStaticFields[] = {
 	HX_HCSTRING("NOUN_INANIMATE_PLACE_ABSTRACT","\xe2","\xba","\xf0","\x84"),
 	HX_HCSTRING("NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER","\xcf","\x34","\x99","\x14"),
 	HX_HCSTRING("NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x59","\x2d","\x73","\xba"),
+	HX_HCSTRING("NOUN_INANIMATE_SEE_ABSTRACT","\x96","\x1c","\xcd","\x4b"),
+	HX_HCSTRING("NOUN_INANIMATE_SEE_CONCRETE","\xf9","\x75","\x33","\x11"),
 	HX_HCSTRING("NOUN_INANIMATE_TITLE","\x50","\x86","\xd3","\xe1"),
 	HX_HCSTRING("NOUN_INANIMATE_WEAR_ABSTRACT","\xba","\xec","\x43","\xdf"),
 	HX_HCSTRING("NOUN_INANIMATE_WEAR_CONCRETE","\x1d","\x46","\xaa","\xa4"),
@@ -118,6 +130,8 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_PLACE_ABSTRACT,"NOUN_INANIMATE_PLACE_ABSTRACT");
 	HX_MARK_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER,"NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER");
 	HX_MARK_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_OWNER,"NOUN_INANIMATE_PLACE_CONCRETE_OWNER");
+	HX_MARK_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_SEE_ABSTRACT,"NOUN_INANIMATE_SEE_ABSTRACT");
+	HX_MARK_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_SEE_CONCRETE,"NOUN_INANIMATE_SEE_CONCRETE");
 	HX_MARK_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_TITLE,"NOUN_INANIMATE_TITLE");
 	HX_MARK_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_WEAR_ABSTRACT,"NOUN_INANIMATE_WEAR_ABSTRACT");
 	HX_MARK_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_WEAR_CONCRETE,"NOUN_INANIMATE_WEAR_CONCRETE");
@@ -137,6 +151,8 @@ static void sVisitStatic(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_PLACE_ABSTRACT,"NOUN_INANIMATE_PLACE_ABSTRACT");
 	HX_VISIT_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER,"NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER");
 	HX_VISIT_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_OWNER,"NOUN_INANIMATE_PLACE_CONCRETE_OWNER");
+	HX_VISIT_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_SEE_ABSTRACT,"NOUN_INANIMATE_SEE_ABSTRACT");
+	HX_VISIT_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_SEE_CONCRETE,"NOUN_INANIMATE_SEE_CONCRETE");
 	HX_VISIT_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_TITLE,"NOUN_INANIMATE_TITLE");
 	HX_VISIT_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_WEAR_ABSTRACT,"NOUN_INANIMATE_WEAR_ABSTRACT");
 	HX_VISIT_MEMBER_NAME(EnumTagType_obj::NOUN_INANIMATE_WEAR_CONCRETE,"NOUN_INANIMATE_WEAR_CONCRETE");
@@ -176,11 +192,13 @@ hx::Static(NOUN_INANIMATE_HOLD_CONCRETE) = hx::CreateEnum< EnumTagType_obj >(HX_
 hx::Static(NOUN_INANIMATE_PLACE_ABSTRACT) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_PLACE_ABSTRACT","\xe2","\xba","\xf0","\x84"),6);
 hx::Static(NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER","\xcf","\x34","\x99","\x14"),7);
 hx::Static(NOUN_INANIMATE_PLACE_CONCRETE_OWNER) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x59","\x2d","\x73","\xba"),8);
-hx::Static(NOUN_INANIMATE_TITLE) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_TITLE","\x50","\x86","\xd3","\xe1"),9);
-hx::Static(NOUN_INANIMATE_WEAR_ABSTRACT) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_WEAR_ABSTRACT","\xba","\xec","\x43","\xdf"),10);
-hx::Static(NOUN_INANIMATE_WEAR_CONCRETE) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_WEAR_CONCRETE","\x1d","\x46","\xaa","\xa4"),11);
-hx::Static(VERB_INTRANSITIVE) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("VERB_INTRANSITIVE","\xaa","\xd6","\xae","\xc7"),12);
-hx::Static(VERB_TRANSITIVE) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("VERB_TRANSITIVE","\x85","\x6e","\x84","\xed"),13);
+hx::Static(NOUN_INANIMATE_SEE_ABSTRACT) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_SEE_ABSTRACT","\x96","\x1c","\xcd","\x4b"),9);
+hx::Static(NOUN_INANIMATE_SEE_CONCRETE) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_SEE_CONCRETE","\xf9","\x75","\x33","\x11"),10);
+hx::Static(NOUN_INANIMATE_TITLE) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_TITLE","\x50","\x86","\xd3","\xe1"),11);
+hx::Static(NOUN_INANIMATE_WEAR_ABSTRACT) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_WEAR_ABSTRACT","\xba","\xec","\x43","\xdf"),12);
+hx::Static(NOUN_INANIMATE_WEAR_CONCRETE) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("NOUN_INANIMATE_WEAR_CONCRETE","\x1d","\x46","\xaa","\xa4"),13);
+hx::Static(VERB_INTRANSITIVE) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("VERB_INTRANSITIVE","\xaa","\xd6","\xae","\xc7"),14);
+hx::Static(VERB_TRANSITIVE) = hx::CreateEnum< EnumTagType_obj >(HX_HCSTRING("VERB_TRANSITIVE","\x85","\x6e","\x84","\xed"),15);
 }
 
 

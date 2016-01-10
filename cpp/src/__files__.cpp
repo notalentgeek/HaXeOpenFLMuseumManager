@@ -12,6 +12,7 @@ const char *__hxcpp_all_files[] = {
 "CollectionPremadeTag.hx",
 "CollectionTagGeneral.hx",
 "Main.hx",
+"ObjectGeneratorSentence.hx",
 "ObjectMuseum.hx",
 "ObjectVisitor.hx",
 #endif
@@ -28,6 +29,7 @@ const char *__hxcpp_all_files_fullpath[] = {
 "/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/CollectionPremadeTag.hx",
 "/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/CollectionTagGeneral.hx",
 "/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/Main.hx",
+"/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/ObjectGeneratorSentence.hx",
 "/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/ObjectMuseum.hx",
 "/home/notalentgeek/Desktop/Programming/HaXeMuseumManager/ObjectVisitor.hx",
 #endif
@@ -41,6 +43,7 @@ const char *__hxcpp_all_classes[] = {
 "CollectionPremadeTag",
 "CollectionTagGeneral",
 "Main",
+"ObjectGeneratorSentence",
 "ObjectMuseum",
 "ObjectVisitor",
 "Std",

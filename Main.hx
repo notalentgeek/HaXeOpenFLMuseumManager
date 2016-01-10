@@ -33,7 +33,21 @@ class Main{
                 if(
                     collectionGlobalObject.GetVisitorObjectArray()[0].GetFinishedBool() == false &&
                     collectionGlobalObject.GetVisitorObjectArray()[0].GetJustChangeExhibitionBool() == true
-                ){ collectionGlobalObject.GetVisitorObjectArray()[0].SetJustChangeExhibitionBoolVoid(false); trace(debugString); }
+                ){
+                    //collectionGlobalObject.GetVisitorObjectArray()[0].SetJustChangeExhibitionBoolVoid(false);
+                    //trace(debugString);
+                }
+                debugString = "";
+                for(_sentence in collectionGlobalObject.GetVisitorObjectArray()[0].GetSentenceStringArray()){
+                    if(_sentence != ""){ debugString = debugString + "\n\n" + _sentence; }
+                }
+                if(
+                    collectionGlobalObject.GetVisitorObjectArray()[0].GetFinishedBool() == false &&
+                    collectionGlobalObject.GetVisitorObjectArray()[0].GetJustChangeExhibitionBool() == true
+                ){
+                    collectionGlobalObject.GetVisitorObjectArray()[0].SetJustChangeExhibitionBoolVoid(false);
+                    trace(debugString);
+                }
             }
         }
     }

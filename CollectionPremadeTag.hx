@@ -11,6 +11,8 @@ class CollectionPremadeTag{
         PremadeTagStructNounInanimatePlaceAbstractVoid(_collectionGlobalObject);
         PremadeTagStructNounInanimatePlaceConcreteNoOwnerVoid(_collectionGlobalObject);
         PremadeTagStructNounInanimatePlaceConcreteOwnerVoid(_collectionGlobalObject);
+        PremadeTagStructNounInanimateSeeAbstractVoid(_collectionGlobalObject);
+        PremadeTagStructNounInanimateSeeConcreteVoid(_collectionGlobalObject);
         PremadeTagStructNounInanimateTitleAbstractVoid(_collectionGlobalObject);
         PremadeTagStructNounInanimateWearAbstractVoid(_collectionGlobalObject);
         PremadeTagStructNounInanimateWearConcreteVoid(_collectionGlobalObject);
@@ -649,6 +651,50 @@ class CollectionPremadeTag{
             }
         );
     }
+    public static function PremadeTagStructNounInanimateSeeAbstractVoid(_collectionGlobalObject:CollectionGlobal){
+        _collectionGlobalObject.GetTagStructArray().push(
+            {
+                tagEntry1Struct:{
+                    tagTypeSubEnum:NOUN,
+                    tagString:"vision"
+                },
+                tagFeelEnum:NEUTRAL,
+                tagTypeEnum:NOUN_INANIMATE_SEE_ABSTRACT,
+            }
+        );
+    }
+    public static function PremadeTagStructNounInanimateSeeConcreteVoid(_collectionGlobalObject:CollectionGlobal){
+        _collectionGlobalObject.GetTagStructArray().push(
+            {
+                tagEntry1Struct:{
+                    tagTypeSubEnum:NOUN,
+                    tagString:"lightning"
+                },
+                tagFeelEnum:NEUTRAL,
+                tagTypeEnum:NOUN_INANIMATE_SEE_CONCRETE,
+            }
+        );
+        _collectionGlobalObject.GetTagStructArray().push(
+            {
+                tagEntry1Struct:{
+                    tagTypeSubEnum:NOUN,
+                    tagString:"moonlight"
+                },
+                tagFeelEnum:NEUTRAL,
+                tagTypeEnum:NOUN_INANIMATE_SEE_CONCRETE,
+            }
+        );
+        _collectionGlobalObject.GetTagStructArray().push(
+            {
+                tagEntry1Struct:{
+                    tagTypeSubEnum:NOUN,
+                    tagString:"rainbow"
+                },
+                tagFeelEnum:NEUTRAL,
+                tagTypeEnum:NOUN_INANIMATE_SEE_CONCRETE,
+            }
+        );
+    }
     public static function PremadeTagStructNounInanimateTitleAbstractVoid(_collectionGlobalObject:CollectionGlobal){
         _collectionGlobalObject.GetTagStructArray().push(
             {
@@ -945,7 +991,7 @@ class CollectionPremadeTag{
                     tagString:"assasinates"
                 },
                 tagFeelEnum:NEGATIVE,
-                tagTypeEnum:VERB_INTRANSITIVE,
+                tagTypeEnum:VERB_TRANSITIVE,
             }
         );
         _collectionGlobalObject.GetTagStructArray().push(
@@ -1206,7 +1252,7 @@ class CollectionPremadeTag{
                     tagString:"kills"
                 },
                 tagFeelEnum:NEGATIVE,
-                tagTypeEnum:VERB_INTRANSITIVE,
+                tagTypeEnum:VERB_TRANSITIVE,
             }
         );
         _collectionGlobalObject.GetTagStructArray().push(

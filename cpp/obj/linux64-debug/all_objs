@@ -4,6 +4,7 @@
 "obj/linux64-debug/1d9bb4d0_Std.o"
 "obj/linux64-debug/1d9bb4d0_ObjectVisitor.o"
 "obj/linux64-debug/1d9bb4d0_ObjectMuseum.o"
+"obj/linux64-debug/1d9bb4d0_ObjectGeneratorSentence.o"
 "obj/linux64-debug/1d9bb4d0_Main.o"
 "obj/linux64-debug/1d9bb4d0_CollectionTagGeneral.o"
 "obj/linux64-debug/1d9bb4d0_CollectionPremadeTag.o"

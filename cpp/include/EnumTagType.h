@@ -39,6 +39,10 @@ class EnumTagType_obj : public hx::EnumBase_obj
 		static inline ::EnumTagType NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER_dyn() { return NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER; }
 		static ::EnumTagType NOUN_INANIMATE_PLACE_CONCRETE_OWNER;
 		static inline ::EnumTagType NOUN_INANIMATE_PLACE_CONCRETE_OWNER_dyn() { return NOUN_INANIMATE_PLACE_CONCRETE_OWNER; }
+		static ::EnumTagType NOUN_INANIMATE_SEE_ABSTRACT;
+		static inline ::EnumTagType NOUN_INANIMATE_SEE_ABSTRACT_dyn() { return NOUN_INANIMATE_SEE_ABSTRACT; }
+		static ::EnumTagType NOUN_INANIMATE_SEE_CONCRETE;
+		static inline ::EnumTagType NOUN_INANIMATE_SEE_CONCRETE_dyn() { return NOUN_INANIMATE_SEE_CONCRETE; }
 		static ::EnumTagType NOUN_INANIMATE_TITLE;
 		static inline ::EnumTagType NOUN_INANIMATE_TITLE_dyn() { return NOUN_INANIMATE_TITLE; }
 		static ::EnumTagType NOUN_INANIMATE_WEAR_ABSTRACT;

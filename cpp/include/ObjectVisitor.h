@@ -6,6 +6,7 @@
 #endif
 
 HX_DECLARE_CLASS0(CollectionGlobal)
+HX_DECLARE_CLASS0(ObjectGeneratorSentence)
 HX_DECLARE_CLASS0(ObjectMuseum)
 HX_DECLARE_CLASS0(ObjectVisitor)
 HX_DECLARE_CLASS1(haxe,IMap)
@@ -43,6 +44,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		Array< ::String > explanationStringArray;
 		bool finishedBool;
 		::ObjectMuseum floorCurrentObject;
+		::ObjectGeneratorSentence generatorSentenceObject;
 		int indexGlobalInt;
 		int indexLocalInt;
 		bool justChangeExhibitionBool;
@@ -92,11 +94,23 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual bool GetJustChangeExhibitionBool( );
 		Dynamic GetJustChangeExhibitionBool_dyn();
 
+		virtual ::String GetNameString( );
+		Dynamic GetNameString_dyn();
+
+		virtual int GetScoreInt( );
+		Dynamic GetScoreInt_dyn();
+
+		virtual Array< ::String > GetSentenceStringArray( );
+		Dynamic GetSentenceStringArray_dyn();
+
 		virtual cpp::ArrayBase GetTagCounterStructArray( );
 		Dynamic GetTagCounterStructArray_dyn();
 
 		virtual ::haxe::ds::ObjectMap GetTagStructMap( );
 		Dynamic GetTagStructMap_dyn();
+
+		virtual bool GetVisitCorrectExhibitionBool( );
+		Dynamic GetVisitCorrectExhibitionBool_dyn();
 
 		virtual Void SetJustChangeExhibitionBoolVoid( bool _justChangeExhibitionBool);
 		Dynamic SetJustChangeExhibitionBoolVoid_dyn();

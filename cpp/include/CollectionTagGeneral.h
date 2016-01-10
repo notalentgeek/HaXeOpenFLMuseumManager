@@ -59,6 +59,12 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionTagGeneral_obj : public hx::Object{
 		static Void TagGeneralStructNounInanimatePlaceConcreteOwnerVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic TagGeneralStructNounInanimatePlaceConcreteOwnerVoid_dyn();
 
+		static Void TagGeneralStructNounInanimateSeeAbstractVoid( ::CollectionGlobal _collectionGlobalObject);
+		static Dynamic TagGeneralStructNounInanimateSeeAbstractVoid_dyn();
+
+		static Void TagGeneralStructNounInanimateSeeConcreteVoid( ::CollectionGlobal _collectionGlobalObject);
+		static Dynamic TagGeneralStructNounInanimateSeeConcreteVoid_dyn();
+
 		static Void TagGeneralStructNounInanimateTitleAbstractVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic TagGeneralStructNounInanimateTitleAbstractVoid_dyn();
 

@@ -33,6 +33,9 @@
 #ifndef INCLUDED_ObjectMuseum
 #include <ObjectMuseum.h>
 #endif
+#ifndef INCLUDED_ObjectGeneratorSentence
+#include <ObjectGeneratorSentence.h>
+#endif
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
@@ -69,6 +72,7 @@ hx::RegisterResources( hx::GetResources() );
 ::Std_obj::__register();
 ::ObjectVisitor_obj::__register();
 ::ObjectMuseum_obj::__register();
+::ObjectGeneratorSentence_obj::__register();
 ::Main_obj::__register();
 ::CollectionTagGeneral_obj::__register();
 ::CollectionPremadeTag_obj::__register();

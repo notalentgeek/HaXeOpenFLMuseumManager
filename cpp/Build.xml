@@ -20,6 +20,7 @@
    <depend name="include/CollectionFunction.h"/>
    <depend name="include/CollectionGlobal.h"/>
    <depend name="include/EnumMuseumMode.h"/>
+   <depend name="include/ObjectGeneratorSentence.h"/>
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectVisitor.h"/>
    <depend name="include/haxe/IMap.h"/>
@@ -32,6 +33,15 @@
    <depend name="include/EnumMuseumType.h"/>
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectVisitor.h"/>
+  </file>
+  <file name="src/ObjectGeneratorSentence.cpp">
+   <depend name="include/CollectionGlobal.h"/>
+   <depend name="include/EnumTagFeelType.h"/>
+   <depend name="include/EnumTagType.h"/>
+   <depend name="include/ObjectGeneratorSentence.h"/>
+   <depend name="include/ObjectVisitor.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
   </file>
   <file name="src/Main.cpp">
    <depend name="include/CollectionFunction.h"/>

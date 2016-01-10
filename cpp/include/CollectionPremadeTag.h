@@ -59,6 +59,12 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionPremadeTag_obj : public hx::Object{
 		static Void PremadeTagStructNounInanimatePlaceConcreteOwnerVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeTagStructNounInanimatePlaceConcreteOwnerVoid_dyn();
 
+		static Void PremadeTagStructNounInanimateSeeAbstractVoid( ::CollectionGlobal _collectionGlobalObject);
+		static Dynamic PremadeTagStructNounInanimateSeeAbstractVoid_dyn();
+
+		static Void PremadeTagStructNounInanimateSeeConcreteVoid( ::CollectionGlobal _collectionGlobalObject);
+		static Dynamic PremadeTagStructNounInanimateSeeConcreteVoid_dyn();
+
 		static Void PremadeTagStructNounInanimateTitleAbstractVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeTagStructNounInanimateTitleAbstractVoid_dyn();
 

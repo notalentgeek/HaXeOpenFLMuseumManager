@@ -82,23 +82,31 @@ Void CollectionPremadeTag_obj::PremadeTagStructVoid( ::CollectionGlobal _collect
 		HX_STACK_LINE(14)
 		::CollectionGlobal tmp9 = _collectionGlobalObject;		HX_STACK_VAR(tmp9,"tmp9");
 		HX_STACK_LINE(14)
-		::CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid(tmp9);
+		::CollectionPremadeTag_obj::PremadeTagStructNounInanimateSeeAbstractVoid(tmp9);
 		HX_STACK_LINE(15)
 		::CollectionGlobal tmp10 = _collectionGlobalObject;		HX_STACK_VAR(tmp10,"tmp10");
 		HX_STACK_LINE(15)
-		::CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearAbstractVoid(tmp10);
+		::CollectionPremadeTag_obj::PremadeTagStructNounInanimateSeeConcreteVoid(tmp10);
 		HX_STACK_LINE(16)
 		::CollectionGlobal tmp11 = _collectionGlobalObject;		HX_STACK_VAR(tmp11,"tmp11");
 		HX_STACK_LINE(16)
-		::CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearConcreteVoid(tmp11);
+		::CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid(tmp11);
 		HX_STACK_LINE(17)
 		::CollectionGlobal tmp12 = _collectionGlobalObject;		HX_STACK_VAR(tmp12,"tmp12");
 		HX_STACK_LINE(17)
-		::CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid(tmp12);
+		::CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearAbstractVoid(tmp12);
 		HX_STACK_LINE(18)
 		::CollectionGlobal tmp13 = _collectionGlobalObject;		HX_STACK_VAR(tmp13,"tmp13");
 		HX_STACK_LINE(18)
-		::CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid(tmp13);
+		::CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearConcreteVoid(tmp13);
+		HX_STACK_LINE(19)
+		::CollectionGlobal tmp14 = _collectionGlobalObject;		HX_STACK_VAR(tmp14,"tmp14");
+		HX_STACK_LINE(19)
+		::CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid(tmp14);
+		HX_STACK_LINE(20)
+		::CollectionGlobal tmp15 = _collectionGlobalObject;		HX_STACK_VAR(tmp15,"tmp15");
+		HX_STACK_LINE(20)
+		::CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid(tmp15);
 	}
 return null();
 }
@@ -108,11 +116,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructVoid,(vo
 
 Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructAdjVoid",0x8fba1f76,"CollectionPremadeTag.PremadeTagStructAdjVoid","CollectionPremadeTag.hx",20,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructAdjVoid",0x8fba1f76,"CollectionPremadeTag.PremadeTagStructAdjVoid","CollectionPremadeTag.hx",22,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",23,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",25,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::ADJ,false);
@@ -122,11 +130,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(23)
+		HX_STACK_LINE(25)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( Dynamic &tmp){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",22,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",24,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -137,13 +145,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(22)
+		HX_STACK_LINE(24)
 		Dynamic tmp1 = _Function_1_2::Block(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(21)
+		HX_STACK_LINE(23)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp1);
 		struct _Function_1_3{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",33,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",35,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::ADJ,false);
@@ -153,11 +161,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(33)
+		HX_STACK_LINE(35)
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( Dynamic &tmp2){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",32,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",34,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp2,false);
@@ -168,13 +176,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(32)
+		HX_STACK_LINE(34)
 		Dynamic tmp3 = _Function_1_4::Block(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(31)
+		HX_STACK_LINE(33)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp3);
 		struct _Function_1_5{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",43,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",45,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::ADJ,false);
@@ -184,11 +192,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(43)
+		HX_STACK_LINE(45)
 		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
 		struct _Function_1_6{
 			inline static Dynamic Block( Dynamic &tmp4){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",42,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",44,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp4,false);
@@ -199,13 +207,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(42)
+		HX_STACK_LINE(44)
 		Dynamic tmp5 = _Function_1_6::Block(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(41)
+		HX_STACK_LINE(43)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp5);
 		struct _Function_1_7{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",53,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",55,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::ADJ,false);
@@ -215,11 +223,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(55)
 		Dynamic tmp6 = _Function_1_7::Block();		HX_STACK_VAR(tmp6,"tmp6");
 		struct _Function_1_8{
 			inline static Dynamic Block( Dynamic &tmp6){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",52,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",54,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp6,false);
@@ -230,13 +238,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(54)
 		Dynamic tmp7 = _Function_1_8::Block(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(51)
+		HX_STACK_LINE(53)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp7);
 		struct _Function_1_9{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",63,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",65,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::ADJ,false);
@@ -246,11 +254,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(63)
+		HX_STACK_LINE(65)
 		Dynamic tmp8 = _Function_1_9::Block();		HX_STACK_VAR(tmp8,"tmp8");
 		struct _Function_1_10{
 			inline static Dynamic Block( Dynamic &tmp8){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",62,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",64,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp8,false);
@@ -261,9 +269,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdjVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(62)
+		HX_STACK_LINE(64)
 		Dynamic tmp9 = _Function_1_10::Block(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(61)
+		HX_STACK_LINE(63)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp9);
 	}
 return null();
@@ -274,11 +282,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructAdjVoid,
 
 Void CollectionPremadeTag_obj::PremadeTagStructAdvVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructAdvVoid",0x78891582,"CollectionPremadeTag.PremadeTagStructAdvVoid","CollectionPremadeTag.hx",72,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructAdvVoid",0x78891582,"CollectionPremadeTag.PremadeTagStructAdvVoid","CollectionPremadeTag.hx",74,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",75,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",77,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::ADV,false);
@@ -288,11 +296,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdvVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(75)
+		HX_STACK_LINE(77)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( Dynamic &tmp){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",74,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",76,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -303,13 +311,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdvVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		Dynamic tmp1 = _Function_1_2::Block(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(73)
+		HX_STACK_LINE(75)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp1);
 		struct _Function_1_3{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",85,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",87,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::ADV,false);
@@ -319,11 +327,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdvVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(85)
+		HX_STACK_LINE(87)
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( Dynamic &tmp2){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",84,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",86,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp2,false);
@@ -334,13 +342,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdvVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(84)
+		HX_STACK_LINE(86)
 		Dynamic tmp3 = _Function_1_4::Block(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(83)
+		HX_STACK_LINE(85)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp3);
 		struct _Function_1_5{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",95,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",97,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::ADV,false);
@@ -350,11 +358,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdvVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(95)
+		HX_STACK_LINE(97)
 		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
 		struct _Function_1_6{
 			inline static Dynamic Block( Dynamic &tmp4){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",94,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",96,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp4,false);
@@ -365,13 +373,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdvVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(94)
+		HX_STACK_LINE(96)
 		Dynamic tmp5 = _Function_1_6::Block(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(93)
+		HX_STACK_LINE(95)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp5);
 		struct _Function_1_7{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",105,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",107,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::ADV,false);
@@ -381,11 +389,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdvVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(105)
+		HX_STACK_LINE(107)
 		Dynamic tmp6 = _Function_1_7::Block();		HX_STACK_VAR(tmp6,"tmp6");
 		struct _Function_1_8{
 			inline static Dynamic Block( Dynamic &tmp6){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",104,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",106,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp6,false);
@@ -396,9 +404,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructAdvVoid( ::CollectionGlobal _coll
 				return null();
 			}
 		};
-		HX_STACK_LINE(104)
+		HX_STACK_LINE(106)
 		Dynamic tmp7 = _Function_1_8::Block(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(103)
+		HX_STACK_LINE(105)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp7);
 	}
 return null();
@@ -409,11 +417,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructAdvVoid,
 
 Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounAliveAbstractVoid",0xaab17224,"CollectionPremadeTag.PremadeTagStructNounAliveAbstractVoid","CollectionPremadeTag.hx",114,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounAliveAbstractVoid",0xaab17224,"CollectionPremadeTag.PremadeTagStructNounAliveAbstractVoid","CollectionPremadeTag.hx",116,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",117,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",119,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -423,11 +431,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(117)
+		HX_STACK_LINE(119)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",121,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",123,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -437,11 +445,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(121)
+		HX_STACK_LINE(123)
 		Dynamic tmp1 = _Function_1_2::Block();		HX_STACK_VAR(tmp1,"tmp1");
 		struct _Function_1_3{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",125,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",127,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -451,11 +459,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(125)
+		HX_STACK_LINE(127)
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",129,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",131,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S_POS,false);
@@ -465,11 +473,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(129)
+		HX_STACK_LINE(131)
 		Dynamic tmp3 = _Function_1_4::Block();		HX_STACK_VAR(tmp3,"tmp3");
 		struct _Function_1_5{
 			inline static Dynamic Block( Dynamic &tmp,Dynamic &tmp2,Dynamic &tmp3,Dynamic &tmp1){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",116,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",118,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -483,13 +491,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(116)
+		HX_STACK_LINE(118)
 		Dynamic tmp4 = _Function_1_5::Block(tmp,tmp2,tmp3,tmp1);		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp4);
 		struct _Function_1_6{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",139,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",141,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -499,11 +507,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(139)
+		HX_STACK_LINE(141)
 		Dynamic tmp5 = _Function_1_6::Block();		HX_STACK_VAR(tmp5,"tmp5");
 		struct _Function_1_7{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",143,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",145,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -513,11 +521,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(143)
+		HX_STACK_LINE(145)
 		Dynamic tmp6 = _Function_1_7::Block();		HX_STACK_VAR(tmp6,"tmp6");
 		struct _Function_1_8{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",147,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",149,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -527,11 +535,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(147)
+		HX_STACK_LINE(149)
 		Dynamic tmp7 = _Function_1_8::Block();		HX_STACK_VAR(tmp7,"tmp7");
 		struct _Function_1_9{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",151,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",153,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S_POS,false);
@@ -541,11 +549,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(151)
+		HX_STACK_LINE(153)
 		Dynamic tmp8 = _Function_1_9::Block();		HX_STACK_VAR(tmp8,"tmp8");
 		struct _Function_1_10{
 			inline static Dynamic Block( Dynamic &tmp5,Dynamic &tmp6,Dynamic &tmp7,Dynamic &tmp8){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",138,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",140,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp5,false);
@@ -559,13 +567,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(138)
+		HX_STACK_LINE(140)
 		Dynamic tmp9 = _Function_1_10::Block(tmp5,tmp6,tmp7,tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(137)
+		HX_STACK_LINE(139)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp9);
 		struct _Function_1_11{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",161,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",163,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -575,11 +583,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(161)
+		HX_STACK_LINE(163)
 		Dynamic tmp10 = _Function_1_11::Block();		HX_STACK_VAR(tmp10,"tmp10");
 		struct _Function_1_12{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",165,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",167,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -589,11 +597,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(165)
+		HX_STACK_LINE(167)
 		Dynamic tmp11 = _Function_1_12::Block();		HX_STACK_VAR(tmp11,"tmp11");
 		struct _Function_1_13{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",169,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",171,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -603,11 +611,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(169)
+		HX_STACK_LINE(171)
 		Dynamic tmp12 = _Function_1_13::Block();		HX_STACK_VAR(tmp12,"tmp12");
 		struct _Function_1_14{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",173,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",175,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S_POS,false);
@@ -617,11 +625,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(173)
+		HX_STACK_LINE(175)
 		Dynamic tmp13 = _Function_1_14::Block();		HX_STACK_VAR(tmp13,"tmp13");
 		struct _Function_1_15{
 			inline static Dynamic Block( Dynamic &tmp13,Dynamic &tmp11,Dynamic &tmp10,Dynamic &tmp12){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",160,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",162,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp10,false);
@@ -635,13 +643,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(160)
+		HX_STACK_LINE(162)
 		Dynamic tmp14 = _Function_1_15::Block(tmp13,tmp11,tmp10,tmp12);		HX_STACK_VAR(tmp14,"tmp14");
-		HX_STACK_LINE(159)
+		HX_STACK_LINE(161)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp14);
 		struct _Function_1_16{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",183,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",185,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -651,11 +659,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(183)
+		HX_STACK_LINE(185)
 		Dynamic tmp15 = _Function_1_16::Block();		HX_STACK_VAR(tmp15,"tmp15");
 		struct _Function_1_17{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",187,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",189,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -665,11 +673,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(187)
+		HX_STACK_LINE(189)
 		Dynamic tmp16 = _Function_1_17::Block();		HX_STACK_VAR(tmp16,"tmp16");
 		struct _Function_1_18{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",191,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",193,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -679,11 +687,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(191)
+		HX_STACK_LINE(193)
 		Dynamic tmp17 = _Function_1_18::Block();		HX_STACK_VAR(tmp17,"tmp17");
 		struct _Function_1_19{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",195,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",197,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S_POS,false);
@@ -693,11 +701,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(195)
+		HX_STACK_LINE(197)
 		Dynamic tmp18 = _Function_1_19::Block();		HX_STACK_VAR(tmp18,"tmp18");
 		struct _Function_1_20{
 			inline static Dynamic Block( Dynamic &tmp17,Dynamic &tmp15,Dynamic &tmp16,Dynamic &tmp18){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",182,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",184,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp15,false);
@@ -711,13 +719,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(182)
+		HX_STACK_LINE(184)
 		Dynamic tmp19 = _Function_1_20::Block(tmp17,tmp15,tmp16,tmp18);		HX_STACK_VAR(tmp19,"tmp19");
-		HX_STACK_LINE(181)
+		HX_STACK_LINE(183)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp19);
 		struct _Function_1_21{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",205,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",207,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -727,11 +735,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(205)
+		HX_STACK_LINE(207)
 		Dynamic tmp20 = _Function_1_21::Block();		HX_STACK_VAR(tmp20,"tmp20");
 		struct _Function_1_22{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",209,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",211,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -741,11 +749,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(209)
+		HX_STACK_LINE(211)
 		Dynamic tmp21 = _Function_1_22::Block();		HX_STACK_VAR(tmp21,"tmp21");
 		struct _Function_1_23{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",213,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",215,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -755,11 +763,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(213)
+		HX_STACK_LINE(215)
 		Dynamic tmp22 = _Function_1_23::Block();		HX_STACK_VAR(tmp22,"tmp22");
 		struct _Function_1_24{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",217,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",219,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S_POS,false);
@@ -769,11 +777,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(217)
+		HX_STACK_LINE(219)
 		Dynamic tmp23 = _Function_1_24::Block();		HX_STACK_VAR(tmp23,"tmp23");
 		struct _Function_1_25{
 			inline static Dynamic Block( Dynamic &tmp22,Dynamic &tmp20,Dynamic &tmp23,Dynamic &tmp21){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",204,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",206,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp20,false);
@@ -787,13 +795,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(204)
+		HX_STACK_LINE(206)
 		Dynamic tmp24 = _Function_1_25::Block(tmp22,tmp20,tmp23,tmp21);		HX_STACK_VAR(tmp24,"tmp24");
-		HX_STACK_LINE(203)
+		HX_STACK_LINE(205)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp24);
 		struct _Function_1_26{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",227,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",229,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -803,11 +811,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(227)
+		HX_STACK_LINE(229)
 		Dynamic tmp25 = _Function_1_26::Block();		HX_STACK_VAR(tmp25,"tmp25");
 		struct _Function_1_27{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",231,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",233,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -817,11 +825,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(231)
+		HX_STACK_LINE(233)
 		Dynamic tmp26 = _Function_1_27::Block();		HX_STACK_VAR(tmp26,"tmp26");
 		struct _Function_1_28{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",235,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",237,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -831,11 +839,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(235)
+		HX_STACK_LINE(237)
 		Dynamic tmp27 = _Function_1_28::Block();		HX_STACK_VAR(tmp27,"tmp27");
 		struct _Function_1_29{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",239,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",241,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S_POS,false);
@@ -845,11 +853,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(239)
+		HX_STACK_LINE(241)
 		Dynamic tmp28 = _Function_1_29::Block();		HX_STACK_VAR(tmp28,"tmp28");
 		struct _Function_1_30{
 			inline static Dynamic Block( Dynamic &tmp28,Dynamic &tmp26,Dynamic &tmp25,Dynamic &tmp27){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",226,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",228,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp25,false);
@@ -863,13 +871,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(226)
+		HX_STACK_LINE(228)
 		Dynamic tmp29 = _Function_1_30::Block(tmp28,tmp26,tmp25,tmp27);		HX_STACK_VAR(tmp29,"tmp29");
-		HX_STACK_LINE(225)
+		HX_STACK_LINE(227)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp29);
 		struct _Function_1_31{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",249,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",251,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -879,11 +887,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(249)
+		HX_STACK_LINE(251)
 		Dynamic tmp30 = _Function_1_31::Block();		HX_STACK_VAR(tmp30,"tmp30");
 		struct _Function_1_32{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",253,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",255,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -893,11 +901,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(253)
+		HX_STACK_LINE(255)
 		Dynamic tmp31 = _Function_1_32::Block();		HX_STACK_VAR(tmp31,"tmp31");
 		struct _Function_1_33{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",257,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",259,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -907,11 +915,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(257)
+		HX_STACK_LINE(259)
 		Dynamic tmp32 = _Function_1_33::Block();		HX_STACK_VAR(tmp32,"tmp32");
 		struct _Function_1_34{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",261,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",263,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S_POS,false);
@@ -921,11 +929,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(261)
+		HX_STACK_LINE(263)
 		Dynamic tmp33 = _Function_1_34::Block();		HX_STACK_VAR(tmp33,"tmp33");
 		struct _Function_1_35{
 			inline static Dynamic Block( Dynamic &tmp33,Dynamic &tmp31,Dynamic &tmp32,Dynamic &tmp30){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",248,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",250,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp30,false);
@@ -939,13 +947,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(248)
+		HX_STACK_LINE(250)
 		Dynamic tmp34 = _Function_1_35::Block(tmp33,tmp31,tmp32,tmp30);		HX_STACK_VAR(tmp34,"tmp34");
-		HX_STACK_LINE(247)
+		HX_STACK_LINE(249)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp34);
 		struct _Function_1_36{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",271,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",273,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -955,11 +963,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(271)
+		HX_STACK_LINE(273)
 		Dynamic tmp35 = _Function_1_36::Block();		HX_STACK_VAR(tmp35,"tmp35");
 		struct _Function_1_37{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",275,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",277,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -969,11 +977,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(275)
+		HX_STACK_LINE(277)
 		Dynamic tmp36 = _Function_1_37::Block();		HX_STACK_VAR(tmp36,"tmp36");
 		struct _Function_1_38{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",279,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",281,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -983,11 +991,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(279)
+		HX_STACK_LINE(281)
 		Dynamic tmp37 = _Function_1_38::Block();		HX_STACK_VAR(tmp37,"tmp37");
 		struct _Function_1_39{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",283,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",285,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S_POS,false);
@@ -997,11 +1005,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(283)
+		HX_STACK_LINE(285)
 		Dynamic tmp38 = _Function_1_39::Block();		HX_STACK_VAR(tmp38,"tmp38");
 		struct _Function_1_40{
 			inline static Dynamic Block( Dynamic &tmp36,Dynamic &tmp38,Dynamic &tmp37,Dynamic &tmp35){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",270,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",272,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp35,false);
@@ -1015,9 +1023,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveAbstractVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(270)
+		HX_STACK_LINE(272)
 		Dynamic tmp39 = _Function_1_40::Block(tmp36,tmp38,tmp37,tmp35);		HX_STACK_VAR(tmp39,"tmp39");
-		HX_STACK_LINE(269)
+		HX_STACK_LINE(271)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp39);
 	}
 return null();
@@ -1028,11 +1036,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounAliv
 
 Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounAliveConcreteVoid",0xc563b907,"CollectionPremadeTag.PremadeTagStructNounAliveConcreteVoid","CollectionPremadeTag.hx",292,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounAliveConcreteVoid",0xc563b907,"CollectionPremadeTag.PremadeTagStructNounAliveConcreteVoid","CollectionPremadeTag.hx",294,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",295,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",297,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1042,11 +1050,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(295)
+		HX_STACK_LINE(297)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",299,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",301,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1056,11 +1064,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(299)
+		HX_STACK_LINE(301)
 		Dynamic tmp1 = _Function_1_2::Block();		HX_STACK_VAR(tmp1,"tmp1");
 		struct _Function_1_3{
 			inline static Dynamic Block( Dynamic &tmp,Dynamic &tmp1){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",294,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",296,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -1072,13 +1080,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(294)
+		HX_STACK_LINE(296)
 		Dynamic tmp2 = _Function_1_3::Block(tmp,tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(293)
+		HX_STACK_LINE(295)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp2);
 		struct _Function_1_4{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",309,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",311,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1088,11 +1096,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(309)
+		HX_STACK_LINE(311)
 		Dynamic tmp3 = _Function_1_4::Block();		HX_STACK_VAR(tmp3,"tmp3");
 		struct _Function_1_5{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",313,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",315,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1102,11 +1110,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(313)
+		HX_STACK_LINE(315)
 		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
 		struct _Function_1_6{
 			inline static Dynamic Block( Dynamic &tmp4,Dynamic &tmp3){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",308,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",310,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp3,false);
@@ -1118,13 +1126,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(308)
+		HX_STACK_LINE(310)
 		Dynamic tmp5 = _Function_1_6::Block(tmp4,tmp3);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(307)
+		HX_STACK_LINE(309)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp5);
 		struct _Function_1_7{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",323,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",325,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1134,11 +1142,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(323)
+		HX_STACK_LINE(325)
 		Dynamic tmp6 = _Function_1_7::Block();		HX_STACK_VAR(tmp6,"tmp6");
 		struct _Function_1_8{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",327,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",329,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1148,11 +1156,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(327)
+		HX_STACK_LINE(329)
 		Dynamic tmp7 = _Function_1_8::Block();		HX_STACK_VAR(tmp7,"tmp7");
 		struct _Function_1_9{
 			inline static Dynamic Block( Dynamic &tmp6,Dynamic &tmp7){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",322,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",324,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp6,false);
@@ -1164,13 +1172,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(322)
+		HX_STACK_LINE(324)
 		Dynamic tmp8 = _Function_1_9::Block(tmp6,tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(321)
+		HX_STACK_LINE(323)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp8);
 		struct _Function_1_10{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",337,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",339,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1180,11 +1188,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(337)
+		HX_STACK_LINE(339)
 		Dynamic tmp9 = _Function_1_10::Block();		HX_STACK_VAR(tmp9,"tmp9");
 		struct _Function_1_11{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",341,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",343,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1194,11 +1202,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(341)
+		HX_STACK_LINE(343)
 		Dynamic tmp10 = _Function_1_11::Block();		HX_STACK_VAR(tmp10,"tmp10");
 		struct _Function_1_12{
 			inline static Dynamic Block( Dynamic &tmp9,Dynamic &tmp10){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",336,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",338,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp9,false);
@@ -1210,13 +1218,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(336)
+		HX_STACK_LINE(338)
 		Dynamic tmp11 = _Function_1_12::Block(tmp9,tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(335)
+		HX_STACK_LINE(337)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp11);
 		struct _Function_1_13{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",351,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",353,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1226,11 +1234,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(351)
+		HX_STACK_LINE(353)
 		Dynamic tmp12 = _Function_1_13::Block();		HX_STACK_VAR(tmp12,"tmp12");
 		struct _Function_1_14{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",355,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",357,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1240,11 +1248,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(355)
+		HX_STACK_LINE(357)
 		Dynamic tmp13 = _Function_1_14::Block();		HX_STACK_VAR(tmp13,"tmp13");
 		struct _Function_1_15{
 			inline static Dynamic Block( Dynamic &tmp13,Dynamic &tmp12){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",350,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",352,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp12,false);
@@ -1256,13 +1264,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(350)
+		HX_STACK_LINE(352)
 		Dynamic tmp14 = _Function_1_15::Block(tmp13,tmp12);		HX_STACK_VAR(tmp14,"tmp14");
-		HX_STACK_LINE(349)
+		HX_STACK_LINE(351)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp14);
 		struct _Function_1_16{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",365,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",367,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1272,11 +1280,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(365)
+		HX_STACK_LINE(367)
 		Dynamic tmp15 = _Function_1_16::Block();		HX_STACK_VAR(tmp15,"tmp15");
 		struct _Function_1_17{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",369,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",371,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1286,11 +1294,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(369)
+		HX_STACK_LINE(371)
 		Dynamic tmp16 = _Function_1_17::Block();		HX_STACK_VAR(tmp16,"tmp16");
 		struct _Function_1_18{
 			inline static Dynamic Block( Dynamic &tmp15,Dynamic &tmp16){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",364,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",366,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp15,false);
@@ -1302,13 +1310,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(364)
+		HX_STACK_LINE(366)
 		Dynamic tmp17 = _Function_1_18::Block(tmp15,tmp16);		HX_STACK_VAR(tmp17,"tmp17");
-		HX_STACK_LINE(363)
+		HX_STACK_LINE(365)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp17);
 		struct _Function_1_19{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",379,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",381,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1318,11 +1326,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(379)
+		HX_STACK_LINE(381)
 		Dynamic tmp18 = _Function_1_19::Block();		HX_STACK_VAR(tmp18,"tmp18");
 		struct _Function_1_20{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",383,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",385,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1332,11 +1340,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(383)
+		HX_STACK_LINE(385)
 		Dynamic tmp19 = _Function_1_20::Block();		HX_STACK_VAR(tmp19,"tmp19");
 		struct _Function_1_21{
 			inline static Dynamic Block( Dynamic &tmp19,Dynamic &tmp18){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",378,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",380,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp18,false);
@@ -1348,13 +1356,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(378)
+		HX_STACK_LINE(380)
 		Dynamic tmp20 = _Function_1_21::Block(tmp19,tmp18);		HX_STACK_VAR(tmp20,"tmp20");
-		HX_STACK_LINE(377)
+		HX_STACK_LINE(379)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp20);
 		struct _Function_1_22{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",393,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",395,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1364,11 +1372,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(393)
+		HX_STACK_LINE(395)
 		Dynamic tmp21 = _Function_1_22::Block();		HX_STACK_VAR(tmp21,"tmp21");
 		struct _Function_1_23{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",397,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",399,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1378,11 +1386,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(397)
+		HX_STACK_LINE(399)
 		Dynamic tmp22 = _Function_1_23::Block();		HX_STACK_VAR(tmp22,"tmp22");
 		struct _Function_1_24{
 			inline static Dynamic Block( Dynamic &tmp22,Dynamic &tmp21){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",392,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",394,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp21,false);
@@ -1394,13 +1402,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(392)
+		HX_STACK_LINE(394)
 		Dynamic tmp23 = _Function_1_24::Block(tmp22,tmp21);		HX_STACK_VAR(tmp23,"tmp23");
-		HX_STACK_LINE(391)
+		HX_STACK_LINE(393)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp23);
 		struct _Function_1_25{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",407,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",409,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1410,11 +1418,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(407)
+		HX_STACK_LINE(409)
 		Dynamic tmp24 = _Function_1_25::Block();		HX_STACK_VAR(tmp24,"tmp24");
 		struct _Function_1_26{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",411,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",413,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1424,11 +1432,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(411)
+		HX_STACK_LINE(413)
 		Dynamic tmp25 = _Function_1_26::Block();		HX_STACK_VAR(tmp25,"tmp25");
 		struct _Function_1_27{
 			inline static Dynamic Block( Dynamic &tmp24,Dynamic &tmp25){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",406,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",408,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp24,false);
@@ -1440,13 +1448,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(406)
+		HX_STACK_LINE(408)
 		Dynamic tmp26 = _Function_1_27::Block(tmp24,tmp25);		HX_STACK_VAR(tmp26,"tmp26");
-		HX_STACK_LINE(405)
+		HX_STACK_LINE(407)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp26);
 		struct _Function_1_28{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",421,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",423,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1456,11 +1464,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(421)
+		HX_STACK_LINE(423)
 		Dynamic tmp27 = _Function_1_28::Block();		HX_STACK_VAR(tmp27,"tmp27");
 		struct _Function_1_29{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",425,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",427,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1470,11 +1478,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(425)
+		HX_STACK_LINE(427)
 		Dynamic tmp28 = _Function_1_29::Block();		HX_STACK_VAR(tmp28,"tmp28");
 		struct _Function_1_30{
 			inline static Dynamic Block( Dynamic &tmp28,Dynamic &tmp27){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",420,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",422,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp27,false);
@@ -1486,13 +1494,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(420)
+		HX_STACK_LINE(422)
 		Dynamic tmp29 = _Function_1_30::Block(tmp28,tmp27);		HX_STACK_VAR(tmp29,"tmp29");
-		HX_STACK_LINE(419)
+		HX_STACK_LINE(421)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp29);
 		struct _Function_1_31{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",435,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",437,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1502,11 +1510,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(435)
+		HX_STACK_LINE(437)
 		Dynamic tmp30 = _Function_1_31::Block();		HX_STACK_VAR(tmp30,"tmp30");
 		struct _Function_1_32{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",439,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",441,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1516,11 +1524,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(439)
+		HX_STACK_LINE(441)
 		Dynamic tmp31 = _Function_1_32::Block();		HX_STACK_VAR(tmp31,"tmp31");
 		struct _Function_1_33{
 			inline static Dynamic Block( Dynamic &tmp31,Dynamic &tmp30){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",434,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",436,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp30,false);
@@ -1532,13 +1540,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(434)
+		HX_STACK_LINE(436)
 		Dynamic tmp32 = _Function_1_33::Block(tmp31,tmp30);		HX_STACK_VAR(tmp32,"tmp32");
-		HX_STACK_LINE(433)
+		HX_STACK_LINE(435)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp32);
 		struct _Function_1_34{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",449,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",451,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1548,11 +1556,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(449)
+		HX_STACK_LINE(451)
 		Dynamic tmp33 = _Function_1_34::Block();		HX_STACK_VAR(tmp33,"tmp33");
 		struct _Function_1_35{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",453,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",455,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_POS,false);
@@ -1562,11 +1570,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(453)
+		HX_STACK_LINE(455)
 		Dynamic tmp34 = _Function_1_35::Block();		HX_STACK_VAR(tmp34,"tmp34");
 		struct _Function_1_36{
 			inline static Dynamic Block( Dynamic &tmp33,Dynamic &tmp34){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",448,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",450,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp33,false);
@@ -1578,9 +1586,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounAliveConcreteVoid( ::Collecti
 				return null();
 			}
 		};
-		HX_STACK_LINE(448)
+		HX_STACK_LINE(450)
 		Dynamic tmp35 = _Function_1_36::Block(tmp33,tmp34);		HX_STACK_VAR(tmp35,"tmp35");
-		HX_STACK_LINE(447)
+		HX_STACK_LINE(449)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp35);
 	}
 return null();
@@ -1591,11 +1599,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounAliv
 
 Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldAbstractVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateHoldAbstractVoid",0x351a4d12,"CollectionPremadeTag.PremadeTagStructNounInanimateHoldAbstractVoid","CollectionPremadeTag.hx",462,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateHoldAbstractVoid",0x351a4d12,"CollectionPremadeTag.PremadeTagStructNounInanimateHoldAbstractVoid","CollectionPremadeTag.hx",464,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",465,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",467,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1605,11 +1613,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldAbstractVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(465)
+		HX_STACK_LINE(467)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( Dynamic &tmp){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",464,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",466,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -1620,9 +1628,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldAbstractVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(464)
+		HX_STACK_LINE(466)
 		Dynamic tmp1 = _Function_1_2::Block(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(463)
+		HX_STACK_LINE(465)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp1);
 	}
 return null();
@@ -1633,11 +1641,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounInan
 
 Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateHoldConcreteVoid",0x4fcc93f5,"CollectionPremadeTag.PremadeTagStructNounInanimateHoldConcreteVoid","CollectionPremadeTag.hx",474,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateHoldConcreteVoid",0x4fcc93f5,"CollectionPremadeTag.PremadeTagStructNounInanimateHoldConcreteVoid","CollectionPremadeTag.hx",476,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",477,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",479,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1647,11 +1655,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(477)
+		HX_STACK_LINE(479)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",481,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",483,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -1661,11 +1669,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(481)
+		HX_STACK_LINE(483)
 		Dynamic tmp1 = _Function_1_2::Block();		HX_STACK_VAR(tmp1,"tmp1");
 		struct _Function_1_3{
 			inline static Dynamic Block( Dynamic &tmp,Dynamic &tmp1){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",476,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",478,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -1677,13 +1685,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(476)
+		HX_STACK_LINE(478)
 		Dynamic tmp2 = _Function_1_3::Block(tmp,tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(475)
+		HX_STACK_LINE(477)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp2);
 		struct _Function_1_4{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",491,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",493,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1693,11 +1701,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(491)
+		HX_STACK_LINE(493)
 		Dynamic tmp3 = _Function_1_4::Block();		HX_STACK_VAR(tmp3,"tmp3");
 		struct _Function_1_5{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",495,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",497,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -1707,11 +1715,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(495)
+		HX_STACK_LINE(497)
 		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
 		struct _Function_1_6{
 			inline static Dynamic Block( Dynamic &tmp4,Dynamic &tmp3){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",490,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",492,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp3,false);
@@ -1723,13 +1731,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(490)
+		HX_STACK_LINE(492)
 		Dynamic tmp5 = _Function_1_6::Block(tmp4,tmp3);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(489)
+		HX_STACK_LINE(491)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp5);
 		struct _Function_1_7{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",505,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",507,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1739,11 +1747,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(505)
+		HX_STACK_LINE(507)
 		Dynamic tmp6 = _Function_1_7::Block();		HX_STACK_VAR(tmp6,"tmp6");
 		struct _Function_1_8{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",509,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",511,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -1753,11 +1761,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(509)
+		HX_STACK_LINE(511)
 		Dynamic tmp7 = _Function_1_8::Block();		HX_STACK_VAR(tmp7,"tmp7");
 		struct _Function_1_9{
 			inline static Dynamic Block( Dynamic &tmp6,Dynamic &tmp7){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",504,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",506,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp6,false);
@@ -1769,13 +1777,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(504)
+		HX_STACK_LINE(506)
 		Dynamic tmp8 = _Function_1_9::Block(tmp6,tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(503)
+		HX_STACK_LINE(505)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp8);
 		struct _Function_1_10{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",519,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",521,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1785,11 +1793,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(519)
+		HX_STACK_LINE(521)
 		Dynamic tmp9 = _Function_1_10::Block();		HX_STACK_VAR(tmp9,"tmp9");
 		struct _Function_1_11{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",523,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",525,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -1799,11 +1807,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(523)
+		HX_STACK_LINE(525)
 		Dynamic tmp10 = _Function_1_11::Block();		HX_STACK_VAR(tmp10,"tmp10");
 		struct _Function_1_12{
 			inline static Dynamic Block( Dynamic &tmp9,Dynamic &tmp10){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",518,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",520,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp9,false);
@@ -1815,13 +1823,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(518)
+		HX_STACK_LINE(520)
 		Dynamic tmp11 = _Function_1_12::Block(tmp9,tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(517)
+		HX_STACK_LINE(519)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp11);
 		struct _Function_1_13{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",533,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",535,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1831,11 +1839,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(533)
+		HX_STACK_LINE(535)
 		Dynamic tmp12 = _Function_1_13::Block();		HX_STACK_VAR(tmp12,"tmp12");
 		struct _Function_1_14{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",537,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",539,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -1845,11 +1853,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(537)
+		HX_STACK_LINE(539)
 		Dynamic tmp13 = _Function_1_14::Block();		HX_STACK_VAR(tmp13,"tmp13");
 		struct _Function_1_15{
 			inline static Dynamic Block( Dynamic &tmp13,Dynamic &tmp12){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",532,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",534,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp12,false);
@@ -1861,9 +1869,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateHoldConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(532)
+		HX_STACK_LINE(534)
 		Dynamic tmp14 = _Function_1_15::Block(tmp13,tmp12);		HX_STACK_VAR(tmp14,"tmp14");
-		HX_STACK_LINE(531)
+		HX_STACK_LINE(533)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp14);
 	}
 return null();
@@ -1874,11 +1882,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounInan
 
 Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceAbstractVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimatePlaceAbstractVoid",0x6952ee40,"CollectionPremadeTag.PremadeTagStructNounInanimatePlaceAbstractVoid","CollectionPremadeTag.hx",546,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimatePlaceAbstractVoid",0x6952ee40,"CollectionPremadeTag.PremadeTagStructNounInanimatePlaceAbstractVoid","CollectionPremadeTag.hx",548,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",549,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",551,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1888,11 +1896,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(549)
+		HX_STACK_LINE(551)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( Dynamic &tmp){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",548,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",550,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -1903,13 +1911,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(548)
+		HX_STACK_LINE(550)
 		Dynamic tmp1 = _Function_1_2::Block(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(547)
+		HX_STACK_LINE(549)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp1);
 		struct _Function_1_3{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",559,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",561,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1919,11 +1927,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(559)
+		HX_STACK_LINE(561)
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( Dynamic &tmp2){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",558,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",560,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp2,false);
@@ -1934,9 +1942,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(558)
+		HX_STACK_LINE(560)
 		Dynamic tmp3 = _Function_1_4::Block(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(557)
+		HX_STACK_LINE(559)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp3);
 	}
 return null();
@@ -1947,11 +1955,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounInan
 
 Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteNoOwnerVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimatePlaceConcreteNoOwnerVoid",0x628702b7,"CollectionPremadeTag.PremadeTagStructNounInanimatePlaceConcreteNoOwnerVoid","CollectionPremadeTag.hx",568,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimatePlaceConcreteNoOwnerVoid",0x628702b7,"CollectionPremadeTag.PremadeTagStructNounInanimatePlaceConcreteNoOwnerVoid","CollectionPremadeTag.hx",570,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",571,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",573,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1961,11 +1969,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteNoOwner
 				return null();
 			}
 		};
-		HX_STACK_LINE(571)
+		HX_STACK_LINE(573)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( Dynamic &tmp){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",570,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",572,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -1976,13 +1984,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteNoOwner
 				return null();
 			}
 		};
-		HX_STACK_LINE(570)
+		HX_STACK_LINE(572)
 		Dynamic tmp1 = _Function_1_2::Block(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(569)
+		HX_STACK_LINE(571)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp1);
 		struct _Function_1_3{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",581,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",583,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -1992,11 +2000,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteNoOwner
 				return null();
 			}
 		};
-		HX_STACK_LINE(581)
+		HX_STACK_LINE(583)
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( Dynamic &tmp2){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",580,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",582,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp2,false);
@@ -2007,13 +2015,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteNoOwner
 				return null();
 			}
 		};
-		HX_STACK_LINE(580)
+		HX_STACK_LINE(582)
 		Dynamic tmp3 = _Function_1_4::Block(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(579)
+		HX_STACK_LINE(581)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp3);
 		struct _Function_1_5{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",591,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",593,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2023,11 +2031,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteNoOwner
 				return null();
 			}
 		};
-		HX_STACK_LINE(591)
+		HX_STACK_LINE(593)
 		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
 		struct _Function_1_6{
 			inline static Dynamic Block( Dynamic &tmp4){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",590,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",592,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp4,false);
@@ -2038,13 +2046,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteNoOwner
 				return null();
 			}
 		};
-		HX_STACK_LINE(590)
+		HX_STACK_LINE(592)
 		Dynamic tmp5 = _Function_1_6::Block(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(589)
+		HX_STACK_LINE(591)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp5);
 		struct _Function_1_7{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",601,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",603,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2054,11 +2062,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteNoOwner
 				return null();
 			}
 		};
-		HX_STACK_LINE(601)
+		HX_STACK_LINE(603)
 		Dynamic tmp6 = _Function_1_7::Block();		HX_STACK_VAR(tmp6,"tmp6");
 		struct _Function_1_8{
 			inline static Dynamic Block( Dynamic &tmp6){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",600,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",602,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp6,false);
@@ -2069,9 +2077,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteNoOwner
 				return null();
 			}
 		};
-		HX_STACK_LINE(600)
+		HX_STACK_LINE(602)
 		Dynamic tmp7 = _Function_1_8::Block(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(599)
+		HX_STACK_LINE(601)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp7);
 	}
 return null();
@@ -2082,11 +2090,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounInan
 
 Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteOwnerVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimatePlaceConcreteOwnerVoid",0xca93bcf8,"CollectionPremadeTag.PremadeTagStructNounInanimatePlaceConcreteOwnerVoid","CollectionPremadeTag.hx",610,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimatePlaceConcreteOwnerVoid",0xca93bcf8,"CollectionPremadeTag.PremadeTagStructNounInanimatePlaceConcreteOwnerVoid","CollectionPremadeTag.hx",612,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",613,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",615,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2096,11 +2104,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteOwnerVo
 				return null();
 			}
 		};
-		HX_STACK_LINE(613)
+		HX_STACK_LINE(615)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( Dynamic &tmp){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",612,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",614,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -2111,13 +2119,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteOwnerVo
 				return null();
 			}
 		};
-		HX_STACK_LINE(612)
+		HX_STACK_LINE(614)
 		Dynamic tmp1 = _Function_1_2::Block(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(611)
+		HX_STACK_LINE(613)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp1);
 		struct _Function_1_3{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",623,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",625,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2127,11 +2135,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteOwnerVo
 				return null();
 			}
 		};
-		HX_STACK_LINE(623)
+		HX_STACK_LINE(625)
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( Dynamic &tmp2){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",622,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",624,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp2,false);
@@ -2142,13 +2150,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteOwnerVo
 				return null();
 			}
 		};
-		HX_STACK_LINE(622)
+		HX_STACK_LINE(624)
 		Dynamic tmp3 = _Function_1_4::Block(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(621)
+		HX_STACK_LINE(623)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp3);
 		struct _Function_1_5{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",633,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",635,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2158,11 +2166,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteOwnerVo
 				return null();
 			}
 		};
-		HX_STACK_LINE(633)
+		HX_STACK_LINE(635)
 		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
 		struct _Function_1_6{
 			inline static Dynamic Block( Dynamic &tmp4){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",632,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",634,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp4,false);
@@ -2173,13 +2181,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteOwnerVo
 				return null();
 			}
 		};
-		HX_STACK_LINE(632)
+		HX_STACK_LINE(634)
 		Dynamic tmp5 = _Function_1_6::Block(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(631)
+		HX_STACK_LINE(633)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp5);
 		struct _Function_1_7{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",643,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",645,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2189,11 +2197,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteOwnerVo
 				return null();
 			}
 		};
-		HX_STACK_LINE(643)
+		HX_STACK_LINE(645)
 		Dynamic tmp6 = _Function_1_7::Block();		HX_STACK_VAR(tmp6,"tmp6");
 		struct _Function_1_8{
 			inline static Dynamic Block( Dynamic &tmp6){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",642,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",644,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp6,false);
@@ -2204,9 +2212,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteOwnerVo
 				return null();
 			}
 		};
-		HX_STACK_LINE(642)
+		HX_STACK_LINE(644)
 		Dynamic tmp7 = _Function_1_8::Block(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(641)
+		HX_STACK_LINE(643)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp7);
 	}
 return null();
@@ -2215,13 +2223,159 @@ return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounInanimatePlaceConcreteOwnerVoid,(void))
 
-Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( ::CollectionGlobal _collectionGlobalObject){
+Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateSeeAbstractVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateTitleAbstractVoid",0x06568491,"CollectionPremadeTag.PremadeTagStructNounInanimateTitleAbstractVoid","CollectionPremadeTag.hx",652,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateSeeAbstractVoid",0xf85a204c,"CollectionPremadeTag.PremadeTagStructNounInanimateSeeAbstractVoid","CollectionPremadeTag.hx",654,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",655,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",657,0xe1b162de)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
+					__result->Add(HX_HCSTRING("tagString","\xcb","\x36","\x68","\x42") , HX_HCSTRING("vision","\xe8","\x13","\x83","\xef"),false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(657)
+		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
+		struct _Function_1_2{
+			inline static Dynamic Block( Dynamic &tmp){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",656,0xe1b162de)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
+					__result->Add(HX_HCSTRING("tagFeelEnum","\x01","\x02","\x26","\xeb") , ::EnumTagFeelType_obj::NEUTRAL,false);
+					__result->Add(HX_HCSTRING("tagTypeEnum","\x55","\x6f","\xb4","\xa9") , ::EnumTagType_obj::NOUN_INANIMATE_SEE_ABSTRACT,false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(656)
+		Dynamic tmp1 = _Function_1_2::Block(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(655)
+		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp1);
+	}
+return null();
+}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounInanimateSeeAbstractVoid,(void))
+
+Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateSeeConcreteVoid( ::CollectionGlobal _collectionGlobalObject){
+{
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateSeeConcreteVoid",0x130c672f,"CollectionPremadeTag.PremadeTagStructNounInanimateSeeConcreteVoid","CollectionPremadeTag.hx",666,0xe1b162de)
+		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
+		struct _Function_1_1{
+			inline static Dynamic Block( ){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",669,0xe1b162de)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
+					__result->Add(HX_HCSTRING("tagString","\xcb","\x36","\x68","\x42") , HX_HCSTRING("lightning","\x0a","\x39","\x4a","\xd7"),false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(669)
+		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
+		struct _Function_1_2{
+			inline static Dynamic Block( Dynamic &tmp){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",668,0xe1b162de)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
+					__result->Add(HX_HCSTRING("tagFeelEnum","\x01","\x02","\x26","\xeb") , ::EnumTagFeelType_obj::NEUTRAL,false);
+					__result->Add(HX_HCSTRING("tagTypeEnum","\x55","\x6f","\xb4","\xa9") , ::EnumTagType_obj::NOUN_INANIMATE_SEE_CONCRETE,false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(668)
+		Dynamic tmp1 = _Function_1_2::Block(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(667)
+		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp1);
+		struct _Function_1_3{
+			inline static Dynamic Block( ){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",679,0xe1b162de)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
+					__result->Add(HX_HCSTRING("tagString","\xcb","\x36","\x68","\x42") , HX_HCSTRING("moonlight","\x35","\xf0","\xb5","\x15"),false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(679)
+		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
+		struct _Function_1_4{
+			inline static Dynamic Block( Dynamic &tmp2){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",678,0xe1b162de)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp2,false);
+					__result->Add(HX_HCSTRING("tagFeelEnum","\x01","\x02","\x26","\xeb") , ::EnumTagFeelType_obj::NEUTRAL,false);
+					__result->Add(HX_HCSTRING("tagTypeEnum","\x55","\x6f","\xb4","\xa9") , ::EnumTagType_obj::NOUN_INANIMATE_SEE_CONCRETE,false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(678)
+		Dynamic tmp3 = _Function_1_4::Block(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(677)
+		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp3);
+		struct _Function_1_5{
+			inline static Dynamic Block( ){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",689,0xe1b162de)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
+					__result->Add(HX_HCSTRING("tagString","\xcb","\x36","\x68","\x42") , HX_HCSTRING("rainbow","\x36","\x01","\x40","\x0b"),false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(689)
+		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
+		struct _Function_1_6{
+			inline static Dynamic Block( Dynamic &tmp4){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",688,0xe1b162de)
+				{
+					hx::Anon __result = hx::Anon_obj::Create();
+					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp4,false);
+					__result->Add(HX_HCSTRING("tagFeelEnum","\x01","\x02","\x26","\xeb") , ::EnumTagFeelType_obj::NEUTRAL,false);
+					__result->Add(HX_HCSTRING("tagTypeEnum","\x55","\x6f","\xb4","\xa9") , ::EnumTagType_obj::NOUN_INANIMATE_SEE_CONCRETE,false);
+					return __result;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(688)
+		Dynamic tmp5 = _Function_1_6::Block(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(687)
+		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp5);
+	}
+return null();
+}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounInanimateSeeConcreteVoid,(void))
+
+Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( ::CollectionGlobal _collectionGlobalObject){
+{
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateTitleAbstractVoid",0x06568491,"CollectionPremadeTag.PremadeTagStructNounInanimateTitleAbstractVoid","CollectionPremadeTag.hx",698,0xe1b162de)
+		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
+		struct _Function_1_1{
+			inline static Dynamic Block( ){
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",701,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2231,11 +2385,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(655)
+		HX_STACK_LINE(701)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",659,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",705,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -2245,11 +2399,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(659)
+		HX_STACK_LINE(705)
 		Dynamic tmp1 = _Function_1_2::Block();		HX_STACK_VAR(tmp1,"tmp1");
 		struct _Function_1_3{
 			inline static Dynamic Block( Dynamic &tmp,Dynamic &tmp1){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",654,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",700,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -2261,13 +2415,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(654)
+		HX_STACK_LINE(700)
 		Dynamic tmp2 = _Function_1_3::Block(tmp,tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(653)
+		HX_STACK_LINE(699)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp2);
 		struct _Function_1_4{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",669,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",715,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2277,11 +2431,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(669)
+		HX_STACK_LINE(715)
 		Dynamic tmp3 = _Function_1_4::Block();		HX_STACK_VAR(tmp3,"tmp3");
 		struct _Function_1_5{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",673,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",719,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -2291,11 +2445,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(673)
+		HX_STACK_LINE(719)
 		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
 		struct _Function_1_6{
 			inline static Dynamic Block( Dynamic &tmp4,Dynamic &tmp3){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",668,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",714,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp3,false);
@@ -2307,13 +2461,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(668)
+		HX_STACK_LINE(714)
 		Dynamic tmp5 = _Function_1_6::Block(tmp4,tmp3);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(667)
+		HX_STACK_LINE(713)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp5);
 		struct _Function_1_7{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",683,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",729,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2323,11 +2477,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(683)
+		HX_STACK_LINE(729)
 		Dynamic tmp6 = _Function_1_7::Block();		HX_STACK_VAR(tmp6,"tmp6");
 		struct _Function_1_8{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",687,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",733,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN_S,false);
@@ -2337,11 +2491,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(687)
+		HX_STACK_LINE(733)
 		Dynamic tmp7 = _Function_1_8::Block();		HX_STACK_VAR(tmp7,"tmp7");
 		struct _Function_1_9{
 			inline static Dynamic Block( Dynamic &tmp6,Dynamic &tmp7){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",682,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",728,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp6,false);
@@ -2353,9 +2507,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateTitleAbstractVoid( :
 				return null();
 			}
 		};
-		HX_STACK_LINE(682)
+		HX_STACK_LINE(728)
 		Dynamic tmp8 = _Function_1_9::Block(tmp6,tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(681)
+		HX_STACK_LINE(727)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp8);
 	}
 return null();
@@ -2366,11 +2520,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounInan
 
 Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearAbstractVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateWearAbstractVoid",0x822cc052,"CollectionPremadeTag.PremadeTagStructNounInanimateWearAbstractVoid","CollectionPremadeTag.hx",696,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateWearAbstractVoid",0x822cc052,"CollectionPremadeTag.PremadeTagStructNounInanimateWearAbstractVoid","CollectionPremadeTag.hx",742,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",699,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",745,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2380,11 +2534,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearAbstractVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(699)
+		HX_STACK_LINE(745)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( Dynamic &tmp){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",698,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",744,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -2395,13 +2549,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearAbstractVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(698)
+		HX_STACK_LINE(744)
 		Dynamic tmp1 = _Function_1_2::Block(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(697)
+		HX_STACK_LINE(743)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp1);
 		struct _Function_1_3{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",709,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",755,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2411,11 +2565,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearAbstractVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(709)
+		HX_STACK_LINE(755)
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( Dynamic &tmp2){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",708,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",754,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp2,false);
@@ -2426,9 +2580,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearAbstractVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(708)
+		HX_STACK_LINE(754)
 		Dynamic tmp3 = _Function_1_4::Block(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(707)
+		HX_STACK_LINE(753)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp3);
 	}
 return null();
@@ -2439,11 +2593,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounInan
 
 Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearConcreteVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateWearConcreteVoid",0x9cdf0735,"CollectionPremadeTag.PremadeTagStructNounInanimateWearConcreteVoid","CollectionPremadeTag.hx",718,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructNounInanimateWearConcreteVoid",0x9cdf0735,"CollectionPremadeTag.PremadeTagStructNounInanimateWearConcreteVoid","CollectionPremadeTag.hx",764,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",721,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",767,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2453,11 +2607,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(721)
+		HX_STACK_LINE(767)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( Dynamic &tmp){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",720,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",766,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -2468,13 +2622,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(720)
+		HX_STACK_LINE(766)
 		Dynamic tmp1 = _Function_1_2::Block(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(719)
+		HX_STACK_LINE(765)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp1);
 		struct _Function_1_3{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",731,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",777,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::NOUN,false);
@@ -2484,11 +2638,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(731)
+		HX_STACK_LINE(777)
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( Dynamic &tmp2){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",730,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",776,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp2,false);
@@ -2499,9 +2653,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimateWearConcreteVoid( ::
 				return null();
 			}
 		};
-		HX_STACK_LINE(730)
+		HX_STACK_LINE(776)
 		Dynamic tmp3 = _Function_1_4::Block(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(729)
+		HX_STACK_LINE(775)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp3);
 	}
 return null();
@@ -2512,11 +2666,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructNounInan
 
 Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructVerbVoidIntransitiveVoid",0x3af59936,"CollectionPremadeTag.PremadeTagStructVerbVoidIntransitiveVoid","CollectionPremadeTag.hx",740,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructVerbVoidIntransitiveVoid",0x3af59936,"CollectionPremadeTag.PremadeTagStructVerbVoidIntransitiveVoid","CollectionPremadeTag.hx",786,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",743,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",789,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -2526,11 +2680,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(743)
+		HX_STACK_LINE(789)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",747,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",793,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -2540,11 +2694,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(747)
+		HX_STACK_LINE(793)
 		Dynamic tmp1 = _Function_1_2::Block();		HX_STACK_VAR(tmp1,"tmp1");
 		struct _Function_1_3{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",751,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",797,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -2554,11 +2708,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(751)
+		HX_STACK_LINE(797)
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",755,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",801,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -2568,11 +2722,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(755)
+		HX_STACK_LINE(801)
 		Dynamic tmp3 = _Function_1_4::Block();		HX_STACK_VAR(tmp3,"tmp3");
 		struct _Function_1_5{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",759,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",805,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -2582,11 +2736,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(759)
+		HX_STACK_LINE(805)
 		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
 		struct _Function_1_6{
 			inline static Dynamic Block( Dynamic &tmp,Dynamic &tmp4,Dynamic &tmp2,Dynamic &tmp3,Dynamic &tmp1){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",742,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",788,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -2601,13 +2755,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(742)
+		HX_STACK_LINE(788)
 		Dynamic tmp5 = _Function_1_6::Block(tmp,tmp4,tmp2,tmp3,tmp1);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(741)
+		HX_STACK_LINE(787)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp5);
 		struct _Function_1_7{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",769,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",815,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -2617,11 +2771,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(769)
+		HX_STACK_LINE(815)
 		Dynamic tmp6 = _Function_1_7::Block();		HX_STACK_VAR(tmp6,"tmp6");
 		struct _Function_1_8{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",773,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",819,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -2631,11 +2785,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(773)
+		HX_STACK_LINE(819)
 		Dynamic tmp7 = _Function_1_8::Block();		HX_STACK_VAR(tmp7,"tmp7");
 		struct _Function_1_9{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",777,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",823,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -2645,11 +2799,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(777)
+		HX_STACK_LINE(823)
 		Dynamic tmp8 = _Function_1_9::Block();		HX_STACK_VAR(tmp8,"tmp8");
 		struct _Function_1_10{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",781,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",827,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -2659,11 +2813,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(781)
+		HX_STACK_LINE(827)
 		Dynamic tmp9 = _Function_1_10::Block();		HX_STACK_VAR(tmp9,"tmp9");
 		struct _Function_1_11{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",785,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",831,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -2673,11 +2827,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(785)
+		HX_STACK_LINE(831)
 		Dynamic tmp10 = _Function_1_11::Block();		HX_STACK_VAR(tmp10,"tmp10");
 		struct _Function_1_12{
 			inline static Dynamic Block( Dynamic &tmp6,Dynamic &tmp9,Dynamic &tmp10,Dynamic &tmp7,Dynamic &tmp8){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",768,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",814,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp6,false);
@@ -2692,13 +2846,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(768)
+		HX_STACK_LINE(814)
 		Dynamic tmp11 = _Function_1_12::Block(tmp6,tmp9,tmp10,tmp7,tmp8);		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(767)
+		HX_STACK_LINE(813)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp11);
 		struct _Function_1_13{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",795,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",841,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -2708,11 +2862,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(795)
+		HX_STACK_LINE(841)
 		Dynamic tmp12 = _Function_1_13::Block();		HX_STACK_VAR(tmp12,"tmp12");
 		struct _Function_1_14{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",799,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",845,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -2722,11 +2876,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(799)
+		HX_STACK_LINE(845)
 		Dynamic tmp13 = _Function_1_14::Block();		HX_STACK_VAR(tmp13,"tmp13");
 		struct _Function_1_15{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",803,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",849,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -2736,11 +2890,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(803)
+		HX_STACK_LINE(849)
 		Dynamic tmp14 = _Function_1_15::Block();		HX_STACK_VAR(tmp14,"tmp14");
 		struct _Function_1_16{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",807,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",853,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -2750,11 +2904,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(807)
+		HX_STACK_LINE(853)
 		Dynamic tmp15 = _Function_1_16::Block();		HX_STACK_VAR(tmp15,"tmp15");
 		struct _Function_1_17{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",811,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",857,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -2764,11 +2918,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(811)
+		HX_STACK_LINE(857)
 		Dynamic tmp16 = _Function_1_17::Block();		HX_STACK_VAR(tmp16,"tmp16");
 		struct _Function_1_18{
 			inline static Dynamic Block( Dynamic &tmp13,Dynamic &tmp15,Dynamic &tmp12,Dynamic &tmp16,Dynamic &tmp14){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",794,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",840,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp12,false);
@@ -2783,13 +2937,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(794)
+		HX_STACK_LINE(840)
 		Dynamic tmp17 = _Function_1_18::Block(tmp13,tmp15,tmp12,tmp16,tmp14);		HX_STACK_VAR(tmp17,"tmp17");
-		HX_STACK_LINE(793)
+		HX_STACK_LINE(839)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp17);
 		struct _Function_1_19{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",821,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",867,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -2799,11 +2953,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(821)
+		HX_STACK_LINE(867)
 		Dynamic tmp18 = _Function_1_19::Block();		HX_STACK_VAR(tmp18,"tmp18");
 		struct _Function_1_20{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",825,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",871,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -2813,11 +2967,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(825)
+		HX_STACK_LINE(871)
 		Dynamic tmp19 = _Function_1_20::Block();		HX_STACK_VAR(tmp19,"tmp19");
 		struct _Function_1_21{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",829,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",875,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -2827,11 +2981,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(829)
+		HX_STACK_LINE(875)
 		Dynamic tmp20 = _Function_1_21::Block();		HX_STACK_VAR(tmp20,"tmp20");
 		struct _Function_1_22{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",833,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",879,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -2841,11 +2995,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(833)
+		HX_STACK_LINE(879)
 		Dynamic tmp21 = _Function_1_22::Block();		HX_STACK_VAR(tmp21,"tmp21");
 		struct _Function_1_23{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",837,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",883,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -2855,11 +3009,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(837)
+		HX_STACK_LINE(883)
 		Dynamic tmp22 = _Function_1_23::Block();		HX_STACK_VAR(tmp22,"tmp22");
 		struct _Function_1_24{
 			inline static Dynamic Block( Dynamic &tmp22,Dynamic &tmp20,Dynamic &tmp19,Dynamic &tmp21,Dynamic &tmp18){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",820,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",866,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp18,false);
@@ -2874,13 +3028,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(820)
+		HX_STACK_LINE(866)
 		Dynamic tmp23 = _Function_1_24::Block(tmp22,tmp20,tmp19,tmp21,tmp18);		HX_STACK_VAR(tmp23,"tmp23");
-		HX_STACK_LINE(819)
+		HX_STACK_LINE(865)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp23);
 		struct _Function_1_25{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",847,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",893,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -2890,11 +3044,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(847)
+		HX_STACK_LINE(893)
 		Dynamic tmp24 = _Function_1_25::Block();		HX_STACK_VAR(tmp24,"tmp24");
 		struct _Function_1_26{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",851,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",897,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -2904,11 +3058,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(851)
+		HX_STACK_LINE(897)
 		Dynamic tmp25 = _Function_1_26::Block();		HX_STACK_VAR(tmp25,"tmp25");
 		struct _Function_1_27{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",855,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",901,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -2918,11 +3072,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(855)
+		HX_STACK_LINE(901)
 		Dynamic tmp26 = _Function_1_27::Block();		HX_STACK_VAR(tmp26,"tmp26");
 		struct _Function_1_28{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",859,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",905,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -2932,11 +3086,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(859)
+		HX_STACK_LINE(905)
 		Dynamic tmp27 = _Function_1_28::Block();		HX_STACK_VAR(tmp27,"tmp27");
 		struct _Function_1_29{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",863,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",909,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -2946,11 +3100,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(863)
+		HX_STACK_LINE(909)
 		Dynamic tmp28 = _Function_1_29::Block();		HX_STACK_VAR(tmp28,"tmp28");
 		struct _Function_1_30{
 			inline static Dynamic Block( Dynamic &tmp28,Dynamic &tmp26,Dynamic &tmp24,Dynamic &tmp25,Dynamic &tmp27){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",846,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",892,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp24,false);
@@ -2965,13 +3119,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(846)
+		HX_STACK_LINE(892)
 		Dynamic tmp29 = _Function_1_30::Block(tmp28,tmp26,tmp24,tmp25,tmp27);		HX_STACK_VAR(tmp29,"tmp29");
-		HX_STACK_LINE(845)
+		HX_STACK_LINE(891)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp29);
 		struct _Function_1_31{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",873,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",919,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -2981,11 +3135,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(873)
+		HX_STACK_LINE(919)
 		Dynamic tmp30 = _Function_1_31::Block();		HX_STACK_VAR(tmp30,"tmp30");
 		struct _Function_1_32{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",877,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",923,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -2995,11 +3149,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(877)
+		HX_STACK_LINE(923)
 		Dynamic tmp31 = _Function_1_32::Block();		HX_STACK_VAR(tmp31,"tmp31");
 		struct _Function_1_33{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",881,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",927,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3009,11 +3163,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(881)
+		HX_STACK_LINE(927)
 		Dynamic tmp32 = _Function_1_33::Block();		HX_STACK_VAR(tmp32,"tmp32");
 		struct _Function_1_34{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",885,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",931,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3023,11 +3177,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(885)
+		HX_STACK_LINE(931)
 		Dynamic tmp33 = _Function_1_34::Block();		HX_STACK_VAR(tmp33,"tmp33");
 		struct _Function_1_35{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",889,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",935,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3037,11 +3191,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(889)
+		HX_STACK_LINE(935)
 		Dynamic tmp34 = _Function_1_35::Block();		HX_STACK_VAR(tmp34,"tmp34");
 		struct _Function_1_36{
 			inline static Dynamic Block( Dynamic &tmp33,Dynamic &tmp31,Dynamic &tmp34,Dynamic &tmp32,Dynamic &tmp30){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",872,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",918,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp30,false);
@@ -3056,13 +3210,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(872)
+		HX_STACK_LINE(918)
 		Dynamic tmp35 = _Function_1_36::Block(tmp33,tmp31,tmp34,tmp32,tmp30);		HX_STACK_VAR(tmp35,"tmp35");
-		HX_STACK_LINE(871)
+		HX_STACK_LINE(917)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp35);
 		struct _Function_1_37{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",899,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",945,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3072,11 +3226,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(899)
+		HX_STACK_LINE(945)
 		Dynamic tmp36 = _Function_1_37::Block();		HX_STACK_VAR(tmp36,"tmp36");
 		struct _Function_1_38{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",903,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",949,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -3086,11 +3240,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(903)
+		HX_STACK_LINE(949)
 		Dynamic tmp37 = _Function_1_38::Block();		HX_STACK_VAR(tmp37,"tmp37");
 		struct _Function_1_39{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",907,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",953,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3100,11 +3254,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(907)
+		HX_STACK_LINE(953)
 		Dynamic tmp38 = _Function_1_39::Block();		HX_STACK_VAR(tmp38,"tmp38");
 		struct _Function_1_40{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",911,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",957,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3114,11 +3268,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(911)
+		HX_STACK_LINE(957)
 		Dynamic tmp39 = _Function_1_40::Block();		HX_STACK_VAR(tmp39,"tmp39");
 		struct _Function_1_41{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",915,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",961,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3128,11 +3282,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(915)
+		HX_STACK_LINE(961)
 		Dynamic tmp40 = _Function_1_41::Block();		HX_STACK_VAR(tmp40,"tmp40");
 		struct _Function_1_42{
 			inline static Dynamic Block( Dynamic &tmp36,Dynamic &tmp38,Dynamic &tmp40,Dynamic &tmp37,Dynamic &tmp39){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",898,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",944,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp36,false);
@@ -3147,9 +3301,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidIntransitiveVoid( ::Colle
 				return null();
 			}
 		};
-		HX_STACK_LINE(898)
+		HX_STACK_LINE(944)
 		Dynamic tmp41 = _Function_1_42::Block(tmp36,tmp38,tmp40,tmp37,tmp39);		HX_STACK_VAR(tmp41,"tmp41");
-		HX_STACK_LINE(897)
+		HX_STACK_LINE(943)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp41);
 	}
 return null();
@@ -3160,11 +3314,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremadeTag_obj,PremadeTagStructVerbVoid
 
 Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructVerbVoidTransitiveVoid",0x16d26891,"CollectionPremadeTag.PremadeTagStructVerbVoidTransitiveVoid","CollectionPremadeTag.hx",924,0xe1b162de)
+		HX_STACK_FRAME("CollectionPremadeTag","PremadeTagStructVerbVoidTransitiveVoid",0x16d26891,"CollectionPremadeTag.PremadeTagStructVerbVoidTransitiveVoid","CollectionPremadeTag.hx",970,0xe1b162de)
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 		struct _Function_1_1{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",927,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",973,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3174,11 +3328,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(927)
+		HX_STACK_LINE(973)
 		Dynamic tmp = _Function_1_1::Block();		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_2{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",931,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",977,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -3188,11 +3342,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(931)
+		HX_STACK_LINE(977)
 		Dynamic tmp1 = _Function_1_2::Block();		HX_STACK_VAR(tmp1,"tmp1");
 		struct _Function_1_3{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",935,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",981,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3202,11 +3356,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(935)
+		HX_STACK_LINE(981)
 		Dynamic tmp2 = _Function_1_3::Block();		HX_STACK_VAR(tmp2,"tmp2");
 		struct _Function_1_4{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",939,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",985,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3216,11 +3370,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(939)
+		HX_STACK_LINE(985)
 		Dynamic tmp3 = _Function_1_4::Block();		HX_STACK_VAR(tmp3,"tmp3");
 		struct _Function_1_5{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",943,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",989,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3230,11 +3384,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(943)
+		HX_STACK_LINE(989)
 		Dynamic tmp4 = _Function_1_5::Block();		HX_STACK_VAR(tmp4,"tmp4");
 		struct _Function_1_6{
 			inline static Dynamic Block( Dynamic &tmp,Dynamic &tmp4,Dynamic &tmp2,Dynamic &tmp3,Dynamic &tmp1){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",926,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",972,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp,false);
@@ -3243,19 +3397,19 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 					__result->Add(HX_HCSTRING("tagEntry4Struct","\xf1","\xec","\x8e","\x40") , tmp3,false);
 					__result->Add(HX_HCSTRING("tagEntry5Struct","\xb2","\x63","\x24","\x6a") , tmp4,false);
 					__result->Add(HX_HCSTRING("tagFeelEnum","\x01","\x02","\x26","\xeb") , ::EnumTagFeelType_obj::NEGATIVE,false);
-					__result->Add(HX_HCSTRING("tagTypeEnum","\x55","\x6f","\xb4","\xa9") , ::EnumTagType_obj::VERB_INTRANSITIVE,false);
+					__result->Add(HX_HCSTRING("tagTypeEnum","\x55","\x6f","\xb4","\xa9") , ::EnumTagType_obj::VERB_TRANSITIVE,false);
 					return __result;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(926)
+		HX_STACK_LINE(972)
 		Dynamic tmp5 = _Function_1_6::Block(tmp,tmp4,tmp2,tmp3,tmp1);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(925)
+		HX_STACK_LINE(971)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp5);
 		struct _Function_1_7{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",953,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",999,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3265,11 +3419,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(953)
+		HX_STACK_LINE(999)
 		Dynamic tmp6 = _Function_1_7::Block();		HX_STACK_VAR(tmp6,"tmp6");
 		struct _Function_1_8{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",957,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1003,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -3279,11 +3433,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(957)
+		HX_STACK_LINE(1003)
 		Dynamic tmp7 = _Function_1_8::Block();		HX_STACK_VAR(tmp7,"tmp7");
 		struct _Function_1_9{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",961,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1007,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3293,11 +3447,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(961)
+		HX_STACK_LINE(1007)
 		Dynamic tmp8 = _Function_1_9::Block();		HX_STACK_VAR(tmp8,"tmp8");
 		struct _Function_1_10{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",965,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1011,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3307,11 +3461,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(965)
+		HX_STACK_LINE(1011)
 		Dynamic tmp9 = _Function_1_10::Block();		HX_STACK_VAR(tmp9,"tmp9");
 		struct _Function_1_11{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",969,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1015,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3321,11 +3475,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(969)
+		HX_STACK_LINE(1015)
 		Dynamic tmp10 = _Function_1_11::Block();		HX_STACK_VAR(tmp10,"tmp10");
 		struct _Function_1_12{
 			inline static Dynamic Block( Dynamic &tmp6,Dynamic &tmp9,Dynamic &tmp10,Dynamic &tmp7,Dynamic &tmp8){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",952,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",998,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp6,false);
@@ -3340,13 +3494,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(952)
+		HX_STACK_LINE(998)
 		Dynamic tmp11 = _Function_1_12::Block(tmp6,tmp9,tmp10,tmp7,tmp8);		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(951)
+		HX_STACK_LINE(997)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp11);
 		struct _Function_1_13{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",979,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1025,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3356,11 +3510,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(979)
+		HX_STACK_LINE(1025)
 		Dynamic tmp12 = _Function_1_13::Block();		HX_STACK_VAR(tmp12,"tmp12");
 		struct _Function_1_14{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",983,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1029,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -3370,11 +3524,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(983)
+		HX_STACK_LINE(1029)
 		Dynamic tmp13 = _Function_1_14::Block();		HX_STACK_VAR(tmp13,"tmp13");
 		struct _Function_1_15{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",987,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1033,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3384,11 +3538,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(987)
+		HX_STACK_LINE(1033)
 		Dynamic tmp14 = _Function_1_15::Block();		HX_STACK_VAR(tmp14,"tmp14");
 		struct _Function_1_16{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",991,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1037,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3398,11 +3552,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(991)
+		HX_STACK_LINE(1037)
 		Dynamic tmp15 = _Function_1_16::Block();		HX_STACK_VAR(tmp15,"tmp15");
 		struct _Function_1_17{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",995,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1041,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3412,11 +3566,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(995)
+		HX_STACK_LINE(1041)
 		Dynamic tmp16 = _Function_1_17::Block();		HX_STACK_VAR(tmp16,"tmp16");
 		struct _Function_1_18{
 			inline static Dynamic Block( Dynamic &tmp13,Dynamic &tmp15,Dynamic &tmp12,Dynamic &tmp16,Dynamic &tmp14){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",978,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1024,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp12,false);
@@ -3431,13 +3585,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(978)
+		HX_STACK_LINE(1024)
 		Dynamic tmp17 = _Function_1_18::Block(tmp13,tmp15,tmp12,tmp16,tmp14);		HX_STACK_VAR(tmp17,"tmp17");
-		HX_STACK_LINE(977)
+		HX_STACK_LINE(1023)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp17);
 		struct _Function_1_19{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1005,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1051,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3447,11 +3601,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1005)
+		HX_STACK_LINE(1051)
 		Dynamic tmp18 = _Function_1_19::Block();		HX_STACK_VAR(tmp18,"tmp18");
 		struct _Function_1_20{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1009,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1055,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -3461,11 +3615,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1009)
+		HX_STACK_LINE(1055)
 		Dynamic tmp19 = _Function_1_20::Block();		HX_STACK_VAR(tmp19,"tmp19");
 		struct _Function_1_21{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1013,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1059,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3475,11 +3629,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1013)
+		HX_STACK_LINE(1059)
 		Dynamic tmp20 = _Function_1_21::Block();		HX_STACK_VAR(tmp20,"tmp20");
 		struct _Function_1_22{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1017,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1063,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3489,11 +3643,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1017)
+		HX_STACK_LINE(1063)
 		Dynamic tmp21 = _Function_1_22::Block();		HX_STACK_VAR(tmp21,"tmp21");
 		struct _Function_1_23{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1021,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1067,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3503,11 +3657,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1021)
+		HX_STACK_LINE(1067)
 		Dynamic tmp22 = _Function_1_23::Block();		HX_STACK_VAR(tmp22,"tmp22");
 		struct _Function_1_24{
 			inline static Dynamic Block( Dynamic &tmp22,Dynamic &tmp20,Dynamic &tmp19,Dynamic &tmp21,Dynamic &tmp18){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1004,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1050,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp18,false);
@@ -3522,13 +3676,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1004)
+		HX_STACK_LINE(1050)
 		Dynamic tmp23 = _Function_1_24::Block(tmp22,tmp20,tmp19,tmp21,tmp18);		HX_STACK_VAR(tmp23,"tmp23");
-		HX_STACK_LINE(1003)
+		HX_STACK_LINE(1049)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp23);
 		struct _Function_1_25{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1031,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1077,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3538,11 +3692,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1031)
+		HX_STACK_LINE(1077)
 		Dynamic tmp24 = _Function_1_25::Block();		HX_STACK_VAR(tmp24,"tmp24");
 		struct _Function_1_26{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1035,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1081,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -3552,11 +3706,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1035)
+		HX_STACK_LINE(1081)
 		Dynamic tmp25 = _Function_1_26::Block();		HX_STACK_VAR(tmp25,"tmp25");
 		struct _Function_1_27{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1039,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1085,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3566,11 +3720,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1039)
+		HX_STACK_LINE(1085)
 		Dynamic tmp26 = _Function_1_27::Block();		HX_STACK_VAR(tmp26,"tmp26");
 		struct _Function_1_28{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1043,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1089,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3580,11 +3734,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1043)
+		HX_STACK_LINE(1089)
 		Dynamic tmp27 = _Function_1_28::Block();		HX_STACK_VAR(tmp27,"tmp27");
 		struct _Function_1_29{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1047,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1093,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3594,11 +3748,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1047)
+		HX_STACK_LINE(1093)
 		Dynamic tmp28 = _Function_1_29::Block();		HX_STACK_VAR(tmp28,"tmp28");
 		struct _Function_1_30{
 			inline static Dynamic Block( Dynamic &tmp28,Dynamic &tmp26,Dynamic &tmp24,Dynamic &tmp25,Dynamic &tmp27){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1030,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1076,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp24,false);
@@ -3613,13 +3767,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1030)
+		HX_STACK_LINE(1076)
 		Dynamic tmp29 = _Function_1_30::Block(tmp28,tmp26,tmp24,tmp25,tmp27);		HX_STACK_VAR(tmp29,"tmp29");
-		HX_STACK_LINE(1029)
+		HX_STACK_LINE(1075)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp29);
 		struct _Function_1_31{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1058,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1104,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3629,11 +3783,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1058)
+		HX_STACK_LINE(1104)
 		Dynamic tmp30 = _Function_1_31::Block();		HX_STACK_VAR(tmp30,"tmp30");
 		struct _Function_1_32{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1062,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1108,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -3643,11 +3797,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1062)
+		HX_STACK_LINE(1108)
 		Dynamic tmp31 = _Function_1_32::Block();		HX_STACK_VAR(tmp31,"tmp31");
 		struct _Function_1_33{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1066,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1112,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3657,11 +3811,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1066)
+		HX_STACK_LINE(1112)
 		Dynamic tmp32 = _Function_1_33::Block();		HX_STACK_VAR(tmp32,"tmp32");
 		struct _Function_1_34{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1070,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1116,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3671,11 +3825,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1070)
+		HX_STACK_LINE(1116)
 		Dynamic tmp33 = _Function_1_34::Block();		HX_STACK_VAR(tmp33,"tmp33");
 		struct _Function_1_35{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1074,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1120,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3685,11 +3839,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1074)
+		HX_STACK_LINE(1120)
 		Dynamic tmp34 = _Function_1_35::Block();		HX_STACK_VAR(tmp34,"tmp34");
 		struct _Function_1_36{
 			inline static Dynamic Block( Dynamic &tmp33,Dynamic &tmp31,Dynamic &tmp34,Dynamic &tmp32,Dynamic &tmp30){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1057,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1103,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp30,false);
@@ -3704,13 +3858,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1057)
+		HX_STACK_LINE(1103)
 		Dynamic tmp35 = _Function_1_36::Block(tmp33,tmp31,tmp34,tmp32,tmp30);		HX_STACK_VAR(tmp35,"tmp35");
-		HX_STACK_LINE(1056)
+		HX_STACK_LINE(1102)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp35);
 		struct _Function_1_37{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1084,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1130,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3720,11 +3874,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1084)
+		HX_STACK_LINE(1130)
 		Dynamic tmp36 = _Function_1_37::Block();		HX_STACK_VAR(tmp36,"tmp36");
 		struct _Function_1_38{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1088,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1134,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -3734,11 +3888,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1088)
+		HX_STACK_LINE(1134)
 		Dynamic tmp37 = _Function_1_38::Block();		HX_STACK_VAR(tmp37,"tmp37");
 		struct _Function_1_39{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1092,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1138,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3748,11 +3902,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1092)
+		HX_STACK_LINE(1138)
 		Dynamic tmp38 = _Function_1_39::Block();		HX_STACK_VAR(tmp38,"tmp38");
 		struct _Function_1_40{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1096,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1142,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3762,11 +3916,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1096)
+		HX_STACK_LINE(1142)
 		Dynamic tmp39 = _Function_1_40::Block();		HX_STACK_VAR(tmp39,"tmp39");
 		struct _Function_1_41{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1100,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1146,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3776,11 +3930,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1100)
+		HX_STACK_LINE(1146)
 		Dynamic tmp40 = _Function_1_41::Block();		HX_STACK_VAR(tmp40,"tmp40");
 		struct _Function_1_42{
 			inline static Dynamic Block( Dynamic &tmp36,Dynamic &tmp38,Dynamic &tmp40,Dynamic &tmp37,Dynamic &tmp39){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1083,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1129,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp36,false);
@@ -3795,13 +3949,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1083)
+		HX_STACK_LINE(1129)
 		Dynamic tmp41 = _Function_1_42::Block(tmp36,tmp38,tmp40,tmp37,tmp39);		HX_STACK_VAR(tmp41,"tmp41");
-		HX_STACK_LINE(1082)
+		HX_STACK_LINE(1128)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp41);
 		struct _Function_1_43{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1110,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1156,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3811,11 +3965,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1110)
+		HX_STACK_LINE(1156)
 		Dynamic tmp42 = _Function_1_43::Block();		HX_STACK_VAR(tmp42,"tmp42");
 		struct _Function_1_44{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1114,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1160,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -3825,11 +3979,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1114)
+		HX_STACK_LINE(1160)
 		Dynamic tmp43 = _Function_1_44::Block();		HX_STACK_VAR(tmp43,"tmp43");
 		struct _Function_1_45{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1118,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1164,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3839,11 +3993,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1118)
+		HX_STACK_LINE(1164)
 		Dynamic tmp44 = _Function_1_45::Block();		HX_STACK_VAR(tmp44,"tmp44");
 		struct _Function_1_46{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1122,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1168,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3853,11 +4007,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1122)
+		HX_STACK_LINE(1168)
 		Dynamic tmp45 = _Function_1_46::Block();		HX_STACK_VAR(tmp45,"tmp45");
 		struct _Function_1_47{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1126,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1172,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3867,11 +4021,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1126)
+		HX_STACK_LINE(1172)
 		Dynamic tmp46 = _Function_1_47::Block();		HX_STACK_VAR(tmp46,"tmp46");
 		struct _Function_1_48{
 			inline static Dynamic Block( Dynamic &tmp46,Dynamic &tmp42,Dynamic &tmp44,Dynamic &tmp45,Dynamic &tmp43){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1109,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1155,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp42,false);
@@ -3886,13 +4040,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1109)
+		HX_STACK_LINE(1155)
 		Dynamic tmp47 = _Function_1_48::Block(tmp46,tmp42,tmp44,tmp45,tmp43);		HX_STACK_VAR(tmp47,"tmp47");
-		HX_STACK_LINE(1108)
+		HX_STACK_LINE(1154)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp47);
 		struct _Function_1_49{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1136,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1182,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3902,11 +4056,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1136)
+		HX_STACK_LINE(1182)
 		Dynamic tmp48 = _Function_1_49::Block();		HX_STACK_VAR(tmp48,"tmp48");
 		struct _Function_1_50{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1140,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1186,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -3916,11 +4070,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1140)
+		HX_STACK_LINE(1186)
 		Dynamic tmp49 = _Function_1_50::Block();		HX_STACK_VAR(tmp49,"tmp49");
 		struct _Function_1_51{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1144,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1190,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -3930,11 +4084,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1144)
+		HX_STACK_LINE(1190)
 		Dynamic tmp50 = _Function_1_51::Block();		HX_STACK_VAR(tmp50,"tmp50");
 		struct _Function_1_52{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1148,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1194,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -3944,11 +4098,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1148)
+		HX_STACK_LINE(1194)
 		Dynamic tmp51 = _Function_1_52::Block();		HX_STACK_VAR(tmp51,"tmp51");
 		struct _Function_1_53{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1152,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1198,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -3958,11 +4112,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1152)
+		HX_STACK_LINE(1198)
 		Dynamic tmp52 = _Function_1_53::Block();		HX_STACK_VAR(tmp52,"tmp52");
 		struct _Function_1_54{
 			inline static Dynamic Block( Dynamic &tmp48,Dynamic &tmp52,Dynamic &tmp49,Dynamic &tmp50,Dynamic &tmp51){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1135,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1181,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp48,false);
@@ -3977,13 +4131,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1135)
+		HX_STACK_LINE(1181)
 		Dynamic tmp53 = _Function_1_54::Block(tmp48,tmp52,tmp49,tmp50,tmp51);		HX_STACK_VAR(tmp53,"tmp53");
-		HX_STACK_LINE(1134)
+		HX_STACK_LINE(1180)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp53);
 		struct _Function_1_55{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1162,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1208,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -3993,11 +4147,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1162)
+		HX_STACK_LINE(1208)
 		Dynamic tmp54 = _Function_1_55::Block();		HX_STACK_VAR(tmp54,"tmp54");
 		struct _Function_1_56{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1166,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1212,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -4007,11 +4161,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1166)
+		HX_STACK_LINE(1212)
 		Dynamic tmp55 = _Function_1_56::Block();		HX_STACK_VAR(tmp55,"tmp55");
 		struct _Function_1_57{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1170,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1216,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -4021,11 +4175,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1170)
+		HX_STACK_LINE(1216)
 		Dynamic tmp56 = _Function_1_57::Block();		HX_STACK_VAR(tmp56,"tmp56");
 		struct _Function_1_58{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1174,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1220,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -4035,11 +4189,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1174)
+		HX_STACK_LINE(1220)
 		Dynamic tmp57 = _Function_1_58::Block();		HX_STACK_VAR(tmp57,"tmp57");
 		struct _Function_1_59{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1178,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1224,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -4049,11 +4203,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1178)
+		HX_STACK_LINE(1224)
 		Dynamic tmp58 = _Function_1_59::Block();		HX_STACK_VAR(tmp58,"tmp58");
 		struct _Function_1_60{
 			inline static Dynamic Block( Dynamic &tmp54,Dynamic &tmp55,Dynamic &tmp56,Dynamic &tmp58,Dynamic &tmp57){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1161,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1207,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp54,false);
@@ -4068,13 +4222,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1161)
+		HX_STACK_LINE(1207)
 		Dynamic tmp59 = _Function_1_60::Block(tmp54,tmp55,tmp56,tmp58,tmp57);		HX_STACK_VAR(tmp59,"tmp59");
-		HX_STACK_LINE(1160)
+		HX_STACK_LINE(1206)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp59);
 		struct _Function_1_61{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1188,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1234,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -4084,11 +4238,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1188)
+		HX_STACK_LINE(1234)
 		Dynamic tmp60 = _Function_1_61::Block();		HX_STACK_VAR(tmp60,"tmp60");
 		struct _Function_1_62{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1192,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1238,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -4098,11 +4252,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1192)
+		HX_STACK_LINE(1238)
 		Dynamic tmp61 = _Function_1_62::Block();		HX_STACK_VAR(tmp61,"tmp61");
 		struct _Function_1_63{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1196,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1242,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -4112,11 +4266,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1196)
+		HX_STACK_LINE(1242)
 		Dynamic tmp62 = _Function_1_63::Block();		HX_STACK_VAR(tmp62,"tmp62");
 		struct _Function_1_64{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1200,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1246,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -4126,11 +4280,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1200)
+		HX_STACK_LINE(1246)
 		Dynamic tmp63 = _Function_1_64::Block();		HX_STACK_VAR(tmp63,"tmp63");
 		struct _Function_1_65{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1204,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1250,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -4140,11 +4294,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1204)
+		HX_STACK_LINE(1250)
 		Dynamic tmp64 = _Function_1_65::Block();		HX_STACK_VAR(tmp64,"tmp64");
 		struct _Function_1_66{
 			inline static Dynamic Block( Dynamic &tmp60,Dynamic &tmp62,Dynamic &tmp63,Dynamic &tmp61,Dynamic &tmp64){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1187,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1233,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp60,false);
@@ -4153,19 +4307,19 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 					__result->Add(HX_HCSTRING("tagEntry4Struct","\xf1","\xec","\x8e","\x40") , tmp63,false);
 					__result->Add(HX_HCSTRING("tagEntry5Struct","\xb2","\x63","\x24","\x6a") , tmp64,false);
 					__result->Add(HX_HCSTRING("tagFeelEnum","\x01","\x02","\x26","\xeb") , ::EnumTagFeelType_obj::NEGATIVE,false);
-					__result->Add(HX_HCSTRING("tagTypeEnum","\x55","\x6f","\xb4","\xa9") , ::EnumTagType_obj::VERB_INTRANSITIVE,false);
+					__result->Add(HX_HCSTRING("tagTypeEnum","\x55","\x6f","\xb4","\xa9") , ::EnumTagType_obj::VERB_TRANSITIVE,false);
 					return __result;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(1187)
+		HX_STACK_LINE(1233)
 		Dynamic tmp65 = _Function_1_66::Block(tmp60,tmp62,tmp63,tmp61,tmp64);		HX_STACK_VAR(tmp65,"tmp65");
-		HX_STACK_LINE(1186)
+		HX_STACK_LINE(1232)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp65);
 		struct _Function_1_67{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1214,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1260,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -4175,11 +4329,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1214)
+		HX_STACK_LINE(1260)
 		Dynamic tmp66 = _Function_1_67::Block();		HX_STACK_VAR(tmp66,"tmp66");
 		struct _Function_1_68{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1218,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1264,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -4189,11 +4343,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1218)
+		HX_STACK_LINE(1264)
 		Dynamic tmp67 = _Function_1_68::Block();		HX_STACK_VAR(tmp67,"tmp67");
 		struct _Function_1_69{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1222,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1268,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -4203,11 +4357,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1222)
+		HX_STACK_LINE(1268)
 		Dynamic tmp68 = _Function_1_69::Block();		HX_STACK_VAR(tmp68,"tmp68");
 		struct _Function_1_70{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1226,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1272,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -4217,11 +4371,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1226)
+		HX_STACK_LINE(1272)
 		Dynamic tmp69 = _Function_1_70::Block();		HX_STACK_VAR(tmp69,"tmp69");
 		struct _Function_1_71{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1230,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1276,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -4231,11 +4385,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1230)
+		HX_STACK_LINE(1276)
 		Dynamic tmp70 = _Function_1_71::Block();		HX_STACK_VAR(tmp70,"tmp70");
 		struct _Function_1_72{
 			inline static Dynamic Block( Dynamic &tmp68,Dynamic &tmp66,Dynamic &tmp70,Dynamic &tmp67,Dynamic &tmp69){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1213,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1259,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp66,false);
@@ -4250,13 +4404,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1213)
+		HX_STACK_LINE(1259)
 		Dynamic tmp71 = _Function_1_72::Block(tmp68,tmp66,tmp70,tmp67,tmp69);		HX_STACK_VAR(tmp71,"tmp71");
-		HX_STACK_LINE(1212)
+		HX_STACK_LINE(1258)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp71);
 		struct _Function_1_73{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1240,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1286,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -4266,11 +4420,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1240)
+		HX_STACK_LINE(1286)
 		Dynamic tmp72 = _Function_1_73::Block();		HX_STACK_VAR(tmp72,"tmp72");
 		struct _Function_1_74{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1244,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1290,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -4280,11 +4434,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1244)
+		HX_STACK_LINE(1290)
 		Dynamic tmp73 = _Function_1_74::Block();		HX_STACK_VAR(tmp73,"tmp73");
 		struct _Function_1_75{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1248,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1294,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -4294,11 +4448,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1248)
+		HX_STACK_LINE(1294)
 		Dynamic tmp74 = _Function_1_75::Block();		HX_STACK_VAR(tmp74,"tmp74");
 		struct _Function_1_76{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1252,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1298,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -4308,11 +4462,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1252)
+		HX_STACK_LINE(1298)
 		Dynamic tmp75 = _Function_1_76::Block();		HX_STACK_VAR(tmp75,"tmp75");
 		struct _Function_1_77{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1256,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1302,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -4322,11 +4476,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1256)
+		HX_STACK_LINE(1302)
 		Dynamic tmp76 = _Function_1_77::Block();		HX_STACK_VAR(tmp76,"tmp76");
 		struct _Function_1_78{
 			inline static Dynamic Block( Dynamic &tmp73,Dynamic &tmp75,Dynamic &tmp72,Dynamic &tmp76,Dynamic &tmp74){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1239,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1285,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp72,false);
@@ -4341,13 +4495,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1239)
+		HX_STACK_LINE(1285)
 		Dynamic tmp77 = _Function_1_78::Block(tmp73,tmp75,tmp72,tmp76,tmp74);		HX_STACK_VAR(tmp77,"tmp77");
-		HX_STACK_LINE(1238)
+		HX_STACK_LINE(1284)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp77);
 		struct _Function_1_79{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1266,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1312,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -4357,11 +4511,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1266)
+		HX_STACK_LINE(1312)
 		Dynamic tmp78 = _Function_1_79::Block();		HX_STACK_VAR(tmp78,"tmp78");
 		struct _Function_1_80{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1270,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1316,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -4371,11 +4525,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1270)
+		HX_STACK_LINE(1316)
 		Dynamic tmp79 = _Function_1_80::Block();		HX_STACK_VAR(tmp79,"tmp79");
 		struct _Function_1_81{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1274,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1320,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -4385,11 +4539,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1274)
+		HX_STACK_LINE(1320)
 		Dynamic tmp80 = _Function_1_81::Block();		HX_STACK_VAR(tmp80,"tmp80");
 		struct _Function_1_82{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1278,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1324,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -4399,11 +4553,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1278)
+		HX_STACK_LINE(1324)
 		Dynamic tmp81 = _Function_1_82::Block();		HX_STACK_VAR(tmp81,"tmp81");
 		struct _Function_1_83{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1282,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1328,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -4413,11 +4567,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1282)
+		HX_STACK_LINE(1328)
 		Dynamic tmp82 = _Function_1_83::Block();		HX_STACK_VAR(tmp82,"tmp82");
 		struct _Function_1_84{
 			inline static Dynamic Block( Dynamic &tmp81,Dynamic &tmp80,Dynamic &tmp79,Dynamic &tmp82,Dynamic &tmp78){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1265,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1311,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp78,false);
@@ -4432,13 +4586,13 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1265)
+		HX_STACK_LINE(1311)
 		Dynamic tmp83 = _Function_1_84::Block(tmp81,tmp80,tmp79,tmp82,tmp78);		HX_STACK_VAR(tmp83,"tmp83");
-		HX_STACK_LINE(1264)
+		HX_STACK_LINE(1310)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp83);
 		struct _Function_1_85{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1292,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1338,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_1,false);
@@ -4448,11 +4602,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1292)
+		HX_STACK_LINE(1338)
 		Dynamic tmp84 = _Function_1_85::Block();		HX_STACK_VAR(tmp84,"tmp84");
 		struct _Function_1_86{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1296,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1342,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_2,false);
@@ -4462,11 +4616,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1296)
+		HX_STACK_LINE(1342)
 		Dynamic tmp85 = _Function_1_86::Block();		HX_STACK_VAR(tmp85,"tmp85");
 		struct _Function_1_87{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1300,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1346,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_3,false);
@@ -4476,11 +4630,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1300)
+		HX_STACK_LINE(1346)
 		Dynamic tmp86 = _Function_1_87::Block();		HX_STACK_VAR(tmp86,"tmp86");
 		struct _Function_1_88{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1304,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1350,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_ING,false);
@@ -4490,11 +4644,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1304)
+		HX_STACK_LINE(1350)
 		Dynamic tmp87 = _Function_1_88::Block();		HX_STACK_VAR(tmp87,"tmp87");
 		struct _Function_1_89{
 			inline static Dynamic Block( ){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1308,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1354,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagTypeSubEnum","\xcd","\x68","\x9c","\xfd") , ::EnumTagTypeSub_obj::VERB_S,false);
@@ -4504,11 +4658,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1308)
+		HX_STACK_LINE(1354)
 		Dynamic tmp88 = _Function_1_89::Block();		HX_STACK_VAR(tmp88,"tmp88");
 		struct _Function_1_90{
 			inline static Dynamic Block( Dynamic &tmp86,Dynamic &tmp88,Dynamic &tmp84,Dynamic &tmp85,Dynamic &tmp87){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1291,0xe1b162de)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","CollectionPremadeTag.hx",1337,0xe1b162de)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3") , tmp84,false);
@@ -4523,9 +4677,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructVerbVoidTransitiveVoid( ::Collect
 				return null();
 			}
 		};
-		HX_STACK_LINE(1291)
+		HX_STACK_LINE(1337)
 		Dynamic tmp89 = _Function_1_90::Block(tmp86,tmp88,tmp84,tmp85,tmp87);		HX_STACK_VAR(tmp89,"tmp89");
-		HX_STACK_LINE(1290)
+		HX_STACK_LINE(1336)
 		_collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp89);
 	}
 return null();
@@ -4558,6 +4712,10 @@ bool CollectionPremadeTag_obj::__GetStatic(const ::String &inName, Dynamic &outV
 		break;
 	case 40:
 		if (HX_FIELD_EQ(inName,"PremadeTagStructVerbVoidIntransitiveVoid") ) { outValue = PremadeTagStructVerbVoidIntransitiveVoid_dyn(); return true;  }
+		break;
+	case 44:
+		if (HX_FIELD_EQ(inName,"PremadeTagStructNounInanimateSeeAbstractVoid") ) { outValue = PremadeTagStructNounInanimateSeeAbstractVoid_dyn(); return true;  }
+		if (HX_FIELD_EQ(inName,"PremadeTagStructNounInanimateSeeConcreteVoid") ) { outValue = PremadeTagStructNounInanimateSeeConcreteVoid_dyn(); return true;  }
 		break;
 	case 45:
 		if (HX_FIELD_EQ(inName,"PremadeTagStructNounInanimateHoldAbstractVoid") ) { outValue = PremadeTagStructNounInanimateHoldAbstractVoid_dyn(); return true;  }
@@ -4607,6 +4765,8 @@ static ::String sStaticFields[] = {
 	HX_HCSTRING("PremadeTagStructNounInanimatePlaceAbstractVoid","\x72","\x71","\x20","\x06"),
 	HX_HCSTRING("PremadeTagStructNounInanimatePlaceConcreteNoOwnerVoid","\xc5","\x29","\x9a","\xa5"),
 	HX_HCSTRING("PremadeTagStructNounInanimatePlaceConcreteOwnerVoid","\x86","\x64","\xc3","\x64"),
+	HX_HCSTRING("PremadeTagStructNounInanimateSeeAbstractVoid","\xfe","\x12","\xc0","\xf9"),
+	HX_HCSTRING("PremadeTagStructNounInanimateSeeConcreteVoid","\xe1","\x59","\x72","\x14"),
 	HX_HCSTRING("PremadeTagStructNounInanimateTitleAbstractVoid","\xc3","\x07","\x24","\xa3"),
 	HX_HCSTRING("PremadeTagStructNounInanimateWearAbstractVoid","\x60","\x29","\xfb","\xb9"),
 	HX_HCSTRING("PremadeTagStructNounInanimateWearConcreteVoid","\x43","\x70","\xad","\xd4"),
