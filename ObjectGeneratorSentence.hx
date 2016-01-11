@@ -4,8 +4,8 @@ class ObjectGeneratorSentence{
     public function new(){}
     private function AddWordString(
         _collectionGlobalObject:CollectionGlobal,
-        _tagGetFunction:haxe.Constraints.Function,
         _tagTypeEnum:EnumTagType,
+        _tagTypeSubEnum:EnumTagTypeSub,
         _visitorObject:ObjectVisitor
     ){
         var getNegativeBool:Bool = false;
@@ -40,40 +40,39 @@ class ObjectGeneratorSentence{
             //if(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetTypeEnum() != VERB_TRANSITIVE)trace(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetTypeEnum());
             
             if(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetTypeEnum() == _tagTypeEnum){
-                trace("TEST1.");
+                //trace("TEST1.");
                 if(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == NEGATIVE && getNegativeBool == true){
-                    tagStringArray.push(Reflect.callMethod(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], _tagGetFunction, new Array<Dynamic>()));
+                    tagStringArray.push(Reflect.callMethod(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, _visitorObject.GetTagObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
                 }
                 if(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == NEUTRAL && getNeutralBool == true){
-                    tagStringArray.push(Reflect.callMethod(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], _tagGetFunction, new Array<Dynamic>()));
+                    tagStringArray.push(Reflect.callMethod(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, _visitorObject.GetTagObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
                 }
                 if(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == POSITIVE && getPositiveBool == true){
-                    tagStringArray.push(Reflect.callMethod(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], _tagGetFunction, new Array<Dynamic>()));
+                    tagStringArray.push(Reflect.callMethod(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, _visitorObject.GetTagObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
                 }
             }
             loopCounterPrivate1Int ++;
         }
         /*If the while loop returns zero element being added to the string array then get the tag from general tag library.*/
         if(tagStringArray.length == 0){
+            //trace(_collectionGlobalObject.GetTagGeneralObjectArray().length);
             loopCounterPrivate1Int = 0;
             while(loopCounterPrivate1Int < _collectionGlobalObject.GetTagGeneralObjectArray().length){
-                //trace("TEST2.");
                 //trace(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetFeelEnum());
-                trace(loopCounterPrivate1Int);
-                trace(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetNameString());
-                if(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetTypeEnum() != VERB_TRANSITIVE)trace(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetTypeEnum() + " " +  _tagTypeEnum);
+                //trace(loopCounterPrivate1Int);
+                //trace(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetNameString());
+                //if(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetTypeEnum() != VERB_TRANSITIVE) trace(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetTypeEnum() + " " +  _tagTypeEnum);
                 if(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetTypeEnum() == _tagTypeEnum){
-                    trace("TEST3.");
                     if(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == NEGATIVE && getNegativeBool == true){
-                        tagStringArray.push(Reflect.callMethod(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int], _tagGetFunction, new Array<Dynamic>()));
+                        tagStringArray.push(Reflect.callMethod(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
                     }
                     if(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == NEUTRAL && getNeutralBool == true){
-                        trace("TEST4.");
-                        tagStringArray.push(Reflect.callMethod(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int], _tagGetFunction, new Array<Dynamic>()));
+                        //trace("TEST4.");
+                        tagStringArray.push(Reflect.callMethod(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
                     }
                     if(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == POSITIVE && getPositiveBool == true){
-                        trace("TEST5.");
-                        tagStringArray.push(Reflect.callMethod(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int], _tagGetFunction, new Array<Dynamic>()));
+                        //trace("TEST5.");
+                        tagStringArray.push(Reflect.callMethod(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
                     }
                 }
                 loopCounterPrivate1Int ++;
@@ -82,7 +81,24 @@ class ObjectGeneratorSentence{
         randomIndexInt = RandomNumberGeneratorInt(tagStringArray.length);
         var returnString:String = tagStringArray[randomIndexInt];
         //trace(tagStringArray.length);
+        if(tagStringArray.length == 0){
+            //trace(_tagTypeEnum + " " + _tagTypeSubEnum);
+        }
         return returnString;
+    }
+    private function DetermineProperCallbackFunction(_tagTypeSubEnum:EnumTagTypeSub, _tagObject:ObjectTag){
+        if(_tagTypeSubEnum == ADJ){ return _tagObject.GetAdjectiveString; }
+        else if(_tagTypeSubEnum == ADV){ return _tagObject.GetAdverbString; }
+        else if(_tagTypeSubEnum == NOUN){ return _tagObject.GetNounString; }
+        else if(_tagTypeSubEnum == NOUN_POS){ return _tagObject.GetNounPosString; }
+        else if(_tagTypeSubEnum == NOUN_S){ return _tagObject.GetNounSString; }
+        else if(_tagTypeSubEnum == NOUN_S_POS){ return _tagObject.GetNounSPosString; }
+        else if(_tagTypeSubEnum == VERB_1){ return _tagObject.GetVerb1String; }
+        else if(_tagTypeSubEnum == VERB_2){ return _tagObject.GetVerb2String; }
+        else if(_tagTypeSubEnum == VERB_3){ return _tagObject.GetVerb3String; }
+        else if(_tagTypeSubEnum == VERB_ING){ return _tagObject.GetVerbIngString; }
+        else if(_tagTypeSubEnum == VERB_S){ return _tagObject.GetVerbSString; }
+        return null;
     }
     private function GenerateSentenceString(_collectionGlobalObject:CollectionGlobal, _patternString:String, _visitorObject:ObjectVisitor){
         var loopCounter1Int:Int = 0;
@@ -135,10 +151,10 @@ class ObjectGeneratorSentence{
             */
 
             if(codeString == "11"){
-                wordString = AddWordString(_collectionGlobalObject, ObjectTag.GetAdjectiveString, ADJ, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, ADJ, ADJ, _visitorObject);
             }
             else if(codeString == "22"){
-                wordString = AddWordString(_collectionGlobalObject, ObjectTag.GetAdverbString, ADV, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, ADV, ADV, _visitorObject);
             }
             else if(codeString == "43"){
                 var _43TagStringArray:Array<String> = new Array<String>();
@@ -146,7 +162,7 @@ class ObjectGeneratorSentence{
                 var randomIndexInt:Int = 0;
                 while(loopCounter2Int < _visitorObject.GetTagObjectArray().length){
                     if(_visitorObject.GetTagObjectArray()[loopCounter2Int].GetTypeEnum() == NOUN_ALIVE_CONCRETE){
-                        _43TagStringArray.push(_visitorObject.GetTagObjectArray()[loopCounter2Int].GetNameString());
+                        _43TagStringArray.push(_visitorObject.GetTagObjectArray()[loopCounter2Int].GetNounString());
                     }
                     loopCounter2Int ++;
                 }
@@ -154,7 +170,7 @@ class ObjectGeneratorSentence{
                     loopCounter2Int = 0;
                     while(loopCounter2Int < _collectionGlobalObject.GetTagGeneralObjectArray().length){
                         if(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter2Int].GetTypeEnum() == NOUN_ALIVE_CONCRETE){
-                            _43TagStringArray.push(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter2Int].GetNameString());
+                            _43TagStringArray.push(_collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter2Int].GetNounString());
                         }
                         loopCounter2Int ++;
                     }
@@ -171,22 +187,22 @@ class ObjectGeneratorSentence{
                 }
             }
             else if(codeString == "65"){
-                wordString = AddWordString(_collectionGlobalObject, ObjectTag.GetNounSString, NOUN_INANIMATE_HOLD_CONCRETE, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, NOUN_INANIMATE_HOLD_CONCRETE, NOUN_S, _visitorObject);
             }
             else if(codeString == "93"){
-                wordString = AddWordString(_collectionGlobalObject, ObjectTag.GetNounString, NOUN_INANIMATE_PLACE_CONCRETE_OWNER, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, NOUN_INANIMATE_PLACE_CONCRETE_OWNER, NOUN, _visitorObject);
             }
             else if(codeString == "A3"){
-                wordString = AddWordString(_collectionGlobalObject, ObjectTag.GetNounString, NOUN_INANIMATE_SEE_CONCRETE, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, NOUN_INANIMATE_SEE_CONCRETE, NOUN, _visitorObject);
             }
             else if(codeString == "E7"){
-                wordString = AddWordString(_collectionGlobalObject, ObjectTag.GetVerb1String, VERB_INTRANSITIVE, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, VERB_INTRANSITIVE, VERB_1, _visitorObject);
             }
             else if(codeString == "E8"){
-                wordString = AddWordString(_collectionGlobalObject, ObjectTag.GetVerb2String, VERB_INTRANSITIVE, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, VERB_INTRANSITIVE, VERB_2, _visitorObject);
             }
             else if(codeString == "EA"){
-                wordString = AddWordString(_collectionGlobalObject, ObjectTag.GetVerbSString, VERB_INTRANSITIVE, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, VERB_INTRANSITIVE, VERB_S, _visitorObject);
             }
             else{
                 wordString = scan1String;
@@ -244,8 +260,8 @@ class ObjectGeneratorSentence{
         var threeSentenceString:String = "";
         var loopCounter1Int:Int = 0;
         while(loopCounter1Int < 3){
-            if(loopCounter1Int == 0){ threeSentenceString = GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int], _visitorObject); }
-            else{ threeSentenceString = threeSentenceString + "\n" + GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int], _visitorObject); }
+            if(loopCounter1Int == 0){ threeSentenceString = WordFixString(GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int], _visitorObject)); }
+            else{ threeSentenceString = threeSentenceString + "\n" + WordFixString(GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int], _visitorObject)); }
             loopCounter1Int ++;
         }
         return threeSentenceString;

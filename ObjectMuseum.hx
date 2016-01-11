@@ -116,7 +116,7 @@ class ObjectMuseum{
     public function DetermineChildVoid(){
         CollectionFunction.ClearArray(childStruct.childMuseumObjectArray);
         CollectionFunction.ClearArray(childStruct.childVisitorObjectArray);
-             if(typeEnum == EXH){
+            if(typeEnum == EXH){
             var loopCounter1Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
                 if(nameStruct.nameAltString == collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetExhibitionCurrentObject().GetNameStruct().nameAltString){
@@ -126,7 +126,7 @@ class ObjectMuseum{
             }
         }
         else if(typeEnum == FLR){
-            var   loopCounter1Int = 0;
+            var loopCounter1Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
                 if(nameStruct.nameAltString == collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetParentObject().GetNameStruct().nameAltString){
                     childStruct.childMuseumObjectArray.push(  collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int]);
@@ -135,7 +135,7 @@ class ObjectMuseum{
             }
         }
         else if(typeEnum == ROM){
-            var   loopCounter1Int = 0;
+            var loopCounter1Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
                 if(nameStruct.nameAltString == collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetParentObject().GetNameStruct().nameAltString){
                     childStruct.childMuseumObjectArray.push(  collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int]);

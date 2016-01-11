@@ -7,7 +7,6 @@
 
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(CollectionPremadeTag)
-HX_DECLARE_CLASS0(ObjectTag)
 
 
 class HXCPP_CLASS_ATTRIBUTES  CollectionPremadeTag_obj : public hx::Object{
@@ -27,12 +26,9 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionPremadeTag_obj : public hx::Object{
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("CollectionPremadeTag","\xe0","\x8b","\x6a","\xd1"); }
 
-		static void __boot();
-		static ::ObjectTag tagObject;
 		static Void PremadeTagStructVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeTagStructVoid_dyn();
 

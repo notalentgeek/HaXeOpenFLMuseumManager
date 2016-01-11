@@ -30,3 +30,16 @@ enum EnumTagType{
     VERB_INTRANSITIVE;
     VERB_TRANSITIVE;
 }
+enum EnumTagTypeSub{
+    ADJ;
+    ADV;
+    NOUN;
+    NOUN_POS;
+    NOUN_S;
+    NOUN_S_POS;
+    VERB_1;
+    VERB_2;
+    VERB_3;
+    VERB_ING;
+    VERB_S;
+}

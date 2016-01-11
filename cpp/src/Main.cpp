@@ -25,6 +25,9 @@
 #ifndef INCLUDED_ObjectVisitor
 #include <ObjectVisitor.h>
 #endif
+#ifndef INCLUDED_haxe_Log
+#include <haxe/Log.h>
+#endif
 
 Void Main_obj::__construct()
 {
@@ -237,6 +240,12 @@ Void Main_obj::main( ){
 					::ObjectVisitor tmp40 = collectionGlobalObject->GetVisitorObjectArray()->__get((int)0).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp40,"tmp40");
 					HX_STACK_LINE(38)
 					tmp40->SetJustChangeExhibitionBoolVoid(false);
+					HX_STACK_LINE(39)
+					::String tmp41 = debugString;		HX_STACK_VAR(tmp41,"tmp41");
+					HX_STACK_LINE(39)
+					Dynamic tmp42 = hx::SourceInfo(HX_HCSTRING("Main.hx","\x05","\x5c","\x7e","\x08"),39,HX_HCSTRING("Main","\x59","\x64","\x2f","\x33"),HX_HCSTRING("main","\x39","\x38","\x56","\x48"));		HX_STACK_VAR(tmp42,"tmp42");
+					HX_STACK_LINE(39)
+					::haxe::Log_obj::trace(tmp41,tmp42);
 				}
 			}
 		}

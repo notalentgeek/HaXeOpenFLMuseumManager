@@ -36,7 +36,7 @@ class Main{
                     collectionGlobalObject.GetVisitorObjectArray()[0].GetJustChangeExhibitionBool() == true
                 ){
                     collectionGlobalObject.GetVisitorObjectArray()[0].SetJustChangeExhibitionBoolVoid(false);
-                    //trace(debugString);
+                    trace(debugString);
                 }
             }
         }

@@ -1,21 +1,21 @@
 import CollectionEnum;
 class ObjectTag{
-    private static var collectionGlobalObject:CollectionGlobal = null;
-    private static var adjectiveString:String = "";
-    private static var adverbString:String = "";
-    private static var feelEnum:EnumTagFeelType = null;
-    private static var generalTagBool:Bool = true;
-    private static var nameString:String = "";
-    private static var nounPosString:String = "";
-    private static var nounSPosString:String = "";
-    private static var nounSString:String = "";
-    private static var nounString:String = "";
-    private static var typeEnum:EnumTagType = null;
-    private static var verb1String:String = "";
-    private static var verb2String:String = "";
-    private static var verb3String:String = "";
-    private static var verbIngString:String = "";
-    private static var verbSString:String = "";
+    private var collectionGlobalObject:CollectionGlobal = null;
+    private var adjectiveString:String = "";
+    private var adverbString:String = "";
+    private var feelEnum:EnumTagFeelType = null;
+    private var generalTagBool:Bool = true;
+    private var nameString:String = "";
+    private var nounPosString:String = "";
+    private var nounSPosString:String = "";
+    private var nounSString:String = "";
+    private var nounString:String = "";
+    private var typeEnum:EnumTagType = null;
+    private var verb1String:String = "";
+    private var verb2String:String = "";
+    private var verb3String:String = "";
+    private var verbIngString:String = "";
+    private var verbSString:String = "";
     public function new(
         _collectionGlobalObject:CollectionGlobal,
         _feelEnum:EnumTagFeelType,
@@ -40,23 +40,23 @@ class ObjectTag{
             collectionGlobalObject.GetTagObjectArray().push(this);
         }
     }
-    public static function GetAdjectiveString(){ return adjectiveString; }
-    public static function GetAdverbString(){ return adverbString; }
+    public function GetAdjectiveString(){ return adjectiveString; }
+    public function GetAdverbString(){ return adverbString; }
     public function GetFeelEnum(){ return feelEnum; }
-    public static function GetGeneralTagBool(){ return generalTagBool; }
+    public function GetGeneralTagBool(){ return generalTagBool; }
     public function GetNameString(){ return nameString; }
-    public static function GetNounPosString(){ return nounPosString; }
-    public static function GetNounSPosString(){ return nounSPosString; }
-    public static function GetNounSString(){ return nounSString; }
-    public static function GetNounString(){ return nounString; }
+    public function GetNounPosString(){ return nounPosString; }
+    public function GetNounSPosString(){ return nounSPosString; }
+    public function GetNounSString(){ return nounSString; }
+    public function GetNounString(){ return nounString; }
     public function GetTypeEnum(){ return typeEnum; }
-    public static function GetVerb1String(){ return verb1String; }
-    public static function GetVerb2String(){ return verb2String; }
-    public static function GetVerb3String(){ return verb3String; }
-    public static function GetVerbIngString(){ return verbIngString; }
-    public static function GetVerbSString(){ return verbSString; }
-    public function SetAdjectiveStringVoid(_adjectiveString:String){ adjectiveString = _adjectiveString; }
-    public function SetAdverbStringVoid(_adverbString:String){ adverbString = _adverbString; }
+    public function GetVerb1String(){ return verb1String; }
+    public function GetVerb2String(){ return verb2String; }
+    public function GetVerb3String(){ return verb3String; }
+    public function GetVerbIngString(){ return verbIngString; }
+    public function GetVerbSString(){ return verbSString; }
+    public function SetAdjectiveStringObject(_adjectiveString:String){ adjectiveString = _adjectiveString; return this; }
+    public function SetAdverbStringObject(_adverbString:String){ adverbString = _adverbString; return this; }
     public function SetFeelEnumVoid(_feelEnum:EnumTagFeelType){ feelEnum = _feelEnum; }
     public function SetGeneralTagBoolVoid(_generalTagBool:Bool){
         generalTagBool = _generalTagBool;
