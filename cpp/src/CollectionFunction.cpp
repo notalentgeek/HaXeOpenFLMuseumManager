@@ -13,6 +13,9 @@
 #ifndef INCLUDED_ObjectMuseum
 #include <ObjectMuseum.h>
 #endif
+#ifndef INCLUDED_ObjectTag
+#include <ObjectTag.h>
+#endif
 
 Void CollectionFunction_obj::__construct()
 {
@@ -126,10 +129,10 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionFunction_obj,ClearArray,(void))
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC3(CollectionFunction_obj,FindMuseumObject,return )
 
-Dynamic CollectionFunction_obj::FindTagStruct( ::CollectionGlobal _collectionGlobalObject,::String _tagString){
-	HX_STACK_FRAME("CollectionFunction","FindTagStruct",0x8dae0dfe,"CollectionFunction.FindTagStruct","CollectionFunction.hx",31,0xbb6e90c8)
+::ObjectTag CollectionFunction_obj::FindTagObject( ::CollectionGlobal _collectionGlobalObject,::String _nameString){
+	HX_STACK_FRAME("CollectionFunction","FindTagObject",0x91b45268,"CollectionFunction.FindTagObject","CollectionFunction.hx",31,0xbb6e90c8)
 	HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
-	HX_STACK_ARG(_tagString,"_tagString")
+	HX_STACK_ARG(_nameString,"_nameString")
 	HX_STACK_LINE(32)
 	int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
 	HX_STACK_LINE(33)
@@ -137,7 +140,7 @@ Dynamic CollectionFunction_obj::FindTagStruct( ::CollectionGlobal _collectionGlo
 		HX_STACK_LINE(33)
 		int tmp = loopCounter1Int;		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(33)
-		int tmp1 = _collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp1,"tmp1");
+		int tmp1 = _collectionGlobalObject->GetTagObjectArray()->length;		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(33)
 		bool tmp2 = (tmp < tmp1);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(33)
@@ -148,17 +151,17 @@ Dynamic CollectionFunction_obj::FindTagStruct( ::CollectionGlobal _collectionGlo
 			break;
 		}
 		HX_STACK_LINE(34)
-		::String tmp4 = _tagString;		HX_STACK_VAR(tmp4,"tmp4");
+		::String tmp4 = _nameString;		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(34)
-		Dynamic tmp5 = _collectionGlobalObject->GetTagStructArray()->__GetItem(loopCounter1Int);		HX_STACK_VAR(tmp5,"tmp5");
+		::ObjectTag tmp5 = _collectionGlobalObject->GetTagObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(34)
-		::String tmp6 = tmp5->__Field(HX_HCSTRING("tagEntry1Struct","\xae","\x88","\xce","\xc3"), hx::paccDynamic )->__Field(HX_HCSTRING("tagString","\xcb","\x36","\x68","\x42"), hx::paccDynamic );		HX_STACK_VAR(tmp6,"tmp6");
+		::String tmp6 = tmp5->GetNameString();		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(34)
 		bool tmp7 = (tmp4 == tmp6);		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(34)
 		if ((tmp7)){
 			HX_STACK_LINE(35)
-			Dynamic tmp8 = _collectionGlobalObject->GetTagStructArray()->__GetItem(loopCounter1Int);		HX_STACK_VAR(tmp8,"tmp8");
+			::ObjectTag tmp8 = _collectionGlobalObject->GetTagObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(35)
 			return tmp8;
 			HX_STACK_LINE(36)
@@ -172,7 +175,7 @@ Dynamic CollectionFunction_obj::FindTagStruct( ::CollectionGlobal _collectionGlo
 }
 
 
-STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,FindTagStruct,return )
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,FindTagObject,return )
 
 bool CollectionFunction_obj::IsExistInArrayBool( cpp::ArrayBase _dynamicArray,Dynamic _dynamicElement){
 	HX_STACK_FRAME("CollectionFunction","IsExistInArrayBool",0xae352629,"CollectionFunction.IsExistInArrayBool","CollectionFunction.hx",42,0xbb6e90c8)
@@ -238,11 +241,11 @@ Dynamic CollectionFunction_obj::PickRandomFromArrayT( cpp::ArrayBase _tArray){
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionFunction_obj,PickRandomFromArrayT,return )
 
-cpp::ArrayBase CollectionFunction_obj::PickRandomTagObjectArray( ::CollectionGlobal _collectionGlobalObject){
+Array< ::Dynamic > CollectionFunction_obj::PickRandomTagObjectArray( ::CollectionGlobal _collectionGlobalObject){
 	HX_STACK_FRAME("CollectionFunction","PickRandomTagObjectArray",0x47ed4edc,"CollectionFunction.PickRandomTagObjectArray","CollectionFunction.hx",55,0xbb6e90c8)
 	HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 	HX_STACK_LINE(56)
-	cpp::ArrayBase tempTagObjectArray = Dynamic( Array_obj<Dynamic>::__new() );		HX_STACK_VAR(tempTagObjectArray,"tempTagObjectArray");
+	Array< ::Dynamic > tempTagObjectArray = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(tempTagObjectArray,"tempTagObjectArray");
 	HX_STACK_LINE(57)
 	Float chanceFloat = ((Float)1.0);		HX_STACK_VAR(chanceFloat,"chanceFloat");
 	HX_STACK_LINE(58)
@@ -263,7 +266,7 @@ cpp::ArrayBase CollectionFunction_obj::PickRandomTagObjectArray( ::CollectionGlo
 		HX_STACK_LINE(59)
 		Float tmp4 = ::Math_obj::random();		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(59)
-		int tmp5 = _collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp5,"tmp5");
+		int tmp5 = _collectionGlobalObject->GetTagObjectArray()->length;		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(59)
 		int tmp6 = (tmp5 - (int)1);		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(59)
@@ -275,9 +278,9 @@ cpp::ArrayBase CollectionFunction_obj::PickRandomTagObjectArray( ::CollectionGlo
 		HX_STACK_LINE(60)
 		while((true)){
 			HX_STACK_LINE(60)
-			Dynamic tmp9 = _collectionGlobalObject->GetTagStructArray()->__GetItem(randomIndexInt);		HX_STACK_VAR(tmp9,"tmp9");
+			::ObjectTag tmp9 = _collectionGlobalObject->GetTagObjectArray()->__get(randomIndexInt).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp9,"tmp9");
 			HX_STACK_LINE(60)
-			int tmp10 = tempTagObjectArray->__Field(HX_HCSTRING("indexOf","\xc9","\x48","\xbf","\xe0"), hx::paccDynamic )(tmp9,null());		HX_STACK_VAR(tmp10,"tmp10");
+			int tmp10 = tempTagObjectArray->indexOf(tmp9,null());		HX_STACK_VAR(tmp10,"tmp10");
 			HX_STACK_LINE(60)
 			bool tmp11 = (tmp10 > (int)-1);		HX_STACK_VAR(tmp11,"tmp11");
 			HX_STACK_LINE(60)
@@ -290,7 +293,7 @@ cpp::ArrayBase CollectionFunction_obj::PickRandomTagObjectArray( ::CollectionGlo
 			HX_STACK_LINE(61)
 			Float tmp13 = ::Math_obj::random();		HX_STACK_VAR(tmp13,"tmp13");
 			HX_STACK_LINE(61)
-			int tmp14 = _collectionGlobalObject->GetTagStructArray()->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp14,"tmp14");
+			int tmp14 = _collectionGlobalObject->GetTagObjectArray()->length;		HX_STACK_VAR(tmp14,"tmp14");
 			HX_STACK_LINE(61)
 			int tmp15 = (tmp14 - (int)1);		HX_STACK_VAR(tmp15,"tmp15");
 			HX_STACK_LINE(61)
@@ -301,13 +304,13 @@ cpp::ArrayBase CollectionFunction_obj::PickRandomTagObjectArray( ::CollectionGlo
 			randomIndexInt = tmp17;
 		}
 		HX_STACK_LINE(63)
-		Dynamic tmp9 = _collectionGlobalObject->GetTagStructArray()->__GetItem(randomIndexInt);		HX_STACK_VAR(tmp9,"tmp9");
+		::ObjectTag tmp9 = _collectionGlobalObject->GetTagObjectArray()->__get(randomIndexInt).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp9,"tmp9");
 		HX_STACK_LINE(63)
-		tempTagObjectArray->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp9);
+		tempTagObjectArray->push(tmp9);
 		HX_STACK_LINE(64)
 		hx::SubEq(chanceFloat,((Float)0.05));
 	}
-	HX_STACK_LINE(67)
+	HX_STACK_LINE(66)
 	return tempTagObjectArray;
 }
 
@@ -315,29 +318,29 @@ cpp::ArrayBase CollectionFunction_obj::PickRandomTagObjectArray( ::CollectionGlo
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionFunction_obj,PickRandomTagObjectArray,return )
 
 Float CollectionFunction_obj::GenerateGreatestCommonDivisorFloat( Float _number1Float,Float _number2Float){
-	HX_STACK_FRAME("CollectionFunction","GenerateGreatestCommonDivisorFloat",0x3f62c60f,"CollectionFunction.GenerateGreatestCommonDivisorFloat","CollectionFunction.hx",69,0xbb6e90c8)
+	HX_STACK_FRAME("CollectionFunction","GenerateGreatestCommonDivisorFloat",0x3f62c60f,"CollectionFunction.GenerateGreatestCommonDivisorFloat","CollectionFunction.hx",68,0xbb6e90c8)
 	HX_STACK_ARG(_number1Float,"_number1Float")
 	HX_STACK_ARG(_number2Float,"_number2Float")
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(69)
 	bool tmp = (_number2Float == (int)0);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(69)
 	if ((tmp)){
-		HX_STACK_LINE(70)
+		HX_STACK_LINE(69)
 		Float tmp1 = _number1Float;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(70)
+		HX_STACK_LINE(69)
 		return tmp1;
 	}
 	else{
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(70)
 		Float tmp1 = _number2Float;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(70)
 		Float tmp2 = hx::Mod(_number1Float,_number2Float);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(70)
 		Float tmp3 = ::CollectionFunction_obj::GenerateGreatestCommonDivisorFloat(tmp1,tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(70)
 		return tmp3;
 	}
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(69)
 	return ((Float)0.);
 }
 
@@ -345,20 +348,20 @@ Float CollectionFunction_obj::GenerateGreatestCommonDivisorFloat( Float _number1
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,GenerateGreatestCommonDivisorFloat,return )
 
 Float CollectionFunction_obj::GenerateLeastCommonMultipleFloat( Float _number1Float,Float _number2Float){
-	HX_STACK_FRAME("CollectionFunction","GenerateLeastCommonMultipleFloat",0xeb3d0685,"CollectionFunction.GenerateLeastCommonMultipleFloat","CollectionFunction.hx",73,0xbb6e90c8)
+	HX_STACK_FRAME("CollectionFunction","GenerateLeastCommonMultipleFloat",0xeb3d0685,"CollectionFunction.GenerateLeastCommonMultipleFloat","CollectionFunction.hx",72,0xbb6e90c8)
 	HX_STACK_ARG(_number1Float,"_number1Float")
 	HX_STACK_ARG(_number2Float,"_number2Float")
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(73)
 	Float tmp = (_number1Float * _number2Float);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(73)
 	Float tmp1 = _number1Float;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(73)
 	Float tmp2 = _number2Float;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(73)
 	Float tmp3 = ::CollectionFunction_obj::GenerateGreatestCommonDivisorFloat(tmp1,tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(73)
 	Float tmp4 = (Float(tmp) / Float(tmp3));		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(73)
 	return tmp4;
 }
 
@@ -377,7 +380,7 @@ bool CollectionFunction_obj::__GetStatic(const ::String &inName, Dynamic &outVal
 		if (HX_FIELD_EQ(inName,"ClearArray") ) { outValue = ClearArray_dyn(); return true;  }
 		break;
 	case 13:
-		if (HX_FIELD_EQ(inName,"FindTagStruct") ) { outValue = FindTagStruct_dyn(); return true;  }
+		if (HX_FIELD_EQ(inName,"FindTagObject") ) { outValue = FindTagObject_dyn(); return true;  }
 		break;
 	case 16:
 		if (HX_FIELD_EQ(inName,"FindMuseumObject") ) { outValue = FindMuseumObject_dyn(); return true;  }
@@ -421,7 +424,7 @@ hx::Class CollectionFunction_obj::__mClass;
 static ::String sStaticFields[] = {
 	HX_HCSTRING("ClearArray","\xec","\xb0","\x4a","\xf1"),
 	HX_HCSTRING("FindMuseumObject","\x2a","\x8d","\x7d","\xe1"),
-	HX_HCSTRING("FindTagStruct","\xb6","\x58","\x13","\x6b"),
+	HX_HCSTRING("FindTagObject","\x20","\x9d","\x19","\x6f"),
 	HX_HCSTRING("IsExistInArrayBool","\x71","\x00","\x0e","\x1d"),
 	HX_HCSTRING("PickRandomFromArrayT","\xa9","\x28","\x68","\x63"),
 	HX_HCSTRING("PickRandomTagObjectArray","\x24","\x0f","\xef","\x61"),

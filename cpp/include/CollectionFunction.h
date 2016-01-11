@@ -9,6 +9,7 @@ HX_DECLARE_CLASS0(CollectionFunction)
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(EnumMuseumType)
 HX_DECLARE_CLASS0(ObjectMuseum)
+HX_DECLARE_CLASS0(ObjectTag)
 
 
 class HXCPP_CLASS_ATTRIBUTES  CollectionFunction_obj : public hx::Object{
@@ -37,8 +38,8 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionFunction_obj : public hx::Object{
 		static ::ObjectMuseum FindMuseumObject( ::CollectionGlobal _collectionGlobalObject,::EnumMuseumType _enumMuseumType,::String _nameAlt);
 		static Dynamic FindMuseumObject_dyn();
 
-		static Dynamic FindTagStruct( ::CollectionGlobal _collectionGlobalObject,::String _tagString);
-		static Dynamic FindTagStruct_dyn();
+		static ::ObjectTag FindTagObject( ::CollectionGlobal _collectionGlobalObject,::String _nameString);
+		static Dynamic FindTagObject_dyn();
 
 		static bool IsExistInArrayBool( cpp::ArrayBase _dynamicArray,Dynamic _dynamicElement);
 		static Dynamic IsExistInArrayBool_dyn();
@@ -46,7 +47,7 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionFunction_obj : public hx::Object{
 		static Dynamic PickRandomFromArrayT( cpp::ArrayBase _tArray);
 		static Dynamic PickRandomFromArrayT_dyn();
 
-		static cpp::ArrayBase PickRandomTagObjectArray( ::CollectionGlobal _collectionGlobalObject);
+		static Array< ::Dynamic > PickRandomTagObjectArray( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PickRandomTagObjectArray_dyn();
 
 		static Float GenerateGreatestCommonDivisorFloat( Float _number1Float,Float _number2Float);

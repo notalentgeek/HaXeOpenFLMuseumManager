@@ -25,14 +25,14 @@ class CollectionFunction{
         }
         return null;
     }
-    public static function FindTagStruct(
+    public static function FindTagObject(
         _collectionGlobalObject:CollectionGlobal,
-        _tagString:String
+        _nameString:String
     ){
         var loopCounter1Int:Int = 0;
-        while(loopCounter1Int <  _collectionGlobalObject.GetTagStructArray().length){
-            if(_tagString == _collectionGlobalObject.GetTagStructArray()[loopCounter1Int].tagEntry1Struct.tagString){
-                return _collectionGlobalObject.GetTagStructArray()[loopCounter1Int];
+        while(loopCounter1Int <  _collectionGlobalObject.GetTagObjectArray().length){
+            if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString()){
+                return _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int];
                 break;
             }
             loopCounter1Int ++;
@@ -53,17 +53,16 @@ class CollectionFunction{
         return elementT;
     }
     public static function PickRandomTagObjectArray(_collectionGlobalObject:CollectionGlobal){
-        var tempTagObjectArray:Array<StructTag> = new Array<StructTag>();
+        var tempTagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
         var chanceFloat:Float = 1.0;
         while(chanceFloat > Math.random()){
-            var randomIndexInt:Int = Math.round(Math.random()*(_collectionGlobalObject.GetTagStructArray().length - 1));
-            while(tempTagObjectArray.indexOf(_collectionGlobalObject.GetTagStructArray()[randomIndexInt]) > -1){
-                randomIndexInt = Math.round(Math.random()*(_collectionGlobalObject.GetTagStructArray().length - 1));
+            var randomIndexInt:Int = Math.round(Math.random()*(_collectionGlobalObject.GetTagObjectArray().length - 1));
+            while(tempTagObjectArray.indexOf(_collectionGlobalObject.GetTagObjectArray()[randomIndexInt]) > -1){
+                randomIndexInt = Math.round(Math.random()*(_collectionGlobalObject.GetTagObjectArray().length - 1));
             }
-            tempTagObjectArray.push(_collectionGlobalObject.GetTagStructArray()[randomIndexInt]);
+            tempTagObjectArray.push(_collectionGlobalObject.GetTagObjectArray()[randomIndexInt]);
             chanceFloat -= 0.05;
         }
-        //trace(tempTagObjectArray);
         return tempTagObjectArray;
     }
     public static function GenerateGreatestCommonDivisorFloat(_number1Float:Float, _number2Float:Float){

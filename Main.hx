@@ -27,16 +27,6 @@ class Main{
                 loopCounter1Int ++;
 
                 var debugString:String = "";
-                for(_key in collectionGlobalObject.GetVisitorObjectArray()[0].GetTagStructMap().keys()){
-                    debugString = debugString + " " + _key.tagEntry1Struct.tagString;
-                }
-                if(
-                    collectionGlobalObject.GetVisitorObjectArray()[0].GetFinishedBool() == false &&
-                    collectionGlobalObject.GetVisitorObjectArray()[0].GetJustChangeExhibitionBool() == true
-                ){
-                    //collectionGlobalObject.GetVisitorObjectArray()[0].SetJustChangeExhibitionBoolVoid(false);
-                    //trace(debugString);
-                }
                 debugString = "";
                 for(_sentence in collectionGlobalObject.GetVisitorObjectArray()[0].GetSentenceStringArray()){
                     if(_sentence != ""){ debugString = debugString + "\n\n" + _sentence; }
@@ -46,7 +36,7 @@ class Main{
                     collectionGlobalObject.GetVisitorObjectArray()[0].GetJustChangeExhibitionBool() == true
                 ){
                     collectionGlobalObject.GetVisitorObjectArray()[0].SetJustChangeExhibitionBoolVoid(false);
-                    trace(debugString);
+                    //trace(debugString);
                 }
             }
         }

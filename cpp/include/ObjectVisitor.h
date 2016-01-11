@@ -8,9 +8,8 @@
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(ObjectGeneratorSentence)
 HX_DECLARE_CLASS0(ObjectMuseum)
+HX_DECLARE_CLASS0(ObjectTag)
 HX_DECLARE_CLASS0(ObjectVisitor)
-HX_DECLARE_CLASS1(haxe,IMap)
-HX_DECLARE_CLASS2(haxe,ds,ObjectMap)
 
 
 class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
@@ -53,7 +52,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		int scoreInt;
 		Array< ::String > sentenceStringArray;
 		cpp::ArrayBase tagCounterStructArray;
-		::haxe::ds::ObjectMap tagStructMap;
+		Array< ::Dynamic > tagObjectArray;
 		int targetInt;
 		Float timeAIAutoExhibitionChangeFloat;
 		int timeExhibitionInt;
@@ -106,8 +105,8 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual cpp::ArrayBase GetTagCounterStructArray( );
 		Dynamic GetTagCounterStructArray_dyn();
 
-		virtual ::haxe::ds::ObjectMap GetTagStructMap( );
-		Dynamic GetTagStructMap_dyn();
+		virtual Array< ::Dynamic > GetTagObjectArray( );
+		Dynamic GetTagObjectArray_dyn();
 
 		virtual bool GetVisitCorrectExhibitionBool( );
 		Dynamic GetVisitCorrectExhibitionBool_dyn();

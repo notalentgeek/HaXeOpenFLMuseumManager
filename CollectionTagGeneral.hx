@@ -1,5 +1,6 @@
 import CollectionEnum;
 class CollectionTagGeneral{
+    private static var tagObject:ObjectTag = null;
     public function new(){}
     public static function TagGeneralStructVoid(_collectionGlobalObject:CollectionGlobal){
         TagGeneralStructAdjVoid(_collectionGlobalObject);
@@ -20,1344 +21,193 @@ class CollectionTagGeneral{
         TagGeneralStructVerbVoidTransitiveVoid(_collectionGlobalObject);
     }
     public static function TagGeneralStructAdjVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:ADJ,
-                    tagString:"awful"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:ADJ,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:ADJ,
-                    tagString:"bad"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:ADJ,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:ADJ,
-                    tagString:"excellent"
-                },
-                tagFeelEnum:POSITIVE,
-                tagTypeEnum:ADJ,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:ADJ,
-                    tagString:"good"
-                },
-                tagFeelEnum:POSITIVE,
-                tagTypeEnum:ADJ,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:ADJ,
-                    tagString:"soft"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:ADJ,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Awful", ADJ); tagObject.SetAdjectiveStringVoid("awful");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Bad", ADJ); tagObject.SetAdjectiveStringVoid("bad");
+        tagObject = new ObjectTag(_collectionGlobalObject, POSITIVE, true, "Excellent", ADJ); tagObject.SetAdjectiveStringVoid("excellent");
+        tagObject = new ObjectTag(_collectionGlobalObject, POSITIVE, true, "Good", ADJ); tagObject.SetAdjectiveStringVoid("good");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Soft", ADJ); tagObject.SetAdjectiveStringVoid("soft");
     }
     public static function TagGeneralStructAdvVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:ADV,
-                    tagString:"desperately"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:ADV,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:ADV,
-                    tagString:"slowly"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:ADV,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:ADV,
-                    tagString:"perfectly"
-                },
-                tagFeelEnum:POSITIVE,
-                tagTypeEnum:ADV,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:ADV,
-                    tagString:"quickly"
-                },
-                tagFeelEnum:POSITIVE,
-                tagTypeEnum:ADV,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Desperate", ADV); tagObject.SetAdverbStringVoid("desperately");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Slow", ADV); tagObject.SetAdverbStringVoid("bad");
+        tagObject = new ObjectTag(_collectionGlobalObject, POSITIVE, true, "Perfect", ADV); tagObject.SetAdverbStringVoid("excellent");
+        tagObject = new ObjectTag(_collectionGlobalObject, POSITIVE, true, "Quick", ADV); tagObject.SetAdverbStringVoid("good");
     }
     public static function TagGeneralStructNounAliveAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"assasin"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"assasin's"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"assasins"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:NOUN_S_POS,
-                    tagString:"assasins'"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:NOUN_ALIVE_ABSTRACT,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"boy"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"boy's"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"boys"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:NOUN_S_POS,
-                    tagString:"boys'"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_ABSTRACT,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"dragon"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"dragon's"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"dragons"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:NOUN_S_POS,
-                    tagString:"dragons'"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_ABSTRACT,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"iraqi"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"iraqi's"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"iraqis"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:NOUN_S_POS,
-                    tagString:"iraqis'"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_ABSTRACT,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"italian"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"italian's"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"italian"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:NOUN_S_POS,
-                    tagString:"italian'"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_ABSTRACT,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"painter"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"painter's"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"painters"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:NOUN_S_POS,
-                    tagString:"painters'"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_ABSTRACT,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"romanian"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"romanian's"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"romanians"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:NOUN_S_POS,
-                    tagString:"romanians'"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_ABSTRACT,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"russian"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"russian's"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"russians"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:NOUN_S_POS,
-                    tagString:"russians'"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_ABSTRACT,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Assasin", NOUN_ALIVE_ABSTRACT);
+            tagObject.SetNounStringVoid("assasin"); tagObject.SetNounPosStringVoid("assasin's");
+            tagObject.SetNounSStringVoid("assasins"); tagObject.SetNounSPosStringVoid("assasins'");
+
+        tagObject = new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Boy", NOUN_ALIVE_ABSTRACT);
+            tagObject.SetNounStringVoid("boy"); tagObject.SetNounPosStringVoid("boy's");
+            tagObject.SetNounSStringVoid("boys"); tagObject.SetNounSPosStringVoid("boys'");
+
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Dragon", NOUN_ALIVE_ABSTRACT);
+            tagObject.SetNounStringVoid("dragon"); tagObject.SetNounPosStringVoid("dragon's");
+            tagObject.SetNounSStringVoid("dragons"); tagObject.SetNounSPosStringVoid("dragons'");
+
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Iraqi", NOUN_ALIVE_ABSTRACT);
+            tagObject.SetNounStringVoid("iraqi"); tagObject.SetNounPosStringVoid("iraqi's");
+            tagObject.SetNounSStringVoid("iraqis"); tagObject.SetNounSPosStringVoid("iraqis'");
+
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Italian", NOUN_ALIVE_ABSTRACT);
+            tagObject.SetNounStringVoid("italian"); tagObject.SetNounPosStringVoid("italian's");
+            tagObject.SetNounSStringVoid("italians"); tagObject.SetNounSPosStringVoid("italians'");
+
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Painter", NOUN_ALIVE_ABSTRACT);
+            tagObject.SetNounStringVoid("painter"); tagObject.SetNounPosStringVoid("painter's");
+            tagObject.SetNounSStringVoid("painters"); tagObject.SetNounSPosStringVoid("painters'");
+
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Romanian", NOUN_ALIVE_ABSTRACT);
+            tagObject.SetNounStringVoid("romanian"); tagObject.SetNounPosStringVoid("romanian's");
+            tagObject.SetNounSStringVoid("romanians"); tagObject.SetNounSPosStringVoid("romanians'");
+
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Russian", NOUN_ALIVE_ABSTRACT);
+            tagObject.SetNounStringVoid("russian"); tagObject.SetNounPosStringVoid("russian's");
+            tagObject.SetNounSStringVoid("russians"); tagObject.SetNounSPosStringVoid("russians'");
     }
     public static function TagGeneralStructNounAliveConcreteVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Andy"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Andy's"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Bodhisattva"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Bodhisattva's"
-                },
-                tagFeelEnum:POSITIVE,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Buddha"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Buddha's"
-                },
-                tagFeelEnum:POSITIVE,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Dimitri"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Dimitri's"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Julius Caesar"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Julius Caesar's"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Maria"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Maria's"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Medusa"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Medusa's"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Mikael"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Mikael's"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Napoleon"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Napoleon's"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Ramses"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Ramses'"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Sphinx"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Sphinx's"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Washington"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_POS,
-                    tagString:"Washington's"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_ALIVE_CONCRETE,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Andy", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Andy"); tagObject.SetNounPosStringVoid("Andy's");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Bodhisattva", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Bodhisattva"); tagObject.SetNounPosStringVoid("Bodhisattva's");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Buddha", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Buddha"); tagObject.SetNounPosStringVoid("Buddha's");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Dimitri", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Dimitri"); tagObject.SetNounPosStringVoid("Dimitri's");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Julius Caesar", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Julius Caesar"); tagObject.SetNounPosStringVoid("Julius Caesar's");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Maria", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Maria"); tagObject.SetNounPosStringVoid("Maria's");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Medusa", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Medusa"); tagObject.SetNounPosStringVoid("Medusa's");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Mikael", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Mikael"); tagObject.SetNounPosStringVoid("Mikael's");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Napoleon", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Napoleon"); tagObject.SetNounPosStringVoid("Napoleon's");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Ramses", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Ramses"); tagObject.SetNounPosStringVoid("Ramses'");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Sphinx", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Sphinx"); tagObject.SetNounPosStringVoid("Sphinx's");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Washington", NOUN_ALIVE_CONCRETE);
+            tagObject.SetNounStringVoid("Washington"); tagObject.SetNounPosStringVoid("Washington's");
     }
     public static function TagGeneralStructNounInanimateHoldAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"grudge"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:NOUN_INANIMATE_HOLD_ABSTRACT,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Grudge", NOUN_INANIMATE_HOLD_ABSTRACT); tagObject.SetNounStringVoid("grudge"); tagObject.SetNounSStringVoid("grudges");
     }
     public static function TagGeneralStructNounInanimateHoldConcreteVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"bat"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"bats"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_HOLD_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"gun"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"guns"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_HOLD_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"hand"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"hands"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_HOLD_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"pencil"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"pencils"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_HOLD_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"sword"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"swords"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_HOLD_CONCRETE,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Bat", NOUN_INANIMATE_HOLD_CONCRETE); tagObject.SetNounStringVoid("bat"); tagObject.SetNounSStringVoid("bats");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Gun", NOUN_INANIMATE_HOLD_CONCRETE); tagObject.SetNounStringVoid("gun"); tagObject.SetNounSStringVoid("guns");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Hand", NOUN_INANIMATE_HOLD_CONCRETE); tagObject.SetNounStringVoid("hand"); tagObject.SetNounSStringVoid("hands");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Pencil", NOUN_INANIMATE_HOLD_CONCRETE); tagObject.SetNounStringVoid("pencil"); tagObject.SetNounSStringVoid("pencils");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Sword", NOUN_INANIMATE_HOLD_CONCRETE); tagObject.SetNounStringVoid("sword"); tagObject.SetNounSStringVoid("swords");
     }
     public static function TagGeneralStructNounInanimatePlaceAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"mind"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_PLACE_ABSTRACT,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"peace"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_PLACE_ABSTRACT,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Mind", NOUN_INANIMATE_PLACE_ABSTRACT); tagObject.SetNounStringVoid("mind"); tagObject.SetNounSStringVoid("minds");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Intuition", NOUN_INANIMATE_PLACE_ABSTRACT); tagObject.SetNounStringVoid("intuition"); tagObject.SetNounSStringVoid("intuitions");
     }
     public static function TagGeneralStructNounInanimatePlaceConcreteNoOwnerVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"India"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Italia"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Netherlands"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"Russia"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "India", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER); tagObject.SetNounStringVoid("India");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Italia", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER); tagObject.SetNounStringVoid("Italia");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Netherlands", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER); tagObject.SetNounStringVoid("Netherlands");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "RussiaRussia", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER); tagObject.SetNounStringVoid("Russia");
     }
     public static function TagGeneralStructNounInanimatePlaceConcreteOwnerVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"country"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_PLACE_CONCRETE_OWNER,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"harbor"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_PLACE_CONCRETE_OWNER,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"house"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_PLACE_CONCRETE_OWNER,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"school"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_PLACE_CONCRETE_OWNER,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Country", NOUN_INANIMATE_PLACE_CONCRETE_OWNER); tagObject.SetNounStringVoid("country"); tagObject.SetNounSStringVoid("countries");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Harbor", NOUN_INANIMATE_PLACE_CONCRETE_OWNER); tagObject.SetNounStringVoid("harbor"); tagObject.SetNounSStringVoid("harbors");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "House", NOUN_INANIMATE_PLACE_CONCRETE_OWNER); tagObject.SetNounStringVoid("house"); tagObject.SetNounSStringVoid("houses");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "School", NOUN_INANIMATE_PLACE_CONCRETE_OWNER); tagObject.SetNounStringVoid("school"); tagObject.SetNounSStringVoid("schools");
     }
     public static function TagGeneralStructNounInanimateSeeAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"vision"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_SEE_ABSTRACT,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Vision", NOUN_INANIMATE_SEE_ABSTRACT); tagObject.SetNounStringVoid("vision");
     }
     public static function TagGeneralStructNounInanimateSeeConcreteVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"lightning"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_SEE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"moonlight"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_SEE_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"rainbow"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_SEE_CONCRETE,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Lightning", NOUN_INANIMATE_SEE_CONCRETE); tagObject.SetNounStringVoid("lightning");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Moonlight", NOUN_INANIMATE_SEE_CONCRETE); tagObject.SetNounStringVoid("moonlight");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Rainbow", NOUN_INANIMATE_SEE_CONCRETE); tagObject.SetNounStringVoid("rainbow");
     }
     public static function TagGeneralStructNounInanimateTitleAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"commendation"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"commendations"
-                },
-                tagFeelEnum:POSITIVE,
-                tagTypeEnum:NOUN_INANIMATE_TITLE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"job"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"jobs"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:NOUN_INANIMATE_TITLE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"praise"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:NOUN_S,
-                    tagString:"praises"
-                },
-                tagFeelEnum:POSITIVE,
-                tagTypeEnum:NOUN_INANIMATE_TITLE,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Commendation", NOUN_INANIMATE_TITLE); tagObject.SetNounStringVoid("commendation"); tagObject.SetNounSStringVoid("commendations");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Job", NOUN_INANIMATE_TITLE); tagObject.SetNounStringVoid("job"); tagObject.SetNounSStringVoid("jobs");
     }
     public static function TagGeneralStructNounInanimateWearAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"pride"
-                },
-                tagFeelEnum:POSITIVE,
-                tagTypeEnum:NOUN_INANIMATE_WEAR_ABSTRACT,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"shame"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:NOUN_INANIMATE_WEAR_ABSTRACT,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, POSITIVE, true, "Pride", NOUN_INANIMATE_WEAR_ABSTRACT); tagObject.SetNounStringVoid("pride");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Shame", NOUN_INANIMATE_WEAR_ABSTRACT); tagObject.SetNounStringVoid("shame");
     }
     public static function TagGeneralStructNounInanimateWearConcreteVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"shirt"
-                },
-                tagFeelEnum:POSITIVE,
-                tagTypeEnum:NOUN_INANIMATE_WEAR_CONCRETE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:NOUN,
-                    tagString:"crown"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:NOUN_INANIMATE_WEAR_CONCRETE,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Crown", NOUN_INANIMATE_WEAR_CONCRETE); tagObject.SetNounStringVoid("crown"); tagObject.SetNounSStringVoid("crowns");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Shirt", NOUN_INANIMATE_WEAR_CONCRETE); tagObject.SetNounStringVoid("shirt"); tagObject.SetNounSStringVoid("shirts");
     }
     public static function TagGeneralStructVerbVoidIntransitiveVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"die"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"died"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"died"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"dying"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"dies"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:VERB_INTRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"disintegrate"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"disintegrated"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"disintegrated"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"disintegrating"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"disintegrates"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:VERB_INTRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"jump"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"jumpe'"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"jumped"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"jumping"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"jumps"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_INTRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"run"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"ran"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"ran"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"running"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"runs"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_INTRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"sing"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"sang"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"sung"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"singing"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"sings"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_INTRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"sleep"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"slept"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"slept"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"sleeping"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"sleeps"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_INTRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"work"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"worked"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"worked"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"working"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"works"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_INTRANSITIVE,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Die", VERB_INTRANSITIVE);
+            tagObject.SetVerb1StringVoid("die"); tagObject.SetVerb2StringVoid("died");
+            tagObject.SetVerb3StringVoid("died"); tagObject.SetVerbIngStringVoid("dying");
+            tagObject.SetVerbSStringVoid("dies");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Jump", VERB_INTRANSITIVE);
+            tagObject.SetVerb1StringVoid("jump"); tagObject.SetVerb2StringVoid("jumped");
+            tagObject.SetVerb3StringVoid("jumped"); tagObject.SetVerbIngStringVoid("jumping");
+            tagObject.SetVerbSStringVoid("jumps");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Run", VERB_INTRANSITIVE);
+            tagObject.SetVerb1StringVoid("run"); tagObject.SetVerb2StringVoid("ran");
+            tagObject.SetVerb3StringVoid("ran"); tagObject.SetVerbIngStringVoid("running");
+            tagObject.SetVerbSStringVoid("runs");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Sing", VERB_INTRANSITIVE);
+            tagObject.SetVerb1StringVoid("sing"); tagObject.SetVerb2StringVoid("sang");
+            tagObject.SetVerb3StringVoid("sung"); tagObject.SetVerbIngStringVoid("singing");
+            tagObject.SetVerbSStringVoid("sings");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Sleep", VERB_INTRANSITIVE);
+            tagObject.SetVerb1StringVoid("sleep"); tagObject.SetVerb2StringVoid("slept");
+            tagObject.SetVerb3StringVoid("slept"); tagObject.SetVerbIngStringVoid("sleeping");
+            tagObject.SetVerbSStringVoid("sleeps");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Work", VERB_INTRANSITIVE);
+            tagObject.SetVerb1StringVoid("work"); tagObject.SetVerb2StringVoid("worked");
+            tagObject.SetVerb3StringVoid("worked"); tagObject.SetVerbIngStringVoid("working");
+            tagObject.SetVerbSStringVoid("works");
     }
     public static function TagGeneralStructVerbVoidTransitiveVoid(_collectionGlobalObject:CollectionGlobal){
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"assasinate"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"assasinated"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"assasinated"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"assasinating"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"assasinates"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"buy"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"bought"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"bought"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"buying"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"buys"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"call"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"called"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"called"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"calling"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"calls"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"desire"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"desired"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"desired"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"desiring"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"desires"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"drink"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"drunk"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"drank"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"drinking"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"drinks"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"drive"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"drove"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"driven"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"driving"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"drives"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"eat"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"ate"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"eaten"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"eating"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"eats"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"fight"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"fought"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"fought"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"fighting"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"fights"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"get"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"got"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"gotten"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"getting"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"gets"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"grab"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"grabbed"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"grabbed"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"grabbing"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"grabs"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"kill"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"killed"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"killed"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"killing"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"kills"
-                },
-                tagFeelEnum:NEGATIVE,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"love"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"loved"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"loved"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"loving"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"loves"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"paint"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"painted"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"painted"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"painting"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"paints"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"sell"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"sold"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"sold"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"selling"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"sells"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
-        _collectionGlobalObject.GetTagGeneralStructArray().push(
-            {
-                tagEntry1Struct:{
-                    tagTypeSubEnum:VERB_1,
-                    tagString:"shove"
-                },
-                tagEntry2Struct:{
-                    tagTypeSubEnum:VERB_2,
-                    tagString:"shoved"
-                },
-                tagEntry3Struct:{
-                    tagTypeSubEnum:VERB_3,
-                    tagString:"shoved"
-                },
-                tagEntry4Struct:{
-                    tagTypeSubEnum:VERB_ING,
-                    tagString:"shoving"
-                },
-                tagEntry5Struct:{
-                    tagTypeSubEnum:VERB_S,
-                    tagString:"shoves"
-                },
-                tagFeelEnum:NEUTRAL,
-                tagTypeEnum:VERB_TRANSITIVE,
-            }
-        );
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Buy", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("buy"); tagObject.SetVerb2StringVoid("bought");
+            tagObject.SetVerb3StringVoid("bought"); tagObject.SetVerbIngStringVoid("buying");
+            tagObject.SetVerbSStringVoid("buys");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Call", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("call"); tagObject.SetVerb2StringVoid("called");
+            tagObject.SetVerb3StringVoid("called"); tagObject.SetVerbIngStringVoid("calling");
+            tagObject.SetVerbSStringVoid("calls");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Desire", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("desire"); tagObject.SetVerb2StringVoid("desired");
+            tagObject.SetVerb3StringVoid("desired"); tagObject.SetVerbIngStringVoid("desiring");
+            tagObject.SetVerbSStringVoid("desires");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Drink", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("drink"); tagObject.SetVerb2StringVoid("drunk");
+            tagObject.SetVerb3StringVoid("drank"); tagObject.SetVerbIngStringVoid("drinking");
+            tagObject.SetVerbSStringVoid("drinks");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Drive", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("drive"); tagObject.SetVerb2StringVoid("drove");
+            tagObject.SetVerb3StringVoid("driven"); tagObject.SetVerbIngStringVoid("driving");
+            tagObject.SetVerbSStringVoid("drives");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Eat", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("eat"); tagObject.SetVerb2StringVoid("ate");
+            tagObject.SetVerb3StringVoid("eaten"); tagObject.SetVerbIngStringVoid("eating");
+            tagObject.SetVerbSStringVoid("eats");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Fight", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("fight"); tagObject.SetVerb2StringVoid("fought");
+            tagObject.SetVerb3StringVoid("fought"); tagObject.SetVerbIngStringVoid("fighting");
+            tagObject.SetVerbSStringVoid("fights");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Get", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("get"); tagObject.SetVerb2StringVoid("got");
+            tagObject.SetVerb3StringVoid("gotten"); tagObject.SetVerbIngStringVoid("getting");
+            tagObject.SetVerbSStringVoid("gets");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Grab", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("grab"); tagObject.SetVerb2StringVoid("grabed");
+            tagObject.SetVerb3StringVoid("grabed"); tagObject.SetVerbIngStringVoid("grabbing");
+            tagObject.SetVerbSStringVoid("grabs");
+        tagObject = new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Kill", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("kill"); tagObject.SetVerb2StringVoid("killed");
+            tagObject.SetVerb3StringVoid("killed"); tagObject.SetVerbIngStringVoid("killing");
+            tagObject.SetVerbSStringVoid("kills");
+        tagObject = new ObjectTag(_collectionGlobalObject, POSITIVE, true, "Love", VERB_TRANSITIVE);
+            tagObject.SetVerb1StringVoid("love"); tagObject.SetVerb2StringVoid("loved");
+            tagObject.SetVerb3StringVoid("loved"); tagObject.SetVerbIngStringVoid("loving");
+            tagObject.SetVerbSStringVoid("loves");
     }
 }

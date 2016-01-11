@@ -10,6 +10,9 @@
 #ifndef INCLUDED_ObjectMuseum
 #include <ObjectMuseum.h>
 #endif
+#ifndef INCLUDED_ObjectTag
+#include <ObjectTag.h>
+#endif
 #ifndef INCLUDED_ObjectVisitor
 #include <ObjectVisitor.h>
 #endif
@@ -22,13 +25,13 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(16)
 	this->visitorObjectArray = Array_obj< ::Dynamic >::__new();
 	HX_STACK_LINE(15)
-	this->tagStructArray = Dynamic( Array_obj<Dynamic>::__new() );
+	this->tagObjectArray = Array_obj< ::Dynamic >::__new();
 	HX_STACK_LINE(14)
-	this->tagGeneralStructArray = Dynamic( Array_obj<Dynamic>::__new() );
+	this->tagGeneralObjectArray = Array_obj< ::Dynamic >::__new();
 	HX_STACK_LINE(13)
 	this->selectedVisitorObject = null();
 	HX_STACK_LINE(12)
-	this->selectedTagStruct = null();
+	this->selectedTagObject = null();
 	HX_STACK_LINE(11)
 	this->selectedMuseumObject = null();
 	HX_STACK_LINE(10)
@@ -44,7 +47,7 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(5)
 	this->archiveExhibitionObject = null();
 	HX_STACK_LINE(18)
-	::ObjectMuseum tmp = ::ObjectMuseum_obj::__new(hx::ObjectPtr<OBJ_>(this),HX_HCSTRING("EXH_ARC","\x28","\x66","\x87","\x18"),HX_HCSTRING("Exhibition Archive","\xf1","\x72","\xf3","\xb9"),HX_HCSTRING("XXX_XXX","\xb1","\xf7","\x19","\x65"),Dynamic( Array_obj<Dynamic>::__new() ),::EnumMuseumType_obj::EXH);		HX_STACK_VAR(tmp,"tmp");
+	::ObjectMuseum tmp = ::ObjectMuseum_obj::__new(hx::ObjectPtr<OBJ_>(this),HX_HCSTRING("EXH_ARC","\x28","\x66","\x87","\x18"),HX_HCSTRING("Exhibition Archive","\xf1","\x72","\xf3","\xb9"),HX_HCSTRING("XXX_XXX","\xb1","\xf7","\x19","\x65"),Array_obj< ::Dynamic >::__new(),::EnumMuseumType_obj::EXH);		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(18)
 	this->archiveExhibitionObject = tmp;
 }
@@ -182,17 +185,17 @@ HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetRoomObjectArray,return )
 
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetSelectedMuseumObject,return )
 
-Dynamic CollectionGlobal_obj::GetSelectedTagStruct( ){
-	HX_STACK_FRAME("CollectionGlobal","GetSelectedTagStruct",0xbb12382b,"CollectionGlobal.GetSelectedTagStruct","CollectionGlobal.hx",30,0xb0d19edd)
+::ObjectTag CollectionGlobal_obj::GetSelectedTagObject( ){
+	HX_STACK_FRAME("CollectionGlobal","GetSelectedTagObject",0xbf187c95,"CollectionGlobal.GetSelectedTagObject","CollectionGlobal.hx",30,0xb0d19edd)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(30)
-	Dynamic tmp = this->selectedTagStruct;		HX_STACK_VAR(tmp,"tmp");
+	::ObjectTag tmp = this->selectedTagObject;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(30)
 	return tmp;
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetSelectedTagStruct,return )
+HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetSelectedTagObject,return )
 
 ::ObjectVisitor CollectionGlobal_obj::GetSelectedVisitorObject( ){
 	HX_STACK_FRAME("CollectionGlobal","GetSelectedVisitorObject",0xcac51ae9,"CollectionGlobal.GetSelectedVisitorObject","CollectionGlobal.hx",31,0xb0d19edd)
@@ -206,25 +209,25 @@ HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetSelectedTagStruct,return )
 
 HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetSelectedVisitorObject,return )
 
-cpp::ArrayBase CollectionGlobal_obj::GetTagGeneralStructArray( ){
-	HX_STACK_FRAME("CollectionGlobal","GetTagGeneralStructArray",0x1fe9deed,"CollectionGlobal.GetTagGeneralStructArray","CollectionGlobal.hx",32,0xb0d19edd)
+Array< ::Dynamic > CollectionGlobal_obj::GetTagGeneralObjectArray( ){
+	HX_STACK_FRAME("CollectionGlobal","GetTagGeneralObjectArray",0x6c815a43,"CollectionGlobal.GetTagGeneralObjectArray","CollectionGlobal.hx",32,0xb0d19edd)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(32)
-	return this->tagGeneralStructArray;
+	return this->tagGeneralObjectArray;
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetTagGeneralStructArray,return )
+HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetTagGeneralObjectArray,return )
 
-cpp::ArrayBase CollectionGlobal_obj::GetTagStructArray( ){
-	HX_STACK_FRAME("CollectionGlobal","GetTagStructArray",0x577490b3,"CollectionGlobal.GetTagStructArray","CollectionGlobal.hx",33,0xb0d19edd)
+Array< ::Dynamic > CollectionGlobal_obj::GetTagObjectArray( ){
+	HX_STACK_FRAME("CollectionGlobal","GetTagObjectArray",0xa40c0c09,"CollectionGlobal.GetTagObjectArray","CollectionGlobal.hx",33,0xb0d19edd)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(33)
-	return this->tagStructArray;
+	return this->tagObjectArray;
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetTagStructArray,return )
+HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,GetTagObjectArray,return )
 
 Array< ::Dynamic > CollectionGlobal_obj::GetVisitorObjectArray( ){
 	HX_STACK_FRAME("CollectionGlobal","GetVisitorObjectArray",0x304283b5,"CollectionGlobal.GetVisitorObjectArray","CollectionGlobal.hx",34,0xb0d19edd)
@@ -324,19 +327,19 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetSelectedMuseumObjectVoid,(void))
 
-Void CollectionGlobal_obj::SetSelectedTagStructVoid( Dynamic _selectedTagStruct){
+Void CollectionGlobal_obj::SetSelectedTagObjectVoid( ::ObjectTag _selectedTagObject){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetSelectedTagStructVoid",0x2ad09a93,"CollectionGlobal.SetSelectedTagStructVoid","CollectionGlobal.hx",45,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetSelectedTagObjectVoid",0xf1c25bfd,"CollectionGlobal.SetSelectedTagObjectVoid","CollectionGlobal.hx",45,0xb0d19edd)
 		HX_STACK_THIS(this)
-		HX_STACK_ARG(_selectedTagStruct,"_selectedTagStruct")
+		HX_STACK_ARG(_selectedTagObject,"_selectedTagObject")
 		HX_STACK_LINE(45)
-		this->selectedTagStruct = _selectedTagStruct;
+		this->selectedTagObject = _selectedTagObject;
 	}
 return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetSelectedTagStructVoid,(void))
+HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetSelectedTagObjectVoid,(void))
 
 Void CollectionGlobal_obj::SetSelectedVisitorObjectVoid( ::ObjectVisitor _selectedVisitorObject){
 {
@@ -352,19 +355,19 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetSelectedVisitorObjectVoid,(void))
 
-Void CollectionGlobal_obj::SetTagStructArrayVoid( cpp::ArrayBase _tagStructArray){
+Void CollectionGlobal_obj::SetTagObjectArrayVoid( Array< ::Dynamic > _tagObjectArray){
 {
-		HX_STACK_FRAME("CollectionGlobal","SetTagStructArrayVoid",0x72ec23b3,"CollectionGlobal.SetTagStructArrayVoid","CollectionGlobal.hx",47,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","SetTagObjectArrayVoid",0x24d30209,"CollectionGlobal.SetTagObjectArrayVoid","CollectionGlobal.hx",47,0xb0d19edd)
 		HX_STACK_THIS(this)
-		HX_STACK_ARG(_tagStructArray,"_tagStructArray")
+		HX_STACK_ARG(_tagObjectArray,"_tagObjectArray")
 		HX_STACK_LINE(47)
-		this->tagStructArray = _tagStructArray;
+		this->tagObjectArray = _tagObjectArray;
 	}
 return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetTagStructArrayVoid,(void))
+HX_DEFINE_DYNAMIC_FUNC1(CollectionGlobal_obj,SetTagObjectArrayVoid,(void))
 
 Void CollectionGlobal_obj::SetVisitorObjectArrayVoid( Array< ::Dynamic > _visitorObjectArray){
 {
@@ -395,10 +398,10 @@ void CollectionGlobal_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(indexGlobalVisitorInt,"indexGlobalVisitorInt");
 	HX_MARK_MEMBER_NAME(roomObjectArray,"roomObjectArray");
 	HX_MARK_MEMBER_NAME(selectedMuseumObject,"selectedMuseumObject");
-	HX_MARK_MEMBER_NAME(selectedTagStruct,"selectedTagStruct");
+	HX_MARK_MEMBER_NAME(selectedTagObject,"selectedTagObject");
 	HX_MARK_MEMBER_NAME(selectedVisitorObject,"selectedVisitorObject");
-	HX_MARK_MEMBER_NAME(tagGeneralStructArray,"tagGeneralStructArray");
-	HX_MARK_MEMBER_NAME(tagStructArray,"tagStructArray");
+	HX_MARK_MEMBER_NAME(tagGeneralObjectArray,"tagGeneralObjectArray");
+	HX_MARK_MEMBER_NAME(tagObjectArray,"tagObjectArray");
 	HX_MARK_MEMBER_NAME(visitorObjectArray,"visitorObjectArray");
 	HX_MARK_END_CLASS();
 }
@@ -412,10 +415,10 @@ void CollectionGlobal_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(indexGlobalVisitorInt,"indexGlobalVisitorInt");
 	HX_VISIT_MEMBER_NAME(roomObjectArray,"roomObjectArray");
 	HX_VISIT_MEMBER_NAME(selectedMuseumObject,"selectedMuseumObject");
-	HX_VISIT_MEMBER_NAME(selectedTagStruct,"selectedTagStruct");
+	HX_VISIT_MEMBER_NAME(selectedTagObject,"selectedTagObject");
 	HX_VISIT_MEMBER_NAME(selectedVisitorObject,"selectedVisitorObject");
-	HX_VISIT_MEMBER_NAME(tagGeneralStructArray,"tagGeneralStructArray");
-	HX_VISIT_MEMBER_NAME(tagStructArray,"tagStructArray");
+	HX_VISIT_MEMBER_NAME(tagGeneralObjectArray,"tagGeneralObjectArray");
+	HX_VISIT_MEMBER_NAME(tagObjectArray,"tagObjectArray");
 	HX_VISIT_MEMBER_NAME(visitorObjectArray,"visitorObjectArray");
 }
 
@@ -423,7 +426,7 @@ Dynamic CollectionGlobal_obj::__Field(const ::String &inName,hx::PropertyAccess 
 {
 	switch(inName.length) {
 	case 14:
-		if (HX_FIELD_EQ(inName,"tagStructArray") ) { return tagStructArray; }
+		if (HX_FIELD_EQ(inName,"tagObjectArray") ) { return tagObjectArray; }
 		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"roomObjectArray") ) { return roomObjectArray; }
@@ -432,8 +435,8 @@ Dynamic CollectionGlobal_obj::__Field(const ::String &inName,hx::PropertyAccess 
 		if (HX_FIELD_EQ(inName,"floorObjectArray") ) { return floorObjectArray; }
 		break;
 	case 17:
-		if (HX_FIELD_EQ(inName,"selectedTagStruct") ) { return selectedTagStruct; }
-		if (HX_FIELD_EQ(inName,"GetTagStructArray") ) { return GetTagStructArray_dyn(); }
+		if (HX_FIELD_EQ(inName,"selectedTagObject") ) { return selectedTagObject; }
+		if (HX_FIELD_EQ(inName,"GetTagObjectArray") ) { return GetTagObjectArray_dyn(); }
 		break;
 	case 18:
 		if (HX_FIELD_EQ(inName,"visitorObjectArray") ) { return visitorObjectArray; }
@@ -444,15 +447,15 @@ Dynamic CollectionGlobal_obj::__Field(const ::String &inName,hx::PropertyAccess 
 		break;
 	case 20:
 		if (HX_FIELD_EQ(inName,"selectedMuseumObject") ) { return selectedMuseumObject; }
-		if (HX_FIELD_EQ(inName,"GetSelectedTagStruct") ) { return GetSelectedTagStruct_dyn(); }
+		if (HX_FIELD_EQ(inName,"GetSelectedTagObject") ) { return GetSelectedTagObject_dyn(); }
 		break;
 	case 21:
 		if (HX_FIELD_EQ(inName,"exhibitionObjectArray") ) { return exhibitionObjectArray; }
 		if (HX_FIELD_EQ(inName,"indexGlobalVisitorInt") ) { return indexGlobalVisitorInt; }
 		if (HX_FIELD_EQ(inName,"selectedVisitorObject") ) { return selectedVisitorObject; }
-		if (HX_FIELD_EQ(inName,"tagGeneralStructArray") ) { return tagGeneralStructArray; }
+		if (HX_FIELD_EQ(inName,"tagGeneralObjectArray") ) { return tagGeneralObjectArray; }
 		if (HX_FIELD_EQ(inName,"GetVisitorObjectArray") ) { return GetVisitorObjectArray_dyn(); }
-		if (HX_FIELD_EQ(inName,"SetTagStructArrayVoid") ) { return SetTagStructArrayVoid_dyn(); }
+		if (HX_FIELD_EQ(inName,"SetTagObjectArrayVoid") ) { return SetTagObjectArrayVoid_dyn(); }
 		break;
 	case 22:
 		if (HX_FIELD_EQ(inName,"SetRoomObjectArrayVoid") ) { return SetRoomObjectArrayVoid_dyn(); }
@@ -465,9 +468,9 @@ Dynamic CollectionGlobal_obj::__Field(const ::String &inName,hx::PropertyAccess 
 	case 24:
 		if (HX_FIELD_EQ(inName,"GetExhibitionObjectArray") ) { return GetExhibitionObjectArray_dyn(); }
 		if (HX_FIELD_EQ(inName,"GetSelectedVisitorObject") ) { return GetSelectedVisitorObject_dyn(); }
-		if (HX_FIELD_EQ(inName,"GetTagGeneralStructArray") ) { return GetTagGeneralStructArray_dyn(); }
+		if (HX_FIELD_EQ(inName,"GetTagGeneralObjectArray") ) { return GetTagGeneralObjectArray_dyn(); }
 		if (HX_FIELD_EQ(inName,"PutIndexGlobalVisitorInt") ) { return PutIndexGlobalVisitorInt_dyn(); }
-		if (HX_FIELD_EQ(inName,"SetSelectedTagStructVoid") ) { return SetSelectedTagStructVoid_dyn(); }
+		if (HX_FIELD_EQ(inName,"SetSelectedTagObjectVoid") ) { return SetSelectedTagObjectVoid_dyn(); }
 		break;
 	case 25:
 		if (HX_FIELD_EQ(inName,"SetVisitorObjectArrayVoid") ) { return SetVisitorObjectArrayVoid_dyn(); }
@@ -497,7 +500,7 @@ Dynamic CollectionGlobal_obj::__SetField(const ::String &inName,const Dynamic &i
 {
 	switch(inName.length) {
 	case 14:
-		if (HX_FIELD_EQ(inName,"tagStructArray") ) { tagStructArray=inValue.Cast< cpp::ArrayBase >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"tagObjectArray") ) { tagObjectArray=inValue.Cast< Array< ::Dynamic > >(); return inValue; }
 		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"roomObjectArray") ) { roomObjectArray=inValue.Cast< Array< ::Dynamic > >(); return inValue; }
@@ -506,7 +509,7 @@ Dynamic CollectionGlobal_obj::__SetField(const ::String &inName,const Dynamic &i
 		if (HX_FIELD_EQ(inName,"floorObjectArray") ) { floorObjectArray=inValue.Cast< Array< ::Dynamic > >(); return inValue; }
 		break;
 	case 17:
-		if (HX_FIELD_EQ(inName,"selectedTagStruct") ) { selectedTagStruct=inValue.Cast< Dynamic >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"selectedTagObject") ) { selectedTagObject=inValue.Cast< ::ObjectTag >(); return inValue; }
 		break;
 	case 18:
 		if (HX_FIELD_EQ(inName,"visitorObjectArray") ) { visitorObjectArray=inValue.Cast< Array< ::Dynamic > >(); return inValue; }
@@ -518,7 +521,7 @@ Dynamic CollectionGlobal_obj::__SetField(const ::String &inName,const Dynamic &i
 		if (HX_FIELD_EQ(inName,"exhibitionObjectArray") ) { exhibitionObjectArray=inValue.Cast< Array< ::Dynamic > >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"indexGlobalVisitorInt") ) { indexGlobalVisitorInt=inValue.Cast< int >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"selectedVisitorObject") ) { selectedVisitorObject=inValue.Cast< ::ObjectVisitor >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"tagGeneralStructArray") ) { tagGeneralStructArray=inValue.Cast< cpp::ArrayBase >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"tagGeneralObjectArray") ) { tagGeneralObjectArray=inValue.Cast< Array< ::Dynamic > >(); return inValue; }
 		break;
 	case 23:
 		if (HX_FIELD_EQ(inName,"archiveExhibitionObject") ) { archiveExhibitionObject=inValue.Cast< ::ObjectMuseum >(); return inValue; }
@@ -538,10 +541,10 @@ void CollectionGlobal_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_HCSTRING("indexGlobalVisitorInt","\x56","\xcc","\x88","\xec"));
 	outFields->push(HX_HCSTRING("roomObjectArray","\xff","\x83","\x1d","\x77"));
 	outFields->push(HX_HCSTRING("selectedMuseumObject","\x2c","\xb6","\x63","\x6a"));
-	outFields->push(HX_HCSTRING("selectedTagStruct","\x74","\x5a","\x5a","\xaf"));
+	outFields->push(HX_HCSTRING("selectedTagObject","\xde","\x9e","\x60","\xb3"));
 	outFields->push(HX_HCSTRING("selectedVisitorObject","\xb2","\x95","\x06","\x2b"));
-	outFields->push(HX_HCSTRING("tagGeneralStructArray","\xb6","\x59","\x2b","\x80"));
-	outFields->push(HX_HCSTRING("tagStructArray","\xca","\x16","\xd8","\x44"));
+	outFields->push(HX_HCSTRING("tagGeneralObjectArray","\x0c","\xd5","\xc2","\xcc"));
+	outFields->push(HX_HCSTRING("tagObjectArray","\x20","\x92","\x6f","\x91"));
 	outFields->push(HX_HCSTRING("visitorObjectArray","\x4c","\x61","\x18","\xfb"));
 	super::__GetFields(outFields);
 };
@@ -555,10 +558,10 @@ static hx::StorageInfo sMemberStorageInfo[] = {
 	{hx::fsInt,(int)offsetof(CollectionGlobal_obj,indexGlobalVisitorInt),HX_HCSTRING("indexGlobalVisitorInt","\x56","\xcc","\x88","\xec")},
 	{hx::fsObject /*Array< ::Dynamic >*/ ,(int)offsetof(CollectionGlobal_obj,roomObjectArray),HX_HCSTRING("roomObjectArray","\xff","\x83","\x1d","\x77")},
 	{hx::fsObject /*::ObjectMuseum*/ ,(int)offsetof(CollectionGlobal_obj,selectedMuseumObject),HX_HCSTRING("selectedMuseumObject","\x2c","\xb6","\x63","\x6a")},
-	{hx::fsObject /*Dynamic*/ ,(int)offsetof(CollectionGlobal_obj,selectedTagStruct),HX_HCSTRING("selectedTagStruct","\x74","\x5a","\x5a","\xaf")},
+	{hx::fsObject /*::ObjectTag*/ ,(int)offsetof(CollectionGlobal_obj,selectedTagObject),HX_HCSTRING("selectedTagObject","\xde","\x9e","\x60","\xb3")},
 	{hx::fsObject /*::ObjectVisitor*/ ,(int)offsetof(CollectionGlobal_obj,selectedVisitorObject),HX_HCSTRING("selectedVisitorObject","\xb2","\x95","\x06","\x2b")},
-	{hx::fsObject /*cpp::ArrayBase*/ ,(int)offsetof(CollectionGlobal_obj,tagGeneralStructArray),HX_HCSTRING("tagGeneralStructArray","\xb6","\x59","\x2b","\x80")},
-	{hx::fsObject /*cpp::ArrayBase*/ ,(int)offsetof(CollectionGlobal_obj,tagStructArray),HX_HCSTRING("tagStructArray","\xca","\x16","\xd8","\x44")},
+	{hx::fsObject /*Array< ::Dynamic >*/ ,(int)offsetof(CollectionGlobal_obj,tagGeneralObjectArray),HX_HCSTRING("tagGeneralObjectArray","\x0c","\xd5","\xc2","\xcc")},
+	{hx::fsObject /*Array< ::Dynamic >*/ ,(int)offsetof(CollectionGlobal_obj,tagObjectArray),HX_HCSTRING("tagObjectArray","\x20","\x92","\x6f","\x91")},
 	{hx::fsObject /*Array< ::Dynamic >*/ ,(int)offsetof(CollectionGlobal_obj,visitorObjectArray),HX_HCSTRING("visitorObjectArray","\x4c","\x61","\x18","\xfb")},
 	{ hx::fsUnknown, 0, null()}
 };
@@ -573,10 +576,10 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("indexGlobalVisitorInt","\x56","\xcc","\x88","\xec"),
 	HX_HCSTRING("roomObjectArray","\xff","\x83","\x1d","\x77"),
 	HX_HCSTRING("selectedMuseumObject","\x2c","\xb6","\x63","\x6a"),
-	HX_HCSTRING("selectedTagStruct","\x74","\x5a","\x5a","\xaf"),
+	HX_HCSTRING("selectedTagObject","\xde","\x9e","\x60","\xb3"),
 	HX_HCSTRING("selectedVisitorObject","\xb2","\x95","\x06","\x2b"),
-	HX_HCSTRING("tagGeneralStructArray","\xb6","\x59","\x2b","\x80"),
-	HX_HCSTRING("tagStructArray","\xca","\x16","\xd8","\x44"),
+	HX_HCSTRING("tagGeneralObjectArray","\x0c","\xd5","\xc2","\xcc"),
+	HX_HCSTRING("tagObjectArray","\x20","\x92","\x6f","\x91"),
 	HX_HCSTRING("visitorObjectArray","\x4c","\x61","\x18","\xfb"),
 	HX_HCSTRING("DetermineExhibitionFullThresholdInt","\xf5","\x23","\xaf","\x5e"),
 	HX_HCSTRING("GetArchiveExhibitionObject","\x7a","\x12","\xa9","\xd2"),
@@ -585,10 +588,10 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("GetFloorObjectArray","\x84","\x2c","\xa9","\xb7"),
 	HX_HCSTRING("GetRoomObjectArray","\x29","\x48","\x65","\xdd"),
 	HX_HCSTRING("GetSelectedMuseumObject","\xc2","\x99","\x72","\xa0"),
-	HX_HCSTRING("GetSelectedTagStruct","\x1e","\xfd","\x3a","\x0a"),
+	HX_HCSTRING("GetSelectedTagObject","\x88","\x41","\x41","\x0e"),
 	HX_HCSTRING("GetSelectedVisitorObject","\x5c","\xd5","\xfe","\x41"),
-	HX_HCSTRING("GetTagGeneralStructArray","\x60","\x99","\x23","\x97"),
-	HX_HCSTRING("GetTagStructArray","\xe0","\x85","\xd1","\x58"),
+	HX_HCSTRING("GetTagGeneralObjectArray","\xb6","\x14","\xbb","\xe3"),
+	HX_HCSTRING("GetTagObjectArray","\x36","\x01","\x69","\xa5"),
 	HX_HCSTRING("GetVisitorObjectArray","\x62","\x13","\xc6","\x24"),
 	HX_HCSTRING("PutIndexGlobalVisitorInt","\x27","\x79","\xd1","\x14"),
 	HX_HCSTRING("SetExhibitionFullThresholdInt","\xc4","\xf2","\x5c","\x7d"),
@@ -596,9 +599,9 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("SetFloorObjectArrayVoid","\x04","\x17","\x22","\x1e"),
 	HX_HCSTRING("SetRoomObjectArrayVoid","\x91","\x7c","\xef","\xd5"),
 	HX_HCSTRING("SetSelectedMuseumObjectVoid","\x42","\x71","\xb5","\x3f"),
-	HX_HCSTRING("SetSelectedTagStructVoid","\x06","\x55","\x0a","\xa2"),
+	HX_HCSTRING("SetSelectedTagObjectVoid","\x70","\x16","\xfc","\x68"),
 	HX_HCSTRING("SetSelectedVisitorObjectVoid","\x44","\xee","\xc1","\xa7"),
-	HX_HCSTRING("SetTagStructArrayVoid","\x60","\xb3","\x6f","\x67"),
+	HX_HCSTRING("SetTagObjectArrayVoid","\xb6","\x91","\x56","\x19"),
 	HX_HCSTRING("SetVisitorObjectArrayVoid","\xe2","\x1f","\x94","\xaf"),
 	::String(null()) };
 

@@ -15,6 +15,9 @@
 #ifndef INCLUDED_ObjectMuseum
 #include <ObjectMuseum.h>
 #endif
+#ifndef INCLUDED_ObjectTag
+#include <ObjectTag.h>
+#endif
 #ifndef INCLUDED_ObjectVisitor
 #include <ObjectVisitor.h>
 #endif

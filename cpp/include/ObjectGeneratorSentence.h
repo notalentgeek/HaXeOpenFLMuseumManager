@@ -6,6 +6,7 @@
 #endif
 
 HX_DECLARE_CLASS0(CollectionGlobal)
+HX_DECLARE_CLASS0(EnumTagType)
 HX_DECLARE_CLASS0(ObjectGeneratorSentence)
 HX_DECLARE_CLASS0(ObjectVisitor)
 
@@ -29,6 +30,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectGeneratorSentence_obj : public hx::Object{
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("ObjectGeneratorSentence","\x37","\xd6","\xc2","\x59"); }
+
+		virtual ::String AddWordString( ::CollectionGlobal _collectionGlobalObject,Dynamic _tagGetFunction,::EnumTagType _tagTypeEnum,::ObjectVisitor _visitorObject);
+		Dynamic AddWordString_dyn();
 
 		virtual ::String GenerateSentenceString( ::CollectionGlobal _collectionGlobalObject,::String _patternString,::ObjectVisitor _visitorObject);
 		Dynamic GenerateSentenceString_dyn();

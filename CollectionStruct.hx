@@ -8,28 +8,14 @@ typedef StructName = {
     nameFullString:String
 };
 typedef StructTagCounter = { 
-    tagStruct:StructTag,
+    tagObject:ObjectTag,
     tagCounterInt:Int
-};
-typedef StructTagEntry = { 
-    tagTypeSubEnum:EnumTagTypeSub,
-    tagString:String
-};
-/*I decided to use struct instead of normal class on how the Tag will be implemented.*/
-typedef StructTag = {
-    ?tagEntry2Struct:StructTagEntry,
-    ?tagEntry3Struct:StructTagEntry,
-    ?tagEntry4Struct:StructTagEntry,
-    ?tagEntry5Struct:StructTagEntry,
-    tagEntry1Struct:StructTagEntry,
-    tagFeelEnum:EnumTagFeelType,
-    tagTypeEnum:EnumTagType
 };
 typedef StructVisitorVisitExhibition = { 
     currentExhibitionTimeInt:Int,
     exhibitionNameAltString:String
 };
-typedef StructVisitorVisitMuseum = { 
+typedef StructVisitorVisitMuseum = { /*PENDING:*/
     currentVisitTimeInt:Int,
     visitorVisitExhibitionStruct:Array<StructVisitorVisitExhibition>,
     visitInt:Int

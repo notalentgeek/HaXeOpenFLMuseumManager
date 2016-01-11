@@ -7,6 +7,7 @@
 
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(CollectionTagGeneral)
+HX_DECLARE_CLASS0(ObjectTag)
 
 
 class HXCPP_CLASS_ATTRIBUTES  CollectionTagGeneral_obj : public hx::Object{
@@ -26,9 +27,12 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionTagGeneral_obj : public hx::Object{
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("CollectionTagGeneral","\x0c","\xb8","\x47","\x72"); }
 
+		static void __boot();
+		static ::ObjectTag tagObject;
 		static Void TagGeneralStructVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic TagGeneralStructVoid_dyn();
 

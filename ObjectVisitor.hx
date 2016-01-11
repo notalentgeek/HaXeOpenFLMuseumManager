@@ -17,14 +17,14 @@ class ObjectVisitor{
     private var scoreInt:Int = 0;
     private var sentenceStringArray:Array<String> = new Array<String>();
     private var tagCounterStructArray:Array<StructTagCounter> = new Array<StructTagCounter>();
-    private var tagStructMap:Map<StructTag, Bool> = new Map<StructTag, Bool>();
+    private var tagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
     private var targetInt:Int = 3;
     private var timeAIAutoExhibitionChangeFloat:Float = 0;
     private var timeExhibitionInt:Int = 0;
     private var timeMuseumInt:Int = 0;
     private var visitedCorrectExhibitionBool:Bool = true;
     private var visitExhibitionStructArray:Array<StructVisitorVisitExhibition> = new Array<StructVisitorVisitExhibition>();
-    private var visitMuseumStructArray:Array<StructVisitorVisitMuseum> = new Array<StructVisitorVisitMuseum>();
+    private var visitMuseumStructArray:Array<StructVisitorVisitMuseum> = new Array<StructVisitorVisitMuseum>(); /*PENDING:*/
     public  function new(
         _collectionGlobalObject:CollectionGlobal,
         _exhibitionCurrentObject:ObjectMuseum,
@@ -42,33 +42,46 @@ class ObjectVisitor{
         else if(_isAdd == false){ exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.remove(this); }
     }
     private function AddTagCounterVoid(){
-        tagStructMap = new Map<StructTag, Bool>();
-        var   loopCounter1Int:Int = 0;
+        var loopCounter1Int:Int = 0;
+
+        /*Reset the amount of object tag received per visitor visits to an exhibition.*/
+        tagObjectArray = new Array<ObjectTag>();
+        /*Here I need to input the tag from the previously visited object museum.*/
         if(exhibitionVisitedObjectArray.length >= 2){
-            while(loopCounter1Int < exhibitionVisitedObjectArray[exhibitionVisitedObjectArray.length - 2].GetTagStructArray().length){
-                tagStructMap.set(exhibitionVisitedObjectArray[exhibitionVisitedObjectArray.length - 2].GetTagStructArray()[loopCounter1Int], true);
+            loopCounter1Int = 0;
+            while(loopCounter1Int < exhibitionVisitedObjectArray[exhibitionVisitedObjectArray.length - 2].GetTagObjectArray().length){
+                var tagObject:ObjectTag = exhibitionVisitedObjectArray[exhibitionVisitedObjectArray.length - 2].GetTagObjectArray()[loopCounter1Int];
+                if(tagObjectArray.indexOf(tagObject) == -1){ tagObjectArray.push(tagObject); }
                 loopCounter1Int ++;
             }
         }
+
         loopCounter1Int = 0;
-        while(loopCounter1Int < exhibitionCurrentObject.GetTagStructArray().length){
+        while(loopCounter1Int < exhibitionCurrentObject.GetTagObjectArray().length){
             var newTagBool:Bool = true;
-            var tagCounterEntry1String:String = "";
+            var tagNameString:String = "";
+
+            /*This is the way I record how many tags a player received from visiting an exhibition.
+            For example a visitor visit tag with "heroes" tag so often, it will affect the way the program suggest a path to the visitor.*/
             var tagCounterStruct:StructTagCounter = {
-                tagStruct:null,
+                tagObject:null,
                 tagCounterInt:1
             };
+
             var tagIndexInt:Int = 0;
-            tagCounterStruct.tagStruct = exhibitionCurrentObject.GetTagStructArray()[loopCounter1Int];
-            tagCounterEntry1String = tagCounterStruct.tagStruct.tagEntry1Struct.tagString;
+            tagCounterStruct.tagObject = exhibitionCurrentObject.GetTagObjectArray()[loopCounter1Int];
+            tagNameString = tagCounterStruct.tagObject.GetNameString();
             while(tagIndexInt < tagCounterStructArray.length){
-                if(tagCounterEntry1String == tagCounterStructArray[tagIndexInt].tagStruct.tagEntry1Struct.tagString){ newTagBool = false; break; }
+                if(tagNameString == tagCounterStructArray[tagIndexInt].tagObject.GetNameString()){ newTagBool = false; break; }
                 tagIndexInt++;
             }
             if(newTagBool == true ){ tagCounterStructArray.push(tagCounterStruct); }
             else if(newTagBool == false){ tagCounterStructArray[tagIndexInt].tagCounterInt ++; }
             loopCounter1Int ++;
-            tagStructMap.set(tagCounterStruct.tagStruct, true);
+
+            if(tagObjectArray.indexOf(tagCounterStruct.tagObject) == -1){
+                tagObjectArray.push(tagCounterStruct.tagObject);
+            }
         }
         SortTagCounterVoid();
     }
@@ -206,9 +219,9 @@ class ObjectVisitor{
             var   basePercentageFloat:Float = 0.1;
             var   loopCounter2Int:Int = 0;
             var   tagSameCounterInt:Int = 0;
-            /*PENDING: Calculate the target exhibition from the tagCounterStructArray not from the tagStructMap.*/
-            while(loopCounter2Int < exhibitionTargetObjectArray[loopCounter1Int].GetTagStructArray().length){
-                if(tagStructMap.exists(exhibitionTargetObjectArray[loopCounter1Int].GetTagStructArray()[loopCounter2Int])){
+            /*PENDING: Calculate the target exhibition from the tagCounterStructArray not from the tagObjectArray.*/
+            while(loopCounter2Int < exhibitionTargetObjectArray[loopCounter1Int].GetTagObjectArray().length){
+                if(tagObjectArray.indexOf(exhibitionTargetObjectArray[loopCounter1Int].GetTagObjectArray()[loopCounter2Int]) > -1){
                     tagSameCounterInt ++;
                 }
                 loopCounter2Int ++;
@@ -254,7 +267,7 @@ class ObjectVisitor{
     public function GetScoreInt(){ return scoreInt; }
     public function GetSentenceStringArray(){ return sentenceStringArray; }
     public function GetTagCounterStructArray(){ return tagCounterStructArray; }
-    public function GetTagStructMap(){ return tagStructMap; }
+    public function GetTagObjectArray(){ return tagObjectArray; }
     public function GetVisitCorrectExhibitionBool(){ return visitedCorrectExhibitionBool; }
     public function SetJustChangeExhibitionBoolVoid(_justChangeExhibitionBool:Bool){ justChangeExhibitionBool = _justChangeExhibitionBool; }
 }

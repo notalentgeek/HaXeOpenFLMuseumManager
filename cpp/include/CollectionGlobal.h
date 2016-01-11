@@ -7,6 +7,7 @@
 
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(ObjectMuseum)
+HX_DECLARE_CLASS0(ObjectTag)
 HX_DECLARE_CLASS0(ObjectVisitor)
 
 
@@ -41,10 +42,10 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		int indexGlobalVisitorInt;
 		Array< ::Dynamic > roomObjectArray;
 		::ObjectMuseum selectedMuseumObject;
-		Dynamic selectedTagStruct;
+		::ObjectTag selectedTagObject;
 		::ObjectVisitor selectedVisitorObject;
-		cpp::ArrayBase tagGeneralStructArray;
-		cpp::ArrayBase tagStructArray;
+		Array< ::Dynamic > tagGeneralObjectArray;
+		Array< ::Dynamic > tagObjectArray;
 		Array< ::Dynamic > visitorObjectArray;
 		virtual Void DetermineExhibitionFullThresholdInt( );
 		Dynamic DetermineExhibitionFullThresholdInt_dyn();
@@ -67,17 +68,17 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		virtual ::ObjectMuseum GetSelectedMuseumObject( );
 		Dynamic GetSelectedMuseumObject_dyn();
 
-		virtual Dynamic GetSelectedTagStruct( );
-		Dynamic GetSelectedTagStruct_dyn();
+		virtual ::ObjectTag GetSelectedTagObject( );
+		Dynamic GetSelectedTagObject_dyn();
 
 		virtual ::ObjectVisitor GetSelectedVisitorObject( );
 		Dynamic GetSelectedVisitorObject_dyn();
 
-		virtual cpp::ArrayBase GetTagGeneralStructArray( );
-		Dynamic GetTagGeneralStructArray_dyn();
+		virtual Array< ::Dynamic > GetTagGeneralObjectArray( );
+		Dynamic GetTagGeneralObjectArray_dyn();
 
-		virtual cpp::ArrayBase GetTagStructArray( );
-		Dynamic GetTagStructArray_dyn();
+		virtual Array< ::Dynamic > GetTagObjectArray( );
+		Dynamic GetTagObjectArray_dyn();
 
 		virtual Array< ::Dynamic > GetVisitorObjectArray( );
 		Dynamic GetVisitorObjectArray_dyn();
@@ -100,14 +101,14 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		virtual Void SetSelectedMuseumObjectVoid( ::ObjectMuseum _selectedMuseumObject);
 		Dynamic SetSelectedMuseumObjectVoid_dyn();
 
-		virtual Void SetSelectedTagStructVoid( Dynamic _selectedTagStruct);
-		Dynamic SetSelectedTagStructVoid_dyn();
+		virtual Void SetSelectedTagObjectVoid( ::ObjectTag _selectedTagObject);
+		Dynamic SetSelectedTagObjectVoid_dyn();
 
 		virtual Void SetSelectedVisitorObjectVoid( ::ObjectVisitor _selectedVisitorObject);
 		Dynamic SetSelectedVisitorObjectVoid_dyn();
 
-		virtual Void SetTagStructArrayVoid( cpp::ArrayBase _tagStructArray);
-		Dynamic SetTagStructArrayVoid_dyn();
+		virtual Void SetTagObjectArrayVoid( Array< ::Dynamic > _tagObjectArray);
+		Dynamic SetTagObjectArrayVoid_dyn();
 
 		virtual Void SetVisitorObjectArrayVoid( Array< ::Dynamic > _visitorObjectArray);
 		Dynamic SetVisitorObjectArrayVoid_dyn();
