@@ -25,19 +25,6 @@ class Main{
                 collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int%collectionGlobalObject.GetRoomObjectArray().length].Update();
                 collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int%collectionGlobalObject.GetVisitorObjectArray().length].AIAutoExhibitionChangeVoid();
                 loopCounter1Int ++;
-
-                var debugString:String = "";
-                debugString = "";
-                for(_sentence in collectionGlobalObject.GetVisitorObjectArray()[0].GetSentenceStringArray()){
-                    if(_sentence != ""){ debugString = debugString + "\n\n" + _sentence; }
-                }
-                if(
-                    collectionGlobalObject.GetVisitorObjectArray()[0].GetFinishedBool() == false &&
-                    collectionGlobalObject.GetVisitorObjectArray()[0].GetJustChangeExhibitionBool() == true
-                ){
-                    collectionGlobalObject.GetVisitorObjectArray()[0].SetJustChangeExhibitionBoolVoid(false);
-                    trace(debugString);
-                }
             }
         }
     }

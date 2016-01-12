@@ -8,10 +8,8 @@ class ObjectVisitor{
     private var explanationStringArray:Array<String> = new Array<String>();
     private var finishedBool:Bool = false;
     private var floorCurrentObject:ObjectMuseum = null;
-    private var generatorSentenceObject:ObjectGeneratorSentence = new ObjectGeneratorSentence();
     private var indexGlobalInt:Int = -1;
     private var indexLocalInt:Int = -1;
-    private var justChangeExhibitionBool:Bool = false;
     private var nameString:String = "";
     private var roomCurrentObject:ObjectMuseum = null;
     private var scoreInt:Int = 0;
@@ -93,7 +91,6 @@ class ObjectVisitor{
             exhibitionVisitedObjectArray.push(exhibitionCurrentObject);
         }
         else{
-            justChangeExhibitionBool = true;
             if(exhibitionCurrentObject != null){
                 roomCurrentObject = exhibitionCurrentObject.GetParentObject();
                 floorCurrentObject = roomCurrentObject.GetParentObject();
@@ -146,8 +143,7 @@ class ObjectVisitor{
             roomCurrentObject.SetVisitorTotalIntVoid(floorCurrentObject.GetVisitorTotalInt() + 1);
             loopCounter1Int = 0;
 
-            var threeSentenceString:String = generatorSentenceObject.GenerateSentence3String(collectionGlobalObject, this);
-            //trace("FROM VISITOR OBJECT " + threeSentenceString);
+            var threeSentenceString:String = ObjectGeneratorSentence.GenerateSentence3String(collectionGlobalObject, this);
             sentenceStringArray.push(threeSentenceString);
             
             while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
@@ -262,12 +258,10 @@ class ObjectVisitor{
     }
     public function GetExhibitionCurrentObject(){ return exhibitionCurrentObject; }
     public function GetFinishedBool(){ return finishedBool; }
-    public function GetJustChangeExhibitionBool(){ return justChangeExhibitionBool; }
     public function GetNameString(){ return nameString; }
     public function GetScoreInt(){ return scoreInt; }
     public function GetSentenceStringArray(){ return sentenceStringArray; }
     public function GetTagCounterStructArray(){ return tagCounterStructArray; }
     public function GetTagObjectArray(){ return tagObjectArray; }
     public function GetVisitCorrectExhibitionBool(){ return visitedCorrectExhibitionBool; }
-    public function SetJustChangeExhibitionBoolVoid(_justChangeExhibitionBool:Bool){ justChangeExhibitionBool = _justChangeExhibitionBool; }
 }
