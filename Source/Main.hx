@@ -4,9 +4,8 @@ import CollectionEnum;
 import CollectionStruct;
 import flash.display.Sprite;
 import flash.events.Event;
+import haxe.ui.toolkit.containers.Absolute;
 import haxe.ui.toolkit.containers.Accordion;
-import haxe.ui.toolkit.containers.ListView;
-import haxe.ui.toolkit.controls.Button;
 import haxe.ui.toolkit.core.interfaces.IDisplayObject;
 import haxe.ui.toolkit.core.Root;
 import haxe.ui.toolkit.core.Toolkit;
@@ -15,27 +14,25 @@ import haxe.ui.toolkit.events.UIEvent;
 class Main extends Sprite{
     /*Global variable database for the whole application.*/
     var collectionGlobalObject:CollectionGlobal = new CollectionGlobal();
-    var layoutLeftOffsetInt:Int = 0;
-    var layoutMainMenuAccordionContentWidth:Int = 256;
-    var layoutMainMenuAccrodionContentHeight:Int = 64;
-    var layoutOffsetInt:Int = 16;
     var loopCounterMainInt:Int = 0;
     private function new(){
         super();
-        layoutLeftOffsetInt = layoutMainMenuAccordionContentWidth + (layoutOffsetInt*2);
         /*Create all the necessary object.*/
         CollectionTagGeneral.TagGeneralStructVoid(collectionGlobalObject);
         CollectionPremadeTag.PremadeTagStructVoid(collectionGlobalObject);
         CollectionPremade.PremadeFloorObjectVoid(collectionGlobalObject);
         CollectionPremade.PremadeRoomObjectVoid(collectionGlobalObject);
         CollectionPremade.PremadeExhibitionObjectVoid(collectionGlobalObject);
-        CollectionPremade.PremadeVisitorObjectVoid(100, collectionGlobalObject);
+        CollectionPremade.PremadeVisitorObjectVoid(10, collectionGlobalObject);
         Toolkit.init();
         Toolkit.setTransitionForClass(haxe.ui.toolkit.containers.Accordion, "none");
         Toolkit.openFullscreen(function(root:Root){
             /*Init GUI object here.*/
-            var accordionObject:IDisplayObject = Toolkit.processXmlResource("layout/MenuMainAccordion.xml");
-            root.addChild(accordionObject);
+            var uiMainObject:IDisplayObject = Toolkit.processXmlResource("layout/UIMain.xml");
+            collectionGlobalObject.SetUIMainObjectVoid(uiMainObject);
+            root.addChild(uiMainObject);
+            var uiMuseumAbsoluteObject:Absolute = root.findChild("uiMuseumAbsolute", Absolute);
+            collectionGlobalObject.SetUIMuseumAbsoluteObjectVoid(uiMuseumAbsoluteObject);
         });
         addEventListener(Event.ENTER_FRAME, Update);
     }
@@ -51,5 +48,6 @@ class Main extends Sprite{
         collectionGlobalObject.GetRoomObjectArray()[loopCounterMainInt%collectionGlobalObject.GetRoomObjectArray().length].Update();
         collectionGlobalObject.GetVisitorObjectArray()[loopCounterMainInt%collectionGlobalObject.GetVisitorObjectArray().length].AIAutoExhibitionChangeVoid();
         loopCounterMainInt ++;
+        //trace(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionCurrentObject().GetNameStruct().nameAltString);
     }
 }

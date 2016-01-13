@@ -1081,10 +1081,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("css/code.css", AssetType.TEXT);
 		path.set ("css/rtf.css", "css/rtf.css");
 		type.set ("css/rtf.css", AssetType.TEXT);
-		path.set ("assets/Layout/MenuMainAccordion.xml", "assets/Layout/MenuMainAccordion.xml");
-		type.set ("assets/Layout/MenuMainAccordion.xml", AssetType.TEXT);
-		path.set ("layout/MenuMainAccordion.xml", "layout/MenuMainAccordion.xml");
-		type.set ("layout/MenuMainAccordion.xml", AssetType.TEXT);
+		path.set ("assets/Layout/UIMain.xml", "assets/Layout/UIMain.xml");
+		type.set ("assets/Layout/UIMain.xml", AssetType.TEXT);
+		path.set ("layout/UIMain.xml", "layout/UIMain.xml");
+		type.set ("layout/UIMain.xml", AssetType.TEXT);
 		
 		
 		#elseif html5
@@ -1408,10 +1408,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "css/rtf.css";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/Layout/MenuMainAccordion.xml";
+		id = "assets/Layout/UIMain.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "layout/MenuMainAccordion.xml";
+		id = "layout/UIMain.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		

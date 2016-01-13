@@ -228,10 +228,10 @@ class AssetData {
 			type.set ("css/code.css", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("css/rtf.css", "css/rtf.css");
 			type.set ("css/rtf.css", Reflect.field (AssetType, "text".toUpperCase ()));
-			path.set ("assets/Layout/MenuMainAccordion.xml", "assets/Layout/MenuMainAccordion.xml");
-			type.set ("assets/Layout/MenuMainAccordion.xml", Reflect.field (AssetType, "text".toUpperCase ()));
-			path.set ("layout/MenuMainAccordion.xml", "layout/MenuMainAccordion.xml");
-			type.set ("layout/MenuMainAccordion.xml", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/Layout/UIMain.xml", "assets/Layout/UIMain.xml");
+			type.set ("assets/Layout/UIMain.xml", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("layout/UIMain.xml", "layout/UIMain.xml");
+			type.set ("layout/UIMain.xml", Reflect.field (AssetType, "text".toUpperCase ()));
 			
 			
 			initialized = true;

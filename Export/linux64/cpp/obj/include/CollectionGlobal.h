@@ -9,6 +9,19 @@ HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(ObjectMuseum)
 HX_DECLARE_CLASS0(ObjectTag)
 HX_DECLARE_CLASS0(ObjectVisitor)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Absolute)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Container)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,core,Component)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,core,DisplayObject)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,core,DisplayObjectContainer)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,core,StyleableDisplayObject)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IClonable)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IComponent)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDisplayObject)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDisplayObjectContainer)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDrawable)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IEventDispatcher)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IStyleableDisplayObject)
 
 
 class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
@@ -41,15 +54,21 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		Array< ::Dynamic > exhibitionObjectArray;
 		Array< ::Dynamic > floorObjectArray;
 		int indexGlobalVisitorInt;
+		int museumUIOffsetInt;
 		Array< ::Dynamic > roomObjectArray;
 		::ObjectMuseum selectedMuseumObject;
 		::ObjectTag selectedTagObject;
 		::ObjectVisitor selectedVisitorObject;
 		Array< ::Dynamic > tagGeneralObjectArray;
 		Array< ::Dynamic > tagObjectArray;
+		::haxe::ui::toolkit::core::interfaces::IDisplayObject uiMainObject;
+		::haxe::ui::toolkit::containers::Absolute uiMuseumAbsoluteObject;
 		Array< ::Dynamic > visitorObjectArray;
 		virtual Void DetermineExhibitionFullThresholdInt( );
 		Dynamic DetermineExhibitionFullThresholdInt_dyn();
+
+		virtual ::haxe::ui::toolkit::containers::Absolute GetUIMuseumAbsoluteObject( );
+		Dynamic GetUIMuseumAbsoluteObject_dyn();
 
 		virtual ::ObjectMuseum GetArchiveExhibitionObject( );
 		Dynamic GetArchiveExhibitionObject_dyn();
@@ -62,6 +81,9 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 
 		virtual Array< ::Dynamic > GetFloorObjectArray( );
 		Dynamic GetFloorObjectArray_dyn();
+
+		virtual int GetMuseumUIOffsetInt( );
+		Dynamic GetMuseumUIOffsetInt_dyn();
 
 		virtual Array< ::Dynamic > GetRoomObjectArray( );
 		Dynamic GetRoomObjectArray_dyn();
@@ -81,11 +103,20 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		virtual Array< ::Dynamic > GetTagObjectArray( );
 		Dynamic GetTagObjectArray_dyn();
 
+		virtual ::haxe::ui::toolkit::core::interfaces::IDisplayObject GetUIMainObject( );
+		Dynamic GetUIMainObject_dyn();
+
 		virtual Array< ::Dynamic > GetVisitorObjectArray( );
 		Dynamic GetVisitorObjectArray_dyn();
 
 		virtual int PutIndexGlobalVisitorInt( );
 		Dynamic PutIndexGlobalVisitorInt_dyn();
+
+		virtual Void SetUIMuseumAbsoluteObjectVoid( ::haxe::ui::toolkit::containers::Absolute _absoluteObject);
+		Dynamic SetUIMuseumAbsoluteObjectVoid_dyn();
+
+		virtual Void SetUIMainObjectVoid( ::haxe::ui::toolkit::core::interfaces::IDisplayObject _iDisplayObject);
+		Dynamic SetUIMainObjectVoid_dyn();
 
 		virtual Void SetExhibitionFullThresholdInt( int _exhibitionFullThresholdInt);
 		Dynamic SetExhibitionFullThresholdInt_dyn();

@@ -46,10 +46,6 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::openfl::_legacy::display::Spri
 		::String __ToString() const { return HX_HCSTRING("Main","\x59","\x64","\x2f","\x33"); }
 
 		::CollectionGlobal collectionGlobalObject;
-		int layoutLeftOffsetInt;
-		int layoutMainMenuAccordionContentWidth;
-		int layoutMainMenuAccrodionContentHeight;
-		int layoutOffsetInt;
 		int loopCounterMainInt;
 		virtual Void Update( ::openfl::_legacy::events::Event event);
 		Dynamic Update_dyn();

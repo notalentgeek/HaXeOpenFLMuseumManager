@@ -23,7 +23,7 @@ class ObjectVisitor{
     private var visitedCorrectExhibitionBool:Bool = true;
     private var visitExhibitionStructArray:Array<StructVisitorVisitExhibition> = new Array<StructVisitorVisitExhibition>();
     private var visitMuseumStructArray:Array<StructVisitorVisitMuseum> = new Array<StructVisitorVisitMuseum>(); /*PENDING:*/
-    public  function new(
+    public function new(
         _collectionGlobalObject:CollectionGlobal,
         _exhibitionCurrentObject:ObjectMuseum,
         _indexGlobalInt:Int,

@@ -12,11 +12,7 @@ class ObjectMuseum{
     private var nameStruct:StructName = { nameAltString:"", nameFullString:"" };
     private var parentObject:ObjectMuseum = null;
     private var siblingObjectArray:Array<ObjectMuseum> = new Array<ObjectMuseum>(); /*For floor, the sibling object will be the global variable of collectionGlobalObject.GetFloorObjectArray().*/
-    
-
     private var tagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
-
-
     private var typeEnum:EnumMuseumType = null;
     private var visitorCurrentInt:Int = 0;
     private var visitorTotalInt:Int = 0;
