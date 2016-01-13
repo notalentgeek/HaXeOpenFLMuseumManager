@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<scrollview width="20%" height="100%">
+    <vbox width="100%">
+        <button autoSize="true" width="100%" text="Add Museum Object"></button>
+        <button autoSize="true" width="100%" text="Add Tag"></button>
+        <button autoSize="true" width="100%" text="Add Visitor"></button>
+        <button autoSize="true" width="100%" text="Edit Museum Object"></button>
+        <button autoSize="true" width="100%" text="Edit Tag"></button>
+        <button autoSize="true" width="100%" text="Edit Visitor"></button>
+        <button autoSize="true" width="100%" text="Remove Museum Object"></button>
+        <button autoSize="true" width="100%" text="Remove Tag"></button>
+        <button autoSize="true" width="100%" text="Remove Visitor"></button>
+        <button autoSize="true" width="100%" text="Save"></button>
+        <button autoSize="true" width="100%" text="Save As"></button>
+        <button autoSize="true" width="100%" text="Load"></button>
+        <button autoSize="true" width="100%" text="Exit"></button>
+    </vbox>
+</scrollview>

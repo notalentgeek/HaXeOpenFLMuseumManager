@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    
+    <meta title="HaXeOpenFLMuseumManager" package="com.sample.haxeopenflmuseummanager" version="1.0.0" company="Company Name" />
+    <app main="Main" path="Export" file="HaXeOpenFLMuseumManager" />
+    
+    <window background="#FFFFFF" fps="60" />
+    <window width="1024" height="576" resizable="false" unless="mobile" />
+    <window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+
+    <source path="Source" />
+
+    <haxelib name="actuate" />
+    <haxelib name="haxeui" />
+    <haxelib name="haxeui-rich-text" />
+    <haxelib name="openfl" />
+    
+    <assets path="Assets" rename="assets" />
+    <assets path="Assets/Layout" rename="layout" />
+    
+</project>
