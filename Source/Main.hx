@@ -6,6 +6,7 @@ import flash.display.Sprite;
 import flash.events.Event;
 import haxe.ui.toolkit.containers.Absolute;
 import haxe.ui.toolkit.containers.Accordion;
+import haxe.ui.toolkit.containers.HBox;
 import haxe.ui.toolkit.core.interfaces.IDisplayObject;
 import haxe.ui.toolkit.core.Root;
 import haxe.ui.toolkit.core.Toolkit;
@@ -17,13 +18,6 @@ class Main extends Sprite{
     var loopCounterMainInt:Int = 0;
     private function new(){
         super();
-        /*Create all the necessary object.*/
-        CollectionTagGeneral.TagGeneralStructVoid(collectionGlobalObject);
-        CollectionPremadeTag.PremadeTagStructVoid(collectionGlobalObject);
-        CollectionPremade.PremadeFloorObjectVoid(collectionGlobalObject);
-        CollectionPremade.PremadeRoomObjectVoid(collectionGlobalObject);
-        CollectionPremade.PremadeExhibitionObjectVoid(collectionGlobalObject);
-        CollectionPremade.PremadeVisitorObjectVoid(10, collectionGlobalObject);
         Toolkit.init();
         Toolkit.setTransitionForClass(haxe.ui.toolkit.containers.Accordion, "none");
         Toolkit.openFullscreen(function(root:Root){
@@ -31,18 +25,17 @@ class Main extends Sprite{
             var uiMainObject:IDisplayObject = Toolkit.processXmlResource("layout/UIMain.xml");
             collectionGlobalObject.SetUIMainObjectVoid(uiMainObject);
             root.addChild(uiMainObject);
-            var uiMuseumAbsoluteObject:Absolute = root.findChild("uiMuseumAbsolute", Absolute);
+            var uiMuseumAbsoluteObject:Absolute = root.findChild("UIMuseumAbsolute", Absolute, true);
             collectionGlobalObject.SetUIMuseumAbsoluteObjectVoid(uiMuseumAbsoluteObject);
         });
+        /*Create all the necessary object.*/
+        CollectionTagGeneral.TagGeneralStructVoid(collectionGlobalObject);
+        CollectionPremadeTag.PremadeTagStructVoid(collectionGlobalObject);
+        CollectionPremade.PremadeFloorObjectVoid(collectionGlobalObject);
+        CollectionPremade.PremadeRoomObjectVoid(collectionGlobalObject);
+        CollectionPremade.PremadeExhibitionObjectVoid(collectionGlobalObject);
+        CollectionPremade.PremadeVisitorObjectVoid(10, collectionGlobalObject);
         addEventListener(Event.ENTER_FRAME, Update);
-
-        /*
-        var array1:Array<ObjectMuseum> = new Array<ObjectMuseum>();
-        var array2:Array<ObjectMuseum> = new Array<ObjectMuseum>();
-        var test:ObjectMuseum = new ObjectMuseum(collectionGlobalObject, "ROM_VVV", "VVV Room", "FLR_001", CollectionFunction.PickRandomTagObjectArray(collectionGlobalObject), ROM);
-        array1.push(test);
-        array2.push(test);
-        */
     }
     private function Update(event:Event){
         /*Loop through all objects.*/

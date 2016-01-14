@@ -73,6 +73,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Void ChangeParentVoid( ::String _parentNameAltString);
 		Dynamic ChangeParentVoid_dyn();
 
+		virtual Void DetermineIndexGlobalVoid( );
+		Dynamic DetermineIndexGlobalVoid_dyn();
+
+		virtual Void DetermineIndexLocalVoid( );
+		Dynamic DetermineIndexLocalVoid_dyn();
+
 		virtual Void RemoveTagByNameAltVoid( ::String _nameString);
 		Dynamic RemoveTagByNameAltVoid_dyn();
 
@@ -91,12 +97,6 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Void DetermineIndexVoid( );
 		Dynamic DetermineIndexVoid_dyn();
 
-		virtual Void DetermineIndexGlobalVoid( );
-		Dynamic DetermineIndexGlobalVoid_dyn();
-
-		virtual Void DetermineIndexLocalVoid( );
-		Dynamic DetermineIndexLocalVoid_dyn();
-
 		virtual Void DetermineSiblingVoid( );
 		Dynamic DetermineSiblingVoid_dyn();
 
@@ -108,6 +108,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 
 		virtual bool GetFullBool( );
 		Dynamic GetFullBool_dyn();
+
+		virtual int GetIndexLocalInt( );
+		Dynamic GetIndexLocalInt_dyn();
+
+		virtual ::ObjectMuseumUI GetMuseumUIObject( );
+		Dynamic GetMuseumUIObject_dyn();
 
 		virtual ::EnumMuseumMode GetMuseumModeEnum( );
 		Dynamic GetMuseumModeEnum_dyn();

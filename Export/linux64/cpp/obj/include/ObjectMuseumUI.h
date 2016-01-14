@@ -8,6 +8,7 @@
 #ifndef INCLUDED_openfl__legacy_display_Sprite
 #include <openfl/_legacy/display/Sprite.h>
 #endif
+HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(EnumMuseumType)
 HX_DECLARE_CLASS0(ObjectMuseumUI)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,controls,Button)
@@ -39,12 +40,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseumUI_obj : public ::openfl::_legacy::dis
 		typedef ::openfl::_legacy::display::Sprite_obj super;
 		typedef ObjectMuseumUI_obj OBJ_;
 		ObjectMuseumUI_obj();
-		Void __construct(int _widthInt,int _heightInt,int _indexGlobalInt,int _indexLocalInt,::EnumMuseumType _typeEnum,int _xInt,int _yInt);
+		Void __construct(::CollectionGlobal _collectionGlobalObject,::String _textString,::EnumMuseumType _typeEnum);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectMuseumUI")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectMuseumUI_obj > __new(int _widthInt,int _heightInt,int _indexGlobalInt,int _indexLocalInt,::EnumMuseumType _typeEnum,int _xInt,int _yInt);
+		static hx::ObjectPtr< ObjectMuseumUI_obj > __new(::CollectionGlobal _collectionGlobalObject,::String _textString,::EnumMuseumType _typeEnum);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectMuseumUI_obj();
@@ -60,13 +61,18 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseumUI_obj : public ::openfl::_legacy::dis
 		::String __ToString() const { return HX_HCSTRING("ObjectMuseumUI","\xa5","\x0f","\x08","\x70"); }
 
 		::haxe::ui::toolkit::controls::Button buttonObject;
+		::CollectionGlobal collectionGlobalObject;
+		int widthMaxInt;
 		int widthInt;
 		int heightInt;
-		int indexGlobalInt;
 		int indexLocalInt;
+		::String textString;
 		::EnumMuseumType typeEnum;
 		int xInt;
 		int yInt;
+		virtual Void Update( int _widthMaxInt,int _indexLocalInt);
+		Dynamic Update_dyn();
+
 };
 
 

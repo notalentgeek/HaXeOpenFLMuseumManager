@@ -5039,8 +5039,12 @@
    <depend name="include/Std.h"/>
   </file>
   <file name="src/ObjectMuseumUI.cpp">
+   <depend name="include/CollectionGlobal.h"/>
    <depend name="include/EnumMuseumType.h"/>
+   <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectMuseumUI.h"/>
+   <depend name="include/haxe/ui/toolkit/containers/Absolute.h"/>
+   <depend name="include/haxe/ui/toolkit/containers/Container.h"/>
    <depend name="include/haxe/ui/toolkit/controls/Button.h"/>
    <depend name="include/haxe/ui/toolkit/core/Component.h"/>
    <depend name="include/haxe/ui/toolkit/core/DisplayObject.h"/>
@@ -5073,11 +5077,15 @@
    <depend name="include/ObjectMuseumUI.h"/>
    <depend name="include/ObjectTag.h"/>
    <depend name="include/ObjectVisitor.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/openfl/_legacy/Lib.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
    <depend name="include/openfl/_legacy/display/InteractiveObject.h"/>
+   <depend name="include/openfl/_legacy/display/MovieClip.h"/>
    <depend name="include/openfl/_legacy/display/Sprite.h"/>
+   <depend name="include/openfl/_legacy/display/Stage.h"/>
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
   </file>
