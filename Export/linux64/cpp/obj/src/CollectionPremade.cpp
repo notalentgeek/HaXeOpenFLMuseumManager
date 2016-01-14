@@ -122,11 +122,19 @@ Void CollectionPremade_obj::PremadeRoomObjectVoid( ::CollectionGlobal _collectio
 		HX_STACK_LINE(21)
 		::CollectionGlobal tmp2 = _collectionGlobalObject;		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(21)
-		::ObjectMuseum_obj::__new(_collectionGlobalObject,HX_HCSTRING("ROM_003","\x24","\x11","\xdc","\x7c"),HX_HCSTRING("Third Room","\xb4","\x6d","\xcc","\x63"),HX_HCSTRING("FLR_002","\x7f","\x51","\xc9","\x37"),::CollectionFunction_obj::PickRandomTagObjectArray(tmp2),::EnumMuseumType_obj::ROM);
+		::ObjectMuseum_obj::__new(_collectionGlobalObject,HX_HCSTRING("ROM_003","\x24","\x11","\xdc","\x7c"),HX_HCSTRING("Third Room","\xb4","\x6d","\xcc","\x63"),HX_HCSTRING("FLR_001","\x7e","\x51","\xc9","\x37"),::CollectionFunction_obj::PickRandomTagObjectArray(tmp2),::EnumMuseumType_obj::ROM);
 		HX_STACK_LINE(22)
 		::CollectionGlobal tmp3 = _collectionGlobalObject;		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(22)
 		::ObjectMuseum_obj::__new(_collectionGlobalObject,HX_HCSTRING("ROM_004","\x25","\x11","\xdc","\x7c"),HX_HCSTRING("Fourth Room","\x21","\x1d","\x19","\x8e"),HX_HCSTRING("FLR_002","\x7f","\x51","\xc9","\x37"),::CollectionFunction_obj::PickRandomTagObjectArray(tmp3),::EnumMuseumType_obj::ROM);
+		HX_STACK_LINE(23)
+		::CollectionGlobal tmp4 = _collectionGlobalObject;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(23)
+		::ObjectMuseum_obj::__new(_collectionGlobalObject,HX_HCSTRING("ROM_005","\x26","\x11","\xdc","\x7c"),HX_HCSTRING("Fifth Room","\x24","\x51","\xac","\xf3"),HX_HCSTRING("FLR_002","\x7f","\x51","\xc9","\x37"),::CollectionFunction_obj::PickRandomTagObjectArray(tmp4),::EnumMuseumType_obj::ROM);
+		HX_STACK_LINE(24)
+		::CollectionGlobal tmp5 = _collectionGlobalObject;		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(24)
+		::ObjectMuseum_obj::__new(_collectionGlobalObject,HX_HCSTRING("ROM_006","\x27","\x11","\xdc","\x7c"),HX_HCSTRING("Sixth Room","\xa5","\x6d","\x00","\xbd"),HX_HCSTRING("FLR_002","\x7f","\x51","\xc9","\x37"),::CollectionFunction_obj::PickRandomTagObjectArray(tmp5),::EnumMuseumType_obj::ROM);
 	}
 return null();
 }
@@ -136,35 +144,35 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionPremade_obj,PremadeRoomObjectVoid,(void
 
 Void CollectionPremade_obj::PremadeVisitorObjectVoid( int _amountInt,::CollectionGlobal _collectionGlobalObject){
 {
-		HX_STACK_FRAME("CollectionPremade","PremadeVisitorObjectVoid",0x0940badd,"CollectionPremade.PremadeVisitorObjectVoid","CollectionPremade.hx",24,0xd14dbc64)
+		HX_STACK_FRAME("CollectionPremade","PremadeVisitorObjectVoid",0x0940badd,"CollectionPremade.PremadeVisitorObjectVoid","CollectionPremade.hx",26,0xd14dbc64)
 		HX_STACK_ARG(_amountInt,"_amountInt")
 		HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
-		HX_STACK_LINE(25)
+		HX_STACK_LINE(27)
 		int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-		HX_STACK_LINE(26)
+		HX_STACK_LINE(28)
 		while((true)){
-			HX_STACK_LINE(26)
+			HX_STACK_LINE(28)
 			bool tmp = (loopCounter1Int < _amountInt);		HX_STACK_VAR(tmp,"tmp");
-			HX_STACK_LINE(26)
+			HX_STACK_LINE(28)
 			bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-			HX_STACK_LINE(26)
+			HX_STACK_LINE(28)
 			if ((tmp1)){
-				HX_STACK_LINE(26)
+				HX_STACK_LINE(28)
 				break;
 			}
-			HX_STACK_LINE(27)
+			HX_STACK_LINE(29)
 			::CollectionGlobal tmp2 = _collectionGlobalObject;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(27)
+			HX_STACK_LINE(29)
 			::ObjectMuseum tmp3 = ::CollectionFunction_obj::PickRandomFromArrayT(_collectionGlobalObject->GetExhibitionObjectArray());		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(27)
+			HX_STACK_LINE(29)
 			int tmp4 = _collectionGlobalObject->PutIndexGlobalVisitorInt();		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(27)
+			HX_STACK_LINE(29)
 			::String tmp5 = (HX_HCSTRING("Visitor ","\xd2","\xd0","\x5e","\x02") + loopCounter1Int);		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(27)
+			HX_STACK_LINE(29)
 			::ObjectVisitor tmp6 = ::ObjectVisitor_obj::__new(tmp2,tmp3,tmp4,tmp5);		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(27)
+			HX_STACK_LINE(29)
 			::ObjectVisitor visitorObject = tmp6;		HX_STACK_VAR(visitorObject,"visitorObject");
-			HX_STACK_LINE(28)
+			HX_STACK_LINE(30)
 			(loopCounter1Int)++;
 		}
 	}

@@ -376,10 +376,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("css/code.css", AssetType.TEXT);
 		className.set ("css/rtf.css", __ASSET__css_rtf_css);
 		type.set ("css/rtf.css", AssetType.TEXT);
-		className.set ("assets/Layout/MenuMainAccordion.xml", __ASSET__assets_layout_menumainaccordion_xml);
-		type.set ("assets/Layout/MenuMainAccordion.xml", AssetType.TEXT);
-		className.set ("layout/MenuMainAccordion.xml", __ASSET__layout_menumainaccordion_xml);
-		type.set ("layout/MenuMainAccordion.xml", AssetType.TEXT);
+		className.set ("assets/Layout/UIMain.xml", __ASSET__assets_layout_uimain_xml);
+		type.set ("assets/Layout/UIMain.xml", AssetType.TEXT);
+		className.set ("layout/UIMain.xml", __ASSET__layout_uimain_xml);
+		type.set ("layout/UIMain.xml", AssetType.TEXT);
 		
 		
 		#elseif html5
@@ -809,11 +809,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
-		id = "assets/Layout/MenuMainAccordion.xml";
+		id = "assets/Layout/UIMain.xml";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
-		id = "layout/MenuMainAccordion.xml";
+		id = "layout/UIMain.xml";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -1153,11 +1153,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("css/rtf.css", __ASSET__css_rtf_css);
 		type.set ("css/rtf.css", AssetType.TEXT);
 		
-		className.set ("assets/Layout/MenuMainAccordion.xml", __ASSET__assets_layout_menumainaccordion_xml);
-		type.set ("assets/Layout/MenuMainAccordion.xml", AssetType.TEXT);
+		className.set ("assets/Layout/UIMain.xml", __ASSET__assets_layout_uimain_xml);
+		type.set ("assets/Layout/UIMain.xml", AssetType.TEXT);
 		
-		className.set ("layout/MenuMainAccordion.xml", __ASSET__layout_menumainaccordion_xml);
-		type.set ("layout/MenuMainAccordion.xml", AssetType.TEXT);
+		className.set ("layout/UIMain.xml", __ASSET__layout_uimain_xml);
+		type.set ("layout/UIMain.xml", AssetType.TEXT);
 		
 		
 		if (useManifest) {
@@ -1908,8 +1908,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__css_rtf_min_css extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__css_code_css extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__css_rtf_css extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_layout_menumainaccordion_xml extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__layout_menumainaccordion_xml extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_layout_uimain_xml extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__layout_uimain_xml extends flash.utils.ByteArray { }
 
 
 #elseif html5
@@ -2137,8 +2137,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("/usr/share/haxe/lib/haxeui-rich-text/0,1,2/assets/css/rtf.min.css") #if display private #end class __ASSET__css_rtf_min_css extends lime.utils.Bytes {}
 @:file("/usr/share/haxe/lib/haxeui-rich-text/0,1,2/assets/css/code.css") #if display private #end class __ASSET__css_code_css extends lime.utils.Bytes {}
 @:file("/usr/share/haxe/lib/haxeui-rich-text/0,1,2/assets/css/rtf.css") #if display private #end class __ASSET__css_rtf_css extends lime.utils.Bytes {}
-@:file("Assets/Layout/MenuMainAccordion.xml") #if display private #end class __ASSET__assets_layout_menumainaccordion_xml extends lime.utils.Bytes {}
-@:file("Assets/Layout/MenuMainAccordion.xml") #if display private #end class __ASSET__layout_menumainaccordion_xml extends lime.utils.Bytes {}
+@:file("Assets/Layout/UIMain.xml") #if display private #end class __ASSET__assets_layout_uimain_xml extends lime.utils.Bytes {}
+@:file("Assets/Layout/UIMain.xml") #if display private #end class __ASSET__layout_uimain_xml extends lime.utils.Bytes {}
 
 
 

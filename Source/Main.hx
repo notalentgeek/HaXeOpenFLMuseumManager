@@ -35,6 +35,14 @@ class Main extends Sprite{
             collectionGlobalObject.SetUIMuseumAbsoluteObjectVoid(uiMuseumAbsoluteObject);
         });
         addEventListener(Event.ENTER_FRAME, Update);
+
+        /*
+        var array1:Array<ObjectMuseum> = new Array<ObjectMuseum>();
+        var array2:Array<ObjectMuseum> = new Array<ObjectMuseum>();
+        var test:ObjectMuseum = new ObjectMuseum(collectionGlobalObject, "ROM_VVV", "VVV Room", "FLR_001", CollectionFunction.PickRandomTagObjectArray(collectionGlobalObject), ROM);
+        array1.push(test);
+        array2.push(test);
+        */
     }
     private function Update(event:Event){
         /*Loop through all objects.*/

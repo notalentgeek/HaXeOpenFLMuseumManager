@@ -454,11 +454,11 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/Layout/MenuMainAccordion.xml");
+		urls.push ("assets/Layout/UIMain.xml");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("layout/MenuMainAccordion.xml");
+		urls.push ("layout/UIMain.xml");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -523,7 +523,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "93",
+			build: "273",
 			company: "Company Name",
 			file: "HaXeOpenFLMuseumManager",
 			fps: 60,

@@ -18,8 +18,10 @@ class CollectionPremade{
     public static function PremadeRoomObjectVoid(_collectionGlobalObject:CollectionGlobal){
         new ObjectMuseum(_collectionGlobalObject, "ROM_001", "First Room", "FLR_001", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
         new ObjectMuseum(_collectionGlobalObject, "ROM_002", "Second Room", "FLR_001", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
-        new ObjectMuseum(_collectionGlobalObject, "ROM_003", "Third Room", "FLR_002", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
+        new ObjectMuseum(_collectionGlobalObject, "ROM_003", "Third Room", "FLR_001", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
         new ObjectMuseum(_collectionGlobalObject, "ROM_004", "Fourth Room", "FLR_002", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
+        new ObjectMuseum(_collectionGlobalObject, "ROM_005", "Fifth Room", "FLR_002", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
+        new ObjectMuseum(_collectionGlobalObject, "ROM_006", "Sixth Room", "FLR_002", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
     }
     public static function PremadeVisitorObjectVoid(_amountInt:Int, _collectionGlobalObject:CollectionGlobal){
         var loopCounter1Int:Int = 0;

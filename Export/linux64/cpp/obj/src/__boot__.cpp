@@ -1356,6 +1356,9 @@
 #ifndef INCLUDED_ObjectTag
 #include <ObjectTag.h>
 #endif
+#ifndef INCLUDED_ObjectMuseumUI
+#include <ObjectMuseumUI.h>
+#endif
 #ifndef INCLUDED_ObjectMuseum
 #include <ObjectMuseum.h>
 #endif
@@ -1899,6 +1902,7 @@ hx::RegisterResources( hx::GetResources() );
 ::Reflect_obj::__register();
 ::ObjectVisitor_obj::__register();
 ::ObjectTag_obj::__register();
+::ObjectMuseumUI_obj::__register();
 ::ObjectMuseum_obj::__register();
 ::ObjectGeneratorSentence_obj::__register();
 ::_List::ListIterator_obj::__register();

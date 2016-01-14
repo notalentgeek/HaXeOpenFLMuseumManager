@@ -9,8 +9,16 @@ HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(EnumMuseumMode)
 HX_DECLARE_CLASS0(EnumMuseumType)
 HX_DECLARE_CLASS0(ObjectMuseum)
+HX_DECLARE_CLASS0(ObjectMuseumUI)
 HX_DECLARE_CLASS0(ObjectTag)
 HX_DECLARE_CLASS0(ObjectVisitor)
+HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObject)
+HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObjectContainer)
+HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
+HX_DECLARE_CLASS3(openfl,_legacy,display,InteractiveObject)
+HX_DECLARE_CLASS3(openfl,_legacy,display,Sprite)
+HX_DECLARE_CLASS3(openfl,_legacy,events,EventDispatcher)
+HX_DECLARE_CLASS3(openfl,_legacy,events,IEventDispatcher)
 
 
 class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
@@ -45,6 +53,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		int indexGlobalInt;
 		int indexLocalInt;
 		::EnumMuseumMode museumModeEnum;
+		::ObjectMuseumUI museumUIObject;
 		Dynamic nameStruct;
 		::ObjectMuseum parentObject;
 		Array< ::Dynamic > siblingObjectArray;
@@ -64,18 +73,6 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Void ChangeParentVoid( ::String _parentNameAltString);
 		Dynamic ChangeParentVoid_dyn();
 
-		virtual Void DetermineIndexVoid( );
-		Dynamic DetermineIndexVoid_dyn();
-
-		virtual Void DetermineIndexGlobalVoid( );
-		Dynamic DetermineIndexGlobalVoid_dyn();
-
-		virtual Void DetermineIndexLocalVoid( );
-		Dynamic DetermineIndexLocalVoid_dyn();
-
-		virtual Void DetermineSiblingVoid( );
-		Dynamic DetermineSiblingVoid_dyn();
-
 		virtual Void RemoveTagByNameAltVoid( ::String _nameString);
 		Dynamic RemoveTagByNameAltVoid_dyn();
 
@@ -90,6 +87,18 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 
 		virtual Void DetermineFullVoid( );
 		Dynamic DetermineFullVoid_dyn();
+
+		virtual Void DetermineIndexVoid( );
+		Dynamic DetermineIndexVoid_dyn();
+
+		virtual Void DetermineIndexGlobalVoid( );
+		Dynamic DetermineIndexGlobalVoid_dyn();
+
+		virtual Void DetermineIndexLocalVoid( );
+		Dynamic DetermineIndexLocalVoid_dyn();
+
+		virtual Void DetermineSiblingVoid( );
+		Dynamic DetermineSiblingVoid_dyn();
 
 		virtual Dynamic GetChildStruct( );
 		Dynamic GetChildStruct_dyn();
