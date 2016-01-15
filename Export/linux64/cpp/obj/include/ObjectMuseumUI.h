@@ -10,6 +10,7 @@
 #endif
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(EnumMuseumType)
+HX_DECLARE_CLASS0(ObjectMuseum)
 HX_DECLARE_CLASS0(ObjectMuseumUI)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,controls,Button)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,core,Component)
@@ -70,7 +71,10 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseumUI_obj : public ::openfl::_legacy::dis
 		::EnumMuseumType typeEnum;
 		int xInt;
 		int yInt;
-		virtual Void Update( int _widthMaxInt,int _indexLocalInt);
+		virtual ::haxe::ui::toolkit::controls::Button GetButtonObject( );
+		Dynamic GetButtonObject_dyn();
+
+		virtual Void Update( int _indexLocalInt,::ObjectMuseum _object,int _widthMaxInt);
 		Dynamic Update_dyn();
 
 };

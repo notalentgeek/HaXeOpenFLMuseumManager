@@ -70,8 +70,8 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Void AddThisToArray( ::EnumMuseumType _typeEnum);
 		Dynamic AddThisToArray_dyn();
 
-		virtual Void ChangeParentVoid( ::String _parentNameAltString);
-		Dynamic ChangeParentVoid_dyn();
+		virtual ::ObjectMuseum ChangeParentObject( ::String _parentNameAltString);
+		Dynamic ChangeParentObject_dyn();
 
 		virtual Void DetermineIndexGlobalVoid( );
 		Dynamic DetermineIndexGlobalVoid_dyn();
@@ -123,6 +123,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 
 		virtual ::ObjectMuseum GetParentObject( );
 		Dynamic GetParentObject_dyn();
+
+		virtual Array< ::Dynamic > GetSiblingObjectArray( );
+		Dynamic GetSiblingObjectArray_dyn();
 
 		virtual Array< ::Dynamic > GetTagObjectArray( );
 		Dynamic GetTagObjectArray_dyn();

@@ -27,9 +27,10 @@ class ObjectMuseum{
         _typeEnum:EnumMuseumType
     ){
         collectionGlobalObject = _collectionGlobalObject;
-        typeEnum = _typeEnum;
         nameStruct.nameAltString = _nameAltString;
         nameStruct.nameFullString = _nameFullString;
+        typeEnum = _typeEnum;
+        tagObjectArray = _tagObjectArray;
         if(nameStruct.nameAltString != "EXH_ARC"){ AddThisToArray(_typeEnum); }
         /*Create the UI.*/
         museumUIObject = new ObjectMuseumUI(
@@ -37,8 +38,7 @@ class ObjectMuseum{
             nameStruct.nameAltString,
             typeEnum
         );
-        ChangeParentVoid(_parentNameAltString);
-        tagObjectArray = _tagObjectArray;
+        ChangeParentObject(_parentNameAltString);
     }
     private function AddChildVisitorVoid(_visitorObject:ObjectVisitor){ childStruct.childVisitorObjectArray.push(_visitorObject); }
     private function AddTagVoid(_tagObject:ObjectTag){ tagObjectArray.push(_tagObject); }
@@ -47,48 +47,50 @@ class ObjectMuseum{
         else if(_typeEnum == FLR){ collectionGlobalObject.GetFloorObjectArray().push(this); }
         else if(_typeEnum == ROM){ collectionGlobalObject.GetRoomObjectArray().push(this); }
     }
-    private function ChangeParentVoid(_parentNameAltString:String){
+    private function ChangeParentObject(_parentNameAltString:String){
         /*Remove this object from current parent object child object array.*/
-        trace("TEST1.");
         if(parentObject != null){ parentObject.GetChildStruct().childMuseumObjectArray.remove(this); }
-        trace("TEST2.");
         if(typeEnum == EXH && nameStruct.nameAltString != "EXH_ARC"){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, ROM, _parentNameAltString)); }
         else if(typeEnum == FLR){ parentObject = null; }
         else if(typeEnum == ROM){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, FLR, _parentNameAltString)); }
-        trace("TEST3.");
         var loopCounter1Int:Int = 0;
-        trace("TEST4.");
         while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
-            trace("TEST4.1.");
             collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineSiblingVoid();
-            trace("TEST4.2.");
             collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineIndexVoid();
-            trace("TEST4.3.");
-            trace(nameStruct.nameAltString);
-            trace(collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetNameStruct().nameAltString);
-            trace(collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject());
-            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().Update(Math.round(Lib.current.stage.stageWidth - (Lib.current.stage.stageWidth/4)), collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetIndexLocalInt());
-            trace("TEST4.4.");
+            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().Update(
+                collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetIndexLocalInt(),
+                collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int],
+                Lib.current.stage.stageWidth
+            );
             loopCounter1Int ++;
         }
         loopCounter1Int = 0;
-        trace("TEST5.");
         while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
             collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetParentObject().DetermineChildVoid();
             collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].DetermineSiblingVoid();
             collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].DetermineIndexVoid();
+            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetMuseumUIObject().Update(
+                collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetIndexLocalInt(),
+                collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int],
+                Lib.current.stage.stageWidth
+            );
             loopCounter1Int ++;
         }
         loopCounter1Int = 0;
-        trace("TEST6.");
         if(nameStruct.nameAltString != "EXH_ARC"){
             while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
                 collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetParentObject().DetermineChildVoid();
                 collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineSiblingVoid();
                 collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineIndexVoid();
+                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetMuseumUIObject().Update(
+                    collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetIndexLocalInt(),
+                    collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int],
+                    Lib.current.stage.stageWidth
+                );
                 loopCounter1Int ++;
             }
         }
+        return parentObject;
     }
     private function DetermineIndexGlobalVoid(){
         var foundIndexGlobalBool:Bool = false;
@@ -195,6 +197,7 @@ class ObjectMuseum{
     public function GetMuseumModeEnum(){ return museumModeEnum; }
     public function GetNameStruct(){ return nameStruct; }
     public function GetParentObject(){ return parentObject; }
+    public function GetSiblingObjectArray(){ return siblingObjectArray; }
     public function GetTagObjectArray(){ return tagObjectArray; }
     public function GetTypeEnum(){ return typeEnum; }
     public function GetVisitorCurrentInt(){ return visitorCurrentInt; }
@@ -213,7 +216,10 @@ class ObjectMuseum{
     public function SetVisitorTotalIntVoid(_visitorTotalInt:Int){ visitorTotalInt = _visitorTotalInt; }
     /*Update function is mainly to update all museum object in real time.*/
     public function Update(){
-        if(museumModeEnum == MRK_DEL)                               {
+        /*PENDING: There is an error on updating museum UI object over time. This should not happened.*/
+        //museumUIObject.Update(indexLocalInt, this, Lib.current.stage.stageWidth);
+
+        if(museumModeEnum == MRK_DEL){
             /*So here the museum object is already tagged to be deleted.
             I need to do another checking whether the object has any children or not.*/
             if(typeEnum == EXH){
