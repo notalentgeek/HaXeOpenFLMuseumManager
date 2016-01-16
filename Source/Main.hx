@@ -34,7 +34,7 @@ class Main extends Sprite{
         CollectionPremade.PremadeFloorObjectVoid(collectionGlobalObject);
         CollectionPremade.PremadeRoomObjectVoid(collectionGlobalObject);
         CollectionPremade.PremadeExhibitionObjectVoid(collectionGlobalObject);
-        CollectionPremade.PremadeVisitorObjectVoid(10, collectionGlobalObject);
+        CollectionPremade.PremadeVisitorObjectVoid(100, collectionGlobalObject);
         addEventListener(Event.ENTER_FRAME, Update);
     }
     private function Update(event:Event){
@@ -49,6 +49,13 @@ class Main extends Sprite{
         collectionGlobalObject.GetRoomObjectArray()[loopCounterMainInt%collectionGlobalObject.GetRoomObjectArray().length].Update();
         collectionGlobalObject.GetVisitorObjectArray()[loopCounterMainInt%collectionGlobalObject.GetVisitorObjectArray().length].AIAutoExhibitionChangeVoid();
         loopCounterMainInt ++;
-        //trace(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionCurrentObject().GetNameStruct().nameAltString);
     }
+    /*These are set of functionc to update the whole object within the application.
+    The slow speed means that the objects will updated using least common multiplier, which also means that object array that is smallest will get update more often.
+    The normal speed means that the objects will updated using least common multiplier but not the visitor object. This means that the visitor object will get their own loop to iterate its array.
+    The fast speed is to update all the object's array in each different loop.
+    These methods means that the faster the loop progress the slower (heavier) the application will be runs in a computer/device.*/
+    private function UpdateSlowVoid(){}
+    private function UpdateNormalVoid(){}
+    private function UpdateFastVoid(){}
 }

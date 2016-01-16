@@ -9,6 +9,14 @@ HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(ObjectMuseum)
 HX_DECLARE_CLASS0(ObjectTag)
 HX_DECLARE_CLASS0(ObjectVisitor)
+HX_DECLARE_CLASS0(ObjectVisitorUI)
+HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObject)
+HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObjectContainer)
+HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
+HX_DECLARE_CLASS3(openfl,_legacy,display,InteractiveObject)
+HX_DECLARE_CLASS3(openfl,_legacy,display,Sprite)
+HX_DECLARE_CLASS3(openfl,_legacy,events,EventDispatcher)
+HX_DECLARE_CLASS3(openfl,_legacy,events,IEventDispatcher)
 
 
 class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
@@ -58,6 +66,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		bool visitedCorrectExhibitionBool;
 		cpp::ArrayBase visitExhibitionStructArray;
 		cpp::ArrayBase visitMuseumStructArray;
+		::ObjectVisitorUI visitorUIObject;
 		virtual Void AddRemoveVisitorFromExhibitionVoid( bool _isAdd);
 		Dynamic AddRemoveVisitorFromExhibitionVoid_dyn();
 
@@ -88,6 +97,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual bool GetFinishedBool( );
 		Dynamic GetFinishedBool_dyn();
 
+		virtual int GetIndexLocalInt( );
+		Dynamic GetIndexLocalInt_dyn();
+
 		virtual ::String GetNameString( );
 		Dynamic GetNameString_dyn();
 
@@ -103,8 +115,14 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual Array< ::Dynamic > GetTagObjectArray( );
 		Dynamic GetTagObjectArray_dyn();
 
+		virtual ::ObjectVisitorUI GetVisitorUIObject( );
+		Dynamic GetVisitorUIObject_dyn();
+
 		virtual bool GetVisitCorrectExhibitionBool( );
 		Dynamic GetVisitCorrectExhibitionBool_dyn();
+
+		virtual Void SetIndexLocalIntVoid( int _indexLocalInt);
+		Dynamic SetIndexLocalIntVoid_dyn();
 
 };
 

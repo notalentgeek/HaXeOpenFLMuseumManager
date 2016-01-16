@@ -1350,6 +1350,9 @@
 #ifndef INCLUDED_Reflect
 #include <Reflect.h>
 #endif
+#ifndef INCLUDED_ObjectVisitorUI
+#include <ObjectVisitorUI.h>
+#endif
 #ifndef INCLUDED_ObjectVisitor
 #include <ObjectVisitor.h>
 #endif
@@ -1900,6 +1903,7 @@ hx::RegisterResources( hx::GetResources() );
 ::StringTools_obj::__register();
 ::StringBuf_obj::__register();
 ::Reflect_obj::__register();
+::ObjectVisitorUI_obj::__register();
 ::ObjectVisitor_obj::__register();
 ::ObjectTag_obj::__register();
 ::ObjectMuseumUI_obj::__register();

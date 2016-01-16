@@ -41,12 +41,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseumUI_obj : public ::openfl::_legacy::dis
 		typedef ::openfl::_legacy::display::Sprite_obj super;
 		typedef ObjectMuseumUI_obj OBJ_;
 		ObjectMuseumUI_obj();
-		Void __construct(::CollectionGlobal _collectionGlobalObject,::String _textString,::EnumMuseumType _typeEnum);
+		Void __construct(::CollectionGlobal _collectionGlobalObject,::EnumMuseumType _typeEnum);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectMuseumUI")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectMuseumUI_obj > __new(::CollectionGlobal _collectionGlobalObject,::String _textString,::EnumMuseumType _typeEnum);
+		static hx::ObjectPtr< ObjectMuseumUI_obj > __new(::CollectionGlobal _collectionGlobalObject,::EnumMuseumType _typeEnum);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectMuseumUI_obj();
@@ -63,10 +63,8 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseumUI_obj : public ::openfl::_legacy::dis
 
 		::haxe::ui::toolkit::controls::Button buttonObject;
 		::CollectionGlobal collectionGlobalObject;
-		int widthMaxInt;
 		int widthInt;
 		int heightInt;
-		int indexLocalInt;
 		::String textString;
 		::EnumMuseumType typeEnum;
 		int xInt;
@@ -74,8 +72,8 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseumUI_obj : public ::openfl::_legacy::dis
 		virtual ::haxe::ui::toolkit::controls::Button GetButtonObject( );
 		Dynamic GetButtonObject_dyn();
 
-		virtual Void Update( int _indexLocalInt,::ObjectMuseum _object,int _widthMaxInt);
-		Dynamic Update_dyn();
+		virtual Void UpdateVoid( ::ObjectMuseum _object,int _widthMaxInt);
+		Dynamic UpdateVoid_dyn();
 
 };
 

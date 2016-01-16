@@ -23,6 +23,7 @@ class ObjectVisitor{
     private var visitedCorrectExhibitionBool:Bool = true;
     private var visitExhibitionStructArray:Array<StructVisitorVisitExhibition> = new Array<StructVisitorVisitExhibition>();
     private var visitMuseumStructArray:Array<StructVisitorVisitMuseum> = new Array<StructVisitorVisitMuseum>(); /*PENDING:*/
+    private var visitorUIObject:ObjectVisitorUI = null;
     public function new(
         _collectionGlobalObject:CollectionGlobal,
         _exhibitionCurrentObject:ObjectMuseum,
@@ -31,9 +32,10 @@ class ObjectVisitor{
     ){
         collectionGlobalObject = _collectionGlobalObject;
         indexGlobalInt = _indexGlobalInt;
-        ChangeExhibitionCurrentVoid(_exhibitionCurrentObject);
         nameString = _nameString;
         collectionGlobalObject.GetVisitorObjectArray().push(this);
+        visitorUIObject = new ObjectVisitorUI(collectionGlobalObject);
+        ChangeExhibitionCurrentVoid(_exhibitionCurrentObject);
     }
     private function AddRemoveVisitorFromExhibitionVoid(_isAdd:Bool){
         if(_isAdd == true ){ exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.push(this); }
@@ -141,16 +143,25 @@ class ObjectVisitor{
             floorCurrentObject.SetVisitorTotalIntVoid(roomCurrentObject.GetVisitorTotalInt() + 1);
             roomCurrentObject.SetVisitorCurrentIntVoid(floorCurrentObject.GetVisitorCurrentInt() + 1);
             roomCurrentObject.SetVisitorTotalIntVoid(floorCurrentObject.GetVisitorTotalInt() + 1);
-            loopCounter1Int = 0;
 
             var threeSentenceString:String = ObjectGeneratorSentence.GenerateSentence3String(collectionGlobalObject, this);
             sentenceStringArray.push(threeSentenceString);
-            
+
+            loopCounter1Int = 0;
+            while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
+                if(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameAltString != "EXH_ARC"){
+                    collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineChildVoid();
+                }
+                loopCounter1Int ++;
+            }
+
+            loopCounter1Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
                 collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
                 collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(targetInt);
-                loopCounter1Int                                 ++;
+                loopCounter1Int ++;
             }
+
             var visitorVisitExhibitionStruct:StructVisitorVisitExhibition = {
                 currentExhibitionTimeInt:0,
                 exhibitionNameAltString:""
@@ -168,6 +179,19 @@ class ObjectVisitor{
     }
     private function DetermineIndexLocalVoid(){
         indexLocalInt = exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.indexOf(this);
+        //trace(exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.length);
+        //trace(indexLocalInt);
+        /*
+        var loopCounter1Int:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].SetIndexLocalIntVoid(
+                collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetExhibitionCurrentObject().GetChildStruct().childVisitorObjectArray.indexOf(
+                    collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]
+                )
+            );
+            loopCounter1Int ++;
+        }
+        */
     }
     private function GenerateExhibitionTargetVoid(_targetInt:Int){
         var   loopCounter1Int:Int = 0;
@@ -246,6 +270,11 @@ class ObjectVisitor{
     private function GenerateSentenceVoid(_amount:Int){ return ""; }
     private function SortTagCounterVoid(){ tagCounterStructArray.sort(function(_a:StructTagCounter, _b:StructTagCounter){ return _a.tagCounterInt - _b.tagCounterInt; }); }
     public  function AIAutoExhibitionChangeVoid(){
+        var loopCounter1Int:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
+            loopCounter1Int ++;
+        }
         if(finishedBool == false){
             var randomFloat:Float = Math.random();
             timeAIAutoExhibitionChangeFloat += 0.01;
@@ -258,10 +287,13 @@ class ObjectVisitor{
     }
     public function GetExhibitionCurrentObject(){ return exhibitionCurrentObject; }
     public function GetFinishedBool(){ return finishedBool; }
+    public function GetIndexLocalInt(){ return indexLocalInt; }
     public function GetNameString(){ return nameString; }
     public function GetScoreInt(){ return scoreInt; }
     public function GetSentenceStringArray(){ return sentenceStringArray; }
     public function GetTagCounterStructArray(){ return tagCounterStructArray; }
     public function GetTagObjectArray(){ return tagObjectArray; }
+    public function GetVisitorUIObject(){ return visitorUIObject; }
     public function GetVisitCorrectExhibitionBool(){ return visitedCorrectExhibitionBool; }
+    public function SetIndexLocalIntVoid(_indexLocalInt:Int){ indexLocalInt = _indexLocalInt; }
 }
