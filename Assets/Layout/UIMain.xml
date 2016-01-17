@@ -18,8 +18,6 @@
         </vbox>
     </scrollview>
     <scrollview width="75%" height="100%">
-        <vbox width="100%">
-            <absolute width="100%" id="UIMuseumAbsolute"></absolute>
-        </vbox>
+        <absolute width="100%" id="UIMuseumAbsolute"></absolute>
     </scrollview>
 </hbox>>
