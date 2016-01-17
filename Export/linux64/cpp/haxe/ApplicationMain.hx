@@ -139,8 +139,8 @@ class ApplicationMain {
 			(false ? flash.Lib.BORDERLESS : 0) |
 			(false ? flash.Lib.VSYNC : 0) |
 			(false ? flash.Lib.FULLSCREEN : 0) |
-			(0 == 4 ? flash.Lib.HW_AA_HIRES : 0) |
-			(0 == 2 ? flash.Lib.HW_AA : 0),
+			(1 == 4 ? flash.Lib.HW_AA_HIRES : 0) |
+			(1 == 2 ? flash.Lib.HW_AA : 0),
 			"HaXeOpenFLMuseumManager",
 			null
 			#if mobile, ScaledStage #end
@@ -491,7 +491,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "615",
+			build: "655",
 			company: "Company Name",
 			file: "HaXeOpenFLMuseumManager",
 			fps: 60,
@@ -502,7 +502,7 @@ class ApplicationMain {
 			windows: [
 				
 				{
-					antialiasing: 0,
+					antialiasing: 1,
 					background: 16777215,
 					borderless: false,
 					depthBuffer: false,

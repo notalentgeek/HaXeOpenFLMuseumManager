@@ -111,7 +111,7 @@ HX_STACK_ARG(_typeEnum,"_typeEnum")
 	HX_STACK_LINE(17)
 	this->textString = HX_HCSTRING("","\x00","\x00","\x00","\x00");
 	HX_STACK_LINE(16)
-	this->heightInt = (int)50;
+	this->heightInt = (int)43;
 	HX_STACK_LINE(15)
 	this->widthInt = (int)-1;
 	HX_STACK_LINE(14)
@@ -187,63 +187,79 @@ Void ObjectMuseumUI_obj::UpdateVoid( ::ObjectMuseum _object,int _widthMaxInt){
 			HX_STACK_LINE(36)
 			int tmp9 = tmp8->GetFloorObjectArray()->length;		HX_STACK_VAR(tmp9,"tmp9");
 			HX_STACK_LINE(36)
-			Float tmp10 = (Float(tmp7) / Float(tmp9));		HX_STACK_VAR(tmp10,"tmp10");
+			int tmp10 = (tmp9 - (int)1);		HX_STACK_VAR(tmp10,"tmp10");
 			HX_STACK_LINE(36)
-			int tmp11 = ::Math_obj::round(tmp10);		HX_STACK_VAR(tmp11,"tmp11");
+			int tmp11 = (tmp10 * (int)5);		HX_STACK_VAR(tmp11,"tmp11");
 			HX_STACK_LINE(36)
-			this->widthInt = tmp11;
+			Float tmp12 = (tmp7 - tmp11);		HX_STACK_VAR(tmp12,"tmp12");
+			HX_STACK_LINE(36)
+			::CollectionGlobal tmp13 = this->collectionGlobalObject;		HX_STACK_VAR(tmp13,"tmp13");
+			HX_STACK_LINE(36)
+			int tmp14 = tmp13->GetFloorObjectArray()->length;		HX_STACK_VAR(tmp14,"tmp14");
+			HX_STACK_LINE(36)
+			Float tmp15 = (Float(tmp12) / Float(tmp14));		HX_STACK_VAR(tmp15,"tmp15");
+			HX_STACK_LINE(36)
+			int tmp16 = ::Math_obj::round(tmp15);		HX_STACK_VAR(tmp16,"tmp16");
+			HX_STACK_LINE(36)
+			this->widthInt = tmp16;
 			HX_STACK_LINE(37)
-			::haxe::ui::toolkit::controls::Button tmp12 = this->buttonObject;		HX_STACK_VAR(tmp12,"tmp12");
+			::haxe::ui::toolkit::controls::Button tmp17 = this->buttonObject;		HX_STACK_VAR(tmp17,"tmp17");
 			HX_STACK_LINE(37)
-			int tmp13 = this->widthInt;		HX_STACK_VAR(tmp13,"tmp13");
+			int tmp18 = this->widthInt;		HX_STACK_VAR(tmp18,"tmp18");
 			HX_STACK_LINE(37)
-			tmp12->set_width(tmp13);
+			tmp17->set_width(tmp18);
 			HX_STACK_LINE(38)
-			::haxe::ui::toolkit::controls::Button tmp14 = this->buttonObject;		HX_STACK_VAR(tmp14,"tmp14");
-			HX_STACK_LINE(38)
-			int tmp15 = this->heightInt;		HX_STACK_VAR(tmp15,"tmp15");
-			HX_STACK_LINE(38)
-			tmp14->set_height(tmp15);
-			HX_STACK_LINE(39)
-			::haxe::ui::toolkit::controls::Button tmp16 = this->buttonObject;		HX_STACK_VAR(tmp16,"tmp16");
-			HX_STACK_LINE(39)
-			Dynamic tmp17 = _object->GetNameStruct();		HX_STACK_VAR(tmp17,"tmp17");
-			HX_STACK_LINE(39)
-			::String tmp18 = tmp17->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp18,"tmp18");
-			HX_STACK_LINE(39)
-			tmp16->set_id(tmp18);
-			HX_STACK_LINE(40)
 			::haxe::ui::toolkit::controls::Button tmp19 = this->buttonObject;		HX_STACK_VAR(tmp19,"tmp19");
+			HX_STACK_LINE(38)
+			int tmp20 = this->heightInt;		HX_STACK_VAR(tmp20,"tmp20");
+			HX_STACK_LINE(38)
+			tmp19->set_height(tmp20);
+			HX_STACK_LINE(39)
+			::haxe::ui::toolkit::controls::Button tmp21 = this->buttonObject;		HX_STACK_VAR(tmp21,"tmp21");
+			HX_STACK_LINE(39)
+			Dynamic tmp22 = _object->GetNameStruct();		HX_STACK_VAR(tmp22,"tmp22");
+			HX_STACK_LINE(39)
+			::String tmp23 = tmp22->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp23,"tmp23");
+			HX_STACK_LINE(39)
+			tmp21->set_id(tmp23);
 			HX_STACK_LINE(40)
-			Dynamic tmp20 = _object->GetNameStruct();		HX_STACK_VAR(tmp20,"tmp20");
+			::haxe::ui::toolkit::controls::Button tmp24 = this->buttonObject;		HX_STACK_VAR(tmp24,"tmp24");
 			HX_STACK_LINE(40)
-			::String tmp21 = tmp20->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp21,"tmp21");
+			Dynamic tmp25 = _object->GetNameStruct();		HX_STACK_VAR(tmp25,"tmp25");
 			HX_STACK_LINE(40)
-			tmp19->set_text(tmp21);
+			::String tmp26 = tmp25->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp26,"tmp26");
+			HX_STACK_LINE(40)
+			tmp24->set_text(tmp26);
 			HX_STACK_LINE(41)
-			::haxe::ui::toolkit::controls::Button tmp22 = this->buttonObject;		HX_STACK_VAR(tmp22,"tmp22");
-			HX_STACK_LINE(41)
-			::haxe::ui::toolkit::controls::Button tmp23 = this->buttonObject;		HX_STACK_VAR(tmp23,"tmp23");
-			HX_STACK_LINE(41)
-			Float tmp24 = tmp23->get_width();		HX_STACK_VAR(tmp24,"tmp24");
-			HX_STACK_LINE(41)
-			int tmp25 = _object->GetIndexLocalInt();		HX_STACK_VAR(tmp25,"tmp25");
-			HX_STACK_LINE(41)
-			Float tmp26 = (tmp24 * tmp25);		HX_STACK_VAR(tmp26,"tmp26");
-			HX_STACK_LINE(41)
-			tmp22->set_x(tmp26);
-			HX_STACK_LINE(42)
 			::haxe::ui::toolkit::controls::Button tmp27 = this->buttonObject;		HX_STACK_VAR(tmp27,"tmp27");
+			HX_STACK_LINE(41)
+			::haxe::ui::toolkit::controls::Button tmp28 = this->buttonObject;		HX_STACK_VAR(tmp28,"tmp28");
+			HX_STACK_LINE(41)
+			Float tmp29 = tmp28->get_width();		HX_STACK_VAR(tmp29,"tmp29");
+			HX_STACK_LINE(41)
+			int tmp30 = _object->GetIndexLocalInt();		HX_STACK_VAR(tmp30,"tmp30");
+			HX_STACK_LINE(41)
+			Float tmp31 = (tmp29 * tmp30);		HX_STACK_VAR(tmp31,"tmp31");
+			HX_STACK_LINE(41)
+			int tmp32 = _object->GetIndexLocalInt();		HX_STACK_VAR(tmp32,"tmp32");
+			HX_STACK_LINE(41)
+			int tmp33 = (tmp32 * (int)5);		HX_STACK_VAR(tmp33,"tmp33");
+			HX_STACK_LINE(41)
+			Float tmp34 = (tmp31 + tmp33);		HX_STACK_VAR(tmp34,"tmp34");
+			HX_STACK_LINE(41)
+			tmp27->set_x(tmp34);
 			HX_STACK_LINE(42)
-			tmp27->set_y((int)0);
+			::haxe::ui::toolkit::controls::Button tmp35 = this->buttonObject;		HX_STACK_VAR(tmp35,"tmp35");
+			HX_STACK_LINE(42)
+			tmp35->set_y((int)0);
 			HX_STACK_LINE(43)
-			::CollectionGlobal tmp28 = this->collectionGlobalObject;		HX_STACK_VAR(tmp28,"tmp28");
+			::CollectionGlobal tmp36 = this->collectionGlobalObject;		HX_STACK_VAR(tmp36,"tmp36");
 			HX_STACK_LINE(43)
-			::haxe::ui::toolkit::containers::Absolute tmp29 = tmp28->GetUIMuseumAbsoluteObject();		HX_STACK_VAR(tmp29,"tmp29");
+			::haxe::ui::toolkit::containers::Absolute tmp37 = tmp36->GetUIMuseumAbsoluteObject();		HX_STACK_VAR(tmp37,"tmp37");
 			HX_STACK_LINE(43)
-			::haxe::ui::toolkit::controls::Button tmp30 = this->buttonObject;		HX_STACK_VAR(tmp30,"tmp30");
+			::haxe::ui::toolkit::controls::Button tmp38 = this->buttonObject;		HX_STACK_VAR(tmp38,"tmp38");
 			HX_STACK_LINE(43)
-			tmp29->addChild(tmp30);
+			tmp37->addChild(tmp38);
 		}
 		else{
 			HX_STACK_LINE(45)
@@ -270,131 +286,117 @@ Void ObjectMuseumUI_obj::UpdateVoid( ::ObjectMuseum _object,int _widthMaxInt){
 			HX_STACK_LINE(45)
 			if ((tmp5)){
 				HX_STACK_LINE(46)
-				::EnumMuseumType tmp6 = this->typeEnum;		HX_STACK_VAR(tmp6,"tmp6");
+				::ObjectMuseum tmp6 = _object->GetParentObject();		HX_STACK_VAR(tmp6,"tmp6");
 				HX_STACK_LINE(46)
-				bool tmp7 = (tmp6 == ::EnumMuseumType_obj::EXH);		HX_STACK_VAR(tmp7,"tmp7");
+				::ObjectMuseumUI tmp7 = tmp6->GetMuseumUIObject();		HX_STACK_VAR(tmp7,"tmp7");
 				HX_STACK_LINE(46)
-				if ((tmp7)){
-					HX_STACK_LINE(46)
-					::ObjectMuseum tmp8 = _object->GetParentObject();		HX_STACK_VAR(tmp8,"tmp8");
-					HX_STACK_LINE(46)
-					::ObjectMuseumUI tmp9 = tmp8->GetMuseumUIObject();		HX_STACK_VAR(tmp9,"tmp9");
-					HX_STACK_LINE(46)
-					::haxe::ui::toolkit::controls::Button tmp10 = tmp9->GetButtonObject();		HX_STACK_VAR(tmp10,"tmp10");
-					HX_STACK_LINE(46)
-					Float tmp11 = tmp10->get_width();		HX_STACK_VAR(tmp11,"tmp11");
-					HX_STACK_LINE(46)
-					int tmp12 = _object->GetSiblingObjectArray()->length;		HX_STACK_VAR(tmp12,"tmp12");
-					HX_STACK_LINE(46)
-					Float tmp13 = (Float(tmp11) / Float(tmp12));		HX_STACK_VAR(tmp13,"tmp13");
-					HX_STACK_LINE(46)
-					int tmp14 = ::Math_obj::round(tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-					HX_STACK_LINE(46)
-					this->widthInt = tmp14;
-				}
+				::haxe::ui::toolkit::controls::Button tmp8 = tmp7->GetButtonObject();		HX_STACK_VAR(tmp8,"tmp8");
+				HX_STACK_LINE(46)
+				Float tmp9 = tmp8->get_width();		HX_STACK_VAR(tmp9,"tmp9");
+				HX_STACK_LINE(46)
+				int tmp10 = _object->GetSiblingObjectArray()->length;		HX_STACK_VAR(tmp10,"tmp10");
+				HX_STACK_LINE(46)
+				int tmp11 = (tmp10 - (int)1);		HX_STACK_VAR(tmp11,"tmp11");
+				HX_STACK_LINE(46)
+				int tmp12 = (tmp11 * (int)5);		HX_STACK_VAR(tmp12,"tmp12");
+				HX_STACK_LINE(46)
+				Float tmp13 = (tmp9 - tmp12);		HX_STACK_VAR(tmp13,"tmp13");
+				HX_STACK_LINE(46)
+				int tmp14 = _object->GetSiblingObjectArray()->length;		HX_STACK_VAR(tmp14,"tmp14");
+				HX_STACK_LINE(46)
+				Float tmp15 = (Float(tmp13) / Float(tmp14));		HX_STACK_VAR(tmp15,"tmp15");
+				HX_STACK_LINE(46)
+				int tmp16 = ::Math_obj::round(tmp15);		HX_STACK_VAR(tmp16,"tmp16");
+				HX_STACK_LINE(46)
+				this->widthInt = tmp16;
 				HX_STACK_LINE(47)
-				::EnumMuseumType tmp8 = this->typeEnum;		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(47)
-				bool tmp9 = (tmp8 == ::EnumMuseumType_obj::ROM);		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(47)
-				if ((tmp9)){
-					HX_STACK_LINE(47)
-					::ObjectMuseum tmp10 = _object->GetParentObject();		HX_STACK_VAR(tmp10,"tmp10");
-					HX_STACK_LINE(47)
-					::ObjectMuseumUI tmp11 = tmp10->GetMuseumUIObject();		HX_STACK_VAR(tmp11,"tmp11");
-					HX_STACK_LINE(47)
-					::haxe::ui::toolkit::controls::Button tmp12 = tmp11->GetButtonObject();		HX_STACK_VAR(tmp12,"tmp12");
-					HX_STACK_LINE(47)
-					Float tmp13 = tmp12->get_width();		HX_STACK_VAR(tmp13,"tmp13");
-					HX_STACK_LINE(47)
-					int tmp14 = _object->GetSiblingObjectArray()->length;		HX_STACK_VAR(tmp14,"tmp14");
-					HX_STACK_LINE(47)
-					Float tmp15 = (Float(tmp13) / Float(tmp14));		HX_STACK_VAR(tmp15,"tmp15");
-					HX_STACK_LINE(47)
-					int tmp16 = ::Math_obj::round(tmp15);		HX_STACK_VAR(tmp16,"tmp16");
-					HX_STACK_LINE(47)
-					this->widthInt = tmp16;
-				}
-				HX_STACK_LINE(48)
-				::haxe::ui::toolkit::controls::Button tmp10 = this->buttonObject;		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(48)
-				int tmp11 = this->widthInt;		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(48)
-				tmp10->set_width(tmp11);
-				HX_STACK_LINE(49)
-				::haxe::ui::toolkit::controls::Button tmp12 = this->buttonObject;		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(49)
-				int tmp13 = this->heightInt;		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(49)
-				tmp12->set_height(tmp13);
-				HX_STACK_LINE(50)
-				::haxe::ui::toolkit::controls::Button tmp14 = this->buttonObject;		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(50)
-				Dynamic tmp15 = _object->GetNameStruct();		HX_STACK_VAR(tmp15,"tmp15");
-				HX_STACK_LINE(50)
-				::String tmp16 = tmp15->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp16,"tmp16");
-				HX_STACK_LINE(50)
-				tmp14->set_id(tmp16);
-				HX_STACK_LINE(51)
 				::haxe::ui::toolkit::controls::Button tmp17 = this->buttonObject;		HX_STACK_VAR(tmp17,"tmp17");
+				HX_STACK_LINE(47)
+				int tmp18 = this->widthInt;		HX_STACK_VAR(tmp18,"tmp18");
+				HX_STACK_LINE(47)
+				tmp17->set_width(tmp18);
+				HX_STACK_LINE(48)
+				::haxe::ui::toolkit::controls::Button tmp19 = this->buttonObject;		HX_STACK_VAR(tmp19,"tmp19");
+				HX_STACK_LINE(48)
+				int tmp20 = this->heightInt;		HX_STACK_VAR(tmp20,"tmp20");
+				HX_STACK_LINE(48)
+				tmp19->set_height(tmp20);
+				HX_STACK_LINE(49)
+				::haxe::ui::toolkit::controls::Button tmp21 = this->buttonObject;		HX_STACK_VAR(tmp21,"tmp21");
+				HX_STACK_LINE(49)
+				Dynamic tmp22 = _object->GetNameStruct();		HX_STACK_VAR(tmp22,"tmp22");
+				HX_STACK_LINE(49)
+				::String tmp23 = tmp22->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp23,"tmp23");
+				HX_STACK_LINE(49)
+				tmp21->set_id(tmp23);
+				HX_STACK_LINE(50)
+				::haxe::ui::toolkit::controls::Button tmp24 = this->buttonObject;		HX_STACK_VAR(tmp24,"tmp24");
+				HX_STACK_LINE(50)
+				Dynamic tmp25 = _object->GetNameStruct();		HX_STACK_VAR(tmp25,"tmp25");
+				HX_STACK_LINE(50)
+				::String tmp26 = tmp25->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp26,"tmp26");
+				HX_STACK_LINE(50)
+				tmp24->set_text(tmp26);
 				HX_STACK_LINE(51)
-				Dynamic tmp18 = _object->GetNameStruct();		HX_STACK_VAR(tmp18,"tmp18");
+				::haxe::ui::toolkit::controls::Button tmp27 = this->buttonObject;		HX_STACK_VAR(tmp27,"tmp27");
 				HX_STACK_LINE(51)
-				::String tmp19 = tmp18->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp19,"tmp19");
+				::ObjectMuseum tmp28 = _object->GetParentObject();		HX_STACK_VAR(tmp28,"tmp28");
 				HX_STACK_LINE(51)
-				tmp17->set_text(tmp19);
+				::ObjectMuseumUI tmp29 = tmp28->GetMuseumUIObject();		HX_STACK_VAR(tmp29,"tmp29");
+				HX_STACK_LINE(51)
+				::haxe::ui::toolkit::controls::Button tmp30 = tmp29->GetButtonObject();		HX_STACK_VAR(tmp30,"tmp30");
+				HX_STACK_LINE(51)
+				Float tmp31 = tmp30->get_x();		HX_STACK_VAR(tmp31,"tmp31");
+				HX_STACK_LINE(51)
+				int tmp32 = _object->GetIndexLocalInt();		HX_STACK_VAR(tmp32,"tmp32");
+				HX_STACK_LINE(51)
+				::haxe::ui::toolkit::controls::Button tmp33 = this->buttonObject;		HX_STACK_VAR(tmp33,"tmp33");
+				HX_STACK_LINE(51)
+				Float tmp34 = tmp33->get_width();		HX_STACK_VAR(tmp34,"tmp34");
+				HX_STACK_LINE(51)
+				Float tmp35 = (tmp32 * tmp34);		HX_STACK_VAR(tmp35,"tmp35");
+				HX_STACK_LINE(51)
+				Float tmp36 = (tmp31 + tmp35);		HX_STACK_VAR(tmp36,"tmp36");
+				HX_STACK_LINE(51)
+				int tmp37 = _object->GetIndexLocalInt();		HX_STACK_VAR(tmp37,"tmp37");
+				HX_STACK_LINE(51)
+				int tmp38 = (tmp37 * (int)5);		HX_STACK_VAR(tmp38,"tmp38");
+				HX_STACK_LINE(51)
+				Float tmp39 = (tmp36 + tmp38);		HX_STACK_VAR(tmp39,"tmp39");
+				HX_STACK_LINE(51)
+				tmp27->set_x(tmp39);
 				HX_STACK_LINE(52)
-				::haxe::ui::toolkit::controls::Button tmp20 = this->buttonObject;		HX_STACK_VAR(tmp20,"tmp20");
-				HX_STACK_LINE(52)
-				::ObjectMuseum tmp21 = _object->GetParentObject();		HX_STACK_VAR(tmp21,"tmp21");
-				HX_STACK_LINE(52)
-				::ObjectMuseumUI tmp22 = tmp21->GetMuseumUIObject();		HX_STACK_VAR(tmp22,"tmp22");
-				HX_STACK_LINE(52)
-				::haxe::ui::toolkit::controls::Button tmp23 = tmp22->GetButtonObject();		HX_STACK_VAR(tmp23,"tmp23");
-				HX_STACK_LINE(52)
-				Float tmp24 = tmp23->get_x();		HX_STACK_VAR(tmp24,"tmp24");
-				HX_STACK_LINE(52)
-				int tmp25 = _object->GetIndexLocalInt();		HX_STACK_VAR(tmp25,"tmp25");
-				HX_STACK_LINE(52)
-				::haxe::ui::toolkit::controls::Button tmp26 = this->buttonObject;		HX_STACK_VAR(tmp26,"tmp26");
-				HX_STACK_LINE(52)
-				Float tmp27 = tmp26->get_width();		HX_STACK_VAR(tmp27,"tmp27");
-				HX_STACK_LINE(52)
-				Float tmp28 = (tmp25 * tmp27);		HX_STACK_VAR(tmp28,"tmp28");
-				HX_STACK_LINE(52)
-				Float tmp29 = (tmp24 + tmp28);		HX_STACK_VAR(tmp29,"tmp29");
-				HX_STACK_LINE(52)
-				tmp20->set_x(tmp29);
+				::haxe::ui::toolkit::controls::Button tmp40 = this->buttonObject;		HX_STACK_VAR(tmp40,"tmp40");
 				HX_STACK_LINE(53)
-				::haxe::ui::toolkit::controls::Button tmp30 = this->buttonObject;		HX_STACK_VAR(tmp30,"tmp30");
+				::ObjectMuseum tmp41 = _object->GetParentObject();		HX_STACK_VAR(tmp41,"tmp41");
 				HX_STACK_LINE(53)
-				::ObjectMuseum tmp31 = _object->GetParentObject();		HX_STACK_VAR(tmp31,"tmp31");
+				::ObjectMuseumUI tmp42 = tmp41->GetMuseumUIObject();		HX_STACK_VAR(tmp42,"tmp42");
 				HX_STACK_LINE(53)
-				::ObjectMuseumUI tmp32 = tmp31->GetMuseumUIObject();		HX_STACK_VAR(tmp32,"tmp32");
+				::haxe::ui::toolkit::controls::Button tmp43 = tmp42->GetButtonObject();		HX_STACK_VAR(tmp43,"tmp43");
 				HX_STACK_LINE(53)
-				::haxe::ui::toolkit::controls::Button tmp33 = tmp32->GetButtonObject();		HX_STACK_VAR(tmp33,"tmp33");
-				HX_STACK_LINE(53)
-				Float tmp34 = tmp33->get_y();		HX_STACK_VAR(tmp34,"tmp34");
-				HX_STACK_LINE(53)
-				::ObjectMuseum tmp35 = _object->GetParentObject();		HX_STACK_VAR(tmp35,"tmp35");
-				HX_STACK_LINE(53)
-				::ObjectMuseumUI tmp36 = tmp35->GetMuseumUIObject();		HX_STACK_VAR(tmp36,"tmp36");
-				HX_STACK_LINE(53)
-				::haxe::ui::toolkit::controls::Button tmp37 = tmp36->GetButtonObject();		HX_STACK_VAR(tmp37,"tmp37");
-				HX_STACK_LINE(53)
-				Float tmp38 = tmp37->get_height();		HX_STACK_VAR(tmp38,"tmp38");
-				HX_STACK_LINE(53)
-				Float tmp39 = (tmp34 + tmp38);		HX_STACK_VAR(tmp39,"tmp39");
-				HX_STACK_LINE(53)
-				tmp30->set_y(tmp39);
+				Float tmp44 = tmp43->get_y();		HX_STACK_VAR(tmp44,"tmp44");
 				HX_STACK_LINE(54)
-				::CollectionGlobal tmp40 = this->collectionGlobalObject;		HX_STACK_VAR(tmp40,"tmp40");
+				::ObjectMuseum tmp45 = _object->GetParentObject();		HX_STACK_VAR(tmp45,"tmp45");
 				HX_STACK_LINE(54)
-				::haxe::ui::toolkit::containers::Absolute tmp41 = tmp40->GetUIMuseumAbsoluteObject();		HX_STACK_VAR(tmp41,"tmp41");
+				::ObjectMuseumUI tmp46 = tmp45->GetMuseumUIObject();		HX_STACK_VAR(tmp46,"tmp46");
 				HX_STACK_LINE(54)
-				::haxe::ui::toolkit::controls::Button tmp42 = this->buttonObject;		HX_STACK_VAR(tmp42,"tmp42");
+				::haxe::ui::toolkit::controls::Button tmp47 = tmp46->GetButtonObject();		HX_STACK_VAR(tmp47,"tmp47");
 				HX_STACK_LINE(54)
-				tmp41->addChild(tmp42);
+				Float tmp48 = tmp47->get_height();		HX_STACK_VAR(tmp48,"tmp48");
+				HX_STACK_LINE(53)
+				Float tmp49 = (tmp44 + tmp48);		HX_STACK_VAR(tmp49,"tmp49");
+				HX_STACK_LINE(53)
+				Float tmp50 = (tmp49 + (int)5);		HX_STACK_VAR(tmp50,"tmp50");
+				HX_STACK_LINE(52)
+				tmp40->set_y(tmp50);
+				HX_STACK_LINE(56)
+				::CollectionGlobal tmp51 = this->collectionGlobalObject;		HX_STACK_VAR(tmp51,"tmp51");
+				HX_STACK_LINE(56)
+				::haxe::ui::toolkit::containers::Absolute tmp52 = tmp51->GetUIMuseumAbsoluteObject();		HX_STACK_VAR(tmp52,"tmp52");
+				HX_STACK_LINE(56)
+				::haxe::ui::toolkit::controls::Button tmp53 = this->buttonObject;		HX_STACK_VAR(tmp53,"tmp53");
+				HX_STACK_LINE(56)
+				tmp52->addChild(tmp53);
 			}
 		}
 	}

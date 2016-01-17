@@ -6,7 +6,7 @@
     
     <window background="#FFFFFF" fps="60" />
     <window width="1024" height="576" resizable="false" unless="mobile" />
-    <window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+    <window orientation="landscape" vsync="false" antialiasing="1" if="cpp" />
 
     <source path="Source" />
 

@@ -34,11 +34,11 @@ class Main extends Sprite{
         CollectionPremade.PremadeFloorObjectVoid(collectionGlobalObject);
         CollectionPremade.PremadeRoomObjectVoid(collectionGlobalObject);
         CollectionPremade.PremadeExhibitionObjectVoid(collectionGlobalObject);
-        CollectionPremade.PremadeVisitorObjectVoid(100, collectionGlobalObject); /*Change the number to change the initial visitor when the application starts.*/
+        CollectionPremade.PremadeVisitorObjectVoid(50, collectionGlobalObject); /*Change the number to change the initial visitor when the application starts.*/
         addEventListener(Event.ENTER_FRAME, Update);
     }
     private function Update(event:Event){
-        UpdateSlowVoid();
+        UpdateFastVoid();
     }
     /*These are set of functionc to update the whole object within the application.
     The slow speed means that the objects will updated using least common multiplier, which also means that object array that is smallest will get update more often.

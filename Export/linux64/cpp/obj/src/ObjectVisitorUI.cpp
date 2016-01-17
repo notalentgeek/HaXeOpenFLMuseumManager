@@ -104,7 +104,7 @@ HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
 	HX_STACK_LINE(17)
 	this->indexLocalInt = (int)-1;
 	HX_STACK_LINE(16)
-	this->heightInt = (int)50;
+	this->heightInt = (int)43;
 	HX_STACK_LINE(15)
 	this->widthInt = (int)-1;
 	HX_STACK_LINE(14)
@@ -212,40 +212,46 @@ Void ObjectVisitorUI_obj::UpdateVoid( ::ObjectVisitor _object){
 		tmp13->set_x(tmp17);
 		HX_STACK_LINE(35)
 		::haxe::ui::toolkit::controls::Button tmp18 = this->buttonObject;		HX_STACK_VAR(tmp18,"tmp18");
-		HX_STACK_LINE(35)
+		HX_STACK_LINE(36)
 		::ObjectMuseum tmp19 = _object->GetExhibitionCurrentObject();		HX_STACK_VAR(tmp19,"tmp19");
-		HX_STACK_LINE(35)
+		HX_STACK_LINE(36)
 		::ObjectMuseumUI tmp20 = tmp19->GetMuseumUIObject();		HX_STACK_VAR(tmp20,"tmp20");
-		HX_STACK_LINE(35)
+		HX_STACK_LINE(36)
 		::haxe::ui::toolkit::controls::Button tmp21 = tmp20->GetButtonObject();		HX_STACK_VAR(tmp21,"tmp21");
-		HX_STACK_LINE(35)
+		HX_STACK_LINE(36)
 		Float tmp22 = tmp21->get_y();		HX_STACK_VAR(tmp22,"tmp22");
-		HX_STACK_LINE(35)
+		HX_STACK_LINE(37)
 		::ObjectMuseum tmp23 = _object->GetExhibitionCurrentObject();		HX_STACK_VAR(tmp23,"tmp23");
-		HX_STACK_LINE(35)
+		HX_STACK_LINE(37)
 		::ObjectMuseumUI tmp24 = tmp23->GetMuseumUIObject();		HX_STACK_VAR(tmp24,"tmp24");
-		HX_STACK_LINE(35)
+		HX_STACK_LINE(37)
 		::haxe::ui::toolkit::controls::Button tmp25 = tmp24->GetButtonObject();		HX_STACK_VAR(tmp25,"tmp25");
-		HX_STACK_LINE(35)
+		HX_STACK_LINE(37)
 		Float tmp26 = tmp25->get_height();		HX_STACK_VAR(tmp26,"tmp26");
-		HX_STACK_LINE(35)
+		HX_STACK_LINE(36)
 		Float tmp27 = (tmp22 + tmp26);		HX_STACK_VAR(tmp27,"tmp27");
+		HX_STACK_LINE(38)
+		::ObjectVisitorUI tmp28 = _object->GetVisitorUIObject();		HX_STACK_VAR(tmp28,"tmp28");
+		HX_STACK_LINE(38)
+		::haxe::ui::toolkit::controls::Button tmp29 = tmp28->GetButtonObject();		HX_STACK_VAR(tmp29,"tmp29");
+		HX_STACK_LINE(38)
+		Float tmp30 = tmp29->get_height();		HX_STACK_VAR(tmp30,"tmp30");
+		HX_STACK_LINE(38)
+		int tmp31 = _object->GetIndexLocalInt();		HX_STACK_VAR(tmp31,"tmp31");
+		HX_STACK_LINE(38)
+		Float tmp32 = (tmp30 * tmp31);		HX_STACK_VAR(tmp32,"tmp32");
+		HX_STACK_LINE(36)
+		Float tmp33 = (tmp27 + tmp32);		HX_STACK_VAR(tmp33,"tmp33");
+		HX_STACK_LINE(36)
+		Float tmp34 = (tmp33 + (int)5);		HX_STACK_VAR(tmp34,"tmp34");
+		HX_STACK_LINE(40)
+		int tmp35 = _object->GetIndexLocalInt();		HX_STACK_VAR(tmp35,"tmp35");
+		HX_STACK_LINE(40)
+		int tmp36 = (tmp35 * (int)5);		HX_STACK_VAR(tmp36,"tmp36");
+		HX_STACK_LINE(36)
+		Float tmp37 = (tmp34 + tmp36);		HX_STACK_VAR(tmp37,"tmp37");
 		HX_STACK_LINE(35)
-		::ObjectMuseum tmp28 = _object->GetExhibitionCurrentObject();		HX_STACK_VAR(tmp28,"tmp28");
-		HX_STACK_LINE(35)
-		::ObjectMuseumUI tmp29 = tmp28->GetMuseumUIObject();		HX_STACK_VAR(tmp29,"tmp29");
-		HX_STACK_LINE(35)
-		::haxe::ui::toolkit::controls::Button tmp30 = tmp29->GetButtonObject();		HX_STACK_VAR(tmp30,"tmp30");
-		HX_STACK_LINE(35)
-		Float tmp31 = tmp30->get_height();		HX_STACK_VAR(tmp31,"tmp31");
-		HX_STACK_LINE(35)
-		int tmp32 = _object->GetIndexLocalInt();		HX_STACK_VAR(tmp32,"tmp32");
-		HX_STACK_LINE(35)
-		Float tmp33 = (tmp31 * tmp32);		HX_STACK_VAR(tmp33,"tmp33");
-		HX_STACK_LINE(35)
-		Float tmp34 = (tmp27 + tmp33);		HX_STACK_VAR(tmp34,"tmp34");
-		HX_STACK_LINE(35)
-		tmp18->set_y(tmp34);
+		tmp18->set_y(tmp37);
 	}
 return null();
 }

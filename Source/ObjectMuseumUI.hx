@@ -13,7 +13,7 @@ class ObjectMuseumUI extends Sprite{
     var buttonObject:Button = new Button();
     var collectionGlobalObject:CollectionGlobal = null;
     var widthInt:Int = -1;
-    var heightInt:Int = 50;
+    var heightInt:Int = 43;
     var textString:String = "";
     var typeEnum:EnumMuseumType = null;
     var xInt:Int = -1;
@@ -33,24 +33,26 @@ class ObjectMuseumUI extends Sprite{
         _widthMaxInt:Int
     ){
         if(typeEnum == FLR){
-            widthInt = Math.round((_widthMaxInt - Lib.current.stage.stageWidth/4)/collectionGlobalObject.GetFloorObjectArray().length);
+            widthInt = Math.round(((_widthMaxInt - Lib.current.stage.stageWidth/4) - ((collectionGlobalObject.GetFloorObjectArray().length - 1)*5))/collectionGlobalObject.GetFloorObjectArray().length);
             buttonObject.width = widthInt;
             buttonObject.height = heightInt;
             buttonObject.id = _object.GetNameStruct().nameAltString;
             buttonObject.text = _object.GetNameStruct().nameAltString;
-            buttonObject.x = (buttonObject.width*_object.GetIndexLocalInt());
+            buttonObject.x = (buttonObject.width*_object.GetIndexLocalInt()) + (_object.GetIndexLocalInt()*5);
             buttonObject.y = 0;
             collectionGlobalObject.GetUIMuseumAbsoluteObject().addChild(buttonObject);
         }
         else if(typeEnum == EXH || typeEnum == ROM){
-            if(typeEnum == EXH){ widthInt = Math.round(_object.GetParentObject().GetMuseumUIObject().GetButtonObject().width/_object.GetSiblingObjectArray().length); }
-            if(typeEnum == ROM){ widthInt = Math.round(_object.GetParentObject().GetMuseumUIObject().GetButtonObject().width/_object.GetSiblingObjectArray().length); }
+            widthInt = Math.round(((_object.GetParentObject().GetMuseumUIObject().GetButtonObject().width) - ((_object.GetSiblingObjectArray().length - 1)*5))/_object.GetSiblingObjectArray().length);
             buttonObject.width = widthInt;
             buttonObject.height = heightInt;
             buttonObject.id = _object.GetNameStruct().nameAltString;
             buttonObject.text = _object.GetNameStruct().nameAltString;
-            buttonObject.x = _object.GetParentObject().GetMuseumUIObject().GetButtonObject().x + (_object.GetIndexLocalInt()*buttonObject.width);
-            buttonObject.y = _object.GetParentObject().GetMuseumUIObject().GetButtonObject().y + _object.GetParentObject().GetMuseumUIObject().GetButtonObject().height;
+            buttonObject.x = _object.GetParentObject().GetMuseumUIObject().GetButtonObject().x + (_object.GetIndexLocalInt()*buttonObject.width) + (_object.GetIndexLocalInt()*5);
+            buttonObject.y =
+                _object.GetParentObject().GetMuseumUIObject().GetButtonObject().y +
+                _object.GetParentObject().GetMuseumUIObject().GetButtonObject().height + 
+                5;
             collectionGlobalObject.GetUIMuseumAbsoluteObject().addChild(buttonObject);
         }
     }

@@ -2,28 +2,22 @@
 <hbox width="100%" height="100%">
     <scrollview width="25%" height="100%">
         <vbox width="100%">
-            <button width="100%" text="Add Museum Object"></button>
-            <button width="100%" text="Add Tag"></button>
-            <button width="100%" text="Add Visitor"></button>
-            <button width="100%" text="Edit Museum Object"></button>
-            <button width="100%" text="Edit Tag"></button>
-            <button width="100%" text="Edit Visitor"></button>
-            <button width="100%" text="Remove Museum Object"></button>
-            <button width="100%" text="Remove Tag"></button>
-            <button width="100%" text="Remove Visitor"></button>
-            <button width="100%" text="Save"></button>
-            <button width="100%" text="Save As"></button>
-            <button width="100%" text="Load"></button>
-            <button width="100%" text="Exit"></button>
+            <button autoSize="false" width="100%" text="Add Museum Object"></button>
+            <button autoSize="false" width="100%" text="Add Tag"></button>
+            <button autoSize="false" width="100%" text="Add Visitor"></button>
+            <button autoSize="false" width="100%" text="Edit Museum Object"></button>
+            <button autoSize="false" width="100%" text="Edit Tag"></button>
+            <button autoSize="false" width="100%" text="Edit Visitor"></button>
+            <button autoSize="false" width="100%" text="Remove Museum Object"></button>
+            <button autoSize="false" width="100%" text="Remove Tag"></button>
+            <button autoSize="false" width="100%" text="Remove Visitor"></button>
+            <button autoSize="false" width="100%" text="Save"></button>
+            <button autoSize="false" width="100%" text="Save As"></button>
+            <button autoSize="false" width="100%" text="Load"></button>
+            <button autoSize="false" width="100%" text="Exit"></button>
         </vbox>
     </scrollview>
     <scrollview width="75%" height="100%">
-        <absolute width="100%" id="uiMuseumAbsolute">
-            <button x="0" y="0" width="10" text="TEST"></button>
-            <button x="5" y="5" width="20" text="TEST"></button>
-            <button x="10" y="10" width="30" text="TEST"></button>
-            <button x="15" y="15" width="40" text="TEST"></button>
-            <button x="20" y="20" width="50" text="TEST"></button>
-        </absolute>
+        <absolute width="100%" id="UIMuseumAbsolute"></absolute>
     </scrollview>
 </hbox>>

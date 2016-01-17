@@ -13,7 +13,7 @@ class ObjectVisitorUI extends Sprite{
     private var buttonObject:Button = new Button();
     private var collectionGlobalObject:CollectionGlobal = null;
     private var widthInt:Int = -1;
-    private var heightInt:Int = 50;
+    private var heightInt:Int = 43;
     private var indexLocalInt:Int = -1;
     private var textString:String = "";
     private var xInt:Int = 0;
@@ -32,6 +32,11 @@ class ObjectVisitorUI extends Sprite{
         buttonObject.id = _object.GetNameString();
         buttonObject.text = _object.GetNameString();
         buttonObject.x = _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().x;
-        buttonObject.y = _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().y + _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().height + (_object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().height*_object.GetIndexLocalInt());
+        buttonObject.y =
+            _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().y +
+            _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().height +
+            (_object.GetVisitorUIObject().GetButtonObject().height*_object.GetIndexLocalInt()) +
+            5 +
+            (_object.GetIndexLocalInt()*5);
     }
 }
