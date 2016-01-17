@@ -50,6 +50,15 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::openfl::_legacy::display::Spri
 		virtual Void Update( ::openfl::_legacy::events::Event event);
 		Dynamic Update_dyn();
 
+		virtual Void UpdateSlowVoid( );
+		Dynamic UpdateSlowVoid_dyn();
+
+		virtual Void UpdateNormalVoid( );
+		Dynamic UpdateNormalVoid_dyn();
+
+		virtual Void UpdateFastVoid( );
+		Dynamic UpdateFastVoid_dyn();
+
 };
 
 

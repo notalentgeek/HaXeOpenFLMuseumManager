@@ -5119,7 +5119,7 @@
    <depend name="include/ObjectMuseumUI.h"/>
    <depend name="include/ObjectTag.h"/>
    <depend name="include/ObjectVisitor.h"/>
-   <depend name="include/haxe/Log.h"/>
+   <depend name="include/ObjectVisitorUI.h"/>
    <depend name="include/openfl/_legacy/Lib.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>

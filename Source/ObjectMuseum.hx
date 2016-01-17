@@ -3,21 +3,40 @@ import CollectionStruct;
 import CollectionFunction;
 import flash.Lib;
 class ObjectMuseum{
-    private var childStruct:StructChild = { childMuseumObjectArray:new Array<ObjectMuseum>(), childVisitorObjectArray:new Array<ObjectVisitor>() };
-    private var collectionGlobalObject:CollectionGlobal = null;
-    private var explanationStringArray:Array<String> = new Array<String>();
-    private var fullBool:Bool = false;
-    private var indexGlobalInt:Int = -1;
-    private var indexLocalInt:Int = -1;
-    private var museumModeEnum:EnumMuseumMode = null;
-    private var museumUIObject:ObjectMuseumUI = null;
-    private var nameStruct:StructName = { nameAltString:"", nameFullString:"" };
-    private var parentObject:ObjectMuseum = null;
-    private var siblingObjectArray:Array<ObjectMuseum> = new Array<ObjectMuseum>(); /*For floor, the sibling object will be the global variable of collectionGlobalObject.GetFloorObjectArray().*/
-    private var tagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
-    private var typeEnum:EnumMuseumType = null;
-    private var visitorCurrentInt:Int = 0;
-    private var visitorTotalInt:Int = 0;
+
+
+
+    /*A struct that contains two arrays.
+    For example the floor and room will have another ObjectMuseum as their children.
+    While, exhibition will have ObjectVisitor as their children.*/
+    private var childStruct                 :StructChild                            = {
+        childMuseumObjectArray              :new Array          <ObjectMuseum>      (),
+        childVisitorObjectArray             :new Array          <ObjectVisitor>     ()
+    };
+    /*An object that have all important global variables.
+    PENDING: I might change this into fully static object in the future.*/
+    private var collectionGlobalObject      :CollectionGlobal                       = null;
+    private var explanationStringArray      :Array              <String>            = new Array<String>();                          /*Explanation that this object has that will be "recorded" into ObjectVisitor.*/
+    private var fullBool                    :Bool                                   = false;                                        /*Whether or not this object is full of visitor or not.*/
+    private var indexGlobalInt              :Int                                    = -1;                                           /*The position index of this object in the CollectionGlobal class variable.*/
+    private var indexLocalInt               :Int                                    = -1;                                           /*The position index of this object in its parent object compared to other similat object.*/
+    private var museumModeEnum              :EnumMuseumMode                         = null;                                         /*PENDING: The current state of the museum.*/
+    private var museumUIObject              :ObjectMuseumUI                         = null;                                         /*The museum UI object.*/
+    /*Struct that contain the name of the museum.
+    For coding I use the nameAltString because it is shorter than the nameFullString.
+    For display like UI or somthing, I use the nameFullString because it shows the necessary information to the user.*/
+    private var nameStruct                  :StructName                             = { nameAltString:"", nameFullString:"" };
+    /*The parent object of this object.
+    For example exihibition object will have floor as its parent.*/
+    private var parentObject                :ObjectMuseum                           = null;
+    private var siblingObjectArray          :Array              <ObjectMuseum>      = new Array<ObjectMuseum>();                    /*For floor, the sibling object will be the global variable of collectionGlobalObject.GetFloorObjectArray().*/
+    private var tagObjectArray              :Array              <ObjectTag>         = new Array<ObjectTag>();                       /*All of object tags that this object has.*/
+    private var typeEnum                    :EnumMuseumType                         = null;                                         /*Type of this museum object, whether it is exhibition, floor, or room.*/
+    private var visitorCurrentInt           :Int                                    = 0;
+    private var visitorTotalInt             :Int                                    = 0;
+
+
+
     public function new(
         _collectionGlobalObject:CollectionGlobal,
         _nameAltString:String,
@@ -38,6 +57,7 @@ class ObjectMuseum{
             typeEnum
         );
         ChangeParentObject(_parentNameAltString);
+        collectionGlobalObject.DetermineExhibitionFullThresholdVoid();
     }
     private function AddChildVisitorVoid(_visitorObject:ObjectVisitor){ childStruct.childVisitorObjectArray.push(_visitorObject); }
     private function AddTagVoid(_tagObject:ObjectTag){ tagObjectArray.push(_tagObject); }
@@ -85,6 +105,13 @@ class ObjectMuseum{
                 );
                 loopCounter1Int ++;
             }
+        }
+        loopCounter1Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(loopCounter1Int);
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
+            loopCounter1Int ++;
         }
         return parentObject;
     }
@@ -134,14 +161,10 @@ class ObjectMuseum{
     public function DetermineChildVoid(){
         CollectionFunction.ClearArray(childStruct.childMuseumObjectArray);
         CollectionFunction.ClearArray(childStruct.childVisitorObjectArray);
-        trace(typeEnum);
         if(typeEnum == EXH){
             var loopCounter1Int = 0;
-            trace(collectionGlobalObject.GetVisitorObjectArray().length);
             while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-                trace(loopCounter1Int);
                 if(nameStruct.nameAltString == collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetExhibitionCurrentObject().GetNameStruct().nameAltString){
-                    trace("TEST1.");
                     childStruct.childVisitorObjectArray.push(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
                 }
                 loopCounter1Int ++;
@@ -216,10 +239,7 @@ class ObjectMuseum{
     public function SetVisitorCurrentIntVoid(_visitorCurrentInt:Int){ visitorCurrentInt = _visitorCurrentInt; }
     public function SetVisitorTotalIntVoid(_visitorTotalInt:Int){ visitorTotalInt = _visitorTotalInt; }
     /*Update function is mainly to update all museum object in real time.*/
-    public function Update(){
-        /*PENDING: There is an error on updating museum UI object over time. This should not happened.*/
-        //museumUIObject.Update(indexLocalInt, this, Lib.current.stage.stageWidth);
-
+    public function UpdateVoid(){
         if(museumModeEnum == MRK_DEL){
             /*So here the museum object is already tagged to be deleted.
             I need to do another checking whether the object has any children or not.*/

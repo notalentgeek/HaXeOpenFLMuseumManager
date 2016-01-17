@@ -25,11 +25,11 @@ class CollectionGlobal{
     private var uiMainObject:IDisplayObject = null;
     private var uiMuseumAbsoluteObject:Absolute = null;
     private var visitorObjectArray:Array<ObjectVisitor> = new Array<ObjectVisitor>();
-    public      function new                                            (){
+    public function new(){
         archiveExhibitionObject = new ObjectMuseum(this, "EXH_ARC", "Exhibition Archive", "XXX_XXX", new Array<ObjectTag>(), EXH);
     }
-    public function DetermineExhibitionFullThresholdInt            ()                                                          {
-             if(exhibitionObjectArray.length >= visitorObjectArray.length){ exhibitionFullThresholdInt = Math.ceil(exhibitionObjectArray.length/visitorObjectArray.length); }
+    public function DetermineExhibitionFullThresholdVoid(){
+        if(exhibitionObjectArray.length >= visitorObjectArray.length){ exhibitionFullThresholdInt = Math.ceil(exhibitionObjectArray.length/visitorObjectArray.length); }
         else if(exhibitionObjectArray.length < visitorObjectArray.length){ exhibitionFullThresholdInt = Math.ceil(visitorObjectArray.length/exhibitionObjectArray.length); }
     }
     public function GetUIMuseumAbsoluteObject(){ return uiMuseumAbsoluteObject; }

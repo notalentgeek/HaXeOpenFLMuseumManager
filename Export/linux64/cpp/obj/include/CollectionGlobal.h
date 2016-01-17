@@ -64,8 +64,8 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject uiMainObject;
 		::haxe::ui::toolkit::containers::Absolute uiMuseumAbsoluteObject;
 		Array< ::Dynamic > visitorObjectArray;
-		virtual Void DetermineExhibitionFullThresholdInt( );
-		Dynamic DetermineExhibitionFullThresholdInt_dyn();
+		virtual Void DetermineExhibitionFullThresholdVoid( );
+		Dynamic DetermineExhibitionFullThresholdVoid_dyn();
 
 		virtual ::haxe::ui::toolkit::containers::Absolute GetUIMuseumAbsoluteObject( );
 		Dynamic GetUIMuseumAbsoluteObject_dyn();

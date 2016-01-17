@@ -76,12 +76,6 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual Void ChangeExhibitionCurrentVoid( ::ObjectMuseum _exhibitionTargetObject);
 		Dynamic ChangeExhibitionCurrentVoid_dyn();
 
-		virtual Void DetermineIndexLocalVoid( );
-		Dynamic DetermineIndexLocalVoid_dyn();
-
-		virtual Void GenerateExhibitionTargetVoid( int _targetInt);
-		Dynamic GenerateExhibitionTargetVoid_dyn();
-
 		virtual ::String GenerateSentenceVoid( int _amount);
 		Dynamic GenerateSentenceVoid_dyn();
 
@@ -90,6 +84,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 
 		virtual Void AIAutoExhibitionChangeVoid( );
 		Dynamic AIAutoExhibitionChangeVoid_dyn();
+
+		virtual Void DetermineIndexLocalVoid( );
+		Dynamic DetermineIndexLocalVoid_dyn();
+
+		virtual Void GenerateExhibitionTargetVoid( int _targetInt);
+		Dynamic GenerateExhibitionTargetVoid_dyn();
 
 		virtual ::ObjectMuseum GetExhibitionCurrentObject( );
 		Dynamic GetExhibitionCurrentObject_dyn();

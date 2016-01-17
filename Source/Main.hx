@@ -34,28 +34,71 @@ class Main extends Sprite{
         CollectionPremade.PremadeFloorObjectVoid(collectionGlobalObject);
         CollectionPremade.PremadeRoomObjectVoid(collectionGlobalObject);
         CollectionPremade.PremadeExhibitionObjectVoid(collectionGlobalObject);
-        CollectionPremade.PremadeVisitorObjectVoid(100, collectionGlobalObject);
+        CollectionPremade.PremadeVisitorObjectVoid(100, collectionGlobalObject); /*Change the number to change the initial visitor when the application starts.*/
         addEventListener(Event.ENTER_FRAME, Update);
     }
     private function Update(event:Event){
+        UpdateSlowVoid();
+    }
+    /*These are set of functionc to update the whole object within the application.
+    The slow speed means that the objects will updated using least common multiplier, which also means that object array that is smallest will get update more often.
+    The normal speed means that the objects will updated using least common multiplier but not the visitor object. This means that the visitor object will get their own loop to iterate its array.
+    The fast speed is to update all the object's array in each different loop.
+    These methods means that the faster the loop progress the slower (heavier) the application will be runs in a computer/device.
+    CAUTION: The loop counter is reset when the user change update function process.
+    CAUTION: This means there will a be a stability error (null pointer, etc) when there is change in speed when the application running.
+    CAUTION: I think for testing and debugging use the fastest update speed to achieve faster result.
+    CAUTION: I also personally think that the UpdateSlowVoid() is the safest update speed due to everything is updated accordingly.
+    PENDING: The solution is to continue where the loop counter stop before changing the update speed.*/
+    private function UpdateSlowVoid(){
         /*Loop through all objects.*/
         var leastCommonMultipleFloat:Float = CollectionFunction.GenerateLeastCommonMultipleFloat(collectionGlobalObject.GetExhibitionObjectArray().length, collectionGlobalObject.GetFloorObjectArray().length);
         leastCommonMultipleFloat = CollectionFunction.GenerateLeastCommonMultipleFloat(leastCommonMultipleFloat, collectionGlobalObject.GetRoomObjectArray().length);
         leastCommonMultipleFloat = CollectionFunction.GenerateLeastCommonMultipleFloat(leastCommonMultipleFloat, collectionGlobalObject.GetVisitorObjectArray().length);
         var leastCommonMultipleInt:Int = Math.round(leastCommonMultipleFloat);
         if(loopCounterMainInt > leastCommonMultipleInt){ loopCounterMainInt = 0; }
-        collectionGlobalObject.GetExhibitionObjectArray()[loopCounterMainInt%collectionGlobalObject.GetExhibitionObjectArray().length].Update();
-        collectionGlobalObject.GetFloorObjectArray()[loopCounterMainInt%collectionGlobalObject.GetFloorObjectArray().length].Update();
-        collectionGlobalObject.GetRoomObjectArray()[loopCounterMainInt%collectionGlobalObject.GetRoomObjectArray().length].Update();
+        collectionGlobalObject.GetExhibitionObjectArray()[loopCounterMainInt%collectionGlobalObject.GetExhibitionObjectArray().length].UpdateVoid();
+        collectionGlobalObject.GetFloorObjectArray()[loopCounterMainInt%collectionGlobalObject.GetFloorObjectArray().length].UpdateVoid();
+        collectionGlobalObject.GetRoomObjectArray()[loopCounterMainInt%collectionGlobalObject.GetRoomObjectArray().length].UpdateVoid();
         collectionGlobalObject.GetVisitorObjectArray()[loopCounterMainInt%collectionGlobalObject.GetVisitorObjectArray().length].AIAutoExhibitionChangeVoid();
         loopCounterMainInt ++;
     }
-    /*These are set of functionc to update the whole object within the application.
-    The slow speed means that the objects will updated using least common multiplier, which also means that object array that is smallest will get update more often.
-    The normal speed means that the objects will updated using least common multiplier but not the visitor object. This means that the visitor object will get their own loop to iterate its array.
-    The fast speed is to update all the object's array in each different loop.
-    These methods means that the faster the loop progress the slower (heavier) the application will be runs in a computer/device.*/
-    private function UpdateSlowVoid(){}
-    private function UpdateNormalVoid(){}
-    private function UpdateFastVoid(){}
+    private function UpdateNormalVoid(){
+        /*Loop through all objects.*/
+        var leastCommonMultipleFloat:Float = CollectionFunction.GenerateLeastCommonMultipleFloat(collectionGlobalObject.GetExhibitionObjectArray().length, collectionGlobalObject.GetFloorObjectArray().length);
+        leastCommonMultipleFloat = CollectionFunction.GenerateLeastCommonMultipleFloat(leastCommonMultipleFloat, collectionGlobalObject.GetRoomObjectArray().length);
+        var leastCommonMultipleInt:Int = Math.round(leastCommonMultipleFloat);
+        if(loopCounterMainInt > leastCommonMultipleInt){ loopCounterMainInt = 0; }
+        collectionGlobalObject.GetExhibitionObjectArray()[loopCounterMainInt%collectionGlobalObject.GetExhibitionObjectArray().length].UpdateVoid();
+        collectionGlobalObject.GetFloorObjectArray()[loopCounterMainInt%collectionGlobalObject.GetFloorObjectArray().length].UpdateVoid();
+        collectionGlobalObject.GetRoomObjectArray()[loopCounterMainInt%collectionGlobalObject.GetRoomObjectArray().length].UpdateVoid();
+        loopCounterMainInt ++;
+        var loopCounter1Int:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].AIAutoExhibitionChangeVoid();
+            loopCounter1Int ++;
+        }
+    }
+    private function UpdateFastVoid(){
+        var loopCounter1Int:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
+            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].UpdateVoid();
+            loopCounter1Int ++;
+        }
+        loopCounter1Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
+            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].UpdateVoid();
+            loopCounter1Int ++;
+        }
+        loopCounter1Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
+            collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].UpdateVoid();
+            loopCounter1Int ++;
+        }
+        loopCounter1Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].AIAutoExhibitionChangeVoid();
+            loopCounter1Int ++;
+        }
+    }
 }

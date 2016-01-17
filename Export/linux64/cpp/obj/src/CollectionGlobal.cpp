@@ -113,9 +113,9 @@ Dynamic CollectionGlobal_obj::__Create(hx::DynamicArray inArgs)
 	_result_->__construct();
 	return _result_;}
 
-Void CollectionGlobal_obj::DetermineExhibitionFullThresholdInt( ){
+Void CollectionGlobal_obj::DetermineExhibitionFullThresholdVoid( ){
 {
-		HX_STACK_FRAME("CollectionGlobal","DetermineExhibitionFullThresholdInt",0x6ea45f88,"CollectionGlobal.DetermineExhibitionFullThresholdInt","CollectionGlobal.hx",31,0xb0d19edd)
+		HX_STACK_FRAME("CollectionGlobal","DetermineExhibitionFullThresholdVoid",0x69c7b69b,"CollectionGlobal.DetermineExhibitionFullThresholdVoid","CollectionGlobal.hx",31,0xb0d19edd)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(32)
 		int tmp = this->exhibitionObjectArray->length;		HX_STACK_VAR(tmp,"tmp");
@@ -162,7 +162,7 @@ return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,DetermineExhibitionFullThresholdInt,(void))
+HX_DEFINE_DYNAMIC_FUNC0(CollectionGlobal_obj,DetermineExhibitionFullThresholdVoid,(void))
 
 ::haxe::ui::toolkit::containers::Absolute CollectionGlobal_obj::GetUIMuseumAbsoluteObject( ){
 	HX_STACK_FRAME("CollectionGlobal","GetUIMuseumAbsoluteObject",0xb8a20a45,"CollectionGlobal.GetUIMuseumAbsoluteObject","CollectionGlobal.hx",35,0xb0d19edd)
@@ -615,8 +615,8 @@ Dynamic CollectionGlobal_obj::__Field(const ::String &inName,hx::PropertyAccess 
 		if (HX_FIELD_EQ(inName,"SetUIMuseumAbsoluteObjectVoid") ) { return SetUIMuseumAbsoluteObjectVoid_dyn(); }
 		if (HX_FIELD_EQ(inName,"SetExhibitionFullThresholdInt") ) { return SetExhibitionFullThresholdInt_dyn(); }
 		break;
-	case 35:
-		if (HX_FIELD_EQ(inName,"DetermineExhibitionFullThresholdInt") ) { return DetermineExhibitionFullThresholdInt_dyn(); }
+	case 36:
+		if (HX_FIELD_EQ(inName,"DetermineExhibitionFullThresholdVoid") ) { return DetermineExhibitionFullThresholdVoid_dyn(); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -727,7 +727,7 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("uiMainObject","\x4c","\xb7","\x53","\x49"),
 	HX_HCSTRING("uiMuseumAbsoluteObject","\x7c","\xcf","\x18","\xc7"),
 	HX_HCSTRING("visitorObjectArray","\x4c","\x61","\x18","\xfb"),
-	HX_HCSTRING("DetermineExhibitionFullThresholdInt","\xf5","\x23","\xaf","\x5e"),
+	HX_HCSTRING("DetermineExhibitionFullThresholdVoid","\x8e","\xd1","\x28","\x83"),
 	HX_HCSTRING("GetUIMuseumAbsoluteObject","\x72","\x74","\xeb","\x93"),
 	HX_HCSTRING("GetArchiveExhibitionObject","\x7a","\x12","\xa9","\xd2"),
 	HX_HCSTRING("GetExhibitionFullThresholdInt","\xb8","\x38","\x85","\xbb"),

@@ -160,8 +160,8 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Void SetVisitorTotalIntVoid( int _visitorTotalInt);
 		Dynamic SetVisitorTotalIntVoid_dyn();
 
-		virtual Void Update( );
-		Dynamic Update_dyn();
+		virtual Void UpdateVoid( );
+		Dynamic UpdateVoid_dyn();
 
 };
 
