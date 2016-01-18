@@ -34,11 +34,16 @@ class Main extends Sprite{
         CollectionPremade.PremadeFloorObjectVoid(collectionGlobalObject);
         CollectionPremade.PremadeRoomObjectVoid(collectionGlobalObject);
         CollectionPremade.PremadeExhibitionObjectVoid(collectionGlobalObject);
-        CollectionPremade.PremadeVisitorObjectVoid(50, collectionGlobalObject); /*Change the number to change the initial visitor when the application starts.*/
+        CollectionPremade.PremadeVisitorObjectVoid(10, collectionGlobalObject); /*Change the number to change the initial visitor when the application starts.*/
         addEventListener(Event.ENTER_FRAME, Update);
     }
     private function Update(event:Event){
         UpdateFastVoid();
+        /*
+        if(collectionGlobalObject.GetVisitorObjectArray().length <= 50){ UpdateFastVoid(); }
+        else if(collectionGlobalObject.GetVisitorObjectArray().length <= 100){ UpdateNormalVoid(); }
+        else{ UpdateSlowVoid(); }
+        */
     }
     /*These are set of functionc to update the whole object within the application.
     The slow speed means that the objects will updated using least common multiplier, which also means that object array that is smallest will get update more often.
@@ -75,6 +80,7 @@ class Main extends Sprite{
         loopCounterMainInt ++;
         var loopCounter1Int:Int = 0;
         while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            trace(loopCounter1Int);
             collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].AIAutoExhibitionChangeVoid();
             loopCounter1Int ++;
         }
@@ -82,21 +88,25 @@ class Main extends Sprite{
     private function UpdateFastVoid(){
         var loopCounter1Int:Int = 0;
         while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
+            trace(loopCounter1Int);
             collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].UpdateVoid();
             loopCounter1Int ++;
         }
         loopCounter1Int = 0;
         while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
+            trace(loopCounter1Int);
             collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].UpdateVoid();
             loopCounter1Int ++;
         }
         loopCounter1Int = 0;
         while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
+            trace(loopCounter1Int);
             collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].UpdateVoid();
             loopCounter1Int ++;
         }
         loopCounter1Int = 0;
         while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            trace(loopCounter1Int);
             collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].AIAutoExhibitionChangeVoid();
             loopCounter1Int ++;
         }

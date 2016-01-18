@@ -33,7 +33,7 @@ class ObjectMuseumUI extends Sprite{
         _widthMaxInt:Int
     ){
         if(typeEnum == FLR){
-            widthInt = Math.round(((_widthMaxInt - Lib.current.stage.stageWidth/4) - ((collectionGlobalObject.GetFloorObjectArray().length - 1)*5))/collectionGlobalObject.GetFloorObjectArray().length);
+            widthInt = Math.round(((_widthMaxInt - Lib.current.stage.stageWidth/4) - 5)/2);
             buttonObject.width = widthInt;
             buttonObject.height = heightInt;
             buttonObject.id = _object.GetNameStruct().nameAltString;

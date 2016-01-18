@@ -73,6 +73,7 @@ class ObjectMuseum{
         else if(typeEnum == FLR){ parentObject = null; }
         else if(typeEnum == ROM){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, FLR, _parentNameAltString)); }
         var loopCounter1Int:Int = 0;
+        var necessaryWidthInt:Int = 0;
         while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
             collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineSiblingVoid();
             collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineIndexVoid();
@@ -80,8 +81,12 @@ class ObjectMuseum{
                 collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int],
                 Lib.current.stage.stageWidth
             );
+            if(necessaryWidthInt < Math.round(collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().x + collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().width)){
+                necessaryWidthInt = Math.round(collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().x + collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().width);
+            }
             loopCounter1Int ++;
         }
+        if(nameStruct.nameAltString != "EXH_ARC"){ collectionGlobalObject.GetUIMuseumAbsoluteObject().width = necessaryWidthInt; }
         loopCounter1Int = 0;
         while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
             collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetParentObject().DetermineChildVoid();

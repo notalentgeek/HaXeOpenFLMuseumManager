@@ -37,6 +37,6 @@ class ObjectVisitorUI extends Sprite{
             _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().height +
             (_object.GetVisitorUIObject().GetButtonObject().height*_object.GetIndexLocalInt()) +
             5 +
-            (_object.GetIndexLocalInt()*5);
+            (_object.GetIndexLocalInt()*5);        
     }
 }
