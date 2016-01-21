@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hbox width="100%" height="100%">
+    <scrollview width="25%" height="100%">
+        <vbox width="100%">
+            <button id="UIPopupAddMuseumObjectButton" autoSize="false" width="100%" text="Add Museum Object"></button>
+            <button id="UIPopupAddTagButton" autoSize="false" width="100%" text="Add Tag"></button>
+            <button id="UIPopupAddVisitorButton" autoSize="false" width="100%" text="Add Visitor"></button>
+            <button id="UIPopupEditMuseum ObjectButton" autoSize="false" width="100%" text="Edit Museum Object"></button>
+            <button id="UIPopupEditTagButton" autoSize="false" width="100%" text="Edit Tag"></button>
+            <button id="UIPopupEditVisitorButton" autoSize="false" width="100%" text="Edit Visitor"></button>
+            <button id="UIPopupRemoveMuseumObjectButton" autoSize="false" width="100%" text="Remove Museum Object"></button>
+            <button id="UIPopupRemoveTagButton" autoSize="false" width="100%" text="Remove Tag"></button>
+            <button id="UIPopupRemoveVisitorButton" autoSize="false" width="100%" text="Remove Visitor"></button>
+            <button id="UIPopupSaveButton" autoSize="false" width="100%" text="Save"></button>
+            <button id="UIPopupSaveAsButton" autoSize="false" width="100%" text="Save As"></button>
+            <button id="UIPopupLoadButton" autoSize="false" width="100%" text="Load"></button>
+            <button id="UIPopupExitButton" autoSize="false" width="100%" text="Exit"></button>
+        </vbox>
+    </scrollview>
+    <scrollview width="75%" height="100%">
+        <absolute id="UIMuseumAbsolute"></absolute>
+    </scrollview>
+</hbox>

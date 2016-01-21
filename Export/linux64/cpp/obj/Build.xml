@@ -5011,6 +5011,7 @@
    <depend name="include/haxe/xml/Parser.h"/>
   </file>
   <file name="src/UIPopupAddObjectMuseum.cpp">
+   <depend name="include/CollectionFunction.h"/>
    <depend name="include/CollectionGlobal.h"/>
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectTag.h"/>

@@ -18,21 +18,26 @@ import haxe.ui.toolkit.core.Toolkit;
 import haxe.ui.toolkit.data.DataSource;
 import haxe.ui.toolkit.events.UIEvent;
 
+typedef StructListSelectorTag = {
+    listSelectorObject  :ListSelector,
+    textObject          :Text
+};
+
 class UIPopupAddObjectMuseum{
 
 
 
-    private var buttonObject                :Button                 = null;
-    private var collectionGlobalObject      :CollectionGlobal       = null;
-    private var gridObject                  :Grid                   = null;
-    private var listSelectorParentObject    :ListSelector           = null;
-    private var listSelectorTagCurrentInt   :Int                    = 1;
-    private var listSelectorTagObject       :ListSelector           = null;
-    private var listSelectorTypeInt         :Int                    = -1;
-    private var listSelectorTypeObject      :ListSelector           = null;
-    private var listSelectorTypePrevInt     :Int                    = -1;
-    private var popupObject                 :Popup                  = null;
-    private var textObject                  :Text                   = null;
+    private var buttonObject                :Button                         = null;
+    private var collectionGlobalObject      :CollectionGlobal               = null;
+    private var gridObject                  :Grid                           = null;
+    private var listSelectorParentObject    :ListSelector                   = null;
+    private var listSelectorTagCurrentInt   :Int                            = 1;
+    private var listSelectorTagStructArray  :Array<StructListSelectorTag>   = new Array<StructListSelectorTag>();
+    private var listSelectorTypeInt         :Int                            = -1;
+    private var listSelectorTypeObject      :ListSelector                   = null;
+    private var listSelectorTypePrevInt     :Int                            = -1;
+    private var popupObject                 :Popup                          = null;
+    private var textObject                  :Text                           = null;
 
 
 
@@ -59,16 +64,25 @@ class UIPopupAddObjectMuseum{
 
             gridObject = popupObject.content.findChild("UIPopupAddObjectMuseum_Grid", Grid, true);
             listSelectorParentObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectParentObject", ListSelector, true);
-            listSelectorTagObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTag_1", ListSelector, true);
             listSelectorTypeObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectType", ListSelector, true);
 
-            var tempUsedTagStringArray:Array<String> = new Array<String>();
+            CollectionFunction.ClearArray(listSelectorTagStructArray);
+            var listSelectorTagObject:ListSelector = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTag_1", ListSelector, true);
+            var listSelectorTagTextObject:Text = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTagText_1", Text, true);
+            var listSelectorTagStruct = {
+                listSelectorObject  :listSelectorTagObject,
+                textObject          :listSelectorTagTextObject
+            };
+            listSelectorTagStructArray.push(listSelectorTagStruct);
+
+            listSelectorTagObject.dataSource.createFromString("Remove");
             var loopCounter1Int:Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetTagObjectArray().length){
-                tempUsedTagStringArray.push(collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString());
-                listSelectorTagObject.dataSource.createFromString(tempUsedTagStringArray[loopCounter1Int]);
+                listSelectorTagObject.dataSource.createFromString(collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString());
                 loopCounter1Int ++;
             }
+
+
 
         }
 
@@ -105,21 +119,48 @@ class UIPopupAddObjectMuseum{
 
         }
 
-		if(popupObject != null && listSelectorTagObject != null){
+		if(popupObject != null && listSelectorTagStructArray.length > 0){
 
-            if(listSelectorTagObject.selectedIndex != -1 && listSelectorTagObject.selectedIndex != 0){
+            /*For when the ListSelector struct array is having lenght equal to 1 and loopCounter1Int is not having index equal to the ListSelector array length minus 1,
+                reset the value of the of the following ListSelector.
+            If the condition other than those, remove the ListSelector from the ListSelector struct array and from the grid layout.*/
+            var loopCounter1Int:Int = 0;
+            while(loopCounter1Int < listSelectorTagStructArray.length){
 
-                trace(listSelectorTagObject.text);
-                listSelectorTagCurrentInt ++;
+                if(listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex == 0 && listSelectorTagStructArray.length > 1){
+                    if(loopCounter1Int == listSelectorTagStructArray.length - 1){
+                        listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex = -1;
+                    }
+                    else{
+                        gridObject.removeChild(listSelectorTagStructArray[loopCounter1Int].listSelectorObject);
+                        gridObject.removeChild(listSelectorTagStructArray[loopCounter1Int].textObject);
+                        listSelectorTagStructArray.remove(listSelectorTagStructArray[loopCounter1Int]);
+                    }
+                }
+                else if(listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex == 0 && listSelectorTagStructArray.length == 1){
+                    listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex = -1;
+                }
+                loopCounter1Int ++;
 
-                textObject = new Text();
-                textObject.text = "Tags";
-                textObject.id = "UIPopupAddObjectMuseum_SelectTagText_" + listSelectorTagCurrentInt;
-                gridObject.addChild(textObject);
+            }
 
-                listSelectorTagObject.disabled = true;
-                listSelectorTagObject = new ListSelector();
-                listSelectorTagObject.dataSource.createFromString("None");
+            if(listSelectorTagStructArray[listSelectorTagStructArray.length - 1].listSelectorObject.selectedIndex != -1 && listSelectorTagStructArray[listSelectorTagStructArray.length - 1].listSelectorObject.selectedIndex != 0){
+
+                var listSelectorTagTextObject:Text = new Text();
+                var listSelectorTagObject:ListSelector = new ListSelector();
+                var listSelectorTagStruct = {
+                    listSelectorObject  :listSelectorTagObject,
+                    textObject          :listSelectorTagTextObject
+                };
+                listSelectorTagStructArray.push(listSelectorTagStruct);
+
+
+                listSelectorTagTextObject = new Text();
+                listSelectorTagTextObject.text = "Tags";
+                listSelectorTagTextObject.id = "UIPopupAddObjectMuseum_SelectTagText_" + listSelectorTagStructArray.length;
+                gridObject.addChild(listSelectorTagTextObject);
+
+                listSelectorTagObject.dataSource.createFromString("Remove");
 
                 var tempUsedTagStringArray:Array<String> = new Array<String>();
                 var loopCounter1Int:Int = 0;
@@ -127,12 +168,12 @@ class UIPopupAddObjectMuseum{
                     tempUsedTagStringArray.push(collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString());
                     loopCounter1Int ++;
                 }
-                loopCounter1Int = listSelectorTagCurrentInt - 1;
-                while(loopCounter1Int > 0){
+                loopCounter1Int = 1;
+                while(loopCounter1Int < listSelectorTagStructArray.length){
 
                     var tempListSelectorTagObject:ListSelector = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTag_" + loopCounter1Int, ListSelector, true);
                     tempUsedTagStringArray.remove(tempListSelectorTagObject.text);
-                    loopCounter1Int --;
+                    loopCounter1Int ++;
 
                 }
                 loopCounter1Int = 0;
@@ -143,43 +184,10 @@ class UIPopupAddObjectMuseum{
 
                 }
 
-                listSelectorTagObject.id = "UIPopupAddObjectMuseum_SelectTag_" + listSelectorTagCurrentInt;
+                listSelectorTagObject.id = "UIPopupAddObjectMuseum_SelectTag_" + listSelectorTagStructArray.length;
                 listSelectorTagObject.percentWidth = 100;
                 listSelectorTagObject.text = " ";
                 gridObject.addChild(listSelectorTagObject);
-
-            }
-            else if(listSelectorTagObject.selectedIndex != -1 && listSelectorTagObject.selectedIndex == 0){
-
-                listSelectorTagCurrentInt --;
-                gridObject.removeChild(textObject);
-                gridObject.removeChild(listSelectorTagObject);
-                textObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTagText_" + listSelectorTagCurrentInt, Text, true);
-                listSelectorTagObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTag_" + listSelectorTagCurrentInt, ListSelector, true);
-                listSelectorTagObject.disabled = false;
-                listSelectorTagObject.selectedIndex = -1;
-                listSelectorTagObject.dataSource.removeAll();
-                var tempUsedTagStringArray:Array<String> = new Array<String>();
-                var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < collectionGlobalObject.GetTagObjectArray().length){
-                    tempUsedTagStringArray.push(collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString());
-                    loopCounter1Int ++;
-                }
-                loopCounter1Int = listSelectorTagCurrentInt - 1;
-                while(loopCounter1Int > 0){
-
-                    var tempListSelectorTagObject:ListSelector = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTag_" + loopCounter1Int, ListSelector, true);
-                    tempUsedTagStringArray.remove(tempListSelectorTagObject.text);
-                    loopCounter1Int --;
-
-                }
-                loopCounter1Int = 0;
-                while(loopCounter1Int < tempUsedTagStringArray.length){
-
-                    listSelectorTagObject.dataSource.createFromString(tempUsedTagStringArray[loopCounter1Int]);
-                    loopCounter1Int ++;
-
-                }
 
             }
 
