@@ -15,14 +15,14 @@
 
 Void __ASSET__fonts_oxygen_bold_ttf_obj::__construct()
 {
-HX_STACK_FRAME("__ASSET__fonts_oxygen_bold_ttf","new",0x00ddef52,"__ASSET__fonts_oxygen_bold_ttf.new","DefaultAssetLibrary.hx",689,0x0fc48912)
+HX_STACK_FRAME("__ASSET__fonts_oxygen_bold_ttf","new",0x00ddef52,"__ASSET__fonts_oxygen_bold_ttf.new","DefaultAssetLibrary.hx",693,0x0fc48912)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(689)
+	HX_STACK_LINE(693)
 	super::__construct(null(),null(),null());
-	HX_STACK_LINE(689)
+	HX_STACK_LINE(693)
 	this->__fontPath = HX_HCSTRING("fonts/Oxygen-Bold.ttf","\xbf","\x41","\x76","\xf1");
-	HX_STACK_LINE(689)
+	HX_STACK_LINE(693)
 	this->fontName = HX_HCSTRING("Oxygen Bold","\x45","\x9e","\xf2","\x9a");
 }
 ;

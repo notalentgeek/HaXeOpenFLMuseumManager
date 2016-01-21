@@ -148,7 +148,6 @@ class ObjectVisitor{
             var threeSentenceString:String = ObjectGeneratorSentence.GenerateSentence3String(collectionGlobalObject, this);
             sentenceStringArray.push(threeSentenceString);
 
-            trace("TEST1.1.");
             loopCounter1Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
                 collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineFullVoid();
@@ -169,23 +168,16 @@ class ObjectVisitor{
             }
             loopCounter1Int = 0;
             var necessaryHeightInt:Int = 0;
-            trace("TEST1.2.");
             while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-                trace(loopCounter1Int);
                 collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
-                trace("TEST1.2.1");
                 collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(targetInt);
-                trace("TEST1.2.2");
                 collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
-                trace("TEST1.2.3");
                 if(necessaryHeightInt < Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height)){
-                    trace("TEST1.2.4");
                     necessaryHeightInt = Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height);
                 }
                 loopCounter1Int ++;
             }
             collectionGlobalObject.GetUIMuseumAbsoluteObject().height = necessaryHeightInt;
-            trace("TEST1.3.");
 
             var visitorVisitExhibitionStruct:StructVisitorVisitExhibition = {
                 currentExhibitionTimeInt:0,
@@ -210,10 +202,8 @@ class ObjectVisitor{
             timeAIAutoExhibitionChangeFloat += 0.01;
             if(randomFloat > (1.0 - timeAIAutoExhibitionChangeFloat)){
                 var randomInt:Int = Math.round(Math.random()*(exhibitionTargetObjectArray.length - 1));
-                trace("TEST1.");
                 ChangeExhibitionCurrentVoid(exhibitionTargetObjectArray[randomInt]);
                 timeAIAutoExhibitionChangeFloat = 0;
-                trace("TEST2.");
             }
         }
     }
@@ -222,7 +212,6 @@ class ObjectVisitor{
         CollectionFunction.ClearArray(exhibitionTargetObjectArray);
         var loopCounter1Int:Int = 0;
         /*Sort level 1.*/
-        trace("GENERATEEXHIBITIONTEST1.");
         while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
             if(exhibitionCurrentObject.GetNameStruct().nameAltString != collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameAltString){
                 exhibitionTargetObjectArray.push(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int]);
@@ -230,7 +219,6 @@ class ObjectVisitor{
             loopCounter1Int ++;
         }
         /*Sort level 2, remove every exhibitions that is marked for deletion.*/
-        trace("GENERATEEXHIBITIONTEST2.");
         loopCounter1Int = 0;
         while(loopCounter1Int < exhibitionTargetObjectArray.length){
             if(exhibitionTargetObjectArray[loopCounter1Int].GetMuseumModeEnum() == MRK_DEL){
@@ -242,7 +230,6 @@ class ObjectVisitor{
         }
         /*Sort level 3.
         Remove exhibition that is full from the target exhibition list.*/
-        trace("GENERATEEXHIBITIONTEST3.");
         loopCounter1Int = 0;
         while(loopCounter1Int < exhibitionTargetObjectArray.length){
             if(exhibitionTargetObjectArray[loopCounter1Int].GetFullBool() == true){
@@ -253,7 +240,6 @@ class ObjectVisitor{
             loopCounter1Int ++;
         }
         /*Sort level 4.*/
-        trace("GENERATEEXHIBITIONTEST4.");
         loopCounter1Int = 0;
         while(loopCounter1Int < exhibitionTargetObjectArray.length){
             var loopCounter2Int:Int = 0;
@@ -262,8 +248,7 @@ class ObjectVisitor{
                     if(Math.random() > 0.9){
                         exhibitionTargetObjectArray.remove(exhibitionVisitedObjectArray[loopCounter2Int]);
                         loopCounter1Int --;
-                        if(loopCounter1Int < 0){ break; }
-                        trace(loopCounter1Int + " " + exhibitionVisitedObjectArray.length);
+                        if(loopCounter1Int < 0){ loopCounter1Int = 0; }
                     }
                 }
                 loopCounter2Int ++;
@@ -272,7 +257,6 @@ class ObjectVisitor{
             loopCounter1Int ++;
         }
         /*Sort level 5.*/
-        trace("GENERATEEXHIBITIONTEST5.");
         loopCounter1Int = 0;
         while(loopCounter1Int < exhibitionTargetObjectArray.length){
             var   accumPercentageFloat:Float = 0;
@@ -296,12 +280,11 @@ class ObjectVisitor{
             loopCounter1Int ++;
         }
         /*Sort level 6.*/
-        trace("GENERATEEXHIBITIONTEST6.");
         loopCounter1Int = 0;
         while(loopCounter1Int < exhibitionTargetObjectArray.length){
-            var   sameCounterInt:Int = 0;
-            var   roomTargetObject:ObjectMuseum = exhibitionTargetObjectArray[loopCounter1Int].GetParentObject();
-            var   floorTargetObject:ObjectMuseum = roomTargetObject.GetParentObject();
+            var sameCounterInt:Int = 0;
+            var roomTargetObject:ObjectMuseum = exhibitionTargetObjectArray[loopCounter1Int].GetParentObject();
+            var floorTargetObject:ObjectMuseum = roomTargetObject.GetParentObject();
             if(roomTargetObject == roomCurrentObject ){ sameCounterInt ++; }
             if(floorTargetObject == floorCurrentObject){ sameCounterInt ++; }
             if(sameCounterInt == 1){

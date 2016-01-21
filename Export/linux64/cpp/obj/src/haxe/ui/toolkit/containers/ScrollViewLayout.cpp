@@ -76,12 +76,12 @@ namespace containers{
 
 Void ScrollViewLayout_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","new",0x706f4dc8,"haxe.ui.toolkit.containers.ScrollViewLayout.new","haxe/ui/toolkit/containers/ScrollView.hx",852,0x89f00132)
+HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","new",0x706f4dc8,"haxe.ui.toolkit.containers.ScrollViewLayout.new","haxe/ui/toolkit/containers/ScrollView.hx",870,0x89f00132)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(853)
+	HX_STACK_LINE(871)
 	this->_inlineScrolls = false;
-	HX_STACK_LINE(856)
+	HX_STACK_LINE(874)
 	super::__construct();
 }
 ;
@@ -103,9 +103,9 @@ Dynamic ScrollViewLayout_obj::__Create(hx::DynamicArray inArgs)
 
 Void ScrollViewLayout_obj::resizeChildren( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","resizeChildren",0x0f406eeb,"haxe.ui.toolkit.containers.ScrollViewLayout.resizeChildren","haxe/ui/toolkit/containers/ScrollView.hx",860,0x89f00132)
+		HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","resizeChildren",0x0f406eeb,"haxe.ui.toolkit.containers.ScrollViewLayout.resizeChildren","haxe/ui/toolkit/containers/ScrollView.hx",878,0x89f00132)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(860)
+		HX_STACK_LINE(878)
 		this->super::resizeChildren();
 	}
 return null();
@@ -114,62 +114,62 @@ return null();
 
 Void ScrollViewLayout_obj::repositionChildren( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","repositionChildren",0xf2b0d853,"haxe.ui.toolkit.containers.ScrollViewLayout.repositionChildren","haxe/ui/toolkit/containers/ScrollView.hx",863,0x89f00132)
+		HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","repositionChildren",0xf2b0d853,"haxe.ui.toolkit.containers.ScrollViewLayout.repositionChildren","haxe/ui/toolkit/containers/ScrollView.hx",881,0x89f00132)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(864)
+		HX_STACK_LINE(882)
 		this->super::repositionChildren();
-		HX_STACK_LINE(866)
+		HX_STACK_LINE(884)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp = this->get_container();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(866)
+		HX_STACK_LINE(884)
 		::haxe::ui::toolkit::controls::HScroll tmp1 = tmp->findChildAs(hx::ClassOf< ::haxe::ui::toolkit::controls::HScroll >());		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(866)
+		HX_STACK_LINE(884)
 		::haxe::ui::toolkit::controls::HScroll hscroll = tmp1;		HX_STACK_VAR(hscroll,"hscroll");
-		HX_STACK_LINE(867)
+		HX_STACK_LINE(885)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp2 = this->get_container();		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(867)
+		HX_STACK_LINE(885)
 		::haxe::ui::toolkit::controls::VScroll tmp3 = tmp2->findChildAs(hx::ClassOf< ::haxe::ui::toolkit::controls::VScroll >());		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(867)
+		HX_STACK_LINE(885)
 		::haxe::ui::toolkit::controls::VScroll vscroll = tmp3;		HX_STACK_VAR(vscroll,"vscroll");
-		HX_STACK_LINE(868)
+		HX_STACK_LINE(886)
 		bool tmp4 = (hscroll != null());		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(868)
+		HX_STACK_LINE(886)
 		if ((tmp4)){
-			HX_STACK_LINE(869)
+			HX_STACK_LINE(887)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp5 = this->get_container();		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(869)
+			HX_STACK_LINE(887)
 			Float tmp6 = tmp5->get_height();		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(869)
+			HX_STACK_LINE(887)
 			Float tmp7 = hscroll->get_height();		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(869)
+			HX_STACK_LINE(887)
 			Float tmp8 = (tmp6 - tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(869)
+			HX_STACK_LINE(887)
 			::openfl::_legacy::geom::Rectangle tmp9 = this->get_padding();		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(869)
+			HX_STACK_LINE(887)
 			Float tmp10 = tmp9->get_bottom();		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(869)
+			HX_STACK_LINE(887)
 			Float tmp11 = (tmp8 - tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(869)
+			HX_STACK_LINE(887)
 			hscroll->set_y(tmp11);
 		}
-		HX_STACK_LINE(871)
+		HX_STACK_LINE(889)
 		bool tmp5 = (vscroll != null());		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(871)
+		HX_STACK_LINE(889)
 		if ((tmp5)){
-			HX_STACK_LINE(872)
+			HX_STACK_LINE(890)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp6 = this->get_container();		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(872)
+			HX_STACK_LINE(890)
 			Float tmp7 = tmp6->get_width();		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(872)
+			HX_STACK_LINE(890)
 			Float tmp8 = vscroll->get_width();		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(872)
+			HX_STACK_LINE(890)
 			Float tmp9 = (tmp7 - tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(872)
+			HX_STACK_LINE(890)
 			::openfl::_legacy::geom::Rectangle tmp10 = this->get_padding();		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(872)
+			HX_STACK_LINE(890)
 			Float tmp11 = tmp10->get_right();		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(872)
+			HX_STACK_LINE(890)
 			Float tmp12 = (tmp9 - tmp11);		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(872)
+			HX_STACK_LINE(890)
 			vscroll->set_x(tmp12);
 		}
 	}
@@ -178,139 +178,139 @@ return null();
 
 
 Float ScrollViewLayout_obj::get_usableWidth( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","get_usableWidth",0x2584b8ed,"haxe.ui.toolkit.containers.ScrollViewLayout.get_usableWidth","haxe/ui/toolkit/containers/ScrollView.hx",877,0x89f00132)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","get_usableWidth",0x2584b8ed,"haxe.ui.toolkit.containers.ScrollViewLayout.get_usableWidth","haxe/ui/toolkit/containers/ScrollView.hx",895,0x89f00132)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(878)
+	HX_STACK_LINE(896)
 	Float tmp = this->get_innerWidth();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(878)
+	HX_STACK_LINE(896)
 	Float ucx = tmp;		HX_STACK_VAR(ucx,"ucx");
-	HX_STACK_LINE(879)
+	HX_STACK_LINE(897)
 	::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp1 = this->get_container();		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(879)
+	HX_STACK_LINE(897)
 	::haxe::ui::toolkit::controls::VScroll tmp2 = tmp1->findChildAs(hx::ClassOf< ::haxe::ui::toolkit::controls::VScroll >());		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(879)
+	HX_STACK_LINE(897)
 	::haxe::ui::toolkit::controls::VScroll vscroll = tmp2;		HX_STACK_VAR(vscroll,"vscroll");
-	HX_STACK_LINE(880)
+	HX_STACK_LINE(898)
 	bool tmp3 = (vscroll != null());		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(880)
+	HX_STACK_LINE(898)
 	bool tmp4 = tmp3;		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(880)
+	HX_STACK_LINE(898)
 	bool tmp5;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(880)
+	HX_STACK_LINE(898)
 	if ((tmp4)){
-		HX_STACK_LINE(880)
+		HX_STACK_LINE(898)
 		bool tmp6 = vscroll->get_visible();		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(880)
+		HX_STACK_LINE(898)
 		bool tmp7 = tmp6;		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(880)
+		HX_STACK_LINE(898)
 		bool tmp8 = tmp7;		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(880)
+		HX_STACK_LINE(898)
 		tmp5 = (tmp8 == true);
 	}
 	else{
-		HX_STACK_LINE(880)
+		HX_STACK_LINE(898)
 		tmp5 = false;
 	}
-	HX_STACK_LINE(880)
+	HX_STACK_LINE(898)
 	bool tmp6;		HX_STACK_VAR(tmp6,"tmp6");
-	HX_STACK_LINE(880)
+	HX_STACK_LINE(898)
 	if ((tmp5)){
-		HX_STACK_LINE(880)
+		HX_STACK_LINE(898)
 		bool tmp7 = this->_inlineScrolls;		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(880)
+		HX_STACK_LINE(898)
 		bool tmp8 = tmp7;		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(880)
+		HX_STACK_LINE(898)
 		tmp6 = (tmp8 == false);
 	}
 	else{
-		HX_STACK_LINE(880)
+		HX_STACK_LINE(898)
 		tmp6 = false;
 	}
-	HX_STACK_LINE(880)
+	HX_STACK_LINE(898)
 	if ((tmp6)){
-		HX_STACK_LINE(881)
+		HX_STACK_LINE(899)
 		Float tmp7 = vscroll->get_width();		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(881)
+		HX_STACK_LINE(899)
 		int tmp8 = this->get_spacingX();		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(881)
+		HX_STACK_LINE(899)
 		Float tmp9 = (tmp7 + tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(881)
+		HX_STACK_LINE(899)
 		hx::SubEq(ucx,tmp9);
 	}
-	HX_STACK_LINE(883)
+	HX_STACK_LINE(901)
 	Float tmp7 = ucx;		HX_STACK_VAR(tmp7,"tmp7");
-	HX_STACK_LINE(883)
+	HX_STACK_LINE(901)
 	return tmp7;
 }
 
 
 Float ScrollViewLayout_obj::get_usableHeight( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","get_usableHeight",0x64ec8f20,"haxe.ui.toolkit.containers.ScrollViewLayout.get_usableHeight","haxe/ui/toolkit/containers/ScrollView.hx",887,0x89f00132)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","get_usableHeight",0x64ec8f20,"haxe.ui.toolkit.containers.ScrollViewLayout.get_usableHeight","haxe/ui/toolkit/containers/ScrollView.hx",905,0x89f00132)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(888)
+	HX_STACK_LINE(906)
 	Float tmp = this->get_innerHeight();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(888)
+	HX_STACK_LINE(906)
 	Float ucy = tmp;		HX_STACK_VAR(ucy,"ucy");
-	HX_STACK_LINE(889)
+	HX_STACK_LINE(907)
 	::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp1 = this->get_container();		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(889)
+	HX_STACK_LINE(907)
 	::haxe::ui::toolkit::controls::HScroll tmp2 = tmp1->findChildAs(hx::ClassOf< ::haxe::ui::toolkit::controls::HScroll >());		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(889)
+	HX_STACK_LINE(907)
 	::haxe::ui::toolkit::controls::HScroll hscroll = tmp2;		HX_STACK_VAR(hscroll,"hscroll");
-	HX_STACK_LINE(890)
+	HX_STACK_LINE(908)
 	bool tmp3 = (hscroll != null());		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(890)
+	HX_STACK_LINE(908)
 	bool tmp4 = tmp3;		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(890)
+	HX_STACK_LINE(908)
 	bool tmp5;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(890)
+	HX_STACK_LINE(908)
 	if ((tmp4)){
-		HX_STACK_LINE(890)
+		HX_STACK_LINE(908)
 		tmp5 = hscroll->get_visible();
 	}
 	else{
-		HX_STACK_LINE(890)
+		HX_STACK_LINE(908)
 		tmp5 = false;
 	}
-	HX_STACK_LINE(890)
+	HX_STACK_LINE(908)
 	bool tmp6;		HX_STACK_VAR(tmp6,"tmp6");
-	HX_STACK_LINE(890)
+	HX_STACK_LINE(908)
 	if ((tmp5)){
-		HX_STACK_LINE(890)
+		HX_STACK_LINE(908)
 		bool tmp7 = this->_inlineScrolls;		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(890)
+		HX_STACK_LINE(908)
 		bool tmp8 = tmp7;		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(890)
+		HX_STACK_LINE(908)
 		tmp6 = (tmp8 == false);
 	}
 	else{
-		HX_STACK_LINE(890)
+		HX_STACK_LINE(908)
 		tmp6 = false;
 	}
-	HX_STACK_LINE(890)
+	HX_STACK_LINE(908)
 	if ((tmp6)){
-		HX_STACK_LINE(891)
+		HX_STACK_LINE(909)
 		Float tmp7 = hscroll->get_height();		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(891)
+		HX_STACK_LINE(909)
 		int tmp8 = this->get_spacingY();		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(891)
+		HX_STACK_LINE(909)
 		Float tmp9 = (tmp7 + tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(891)
+		HX_STACK_LINE(909)
 		hx::SubEq(ucy,tmp9);
 	}
-	HX_STACK_LINE(893)
+	HX_STACK_LINE(911)
 	Float tmp7 = ucy;		HX_STACK_VAR(tmp7,"tmp7");
-	HX_STACK_LINE(893)
+	HX_STACK_LINE(911)
 	return tmp7;
 }
 
 
 bool ScrollViewLayout_obj::get_inlineScrolls( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","get_inlineScrolls",0xfe65ad2c,"haxe.ui.toolkit.containers.ScrollViewLayout.get_inlineScrolls","haxe/ui/toolkit/containers/ScrollView.hx",901,0x89f00132)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","get_inlineScrolls",0xfe65ad2c,"haxe.ui.toolkit.containers.ScrollViewLayout.get_inlineScrolls","haxe/ui/toolkit/containers/ScrollView.hx",919,0x89f00132)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(902)
+	HX_STACK_LINE(920)
 	bool tmp = this->_inlineScrolls;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(902)
+	HX_STACK_LINE(920)
 	return tmp;
 }
 
@@ -318,14 +318,14 @@ bool ScrollViewLayout_obj::get_inlineScrolls( ){
 HX_DEFINE_DYNAMIC_FUNC0(ScrollViewLayout_obj,get_inlineScrolls,return )
 
 bool ScrollViewLayout_obj::set_inlineScrolls( bool value){
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","set_inlineScrolls",0x21d38538,"haxe.ui.toolkit.containers.ScrollViewLayout.set_inlineScrolls","haxe/ui/toolkit/containers/ScrollView.hx",905,0x89f00132)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewLayout","set_inlineScrolls",0x21d38538,"haxe.ui.toolkit.containers.ScrollViewLayout.set_inlineScrolls","haxe/ui/toolkit/containers/ScrollView.hx",923,0x89f00132)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(906)
+	HX_STACK_LINE(924)
 	this->_inlineScrolls = value;
-	HX_STACK_LINE(907)
+	HX_STACK_LINE(925)
 	bool tmp = value;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(907)
+	HX_STACK_LINE(925)
 	return tmp;
 }
 

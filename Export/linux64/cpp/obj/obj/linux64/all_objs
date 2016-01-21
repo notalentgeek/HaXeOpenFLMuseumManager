@@ -427,6 +427,7 @@
 "obj/linux64/eeeff144_Thread.o"
 "obj/linux64/eeeff144_Mutex.o"
 "obj/linux64/57588eaa_Xml.o"
+"obj/linux64/57588eaa_UIPopupAddObjectMuseum.o"
 "obj/linux64/57588eaa_Type.o"
 "obj/linux64/57588eaa_StringTools.o"
 "obj/linux64/57588eaa_StringBuf.o"

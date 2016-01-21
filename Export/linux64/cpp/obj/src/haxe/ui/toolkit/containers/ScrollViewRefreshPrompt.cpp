@@ -49,10 +49,10 @@ namespace containers{
 
 Void ScrollViewRefreshPrompt_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewRefreshPrompt","new",0xad64cea5,"haxe.ui.toolkit.containers.ScrollViewRefreshPrompt.new","haxe/ui/toolkit/containers/ScrollView.hx",800,0x89f00132)
+HX_STACK_FRAME("haxe.ui.toolkit.containers.ScrollViewRefreshPrompt","new",0xad64cea5,"haxe.ui.toolkit.containers.ScrollViewRefreshPrompt.new","haxe/ui/toolkit/containers/ScrollView.hx",818,0x89f00132)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(800)
+	HX_STACK_LINE(818)
 	super::__construct();
 }
 ;

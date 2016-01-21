@@ -10,6 +10,7 @@
 #endif
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(Main)
+HX_DECLARE_CLASS0(UIPopupAddObjectMuseum)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObject)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObjectContainer)
 HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
@@ -47,6 +48,7 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::openfl::_legacy::display::Spri
 
 		::CollectionGlobal collectionGlobalObject;
 		int loopCounterMainInt;
+		::UIPopupAddObjectMuseum uiPopupAddMuseumObjectMuseum;
 		virtual Void Update( ::openfl::_legacy::events::Event event);
 		Dynamic Update_dyn();
 

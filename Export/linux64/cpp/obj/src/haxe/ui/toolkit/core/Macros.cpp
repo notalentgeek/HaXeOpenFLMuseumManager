@@ -571,7 +571,7 @@ Void Macros_obj::insertLine( Dynamic fn,Dynamic e,int location){
 								HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","haxe/ui/toolkit/core/Macros.hx",543,0x3fba9eca)
 								{
 									hx::Anon __result = hx::Anon_obj::Create();
-									__result->Add(HX_HCSTRING("file","\x7c","\xce","\xbb","\x43") , HX_HCSTRING("/usr/share/haxe/lib/haxeui/1,8,3/haxe/ui/toolkit/core/Macros.hx","\x31","\x46","\x17","\x55"),false);
+									__result->Add(HX_HCSTRING("file","\x7c","\xce","\xbb","\x43") , HX_HCSTRING("/usr/share/haxe/lib/haxeui/1,8,4/haxe/ui/toolkit/core/Macros.hx","\x50","\xdd","\x6f","\x64"),false);
 									__result->Add(HX_HCSTRING("min","\x92","\x11","\x53","\x00") , (int)18014,false);
 									__result->Add(HX_HCSTRING("max","\xa4","\x0a","\x53","\x00") , (int)18043,false);
 									return __result;
@@ -612,7 +612,7 @@ Void Macros_obj::insertLine( Dynamic fn,Dynamic e,int location){
 							HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","haxe/ui/toolkit/core/Macros.hx",544,0x3fba9eca)
 							{
 								hx::Anon __result = hx::Anon_obj::Create();
-								__result->Add(HX_HCSTRING("file","\x7c","\xce","\xbb","\x43") , HX_HCSTRING("/usr/share/haxe/lib/haxeui/1,8,3/haxe/ui/toolkit/core/Macros.hx","\x31","\x46","\x17","\x55"),false);
+								__result->Add(HX_HCSTRING("file","\x7c","\xce","\xbb","\x43") , HX_HCSTRING("/usr/share/haxe/lib/haxeui/1,8,4/haxe/ui/toolkit/core/Macros.hx","\x50","\xdd","\x6f","\x64"),false);
 								__result->Add(HX_HCSTRING("min","\x92","\x11","\x53","\x00") , (int)18066,false);
 								__result->Add(HX_HCSTRING("max","\xa4","\x0a","\x53","\x00") , (int)18104,false);
 								return __result;

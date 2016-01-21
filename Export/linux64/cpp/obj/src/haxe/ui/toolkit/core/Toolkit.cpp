@@ -319,7 +319,7 @@ Void Toolkit_obj::init( ){
 			HX_STACK_LINE(71)
 			{
 				HX_STACK_LINE(72)
-				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\n\t\"name\": \"lime\",\n\t\"url\": \"https://github.com/openfl/lime\",\n\t\"license\": \"MIT\",\n\t\"tags\": [],\n\t\"description\": \"A flexible lightweight layer for Haxe cross-platform developers\",\n\t\"version\": \"2.8.1\",\n\t\"releasenote\": \"Disabled ANGLE for now, joystick fix\",\n\t\"contributors\": [ \"singmajesty\" ]\n}","\x9b","\xc4","\x16","\xea"));		HX_STACK_VAR(tmp,"tmp");
+				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\n\t\"name\": \"lime\",\n\t\"url\": \"https://github.com/openfl/lime\",\n\t\"license\": \"MIT\",\n\t\"tags\": [],\n\t\"description\": \"A flexible lightweight layer for Haxe cross-platform developers\",\n\t\"version\": \"2.8.3\",\n\t\"releasenote\": \"Improved current Android NDK support, other fixes\",\n\t\"contributors\": [ \"singmajesty\" ]\n}","\x69","\xc1","\x4c","\x82"));		HX_STACK_VAR(tmp,"tmp");
 				HX_STACK_LINE(72)
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
 				HX_STACK_LINE(72)
@@ -348,11 +348,11 @@ Void Toolkit_obj::init( ){
 			}
 			HX_STACK_LINE(101)
 			{
-				HX_STACK_LINE(101)
-				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\n    \"name\": \"haxeui\",\n    \"license\": \"MIT\",\n    \"tags\": [\n        \"rich\",\n        \"ui\"\n    ],\n    \"description\": \"Styleable application centric rich UI\",\n    \"contributors\": [\n        \"ianharrigan\"\n    ],\n    \"releasenote\": \"Fix parsing bug introduced in previous version\",\n    \"version\": \"1.8.3\",\n    \"url\": \"https://github.com/ianharrigan/haxeui\",\n    \"dependencies\": {\n        \"lime\": \"2.8.1\",\n        \"actuate\": \"1.8.6\",\n        \"openfl\": \"3.5.2\",\n        \"hscript\": \"2.0.5\"\n    }\n}","\x7c","\xad","\x0e","\x19"));		HX_STACK_VAR(tmp,"tmp");
-				HX_STACK_LINE(101)
+				HX_STACK_LINE(102)
+				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\n    \"name\": \"haxeui\",\n    \"license\": \"MIT\",\n    \"tags\": [\n        \"rich\",\n        \"ui\"\n    ],\n    \"description\": \"Styleable application centric rich UI\",\n    \"contributors\": [\n        \"ianharrigan\"\n    ],\n    \"releasenote\": \"Stop fixing openfl/lime versions\",\n    \"version\": \"1.8.4\",\n    \"url\": \"https://github.com/ianharrigan/haxeui\",\n    \"dependencies\": {\n        \"lime\": \"\",\n        \"actuate\": \"\",\n        \"openfl\": \"\",\n        \"hscript\": \"\"\n    }\n}","\x84","\x8a","\xb5","\x1f"));		HX_STACK_VAR(tmp,"tmp");
+				HX_STACK_LINE(102)
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
-				HX_STACK_LINE(101)
+				HX_STACK_LINE(102)
 				Dynamic value = tmp1;		HX_STACK_VAR(value,"value");
 				HX_STACK_LINE(101)
 				::haxe::ds::StringMap tmp2 = ::haxe::ui::toolkit::core::Toolkit_obj::_versionInfo;		HX_STACK_VAR(tmp2,"tmp2");
@@ -361,7 +361,7 @@ Void Toolkit_obj::init( ){
 				HX_STACK_LINE(101)
 				tmp2->set(HX_HCSTRING("haxeui","\xfa","\x6f","\x9a","\xbe"),tmp3);
 			}
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(116)
 			{
 				HX_STACK_LINE(117)
 				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\r\n  \"name\": \"actuate\",\r\n  \"url\": \"http://github.com/openfl/actuate\",\r\n  \"license\": \"MIT\",\r\n  \"tags\": [ \"flash\", \"cpp\", \"neko\", \"js\" ],\r\n  \"description\": \"Actuate is a fast and flexible tween library that uses a jQuery-style \\\"chaining\\\" syntax. It out-performs other libraries (such as TweenLite) and is easy to extend with custom actuators.\",\r\n  \"version\": \"1.8.6\",\r\n  \"releasenote\": \"Patches for C++ type reflection, Actuate.update and Lime\",\r\n  \"contributors\": [ \"singmajesty\" ],\r\n  \"dependencies\": {}\r\n}\r\n","\x61","\x27","\x92","\x8f"));		HX_STACK_VAR(tmp,"tmp");
@@ -369,20 +369,20 @@ Void Toolkit_obj::init( ){
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
 				HX_STACK_LINE(117)
 				Dynamic value = tmp1;		HX_STACK_VAR(value,"value");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(116)
 				::haxe::ds::StringMap tmp2 = ::haxe::ui::toolkit::core::Toolkit_obj::_versionInfo;		HX_STACK_VAR(tmp2,"tmp2");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(116)
 				Dynamic tmp3 = value;		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(116)
 				tmp2->set(HX_HCSTRING("actuate","\x0f","\xf9","\x11","\x6f"),tmp3);
 			}
 			HX_STACK_LINE(127)
 			{
-				HX_STACK_LINE(128)
+				HX_STACK_LINE(127)
 				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\r\n    \"name\"         : \"haxeui-rich-text\",\r\n    \"url\"          : \"https://github.com/ianharrigan/haxeui-rich-text\",\r\n    \"license\"      : \"MIT\",\r\n    \"tags\"         : [\"rich\", \"ui\", \"haxeui\"],\r\n    \"description\"  : \"Rich text for HaxeUI\",\r\n    \"version\"      : \"0.1.2\",\r\n    \"releasenote\"  : \"Improved RegExp syntax rules\",\r\n    \"contributors\" : [\"ianharrigan\"],\r\n    \"dependencies\" : {\r\n        \"openfl\"        : \"\",\r\n        \"actuate\"       : \"\",\r\n        \"hscript\"       : \"\",\r\n        \"haxeui\"       : \"\"\r\n    }\r\n}\r\n","\xc5","\x03","\x1f","\xd1"));		HX_STACK_VAR(tmp,"tmp");
-				HX_STACK_LINE(128)
+				HX_STACK_LINE(127)
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
-				HX_STACK_LINE(128)
+				HX_STACK_LINE(127)
 				Dynamic value = tmp1;		HX_STACK_VAR(value,"value");
 				HX_STACK_LINE(127)
 				::haxe::ds::StringMap tmp2 = ::haxe::ui::toolkit::core::Toolkit_obj::_versionInfo;		HX_STACK_VAR(tmp2,"tmp2");

@@ -15,14 +15,14 @@
 
 Void __ASSET__fonts_oxygen_ttf_obj::__construct()
 {
-HX_STACK_FRAME("__ASSET__fonts_oxygen_ttf","new",0x31013ae4,"__ASSET__fonts_oxygen_ttf.new","DefaultAssetLibrary.hx",688,0x0fc48912)
+HX_STACK_FRAME("__ASSET__fonts_oxygen_ttf","new",0x31013ae4,"__ASSET__fonts_oxygen_ttf.new","DefaultAssetLibrary.hx",692,0x0fc48912)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(688)
+	HX_STACK_LINE(692)
 	super::__construct(null(),null(),null());
-	HX_STACK_LINE(688)
+	HX_STACK_LINE(692)
 	this->__fontPath = HX_HCSTRING("fonts/Oxygen.ttf","\xa3","\xb2","\xcf","\x3c");
-	HX_STACK_LINE(688)
+	HX_STACK_LINE(692)
 	this->fontName = HX_HCSTRING("Oxygen Regular","\x9c","\xad","\xf3","\xa9");
 }
 ;

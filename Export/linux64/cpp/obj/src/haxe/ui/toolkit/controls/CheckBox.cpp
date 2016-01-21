@@ -179,9 +179,7 @@ Void CheckBox_obj::initialize( ){
 		HX_STACK_LINE(56)
 		this->addChild(tmp2);
 		HX_STACK_LINE(58)
-		::haxe::ui::toolkit::controls::Text tmp3 = this->_label;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(58)
-		::String tmp4 = HX_HCSTRING("haxeui_click","\x03","\x6b","\xd3","\x5c");		HX_STACK_VAR(tmp4,"tmp4");
+		::String tmp3 = HX_HCSTRING("haxeui_click","\x03","\x6b","\xd3","\x5c");		HX_STACK_VAR(tmp3,"tmp3");
 
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_1,::haxe::ui::toolkit::controls::CheckBox,_g)
 		int __ArgCount() const { return 1; }
@@ -197,11 +195,11 @@ Void CheckBox_obj::initialize( ){
 		HX_END_LOCAL_FUNC1((void))
 
 		HX_STACK_LINE(58)
-		tmp3->addEventListener(tmp4, Dynamic(new _Function_1_1(_g)),null(),null(),null());
+		this->addEventListener(tmp3, Dynamic(new _Function_1_1(_g)),null(),null(),null());
 		HX_STACK_LINE(62)
-		::haxe::ui::toolkit::controls::CheckBoxValue tmp5 = this->_value;		HX_STACK_VAR(tmp5,"tmp5");
+		::haxe::ui::toolkit::controls::CheckBoxValue tmp4 = this->_value;		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(62)
-		::String tmp6 = HX_HCSTRING("haxeui_change","\x55","\x86","\x4e","\x89");		HX_STACK_VAR(tmp6,"tmp6");
+		::String tmp5 = HX_HCSTRING("haxeui_change","\x55","\x86","\x4e","\x89");		HX_STACK_VAR(tmp5,"tmp5");
 
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_2,::haxe::ui::toolkit::controls::CheckBox,_g)
 		int __ArgCount() const { return 1; }
@@ -210,42 +208,42 @@ Void CheckBox_obj::initialize( ){
 			HX_STACK_ARG(e,"e")
 			{
 				HX_STACK_LINE(63)
-				Dynamic tmp7 = _g->_value->get_value();		HX_STACK_VAR(tmp7,"tmp7");
+				Dynamic tmp6 = _g->_value->get_value();		HX_STACK_VAR(tmp6,"tmp6");
 				HX_STACK_LINE(63)
-				bool tmp8 = (tmp7 == HX_HCSTRING("selected","\x5b","\x2a","\x6d","\xb1"));		HX_STACK_VAR(tmp8,"tmp8");
+				bool tmp7 = (tmp6 == HX_HCSTRING("selected","\x5b","\x2a","\x6d","\xb1"));		HX_STACK_VAR(tmp7,"tmp7");
 				HX_STACK_LINE(63)
-				_g->set_selected(tmp8);
+				_g->set_selected(tmp7);
 			}
 			return null();
 		}
 		HX_END_LOCAL_FUNC1((void))
 
 		HX_STACK_LINE(62)
-		tmp5->addEventListener(tmp6, Dynamic(new _Function_1_2(_g)),null(),null(),null());
+		tmp4->addEventListener(tmp5, Dynamic(new _Function_1_2(_g)),null(),null(),null());
 		HX_STACK_LINE(66)
-		::String tmp7 = ::openfl::_legacy::events::MouseEvent_obj::MOUSE_OVER;		HX_STACK_VAR(tmp7,"tmp7");
+		::String tmp6 = ::openfl::_legacy::events::MouseEvent_obj::MOUSE_OVER;		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(66)
-		Dynamic tmp8 = this->_onMouseOver_dyn();		HX_STACK_VAR(tmp8,"tmp8");
+		Dynamic tmp7 = this->_onMouseOver_dyn();		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(66)
-		this->addEventListener(tmp7,tmp8,null(),null(),null());
+		this->addEventListener(tmp6,tmp7,null(),null(),null());
 		HX_STACK_LINE(67)
-		::String tmp9 = ::openfl::_legacy::events::MouseEvent_obj::MOUSE_OUT;		HX_STACK_VAR(tmp9,"tmp9");
+		::String tmp8 = ::openfl::_legacy::events::MouseEvent_obj::MOUSE_OUT;		HX_STACK_VAR(tmp8,"tmp8");
 		HX_STACK_LINE(67)
-		Dynamic tmp10 = this->_onMouseOut_dyn();		HX_STACK_VAR(tmp10,"tmp10");
+		Dynamic tmp9 = this->_onMouseOut_dyn();		HX_STACK_VAR(tmp9,"tmp9");
 		HX_STACK_LINE(67)
-		this->addEventListener(tmp9,tmp10,null(),null(),null());
+		this->addEventListener(tmp8,tmp9,null(),null(),null());
 		HX_STACK_LINE(68)
-		::String tmp11 = ::openfl::_legacy::events::MouseEvent_obj::MOUSE_DOWN;		HX_STACK_VAR(tmp11,"tmp11");
+		::String tmp10 = ::openfl::_legacy::events::MouseEvent_obj::MOUSE_DOWN;		HX_STACK_VAR(tmp10,"tmp10");
 		HX_STACK_LINE(68)
-		Dynamic tmp12 = this->_onMouseDown_dyn();		HX_STACK_VAR(tmp12,"tmp12");
+		Dynamic tmp11 = this->_onMouseDown_dyn();		HX_STACK_VAR(tmp11,"tmp11");
 		HX_STACK_LINE(68)
-		this->addEventListener(tmp11,tmp12,null(),null(),null());
+		this->addEventListener(tmp10,tmp11,null(),null(),null());
 		HX_STACK_LINE(69)
-		::String tmp13 = ::openfl::_legacy::events::MouseEvent_obj::MOUSE_UP;		HX_STACK_VAR(tmp13,"tmp13");
+		::String tmp12 = ::openfl::_legacy::events::MouseEvent_obj::MOUSE_UP;		HX_STACK_VAR(tmp12,"tmp12");
 		HX_STACK_LINE(69)
-		Dynamic tmp14 = this->_onMouseUp_dyn();		HX_STACK_VAR(tmp14,"tmp14");
+		Dynamic tmp13 = this->_onMouseUp_dyn();		HX_STACK_VAR(tmp13,"tmp13");
 		HX_STACK_LINE(69)
-		this->addEventListener(tmp13,tmp14,null(),null(),null());
+		this->addEventListener(tmp12,tmp13,null(),null(),null());
 	}
 return null();
 }

@@ -27,7 +27,7 @@ class ObjectTag{
         feelEnum = _feelEnum;
         generalTagBool = _generalTagBool;
         typeEnum = _typeEnum;
-        nameString = _nameString + Std.string(typeEnum); /*The most basic word from this tag plus additional suffix from typeEnum.*/
+        nameString = _nameString + "_" + Std.string(typeEnum); /*The most basic word from this tag plus additional suffix from typeEnum.*/
         AddToArrayVoid();
     }
     private function AddToArrayVoid(){

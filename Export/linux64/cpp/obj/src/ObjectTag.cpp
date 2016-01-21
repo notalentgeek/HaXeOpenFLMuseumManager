@@ -67,7 +67,7 @@ HX_STACK_ARG(_typeEnum,"_typeEnum")
 	HX_STACK_LINE(29)
 	this->typeEnum = _typeEnum;
 	HX_STACK_LINE(30)
-	::String tmp = _nameString;		HX_STACK_VAR(tmp,"tmp");
+	::String tmp = (_nameString + HX_HCSTRING("_","\x5f","\x00","\x00","\x00"));		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(30)
 	::EnumTagType tmp1 = this->typeEnum;		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(30)

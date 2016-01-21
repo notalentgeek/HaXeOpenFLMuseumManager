@@ -3,12 +3,12 @@
 -D haxeui-rich-text=0.1.2
 -cp /usr/share/haxe/lib/actuate/1,8,6
 -D actuate=1.8.6
--cp /usr/share/haxe/lib/haxeui/1,8,3
--D haxeui=1.8.3
+-cp /usr/share/haxe/lib/haxeui/1,8,4
+-D haxeui=1.8.4
 -cp /usr/share/haxe/lib/hscript/2,0,5
 -D hscript=2.0.5
--cp /usr/share/haxe/lib/lime/2,8,1
--D lime=2.8.1
+-cp /usr/share/haxe/lib/lime/2,8,3
+-D lime=2.8.3
 -cp /usr/share/haxe/lib/openfl/3,5,2
 -D openfl=3.5.2
 -cp /usr/share/haxe/lib/hxcpp/3,2,205

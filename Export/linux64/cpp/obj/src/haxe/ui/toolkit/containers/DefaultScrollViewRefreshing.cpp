@@ -61,12 +61,12 @@ namespace containers{
 
 Void DefaultScrollViewRefreshing_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ui.toolkit.containers.DefaultScrollViewRefreshing","new",0xd9085bb2,"haxe.ui.toolkit.containers.DefaultScrollViewRefreshing.new","haxe/ui/toolkit/containers/ScrollView.hx",835,0x89f00132)
+HX_STACK_FRAME("haxe.ui.toolkit.containers.DefaultScrollViewRefreshing","new",0xd9085bb2,"haxe.ui.toolkit.containers.DefaultScrollViewRefreshing.new","haxe/ui/toolkit/containers/ScrollView.hx",853,0x89f00132)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(836)
+	HX_STACK_LINE(854)
 	super::__construct();
-	HX_STACK_LINE(837)
+	HX_STACK_LINE(855)
 	this->set_text(HX_HCSTRING("Refreshing","\x07","\x92","\xef","\xfd"));
 }
 ;
@@ -87,39 +87,39 @@ Dynamic DefaultScrollViewRefreshing_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::String DefaultScrollViewRefreshing_obj::set_text( ::String value){
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.DefaultScrollViewRefreshing","set_text",0xfa490d18,"haxe.ui.toolkit.containers.DefaultScrollViewRefreshing.set_text","haxe/ui/toolkit/containers/ScrollView.hx",840,0x89f00132)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.DefaultScrollViewRefreshing","set_text",0xfa490d18,"haxe.ui.toolkit.containers.DefaultScrollViewRefreshing.set_text","haxe/ui/toolkit/containers/ScrollView.hx",858,0x89f00132)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(841)
+	HX_STACK_LINE(859)
 	::String tmp = value;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(841)
+	HX_STACK_LINE(859)
 	::String tmp1 = this->super::set_text(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(841)
+	HX_STACK_LINE(859)
 	value = tmp1;
-	HX_STACK_LINE(842)
+	HX_STACK_LINE(860)
 	::haxe::ui::toolkit::controls::Text tmp2 = this->_textComponent;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(842)
+	HX_STACK_LINE(860)
 	bool tmp3 = (tmp2 == null());		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(842)
+	HX_STACK_LINE(860)
 	if ((tmp3)){
-		HX_STACK_LINE(843)
+		HX_STACK_LINE(861)
 		::haxe::ui::toolkit::controls::Text tmp4 = ::haxe::ui::toolkit::controls::Text_obj::__new();		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(843)
+		HX_STACK_LINE(861)
 		this->_textComponent = tmp4;
-		HX_STACK_LINE(844)
+		HX_STACK_LINE(862)
 		::haxe::ui::toolkit::controls::Text tmp5 = this->_textComponent;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(844)
+		HX_STACK_LINE(862)
 		this->addChild(tmp5);
 	}
-	HX_STACK_LINE(846)
+	HX_STACK_LINE(864)
 	::haxe::ui::toolkit::controls::Text tmp4 = this->_textComponent;		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(846)
+	HX_STACK_LINE(864)
 	::String tmp5 = value;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(846)
+	HX_STACK_LINE(864)
 	tmp4->set_text(tmp5);
-	HX_STACK_LINE(847)
+	HX_STACK_LINE(865)
 	::String tmp6 = value;		HX_STACK_VAR(tmp6,"tmp6");
-	HX_STACK_LINE(847)
+	HX_STACK_LINE(865)
 	return tmp6;
 }
 
