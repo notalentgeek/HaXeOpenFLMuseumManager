@@ -399,21 +399,21 @@ Void ObjectVisitor_obj::AddTagCounterVoid( ){
 					(tmp13->__FieldRef(HX_HCSTRING("tagCounterInt","\x4d","\x2e","\x20","\xff")))++;
 				}
 			}
-			HX_STACK_LINE(81)
-			(loopCounter1Int)++;
-			HX_STACK_LINE(83)
+			HX_STACK_LINE(82)
 			::ObjectTag tmp12 = tagCounterStruct->__Field(HX_HCSTRING("tagObject","\xb9","\x8c","\x77","\x46"), hx::paccDynamic );		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(83)
+			HX_STACK_LINE(82)
 			int tmp13 = this->tagObjectArray->indexOf(tmp12,null());		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(83)
+			HX_STACK_LINE(82)
 			bool tmp14 = (tmp13 == (int)-1);		HX_STACK_VAR(tmp14,"tmp14");
-			HX_STACK_LINE(83)
+			HX_STACK_LINE(82)
 			if ((tmp14)){
-				HX_STACK_LINE(84)
+				HX_STACK_LINE(83)
 				::ObjectTag tmp15 = tagCounterStruct->__Field(HX_HCSTRING("tagObject","\xb9","\x8c","\x77","\x46"), hx::paccDynamic );		HX_STACK_VAR(tmp15,"tmp15");
-				HX_STACK_LINE(84)
+				HX_STACK_LINE(83)
 				this->tagObjectArray->push(tmp15);
 			}
+			HX_STACK_LINE(85)
+			(loopCounter1Int)++;
 		}
 		HX_STACK_LINE(87)
 		this->SortTagCounterVoid();

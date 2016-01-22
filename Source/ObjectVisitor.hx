@@ -78,11 +78,11 @@ class ObjectVisitor{
             }
             if(newTagBool == true ){ tagCounterStructArray.push(tagCounterStruct); }
             else if(newTagBool == false){ tagCounterStructArray[tagIndexInt].tagCounterInt ++; }
-            loopCounter1Int ++;
 
             if(tagObjectArray.indexOf(tagCounterStruct.tagObject) == -1){
                 tagObjectArray.push(tagCounterStruct.tagObject);
             }
+            loopCounter1Int ++;
         }
         SortTagCounterVoid();
     }

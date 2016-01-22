@@ -13,10 +13,10 @@
         </listSelector>
 
         <text text="Full Name" />
-        <textinput text="" width="100%" />
+        <textinput text="" width="100%" id="UIPopupAddObjectMuseum_InputFullName" />
 
         <text text="Alternative Name" />
-        <textinput text="" width="100%" />
+        <textinput text="" width="100%" id="UIPopupAddObjectMuseum_InputAltName" />
 
         <text text="Tags" id="UIPopupAddObjectMuseum_SelectTagText_1"/>
         <listSelector text=" " width="100%" id="UIPopupAddObjectMuseum_SelectTag_1">

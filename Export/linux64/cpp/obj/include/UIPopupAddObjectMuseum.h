@@ -11,7 +11,7 @@ HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Container)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Grid)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,VBox)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,controls,Button)
-HX_DECLARE_CLASS4(haxe,ui,toolkit,controls,Text)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,controls,TextInput)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,controls,popups,Popup)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,controls,selection,ListSelector)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,core,Component)
@@ -62,13 +62,13 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupAddObjectMuseum_obj : public hx::Object{
 		::CollectionGlobal collectionGlobalObject;
 		::haxe::ui::toolkit::containers::Grid gridObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector listSelectorParentObject;
-		int listSelectorTagCurrentInt;
 		cpp::ArrayBase listSelectorTagStructArray;
 		int listSelectorTypeInt;
 		::haxe::ui::toolkit::controls::selection::ListSelector listSelectorTypeObject;
 		int listSelectorTypePrevInt;
+		::haxe::ui::toolkit::controls::TextInput nameAltTextInputObject;
+		::haxe::ui::toolkit::controls::TextInput nameFullTextInputObject;
 		::haxe::ui::toolkit::controls::popups::Popup popupObject;
-		::haxe::ui::toolkit::controls::Text textObject;
 		virtual Void UpdateVoid( );
 		Dynamic UpdateVoid_dyn();
 

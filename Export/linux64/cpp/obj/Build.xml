@@ -5013,15 +5013,16 @@
   <file name="src/UIPopupAddObjectMuseum.cpp">
    <depend name="include/CollectionFunction.h"/>
    <depend name="include/CollectionGlobal.h"/>
+   <depend name="include/EnumMuseumType.h"/>
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectTag.h"/>
    <depend name="include/UIPopupAddObjectMuseum.h"/>
-   <depend name="include/haxe/Log.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Container.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Grid.h"/>
    <depend name="include/haxe/ui/toolkit/containers/VBox.h"/>
    <depend name="include/haxe/ui/toolkit/controls/Button.h"/>
    <depend name="include/haxe/ui/toolkit/controls/Text.h"/>
+   <depend name="include/haxe/ui/toolkit/controls/TextInput.h"/>
    <depend name="include/haxe/ui/toolkit/controls/popups/Popup.h"/>
    <depend name="include/haxe/ui/toolkit/controls/popups/PopupContent.h"/>
    <depend name="include/haxe/ui/toolkit/controls/selection/ListSelector.h"/>
