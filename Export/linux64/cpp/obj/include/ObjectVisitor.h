@@ -82,6 +82,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual Void SortTagCounterVoid( );
 		Dynamic SortTagCounterVoid_dyn();
 
+		virtual Void UpdateHeavyVoid( );
+		Dynamic UpdateHeavyVoid_dyn();
+
 		virtual Void AIAutoExhibitionChangeVoid( );
 		Dynamic AIAutoExhibitionChangeVoid_dyn();
 

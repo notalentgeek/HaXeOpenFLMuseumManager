@@ -92,6 +92,7 @@ class ObjectVisitor{
             roomCurrentObject = exhibitionCurrentObject;
             floorCurrentObject = exhibitionCurrentObject;
             exhibitionVisitedObjectArray.push(exhibitionCurrentObject);
+            UpdateHeavyVoid();
         }
         else{
             if(exhibitionCurrentObject != null){
@@ -134,12 +135,10 @@ class ObjectVisitor{
                 if(exhibitionCurrentObject.GetNameStruct().nameAltString == exhibitionTargetObjectArray[loopCounter1Int].GetNameStruct().nameAltString){ visitedCorrectExhibitionBool = true; break; }
                 loopCounter1Int ++;
             }
-                 if(visitedCorrectExhibitionBool == true ){ scoreInt ++; }
+            if(visitedCorrectExhibitionBool == true ){ scoreInt ++; }
             else if(visitedCorrectExhibitionBool == false){ scoreInt --; }
             roomCurrentObject = exhibitionCurrentObject.GetParentObject();
             floorCurrentObject = roomCurrentObject.GetParentObject();
-            exhibitionCurrentObject.SetVisitorCurrentIntVoid(exhibitionCurrentObject.GetVisitorCurrentInt() + 1);
-            exhibitionCurrentObject.SetVisitorTotalIntVoid(exhibitionCurrentObject.GetVisitorTotalInt() + 1);
             floorCurrentObject.SetVisitorCurrentIntVoid(roomCurrentObject.GetVisitorCurrentInt() + 1);
             floorCurrentObject.SetVisitorTotalIntVoid(roomCurrentObject.GetVisitorTotalInt() + 1);
             roomCurrentObject.SetVisitorCurrentIntVoid(floorCurrentObject.GetVisitorCurrentInt() + 1);
@@ -148,44 +147,8 @@ class ObjectVisitor{
             var threeSentenceString:String = ObjectGeneratorSentence.GenerateSentence3String(collectionGlobalObject, this);
             sentenceStringArray.push(threeSentenceString);
 
-            loopCounter1Int = 0;
-            while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
-                collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineFullVoid();
-                loopCounter1Int ++;
-            }
-            loopCounter1Int = 0;
-            while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
-                collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].DetermineFullVoid();
-                loopCounter1Int ++;
-            }
-            loopCounter1Int = 0;
-            while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
-                if(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameAltString != "EXH_ARC"){
-                    collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineChildVoid();
-                    collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineFullVoid();
-                }
-                loopCounter1Int ++;
-            }
-            loopCounter1Int = 0;
-            var necessaryHeightInt:Int = 0;
-            while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-                collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
-                collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(targetInt);
-                collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
-                if(necessaryHeightInt < Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height)){
-                    necessaryHeightInt = Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height);
-                }
-                loopCounter1Int ++;
-            }
-            collectionGlobalObject.GetUIMuseumAbsoluteObject().height = necessaryHeightInt;
+            UpdateHeavyVoid();
 
-            var visitorVisitExhibitionStruct:StructVisitorVisitExhibition = {
-                currentExhibitionTimeInt:0,
-                exhibitionNameAltString:""
-            };
-            visitorVisitExhibitionStruct.currentExhibitionTimeInt = timeExhibitionInt;
-            visitorVisitExhibitionStruct.exhibitionNameAltString = exhibitionCurrentObject.GetNameStruct().nameAltString;
-            visitExhibitionStructArray.push(visitorVisitExhibitionStruct);
             if(exhibitionVisitedObjectArray.length > 1){
                 var threeSentenceString:String = GenerateSentenceVoid(3);
                 sentenceStringArray.push(threeSentenceString);
@@ -196,6 +159,48 @@ class ObjectVisitor{
     }
     private function GenerateSentenceVoid(_amount:Int){ return ""; }
     private function SortTagCounterVoid(){ tagCounterStructArray.sort(function(_a:StructTagCounter, _b:StructTagCounter){ return _a.tagCounterInt - _b.tagCounterInt; }); }
+    private function UpdateHeavyVoid(){
+        exhibitionCurrentObject.SetVisitorCurrentIntVoid(exhibitionCurrentObject.GetVisitorCurrentInt() + 1);
+        exhibitionCurrentObject.SetVisitorTotalIntVoid(exhibitionCurrentObject.GetVisitorTotalInt() + 1);
+        var loopCounter1Int:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
+            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineFullVoid();
+            loopCounter1Int ++;
+        }
+        loopCounter1Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
+            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].DetermineFullVoid();
+            loopCounter1Int ++;
+        }
+        loopCounter1Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
+            if(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameAltString != "EXH_ARC"){
+                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineChildVoid();
+                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineFullVoid();
+            }
+            loopCounter1Int ++;
+        }
+        loopCounter1Int = 0;
+        var necessaryHeightInt:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(targetInt);
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
+            if(necessaryHeightInt < Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height)){
+                necessaryHeightInt = Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height);
+            }
+            loopCounter1Int ++;
+        }
+        collectionGlobalObject.GetUIMuseumAbsoluteObject().height = necessaryHeightInt;
+
+        var visitorVisitExhibitionStruct:StructVisitorVisitExhibition = {
+            currentExhibitionTimeInt:0,
+            exhibitionNameAltString:""
+        };
+        visitorVisitExhibitionStruct.currentExhibitionTimeInt = timeExhibitionInt;
+        visitorVisitExhibitionStruct.exhibitionNameAltString = exhibitionCurrentObject.GetNameStruct().nameAltString;
+        visitExhibitionStructArray.push(visitorVisitExhibitionStruct);
+    }
     public  function AIAutoExhibitionChangeVoid(){
         if(finishedBool == false){
             var randomFloat:Float = Math.random();

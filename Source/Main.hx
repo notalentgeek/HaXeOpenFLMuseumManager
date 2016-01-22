@@ -64,7 +64,7 @@ class Main extends Sprite{
         CollectionPremade       .PremadeFloorObjectVoid         (collectionGlobalObject);
         CollectionPremade       .PremadeRoomObjectVoid          (collectionGlobalObject);
         CollectionPremade       .PremadeExhibitionObjectVoid    (collectionGlobalObject);
-        CollectionPremade       .PremadeVisitorObjectVoid       (100, collectionGlobalObject); /*Change the number to change the initial visitor when the application starts.*/
+        CollectionPremade       .PremadeVisitorObjectVoid       (10, collectionGlobalObject); /*Change the number to change the initial visitor when the application starts.*/
         
         addEventListener(Event.ENTER_FRAME, Update);
 
