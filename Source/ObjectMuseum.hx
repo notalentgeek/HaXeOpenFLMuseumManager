@@ -72,52 +72,7 @@ class ObjectMuseum{
         if(typeEnum == EXH && nameStruct.nameAltString != "EXH_ARC"){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, ROM, _parentNameAltString)); }
         else if(typeEnum == FLR){ parentObject = null; }
         else if(typeEnum == ROM){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, FLR, _parentNameAltString)); }
-        var loopCounter1Int:Int = 0;
-        var necessaryWidthInt:Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
-            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineSiblingVoid();
-            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineIndexVoid();
-            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().UpdateVoid(
-                collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int],
-                Lib.current.stage.stageWidth
-            );
-            if(necessaryWidthInt < Math.round(collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().x + collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().width)){
-                necessaryWidthInt = Math.round(collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().x + collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().width);
-            }
-            loopCounter1Int ++;
-        }
-        if(nameStruct.nameAltString != "EXH_ARC"){ collectionGlobalObject.GetUIMuseumAbsoluteObject().width = necessaryWidthInt; }
-        loopCounter1Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
-            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetParentObject().DetermineChildVoid();
-            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].DetermineSiblingVoid();
-            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].DetermineIndexVoid();
-            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetMuseumUIObject().UpdateVoid(
-                collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int],
-                Lib.current.stage.stageWidth
-            );
-            loopCounter1Int ++;
-        }
-        loopCounter1Int = 0;
-        if(nameStruct.nameAltString != "EXH_ARC"){
-            while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
-                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetParentObject().DetermineChildVoid();
-                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineSiblingVoid();
-                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineIndexVoid();
-                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetMuseumUIObject().UpdateVoid(
-                    collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int],
-                    Lib.current.stage.stageWidth
-                );
-                loopCounter1Int ++;
-            }
-        }
-        loopCounter1Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(loopCounter1Int);
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
-            loopCounter1Int ++;
-        }
+        UpdateHeavyVoid();
         return parentObject;
     }
     private function DetermineIndexGlobalVoid(){
@@ -243,6 +198,54 @@ class ObjectMuseum{
     public function SetParentObjectVoid(_parentObject:ObjectMuseum){ parentObject = _parentObject; }
     public function SetVisitorCurrentIntVoid(_visitorCurrentInt:Int){ visitorCurrentInt = _visitorCurrentInt; }
     public function SetVisitorTotalIntVoid(_visitorTotalInt:Int){ visitorTotalInt = _visitorTotalInt; }
+    public function UpdateHeavyVoid(){
+        var loopCounter1Int:Int = 0;
+        var necessaryWidthInt:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
+            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineSiblingVoid();
+            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineIndexVoid();
+            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().UpdateVoid(
+                collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int],
+                Lib.current.stage.stageWidth
+            );
+            if(necessaryWidthInt < Math.round(collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().x + collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().width)){
+                necessaryWidthInt = Math.round(collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().x + collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().width);
+            }
+            loopCounter1Int ++;
+        }
+        if(nameStruct.nameAltString != "EXH_ARC"){ collectionGlobalObject.GetUIMuseumAbsoluteObject().width = necessaryWidthInt; }
+        loopCounter1Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
+            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetParentObject().DetermineChildVoid();
+            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].DetermineSiblingVoid();
+            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].DetermineIndexVoid();
+            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetMuseumUIObject().UpdateVoid(
+                collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int],
+                Lib.current.stage.stageWidth
+            );
+            loopCounter1Int ++;
+        }
+        loopCounter1Int = 0;
+        if(nameStruct.nameAltString != "EXH_ARC"){
+            while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
+                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetParentObject().DetermineChildVoid();
+                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineSiblingVoid();
+                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineIndexVoid();
+                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetMuseumUIObject().UpdateVoid(
+                    collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int],
+                    Lib.current.stage.stageWidth
+                );
+                loopCounter1Int ++;
+            }
+        }
+        loopCounter1Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(loopCounter1Int);
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
+            loopCounter1Int ++;
+        }
+    }
     /*Update function is mainly to update all museum object in real time.*/
     public function UpdateVoid(){
         if(museumModeEnum == MRK_DEL){
@@ -251,14 +254,20 @@ class ObjectMuseum{
             if(typeEnum == EXH){
                 if(childStruct.childVisitorObjectArray.length != 0){
                     var loopCounter1Int:Int = 0;
-                    while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-                        if(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetFinishedBool() == true){
-                            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].ChangeExhibitionCurrentVoid(collectionGlobalObject.GetArchiveExhibitionObject());
+                    while(loopCounter1Int < childStruct.childVisitorObjectArray.length){
+                        if(childStruct.childVisitorObjectArray[loopCounter1Int].GetFinishedBool() == true){
+                            childStruct.childVisitorObjectArray[loopCounter1Int].ChangeExhibitionCurrentVoid(collectionGlobalObject.GetArchiveExhibitionObject());
+                            UpdateHeavyVoid();
                         }
                         loopCounter1Int ++;
                     }
                 }
-                else if(childStruct.childMuseumObjectArray.length == 0){ collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
+                else if(childStruct.childMuseumObjectArray.length == 0){ 
+                    collectionGlobalObject.GetUIMuseumAbsoluteObject().removeChild(museumUIObject.GetButtonObject());
+                    collectionGlobalObject.GetExhibitionObjectArray().remove(this);
+                    museumUIObject = null;
+                    UpdateHeavyVoid();
+                }
             }
             else if(typeEnum == FLR){
                 if(childStruct.childMuseumObjectArray.length != 0){
@@ -270,7 +279,7 @@ class ObjectMuseum{
                         loopCounter1Int ++;
                     }
                 }
-                else if(childStruct.childMuseumObjectArray.length == 0){ collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
+                else if(childStruct.childMuseumObjectArray.length == 0){ museumUIObject = null; collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
             }
             else if(typeEnum == ROM){
                 if(childStruct.childMuseumObjectArray.length != 0){
@@ -282,7 +291,7 @@ class ObjectMuseum{
                         loopCounter1Int ++;
                     }
                 }
-                else if(childStruct.childMuseumObjectArray.length == 0){ collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
+                else if(childStruct.childMuseumObjectArray.length == 0){ museumUIObject = null; collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
             }
         }
     }

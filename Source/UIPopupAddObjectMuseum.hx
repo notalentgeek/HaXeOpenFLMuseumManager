@@ -42,13 +42,16 @@ class UIPopupAddObjectMuseum{
 
 
 
-	public function new(_collectionGlobalObject:CollectionGlobal, _root:Root){
+    public function new(_collectionGlobalObject:CollectionGlobal, _root:Root){
 
         collectionGlobalObject = _collectionGlobalObject;
 
-		buttonObject = _root.findChild("UIPopupAddMuseumObjectButton", Button, true);
+        /*Find the main button to actovate the popup in the main screen.*/
+        buttonObject = _root.findChild("UIPopupAddMuseumObjectButton", Button, true);
+        /*Adding a callback function of when the button is pressed.*/
         buttonObject.onClick = function(_e){
 
+            /*Adding OK and CANCEL button for the popup.*/
             var buttonControlInt:Int = 0;
             buttonControlInt |= PopupButton.OK;
             buttonControlInt |= PopupButton.CANCEL;
@@ -59,6 +62,9 @@ class UIPopupAddObjectMuseum{
                 /*You can actually have this done with checking the component of a Popup controller.
                 If a popup controller/component returns null then the popup is not active.*/
                 if(_button == PopupButton.OK){
+                    /*If button OK is pressed then add a museum object according to the inputted value.
+                    PENDING: Check whethe the data inputted valid.
+                    PENDING: Check how to make disable OK button of this popup.*/
                     var nameAltString:String = nameFullTextInputObject.text;
                     var nameFullString:String = nameAltTextInputObject.text;
                     var parentNameAltString:String = listSelectorParentObject.text;
@@ -78,7 +84,19 @@ class UIPopupAddObjectMuseum{
                         loopCounter1Int ++;
                     }
 
-                    var museumObject:ObjectMuseum = new ObjectMuseum(collectionGlobalObject, nameAltString, nameFullString, parentNameAltString, tagObjectArray, typeEnum);
+                    /*PENDING: Adding notification if user is not properly input new museum object information.*/
+                    if(
+                        nameAltString           != "" || nameAltString          != " " || nameAltString         != null ||
+                        nameFullString          != "" || nameFullString         != " " || nameFullString        != null ||
+                        parentNameAltString     != "" || parentNameAltString    != " " || parentNameAltString   != null ||
+                        tagObjectArray.length   != 0
+                    ){
+
+                        /*Adding the museum object here.*/
+                        var museumObject:ObjectMuseum = new ObjectMuseum(collectionGlobalObject, nameAltString, nameFullString, parentNameAltString, tagObjectArray, typeEnum);
+
+                    }
+
                 }
 
             });
@@ -87,11 +105,14 @@ class UIPopupAddObjectMuseum{
             nameAltTextInputObject = popupObject.content.findChild("UIPopupAddObjectMuseum_InputAltName", TextInput, true);
             gridObject = popupObject.content.findChild("UIPopupAddObjectMuseum_Grid", Grid, true);
             listSelectorParentObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectParentObject", ListSelector, true);
+            listSelectorParentObject.method = "default";
             listSelectorParentObject.selectedIndex = -1;
             listSelectorTypeObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectType", ListSelector, true);
+            listSelectorTypeObject.method = "default";
 
             CollectionFunction.ClearArray(listSelectorTagStructArray);
             var listSelectorTagObject:ListSelector = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTag_1", ListSelector, true);
+            listSelectorTagObject.method = "default";
             var listSelectorTagTextObject:Text = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTagText_1", Text, true);
             var listSelectorTagStruct = {
                 listSelectorObject  :listSelectorTagObject,
@@ -109,11 +130,11 @@ class UIPopupAddObjectMuseum{
 
         }
 
-	}
+    }
 
 
 
-	public function UpdateVoid(){
+    public function UpdateVoid(){
 
         if(popupObject != null && listSelectorParentObject != null && listSelectorTypeObject != null){
 
@@ -142,7 +163,7 @@ class UIPopupAddObjectMuseum{
 
         }
 
-		if(popupObject != null && listSelectorTagStructArray.length > 0){
+        if(popupObject != null && listSelectorTagStructArray.length > 0){
 
             /*For when the ListSelector struct array is having lenght equal to 1 and loopCounter1Int is not having index equal to the ListSelector array length minus 1,
                 reset the value of the of the following ListSelector.
@@ -211,12 +232,12 @@ class UIPopupAddObjectMuseum{
                 listSelectorTagObject.percentWidth = 100;
                 listSelectorTagObject.text = " ";
                 gridObject.addChild(listSelectorTagObject);
+                listSelectorTagObject.method = "default"; /*For some reason you need this to be configured after the object is initialized in the screen.*/
 
             }
 
         }
 
-	}
+    }
     
-    public function GetPopupObject(){ return popupObject; }
 }

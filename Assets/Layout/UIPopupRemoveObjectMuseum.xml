@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<scrollview width="100%" height="200">
+    <grid width="100%" id="UIPopupRemoveObjectMuseum_Grid">
+
+		<text text="Type"/>
+        <listSelector text=" " width="100%" id="UIPopupRemoveObjectMuseum_SelectType">
+        	<array>Exhibition, Floor, Room</array>
+        </listSelector>
+
+        <text text="Museum Object"/>
+        <listSelector text=" " width="100%" id="UIPopupRemoveObjectMuseum_SelectObjectMuseum">
+        </listSelector>
+
+    </grid>
+</scrollview>

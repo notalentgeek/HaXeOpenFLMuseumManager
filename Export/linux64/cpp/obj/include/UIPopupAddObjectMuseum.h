@@ -72,9 +72,6 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupAddObjectMuseum_obj : public hx::Object{
 		virtual Void UpdateVoid( );
 		Dynamic UpdateVoid_dyn();
 
-		virtual ::haxe::ui::toolkit::controls::popups::Popup GetPopupObject( );
-		Dynamic GetPopupObject_dyn();
-
 };
 
 
