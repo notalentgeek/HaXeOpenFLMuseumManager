@@ -205,6 +205,10 @@ class UIPopupAddObjectMuseum{
                 gridObject.addChild(listSelectorTagTextObject);
 
                 listSelectorTagObject.dataSource.createFromString("Remove");
+                listSelectorTagObject.id = "UIPopupAddObjectMuseum_SelectTag_" + listSelectorTagStructArray.length;
+                listSelectorTagObject.percentWidth = 100;
+                listSelectorTagObject.text = " ";
+                gridObject.addChild(listSelectorTagObject);
 
                 var tempUsedTagStringArray:Array<String> = new Array<String>();
                 var loopCounter1Int:Int = 0;
@@ -213,7 +217,7 @@ class UIPopupAddObjectMuseum{
                     loopCounter1Int ++;
                 }
                 loopCounter1Int = 1;
-                while(loopCounter1Int < listSelectorTagStructArray.length){
+                while(loopCounter1Int <= listSelectorTagStructArray.length){
 
                     var tempListSelectorTagObject:ListSelector = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTag_" + loopCounter1Int, ListSelector, true);
                     tempUsedTagStringArray.remove(tempListSelectorTagObject.text);
@@ -228,10 +232,6 @@ class UIPopupAddObjectMuseum{
 
                 }
 
-                listSelectorTagObject.id = "UIPopupAddObjectMuseum_SelectTag_" + listSelectorTagStructArray.length;
-                listSelectorTagObject.percentWidth = 100;
-                listSelectorTagObject.text = " ";
-                gridObject.addChild(listSelectorTagObject);
                 listSelectorTagObject.method = "default"; /*For some reason you need this to be configured after the object is initialized in the screen.*/
 
             }

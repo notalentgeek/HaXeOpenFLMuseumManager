@@ -41,7 +41,7 @@ class ObjectMuseum{
         _collectionGlobalObject:CollectionGlobal,
         _nameAltString:String,
         _nameFullString:String,
-        _parentNameAltString:String,
+        _parentNameString:String,
         _tagObjectArray:Array<ObjectTag>,
         _typeEnum:EnumMuseumType
     ){
@@ -56,7 +56,7 @@ class ObjectMuseum{
             collectionGlobalObject,
             typeEnum
         );
-        ChangeParentObject(_parentNameAltString);
+        ChangeParentObject(_parentNameString);
         collectionGlobalObject.DetermineExhibitionFullThresholdVoid();
     }
     private function AddChildVisitorVoid(_visitorObject:ObjectVisitor){ childStruct.childVisitorObjectArray.push(_visitorObject); }
@@ -65,15 +65,6 @@ class ObjectMuseum{
         if(_typeEnum == EXH){ collectionGlobalObject.GetExhibitionObjectArray().push(this); }
         else if(_typeEnum == FLR){ collectionGlobalObject.GetFloorObjectArray().push(this); }
         else if(_typeEnum == ROM){ collectionGlobalObject.GetRoomObjectArray().push(this); }
-    }
-    private function ChangeParentObject(_parentNameAltString:String){
-        /*Remove this object from current parent object child object array.*/
-        if(parentObject != null){ parentObject.GetChildStruct().childMuseumObjectArray.remove(this); }
-        if(typeEnum == EXH && nameStruct.nameAltString != "EXH_ARC"){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, ROM, _parentNameAltString)); }
-        else if(typeEnum == FLR){ parentObject = null; }
-        else if(typeEnum == ROM){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, FLR, _parentNameAltString)); }
-        UpdateHeavyVoid();
-        return parentObject;
     }
     private function DetermineIndexGlobalVoid(){
         var foundIndexGlobalBool:Bool = false;
@@ -166,6 +157,15 @@ class ObjectMuseum{
             loopCounter1Int ++;
         }
     }
+    public function ChangeParentObject(_parentNameString:String){
+        /*Remove this object from current parent object child object array.*/
+        if(parentObject != null){ parentObject.GetChildStruct().childMuseumObjectArray.remove(this); }
+        if(typeEnum == EXH && nameStruct.nameAltString != "EXH_ARC"){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, ROM, _parentNameString)); }
+        else if(typeEnum == FLR){ parentObject = null; }
+        else if(typeEnum == ROM){ parentObject = (CollectionFunction.FindMuseumObject(collectionGlobalObject, FLR, _parentNameString)); }
+        UpdateHeavyVoid();
+        return parentObject;
+    }
     public function DetermineChildVoid(){
         CollectionFunction.ClearArray(childStruct.childMuseumObjectArray);
         CollectionFunction.ClearArray(childStruct.childVisitorObjectArray);
@@ -243,6 +243,10 @@ class ObjectMuseum{
     public function SetNameFullStringVoid(_nameFullString:String){ nameStruct.nameFullString = _nameFullString; }
     public function SetMuseumModeEnumVoid(_museumModeEnum:EnumMuseumMode){ museumModeEnum = _museumModeEnum; }
     public function SetParentObjectVoid(_parentObject:ObjectMuseum){ parentObject = _parentObject; }
+    public function SetTagObjectArrayVoid(_tagObjectArray:Array<ObjectTag>){
+        CollectionFunction.ClearArray(tagObjectArray);
+        tagObjectArray = _tagObjectArray;
+    }
     public function SetVisitorCurrentIntVoid(_visitorCurrentInt:Int){ visitorCurrentInt = _visitorCurrentInt; }
     public function SetVisitorTotalIntVoid(_visitorTotalInt:Int){ visitorTotalInt = _visitorTotalInt; }
     /*Update function is mainly to update all museum object in real time.*/
@@ -274,11 +278,17 @@ class ObjectMuseum{
                     while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
                         if(nameStruct.nameAltString == collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].GetParentObject().GetNameStruct().nameAltString){
                             collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].SetMuseumModeEnumVoid(REQ_CH_PARENT);
+                            UpdateHeavyVoid();
                         }
                         loopCounter1Int ++;
                     }
                 }
-                else if(childStruct.childMuseumObjectArray.length == 0){ museumUIObject = null; collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
+                else if(childStruct.childMuseumObjectArray.length == 0){
+                    collectionGlobalObject.GetUIMuseumAbsoluteObject().removeChild(museumUIObject.GetButtonObject());
+                    collectionGlobalObject.GetFloorObjectArray().remove(this);
+                    museumUIObject = null;
+                    UpdateHeavyVoid();
+                }
             }
             else if(typeEnum == ROM){
                 if(childStruct.childMuseumObjectArray.length != 0){
@@ -286,11 +296,17 @@ class ObjectMuseum{
                     while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
                         if(nameStruct.nameAltString == collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetParentObject().GetNameStruct().nameAltString){
                             collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].SetMuseumModeEnumVoid(REQ_CH_PARENT);
+                            UpdateHeavyVoid();
                         }
                         loopCounter1Int ++;
                     }
                 }
-                else if(childStruct.childMuseumObjectArray.length == 0){ museumUIObject = null; collectionGlobalObject.GetExhibitionObjectArray().remove(this); }
+                else if(childStruct.childMuseumObjectArray.length == 0){
+                    collectionGlobalObject.GetUIMuseumAbsoluteObject().removeChild(museumUIObject.GetButtonObject());
+                    collectionGlobalObject.GetRoomObjectArray().remove(this);
+                    museumUIObject = null;
+                    UpdateHeavyVoid();
+                }
             }
         }
     }

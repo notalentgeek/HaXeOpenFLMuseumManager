@@ -63,8 +63,8 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectMuseum_obj : public hx::Object{
 		::CollectionGlobal collectionGlobalObject;
 		::haxe::ui::toolkit::containers::Grid gridObject;
 		cpp::ArrayBase listSelectorTagStructArray;
-		::haxe::ui::toolkit::controls::TextInput nameAltTextObject;
-		::haxe::ui::toolkit::controls::TextInput nameFullTextObject;
+		::haxe::ui::toolkit::controls::TextInput nameAltTextInputObject;
+		::haxe::ui::toolkit::controls::TextInput nameFullTextInputObject;
 		::haxe::ui::toolkit::controls::popups::Popup popupObject;
 		::ObjectMuseum selectedMuseumObject;
 		::ObjectMuseum selectedMuseumPrevObject;

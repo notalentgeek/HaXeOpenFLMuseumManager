@@ -26,12 +26,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		typedef hx::Object super;
 		typedef ObjectMuseum_obj OBJ_;
 		ObjectMuseum_obj();
-		Void __construct(::CollectionGlobal _collectionGlobalObject,::String _nameAltString,::String _nameFullString,::String _parentNameAltString,Array< ::Dynamic > _tagObjectArray,::EnumMuseumType _typeEnum);
+		Void __construct(::CollectionGlobal _collectionGlobalObject,::String _nameAltString,::String _nameFullString,::String _parentNameString,Array< ::Dynamic > _tagObjectArray,::EnumMuseumType _typeEnum);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectMuseum")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectMuseum_obj > __new(::CollectionGlobal _collectionGlobalObject,::String _nameAltString,::String _nameFullString,::String _parentNameAltString,Array< ::Dynamic > _tagObjectArray,::EnumMuseumType _typeEnum);
+		static hx::ObjectPtr< ObjectMuseum_obj > __new(::CollectionGlobal _collectionGlobalObject,::String _nameAltString,::String _nameFullString,::String _parentNameString,Array< ::Dynamic > _tagObjectArray,::EnumMuseumType _typeEnum);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectMuseum_obj();
@@ -70,9 +70,6 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Void AddThisToArray( ::EnumMuseumType _typeEnum);
 		Dynamic AddThisToArray_dyn();
 
-		virtual ::ObjectMuseum ChangeParentObject( ::String _parentNameAltString);
-		Dynamic ChangeParentObject_dyn();
-
 		virtual Void DetermineIndexGlobalVoid( );
 		Dynamic DetermineIndexGlobalVoid_dyn();
 
@@ -90,6 +87,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 
 		virtual Void UpdateHeavyVoid( );
 		Dynamic UpdateHeavyVoid_dyn();
+
+		virtual ::ObjectMuseum ChangeParentObject( ::String _parentNameString);
+		Dynamic ChangeParentObject_dyn();
 
 		virtual Void DetermineChildVoid( );
 		Dynamic DetermineChildVoid_dyn();
@@ -156,6 +156,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 
 		virtual Void SetParentObjectVoid( ::ObjectMuseum _parentObject);
 		Dynamic SetParentObjectVoid_dyn();
+
+		virtual Void SetTagObjectArrayVoid( Array< ::Dynamic > _tagObjectArray);
+		Dynamic SetTagObjectArrayVoid_dyn();
 
 		virtual Void SetVisitorCurrentIntVoid( int _visitorCurrentInt);
 		Dynamic SetVisitorCurrentIntVoid_dyn();
