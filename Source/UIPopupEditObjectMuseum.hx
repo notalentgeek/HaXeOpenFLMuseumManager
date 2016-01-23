@@ -26,8 +26,8 @@ class UIPopupEditObjectMuseum{
     private var collectionGlobalObject                  :CollectionGlobal               = null;                                 /*Referece variable to collecrionGlobalObject that stores most of global variables.*/
     private var gridObject                              :Grid                           = null;                                 /*Grid layout.*/
     private var listSelectorTagStructArray              :Array<StructListSelectorTag>   = new Array<StructListSelectorTag>();   /*Array of list selector to choose multiple tags.*/
-    private var nameAltTextInputObject                       :TextInput                      = null;
-    private var nameFullTextInputObject                      :TextInput                      = null;
+    private var nameAltTextInputObject                  :TextInput                      = null;
+    private var nameFullTextInputObject                 :TextInput                      = null;
     private var popupObject                             :Popup                          = null;
     private var selectedMuseumObject                    :ObjectMuseum                   = null;
     private var selectedMuseumPrevObject                :ObjectMuseum                   = null;
@@ -50,7 +50,7 @@ class UIPopupEditObjectMuseum{
             buttonControlInt |= PopupButton.CANCEL;
 
             var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupEditObjectMuseum.xml");
-            popupObject = PopupManager.instance.showCustom(iDisplayObject, "Add Museum Object", buttonControlInt, function(_button){
+            popupObject = PopupManager.instance.showCustom(iDisplayObject, "Edit Museum Object", buttonControlInt, function(_button){
 
                 /*You can actually have this done with checking the component of a Popup controller.
                 If a popup controller/component returns null then the popup is not active.*/

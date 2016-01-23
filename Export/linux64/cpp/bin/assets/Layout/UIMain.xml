@@ -3,14 +3,14 @@
     <scrollview width="25%" height="100%">
         <vbox width="100%">
             <button id="UIPopupAddMuseumObjectButton" autoSize="false" width="100%" text="Add Museum Object"></button>
-            <button id="UIPopupAddTagButton" autoSize="false" width="100%" text="Add Tag"></button>
-            <button id="UIPopupAddVisitorButton" autoSize="false" width="100%" text="Add Visitor"></button>
+            <button id="UIPopupAddTagObjectButton" autoSize="false" width="100%" text="Add TagObject"></button>
+            <button id="UIPopupAddVisitorObjectButton" autoSize="false" width="100%" text="Add VisitorObject"></button>
             <button id="UIPopupEditMuseumObjectButton" autoSize="false" width="100%" text="Edit Museum Object"></button>
-            <button id="UIPopupEditTagButton" autoSize="false" width="100%" text="Edit Tag"></button>
-            <button id="UIPopupEditVisitorButton" autoSize="false" width="100%" text="Edit Visitor"></button>
+            <button id="UIPopupEditTagObjectButton" autoSize="false" width="100%" text="Edit TagObject"></button>
+            <button id="UIPopupEditVisitorObjectButton" autoSize="false" width="100%" text="Edit VisitorObject"></button>
             <button id="UIPopupRemoveMuseumObjectButton" autoSize="false" width="100%" text="Remove Museum Object"></button>
-            <button id="UIPopupRemoveTagButton" autoSize="false" width="100%" text="Remove Tag"></button>
-            <button id="UIPopupRemoveVisitorButton" autoSize="false" width="100%" text="Remove Visitor"></button>
+            <button id="UIPopupRemoveTagObjectButton" autoSize="false" width="100%" text="Remove TagObject"></button>
+            <button id="UIPopupRemoveVisitorObjectButton" autoSize="false" width="100%" text="Remove VisitorObject"></button>
             <button id="UIPopupSaveButton" autoSize="false" width="100%" text="Save"></button>
             <button id="UIPopupSaveAsButton" autoSize="false" width="100%" text="Save As"></button>
             <button id="UIPopupLoadButton" autoSize="false" width="100%" text="Load"></button>

@@ -29,12 +29,13 @@ class Main extends Sprite{
 
 
     /*Global variable database for the whole application.*/
-    var collectionGlobalObject          :CollectionGlobal           = new CollectionGlobal();
-    var loopCounterMainInt              :Int                        = 0;
+    var collectionGlobalObject          :CollectionGlobal               = new CollectionGlobal();
+    var loopCounterMainInt              :Int                            = 0;
     /*Popup objects.*/
-    var uiPopupAddMuseumObject          :UIPopupAddObjectMuseum     = null;
-    var uiPopupEditMuseumObject         :UIPopupEditObjectMuseum    = null;
-    var uiPopupRemoveMuseumObject       :UIPopupRemoveObjectMuseum  = null;
+    var uiPopupAddMuseumObject          :UIPopupAddObjectMuseum         = null;
+    var uiPopupEditMuseumObject         :UIPopupEditObjectMuseum        = null;
+    var uiPopupRemoveMuseumObject       :UIPopupRemoveObjectMuseum      = null;
+    var uiPopupRemoveVisitorObject      :UIPopupRemoveObjectVisitor     = null;
 
 
 
@@ -54,6 +55,7 @@ class Main extends Sprite{
             uiPopupAddMuseumObject = new UIPopupAddObjectMuseum(collectionGlobalObject, _root);
             uiPopupEditMuseumObject = new UIPopupEditObjectMuseum(collectionGlobalObject, _root);
             uiPopupRemoveMuseumObject = new UIPopupRemoveObjectMuseum(collectionGlobalObject, _root);
+            uiPopupRemoveVisitorObject = new UIPopupRemoveObjectVisitor(collectionGlobalObject, _root);
 
             var uiMuseumAbsoluteObject:Absolute = _root.findChild("UIMuseumAbsolute", Absolute, true);
             collectionGlobalObject.SetUIMuseumAbsoluteObjectVoid(uiMuseumAbsoluteObject);
@@ -66,7 +68,7 @@ class Main extends Sprite{
         CollectionPremade       .PremadeFloorObjectVoid         (collectionGlobalObject);
         CollectionPremade       .PremadeRoomObjectVoid          (collectionGlobalObject);
         CollectionPremade       .PremadeExhibitionObjectVoid    (collectionGlobalObject);
-        CollectionPremade       .PremadeVisitorObjectVoid       (10, collectionGlobalObject); /*Change the number to change the initial visitor when the application starts.*/
+        CollectionPremade       .PremadeVisitorObjectVoid       (100, collectionGlobalObject); /*Change the number to change the initial visitor when the application starts.*/
         
         addEventListener(Event.ENTER_FRAME, Update);
 
@@ -76,10 +78,11 @@ class Main extends Sprite{
 
     private function Update(event:Event){
 
-        UpdateFastVoid();
-        uiPopupAddMuseumObject.UpdateVoid();
-        uiPopupEditMuseumObject.UpdateVoid();
-        uiPopupRemoveMuseumObject.UpdateVoid();
+        UpdateSlowVoid();
+        uiPopupAddMuseumObject          .UpdateVoid();
+        uiPopupEditMuseumObject         .UpdateVoid();
+        uiPopupRemoveMuseumObject       .UpdateVoid();
+        uiPopupRemoveVisitorObject      .UpdateVoid();
         
     }
 

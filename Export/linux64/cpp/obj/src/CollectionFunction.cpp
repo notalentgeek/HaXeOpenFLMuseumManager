@@ -16,6 +16,9 @@
 #ifndef INCLUDED_ObjectTag
 #include <ObjectTag.h>
 #endif
+#ifndef INCLUDED_ObjectVisitor
+#include <ObjectVisitor.h>
+#endif
 
 Void CollectionFunction_obj::__construct()
 {
@@ -116,8 +119,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionFunction_obj,ClearArray,(void))
 			::ObjectMuseum tmp8 = tempObjectArray->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(23)
 			return tmp8;
-			HX_STACK_LINE(23)
-			break;
 		}
 		HX_STACK_LINE(24)
 		::String tmp8 = _nameString;		HX_STACK_VAR(tmp8,"tmp8");
@@ -135,8 +136,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionFunction_obj,ClearArray,(void))
 			::ObjectMuseum tmp13 = tempObjectArray->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp13,"tmp13");
 			HX_STACK_LINE(24)
 			return tmp13;
-			HX_STACK_LINE(24)
-			break;
 		}
 		HX_STACK_LINE(26)
 		(loopCounter1Int)++;
@@ -183,51 +182,95 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(CollectionFunction_obj,FindMuseumObject,return )
 			::ObjectTag tmp8 = _collectionGlobalObject->GetTagObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(37)
 			return tmp8;
-			HX_STACK_LINE(38)
-			break;
 		}
-		HX_STACK_LINE(40)
+		HX_STACK_LINE(39)
 		(loopCounter1Int)++;
 	}
-	HX_STACK_LINE(42)
+	HX_STACK_LINE(41)
 	return null();
 }
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,FindTagObject,return )
 
-bool CollectionFunction_obj::IsExistInArrayBool( cpp::ArrayBase _dynamicArray,Dynamic _dynamicElement){
-	HX_STACK_FRAME("CollectionFunction","IsExistInArrayBool",0xae352629,"CollectionFunction.IsExistInArrayBool","CollectionFunction.hx",44,0xbb6e90c8)
-	HX_STACK_ARG(_dynamicArray,"_dynamicArray")
-	HX_STACK_ARG(_dynamicElement,"_dynamicElement")
-	HX_STACK_LINE(45)
+::ObjectVisitor CollectionFunction_obj::FindVisitorObject( ::CollectionGlobal _collectionGlobalObject,::String _nameString){
+	HX_STACK_FRAME("CollectionFunction","FindVisitorObject",0x5dfbd63c,"CollectionFunction.FindVisitorObject","CollectionFunction.hx",46,0xbb6e90c8)
+	HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
+	HX_STACK_ARG(_nameString,"_nameString")
+	HX_STACK_LINE(47)
 	int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-	HX_STACK_LINE(46)
+	HX_STACK_LINE(48)
 	while((true)){
-		HX_STACK_LINE(46)
-		bool tmp = (loopCounter1Int < _dynamicArray->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic ));		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(46)
-		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(46)
-		if ((tmp1)){
-			HX_STACK_LINE(46)
+		HX_STACK_LINE(48)
+		int tmp = loopCounter1Int;		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(48)
+		int tmp1 = _collectionGlobalObject->GetVisitorObjectArray()->length;		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(48)
+		bool tmp2 = (tmp < tmp1);		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(48)
+		bool tmp3 = !(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(48)
+		if ((tmp3)){
+			HX_STACK_LINE(48)
 			break;
 		}
-		HX_STACK_LINE(47)
-		Dynamic tmp2 = _dynamicArray->__GetItem(loopCounter1Int);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(47)
-		Dynamic tmp3 = _dynamicElement;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(47)
-		bool tmp4 = (tmp2 == tmp3);		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(47)
-		if ((tmp4)){
-			HX_STACK_LINE(47)
-			return true;
+		HX_STACK_LINE(49)
+		::String tmp4 = _nameString;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(49)
+		::ObjectVisitor tmp5 = _collectionGlobalObject->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(49)
+		::String tmp6 = tmp5->GetNameString();		HX_STACK_VAR(tmp6,"tmp6");
+		HX_STACK_LINE(49)
+		bool tmp7 = (tmp4 == tmp6);		HX_STACK_VAR(tmp7,"tmp7");
+		HX_STACK_LINE(49)
+		if ((tmp7)){
+			HX_STACK_LINE(50)
+			::ObjectVisitor tmp8 = _collectionGlobalObject->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp8,"tmp8");
+			HX_STACK_LINE(50)
+			return tmp8;
 		}
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(52)
 		(loopCounter1Int)++;
 	}
-	HX_STACK_LINE(50)
+	HX_STACK_LINE(54)
+	return null();
+}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,FindVisitorObject,return )
+
+bool CollectionFunction_obj::IsExistInArrayBool( cpp::ArrayBase _dynamicArray,Dynamic _dynamicElement){
+	HX_STACK_FRAME("CollectionFunction","IsExistInArrayBool",0xae352629,"CollectionFunction.IsExistInArrayBool","CollectionFunction.hx",56,0xbb6e90c8)
+	HX_STACK_ARG(_dynamicArray,"_dynamicArray")
+	HX_STACK_ARG(_dynamicElement,"_dynamicElement")
+	HX_STACK_LINE(57)
+	int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
+	HX_STACK_LINE(58)
+	while((true)){
+		HX_STACK_LINE(58)
+		bool tmp = (loopCounter1Int < _dynamicArray->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic ));		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(58)
+		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(58)
+		if ((tmp1)){
+			HX_STACK_LINE(58)
+			break;
+		}
+		HX_STACK_LINE(59)
+		Dynamic tmp2 = _dynamicArray->__GetItem(loopCounter1Int);		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(59)
+		Dynamic tmp3 = _dynamicElement;		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(59)
+		bool tmp4 = (tmp2 == tmp3);		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(59)
+		if ((tmp4)){
+			HX_STACK_LINE(59)
+			return true;
+		}
+		HX_STACK_LINE(60)
+		(loopCounter1Int)++;
+	}
+	HX_STACK_LINE(62)
 	return false;
 }
 
@@ -235,25 +278,25 @@ bool CollectionFunction_obj::IsExistInArrayBool( cpp::ArrayBase _dynamicArray,Dy
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,IsExistInArrayBool,return )
 
 Dynamic CollectionFunction_obj::PickRandomFromArrayT( cpp::ArrayBase _tArray){
-	HX_STACK_FRAME("CollectionFunction","PickRandomFromArrayT",0xe8ee2c61,"CollectionFunction.PickRandomFromArrayT","CollectionFunction.hx",52,0xbb6e90c8)
+	HX_STACK_FRAME("CollectionFunction","PickRandomFromArrayT",0xe8ee2c61,"CollectionFunction.PickRandomFromArrayT","CollectionFunction.hx",64,0xbb6e90c8)
 	HX_STACK_ARG(_tArray,"_tArray")
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(65)
 	Float tmp = ::Math_obj::random();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(65)
 	int tmp1 = (_tArray->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic ) - (int)1);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(65)
 	Float tmp2 = (tmp * tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(65)
 	int tmp3 = ::Math_obj::round(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(65)
 	int randomInt = tmp3;		HX_STACK_VAR(randomInt,"randomInt");
-	HX_STACK_LINE(54)
+	HX_STACK_LINE(66)
 	Dynamic tmp4 = _tArray->__GetItem(randomInt);		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(54)
+	HX_STACK_LINE(66)
 	Dynamic elementT = tmp4;		HX_STACK_VAR(elementT,"elementT");
-	HX_STACK_LINE(55)
+	HX_STACK_LINE(67)
 	Dynamic tmp5 = elementT;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(55)
+	HX_STACK_LINE(67)
 	return tmp5;
 }
 
@@ -261,75 +304,75 @@ Dynamic CollectionFunction_obj::PickRandomFromArrayT( cpp::ArrayBase _tArray){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionFunction_obj,PickRandomFromArrayT,return )
 
 Array< ::Dynamic > CollectionFunction_obj::PickRandomTagObjectArray( ::CollectionGlobal _collectionGlobalObject){
-	HX_STACK_FRAME("CollectionFunction","PickRandomTagObjectArray",0x47ed4edc,"CollectionFunction.PickRandomTagObjectArray","CollectionFunction.hx",57,0xbb6e90c8)
+	HX_STACK_FRAME("CollectionFunction","PickRandomTagObjectArray",0x47ed4edc,"CollectionFunction.PickRandomTagObjectArray","CollectionFunction.hx",69,0xbb6e90c8)
 	HX_STACK_ARG(_collectionGlobalObject,"_collectionGlobalObject")
-	HX_STACK_LINE(58)
+	HX_STACK_LINE(70)
 	Array< ::Dynamic > tempTagObjectArray = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(tempTagObjectArray,"tempTagObjectArray");
-	HX_STACK_LINE(59)
+	HX_STACK_LINE(71)
 	Float chanceFloat = ((Float)1.0);		HX_STACK_VAR(chanceFloat,"chanceFloat");
-	HX_STACK_LINE(60)
+	HX_STACK_LINE(72)
 	while((true)){
-		HX_STACK_LINE(60)
+		HX_STACK_LINE(72)
 		Float tmp = chanceFloat;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(60)
+		HX_STACK_LINE(72)
 		Float tmp1 = ::Math_obj::random();		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(60)
+		HX_STACK_LINE(72)
 		bool tmp2 = (tmp > tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(60)
+		HX_STACK_LINE(72)
 		bool tmp3 = !(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(60)
+		HX_STACK_LINE(72)
 		if ((tmp3)){
-			HX_STACK_LINE(60)
+			HX_STACK_LINE(72)
 			break;
 		}
-		HX_STACK_LINE(61)
+		HX_STACK_LINE(73)
 		Float tmp4 = ::Math_obj::random();		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(61)
+		HX_STACK_LINE(73)
 		int tmp5 = _collectionGlobalObject->GetTagObjectArray()->length;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(61)
+		HX_STACK_LINE(73)
 		int tmp6 = (tmp5 - (int)1);		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(61)
+		HX_STACK_LINE(73)
 		Float tmp7 = (tmp4 * tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(61)
+		HX_STACK_LINE(73)
 		int tmp8 = ::Math_obj::round(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(61)
+		HX_STACK_LINE(73)
 		int randomIndexInt = tmp8;		HX_STACK_VAR(randomIndexInt,"randomIndexInt");
-		HX_STACK_LINE(62)
+		HX_STACK_LINE(74)
 		while((true)){
-			HX_STACK_LINE(62)
+			HX_STACK_LINE(74)
 			::ObjectTag tmp9 = _collectionGlobalObject->GetTagObjectArray()->__get(randomIndexInt).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(62)
+			HX_STACK_LINE(74)
 			int tmp10 = tempTagObjectArray->indexOf(tmp9,null());		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(62)
+			HX_STACK_LINE(74)
 			bool tmp11 = (tmp10 > (int)-1);		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(62)
+			HX_STACK_LINE(74)
 			bool tmp12 = !(tmp11);		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(62)
+			HX_STACK_LINE(74)
 			if ((tmp12)){
-				HX_STACK_LINE(62)
+				HX_STACK_LINE(74)
 				break;
 			}
-			HX_STACK_LINE(63)
+			HX_STACK_LINE(75)
 			Float tmp13 = ::Math_obj::random();		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(63)
+			HX_STACK_LINE(75)
 			int tmp14 = _collectionGlobalObject->GetTagObjectArray()->length;		HX_STACK_VAR(tmp14,"tmp14");
-			HX_STACK_LINE(63)
+			HX_STACK_LINE(75)
 			int tmp15 = (tmp14 - (int)1);		HX_STACK_VAR(tmp15,"tmp15");
-			HX_STACK_LINE(63)
+			HX_STACK_LINE(75)
 			Float tmp16 = (tmp13 * tmp15);		HX_STACK_VAR(tmp16,"tmp16");
-			HX_STACK_LINE(63)
+			HX_STACK_LINE(75)
 			int tmp17 = ::Math_obj::round(tmp16);		HX_STACK_VAR(tmp17,"tmp17");
-			HX_STACK_LINE(63)
+			HX_STACK_LINE(75)
 			randomIndexInt = tmp17;
 		}
-		HX_STACK_LINE(65)
+		HX_STACK_LINE(77)
 		::ObjectTag tmp9 = _collectionGlobalObject->GetTagObjectArray()->__get(randomIndexInt).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(65)
+		HX_STACK_LINE(77)
 		tempTagObjectArray->push(tmp9);
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(78)
 		hx::SubEq(chanceFloat,((Float)0.05));
 	}
-	HX_STACK_LINE(68)
+	HX_STACK_LINE(80)
 	return tempTagObjectArray;
 }
 
@@ -337,29 +380,29 @@ Array< ::Dynamic > CollectionFunction_obj::PickRandomTagObjectArray( ::Collectio
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(CollectionFunction_obj,PickRandomTagObjectArray,return )
 
 Float CollectionFunction_obj::GenerateGreatestCommonDivisorFloat( Float _number1Float,Float _number2Float){
-	HX_STACK_FRAME("CollectionFunction","GenerateGreatestCommonDivisorFloat",0x3f62c60f,"CollectionFunction.GenerateGreatestCommonDivisorFloat","CollectionFunction.hx",70,0xbb6e90c8)
+	HX_STACK_FRAME("CollectionFunction","GenerateGreatestCommonDivisorFloat",0x3f62c60f,"CollectionFunction.GenerateGreatestCommonDivisorFloat","CollectionFunction.hx",82,0xbb6e90c8)
 	HX_STACK_ARG(_number1Float,"_number1Float")
 	HX_STACK_ARG(_number2Float,"_number2Float")
-	HX_STACK_LINE(71)
+	HX_STACK_LINE(83)
 	bool tmp = (_number2Float == (int)0);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(71)
+	HX_STACK_LINE(83)
 	if ((tmp)){
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(83)
 		Float tmp1 = _number1Float;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(83)
 		return tmp1;
 	}
 	else{
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(84)
 		Float tmp1 = _number2Float;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(84)
 		Float tmp2 = hx::Mod(_number1Float,_number2Float);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(84)
 		Float tmp3 = ::CollectionFunction_obj::GenerateGreatestCommonDivisorFloat(tmp1,tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(84)
 		return tmp3;
 	}
-	HX_STACK_LINE(71)
+	HX_STACK_LINE(83)
 	return ((Float)0.);
 }
 
@@ -367,20 +410,20 @@ Float CollectionFunction_obj::GenerateGreatestCommonDivisorFloat( Float _number1
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(CollectionFunction_obj,GenerateGreatestCommonDivisorFloat,return )
 
 Float CollectionFunction_obj::GenerateLeastCommonMultipleFloat( Float _number1Float,Float _number2Float){
-	HX_STACK_FRAME("CollectionFunction","GenerateLeastCommonMultipleFloat",0xeb3d0685,"CollectionFunction.GenerateLeastCommonMultipleFloat","CollectionFunction.hx",74,0xbb6e90c8)
+	HX_STACK_FRAME("CollectionFunction","GenerateLeastCommonMultipleFloat",0xeb3d0685,"CollectionFunction.GenerateLeastCommonMultipleFloat","CollectionFunction.hx",86,0xbb6e90c8)
 	HX_STACK_ARG(_number1Float,"_number1Float")
 	HX_STACK_ARG(_number2Float,"_number2Float")
-	HX_STACK_LINE(75)
+	HX_STACK_LINE(87)
 	Float tmp = (_number1Float * _number2Float);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(75)
+	HX_STACK_LINE(87)
 	Float tmp1 = _number1Float;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(75)
+	HX_STACK_LINE(87)
 	Float tmp2 = _number2Float;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(75)
+	HX_STACK_LINE(87)
 	Float tmp3 = ::CollectionFunction_obj::GenerateGreatestCommonDivisorFloat(tmp1,tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(75)
+	HX_STACK_LINE(87)
 	Float tmp4 = (Float(tmp) / Float(tmp3));		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(75)
+	HX_STACK_LINE(87)
 	return tmp4;
 }
 
@@ -403,6 +446,9 @@ bool CollectionFunction_obj::__GetStatic(const ::String &inName, Dynamic &outVal
 		break;
 	case 16:
 		if (HX_FIELD_EQ(inName,"FindMuseumObject") ) { outValue = FindMuseumObject_dyn(); return true;  }
+		break;
+	case 17:
+		if (HX_FIELD_EQ(inName,"FindVisitorObject") ) { outValue = FindVisitorObject_dyn(); return true;  }
 		break;
 	case 18:
 		if (HX_FIELD_EQ(inName,"IsExistInArrayBool") ) { outValue = IsExistInArrayBool_dyn(); return true;  }
@@ -444,6 +490,7 @@ static ::String sStaticFields[] = {
 	HX_HCSTRING("ClearArray","\xec","\xb0","\x4a","\xf1"),
 	HX_HCSTRING("FindMuseumObject","\x2a","\x8d","\x7d","\xe1"),
 	HX_HCSTRING("FindTagObject","\x20","\x9d","\x19","\x6f"),
+	HX_HCSTRING("FindVisitorObject","\xf4","\xdc","\x88","\xea"),
 	HX_HCSTRING("IsExistInArrayBool","\x71","\x00","\x0e","\x1d"),
 	HX_HCSTRING("PickRandomFromArrayT","\xa9","\x28","\x68","\x63"),
 	HX_HCSTRING("PickRandomTagObjectArray","\x24","\x0f","\xef","\x61"),

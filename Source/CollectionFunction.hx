@@ -20,8 +20,8 @@ class CollectionFunction{
         else if(_enumMuseumType == ROM){ tempObjectArray =  _collectionGlobalObject.GetRoomObjectArray(); }
         var loopCounter1Int:Int =  0;
         while(loopCounter1Int < tempObjectArray.length){
-            if(_nameString == tempObjectArray[loopCounter1Int].GetNameStruct().nameAltString){ return tempObjectArray[loopCounter1Int]; break; }
-            if(_nameString == tempObjectArray[loopCounter1Int].GetNameStruct().nameFullString){ return tempObjectArray[loopCounter1Int]; break; }
+            if(_nameString == tempObjectArray[loopCounter1Int].GetNameStruct().nameAltString){ return tempObjectArray[loopCounter1Int]; }
+            if(_nameString == tempObjectArray[loopCounter1Int].GetNameStruct().nameFullString){ return tempObjectArray[loopCounter1Int]; }
 
             loopCounter1Int ++;
         }
@@ -35,7 +35,19 @@ class CollectionFunction{
         while(loopCounter1Int <  _collectionGlobalObject.GetTagObjectArray().length){
             if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString()){
                 return _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int];
-                break;
+            }
+            loopCounter1Int ++;
+        }
+        return null;
+    }
+    public static function FindVisitorObject(
+        _collectionGlobalObject:CollectionGlobal,
+        _nameString:String
+    ){
+        var loopCounter1Int:Int = 0;
+        while(loopCounter1Int <  _collectionGlobalObject.GetVisitorObjectArray().length){
+            if(_nameString == _collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetNameString()){
+                return _collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int];
             }
             loopCounter1Int ++;
         }

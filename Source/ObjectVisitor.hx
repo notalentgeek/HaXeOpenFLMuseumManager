@@ -92,6 +92,9 @@ class ObjectVisitor{
             roomCurrentObject = exhibitionCurrentObject;
             floorCurrentObject = exhibitionCurrentObject;
             exhibitionVisitedObjectArray.push(exhibitionCurrentObject);
+            /*PENDING: Perhaps add an array to store retired visitor?*/
+            /*Everytime a visitor is removed to archive exhibition remove it also from visitor main array.*/
+            collectionGlobalObject.GetVisitorObjectArray().remove(this);
             UpdateHeavyVoid();
         }
         else{

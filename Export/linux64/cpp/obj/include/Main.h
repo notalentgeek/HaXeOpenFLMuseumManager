@@ -13,6 +13,7 @@ HX_DECLARE_CLASS0(Main)
 HX_DECLARE_CLASS0(UIPopupAddObjectMuseum)
 HX_DECLARE_CLASS0(UIPopupEditObjectMuseum)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectMuseum)
+HX_DECLARE_CLASS0(UIPopupRemoveObjectVisitor)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObject)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObjectContainer)
 HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
@@ -53,6 +54,7 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::openfl::_legacy::display::Spri
 		::UIPopupAddObjectMuseum uiPopupAddMuseumObject;
 		::UIPopupEditObjectMuseum uiPopupEditMuseumObject;
 		::UIPopupRemoveObjectMuseum uiPopupRemoveMuseumObject;
+		::UIPopupRemoveObjectVisitor uiPopupRemoveVisitorObject;
 		virtual Void Update( ::openfl::_legacy::events::Event event);
 		Dynamic Update_dyn();
 

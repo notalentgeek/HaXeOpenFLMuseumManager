@@ -452,7 +452,7 @@ HX_STACK_ARG(_root,"_root")
 			HX_END_LOCAL_FUNC1((void))
 
 			HX_STACK_LINE(53)
-			::haxe::ui::toolkit::controls::popups::Popup tmp6 = tmp3->showCustom(tmp4,HX_HCSTRING("Add Museum Object","\xee","\xe7","\xad","\x9e"),tmp5, Dynamic(new _Function_2_1(_g)));		HX_STACK_VAR(tmp6,"tmp6");
+			::haxe::ui::toolkit::controls::popups::Popup tmp6 = tmp3->showCustom(tmp4,HX_HCSTRING("Edit Museum Object","\xd7","\xc9","\x9d","\xae"),tmp5, Dynamic(new _Function_2_1(_g)));		HX_STACK_VAR(tmp6,"tmp6");
 			HX_STACK_LINE(53)
 			_g->popupObject = tmp6;
 			HX_STACK_LINE(99)

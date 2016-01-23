@@ -172,9 +172,33 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -883,6 +907,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		#end
 		
 		#if flash
@@ -1101,20 +1137,44 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("css/rtf.css", AssetType.TEXT);
 		path.set ("assets/Layout/UIPopupAddObjectMuseum.xml", "assets/Layout/UIPopupAddObjectMuseum.xml");
 		type.set ("assets/Layout/UIPopupAddObjectMuseum.xml", AssetType.TEXT);
+		path.set ("assets/Layout/UIPopupRemoveObjectTag.xml", "assets/Layout/UIPopupRemoveObjectTag.xml");
+		type.set ("assets/Layout/UIPopupRemoveObjectTag.xml", AssetType.TEXT);
+		path.set ("assets/Layout/UIPopupAddObjectTag.xml", "assets/Layout/UIPopupAddObjectTag.xml");
+		type.set ("assets/Layout/UIPopupAddObjectTag.xml", AssetType.TEXT);
 		path.set ("assets/Layout/UIPopupEditObjectMuseum.xml", "assets/Layout/UIPopupEditObjectMuseum.xml");
 		type.set ("assets/Layout/UIPopupEditObjectMuseum.xml", AssetType.TEXT);
 		path.set ("assets/Layout/UIPopupRemoveObjectMuseum.xml", "assets/Layout/UIPopupRemoveObjectMuseum.xml");
 		type.set ("assets/Layout/UIPopupRemoveObjectMuseum.xml", AssetType.TEXT);
+		path.set ("assets/Layout/UIPopupEditObjectVisitor.xml", "assets/Layout/UIPopupEditObjectVisitor.xml");
+		type.set ("assets/Layout/UIPopupEditObjectVisitor.xml", AssetType.TEXT);
+		path.set ("assets/Layout/UIPopupAddObjectVisitor.xml", "assets/Layout/UIPopupAddObjectVisitor.xml");
+		type.set ("assets/Layout/UIPopupAddObjectVisitor.xml", AssetType.TEXT);
+		path.set ("assets/Layout/UIPopupRemoveObjectVisitor.xml", "assets/Layout/UIPopupRemoveObjectVisitor.xml");
+		type.set ("assets/Layout/UIPopupRemoveObjectVisitor.xml", AssetType.TEXT);
 		path.set ("assets/Layout/UIMain.xml", "assets/Layout/UIMain.xml");
 		type.set ("assets/Layout/UIMain.xml", AssetType.TEXT);
+		path.set ("assets/Layout/UIPopupEditObjectTag.xml", "assets/Layout/UIPopupEditObjectTag.xml");
+		type.set ("assets/Layout/UIPopupEditObjectTag.xml", AssetType.TEXT);
 		path.set ("layout/UIPopupAddObjectMuseum.xml", "layout/UIPopupAddObjectMuseum.xml");
 		type.set ("layout/UIPopupAddObjectMuseum.xml", AssetType.TEXT);
+		path.set ("layout/UIPopupRemoveObjectTag.xml", "layout/UIPopupRemoveObjectTag.xml");
+		type.set ("layout/UIPopupRemoveObjectTag.xml", AssetType.TEXT);
+		path.set ("layout/UIPopupAddObjectTag.xml", "layout/UIPopupAddObjectTag.xml");
+		type.set ("layout/UIPopupAddObjectTag.xml", AssetType.TEXT);
 		path.set ("layout/UIPopupEditObjectMuseum.xml", "layout/UIPopupEditObjectMuseum.xml");
 		type.set ("layout/UIPopupEditObjectMuseum.xml", AssetType.TEXT);
 		path.set ("layout/UIPopupRemoveObjectMuseum.xml", "layout/UIPopupRemoveObjectMuseum.xml");
 		type.set ("layout/UIPopupRemoveObjectMuseum.xml", AssetType.TEXT);
+		path.set ("layout/UIPopupEditObjectVisitor.xml", "layout/UIPopupEditObjectVisitor.xml");
+		type.set ("layout/UIPopupEditObjectVisitor.xml", AssetType.TEXT);
+		path.set ("layout/UIPopupAddObjectVisitor.xml", "layout/UIPopupAddObjectVisitor.xml");
+		type.set ("layout/UIPopupAddObjectVisitor.xml", AssetType.TEXT);
+		path.set ("layout/UIPopupRemoveObjectVisitor.xml", "layout/UIPopupRemoveObjectVisitor.xml");
+		type.set ("layout/UIPopupRemoveObjectVisitor.xml", AssetType.TEXT);
 		path.set ("layout/UIMain.xml", "layout/UIMain.xml");
 		type.set ("layout/UIMain.xml", AssetType.TEXT);
+		path.set ("layout/UIPopupEditObjectTag.xml", "layout/UIPopupEditObjectTag.xml");
+		type.set ("layout/UIPopupEditObjectTag.xml", AssetType.TEXT);
 		
 		
 		#elseif html5
@@ -1441,16 +1501,40 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/Layout/UIPopupAddObjectMuseum.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
+		id = "assets/Layout/UIPopupRemoveObjectTag.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/Layout/UIPopupAddObjectTag.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "assets/Layout/UIPopupEditObjectMuseum.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/Layout/UIPopupRemoveObjectMuseum.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
+		id = "assets/Layout/UIPopupEditObjectVisitor.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/Layout/UIPopupAddObjectVisitor.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/Layout/UIPopupRemoveObjectVisitor.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "assets/Layout/UIMain.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
+		id = "assets/Layout/UIPopupEditObjectTag.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "layout/UIPopupAddObjectMuseum.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "layout/UIPopupRemoveObjectTag.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "layout/UIPopupAddObjectTag.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "layout/UIPopupEditObjectMuseum.xml";
@@ -1459,7 +1543,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "layout/UIPopupRemoveObjectMuseum.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
+		id = "layout/UIPopupEditObjectVisitor.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "layout/UIPopupAddObjectVisitor.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "layout/UIPopupRemoveObjectVisitor.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "layout/UIMain.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "layout/UIPopupEditObjectTag.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		
@@ -1558,6 +1654,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("fonts/Oxygen-Bold.ttf", __ASSET__fonts_oxygen_bold_ttf);
 		type.set ("fonts/Oxygen-Bold.ttf", AssetType.FONT);
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -2431,6 +2539,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 #elseif html5
 
 
@@ -2508,6 +2628,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:keep #if display private #end class __ASSET__fonts_oxygen_ttf extends lime.text.Font { public function new () { super (); name = "Oxygen Regular"; } } 
 @:keep #if display private #end class __ASSET__fonts_oxygen_bold_ttf extends lime.text.Font { public function new () { super (); name = "Oxygen Bold"; } } 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

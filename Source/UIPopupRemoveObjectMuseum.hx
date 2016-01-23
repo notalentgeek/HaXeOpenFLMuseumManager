@@ -47,7 +47,7 @@ class UIPopupRemoveObjectMuseum{
             buttonControlInt |= PopupButton.CANCEL;
 
             var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupRemoveObjectMuseum.xml");
-            popupObject = PopupManager.instance.showCustom(iDisplayObject, "Add Museum Object", buttonControlInt, function(_button){
+            popupObject = PopupManager.instance.showCustom(iDisplayObject, "Remove Museum Object", buttonControlInt, function(_button){
 
                 if(_button == PopupButton.OK){
 
