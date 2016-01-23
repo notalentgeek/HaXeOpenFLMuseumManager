@@ -33,6 +33,7 @@ class Main extends Sprite{
     var loopCounterMainInt              :Int                        = 0;
     /*Popup objects.*/
     var uiPopupAddMuseumObject          :UIPopupAddObjectMuseum     = null;
+    var uiPopupEditMuseumObject         :UIPopupEditObjectMuseum    = null;
     var uiPopupRemoveMuseumObject       :UIPopupRemoveObjectMuseum  = null;
 
 
@@ -51,6 +52,7 @@ class Main extends Sprite{
             _root.addChild(uiMainObject);
 
             uiPopupAddMuseumObject = new UIPopupAddObjectMuseum(collectionGlobalObject, _root);
+            uiPopupEditMuseumObject = new UIPopupEditObjectMuseum(collectionGlobalObject, _root);
             uiPopupRemoveMuseumObject = new UIPopupRemoveObjectMuseum(collectionGlobalObject, _root);
 
             var uiMuseumAbsoluteObject:Absolute = _root.findChild("UIMuseumAbsolute", Absolute, true);
@@ -76,6 +78,7 @@ class Main extends Sprite{
 
         UpdateFastVoid();
         uiPopupAddMuseumObject.UpdateVoid();
+        uiPopupEditMuseumObject.UpdateVoid();
         uiPopupRemoveMuseumObject.UpdateVoid();
         
     }

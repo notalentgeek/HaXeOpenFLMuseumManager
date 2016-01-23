@@ -104,7 +104,7 @@ class UIPopupAddObjectMuseum{
             nameFullTextInputObject = popupObject.content.findChild("UIPopupAddObjectMuseum_InputFullName", TextInput, true);
             nameAltTextInputObject = popupObject.content.findChild("UIPopupAddObjectMuseum_InputAltName", TextInput, true);
             gridObject = popupObject.content.findChild("UIPopupAddObjectMuseum_Grid", Grid, true);
-            listSelectorParentObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectParentObject", ListSelector, true);
+            listSelectorParentObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectObjectParent", ListSelector, true);
             listSelectorParentObject.method = "default";
             listSelectorParentObject.selectedIndex = -1;
             listSelectorTypeObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectType", ListSelector, true);

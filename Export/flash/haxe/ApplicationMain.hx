@@ -458,11 +458,27 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/Layout/UIPopupEditObjectMuseum.xml");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/Layout/UIPopupRemoveObjectMuseum.xml");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/Layout/UIMain.xml");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("layout/UIPopupAddObjectMuseum.xml");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("layout/UIPopupEditObjectMuseum.xml");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("layout/UIPopupRemoveObjectMuseum.xml");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -531,7 +547,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "971",
+			build: "1111",
 			company: "Company Name",
 			file: "HaXeOpenFLMuseumManager",
 			fps: 60,

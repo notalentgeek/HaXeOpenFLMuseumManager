@@ -230,12 +230,16 @@ class AssetData {
 			type.set ("css/rtf.css", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/Layout/UIPopupAddObjectMuseum.xml", "assets/Layout/UIPopupAddObjectMuseum.xml");
 			type.set ("assets/Layout/UIPopupAddObjectMuseum.xml", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/Layout/UIPopupEditObjectMuseum.xml", "assets/Layout/UIPopupEditObjectMuseum.xml");
+			type.set ("assets/Layout/UIPopupEditObjectMuseum.xml", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/Layout/UIPopupRemoveObjectMuseum.xml", "assets/Layout/UIPopupRemoveObjectMuseum.xml");
 			type.set ("assets/Layout/UIPopupRemoveObjectMuseum.xml", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/Layout/UIMain.xml", "assets/Layout/UIMain.xml");
 			type.set ("assets/Layout/UIMain.xml", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("layout/UIPopupAddObjectMuseum.xml", "layout/UIPopupAddObjectMuseum.xml");
 			type.set ("layout/UIPopupAddObjectMuseum.xml", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("layout/UIPopupEditObjectMuseum.xml", "layout/UIPopupEditObjectMuseum.xml");
+			type.set ("layout/UIPopupEditObjectMuseum.xml", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("layout/UIPopupRemoveObjectMuseum.xml", "layout/UIPopupRemoveObjectMuseum.xml");
 			type.set ("layout/UIPopupRemoveObjectMuseum.xml", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("layout/UIMain.xml", "layout/UIMain.xml");

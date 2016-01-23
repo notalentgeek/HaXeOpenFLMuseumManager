@@ -8,7 +8,7 @@
         </listSelector>
 
         <text text="Parent Object" />
-        <listSelector text=" " width="100%" id="UIPopupAddObjectMuseum_SelectParentObject">
+        <listSelector text=" " width="100%" id="UIPopupAddObjectMuseum_SelectObjectParent">
             <array></array>
         </listSelector>
 

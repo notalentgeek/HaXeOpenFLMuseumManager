@@ -12,15 +12,17 @@ class CollectionFunction{
     public static function FindMuseumObject(
         _collectionGlobalObject:CollectionGlobal,
         _enumMuseumType:EnumMuseumType,
-        _nameAlt:String
+        _nameString:String
     ){
         var tempObjectArray:Array<ObjectMuseum> =  new Array<ObjectMuseum>();
-             if(_enumMuseumType == EXH){ tempObjectArray =  _collectionGlobalObject.GetExhibitionObjectArray(); }
+        if(_enumMuseumType == EXH){ tempObjectArray =  _collectionGlobalObject.GetExhibitionObjectArray(); }
         else if(_enumMuseumType == FLR){ tempObjectArray =  _collectionGlobalObject.GetFloorObjectArray(); }
         else if(_enumMuseumType == ROM){ tempObjectArray =  _collectionGlobalObject.GetRoomObjectArray(); }
         var loopCounter1Int:Int =  0;
         while(loopCounter1Int < tempObjectArray.length){
-            if(_nameAlt == tempObjectArray[loopCounter1Int].GetNameStruct().nameAltString){ return tempObjectArray[loopCounter1Int]; break; }
+            if(_nameString == tempObjectArray[loopCounter1Int].GetNameStruct().nameAltString){ return tempObjectArray[loopCounter1Int]; break; }
+            if(_nameString == tempObjectArray[loopCounter1Int].GetNameStruct().nameFullString){ return tempObjectArray[loopCounter1Int]; break; }
+
             loopCounter1Int ++;
         }
         return null;

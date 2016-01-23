@@ -5,7 +5,7 @@
             <button id="UIPopupAddMuseumObjectButton" autoSize="false" width="100%" text="Add Museum Object"></button>
             <button id="UIPopupAddTagButton" autoSize="false" width="100%" text="Add Tag"></button>
             <button id="UIPopupAddVisitorButton" autoSize="false" width="100%" text="Add Visitor"></button>
-            <button id="UIPopupEditMuseum ObjectButton" autoSize="false" width="100%" text="Edit Museum Object"></button>
+            <button id="UIPopupEditMuseumObjectButton" autoSize="false" width="100%" text="Edit Museum Object"></button>
             <button id="UIPopupEditTagButton" autoSize="false" width="100%" text="Edit Tag"></button>
             <button id="UIPopupEditVisitorButton" autoSize="false" width="100%" text="Edit Visitor"></button>
             <button id="UIPopupRemoveMuseumObjectButton" autoSize="false" width="100%" text="Remove Museum Object"></button>

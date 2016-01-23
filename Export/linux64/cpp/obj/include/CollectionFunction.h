@@ -35,7 +35,7 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionFunction_obj : public hx::Object{
 		static Void ClearArray( cpp::ArrayBase _dynamicArray);
 		static Dynamic ClearArray_dyn();
 
-		static ::ObjectMuseum FindMuseumObject( ::CollectionGlobal _collectionGlobalObject,::EnumMuseumType _enumMuseumType,::String _nameAlt);
+		static ::ObjectMuseum FindMuseumObject( ::CollectionGlobal _collectionGlobalObject,::EnumMuseumType _enumMuseumType,::String _nameString);
 		static Dynamic FindMuseumObject_dyn();
 
 		static ::ObjectTag FindTagObject( ::CollectionGlobal _collectionGlobalObject,::String _nameString);

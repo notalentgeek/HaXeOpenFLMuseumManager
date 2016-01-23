@@ -162,6 +162,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
 		#end
 		
 		#if flash
@@ -380,10 +384,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("css/rtf.css", AssetType.TEXT);
 		className.set ("assets/Layout/UIPopupAddObjectMuseum.xml", __ASSET__assets_layout_uipopupaddobjectmuseum_xml);
 		type.set ("assets/Layout/UIPopupAddObjectMuseum.xml", AssetType.TEXT);
+		className.set ("assets/Layout/UIPopupEditObjectMuseum.xml", __ASSET__assets_layout_uipopupeditobjectmuseum_xml);
+		type.set ("assets/Layout/UIPopupEditObjectMuseum.xml", AssetType.TEXT);
+		className.set ("assets/Layout/UIPopupRemoveObjectMuseum.xml", __ASSET__assets_layout_uipopupremoveobjectmuseum_xml);
+		type.set ("assets/Layout/UIPopupRemoveObjectMuseum.xml", AssetType.TEXT);
 		className.set ("assets/Layout/UIMain.xml", __ASSET__assets_layout_uimain_xml);
 		type.set ("assets/Layout/UIMain.xml", AssetType.TEXT);
 		className.set ("layout/UIPopupAddObjectMuseum.xml", __ASSET__layout_uipopupaddobjectmuseum_xml);
 		type.set ("layout/UIPopupAddObjectMuseum.xml", AssetType.TEXT);
+		className.set ("layout/UIPopupEditObjectMuseum.xml", __ASSET__layout_uipopupeditobjectmuseum_xml);
+		type.set ("layout/UIPopupEditObjectMuseum.xml", AssetType.TEXT);
+		className.set ("layout/UIPopupRemoveObjectMuseum.xml", __ASSET__layout_uipopupremoveobjectmuseum_xml);
+		type.set ("layout/UIPopupRemoveObjectMuseum.xml", AssetType.TEXT);
 		className.set ("layout/UIMain.xml", __ASSET__layout_uimain_xml);
 		type.set ("layout/UIMain.xml", AssetType.TEXT);
 		
@@ -819,11 +831,27 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/Layout/UIPopupEditObjectMuseum.xml";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/Layout/UIPopupRemoveObjectMuseum.xml";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		id = "assets/Layout/UIMain.xml";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
 		id = "layout/UIPopupAddObjectMuseum.xml";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "layout/UIPopupEditObjectMuseum.xml";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "layout/UIPopupRemoveObjectMuseum.xml";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -1170,11 +1198,23 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/Layout/UIPopupAddObjectMuseum.xml", __ASSET__assets_layout_uipopupaddobjectmuseum_xml);
 		type.set ("assets/Layout/UIPopupAddObjectMuseum.xml", AssetType.TEXT);
 		
+		className.set ("assets/Layout/UIPopupEditObjectMuseum.xml", __ASSET__assets_layout_uipopupeditobjectmuseum_xml);
+		type.set ("assets/Layout/UIPopupEditObjectMuseum.xml", AssetType.TEXT);
+		
+		className.set ("assets/Layout/UIPopupRemoveObjectMuseum.xml", __ASSET__assets_layout_uipopupremoveobjectmuseum_xml);
+		type.set ("assets/Layout/UIPopupRemoveObjectMuseum.xml", AssetType.TEXT);
+		
 		className.set ("assets/Layout/UIMain.xml", __ASSET__assets_layout_uimain_xml);
 		type.set ("assets/Layout/UIMain.xml", AssetType.TEXT);
 		
 		className.set ("layout/UIPopupAddObjectMuseum.xml", __ASSET__layout_uipopupaddobjectmuseum_xml);
 		type.set ("layout/UIPopupAddObjectMuseum.xml", AssetType.TEXT);
+		
+		className.set ("layout/UIPopupEditObjectMuseum.xml", __ASSET__layout_uipopupeditobjectmuseum_xml);
+		type.set ("layout/UIPopupEditObjectMuseum.xml", AssetType.TEXT);
+		
+		className.set ("layout/UIPopupRemoveObjectMuseum.xml", __ASSET__layout_uipopupremoveobjectmuseum_xml);
+		type.set ("layout/UIPopupRemoveObjectMuseum.xml", AssetType.TEXT);
 		
 		className.set ("layout/UIMain.xml", __ASSET__layout_uimain_xml);
 		type.set ("layout/UIMain.xml", AssetType.TEXT);
@@ -1929,8 +1969,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__css_code_css extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__css_rtf_css extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_layout_uipopupaddobjectmuseum_xml extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_layout_uipopupeditobjectmuseum_xml extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_layout_uipopupremoveobjectmuseum_xml extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_layout_uimain_xml extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__layout_uipopupaddobjectmuseum_xml extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__layout_uipopupeditobjectmuseum_xml extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__layout_uipopupremoveobjectmuseum_xml extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__layout_uimain_xml extends flash.utils.ByteArray { }
 
 
@@ -2011,6 +2055,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:keep #if display private #end class __ASSET__fonts_oxygen_ttf extends lime.text.Font { public function new () { super (); name = "Oxygen Regular"; } } 
 @:keep #if display private #end class __ASSET__fonts_oxygen_bold_ttf extends lime.text.Font { public function new () { super (); name = "Oxygen Bold"; } } 
+
+
+
+
 
 
 
@@ -2162,8 +2210,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("/usr/share/haxe/lib/haxeui-rich-text/0,1,2/assets/css/code.css") #if display private #end class __ASSET__css_code_css extends lime.utils.Bytes {}
 @:file("/usr/share/haxe/lib/haxeui-rich-text/0,1,2/assets/css/rtf.css") #if display private #end class __ASSET__css_rtf_css extends lime.utils.Bytes {}
 @:file("Assets/Layout/UIPopupAddObjectMuseum.xml") #if display private #end class __ASSET__assets_layout_uipopupaddobjectmuseum_xml extends lime.utils.Bytes {}
+@:file("Assets/Layout/UIPopupEditObjectMuseum.xml") #if display private #end class __ASSET__assets_layout_uipopupeditobjectmuseum_xml extends lime.utils.Bytes {}
+@:file("Assets/Layout/UIPopupRemoveObjectMuseum.xml") #if display private #end class __ASSET__assets_layout_uipopupremoveobjectmuseum_xml extends lime.utils.Bytes {}
 @:file("Assets/Layout/UIMain.xml") #if display private #end class __ASSET__assets_layout_uimain_xml extends lime.utils.Bytes {}
 @:file("Assets/Layout/UIPopupAddObjectMuseum.xml") #if display private #end class __ASSET__layout_uipopupaddobjectmuseum_xml extends lime.utils.Bytes {}
+@:file("Assets/Layout/UIPopupEditObjectMuseum.xml") #if display private #end class __ASSET__layout_uipopupeditobjectmuseum_xml extends lime.utils.Bytes {}
+@:file("Assets/Layout/UIPopupRemoveObjectMuseum.xml") #if display private #end class __ASSET__layout_uipopupremoveobjectmuseum_xml extends lime.utils.Bytes {}
 @:file("Assets/Layout/UIMain.xml") #if display private #end class __ASSET__layout_uimain_xml extends lime.utils.Bytes {}
 
 
