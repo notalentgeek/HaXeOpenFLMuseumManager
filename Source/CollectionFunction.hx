@@ -28,15 +28,27 @@ class CollectionFunction{
         return null;
     }
     public static function FindTagObject(
-        _collectionGlobalObject:CollectionGlobal,
-        _nameString:String
+        _collectionGlobalObject     :CollectionGlobal   ,
+        _isGeneral                  :Bool               ,
+        _nameString                 :String
     ){
-        var loopCounter1Int:Int = 0;
-        while(loopCounter1Int <  _collectionGlobalObject.GetTagObjectArray().length){
-            if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString()){
-                return _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int];
+        if(_isGeneral == true ){
+            var loopCounter1Int:Int = 0;
+            while(loopCounter1Int <  _collectionGlobalObject.GetTagGeneralObjectArray().length){
+                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetNameString()){
+                    return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int];
+                }
+                loopCounter1Int ++;
             }
-            loopCounter1Int ++;
+        }
+        else if(_isGeneral == false){
+            var loopCounter1Int:Int = 0;
+            while(loopCounter1Int <  _collectionGlobalObject.GetTagObjectArray().length){
+                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString()){
+                    return _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int];
+                }
+                loopCounter1Int ++;
+            }
         }
         return null;
     }

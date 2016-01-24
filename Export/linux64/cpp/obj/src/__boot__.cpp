@@ -1341,6 +1341,9 @@
 #ifndef INCLUDED_UIPopupRemoveObjectVisitor
 #include <UIPopupRemoveObjectVisitor.h>
 #endif
+#ifndef INCLUDED_UIPopupRemoveObjectTag
+#include <UIPopupRemoveObjectTag.h>
+#endif
 #ifndef INCLUDED_UIPopupRemoveObjectMuseum
 #include <UIPopupRemoveObjectMuseum.h>
 #endif
@@ -1912,6 +1915,7 @@ hx::RegisterResources( hx::GetResources() );
 ::cpp::vm::Thread_obj::__register();
 ::cpp::vm::Mutex_obj::__register();
 ::UIPopupRemoveObjectVisitor_obj::__register();
+::UIPopupRemoveObjectTag_obj::__register();
 ::UIPopupRemoveObjectMuseum_obj::__register();
 ::UIPopupEditObjectMuseum_obj::__register();
 ::UIPopupAddObjectMuseum_obj::__register();

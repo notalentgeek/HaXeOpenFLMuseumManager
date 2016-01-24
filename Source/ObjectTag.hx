@@ -55,6 +55,13 @@ class ObjectTag{
     public function GetVerb3String(){ return verb3String; }
     public function GetVerbIngString(){ return verbIngString; }
     public function GetVerbSString(){ return verbSString; }
+    public function RemoveFromArray(){
+
+        if     (generalTagBool == true ){ trace("LOL");collectionGlobalObject.GetTagGeneralObjectArray()     .remove(this); }
+        else if(generalTagBool == false){ trace("LOL1");collectionGlobalObject.GetTagObjectArray()            .remove(this); }
+
+        
+    }
     public function SetAdjectiveStringObject(_adjectiveString:String){ adjectiveString = _adjectiveString; return this; }
     public function SetAdverbStringObject(_adverbString:String){ adverbString = _adverbString; return this; }
     public function SetFeelEnumVoid(_feelEnum:EnumTagFeelType){ feelEnum = _feelEnum; }

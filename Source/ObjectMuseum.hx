@@ -102,8 +102,6 @@ class ObjectMuseum{
         }
         if(foundIndexLocalBool == false){ indexLocalInt = -1; }
     }
-    private function RemoveTagByNameAltVoid(_nameString:String){ tagObjectArray.remove(CollectionFunction.FindTagObject(collectionGlobalObject, _nameString)); }
-    private function RemoveTagByObjectVoid(_tagObject:ObjectTag){ tagObjectArray.remove(_tagObject); }
     private function ResetVoid(){
         fullBool = false;
         visitorCurrentInt = 0;

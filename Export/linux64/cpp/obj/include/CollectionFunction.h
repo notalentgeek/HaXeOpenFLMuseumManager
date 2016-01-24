@@ -39,7 +39,7 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionFunction_obj : public hx::Object{
 		static ::ObjectMuseum FindMuseumObject( ::CollectionGlobal _collectionGlobalObject,::EnumMuseumType _enumMuseumType,::String _nameString);
 		static Dynamic FindMuseumObject_dyn();
 
-		static ::ObjectTag FindTagObject( ::CollectionGlobal _collectionGlobalObject,::String _nameString);
+		static ::ObjectTag FindTagObject( ::CollectionGlobal _collectionGlobalObject,bool _isGeneral,::String _nameString);
 		static Dynamic FindTagObject_dyn();
 
 		static ::ObjectVisitor FindVisitorObject( ::CollectionGlobal _collectionGlobalObject,::String _nameString);

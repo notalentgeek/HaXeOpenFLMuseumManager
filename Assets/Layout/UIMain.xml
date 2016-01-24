@@ -3,14 +3,14 @@
     <scrollview width="25%" height="100%">
         <vbox width="100%">
             <button id="UIPopupAddMuseumObjectButton" autoSize="false" width="100%" text="Add Museum Object"></button>
-            <button id="UIPopupAddTagObjectButton" autoSize="false" width="100%" text="Add TagObject"></button>
-            <button id="UIPopupAddVisitorObjectButton" autoSize="false" width="100%" text="Add VisitorObject"></button>
+            <button id="UIPopupAddTagObjectButton" autoSize="false" width="100%" text="Add Tag Object"></button>
+            <button id="UIPopupAddVisitorObjectButton" autoSize="false" width="100%" text="Add Visitor Object"></button>
             <button id="UIPopupEditMuseumObjectButton" autoSize="false" width="100%" text="Edit Museum Object"></button>
-            <button id="UIPopupEditTagObjectButton" autoSize="false" width="100%" text="Edit TagObject"></button>
-            <button id="UIPopupEditVisitorObjectButton" autoSize="false" width="100%" text="Edit VisitorObject"></button>
+            <button id="UIPopupEditTagObjectButton" autoSize="false" width="100%" text="Edit Tag Object"></button>
+            <button id="UIPopupEditVisitorObjectButton" autoSize="false" width="100%" text="Edit Visitor Object"></button>
             <button id="UIPopupRemoveMuseumObjectButton" autoSize="false" width="100%" text="Remove Museum Object"></button>
-            <button id="UIPopupRemoveTagObjectButton" autoSize="false" width="100%" text="Remove TagObject"></button>
-            <button id="UIPopupRemoveVisitorObjectButton" autoSize="false" width="100%" text="Remove VisitorObject"></button>
+            <button id="UIPopupRemoveTagObjectButton" autoSize="false" width="100%" text="Remove Tag Object"></button>
+            <button id="UIPopupRemoveVisitorObjectButton" autoSize="false" width="100%" text="Remove Visitor Object"></button>
             <button id="UIPopupSaveButton" autoSize="false" width="100%" text="Save"></button>
             <button id="UIPopupSaveAsButton" autoSize="false" width="100%" text="Save As"></button>
             <button id="UIPopupLoadButton" autoSize="false" width="100%" text="Load"></button>

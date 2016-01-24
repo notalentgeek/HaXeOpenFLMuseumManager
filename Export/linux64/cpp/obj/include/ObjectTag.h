@@ -100,6 +100,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectTag_obj : public hx::Object{
 		virtual ::String GetVerbSString( );
 		Dynamic GetVerbSString_dyn();
 
+		virtual Void RemoveFromArray( );
+		Dynamic RemoveFromArray_dyn();
+
 		virtual ::ObjectTag SetAdjectiveStringObject( ::String _adjectiveString);
 		Dynamic SetAdjectiveStringObject_dyn();
 

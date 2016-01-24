@@ -79,7 +79,8 @@ class UIPopupAddObjectMuseum{
                     var loopCounter1Int:Int = 0;
                     while(loopCounter1Int < listSelectorTagStructArray.length){
                         var tagNameString:String = listSelectorTagStructArray[loopCounter1Int].listSelectorObject.text;
-                        var tagObject:ObjectTag = CollectionFunction.FindTagObject(collectionGlobalObject, tagNameString);
+                        var tagObject:ObjectTag = CollectionFunction.FindTagObject(collectionGlobalObject, false, tagNameString);
+                        if(tagObject == null){ tagObject = CollectionFunction.FindTagObject(collectionGlobalObject, true, tagNameString); }
                         if(tagObject != null){ tagObjectArray.push(tagObject); }
                         loopCounter1Int ++;
                     }

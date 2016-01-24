@@ -76,12 +76,6 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual Void DetermineIndexLocalVoid( );
 		Dynamic DetermineIndexLocalVoid_dyn();
 
-		virtual Void RemoveTagByNameAltVoid( ::String _nameString);
-		Dynamic RemoveTagByNameAltVoid_dyn();
-
-		virtual Void RemoveTagByObjectVoid( ::ObjectTag _tagObject);
-		Dynamic RemoveTagByObjectVoid_dyn();
-
 		virtual Void ResetVoid( );
 		Dynamic ResetVoid_dyn();
 

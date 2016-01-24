@@ -15,9 +15,6 @@
 #ifndef INCLUDED_UIPopupRemoveObjectVisitor
 #include <UIPopupRemoveObjectVisitor.h>
 #endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
-#endif
 #ifndef INCLUDED_haxe_ui_toolkit_containers_Container
 #include <haxe/ui/toolkit/containers/Container.h>
 #endif
@@ -167,29 +164,17 @@ HX_STACK_ARG(_root,"_root")
 					HX_STACK_LINE(51)
 					if ((tmp6)){
 						HX_STACK_LINE(53)
-						int tmp7 = _g->collectionGlobalObject->GetVisitorObjectArray()->length;		HX_STACK_VAR(tmp7,"tmp7");
+						::CollectionGlobal tmp7 = _g->collectionGlobalObject;		HX_STACK_VAR(tmp7,"tmp7");
 						HX_STACK_LINE(53)
-						Dynamic tmp8 = hx::SourceInfo(HX_HCSTRING("UIPopupRemoveObjectVisitor.hx","\x2b","\x85","\x81","\x05"),53,HX_HCSTRING("UIPopupRemoveObjectVisitor","\x73","\xa7","\xa7","\x2b"),HX_HCSTRING("new","\x60","\xd0","\x53","\x00"));		HX_STACK_VAR(tmp8,"tmp8");
+						::String tmp8 = _g->selectVisitorNameString;		HX_STACK_VAR(tmp8,"tmp8");
 						HX_STACK_LINE(53)
-						::haxe::Log_obj::trace(tmp7,tmp8);
+						::ObjectVisitor tmp9 = ::CollectionFunction_obj::FindVisitorObject(tmp7,tmp8);		HX_STACK_VAR(tmp9,"tmp9");
+						HX_STACK_LINE(53)
+						_g->selectVisitorObject = tmp9;
 						HX_STACK_LINE(54)
-						::CollectionGlobal tmp9 = _g->collectionGlobalObject;		HX_STACK_VAR(tmp9,"tmp9");
+						::ObjectMuseum tmp10 = _g->collectionGlobalObject->GetArchiveExhibitionObject();		HX_STACK_VAR(tmp10,"tmp10");
 						HX_STACK_LINE(54)
-						::String tmp10 = _g->selectVisitorNameString;		HX_STACK_VAR(tmp10,"tmp10");
-						HX_STACK_LINE(54)
-						::ObjectVisitor tmp11 = ::CollectionFunction_obj::FindVisitorObject(tmp9,tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-						HX_STACK_LINE(54)
-						_g->selectVisitorObject = tmp11;
-						HX_STACK_LINE(55)
-						::ObjectMuseum tmp12 = _g->collectionGlobalObject->GetArchiveExhibitionObject();		HX_STACK_VAR(tmp12,"tmp12");
-						HX_STACK_LINE(55)
-						_g->selectVisitorObject->ChangeExhibitionCurrentVoid(tmp12);
-						HX_STACK_LINE(56)
-						int tmp13 = _g->collectionGlobalObject->GetVisitorObjectArray()->length;		HX_STACK_VAR(tmp13,"tmp13");
-						HX_STACK_LINE(56)
-						Dynamic tmp14 = hx::SourceInfo(HX_HCSTRING("UIPopupRemoveObjectVisitor.hx","\x2b","\x85","\x81","\x05"),56,HX_HCSTRING("UIPopupRemoveObjectVisitor","\x73","\xa7","\xa7","\x2b"),HX_HCSTRING("new","\x60","\xd0","\x53","\x00"));		HX_STACK_VAR(tmp14,"tmp14");
-						HX_STACK_LINE(56)
-						::haxe::Log_obj::trace(tmp13,tmp14);
+						_g->selectVisitorObject->ChangeExhibitionCurrentVoid(tmp10);
 					}
 				}
 				return null();
@@ -200,43 +185,43 @@ HX_STACK_ARG(_root,"_root")
 			::haxe::ui::toolkit::controls::popups::Popup tmp6 = tmp3->showCustom(tmp4,HX_HCSTRING("Remove Visitor","\xd2","\xa3","\xcb","\x31"),tmp5, Dynamic(new _Function_2_1(_g)));		HX_STACK_VAR(tmp6,"tmp6");
 			HX_STACK_LINE(49)
 			_g->popupObject = tmp6;
-			HX_STACK_LINE(62)
+			HX_STACK_LINE(60)
 			::haxe::ui::toolkit::controls::popups::PopupContent tmp7 = _g->popupObject->get_content();		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(62)
+			HX_STACK_LINE(60)
 			::haxe::ui::toolkit::controls::selection::ListSelector tmp8 = tmp7->findChild(HX_HCSTRING("UIPopupRemoveObjectVisitor_SelectObjectVisitor","\xe7","\x7b","\xa0","\x0f"),hx::ClassOf< ::haxe::ui::toolkit::controls::selection::ListSelector >(),true);		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(62)
+			HX_STACK_LINE(60)
 			_g->selectVisitorListSelectorObject = tmp8;
-			HX_STACK_LINE(65)
+			HX_STACK_LINE(63)
 			int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-			HX_STACK_LINE(66)
+			HX_STACK_LINE(64)
 			while((true)){
-				HX_STACK_LINE(66)
+				HX_STACK_LINE(64)
 				int tmp9 = loopCounter1Int;		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(66)
+				HX_STACK_LINE(64)
 				int tmp10 = _g->collectionGlobalObject->GetVisitorObjectArray()->length;		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(66)
+				HX_STACK_LINE(64)
 				bool tmp11 = (tmp9 < tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(66)
+				HX_STACK_LINE(64)
 				bool tmp12 = !(tmp11);		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(66)
+				HX_STACK_LINE(64)
 				if ((tmp12)){
-					HX_STACK_LINE(66)
+					HX_STACK_LINE(64)
 					break;
 				}
-				HX_STACK_LINE(68)
+				HX_STACK_LINE(66)
 				::haxe::ui::toolkit::data::IDataSource tmp13 = _g->selectVisitorListSelectorObject->get_dataSource();		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(68)
+				HX_STACK_LINE(66)
 				::ObjectVisitor tmp14 = _g->collectionGlobalObject->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(68)
+				HX_STACK_LINE(66)
 				::String tmp15 = tmp14->GetNameString();		HX_STACK_VAR(tmp15,"tmp15");
-				HX_STACK_LINE(68)
+				HX_STACK_LINE(66)
 				tmp13->createFromString(tmp15,null());
-				HX_STACK_LINE(69)
+				HX_STACK_LINE(67)
 				(loopCounter1Int)++;
 			}
-			HX_STACK_LINE(73)
+			HX_STACK_LINE(71)
 			_g->selectVisitorListSelectorObject->set_method(HX_HCSTRING("default","\xc1","\xd8","\xc3","\x9b"));
-			HX_STACK_LINE(74)
+			HX_STACK_LINE(72)
 			_g->selectVisitorListSelectorObject->set_selectedIndex((int)-1);
 		}
 		return null();
@@ -265,34 +250,34 @@ Dynamic UIPopupRemoveObjectVisitor_obj::__Create(hx::DynamicArray inArgs)
 
 Void UIPopupRemoveObjectVisitor_obj::UpdateVoid( ){
 {
-		HX_STACK_FRAME("UIPopupRemoveObjectVisitor","UpdateVoid",0xc6eaef38,"UIPopupRemoveObjectVisitor.UpdateVoid","UIPopupRemoveObjectVisitor.hx",79,0x0581852b)
+		HX_STACK_FRAME("UIPopupRemoveObjectVisitor","UpdateVoid",0xc6eaef38,"UIPopupRemoveObjectVisitor.UpdateVoid","UIPopupRemoveObjectVisitor.hx",77,0x0581852b)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(81)
+		HX_STACK_LINE(79)
 		::haxe::ui::toolkit::controls::popups::Popup tmp = this->popupObject;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(81)
+		HX_STACK_LINE(79)
 		bool tmp1 = (tmp != null());		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(81)
+		HX_STACK_LINE(79)
 		bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(81)
+		HX_STACK_LINE(79)
 		if ((tmp1)){
-			HX_STACK_LINE(81)
+			HX_STACK_LINE(79)
 			::haxe::ui::toolkit::controls::selection::ListSelector tmp3 = this->selectVisitorListSelectorObject;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(81)
+			HX_STACK_LINE(79)
 			::haxe::ui::toolkit::controls::selection::ListSelector tmp4 = tmp3;		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(81)
+			HX_STACK_LINE(79)
 			tmp2 = (tmp4 != null());
 		}
 		else{
-			HX_STACK_LINE(81)
+			HX_STACK_LINE(79)
 			tmp2 = false;
 		}
-		HX_STACK_LINE(81)
+		HX_STACK_LINE(79)
 		if ((tmp2)){
-			HX_STACK_LINE(82)
+			HX_STACK_LINE(80)
 			::haxe::ui::toolkit::controls::selection::ListSelector tmp3 = this->selectVisitorListSelectorObject;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(82)
+			HX_STACK_LINE(80)
 			::String tmp4 = tmp3->get_text();		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(82)
+			HX_STACK_LINE(80)
 			this->selectVisitorNameString = tmp4;
 		}
 	}
