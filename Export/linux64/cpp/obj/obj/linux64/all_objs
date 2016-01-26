@@ -431,6 +431,7 @@
 "obj/linux64/57588eaa_UIPopupRemoveObjectTag.o"
 "obj/linux64/57588eaa_UIPopupRemoveObjectMuseum.o"
 "obj/linux64/57588eaa_UIPopupEditObjectMuseum.o"
+"obj/linux64/57588eaa_UIPopupAddObjectVisitor.o"
 "obj/linux64/57588eaa_UIPopupAddObjectMuseum.o"
 "obj/linux64/57588eaa_Type.o"
 "obj/linux64/57588eaa_StringTools.o"

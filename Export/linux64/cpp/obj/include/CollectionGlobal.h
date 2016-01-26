@@ -82,6 +82,9 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		virtual Array< ::Dynamic > GetFloorObjectArray( );
 		Dynamic GetFloorObjectArray_dyn();
 
+		virtual int GetIndexGlobalVisitorInt( );
+		Dynamic GetIndexGlobalVisitorInt_dyn();
+
 		virtual int GetMuseumUIOffsetInt( );
 		Dynamic GetMuseumUIOffsetInt_dyn();
 

@@ -33,6 +33,7 @@ class Main extends Sprite{
     var loopCounterMainInt              :Int                            = 0;
     /*Popup objects.*/
     var uiPopupAddMuseumObject          :UIPopupAddObjectMuseum         = null;
+    var uiPopupAddVisitorObject         :UIPopupAddObjectVisitor        = null;
     var uiPopupEditMuseumObject         :UIPopupEditObjectMuseum        = null;
     var uiPopupRemoveMuseumObject       :UIPopupRemoveObjectMuseum      = null;
     var uiPopupRemoveTagObject          :UIPopupRemoveObjectTag         = null;
@@ -53,11 +54,12 @@ class Main extends Sprite{
             collectionGlobalObject.SetUIMainObjectVoid(uiMainObject);
             _root.addChild(uiMainObject);
 
-            uiPopupAddMuseumObject = new UIPopupAddObjectMuseum(collectionGlobalObject, _root);
-            uiPopupEditMuseumObject = new UIPopupEditObjectMuseum(collectionGlobalObject, _root);
-            uiPopupRemoveMuseumObject = new UIPopupRemoveObjectMuseum(collectionGlobalObject, _root);
-            uiPopupRemoveTagObject = new UIPopupRemoveObjectTag(collectionGlobalObject, _root);
-            uiPopupRemoveVisitorObject = new UIPopupRemoveObjectVisitor(collectionGlobalObject, _root);
+            uiPopupAddMuseumObject      = new UIPopupAddObjectMuseum        (collectionGlobalObject, _root);
+            uiPopupAddVisitorObject     = new UIPopupAddObjectVisitor       (collectionGlobalObject, _root);
+            uiPopupEditMuseumObject     = new UIPopupEditObjectMuseum       (collectionGlobalObject, _root);
+            uiPopupRemoveMuseumObject   = new UIPopupRemoveObjectMuseum     (collectionGlobalObject, _root);
+            uiPopupRemoveTagObject      = new UIPopupRemoveObjectTag        (collectionGlobalObject, _root);
+            uiPopupRemoveVisitorObject  = new UIPopupRemoveObjectVisitor    (collectionGlobalObject, _root);
 
             var uiMuseumAbsoluteObject:Absolute = _root.findChild("UIMuseumAbsolute", Absolute, true);
             collectionGlobalObject.SetUIMuseumAbsoluteObjectVoid(uiMuseumAbsoluteObject);
@@ -82,6 +84,7 @@ class Main extends Sprite{
 
         UpdateSlowVoid();
         uiPopupAddMuseumObject          .UpdateVoid();
+        uiPopupAddVisitorObject         .UpdateVoid();
         uiPopupEditMuseumObject         .UpdateVoid();
         uiPopupRemoveMuseumObject       .UpdateVoid();
         uiPopupRemoveTagObject          .UpdateVoid();

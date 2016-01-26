@@ -37,6 +37,7 @@ class CollectionGlobal{
     public function GetExhibitionFullThresholdInt(){ return exhibitionFullThresholdInt; }
     public function GetExhibitionObjectArray(){ return exhibitionObjectArray; }
     public function GetFloorObjectArray(){ return floorObjectArray; }
+    public function GetIndexGlobalVisitorInt(){ return indexGlobalVisitorInt; }
     public function GetMuseumUIOffsetInt(){ return museumUIOffsetInt; }
     public function GetRoomObjectArray(){ return roomObjectArray; }
     public function GetSelectedMuseumObject(){ return selectedMuseumObject; }

@@ -11,6 +11,7 @@
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(Main)
 HX_DECLARE_CLASS0(UIPopupAddObjectMuseum)
+HX_DECLARE_CLASS0(UIPopupAddObjectVisitor)
 HX_DECLARE_CLASS0(UIPopupEditObjectMuseum)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectMuseum)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectTag)
@@ -53,6 +54,7 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::openfl::_legacy::display::Spri
 		::CollectionGlobal collectionGlobalObject;
 		int loopCounterMainInt;
 		::UIPopupAddObjectMuseum uiPopupAddMuseumObject;
+		::UIPopupAddObjectVisitor uiPopupAddVisitorObject;
 		::UIPopupEditObjectMuseum uiPopupEditMuseumObject;
 		::UIPopupRemoveObjectMuseum uiPopupRemoveMuseumObject;
 		::UIPopupRemoveObjectTag uiPopupRemoveTagObject;

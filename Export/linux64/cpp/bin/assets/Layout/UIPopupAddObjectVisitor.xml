@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<scrollview width="100%" height="200">
+    <grid width="100%" id="UIPopupAddObjectVisitor_Grid">
+
+    	<text text="Name" />
+    	<textInput text=" " width="100%" id="UIPopupAddObjectVisitor_InputName" />
+    	<text text="Previous Visitor" />
+    	<listSelector text=" " width="100%" id="UIPopupAddObjectVisitor_SelectPreviousVisitor"></listSelector>
+    	<text text="Exhibition" />
+    	<listSelector text=" " width="100%" id="UIPopupAddObjectVisitor_SelectStartExhibition"></listSelector>
+
+    </grid>
+</scrollview>

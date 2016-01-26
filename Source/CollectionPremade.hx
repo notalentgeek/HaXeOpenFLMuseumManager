@@ -31,7 +31,7 @@ class CollectionPremade{
     public static function PremadeVisitorObjectVoid(_amountInt:Int, _collectionGlobalObject:CollectionGlobal){
         var loopCounter1Int:Int = 0;
         while(loopCounter1Int < _amountInt){
-            var visitorObject:ObjectVisitor = new ObjectVisitor(_collectionGlobalObject, CollectionFunction.PickRandomFromArrayT(_collectionGlobalObject.GetExhibitionObjectArray()), _collectionGlobalObject.PutIndexGlobalVisitorInt(), "Visitor " + loopCounter1Int);
+            var visitorObject:ObjectVisitor = new ObjectVisitor(_collectionGlobalObject, CollectionFunction.PickRandomFromArrayT(_collectionGlobalObject.GetExhibitionObjectArray()), _collectionGlobalObject.PutIndexGlobalVisitorInt(), "Visitor " + _collectionGlobalObject.GetIndexGlobalVisitorInt());
             loopCounter1Int ++;
         }
     }

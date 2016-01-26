@@ -187,11 +187,13 @@ Void CollectionPremade_obj::PremadeVisitorObjectVoid( int _amountInt,::Collectio
 			HX_STACK_LINE(34)
 			int tmp4 = _collectionGlobalObject->PutIndexGlobalVisitorInt();		HX_STACK_VAR(tmp4,"tmp4");
 			HX_STACK_LINE(34)
-			::String tmp5 = (HX_HCSTRING("Visitor ","\xd2","\xd0","\x5e","\x02") + loopCounter1Int);		HX_STACK_VAR(tmp5,"tmp5");
+			int tmp5 = _collectionGlobalObject->GetIndexGlobalVisitorInt();		HX_STACK_VAR(tmp5,"tmp5");
 			HX_STACK_LINE(34)
-			::ObjectVisitor tmp6 = ::ObjectVisitor_obj::__new(tmp2,tmp3,tmp4,tmp5);		HX_STACK_VAR(tmp6,"tmp6");
+			::String tmp6 = (HX_HCSTRING("Visitor ","\xd2","\xd0","\x5e","\x02") + tmp5);		HX_STACK_VAR(tmp6,"tmp6");
 			HX_STACK_LINE(34)
-			::ObjectVisitor visitorObject = tmp6;		HX_STACK_VAR(visitorObject,"visitorObject");
+			::ObjectVisitor tmp7 = ::ObjectVisitor_obj::__new(tmp2,tmp3,tmp4,tmp6);		HX_STACK_VAR(tmp7,"tmp7");
+			HX_STACK_LINE(34)
+			::ObjectVisitor visitorObject = tmp7;		HX_STACK_VAR(visitorObject,"visitorObject");
 			HX_STACK_LINE(35)
 			(loopCounter1Int)++;
 		}
