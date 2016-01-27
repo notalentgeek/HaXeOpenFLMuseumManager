@@ -64,6 +64,9 @@ class UIPopupAddObjectVisitor{
             selectExhibitionStartListSelectorObject = popupObject.content.findChild("UIPopupAddObjectVisitor_SelectStartExhibition" , ListSelector    , true);
             selectPreviousVisitorListSelectorObject = popupObject.content.findChild("UIPopupAddObjectVisitor_SelectPreviousVisitor" , ListSelector    , true);
 
+            selectExhibitionStartListSelectorObject.method = "default";
+            selectPreviousVisitorListSelectorObject.method = "default";
+
             var loopCounter1Int:Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
                 selectExhibitionStartListSelectorObject.dataSource.createFromString(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameFullString);

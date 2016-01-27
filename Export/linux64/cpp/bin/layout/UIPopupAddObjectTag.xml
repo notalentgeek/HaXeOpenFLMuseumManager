@@ -1,0 +1,34 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<scrollview width="100%" height="200">
+    <grid width="100%" id="UIPopupAddObjectTag_Grid">
+
+        <text text="Name" />
+        <textInput text=" " width="100%" id="UIPopupAddObjectTag_InputName" />
+
+        <text text="Tag Type" />
+        <listSelector text=" " width="100%" id="UIPopupAddObjectTag_SelectTagType">
+            <array>
+                
+                ADJ,
+                ADV,
+                NOUN_ALIVE_ABSTRACT,
+                NOUN_ALIVE_CONCRETE,
+                NOUN_INANIMATE_HOLD_ABSTRACT,
+                NOUN_INANIMATE_HOLD_CONCRETE,
+                NOUN_INANIMATE_PLACE_ABSTRACT,
+                NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER,
+                NOUN_INANIMATE_PLACE_CONCRETE_OWNER,
+                NOUN_INANIMATE_SEE_ABSTRACT,
+                NOUN_INANIMATE_SEE_CONCRETE,
+                NOUN_INANIMATE_TITLE,
+                NOUN_INANIMATE_WEAR_ABSTRACT,
+                NOUN_INANIMATE_WEAR_CONCRETE,
+                VERB_INTRANSITIVE,
+                VERB_TRANSITIVE
+
+            </array>
+        </listSelector>
+
+    </grid>
+</scrollview>

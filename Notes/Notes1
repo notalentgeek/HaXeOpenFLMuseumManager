@@ -1,0 +1,21 @@
+Only these two need to be premade.
+TagName -> TextInput
+TagType -> ListSelector
+
+The rest of the GUI components need to created using code.
+ADJ -> TextInput
+ADV -> TextInput
+NOUN_ALIVE_ABSTRACT -> TextInput
+NOUN_ALIVE_CONCRETE -> TextInput
+NOUN_INANIMATE_HOLD_ABSTRACT -> TextInput
+NOUN_INANIMATE_HOLD_CONCRETE -> TextInput
+NOUN_INANIMATE_PLACE_ABSTRACT -> TextInput
+NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER -> TextInput
+NOUN_INANIMATE_PLACE_CONCRETE_OWNER -> TextInput
+NOUN_INANIMATE_SEE_ABSTRACT -> TextInput
+NOUN_INANIMATE_SEE_CONCRETE -> TextInput
+NOUN_INANIMATE_TITLE -> TextInput
+NOUN_INANIMATE_WEAR_ABSTRACT -> TextInput
+NOUN_INANIMATE_WEAR_CONCRETE -> TextInput
+VERB_INTRANSITIVE -> TextInput
+VERB_TRANSITIVE -> TextInput

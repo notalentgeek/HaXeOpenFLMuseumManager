@@ -40,6 +40,10 @@ typedef StructVisitorVisitExhibition = {
     currentExhibitionTimeInt        :Int,
     exhibitionNameAltString         :String
 };
+typedef StructTextInputTag = {
+    textInputObject                 :TextInput,
+    textObject                      :Text
+};
 /*PENDING:This thing have not yet done to be processed in the player class.*/
 typedef StructVisitorVisitMuseum = {
     currentVisitTimeInt             :Int,

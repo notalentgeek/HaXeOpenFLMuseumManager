@@ -491,7 +491,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "1216",
+			build: "1262",
 			company: "Company Name",
 			file: "HaXeOpenFLMuseumManager",
 			fps: 60,
