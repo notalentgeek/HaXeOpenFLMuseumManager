@@ -109,11 +109,11 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectTag_obj : public hx::Object{
 		virtual ::ObjectTag SetAdverbStringObject( ::String _adverbString);
 		Dynamic SetAdverbStringObject_dyn();
 
-		virtual Void SetFeelEnumVoid( ::EnumTagFeelType _feelEnum);
-		Dynamic SetFeelEnumVoid_dyn();
+		virtual ::ObjectTag SetFeelEnumObject( ::EnumTagFeelType _feelEnum);
+		Dynamic SetFeelEnumObject_dyn();
 
-		virtual Void SetGeneralTagBoolVoid( bool _generalTagBool);
-		Dynamic SetGeneralTagBoolVoid_dyn();
+		virtual ::ObjectTag SetGeneralTagBoolObject( bool _generalTagBool);
+		Dynamic SetGeneralTagBoolObject_dyn();
 
 		virtual ::ObjectTag SetNameStringObject( ::String _nameString);
 		Dynamic SetNameStringObject_dyn();

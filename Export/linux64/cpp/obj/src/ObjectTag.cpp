@@ -391,43 +391,41 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetAdjectiveStringObject,return )
 
 HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetAdverbStringObject,return )
 
-Void ObjectTag_obj::SetFeelEnumVoid( ::EnumTagFeelType _feelEnum){
-{
-		HX_STACK_FRAME("ObjectTag","SetFeelEnumVoid",0xe72e596a,"ObjectTag.SetFeelEnumVoid","ObjectTag.hx",67,0x2198b4e3)
-		HX_STACK_THIS(this)
-		HX_STACK_ARG(_feelEnum,"_feelEnum")
-		HX_STACK_LINE(67)
-		this->feelEnum = _feelEnum;
-	}
-return null();
+::ObjectTag ObjectTag_obj::SetFeelEnumObject( ::EnumTagFeelType _feelEnum){
+	HX_STACK_FRAME("ObjectTag","SetFeelEnumObject",0x8a7c4655,"ObjectTag.SetFeelEnumObject","ObjectTag.hx",67,0x2198b4e3)
+	HX_STACK_THIS(this)
+	HX_STACK_ARG(_feelEnum,"_feelEnum")
+	HX_STACK_LINE(67)
+	this->feelEnum = _feelEnum;
+	HX_STACK_LINE(67)
+	return hx::ObjectPtr<OBJ_>(this);
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetFeelEnumVoid,(void))
+HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetFeelEnumObject,return )
 
-Void ObjectTag_obj::SetGeneralTagBoolVoid( bool _generalTagBool){
-{
-		HX_STACK_FRAME("ObjectTag","SetGeneralTagBoolVoid",0xfcc174ff,"ObjectTag.SetGeneralTagBoolVoid","ObjectTag.hx",68,0x2198b4e3)
-		HX_STACK_THIS(this)
-		HX_STACK_ARG(_generalTagBool,"_generalTagBool")
-		HX_STACK_LINE(69)
-		this->generalTagBool = _generalTagBool;
-		HX_STACK_LINE(70)
-		this->AddToArrayVoid();
-	}
-return null();
+::ObjectTag ObjectTag_obj::SetGeneralTagBoolObject( bool _generalTagBool){
+	HX_STACK_FRAME("ObjectTag","SetGeneralTagBoolObject",0x7fbd312a,"ObjectTag.SetGeneralTagBoolObject","ObjectTag.hx",68,0x2198b4e3)
+	HX_STACK_THIS(this)
+	HX_STACK_ARG(_generalTagBool,"_generalTagBool")
+	HX_STACK_LINE(69)
+	this->generalTagBool = _generalTagBool;
+	HX_STACK_LINE(70)
+	this->AddToArrayVoid();
+	HX_STACK_LINE(71)
+	return hx::ObjectPtr<OBJ_>(this);
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetGeneralTagBoolVoid,(void))
+HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetGeneralTagBoolObject,return )
 
 ::ObjectTag ObjectTag_obj::SetNameStringObject( ::String _nameString){
-	HX_STACK_FRAME("ObjectTag","SetNameStringObject",0xb663cdca,"ObjectTag.SetNameStringObject","ObjectTag.hx",72,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","SetNameStringObject",0xb663cdca,"ObjectTag.SetNameStringObject","ObjectTag.hx",73,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_nameString,"_nameString")
-	HX_STACK_LINE(72)
+	HX_STACK_LINE(73)
 	this->nameString = _nameString;
-	HX_STACK_LINE(72)
+	HX_STACK_LINE(73)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -435,12 +433,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetGeneralTagBoolVoid,(void))
 HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetNameStringObject,return )
 
 ::ObjectTag ObjectTag_obj::SetNounPosStringObject( ::String _nounPosString){
-	HX_STACK_FRAME("ObjectTag","SetNounPosStringObject",0xdd79ad5b,"ObjectTag.SetNounPosStringObject","ObjectTag.hx",73,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","SetNounPosStringObject",0xdd79ad5b,"ObjectTag.SetNounPosStringObject","ObjectTag.hx",74,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_nounPosString,"_nounPosString")
-	HX_STACK_LINE(73)
+	HX_STACK_LINE(74)
 	this->nounPosString = _nounPosString;
-	HX_STACK_LINE(73)
+	HX_STACK_LINE(74)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -448,12 +446,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetNameStringObject,return )
 HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetNounPosStringObject,return )
 
 ::ObjectTag ObjectTag_obj::SetNounSPosStringObject( ::String _nounSPosString){
-	HX_STACK_FRAME("ObjectTag","SetNounSPosStringObject",0x571eafda,"ObjectTag.SetNounSPosStringObject","ObjectTag.hx",74,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","SetNounSPosStringObject",0x571eafda,"ObjectTag.SetNounSPosStringObject","ObjectTag.hx",75,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_nounSPosString,"_nounSPosString")
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(75)
 	this->nounSPosString = _nounSPosString;
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(75)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -461,12 +459,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetNounPosStringObject,return )
 HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetNounSPosStringObject,return )
 
 ::ObjectTag ObjectTag_obj::SetNounSStringObject( ::String _nounSString){
-	HX_STACK_FRAME("ObjectTag","SetNounSStringObject",0xb73596fa,"ObjectTag.SetNounSStringObject","ObjectTag.hx",75,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","SetNounSStringObject",0xb73596fa,"ObjectTag.SetNounSStringObject","ObjectTag.hx",76,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_nounSString,"_nounSString")
-	HX_STACK_LINE(75)
+	HX_STACK_LINE(76)
 	this->nounSString = _nounSString;
-	HX_STACK_LINE(75)
+	HX_STACK_LINE(76)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -474,12 +472,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetNounSPosStringObject,return )
 HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetNounSStringObject,return )
 
 ::ObjectTag ObjectTag_obj::SetNounStringObject( ::String _nounString){
-	HX_STACK_FRAME("ObjectTag","SetNounStringObject",0x65558ed9,"ObjectTag.SetNounStringObject","ObjectTag.hx",76,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","SetNounStringObject",0x65558ed9,"ObjectTag.SetNounStringObject","ObjectTag.hx",77,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_nounString,"_nounString")
-	HX_STACK_LINE(76)
+	HX_STACK_LINE(77)
 	this->nounString = _nounString;
-	HX_STACK_LINE(76)
+	HX_STACK_LINE(77)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -488,10 +486,10 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetNounStringObject,return )
 
 Void ObjectTag_obj::SetTypeEnumVoid( ::EnumTagType _typeEnum){
 {
-		HX_STACK_FRAME("ObjectTag","SetTypeEnumVoid",0x0fa000be,"ObjectTag.SetTypeEnumVoid","ObjectTag.hx",77,0x2198b4e3)
+		HX_STACK_FRAME("ObjectTag","SetTypeEnumVoid",0x0fa000be,"ObjectTag.SetTypeEnumVoid","ObjectTag.hx",78,0x2198b4e3)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_typeEnum,"_typeEnum")
-		HX_STACK_LINE(77)
+		HX_STACK_LINE(78)
 		this->typeEnum = _typeEnum;
 	}
 return null();
@@ -501,12 +499,12 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetTypeEnumVoid,(void))
 
 ::ObjectTag ObjectTag_obj::SetVerb1StringObject( ::String _verb1String){
-	HX_STACK_FRAME("ObjectTag","SetVerb1StringObject",0xe44f18f3,"ObjectTag.SetVerb1StringObject","ObjectTag.hx",78,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","SetVerb1StringObject",0xe44f18f3,"ObjectTag.SetVerb1StringObject","ObjectTag.hx",79,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_verb1String,"_verb1String")
-	HX_STACK_LINE(78)
+	HX_STACK_LINE(79)
 	this->verb1String = _verb1String;
-	HX_STACK_LINE(78)
+	HX_STACK_LINE(79)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -514,12 +512,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetTypeEnumVoid,(void))
 HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetVerb1StringObject,return )
 
 ::ObjectTag ObjectTag_obj::SetVerb2StringObject( ::String _verb2String){
-	HX_STACK_FRAME("ObjectTag","SetVerb2StringObject",0x2a0f9674,"ObjectTag.SetVerb2StringObject","ObjectTag.hx",79,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","SetVerb2StringObject",0x2a0f9674,"ObjectTag.SetVerb2StringObject","ObjectTag.hx",80,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_verb2String,"_verb2String")
-	HX_STACK_LINE(79)
+	HX_STACK_LINE(80)
 	this->verb2String = _verb2String;
-	HX_STACK_LINE(79)
+	HX_STACK_LINE(80)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -527,12 +525,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetVerb1StringObject,return )
 HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetVerb2StringObject,return )
 
 ::ObjectTag ObjectTag_obj::SetVerb3StringObject( ::String _verb3String){
-	HX_STACK_FRAME("ObjectTag","SetVerb3StringObject",0x6fd013f5,"ObjectTag.SetVerb3StringObject","ObjectTag.hx",80,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","SetVerb3StringObject",0x6fd013f5,"ObjectTag.SetVerb3StringObject","ObjectTag.hx",81,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_verb3String,"_verb3String")
-	HX_STACK_LINE(80)
+	HX_STACK_LINE(81)
 	this->verb3String = _verb3String;
-	HX_STACK_LINE(80)
+	HX_STACK_LINE(81)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -540,12 +538,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetVerb2StringObject,return )
 HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetVerb3StringObject,return )
 
 ::ObjectTag ObjectTag_obj::SetVerbIngStringObject( ::String _verbIngString){
-	HX_STACK_FRAME("ObjectTag","SetVerbIngStringObject",0x54490384,"ObjectTag.SetVerbIngStringObject","ObjectTag.hx",81,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","SetVerbIngStringObject",0x54490384,"ObjectTag.SetVerbIngStringObject","ObjectTag.hx",82,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_verbIngString,"_verbIngString")
-	HX_STACK_LINE(81)
+	HX_STACK_LINE(82)
 	this->verbIngString = _verbIngString;
-	HX_STACK_LINE(81)
+	HX_STACK_LINE(82)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -553,12 +551,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetVerb3StringObject,return )
 HX_DEFINE_DYNAMIC_FUNC1(ObjectTag_obj,SetVerbIngStringObject,return )
 
 ::ObjectTag ObjectTag_obj::SetVerbSStringObject( ::String _verbSString){
-	HX_STACK_FRAME("ObjectTag","SetVerbSStringObject",0x27dfc415,"ObjectTag.SetVerbSStringObject","ObjectTag.hx",82,0x2198b4e3)
+	HX_STACK_FRAME("ObjectTag","SetVerbSStringObject",0x27dfc415,"ObjectTag.SetVerbSStringObject","ObjectTag.hx",83,0x2198b4e3)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_verbSString,"_verbSString")
-	HX_STACK_LINE(82)
+	HX_STACK_LINE(83)
 	this->verbSString = _verbSString;
-	HX_STACK_LINE(82)
+	HX_STACK_LINE(83)
 	return hx::ObjectPtr<OBJ_>(this);
 }
 
@@ -655,7 +653,6 @@ Dynamic ObjectTag_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 		if (HX_FIELD_EQ(inName,"adjectiveString") ) { return adjectiveString; }
 		if (HX_FIELD_EQ(inName,"GetAdverbString") ) { return GetAdverbString_dyn(); }
 		if (HX_FIELD_EQ(inName,"RemoveFromArray") ) { return RemoveFromArray_dyn(); }
-		if (HX_FIELD_EQ(inName,"SetFeelEnumVoid") ) { return SetFeelEnumVoid_dyn(); }
 		if (HX_FIELD_EQ(inName,"SetTypeEnumVoid") ) { return SetTypeEnumVoid_dyn(); }
 		break;
 	case 16:
@@ -665,6 +662,7 @@ Dynamic ObjectTag_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 	case 17:
 		if (HX_FIELD_EQ(inName,"GetGeneralTagBool") ) { return GetGeneralTagBool_dyn(); }
 		if (HX_FIELD_EQ(inName,"GetNounSPosString") ) { return GetNounSPosString_dyn(); }
+		if (HX_FIELD_EQ(inName,"SetFeelEnumObject") ) { return SetFeelEnumObject_dyn(); }
 		break;
 	case 18:
 		if (HX_FIELD_EQ(inName,"GetAdjectiveString") ) { return GetAdjectiveString_dyn(); }
@@ -682,7 +680,6 @@ Dynamic ObjectTag_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 		break;
 	case 21:
 		if (HX_FIELD_EQ(inName,"SetAdverbStringObject") ) { return SetAdverbStringObject_dyn(); }
-		if (HX_FIELD_EQ(inName,"SetGeneralTagBoolVoid") ) { return SetGeneralTagBoolVoid_dyn(); }
 		break;
 	case 22:
 		if (HX_FIELD_EQ(inName,"collectionGlobalObject") ) { return collectionGlobalObject; }
@@ -690,6 +687,7 @@ Dynamic ObjectTag_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 		if (HX_FIELD_EQ(inName,"SetVerbIngStringObject") ) { return SetVerbIngStringObject_dyn(); }
 		break;
 	case 23:
+		if (HX_FIELD_EQ(inName,"SetGeneralTagBoolObject") ) { return SetGeneralTagBoolObject_dyn(); }
 		if (HX_FIELD_EQ(inName,"SetNounSPosStringObject") ) { return SetNounSPosStringObject_dyn(); }
 		break;
 	case 24:
@@ -821,8 +819,8 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("RemoveFromArray","\xcb","\xfa","\xc2","\x7b"),
 	HX_HCSTRING("SetAdjectiveStringObject","\xd7","\x31","\xbe","\x0a"),
 	HX_HCSTRING("SetAdverbStringObject","\xb4","\x8c","\xd4","\x0d"),
-	HX_HCSTRING("SetFeelEnumVoid","\x1d","\x9b","\xee","\x70"),
-	HX_HCSTRING("SetGeneralTagBoolVoid","\xf2","\x7e","\x2a","\x5d"),
+	HX_HCSTRING("SetFeelEnumObject","\xc8","\x9a","\x16","\x36"),
+	HX_HCSTRING("SetGeneralTagBoolObject","\xdd","\xdd","\xf2","\x93"),
 	HX_HCSTRING("SetNameStringObject","\xfd","\x64","\x92","\x3c"),
 	HX_HCSTRING("SetNounPosStringObject","\x08","\x58","\xf9","\xd8"),
 	HX_HCSTRING("SetNounSPosStringObject","\x8d","\x5c","\x54","\x6b"),

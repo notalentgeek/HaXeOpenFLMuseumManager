@@ -54,6 +54,8 @@ class UIPopupAddObjectTag{
     private var inputVerbSTextInputObject           :TextInput                  = null;
     private var inputVerbSTextObject                :Text                       = null;
     private var popupObject                         :Popup                      = null;
+    private var selectFeelListSelectorObject        :ListSelector               = null;
+    private var selectGeneralListSelectorObject     :ListSelector               = null;
     private var selectTagTypeListSelectorObject     :ListSelector               = null;
     private var selectTagTypeListSelectorPrevString :String                     = "";
     private var selectTagTypeListSelectorString     :String                     = "";
@@ -74,10 +76,121 @@ class UIPopupAddObjectTag{
             buttonControlInt |= PopupButton.CANCEL;
 
             var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupAddObjectTag.xml");
-            popupObject = PopupManager.instance.showCustom(iDisplayObject, "Add Visitor", buttonControlInt, function(_button){});
+            popupObject = PopupManager.instance.showCustom(iDisplayObject, "Add Tag", buttonControlInt, function(_button){
+
+                /*You can actually have this done with checking the component of a Popup controller.
+                If a popup controller/component returns null then the popup is not active.*/
+                if(_button == PopupButton.OK){
+
+                    var feelEnum            :EnumTagFeelType    = null;
+                    var feelString          :String             = selectFeelListSelectorObject.text;
+                    var generalBool         :Bool               = false;
+                    var generalString       :String             = selectGeneralListSelectorObject.text;
+                    if     (feelString == "POSITIVE"){ feelEnum = POSITIVE; }
+                    else if(feelString == "NEUTRAL" ){ feelEnum = NEUTRAL ; }
+                    else if(feelString == "NEGATIVE"){ feelEnum = NEGATIVE; }
+                    if     (generalString == "Yes"){ generalBool = true ; }
+                    else if(generalString == "No" ){ generalBool = false; }
+                    var tagObject:ObjectTag = new ObjectTag(
+                        collectionGlobalObject,
+                        feelEnum,
+                        generalBool,
+                        inputTagNameTextInputObject.text,
+                        Type.createEnum(
+                            EnumTagType,
+                            selectTagTypeListSelectorObject.text
+                        )
+                    );
+                    if(selectTagTypeListSelectorObject.text == "ADJ"){
+                        tagObject
+                            .SetAdjectiveStringObject   (inputAdjTextInputObject        .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "ADV"){
+                        tagObject
+                            .SetAdverbStringObject      (inputAdvTextInputObject        .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_ABSTRACT"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text)
+                            .SetNounPosStringObject     (inputNounPosTextInputObject    .text)
+                            .SetNounSStringObject       (inputNounSTextInputObject      .text)
+                            .SetNounSPosStringObject    (inputNounSPosTextInputObject   .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_CONCRETE"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text)
+                            .SetNounPosStringObject     (inputNounPosTextInputObject    .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_ABSTRACT"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text)
+                            .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_CONCRETE"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text)
+                            .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_ABSTRACT"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text)
+                            .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"){
+                        tagObject.SetNounStringObject(inputNounTextInputObject.text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_OWNER"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text)
+                            .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_ABSTRACT"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_CONCRETE"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_TITLE"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text)
+                            .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_ABSTRACT"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_CONCRETE"){
+                        tagObject
+                            .SetNounStringObject        (inputNounTextInputObject       .text)
+                            .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "VERB_INTRANSITIVE"){
+                        tagObject
+                            .SetVerb1StringObject       (inputVerb1TextInputObject      .text)
+                            .SetVerb2StringObject       (inputVerb2TextInputObject      .text)
+                            .SetVerb3StringObject       (inputVerb3TextInputObject      .text)
+                            .SetVerbIngStringObject     (inputVerbIngTextInputObject    .text)
+                            .SetVerbSStringObject       (inputVerbSTextInputObject      .text);
+                    }
+                    else if(selectTagTypeListSelectorObject.text == "VERB_TRANSITIVE"){
+                        tagObject
+                            .SetVerb1StringObject       (inputVerb1TextInputObject      .text)
+                            .SetVerb2StringObject       (inputVerb2TextInputObject      .text)
+                            .SetVerb3StringObject       (inputVerb3TextInputObject      .text)
+                            .SetVerbIngStringObject     (inputVerbIngTextInputObject    .text)
+                            .SetVerbSStringObject       (inputVerbSTextInputObject      .text);
+                    }
+
+                }
+
+            });
 
             gridObject                                  = popupObject.content.findChild("UIPopupAddObjectTag_Grid"              , Grid          , true);
             inputTagNameTextInputObject                 = popupObject.content.findChild("UIPopupAddObjectTag_InputName"         , TextInput     , true);
+            selectFeelListSelectorObject                = popupObject.content.findChild("UIPopupAddObjectTag_SelectFeel"        , ListSelector  , true);
+            selectGeneralListSelectorObject             = popupObject.content.findChild("UIPopupAddObjectTag_SelectGeneral"     , ListSelector  , true);
             selectTagTypeListSelectorObject             = popupObject.content.findChild("UIPopupAddObjectTag_SelectTagType"     , ListSelector  , true);
             selectTagTypeListSelectorObject.method      = "default";
 
@@ -113,7 +226,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputAdjTextObject);
                     gridObject.addChild(inputAdjTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "ADV"){
+                else if(selectTagTypeListSelectorObject.text == "ADV"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputAdvTextObject,
                         textInputObject :inputAdvTextInputObject
@@ -122,7 +235,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputAdvTextObject);
                     gridObject.addChild(inputAdvTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_ABSTRACT"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_ABSTRACT"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -152,7 +265,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSPosTextObject);
                     gridObject.addChild(inputNounSPosTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_CONCRETE"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_CONCRETE"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -168,7 +281,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounPosTextObject);
                     gridObject.addChild(inputNounPosTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_ABSTRACT"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_ABSTRACT"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -184,7 +297,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextObject);
                     gridObject.addChild(inputNounSTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_CONCRETE"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_CONCRETE"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -200,7 +313,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextObject);
                     gridObject.addChild(inputNounSTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_ABSTRACT"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_ABSTRACT"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -216,7 +329,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextObject);
                     gridObject.addChild(inputNounSTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -225,7 +338,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounTextObject);
                     gridObject.addChild(inputNounTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_OWNER"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_OWNER"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -241,7 +354,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextObject);
                     gridObject.addChild(inputNounSTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_ABSTRACT"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_ABSTRACT"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -250,7 +363,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounTextObject);
                     gridObject.addChild(inputNounTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_CONCRETE"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_CONCRETE"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -259,7 +372,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounTextObject);
                     gridObject.addChild(inputNounTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_TITLE"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_TITLE"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject,
@@ -275,7 +388,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextObject);
                     gridObject.addChild(inputNounSTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_ABSTRACT"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_ABSTRACT"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -284,7 +397,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounTextObject);
                     gridObject.addChild(inputNounTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_CONCRETE"){
+                else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_CONCRETE"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
@@ -300,7 +413,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextObject);
                     gridObject.addChild(inputNounSTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "VERB_INTRANSITIVE"){
+                else if(selectTagTypeListSelectorObject.text == "VERB_INTRANSITIVE"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputVerb1TextObject,
                         textInputObject :inputVerb1TextInputObject
@@ -337,7 +450,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputVerbSTextObject);
                     gridObject.addChild(inputVerbSTextInputObject);
                 }
-                if(selectTagTypeListSelectorObject.text == "VERB_TRANSITIVE"){
+                else if(selectTagTypeListSelectorObject.text == "VERB_TRANSITIVE"){
                     var textInputStruct:StructTextInputTag = {
                         textObject      :inputVerb1TextObject,
                         textInputObject :inputVerb1TextInputObject
@@ -381,9 +494,13 @@ class UIPopupAddObjectTag{
 
         }
 
+
+
     }
 
     private function CreateGUIObjectVoid(){
+
+        
 
         inputAdjTextInputObject                     = new TextInput();
         inputAdjTextInputObject.id                  = "UIPopupAddObjectTag_InputAdj";
@@ -453,5 +570,7 @@ class UIPopupAddObjectTag{
         inputVerbSTextObject.text                   = "Verb + S";
 
     }
+
+
 
 }

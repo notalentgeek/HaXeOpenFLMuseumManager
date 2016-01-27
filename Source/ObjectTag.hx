@@ -64,10 +64,11 @@ class ObjectTag{
     }
     public function SetAdjectiveStringObject(_adjectiveString:String){ adjectiveString = _adjectiveString; return this; }
     public function SetAdverbStringObject(_adverbString:String){ adverbString = _adverbString; return this; }
-    public function SetFeelEnumVoid(_feelEnum:EnumTagFeelType){ feelEnum = _feelEnum; }
-    public function SetGeneralTagBoolVoid(_generalTagBool:Bool){
+    public function SetFeelEnumObject(_feelEnum:EnumTagFeelType){ feelEnum = _feelEnum; return this; }
+    public function SetGeneralTagBoolObject(_generalTagBool:Bool){
         generalTagBool = _generalTagBool;
         AddToArrayVoid();
+        return this;
     }
     public function SetNameStringObject(_nameString:String){ nameString = _nameString; return this; }
     public function SetNounPosStringObject(_nounPosString:String){ nounPosString = _nounPosString; return this; }

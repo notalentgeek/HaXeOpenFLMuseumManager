@@ -14,6 +14,7 @@ HX_DECLARE_CLASS0(UIPopupAddObjectMuseum)
 HX_DECLARE_CLASS0(UIPopupAddObjectTag)
 HX_DECLARE_CLASS0(UIPopupAddObjectVisitor)
 HX_DECLARE_CLASS0(UIPopupEditObjectMuseum)
+HX_DECLARE_CLASS0(UIPopupEditObjectTag)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectMuseum)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectTag)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectVisitor)
@@ -58,6 +59,7 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::openfl::_legacy::display::Spri
 		::UIPopupAddObjectTag uiPopupAddTagObject;
 		::UIPopupAddObjectVisitor uiPopupAddVisitorObject;
 		::UIPopupEditObjectMuseum uiPopupEditMuseumObject;
+		::UIPopupEditObjectTag uiPopupEditTagObject;
 		::UIPopupRemoveObjectMuseum uiPopupRemoveMuseumObject;
 		::UIPopupRemoveObjectTag uiPopupRemoveTagObject;
 		::UIPopupRemoveObjectVisitor uiPopupRemoveVisitorObject;

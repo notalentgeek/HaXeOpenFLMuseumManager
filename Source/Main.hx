@@ -36,6 +36,7 @@ class Main extends Sprite{
     var uiPopupAddTagObject             :UIPopupAddObjectTag            = null;
     var uiPopupAddVisitorObject         :UIPopupAddObjectVisitor        = null;
     var uiPopupEditMuseumObject         :UIPopupEditObjectMuseum        = null;
+    var uiPopupEditTagObject            :UIPopupEditObjectTag           = null;
     var uiPopupRemoveMuseumObject       :UIPopupRemoveObjectMuseum      = null;
     var uiPopupRemoveTagObject          :UIPopupRemoveObjectTag         = null;
     var uiPopupRemoveVisitorObject      :UIPopupRemoveObjectVisitor     = null;
@@ -59,6 +60,7 @@ class Main extends Sprite{
             uiPopupAddTagObject         = new UIPopupAddObjectTag           (collectionGlobalObject, _root);
             uiPopupAddVisitorObject     = new UIPopupAddObjectVisitor       (collectionGlobalObject, _root);
             uiPopupEditMuseumObject     = new UIPopupEditObjectMuseum       (collectionGlobalObject, _root);
+            uiPopupEditTagObject        = new UIPopupEditObjectTag          (collectionGlobalObject, _root);
             uiPopupRemoveMuseumObject   = new UIPopupRemoveObjectMuseum     (collectionGlobalObject, _root);
             uiPopupRemoveTagObject      = new UIPopupRemoveObjectTag        (collectionGlobalObject, _root);
             uiPopupRemoveVisitorObject  = new UIPopupRemoveObjectVisitor    (collectionGlobalObject, _root);
@@ -89,6 +91,7 @@ class Main extends Sprite{
         uiPopupAddTagObject             .UpdateVoid();
         uiPopupAddVisitorObject         .UpdateVoid();
         uiPopupEditMuseumObject         .UpdateVoid();
+        uiPopupEditTagObject            .UpdateVoid();
         uiPopupRemoveMuseumObject       .UpdateVoid();
         uiPopupRemoveTagObject          .UpdateVoid();
         uiPopupRemoveVisitorObject      .UpdateVoid();
