@@ -430,6 +430,7 @@
 "obj/linux64/57588eaa_UIPopupRemoveObjectVisitor.o"
 "obj/linux64/57588eaa_UIPopupRemoveObjectTag.o"
 "obj/linux64/57588eaa_UIPopupRemoveObjectMuseum.o"
+"obj/linux64/57588eaa_UIPopupEditObjectVisitor.o"
 "obj/linux64/57588eaa_UIPopupEditObjectTag.o"
 "obj/linux64/57588eaa_UIPopupEditObjectMuseum.o"
 "obj/linux64/57588eaa_UIPopupAddObjectVisitor.o"

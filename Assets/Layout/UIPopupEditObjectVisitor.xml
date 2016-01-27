@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<scrollview height="200" width="100%" >
+    <grid width="100%" id="UIPopupEditObjectVisitor_Grid" >
+
+
+
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+        <text text="Visitor" />
+        <listSelector id="UIPopupEditObjectVisitor_SelectVisitor" text=" " width="100%">
+        </listSelector>
+
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+
+        <!--##################################################-->
+
+        <text text="Current Exhibition" />
+        <listSelector disabled="true" id="UIPopupEditObjectVisitor_SelectCurrentExhibition" text=" " width="100%" >
+        </listSelector>
+
+        <!--##################################################-->
+
+        <text text="Explanation" />
+        <scrollview height="200" width="100%" >
+            <text disabled="true" id="UIPopupEditObjectVisitor_DisplayExplanation" multiline="true" text=" " width="100%" wrapLines="true" />
+        </scrollview>
+
+        <!--##################################################-->
+
+        <text text="Mode" />
+        <listSelector disabled="true" id="UIPopupEditObjectVisitor_SelectMode" text=" " width="100%" >
+            <array>
+                Hardware Manual,
+                Software Auto,
+                Software Manual,
+            </array>
+        </listSelector>
+
+        <!--##################################################-->
+
+        <text text="Name" />
+        <textInput disabled="true" id="UIPopupEditObjectVisitor_InputName" text=" " width="100%" />
+
+        <!--##################################################-->
+
+        <text text="Previous Visitor" />
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPreviousVisitor" multiline="true" text=" " width="100%" wrapLines="true" />
+
+        <!--##################################################-->
+
+        <text text="Popular Tag" />
+        <scrollview height="200" width="100%" >
+            <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPopularTag" multiline="true" text=" " width="100%" wrapLines="true" />
+        </scrollview>
+
+        <!--##################################################-->
+
+        <text text="Reset" />
+        <button id="UIPopupEditObjectVisitor_ButtonReset" text="Reset" width="100%" />
+
+        <!--##################################################-->
+
+        <text text="Sentence" />
+        <scrollview height="200" width="100%" >
+            <text disabled="true" id="UIPopupEditObjectVisitor_DisplaySentence" multiline="true" text=" " width="100%" wrapLines="true" />
+        </scrollview>
+
+        <!--##################################################-->
+
+        <text text="Target Exhibition" />
+        <scrollview height="200" width="100%" >
+            <text disabled="true" id="UIPopupEditObjectVisitor_DisplayTargetExhibition" multiline="true" text=" " width="100%" wrapLines="true" />
+        </scrollview>
+
+        <!--##################################################-->
+
+        <text text="Visitor Index" />
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayVisitorIndex" multiline="true" text=" " width="100%" wrapLines="true" />
+
+        <!--##################################################-->
+
+    </grid>
+</scrollview>
