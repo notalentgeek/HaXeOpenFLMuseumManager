@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <scrollview height="200" width="100%" >
-    <grid width="100%" id="UIPopupEditObjectVisitor_Grid" >
+    <grid id="UIPopupEditObjectVisitor_Grid" width="100%" >
 
 
 
@@ -51,10 +51,16 @@
         <!--##################################################-->
 
         <text text="Popular Tag" />
+        <!--
         <scrollview height="200" width="100%" >
-            <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPopularTag" multiline="true" text=" " width="100%" wrapLines="true" />
+            <grid collumn="2" width="100%">
+                <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPopularTagObject" multiline="true" text=" " width="50%" wrapLines="false" />
+                <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPopularTagCounter" multiline="true" text=" " width="50%" wrapLines="false" />
+            </grid>
         </scrollview>
-
+        -->
+        <listSelector id="UIPopupEditObjectVisitor_DisplayPopularTag" text=" " width="100%" >
+        </listSelector>
         <!--##################################################-->
 
         <text text="Reset" />

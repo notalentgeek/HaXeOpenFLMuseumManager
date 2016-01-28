@@ -81,10 +81,36 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Memory_obj,select,(void))
 int Memory_obj::getByte( int addr){
 	HX_STACK_FRAME("openfl._legacy.Memory","getByte",0xeb6d0755,"openfl._legacy.Memory.getByte","openfl/_legacy/Memory.hx",217,0x38405097)
 	HX_STACK_ARG(addr,"addr")
+	HX_STACK_LINE(219)
+	bool tmp = (addr < (int)0);		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(219)
+	bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(219)
+	bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(219)
+	if ((tmp1)){
+		HX_STACK_LINE(219)
+		int tmp3 = addr;		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(219)
+		int tmp4 = ::openfl::_legacy::Memory_obj::len;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(219)
+		int tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(219)
+		tmp2 = (tmp3 >= tmp5);
+	}
+	else{
+		HX_STACK_LINE(219)
+		tmp2 = true;
+	}
+	HX_STACK_LINE(219)
+	if ((tmp2)){
+		HX_STACK_LINE(219)
+		HX_STACK_DO_THROW(HX_HCSTRING("Bad address","\x39","\xcc","\x35","\x3f"));
+	}
 	HX_STACK_LINE(220)
-	int tmp = ::__hxcpp_memory_get_byte(addr);		HX_STACK_VAR(tmp,"tmp");
+	int tmp3 = ::__hxcpp_memory_get_byte(addr);		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(220)
-	return tmp;
+	return tmp3;
 }
 
 
@@ -93,10 +119,36 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Memory_obj,getByte,return )
 Float Memory_obj::getDouble( int addr){
 	HX_STACK_FRAME("openfl._legacy.Memory","getDouble",0x7199809e,"openfl._legacy.Memory.getDouble","openfl/_legacy/Memory.hx",225,0x38405097)
 	HX_STACK_ARG(addr,"addr")
+	HX_STACK_LINE(227)
+	bool tmp = (addr < (int)0);		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(227)
+	bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(227)
+	bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(227)
+	if ((tmp1)){
+		HX_STACK_LINE(227)
+		int tmp3 = addr;		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(227)
+		int tmp4 = ::openfl::_legacy::Memory_obj::len;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(227)
+		int tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(227)
+		tmp2 = (tmp3 >= tmp5);
+	}
+	else{
+		HX_STACK_LINE(227)
+		tmp2 = true;
+	}
+	HX_STACK_LINE(227)
+	if ((tmp2)){
+		HX_STACK_LINE(227)
+		HX_STACK_DO_THROW(HX_HCSTRING("Bad address","\x39","\xcc","\x35","\x3f"));
+	}
 	HX_STACK_LINE(228)
-	Float tmp = ::__hxcpp_memory_get_double(addr);		HX_STACK_VAR(tmp,"tmp");
+	Float tmp3 = ::__hxcpp_memory_get_double(addr);		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(228)
-	return tmp;
+	return tmp3;
 }
 
 
@@ -105,10 +157,36 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Memory_obj,getDouble,return )
 Float Memory_obj::getFloat( int addr){
 	HX_STACK_FRAME("openfl._legacy.Memory","getFloat",0x58f820af,"openfl._legacy.Memory.getFloat","openfl/_legacy/Memory.hx",233,0x38405097)
 	HX_STACK_ARG(addr,"addr")
+	HX_STACK_LINE(235)
+	bool tmp = (addr < (int)0);		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(235)
+	bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(235)
+	bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(235)
+	if ((tmp1)){
+		HX_STACK_LINE(235)
+		int tmp3 = addr;		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(235)
+		int tmp4 = ::openfl::_legacy::Memory_obj::len;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(235)
+		int tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(235)
+		tmp2 = (tmp3 >= tmp5);
+	}
+	else{
+		HX_STACK_LINE(235)
+		tmp2 = true;
+	}
+	HX_STACK_LINE(235)
+	if ((tmp2)){
+		HX_STACK_LINE(235)
+		HX_STACK_DO_THROW(HX_HCSTRING("Bad address","\x39","\xcc","\x35","\x3f"));
+	}
 	HX_STACK_LINE(236)
-	Float tmp = ::__hxcpp_memory_get_float(addr);		HX_STACK_VAR(tmp,"tmp");
+	Float tmp3 = ::__hxcpp_memory_get_float(addr);		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(236)
-	return tmp;
+	return tmp3;
 }
 
 
@@ -117,10 +195,36 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Memory_obj,getFloat,return )
 int Memory_obj::getI32( int addr){
 	HX_STACK_FRAME("openfl._legacy.Memory","getI32",0x471a399b,"openfl._legacy.Memory.getI32","openfl/_legacy/Memory.hx",241,0x38405097)
 	HX_STACK_ARG(addr,"addr")
+	HX_STACK_LINE(243)
+	bool tmp = (addr < (int)0);		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(243)
+	bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(243)
+	bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(243)
+	if ((tmp1)){
+		HX_STACK_LINE(243)
+		int tmp3 = addr;		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(243)
+		int tmp4 = ::openfl::_legacy::Memory_obj::len;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(243)
+		int tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(243)
+		tmp2 = (tmp3 >= tmp5);
+	}
+	else{
+		HX_STACK_LINE(243)
+		tmp2 = true;
+	}
+	HX_STACK_LINE(243)
+	if ((tmp2)){
+		HX_STACK_LINE(243)
+		HX_STACK_DO_THROW(HX_HCSTRING("Bad address","\x39","\xcc","\x35","\x3f"));
+	}
 	HX_STACK_LINE(244)
-	int tmp = ::__hxcpp_memory_get_i32(addr);		HX_STACK_VAR(tmp,"tmp");
+	int tmp3 = ::__hxcpp_memory_get_i32(addr);		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(244)
-	return tmp;
+	return tmp3;
 }
 
 
@@ -129,10 +233,36 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Memory_obj,getI32,return )
 int Memory_obj::getUI16( int addr){
 	HX_STACK_FRAME("openfl._legacy.Memory","getUI16",0xf7d76e66,"openfl._legacy.Memory.getUI16","openfl/_legacy/Memory.hx",249,0x38405097)
 	HX_STACK_ARG(addr,"addr")
+	HX_STACK_LINE(251)
+	bool tmp = (addr < (int)0);		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(251)
+	bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(251)
+	bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(251)
+	if ((tmp1)){
+		HX_STACK_LINE(251)
+		int tmp3 = addr;		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(251)
+		int tmp4 = ::openfl::_legacy::Memory_obj::len;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(251)
+		int tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(251)
+		tmp2 = (tmp3 >= tmp5);
+	}
+	else{
+		HX_STACK_LINE(251)
+		tmp2 = true;
+	}
+	HX_STACK_LINE(251)
+	if ((tmp2)){
+		HX_STACK_LINE(251)
+		HX_STACK_DO_THROW(HX_HCSTRING("Bad address","\x39","\xcc","\x35","\x3f"));
+	}
 	HX_STACK_LINE(252)
-	int tmp = ::__hxcpp_memory_get_ui16(addr);		HX_STACK_VAR(tmp,"tmp");
+	int tmp3 = ::__hxcpp_memory_get_ui16(addr);		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(252)
-	return tmp;
+	return tmp3;
 }
 
 
@@ -140,9 +270,35 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Memory_obj,getUI16,return )
 
 Void Memory_obj::setByte( int addr,int v){
 {
-		HX_STACK_FRAME("openfl._legacy.Memory","setByte",0xde6e9861,"openfl._legacy.Memory.setByte","openfl/_legacy/Memory.hx",260,0x38405097)
+		HX_STACK_FRAME("openfl._legacy.Memory","setByte",0xde6e9861,"openfl._legacy.Memory.setByte","openfl/_legacy/Memory.hx",257,0x38405097)
 		HX_STACK_ARG(addr,"addr")
 		HX_STACK_ARG(v,"v")
+		HX_STACK_LINE(259)
+		bool tmp = (addr < (int)0);		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(259)
+		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(259)
+		bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(259)
+		if ((tmp1)){
+			HX_STACK_LINE(259)
+			int tmp3 = addr;		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(259)
+			int tmp4 = ::openfl::_legacy::Memory_obj::len;		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(259)
+			int tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(259)
+			tmp2 = (tmp3 >= tmp5);
+		}
+		else{
+			HX_STACK_LINE(259)
+			tmp2 = true;
+		}
+		HX_STACK_LINE(259)
+		if ((tmp2)){
+			HX_STACK_LINE(259)
+			HX_STACK_DO_THROW(HX_HCSTRING("Bad address","\x39","\xcc","\x35","\x3f"));
+		}
 		HX_STACK_LINE(260)
 		::__hxcpp_memory_set_byte(addr,v);
 	}
@@ -154,9 +310,35 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Memory_obj,setByte,(void))
 
 Void Memory_obj::setDouble( int addr,Float v){
 {
-		HX_STACK_FRAME("openfl._legacy.Memory","setDouble",0x54ea6caa,"openfl._legacy.Memory.setDouble","openfl/_legacy/Memory.hx",268,0x38405097)
+		HX_STACK_FRAME("openfl._legacy.Memory","setDouble",0x54ea6caa,"openfl._legacy.Memory.setDouble","openfl/_legacy/Memory.hx",265,0x38405097)
 		HX_STACK_ARG(addr,"addr")
 		HX_STACK_ARG(v,"v")
+		HX_STACK_LINE(267)
+		bool tmp = (addr < (int)0);		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(267)
+		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(267)
+		bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(267)
+		if ((tmp1)){
+			HX_STACK_LINE(267)
+			int tmp3 = addr;		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(267)
+			int tmp4 = ::openfl::_legacy::Memory_obj::len;		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(267)
+			int tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(267)
+			tmp2 = (tmp3 >= tmp5);
+		}
+		else{
+			HX_STACK_LINE(267)
+			tmp2 = true;
+		}
+		HX_STACK_LINE(267)
+		if ((tmp2)){
+			HX_STACK_LINE(267)
+			HX_STACK_DO_THROW(HX_HCSTRING("Bad address","\x39","\xcc","\x35","\x3f"));
+		}
 		HX_STACK_LINE(268)
 		::__hxcpp_memory_set_double(addr,v);
 	}
@@ -168,9 +350,35 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Memory_obj,setDouble,(void))
 
 Void Memory_obj::setFloat( int addr,Float v){
 {
-		HX_STACK_FRAME("openfl._legacy.Memory","setFloat",0x07557a23,"openfl._legacy.Memory.setFloat","openfl/_legacy/Memory.hx",276,0x38405097)
+		HX_STACK_FRAME("openfl._legacy.Memory","setFloat",0x07557a23,"openfl._legacy.Memory.setFloat","openfl/_legacy/Memory.hx",273,0x38405097)
 		HX_STACK_ARG(addr,"addr")
 		HX_STACK_ARG(v,"v")
+		HX_STACK_LINE(275)
+		bool tmp = (addr < (int)0);		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(275)
+		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(275)
+		bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(275)
+		if ((tmp1)){
+			HX_STACK_LINE(275)
+			int tmp3 = addr;		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(275)
+			int tmp4 = ::openfl::_legacy::Memory_obj::len;		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(275)
+			int tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(275)
+			tmp2 = (tmp3 >= tmp5);
+		}
+		else{
+			HX_STACK_LINE(275)
+			tmp2 = true;
+		}
+		HX_STACK_LINE(275)
+		if ((tmp2)){
+			HX_STACK_LINE(275)
+			HX_STACK_DO_THROW(HX_HCSTRING("Bad address","\x39","\xcc","\x35","\x3f"));
+		}
 		HX_STACK_LINE(276)
 		::__hxcpp_memory_set_float(addr,v);
 	}
@@ -182,9 +390,35 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Memory_obj,setFloat,(void))
 
 Void Memory_obj::setI16( int addr,int v){
 {
-		HX_STACK_FRAME("openfl._legacy.Memory","setI16",0x13628c55,"openfl._legacy.Memory.setI16","openfl/_legacy/Memory.hx",284,0x38405097)
+		HX_STACK_FRAME("openfl._legacy.Memory","setI16",0x13628c55,"openfl._legacy.Memory.setI16","openfl/_legacy/Memory.hx",281,0x38405097)
 		HX_STACK_ARG(addr,"addr")
 		HX_STACK_ARG(v,"v")
+		HX_STACK_LINE(283)
+		bool tmp = (addr < (int)0);		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(283)
+		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(283)
+		bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(283)
+		if ((tmp1)){
+			HX_STACK_LINE(283)
+			int tmp3 = addr;		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(283)
+			int tmp4 = ::openfl::_legacy::Memory_obj::len;		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(283)
+			int tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(283)
+			tmp2 = (tmp3 >= tmp5);
+		}
+		else{
+			HX_STACK_LINE(283)
+			tmp2 = true;
+		}
+		HX_STACK_LINE(283)
+		if ((tmp2)){
+			HX_STACK_LINE(283)
+			HX_STACK_DO_THROW(HX_HCSTRING("Bad address","\x39","\xcc","\x35","\x3f"));
+		}
 		HX_STACK_LINE(284)
 		::__hxcpp_memory_set_i16(addr,v);
 	}
@@ -196,9 +430,35 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Memory_obj,setI16,(void))
 
 Void Memory_obj::setI32( int addr,int v){
 {
-		HX_STACK_FRAME("openfl._legacy.Memory","setI32",0x13628e0f,"openfl._legacy.Memory.setI32","openfl/_legacy/Memory.hx",292,0x38405097)
+		HX_STACK_FRAME("openfl._legacy.Memory","setI32",0x13628e0f,"openfl._legacy.Memory.setI32","openfl/_legacy/Memory.hx",289,0x38405097)
 		HX_STACK_ARG(addr,"addr")
 		HX_STACK_ARG(v,"v")
+		HX_STACK_LINE(291)
+		bool tmp = (addr < (int)0);		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(291)
+		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(291)
+		bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(291)
+		if ((tmp1)){
+			HX_STACK_LINE(291)
+			int tmp3 = addr;		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(291)
+			int tmp4 = ::openfl::_legacy::Memory_obj::len;		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(291)
+			int tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(291)
+			tmp2 = (tmp3 >= tmp5);
+		}
+		else{
+			HX_STACK_LINE(291)
+			tmp2 = true;
+		}
+		HX_STACK_LINE(291)
+		if ((tmp2)){
+			HX_STACK_LINE(291)
+			HX_STACK_DO_THROW(HX_HCSTRING("Bad address","\x39","\xcc","\x35","\x3f"));
+		}
 		HX_STACK_LINE(292)
 		::__hxcpp_memory_set_i32(addr,v);
 	}

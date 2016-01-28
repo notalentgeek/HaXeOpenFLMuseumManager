@@ -853,7 +853,7 @@ void Capabilities_obj::__boot()
 	hasStreamingVideo= false;
 	hasTLS= true;
 	hasVideoEncoder= false;
-	isDebugger= false;
+	isDebugger= true;
 	isEmbeddedInAcrobat= false;
 	localFileReadDisable= false;
 	manufacturer= HX_HCSTRING("OpenFL Contributors","\xc8","\xce","\x85","\xc7");

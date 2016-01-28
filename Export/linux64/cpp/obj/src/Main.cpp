@@ -256,7 +256,7 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(81)
 	::CollectionGlobal tmp5 = this->collectionGlobalObject;		HX_STACK_VAR(tmp5,"tmp5");
 	HX_STACK_LINE(81)
-	::CollectionPremade_obj::PremadeVisitorObjectVoid((int)100,tmp5);
+	::CollectionPremade_obj::PremadeVisitorObjectVoid((int)10,tmp5);
 	HX_STACK_LINE(83)
 	::String tmp6 = ::openfl::_legacy::events::Event_obj::ENTER_FRAME;		HX_STACK_VAR(tmp6,"tmp6");
 	HX_STACK_LINE(83)

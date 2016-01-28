@@ -6,6 +6,7 @@
 #endif
 
 HX_DECLARE_CLASS0(CollectionGlobal)
+HX_DECLARE_CLASS0(ObjectVisitor)
 HX_DECLARE_CLASS0(UIPopupEditObjectVisitor)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Container)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Grid)
@@ -61,7 +62,7 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 
 		::CollectionGlobal collectionGlobalObject;
 		::haxe::ui::toolkit::controls::Text displayExplanationTextObject;
-		::haxe::ui::toolkit::controls::Text displayPopularTagTextObject;
+		::haxe::ui::toolkit::controls::selection::ListSelector displayPopularTagListSelectorObject;
 		::haxe::ui::toolkit::controls::Text displayPreviousVisitorTextObject;
 		::haxe::ui::toolkit::controls::Text displaySentenceTextObject;
 		::haxe::ui::toolkit::controls::Text displayTargetExhibitionTextObject;
@@ -72,10 +73,25 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		::haxe::ui::toolkit::controls::popups::Popup popupObject;
 		::haxe::ui::toolkit::controls::Button resetButtonObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectCurrentExhibitionListSelectorObject;
+		Array< ::String > selectedVisitorExplanationPrevStringArray;
+		Array< ::String > selectedVisitorExplanationStringArray;
+		::ObjectVisitor selectedVisitorObject;
+		Array< int > selectedVisitorPopularTagCountIntArray;
+		Array< int > selectedVisitorPopularTagCountPrevIntArray;
+		Array< ::String > selectedVisitorPopularTagObjectPrevStringArray;
+		Array< ::String > selectedVisitorPopularTagObjectStringArray;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectModeListSelectorObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectVisitorListSelectorObject;
+		::String selectVisitorListSelectorPrevString;
+		::String selectVisitorListSelectorString;
 		virtual Void UpdateVoid( );
 		Dynamic UpdateVoid_dyn();
+
+		virtual Void ResetDisplayPopularTagListSelectorObject( );
+		Dynamic ResetDisplayPopularTagListSelectorObject_dyn();
+
+		virtual Void ResetSelectVisitorListSelectorObjectVoid( );
+		Dynamic ResetSelectVisitorListSelectorObjectVoid_dyn();
 
 };
 
