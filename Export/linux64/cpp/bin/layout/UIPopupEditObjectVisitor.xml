@@ -69,9 +69,12 @@
         <!--##################################################-->
 
         <text text="Sentence" />
+        <!--
         <scrollview height="200" width="100%" >
             <text disabled="true" id="UIPopupEditObjectVisitor_DisplaySentence" multiline="true" text=" " width="100%" wrapLines="true" />
         </scrollview>
+        -->
+        <button id="UIPopupEditObjectVisitor_ButtonDisplaySentence" text="Display Sentence" width="100%" />
 
         <!--##################################################-->
 

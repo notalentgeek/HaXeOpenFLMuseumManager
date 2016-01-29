@@ -241,10 +241,14 @@ class ObjectGeneratorSentence{
         var threeSentenceString:String = "";
         var loopCounter1Int:Int = 0;
         while(loopCounter1Int < 3){
+            /*
             if(loopCounter1Int == 0){ threeSentenceString = WordFixString(GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int], _visitorObject)); }
             else{ threeSentenceString = threeSentenceString + "\n" + WordFixString(GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int], _visitorObject)); }
+            */
+            threeSentenceString = threeSentenceString + WordFixString(GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int], _visitorObject)) + "\n";
             loopCounter1Int ++;
         }
+        threeSentenceString = threeSentenceString + "\n";
         return threeSentenceString;
     }
 }

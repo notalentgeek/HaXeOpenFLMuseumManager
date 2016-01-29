@@ -64,6 +64,8 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		::haxe::ui::toolkit::controls::Text displayExplanationTextObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector displayPopularTagListSelectorObject;
 		::haxe::ui::toolkit::controls::Text displayPreviousVisitorTextObject;
+		::haxe::ui::toolkit::controls::Button displaySentenceButtonObject;
+		::haxe::ui::toolkit::controls::popups::Popup displaySentencePopupObject;
 		::haxe::ui::toolkit::controls::Text displaySentenceTextObject;
 		::haxe::ui::toolkit::controls::Text displayTargetExhibitionTextObject;
 		::haxe::ui::toolkit::controls::Text displayVisitorIndexTextObject;
@@ -74,10 +76,10 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		::haxe::ui::toolkit::controls::Button resetButtonObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectCurrentExhibitionListSelectorObject;
 		Array< ::String > selectedVisitorExplanationStringArray;
-		Array< ::String > selectedVisitorSentenceStringArray;
 		::ObjectVisitor selectedVisitorObject;
 		Array< int > selectedVisitorPopularTagCountIntArray;
 		Array< ::String > selectedVisitorPopularTagObjectStringArray;
+		Array< ::String > selectedVisitorSentenceStringArray;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectModeListSelectorObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectVisitorListSelectorObject;
 		::String selectVisitorListSelectorPrevString;

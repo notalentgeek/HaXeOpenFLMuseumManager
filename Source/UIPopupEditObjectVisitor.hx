@@ -19,10 +19,13 @@ class UIPopupEditObjectVisitor{
 
 
 
+    //private var displaySentenceTextObject                     :Text                       = null;
     private var collectionGlobalObject                          :CollectionGlobal           = null;
     private var displayExplanationTextObject                    :Text                       = null;
     private var displayPopularTagListSelectorObject             :ListSelector               = null;
     private var displayPreviousVisitorTextObject                :Text                       = null;
+    private var displaySentenceButtonObject                     :Button                     = null;
+    private var displaySentencePopupObject                      :Popup                      = null;
     private var displaySentenceTextObject                       :Text                       = null;
     private var displayTargetExhibitionTextObject               :Text                       = null;
     private var displayVisitorIndexTextObject                   :Text                       = null;
@@ -33,10 +36,10 @@ class UIPopupEditObjectVisitor{
     private var resetButtonObject                               :Button                     = null;
     private var selectCurrentExhibitionListSelectorObject       :ListSelector               = null;
     private var selectedVisitorExplanationStringArray           :Array<String>              = new Array<String>();
-    private var selectedVisitorSentenceStringArray              :Array<String>              = new Array<String>();
     private var selectedVisitorObject                           :ObjectVisitor              = null;
     private var selectedVisitorPopularTagCountIntArray          :Array<Int>                 = new Array<Int>();
     private var selectedVisitorPopularTagObjectStringArray      :Array<String>              = new Array<String>();
+    private var selectedVisitorSentenceStringArray              :Array<String>              = new Array<String>();
     private var selectModeListSelectorObject                    :ListSelector               = null;
     private var selectVisitorListSelectorObject                 :ListSelector               = null;
     private var selectVisitorListSelectorPrevString             :String                     = "";
@@ -65,7 +68,8 @@ class UIPopupEditObjectVisitor{
             displayExplanationTextObject                        = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayExplanation"       , Text          , true);
             displayPopularTagListSelectorObject                 = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayPopularTag"        , ListSelector      , true);
             displayPreviousVisitorTextObject                    = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayPreviousVisitor"   , Text          , true);
-            displaySentenceTextObject                           = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplaySentence"          , Text          , true);
+            //displaySentenceTextObject                         = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplaySentence"          , Text          , true);
+            displaySentenceButtonObject                         = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonDisplaySentence"    , Button        , true);
             displayTargetExhibitionTextObject                   = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayTargetExhibition"  , Text          , true);
             displayVisitorIndexTextObject                       = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayVisitorIndex"      , Text          , true);
             gridObject                                          = popupObject.content.findChild("UIPopupEditObjectVisitor_Grid"                     , Grid          , true);
@@ -79,6 +83,18 @@ class UIPopupEditObjectVisitor{
             selectCurrentExhibitionListSelectorObject.method    = "default";
             selectModeListSelectorObject.method                 = "default";
             selectVisitorListSelectorObject.method              = "default";
+
+            displaySentenceButtonObject.onClick                 = function(_e){
+
+                var buttonControlInt:Int = 0;
+                buttonControlInt |= PopupButton.OK;
+
+                var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupDisplaySentence.xml");
+                displaySentencePopupObject = PopupManager.instance.showCustom(iDisplayObject, "Edit Visitor", buttonControlInt, function(_button){});
+                displaySentenceTextObject = displaySentencePopupObject.content.findChild("UIPopupDisplaySentence_DisplaySentence" , Text , true);
+
+
+            }
 
             ResetDisplayExplanationTextObjectVoid();
             ResetDisplayPopularTagListSelectorObjectVoid();
@@ -113,28 +129,31 @@ class UIPopupEditObjectVisitor{
                 UpdateDisplayExplanationTextObjectVoid();
                 UpdateDisplayPopularTagListSelectorObjectVoid();
 
-                var updateSentenceBool:Bool = false;
-                var loopCounter1Int:Int = 0;
-                if(selectedVisitorSentenceStringArray.length != selectedVisitorObject.GetSentenceStringArray().length){ updateSentenceBool = true; }
-                while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
-                    if(updateSentenceBool == true){ break; }
-                    if(selectedVisitorSentenceStringArray[loopCounter1Int] != selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]){
-                        updateSentenceBool = true;
-                        break;
-                    }
-                    loopCounter1Int ++;
-                }
-                if(updateSentenceBool == true){
-                    CollectionFunction.ClearArray(selectedVisitorSentenceStringArray);
-                    displaySentenceTextObject.text = "";
-                    var displaySentenceString:String = "";
+                if(displaySentencePopupObject != null){
+                    var updateSentenceBool:Bool = false;
                     var loopCounter1Int:Int = 0;
+                    if(selectedVisitorSentenceStringArray.length != selectedVisitorObject.GetSentenceStringArray().length){ updateSentenceBool = true; }
                     while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
-                        displaySentenceString = displaySentenceString + selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int] + "\n";
+                        if(updateSentenceBool == true){ break; }
+                        if(selectedVisitorSentenceStringArray[loopCounter1Int] != selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]){
+                            updateSentenceBool = true;
+                            break;
+                        }
                         loopCounter1Int ++;
                     }
-                    displaySentenceTextObject.text = displaySentenceString;
-
+                    if(updateSentenceBool == true){
+                        CollectionFunction.ClearArray(selectedVisitorSentenceStringArray);
+                        if(displaySentenceTextObject != null){
+                            displaySentenceTextObject.text = "";
+                            var displaySentenceString:String = "";
+                            var loopCounter1Int:Int = 0;
+                            while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
+                                displaySentenceString = displaySentenceString + selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int];
+                                loopCounter1Int ++;
+                            }
+                            displaySentenceTextObject.text = displaySentenceString;
+                        }
+                    }
                 }
 
             }
@@ -145,7 +164,7 @@ class UIPopupEditObjectVisitor{
 
     private function ResetDisplayExplanationTextObjectVoid(){ displayExplanationTextObject.text = ""; }
     private function ResetDisplayPopularTagListSelectorObjectVoid(){ displayPopularTagListSelectorObject.dataSource.removeAll(); }
-    private function ResetDisplaySentenceTextObjectVoid(){ displaySentenceTextObject.text = ""; }
+    private function ResetDisplaySentenceTextObjectVoid(){ if(displaySentenceTextObject != null){ displaySentenceTextObject.text = ""; } }
 
     private function ResetSelectVisitorListSelectorObjectVoid(){
 

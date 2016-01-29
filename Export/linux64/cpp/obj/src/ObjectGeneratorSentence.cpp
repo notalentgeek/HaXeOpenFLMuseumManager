@@ -951,48 +951,35 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(ObjectGeneratorSentence_obj,WordFixString,return 
 			HX_STACK_LINE(243)
 			break;
 		}
-		HX_STACK_LINE(244)
-		bool tmp4 = (loopCounter1Int == (int)0);		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(244)
-		if ((tmp4)){
-			HX_STACK_LINE(244)
-			::CollectionGlobal tmp5 = _collectionGlobalObject;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(244)
-			::String tmp6 = stringPatternIndexString->__get(loopCounter1Int);		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(244)
-			::ObjectVisitor tmp7 = _visitorObject;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(244)
-			::String tmp8 = ::ObjectGeneratorSentence_obj::GenerateSentenceString(tmp5,tmp6,tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(244)
-			::String tmp9 = ::ObjectGeneratorSentence_obj::WordFixString(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(244)
-			threeSentenceString = tmp9;
-		}
-		else{
-			HX_STACK_LINE(245)
-			::String tmp5 = (threeSentenceString + HX_HCSTRING("\n","\x0a","\x00","\x00","\x00"));		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(245)
-			::CollectionGlobal tmp6 = _collectionGlobalObject;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(245)
-			::String tmp7 = stringPatternIndexString->__get(loopCounter1Int);		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(245)
-			::ObjectVisitor tmp8 = _visitorObject;		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(245)
-			::String tmp9 = ::ObjectGeneratorSentence_obj::GenerateSentenceString(tmp6,tmp7,tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(245)
-			::String tmp10 = ::ObjectGeneratorSentence_obj::WordFixString(tmp9);		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(245)
-			::String tmp11 = (tmp5 + tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(245)
-			threeSentenceString = tmp11;
-		}
-		HX_STACK_LINE(246)
+		HX_STACK_LINE(248)
+		::String tmp4 = threeSentenceString;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(248)
+		::CollectionGlobal tmp5 = _collectionGlobalObject;		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(248)
+		::String tmp6 = stringPatternIndexString->__get(loopCounter1Int);		HX_STACK_VAR(tmp6,"tmp6");
+		HX_STACK_LINE(248)
+		::ObjectVisitor tmp7 = _visitorObject;		HX_STACK_VAR(tmp7,"tmp7");
+		HX_STACK_LINE(248)
+		::String tmp8 = ::ObjectGeneratorSentence_obj::GenerateSentenceString(tmp5,tmp6,tmp7);		HX_STACK_VAR(tmp8,"tmp8");
+		HX_STACK_LINE(248)
+		::String tmp9 = ::ObjectGeneratorSentence_obj::WordFixString(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
+		HX_STACK_LINE(248)
+		::String tmp10 = (tmp4 + tmp9);		HX_STACK_VAR(tmp10,"tmp10");
+		HX_STACK_LINE(248)
+		::String tmp11 = (tmp10 + HX_HCSTRING("\n","\x0a","\x00","\x00","\x00"));		HX_STACK_VAR(tmp11,"tmp11");
+		HX_STACK_LINE(248)
+		threeSentenceString = tmp11;
+		HX_STACK_LINE(249)
 		(loopCounter1Int)++;
 	}
-	HX_STACK_LINE(248)
-	::String tmp2 = threeSentenceString;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(248)
-	return tmp2;
+	HX_STACK_LINE(251)
+	::String tmp2 = (threeSentenceString + HX_HCSTRING("\n","\x0a","\x00","\x00","\x00"));		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(251)
+	threeSentenceString = tmp2;
+	HX_STACK_LINE(252)
+	::String tmp3 = threeSentenceString;		HX_STACK_VAR(tmp3,"tmp3");
+	HX_STACK_LINE(252)
+	return tmp3;
 }
 
 
