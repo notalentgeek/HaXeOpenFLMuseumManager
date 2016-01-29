@@ -5123,6 +5123,8 @@
    <depend name="include/UIPopupEditObjectVisitor.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Container.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Grid.h"/>
+   <depend name="include/haxe/ui/toolkit/containers/ListView.h"/>
+   <depend name="include/haxe/ui/toolkit/containers/ScrollView.h"/>
    <depend name="include/haxe/ui/toolkit/containers/VBox.h"/>
    <depend name="include/haxe/ui/toolkit/controls/Button.h"/>
    <depend name="include/haxe/ui/toolkit/controls/Text.h"/>

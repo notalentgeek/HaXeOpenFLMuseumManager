@@ -1,6 +1,3 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<scrollview width="100%" height="200">
-	<grid width="100%" >
-		<text id="UIPopupDisplaySentence_DisplaySentence" multiline="true" text=" " width="100%" wrapLines="true" />
-	</grid>
-</scrollview>
+<listview height="200" id="UIPopupDisplaySentence_DisplaySentence" width="100%" >
+</listview>

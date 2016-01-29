@@ -19,14 +19,15 @@ class UIPopupEditObjectVisitor{
 
 
 
-    //private var displaySentenceTextObject                     :Text                       = null;
+    //private var displaySentenceListViewObject                     :Text                       = null;
+    //private var displaySentenceListViewObject                     :Text                       = null;
     private var collectionGlobalObject                          :CollectionGlobal           = null;
     private var displayExplanationTextObject                    :Text                       = null;
     private var displayPopularTagListSelectorObject             :ListSelector               = null;
     private var displayPreviousVisitorTextObject                :Text                       = null;
     private var displaySentenceButtonObject                     :Button                     = null;
+    private var displaySentenceListViewObject                   :ListView                       = null;
     private var displaySentencePopupObject                      :Popup                      = null;
-    private var displaySentenceTextObject                       :Text                       = null;
     private var displayTargetExhibitionTextObject               :Text                       = null;
     private var displayVisitorIndexTextObject                   :Text                       = null;
     private var gridObject                                      :Grid                       = null;
@@ -65,10 +66,10 @@ class UIPopupEditObjectVisitor{
 
             });
 
+            //displaySentenceListViewObject                         = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplaySentence"          , Text          , true);
             displayExplanationTextObject                        = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayExplanation"       , Text          , true);
             displayPopularTagListSelectorObject                 = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayPopularTag"        , ListSelector      , true);
             displayPreviousVisitorTextObject                    = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayPreviousVisitor"   , Text          , true);
-            //displaySentenceTextObject                         = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplaySentence"          , Text          , true);
             displaySentenceButtonObject                         = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonDisplaySentence"    , Button        , true);
             displayTargetExhibitionTextObject                   = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayTargetExhibition"  , Text          , true);
             displayVisitorIndexTextObject                       = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayVisitorIndex"      , Text          , true);
@@ -91,14 +92,14 @@ class UIPopupEditObjectVisitor{
 
                 var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupDisplaySentence.xml");
                 displaySentencePopupObject = PopupManager.instance.showCustom(iDisplayObject, "Edit Visitor", buttonControlInt, function(_button){});
-                displaySentenceTextObject = displaySentencePopupObject.content.findChild("UIPopupDisplaySentence_DisplaySentence" , Text , true);
+                displaySentenceListViewObject = displaySentencePopupObject.content.findChild("UIPopupDisplaySentence_DisplaySentence", ListView , true);
 
 
             }
 
             ResetDisplayExplanationTextObjectVoid();
             ResetDisplayPopularTagListSelectorObjectVoid();
-            ResetDisplaySentenceTextObjectVoid();
+            ResetDisplaySentenceListViewObjectVoid();
 
             ResetSelectVisitorListSelectorObjectVoid();
 
@@ -115,7 +116,7 @@ class UIPopupEditObjectVisitor{
 
                 ResetDisplayExplanationTextObjectVoid();
                 ResetDisplayPopularTagListSelectorObjectVoid();
-                ResetDisplaySentenceTextObjectVoid();
+                ResetDisplaySentenceListViewObjectVoid();
 
                 ResetSelectVisitorListSelectorObjectVoid();
 
@@ -143,15 +144,18 @@ class UIPopupEditObjectVisitor{
                     }
                     if(updateSentenceBool == true){
                         CollectionFunction.ClearArray(selectedVisitorSentenceStringArray);
-                        if(displaySentenceTextObject != null){
-                            displaySentenceTextObject.text = "";
-                            var displaySentenceString:String = "";
+                        if(displaySentenceListViewObject != null){
+                            displaySentenceListViewObject.dataSource.removeAll();
                             var loopCounter1Int:Int = 0;
                             while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
-                                displaySentenceString = displaySentenceString + selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int];
+                                var textObject:Text = new Text();
+                                textObject.multiline = true;
+                                textObject.percentWidth = 100.0;
+                                textObject.text = "";
+                                textObject.wrapLines = true;
+                                displaySentenceListViewObject.dataSource.createFromString(selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]);
                                 loopCounter1Int ++;
                             }
-                            displaySentenceTextObject.text = displaySentenceString;
                         }
                     }
                 }
@@ -164,7 +168,7 @@ class UIPopupEditObjectVisitor{
 
     private function ResetDisplayExplanationTextObjectVoid(){ displayExplanationTextObject.text = ""; }
     private function ResetDisplayPopularTagListSelectorObjectVoid(){ displayPopularTagListSelectorObject.dataSource.removeAll(); }
-    private function ResetDisplaySentenceTextObjectVoid(){ if(displaySentenceTextObject != null){ displaySentenceTextObject.text = ""; } }
+    private function ResetDisplaySentenceListViewObjectVoid(){ if(displaySentenceListViewObject != null){ displaySentenceListViewObject.text = ""; } }
 
     private function ResetSelectVisitorListSelectorObjectVoid(){
 
