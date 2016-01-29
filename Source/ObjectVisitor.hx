@@ -161,7 +161,7 @@ class ObjectVisitor{
         }
     }
     private function GenerateSentenceVoid(_amount:Int){ return ""; }
-    private function SortTagCounterVoid(){ tagCounterStructArray.sort(function(_a:StructTagCounter, _b:StructTagCounter){ return _a.tagCounterInt - _b.tagCounterInt; }); }
+    private function SortTagCounterVoid(){ tagCounterStructArray.sort(function(_a:StructTagCounter, _b:StructTagCounter){ return _b.tagCounterInt - _a.tagCounterInt; }); }
     private function UpdateHeavyVoid(){
         exhibitionCurrentObject.SetVisitorCurrentIntVoid(exhibitionCurrentObject.GetVisitorCurrentInt() + 1);
         exhibitionCurrentObject.SetVisitorTotalIntVoid(exhibitionCurrentObject.GetVisitorTotalInt() + 1);

@@ -32,12 +32,10 @@ class UIPopupEditObjectVisitor{
     private var popupObject                                     :Popup                      = null;
     private var resetButtonObject                               :Button                     = null;
     private var selectCurrentExhibitionListSelectorObject       :ListSelector               = null;
-    private var selectedVisitorExplanationPrevStringArray       :Array<String>              = null;
-    private var selectedVisitorExplanationStringArray           :Array<String>              = null;
+    private var selectedVisitorExplanationStringArray           :Array<String>              = new Array<String>();
+    private var selectedVisitorSentenceStringArray              :Array<String>              = new Array<String>();
     private var selectedVisitorObject                           :ObjectVisitor              = null;
     private var selectedVisitorPopularTagCountIntArray          :Array<Int>                 = new Array<Int>();
-    private var selectedVisitorPopularTagCountPrevIntArray      :Array<Int>                 = new Array<Int>();
-    private var selectedVisitorPopularTagObjectPrevStringArray  :Array<String>              = new Array<String>();
     private var selectedVisitorPopularTagObjectStringArray      :Array<String>              = new Array<String>();
     private var selectModeListSelectorObject                    :ListSelector               = null;
     private var selectVisitorListSelectorObject                 :ListSelector               = null;
@@ -82,7 +80,10 @@ class UIPopupEditObjectVisitor{
             selectModeListSelectorObject.method                 = "default";
             selectVisitorListSelectorObject.method              = "default";
 
-            ResetDisplayPopularTagListSelectorObject();
+            ResetDisplayExplanationTextObjectVoid();
+            ResetDisplayPopularTagListSelectorObjectVoid();
+            ResetDisplaySentenceTextObjectVoid();
+
             ResetSelectVisitorListSelectorObjectVoid();
 
         }
@@ -96,79 +97,43 @@ class UIPopupEditObjectVisitor{
             selectVisitorListSelectorString = selectVisitorListSelectorObject.text;
             if(selectVisitorListSelectorString != selectVisitorListSelectorPrevString){
 
-                ResetDisplayPopularTagListSelectorObject();
-                ResetSelectVisitorListSelectorObjectVoid();
-                selectedVisitorObject = CollectionFunction.FindVisitorObject(collectionGlobalObject, selectVisitorListSelectorString);
+                ResetDisplayExplanationTextObjectVoid();
+                ResetDisplayPopularTagListSelectorObjectVoid();
+                ResetDisplaySentenceTextObjectVoid();
 
+                ResetSelectVisitorListSelectorObjectVoid();
+
+                selectedVisitorObject = CollectionFunction.FindVisitorObject(collectionGlobalObject, selectVisitorListSelectorString);
                 selectVisitorListSelectorPrevString = selectVisitorListSelectorString;
 
             }
 
             if(selectedVisitorObject != null){
 
-                selectedVisitorExplanationStringArray = selectedVisitorObject.GetExplanationStringArray();
-                if(selectedVisitorExplanationStringArray != selectedVisitorExplanationPrevStringArray){
+                UpdateDisplayExplanationTextObjectVoid();
+                UpdateDisplayPopularTagListSelectorObjectVoid();
 
-                    var displayExplanationString:String = "";
-                    var loopCounter1Int:Int = 0;
-                    while(loopCounter1Int < selectedVisitorObject.GetExplanationStringArray().length){
-                        displayExplanationString = displayExplanationString + selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int] + "\n";
-                        loopCounter1Int ++;
-                    }
-                    displayExplanationTextObject.text = displayExplanationString;
-                    selectedVisitorExplanationPrevStringArray = selectedVisitorExplanationStringArray;
-
-                }
-
-                displayPopularTagListSelectorObject.selectedIndex = -1;
-                displayPopularTagListSelectorObject.text = "Popular Tag";
-
-                var updateTagBool:Bool = false;
+                var updateSentenceBool:Bool = false;
                 var loopCounter1Int:Int = 0;
-                if(
-                    selectedVisitorPopularTagCountIntArray.length       != selectedVisitorObject.GetTagCounterStructArray().length ||
-                    selectedVisitorPopularTagObjectStringArray.length   != selectedVisitorObject.GetTagCounterStructArray().length
-                ){ updateTagBool = true; }
-                while(loopCounter1Int < selectedVisitorObject.GetTagCounterStructArray().length){
-
-                    if(updateTagBool == true){ break; }
-
-                    trace(selectedVisitorPopularTagCountIntArray.length);
-                    trace(selectedVisitorObject.GetTagCounterStructArray().length + " " + loopCounter1Int);
-                    trace(selectedVisitorPopularTagCountIntArray[loopCounter1Int]);
-                    trace(selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int]);
-                    if(selectedVisitorPopularTagCountIntArray[loopCounter1Int] != selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt){ updateTagBool = true; break; }
-                    if(selectedVisitorPopularTagObjectStringArray[loopCounter1Int] != selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString()){ updateTagBool = true; break; }
-                    loopCounter1Int ++;
-
-                }
-
-                if(updateTagBool == true){
-
-                    trace("ASD.");
-                    CollectionFunction.ClearArray(selectedVisitorPopularTagCountIntArray);
-                    trace("ASD.");
-                    CollectionFunction.ClearArray(selectedVisitorPopularTagObjectStringArray);
-                    displayPopularTagListSelectorObject.dataSource.removeAll();
-                    var loopCounter1Int:Int = 0;
-                    while(loopCounter1Int < selectedVisitorObject.GetTagCounterStructArray().length){
-
-                        trace("QWER." + loopCounter1Int + " " + selectedVisitorObject.GetTagCounterStructArray().length);
-                        selectedVisitorPopularTagCountIntArray.push(selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt);
-                        trace("QWER." + loopCounter1Int + " " + selectedVisitorObject.GetTagCounterStructArray().length);
-                        selectedVisitorPopularTagObjectStringArray.push(selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString());
-
-                        trace(selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt);
-                        trace(selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString());
-                        displayPopularTagListSelectorObject.dataSource.createFromString(
-                            selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt +
-                            " " +
-                            selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString()
-                        );
-                        loopCounter1Int ++;
-                        trace("HELLO.");
-
+                if(selectedVisitorSentenceStringArray.length != selectedVisitorObject.GetSentenceStringArray().length){ updateSentenceBool = true; }
+                while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
+                    if(updateSentenceBool == true){ break; }
+                    if(selectedVisitorSentenceStringArray[loopCounter1Int] != selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]){
+                        updateSentenceBool = true;
+                        break;
                     }
+                    loopCounter1Int ++;
+                }
+                if(updateSentenceBool == true){
+                    CollectionFunction.ClearArray(selectedVisitorSentenceStringArray);
+                    displaySentenceTextObject.text = "";
+                    var displaySentenceString:String = "";
+                    var loopCounter1Int:Int = 0;
+                    while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
+                        displaySentenceString = displaySentenceString + selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int] + "\n";
+                        loopCounter1Int ++;
+                    }
+                    displaySentenceTextObject.text = displaySentenceString;
 
                 }
 
@@ -178,7 +143,9 @@ class UIPopupEditObjectVisitor{
 
     }
 
-    private function ResetDisplayPopularTagListSelectorObject(){ displayPopularTagListSelectorObject.dataSource.removeAll(); }
+    private function ResetDisplayExplanationTextObjectVoid(){ displayExplanationTextObject.text = ""; }
+    private function ResetDisplayPopularTagListSelectorObjectVoid(){ displayPopularTagListSelectorObject.dataSource.removeAll(); }
+    private function ResetDisplaySentenceTextObjectVoid(){ displaySentenceTextObject.text = ""; }
 
     private function ResetSelectVisitorListSelectorObjectVoid(){
 
@@ -191,6 +158,66 @@ class UIPopupEditObjectVisitor{
 
         }
 
+    }
+
+    private function UpdateDisplayExplanationTextObjectVoid(){
+        var updateExplanationBool:Bool = false;
+        var loopCounter1Int:Int = 0;
+        if(selectedVisitorExplanationStringArray.length != selectedVisitorObject.GetExplanationStringArray().length){ updateExplanationBool = true; }
+        while(loopCounter1Int < selectedVisitorObject.GetExplanationStringArray().length){
+            if(updateExplanationBool == true){ break; }
+            if(selectedVisitorExplanationStringArray[loopCounter1Int] != selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int]){
+                updateExplanationBool = true;
+                break;
+            }
+            loopCounter1Int ++;
+        }
+        if(updateExplanationBool == true){
+            CollectionFunction.ClearArray(selectedVisitorExplanationStringArray);
+            displayExplanationTextObject.text = "";
+            var displayExplanationString:String = "";
+            var loopCounter1Int:Int = 0;
+            while(loopCounter1Int < selectedVisitorObject.GetExplanationStringArray().length){
+                displayExplanationString = displayExplanationString + selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int] + "\n";
+                loopCounter1Int ++;
+            }
+            displayExplanationTextObject.text = displayExplanationString;
+        }
+    }
+
+    private function UpdateDisplayPopularTagListSelectorObjectVoid(){
+        displayPopularTagListSelectorObject.selectedIndex = -1;
+        displayPopularTagListSelectorObject.text = "Popular Tag";
+        var updateTagBool:Bool = false;
+        var loopCounter1Int:Int = 0;
+        if(
+            selectedVisitorPopularTagCountIntArray.length       != selectedVisitorObject.GetTagCounterStructArray().length ||
+            selectedVisitorPopularTagObjectStringArray.length   != selectedVisitorObject.GetTagCounterStructArray().length
+        ){ updateTagBool = true; }
+        while(loopCounter1Int < selectedVisitorObject.GetTagCounterStructArray().length){
+            if(updateTagBool == true){ break; }
+            if(selectedVisitorPopularTagCountIntArray[loopCounter1Int] != selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt){ updateTagBool = true; break; }
+            if(selectedVisitorPopularTagObjectStringArray[loopCounter1Int] != selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString()){ updateTagBool = true; break; }
+            loopCounter1Int ++;
+        }
+        if(updateTagBool == true){
+            CollectionFunction.ClearArray(selectedVisitorPopularTagCountIntArray);
+            CollectionFunction.ClearArray(selectedVisitorPopularTagObjectStringArray);
+            displayPopularTagListSelectorObject.dataSource.removeAll();
+            var loopCounter1Int:Int = 0;
+            while(loopCounter1Int < selectedVisitorObject.GetTagCounterStructArray().length){
+
+                selectedVisitorPopularTagCountIntArray.push(selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt);
+                selectedVisitorPopularTagObjectStringArray.push(selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString());
+
+                displayPopularTagListSelectorObject.dataSource.createFromString(
+                    selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt +
+                    " " +
+                    selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString()
+                );
+                loopCounter1Int ++;
+            }
+        }
     }
 
 

@@ -73,12 +73,10 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		::haxe::ui::toolkit::controls::popups::Popup popupObject;
 		::haxe::ui::toolkit::controls::Button resetButtonObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectCurrentExhibitionListSelectorObject;
-		Array< ::String > selectedVisitorExplanationPrevStringArray;
 		Array< ::String > selectedVisitorExplanationStringArray;
+		Array< ::String > selectedVisitorSentenceStringArray;
 		::ObjectVisitor selectedVisitorObject;
 		Array< int > selectedVisitorPopularTagCountIntArray;
-		Array< int > selectedVisitorPopularTagCountPrevIntArray;
-		Array< ::String > selectedVisitorPopularTagObjectPrevStringArray;
 		Array< ::String > selectedVisitorPopularTagObjectStringArray;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectModeListSelectorObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectVisitorListSelectorObject;
@@ -87,11 +85,23 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		virtual Void UpdateVoid( );
 		Dynamic UpdateVoid_dyn();
 
-		virtual Void ResetDisplayPopularTagListSelectorObject( );
-		Dynamic ResetDisplayPopularTagListSelectorObject_dyn();
+		virtual Void ResetDisplayExplanationTextObjectVoid( );
+		Dynamic ResetDisplayExplanationTextObjectVoid_dyn();
+
+		virtual Void ResetDisplayPopularTagListSelectorObjectVoid( );
+		Dynamic ResetDisplayPopularTagListSelectorObjectVoid_dyn();
+
+		virtual Void ResetDisplaySentenceTextObjectVoid( );
+		Dynamic ResetDisplaySentenceTextObjectVoid_dyn();
 
 		virtual Void ResetSelectVisitorListSelectorObjectVoid( );
 		Dynamic ResetSelectVisitorListSelectorObjectVoid_dyn();
+
+		virtual Void UpdateDisplayExplanationTextObjectVoid( );
+		Dynamic UpdateDisplayExplanationTextObjectVoid_dyn();
+
+		virtual Void UpdateDisplayPopularTagListSelectorObjectVoid( );
+		Dynamic UpdateDisplayPopularTagListSelectorObjectVoid_dyn();
 
 };
 

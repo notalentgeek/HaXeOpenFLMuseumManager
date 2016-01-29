@@ -840,7 +840,7 @@ Void ObjectVisitor_obj::SortTagCounterVoid( ){
 			HX_STACK_ARG(_b,"_b")
 			{
 				HX_STACK_LINE(164)
-				int tmp = (_a->__Field(HX_HCSTRING("tagCounterInt","\x4d","\x2e","\x20","\xff"), hx::paccDynamic ) - _b->__Field(HX_HCSTRING("tagCounterInt","\x4d","\x2e","\x20","\xff"), hx::paccDynamic ));		HX_STACK_VAR(tmp,"tmp");
+				int tmp = (_b->__Field(HX_HCSTRING("tagCounterInt","\x4d","\x2e","\x20","\xff"), hx::paccDynamic ) - _a->__Field(HX_HCSTRING("tagCounterInt","\x4d","\x2e","\x20","\xff"), hx::paccDynamic ));		HX_STACK_VAR(tmp,"tmp");
 				HX_STACK_LINE(164)
 				return tmp;
 			}
