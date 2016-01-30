@@ -1684,10 +1684,20 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectVisitor_obj,GenerateExhibitionTargetVoid,(void))
 
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetExhibitionCurrentObject,return )
 
-Array< ::String > ObjectVisitor_obj::GetExplanationStringArray( ){
-	HX_STACK_FRAME("ObjectVisitor","GetExplanationStringArray",0xeff616a6,"ObjectVisitor.GetExplanationStringArray","ObjectVisitor.hx",316,0xe713038f)
+Array< ::Dynamic > ObjectVisitor_obj::GetExhibitionTargetObjectArray( ){
+	HX_STACK_FRAME("ObjectVisitor","GetExhibitionTargetObjectArray",0xa6360163,"ObjectVisitor.GetExhibitionTargetObjectArray","ObjectVisitor.hx",316,0xe713038f)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(316)
+	return this->exhibitionTargetObjectArray;
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetExhibitionTargetObjectArray,return )
+
+Array< ::String > ObjectVisitor_obj::GetExplanationStringArray( ){
+	HX_STACK_FRAME("ObjectVisitor","GetExplanationStringArray",0xeff616a6,"ObjectVisitor.GetExplanationStringArray","ObjectVisitor.hx",317,0xe713038f)
+	HX_STACK_THIS(this)
+	HX_STACK_LINE(317)
 	return this->explanationStringArray;
 }
 
@@ -1695,11 +1705,11 @@ Array< ::String > ObjectVisitor_obj::GetExplanationStringArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetExplanationStringArray,return )
 
 bool ObjectVisitor_obj::GetFinishedBool( ){
-	HX_STACK_FRAME("ObjectVisitor","GetFinishedBool",0x56cdf673,"ObjectVisitor.GetFinishedBool","ObjectVisitor.hx",317,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetFinishedBool",0x56cdf673,"ObjectVisitor.GetFinishedBool","ObjectVisitor.hx",318,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(317)
+	HX_STACK_LINE(318)
 	bool tmp = this->finishedBool;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(317)
+	HX_STACK_LINE(318)
 	return tmp;
 }
 
@@ -1707,11 +1717,11 @@ bool ObjectVisitor_obj::GetFinishedBool( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetFinishedBool,return )
 
 int ObjectVisitor_obj::GetIndexLocalInt( ){
-	HX_STACK_FRAME("ObjectVisitor","GetIndexLocalInt",0x9b8f97df,"ObjectVisitor.GetIndexLocalInt","ObjectVisitor.hx",318,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetIndexLocalInt",0x9b8f97df,"ObjectVisitor.GetIndexLocalInt","ObjectVisitor.hx",319,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(318)
+	HX_STACK_LINE(319)
 	int tmp = this->indexLocalInt;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(318)
+	HX_STACK_LINE(319)
 	return tmp;
 }
 
@@ -1719,11 +1729,11 @@ int ObjectVisitor_obj::GetIndexLocalInt( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetIndexLocalInt,return )
 
 ::String ObjectVisitor_obj::GetNameString( ){
-	HX_STACK_FRAME("ObjectVisitor","GetNameString",0xa627bf73,"ObjectVisitor.GetNameString","ObjectVisitor.hx",319,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetNameString",0xa627bf73,"ObjectVisitor.GetNameString","ObjectVisitor.hx",320,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(319)
+	HX_STACK_LINE(320)
 	::String tmp = this->nameString;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(319)
+	HX_STACK_LINE(320)
 	return tmp;
 }
 
@@ -1731,11 +1741,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetIndexLocalInt,return )
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetNameString,return )
 
 int ObjectVisitor_obj::GetScoreInt( ){
-	HX_STACK_FRAME("ObjectVisitor","GetScoreInt",0x032bdaf4,"ObjectVisitor.GetScoreInt","ObjectVisitor.hx",320,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetScoreInt",0x032bdaf4,"ObjectVisitor.GetScoreInt","ObjectVisitor.hx",321,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(320)
+	HX_STACK_LINE(321)
 	int tmp = this->scoreInt;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(320)
+	HX_STACK_LINE(321)
 	return tmp;
 }
 
@@ -1743,9 +1753,9 @@ int ObjectVisitor_obj::GetScoreInt( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetScoreInt,return )
 
 Array< ::String > ObjectVisitor_obj::GetSentenceStringArray( ){
-	HX_STACK_FRAME("ObjectVisitor","GetSentenceStringArray",0x830c324e,"ObjectVisitor.GetSentenceStringArray","ObjectVisitor.hx",321,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetSentenceStringArray",0x830c324e,"ObjectVisitor.GetSentenceStringArray","ObjectVisitor.hx",322,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(321)
+	HX_STACK_LINE(322)
 	return this->sentenceStringArray;
 }
 
@@ -1753,9 +1763,9 @@ Array< ::String > ObjectVisitor_obj::GetSentenceStringArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetSentenceStringArray,return )
 
 cpp::ArrayBase ObjectVisitor_obj::GetTagCounterStructArray( ){
-	HX_STACK_FRAME("ObjectVisitor","GetTagCounterStructArray",0x729f3dcb,"ObjectVisitor.GetTagCounterStructArray","ObjectVisitor.hx",322,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetTagCounterStructArray",0x729f3dcb,"ObjectVisitor.GetTagCounterStructArray","ObjectVisitor.hx",323,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(322)
+	HX_STACK_LINE(323)
 	return this->tagCounterStructArray;
 }
 
@@ -1763,9 +1773,9 @@ cpp::ArrayBase ObjectVisitor_obj::GetTagCounterStructArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetTagCounterStructArray,return )
 
 Array< ::Dynamic > ObjectVisitor_obj::GetTagObjectArray( ){
-	HX_STACK_FRAME("ObjectVisitor","GetTagObjectArray",0xee77bf97,"ObjectVisitor.GetTagObjectArray","ObjectVisitor.hx",323,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetTagObjectArray",0xee77bf97,"ObjectVisitor.GetTagObjectArray","ObjectVisitor.hx",324,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(323)
+	HX_STACK_LINE(324)
 	return this->tagObjectArray;
 }
 
@@ -1773,11 +1783,11 @@ Array< ::Dynamic > ObjectVisitor_obj::GetTagObjectArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetTagObjectArray,return )
 
 ::ObjectVisitorUI ObjectVisitor_obj::GetVisitorUIObject( ){
-	HX_STACK_FRAME("ObjectVisitor","GetVisitorUIObject",0xb3f4d08a,"ObjectVisitor.GetVisitorUIObject","ObjectVisitor.hx",324,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetVisitorUIObject",0xb3f4d08a,"ObjectVisitor.GetVisitorUIObject","ObjectVisitor.hx",325,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(324)
+	HX_STACK_LINE(325)
 	::ObjectVisitorUI tmp = this->visitorUIObject;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(324)
+	HX_STACK_LINE(325)
 	return tmp;
 }
 
@@ -1785,11 +1795,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetTagObjectArray,return )
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetVisitorUIObject,return )
 
 bool ObjectVisitor_obj::GetVisitCorrectExhibitionBool( ){
-	HX_STACK_FRAME("ObjectVisitor","GetVisitCorrectExhibitionBool",0x6c55624f,"ObjectVisitor.GetVisitCorrectExhibitionBool","ObjectVisitor.hx",325,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetVisitCorrectExhibitionBool",0x6c55624f,"ObjectVisitor.GetVisitCorrectExhibitionBool","ObjectVisitor.hx",326,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(325)
+	HX_STACK_LINE(326)
 	bool tmp = this->visitedCorrectExhibitionBool;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(325)
+	HX_STACK_LINE(326)
 	return tmp;
 }
 
@@ -1798,10 +1808,10 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetVisitCorrectExhibitionBool,return )
 
 Void ObjectVisitor_obj::SetIndexLocalIntVoid( int _indexLocalInt){
 {
-		HX_STACK_FRAME("ObjectVisitor","SetIndexLocalIntVoid",0xfce71a47,"ObjectVisitor.SetIndexLocalIntVoid","ObjectVisitor.hx",326,0xe713038f)
+		HX_STACK_FRAME("ObjectVisitor","SetIndexLocalIntVoid",0xfce71a47,"ObjectVisitor.SetIndexLocalIntVoid","ObjectVisitor.hx",327,0xe713038f)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_indexLocalInt,"_indexLocalInt")
-		HX_STACK_LINE(326)
+		HX_STACK_LINE(327)
 		this->indexLocalInt = _indexLocalInt;
 	}
 return null();
@@ -1959,6 +1969,9 @@ Dynamic ObjectVisitor_obj::__Field(const ::String &inName,hx::PropertyAccess inC
 		break;
 	case 29:
 		if (HX_FIELD_EQ(inName,"GetVisitCorrectExhibitionBool") ) { return GetVisitCorrectExhibitionBool_dyn(); }
+		break;
+	case 30:
+		if (HX_FIELD_EQ(inName,"GetExhibitionTargetObjectArray") ) { return GetExhibitionTargetObjectArray_dyn(); }
 		break;
 	case 31:
 		if (HX_FIELD_EQ(inName,"timeAIAutoExhibitionChangeFloat") ) { return timeAIAutoExhibitionChangeFloat; }
@@ -2129,6 +2142,7 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("DetermineIndexLocalVoid","\xc0","\xcf","\x13","\xe8"),
 	HX_HCSTRING("GenerateExhibitionTargetVoid","\x69","\x34","\xd2","\x3b"),
 	HX_HCSTRING("GetExhibitionCurrentObject","\x33","\x60","\x47","\xbe"),
+	HX_HCSTRING("GetExhibitionTargetObjectArray","\x64","\xe8","\x76","\x98"),
 	HX_HCSTRING("GetExplanationStringArray","\x45","\x8f","\x80","\xcf"),
 	HX_HCSTRING("GetFinishedBool","\x52","\x42","\x6d","\x6e"),
 	HX_HCSTRING("GetIndexLocalInt","\x20","\xaf","\x52","\x2f"),

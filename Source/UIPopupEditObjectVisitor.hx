@@ -21,7 +21,8 @@ class UIPopupEditObjectVisitor{
 
 
     private var collectionGlobalObject                          :CollectionGlobal           = null;
-    private var displayExplanationTextObject                    :Text                       = null;
+    private var displayExplanationButtonObject                  :Button                     = null;
+    private var displayExplanationPopupObject                   :Popup                      = null;
     private var displayPopularTagButtonObject                   :Button                     = null;
     private var displayPopularTagPopupObject                    :Popup                      = null;
     private var displayPreviousVisitorTextObject                :Text                       = null;
@@ -65,8 +66,8 @@ class UIPopupEditObjectVisitor{
 
             });
 
-            displayExplanationTextObject                        = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayExplanation"       , Text          , true);
-            displayPopularTagButtonObject                       = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonDisplayPopularTag"  , Button      , true);
+            displayExplanationButtonObject                      = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonDisplayExplanation" , Button        , true);
+            displayPopularTagButtonObject                       = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonDisplayPopularTag"  , Button        , true);
             displayPreviousVisitorTextObject                    = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayPreviousVisitor"   , Text          , true);
             displaySentenceButtonObject                         = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonDisplaySentence"    , Button        , true);
             displayTargetExhibitionTextObject                   = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayTargetExhibition"  , Text          , true);
@@ -82,6 +83,16 @@ class UIPopupEditObjectVisitor{
             selectModeListSelectorObject.method                 = "default";
             selectVisitorListSelectorObject.method              = "default";
 
+            displayExplanationButtonObject.onClick = function(_e){trace("TEST.");
+
+                var buttonControlInt:Int = 0;
+                buttonControlInt |= PopupButton.OK;
+
+                displayExplanationPopupObject = PopupManager.instance.showList(selectedVisitorObject.GetExplanationStringArray(), "Display Explanation", buttonControlInt, function(_button){});
+                Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
+                displayExplanationPopupObject.y = popupObject.y;
+
+            }
             displayPopularTagButtonObject.onClick = function(_e){
 
                 var buttonControlInt:Int = 0;
@@ -114,10 +125,25 @@ class UIPopupEditObjectVisitor{
                 displaySentencePopupObject.y = popupObject.y;
 
             }
+            if(selectedVisitorObject != null){
+                var targetExhibitionNameFullString:String = "";
+                var loopCounter1Int:Int = 0;
+                while(loopCounter1Int < selectedVisitorObject.GetExhibitionTargetObjectArray().length){
+                    if(loopCounter1Int == selectedVisitorObject.GetExhibitionTargetObjectArray().length - 1){
+                        targetExhibitionNameFullString = targetExhibitionNameFullString + selectedVisitorObject.GetExhibitionTargetObjectArray()[loopCounter1Int].GetNameStruct().nameFullString;
+                    }
+                    else{
+                        targetExhibitionNameFullString = targetExhibitionNameFullString + selectedVisitorObject.GetExhibitionTargetObjectArray()[loopCounter1Int].GetNameStruct().nameFullString + "\n";
+                    }
+                    loopCounter1Int ++;
+                }
+                displayTargetExhibitionTextObject.text = targetExhibitionNameFullString;
+            }
 
             ResetDisplayExplanationTextObjectVoid();
             ResetDisplayPopularTagListSelectorObjectVoid();
             ResetDisplaySentenceListViewObjectVoid();
+            ResetDisplayTargetExhibitionTextObjectVoid();
 
             ResetSelectVisitorListSelectorObjectVoid();
 
@@ -128,7 +154,6 @@ class UIPopupEditObjectVisitor{
     public function UpdateVoid(){
 
         if(popupObject != null){
-            //trace(popupObject.y);
 
             selectVisitorListSelectorString = selectVisitorListSelectorObject.text;
             if(selectVisitorListSelectorString != selectVisitorListSelectorPrevString){
@@ -136,6 +161,7 @@ class UIPopupEditObjectVisitor{
                 ResetDisplayExplanationTextObjectVoid();
                 ResetDisplayPopularTagListSelectorObjectVoid();
                 ResetDisplaySentenceListViewObjectVoid();
+                ResetDisplayTargetExhibitionTextObjectVoid();
 
                 ResetSelectVisitorListSelectorObjectVoid();
 
@@ -146,14 +172,11 @@ class UIPopupEditObjectVisitor{
 
             if(selectedVisitorObject != null){
 
-                displayExplanationTextObject.disabled = false;
+                displayExplanationButtonObject.disabled = false;
                 displayPopularTagButtonObject.disabled = false;
                 displayPopularTagButtonObject.disabled = false;
-                displayPreviousVisitorTextObject.disabled = false;
                 displaySentenceButtonObject.disabled = false;
                 displaySentenceButtonObject.disabled = false;
-                displayTargetExhibitionTextObject.disabled = false;
-                displayVisitorIndexTextObject.disabled = false;
                 inputNameTextInputObject.disabled = false;
                 resetButtonObject.disabled = false;
                 selectCurrentExhibitionListSelectorObject.disabled = false;
@@ -162,21 +185,17 @@ class UIPopupEditObjectVisitor{
                 UpdateDisplayExplanationTextObjectVoid();
                 UpdateDisplayPopularTagListSelectorObjectVoid();
                 UpdateDisplaySentenceListViewObjectVoid();
-
-                
+                UpdateDisplayTargetExhibitionTextObjectVoid();
 
             }
 
             if(selectVisitorListSelectorObject.selectedIndex == -1){
 
-                displayExplanationTextObject.disabled = true;
+                displayExplanationButtonObject.disabled = true;
                 displayPopularTagButtonObject.disabled = true;
                 displayPopularTagButtonObject.disabled = true;
-                displayPreviousVisitorTextObject.disabled = true;
                 displaySentenceButtonObject.disabled = true;
                 displaySentenceButtonObject.disabled = true;
-                displayTargetExhibitionTextObject.disabled = true;
-                displayVisitorIndexTextObject.disabled = true;
                 inputNameTextInputObject.disabled = true;
                 resetButtonObject.disabled = true;
                 selectCurrentExhibitionListSelectorObject.disabled = true;
@@ -189,8 +208,8 @@ class UIPopupEditObjectVisitor{
     }
 
     private function ResetDisplayExplanationTextObjectVoid(){
-        if(displayExplanationTextObject != null){
-            displayExplanationTextObject.text = "";
+        if(displayExplanationPopupObject != null){
+            Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
         }
     }
     private function ResetDisplayPopularTagListSelectorObjectVoid(){
@@ -202,6 +221,9 @@ class UIPopupEditObjectVisitor{
         if(displaySentencePopupObject != null){
             Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
         }
+    }
+    private function ResetDisplayTargetExhibitionTextObjectVoid(){
+        if(displayTargetExhibitionTextObject != null){ displayTargetExhibitionTextObject.text = ""; }
     }
 
     private function ResetSelectVisitorListSelectorObjectVoid(){
@@ -218,27 +240,31 @@ class UIPopupEditObjectVisitor{
     }
 
     private function UpdateDisplayExplanationTextObjectVoid(){
-        var updateExplanationBool:Bool = false;
-        var loopCounter1Int:Int = 0;
-        if(selectedVisitorExplanationStringArray.length != selectedVisitorObject.GetExplanationStringArray().length){ updateExplanationBool = true; }
-        while(loopCounter1Int < selectedVisitorObject.GetExplanationStringArray().length){
-            if(updateExplanationBool == true){ break; }
-            if(selectedVisitorExplanationStringArray[loopCounter1Int] != selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int]){
-                updateExplanationBool = true;
-                break;
-            }
-            loopCounter1Int ++;
-        }
-        if(updateExplanationBool == true){
-            CollectionFunction.ClearArray(selectedVisitorExplanationStringArray);
-            displayExplanationTextObject.text = "";
-            var displayExplanationString:String = "";
+        if(displayExplanationPopupObject != null){
+            Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
+            displayExplanationPopupObject.y = popupObject.y;
+            var updateExplanationBool:Bool = false;
             var loopCounter1Int:Int = 0;
+            if(selectedVisitorExplanationStringArray.length != selectedVisitorObject.GetExplanationStringArray().length){ updateExplanationBool = true; }
             while(loopCounter1Int < selectedVisitorObject.GetExplanationStringArray().length){
-                displayExplanationString = displayExplanationString + selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int] + "\n";
+                if(updateExplanationBool == true){ break; }
+                if(selectedVisitorExplanationStringArray[loopCounter1Int] != selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int]){
+                    updateExplanationBool = true;
+                    break;
+                }
                 loopCounter1Int ++;
             }
-            displayExplanationTextObject.text = displayExplanationString;
+            if(updateExplanationBool == true){
+                CollectionFunction.ClearArray(selectedVisitorExplanationStringArray);
+                Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
+                var loopCounter1Int:Int = 0;
+                while(loopCounter1Int < selectedVisitorObject.GetExplanationStringArray().length){
+                    trace(selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int]);
+                    selectedVisitorExplanationStringArray.push(selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int]);
+                    Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int]);
+                    loopCounter1Int ++;
+                }
+            }
         }
     }
 
@@ -305,6 +331,21 @@ class UIPopupEditObjectVisitor{
                 }
             }
         }
+    }
+
+    private function UpdateDisplayTargetExhibitionTextObjectVoid(){
+        var targetExhibitionNameFullString:String = "";
+        var loopCounter1Int:Int = 0;
+        while(loopCounter1Int < selectedVisitorObject.GetExhibitionTargetObjectArray().length){
+            if(loopCounter1Int == selectedVisitorObject.GetExhibitionTargetObjectArray().length - 1){
+                targetExhibitionNameFullString = targetExhibitionNameFullString + selectedVisitorObject.GetExhibitionTargetObjectArray()[loopCounter1Int].GetNameStruct().nameFullString;
+            }
+            else{
+                targetExhibitionNameFullString = targetExhibitionNameFullString + selectedVisitorObject.GetExhibitionTargetObjectArray()[loopCounter1Int].GetNameStruct().nameFullString + "\n";
+            }
+            loopCounter1Int ++;
+        }
+        displayTargetExhibitionTextObject.text = targetExhibitionNameFullString;
     }
 
 }

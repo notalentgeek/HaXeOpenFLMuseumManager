@@ -313,6 +313,7 @@ class ObjectVisitor{
         while(exhibitionTargetObjectArray.length > _targetInt){ exhibitionTargetObjectArray.pop(); }
     }
     public function GetExhibitionCurrentObject(){ return exhibitionCurrentObject; }
+    public function GetExhibitionTargetObjectArray(){ return exhibitionTargetObjectArray; }
     public function GetExplanationStringArray(){ return explanationStringArray; }
     public function GetFinishedBool(){ return finishedBool; }
     public function GetIndexLocalInt(){ return indexLocalInt; }

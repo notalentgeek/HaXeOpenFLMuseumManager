@@ -23,9 +23,7 @@
         <!--##################################################-->
 
         <text text="Explanation" />
-        <scrollview height="200" width="100%" >
-            <text disabled="true" id="UIPopupEditObjectVisitor_DisplayExplanation" multiline="true" text=" " width="100%" wrapLines="true" />
-        </scrollview>
+        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonDisplayExplanation" text="Display Explanation" width="100%" />
 
         <!--##################################################-->
 
@@ -66,9 +64,7 @@
         <!--##################################################-->
 
         <text text="Target Exhibition" />
-        <scrollview height="200" width="100%" >
-            <text disabled="true" id="UIPopupEditObjectVisitor_DisplayTargetExhibition" multiline="true" text=" " width="100%" wrapLines="true" />
-        </scrollview>
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayTargetExhibition" multiline="true" style="borderColor:0x000000;borderSize:1" text=" " width="100%" wrapLines="true" />
 
         <!--##################################################-->
 

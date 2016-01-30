@@ -97,6 +97,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual ::ObjectMuseum GetExhibitionCurrentObject( );
 		Dynamic GetExhibitionCurrentObject_dyn();
 
+		virtual Array< ::Dynamic > GetExhibitionTargetObjectArray( );
+		Dynamic GetExhibitionTargetObjectArray_dyn();
+
 		virtual Array< ::String > GetExplanationStringArray( );
 		Dynamic GetExplanationStringArray_dyn();
 

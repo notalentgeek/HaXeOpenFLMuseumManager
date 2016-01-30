@@ -58,6 +58,12 @@ class ObjectMuseum{
         );
         ChangeParentObject(_parentNameString);
         collectionGlobalObject.DetermineExhibitionFullThresholdVoid();
+
+        /*Dummy explanation.*/
+        explanationStringArray.push("Explanation 1.");
+        explanationStringArray.push("Explanation 2.");
+        explanationStringArray.push("Explanation 3.");
+        explanationStringArray.push("Explanation 4.");
     }
     private function AddChildVisitorVoid(_visitorObject:ObjectVisitor){ childStruct.childVisitorObjectArray.push(_visitorObject); }
     private function AddTagVoid(_tagObject:ObjectTag){ tagObjectArray.push(_tagObject); }

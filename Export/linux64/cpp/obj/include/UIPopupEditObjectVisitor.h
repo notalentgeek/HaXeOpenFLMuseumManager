@@ -61,7 +61,8 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("UIPopupEditObjectVisitor","\xed","\x1b","\x5e","\x0d"); }
 
 		::CollectionGlobal collectionGlobalObject;
-		::haxe::ui::toolkit::controls::Text displayExplanationTextObject;
+		::haxe::ui::toolkit::controls::Button displayExplanationButtonObject;
+		::haxe::ui::toolkit::controls::popups::Popup displayExplanationPopupObject;
 		::haxe::ui::toolkit::controls::Button displayPopularTagButtonObject;
 		::haxe::ui::toolkit::controls::popups::Popup displayPopularTagPopupObject;
 		::haxe::ui::toolkit::controls::Text displayPreviousVisitorTextObject;
@@ -96,6 +97,9 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		virtual Void ResetDisplaySentenceListViewObjectVoid( );
 		Dynamic ResetDisplaySentenceListViewObjectVoid_dyn();
 
+		virtual Void ResetDisplayTargetExhibitionTextObjectVoid( );
+		Dynamic ResetDisplayTargetExhibitionTextObjectVoid_dyn();
+
 		virtual Void ResetSelectVisitorListSelectorObjectVoid( );
 		Dynamic ResetSelectVisitorListSelectorObjectVoid_dyn();
 
@@ -107,6 +111,9 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 
 		virtual Void UpdateDisplaySentenceListViewObjectVoid( );
 		Dynamic UpdateDisplaySentenceListViewObjectVoid_dyn();
+
+		virtual Void UpdateDisplayTargetExhibitionTextObjectVoid( );
+		Dynamic UpdateDisplayTargetExhibitionTextObjectVoid_dyn();
 
 };
 
