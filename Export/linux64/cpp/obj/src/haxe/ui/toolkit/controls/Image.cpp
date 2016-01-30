@@ -72,6 +72,9 @@
 #ifndef INCLUDED_openfl__legacy_display_InteractiveObject
 #include <openfl/_legacy/display/InteractiveObject.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_display_PixelSnapping
+#include <openfl/_legacy/display/PixelSnapping.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_display_Sprite
 #include <openfl/_legacy/display/Sprite.h>
 #endif
@@ -80,9 +83,6 @@
 #endif
 #ifndef INCLUDED_openfl__legacy_events_IEventDispatcher
 #include <openfl/_legacy/events/IEventDispatcher.h>
-#endif
-#ifndef INCLUDED_openfl_display_PixelSnapping
-#include <openfl/display/PixelSnapping.h>
 #endif
 namespace haxe{
 namespace ui{

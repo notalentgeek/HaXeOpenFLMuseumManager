@@ -30,23 +30,14 @@
 #ifndef INCLUDED_openfl__legacy_text_TextField
 #include <openfl/_legacy/text/TextField.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_text_TextFieldAutoSize
+#include <openfl/_legacy/text/TextFieldAutoSize.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_text_TextFormat
 #include <openfl/_legacy/text/TextFormat.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_text_TextLineMetrics
 #include <openfl/_legacy/text/TextLineMetrics.h>
-#endif
-#ifndef INCLUDED_openfl_text_AntiAliasType
-#include <openfl/text/AntiAliasType.h>
-#endif
-#ifndef INCLUDED_openfl_text_GridFitType
-#include <openfl/text/GridFitType.h>
-#endif
-#ifndef INCLUDED_openfl_text_TextFieldAutoSize
-#include <openfl/text/TextFieldAutoSize.h>
-#endif
-#ifndef INCLUDED_openfl_text_TextFieldType
-#include <openfl/text/TextFieldType.h>
 #endif
 namespace openfl{
 namespace _legacy{
@@ -62,7 +53,7 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(50)
 	super::__construct(tmp,HX_HCSTRING("TextField","\xad","\x04","\x54","\x3b"));
 	HX_STACK_LINE(52)
-	this->gridFitType = ::openfl::text::GridFitType_obj::PIXEL;
+	this->gridFitType = ((Dynamic)((int)1));
 	HX_STACK_LINE(53)
 	this->sharpness = (int)0;
 	HX_STACK_LINE(54)
@@ -334,7 +325,7 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC3(TextField_obj,setTextFormat,(void))
 
-::openfl::text::TextFieldAutoSize TextField_obj::get_autoSize( ){
+::openfl::_legacy::text::TextFieldAutoSize TextField_obj::get_autoSize( ){
 	HX_STACK_FRAME("openfl._legacy.text.TextField","get_autoSize",0xddbc7277,"openfl._legacy.text.TextField.get_autoSize","openfl/_legacy/text/TextField.hx",151,0xa9138a6d)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(151)
@@ -342,7 +333,7 @@ HX_DEFINE_DYNAMIC_FUNC3(TextField_obj,setTextFormat,(void))
 	HX_STACK_LINE(151)
 	int tmp1 = ::openfl::_legacy::text::TextField_obj::lime_text_field_get_auto_size(tmp);		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(151)
-	::openfl::text::TextFieldAutoSize tmp2 = ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::text::TextFieldAutoSize >(),tmp1,null());		HX_STACK_VAR(tmp2,"tmp2");
+	::openfl::_legacy::text::TextFieldAutoSize tmp2 = ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::_legacy::text::TextFieldAutoSize >(),tmp1,null());		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(151)
 	return tmp2;
 }
@@ -350,7 +341,7 @@ HX_DEFINE_DYNAMIC_FUNC3(TextField_obj,setTextFormat,(void))
 
 HX_DEFINE_DYNAMIC_FUNC0(TextField_obj,get_autoSize,return )
 
-::openfl::text::TextFieldAutoSize TextField_obj::set_autoSize( ::openfl::text::TextFieldAutoSize value){
+::openfl::_legacy::text::TextFieldAutoSize TextField_obj::set_autoSize( ::openfl::_legacy::text::TextFieldAutoSize value){
 	HX_STACK_FRAME("openfl._legacy.text.TextField","set_autoSize",0xf2b595eb,"openfl._legacy.text.TextField.set_autoSize","openfl/_legacy/text/TextField.hx",152,0xa9138a6d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
@@ -359,7 +350,7 @@ HX_DEFINE_DYNAMIC_FUNC0(TextField_obj,get_autoSize,return )
 	HX_STACK_LINE(152)
 	::openfl::_legacy::text::TextField_obj::lime_text_field_set_auto_size(tmp,value->__Index());
 	HX_STACK_LINE(152)
-	::openfl::text::TextFieldAutoSize tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
+	::openfl::_legacy::text::TextFieldAutoSize tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(152)
 	return tmp1;
 }
@@ -1033,7 +1024,7 @@ Float TextField_obj::get_textHeight( ){
 
 HX_DEFINE_DYNAMIC_FUNC0(TextField_obj,get_textHeight,return )
 
-::openfl::text::TextFieldType TextField_obj::get_type( ){
+Dynamic TextField_obj::get_type( ){
 	HX_STACK_FRAME("openfl._legacy.text.TextField","get_type",0xd18db5e1,"openfl._legacy.text.TextField.get_type","openfl/_legacy/text/TextField.hx",231,0xa9138a6d)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(231)
@@ -1041,15 +1032,15 @@ HX_DEFINE_DYNAMIC_FUNC0(TextField_obj,get_textHeight,return )
 	HX_STACK_LINE(231)
 	bool tmp1 = ::openfl::_legacy::text::TextField_obj::lime_text_field_get_type(tmp);		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(231)
-	::openfl::text::TextFieldType tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+	Dynamic tmp2;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(231)
 	if ((tmp1)){
 		HX_STACK_LINE(231)
-		tmp2 = ::openfl::text::TextFieldType_obj::INPUT;
+		tmp2 = ((Dynamic)((int)1));
 	}
 	else{
 		HX_STACK_LINE(231)
-		tmp2 = ::openfl::text::TextFieldType_obj::DYNAMIC;
+		tmp2 = ((Dynamic)((int)0));
 	}
 	HX_STACK_LINE(231)
 	return tmp2;
@@ -1058,18 +1049,18 @@ HX_DEFINE_DYNAMIC_FUNC0(TextField_obj,get_textHeight,return )
 
 HX_DEFINE_DYNAMIC_FUNC0(TextField_obj,get_type,return )
 
-::openfl::text::TextFieldType TextField_obj::set_type( ::openfl::text::TextFieldType value){
+Dynamic TextField_obj::set_type( Dynamic value){
 	HX_STACK_FRAME("openfl._legacy.text.TextField","set_type",0x7feb0f55,"openfl._legacy.text.TextField.set_type","openfl/_legacy/text/TextField.hx",232,0xa9138a6d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
 	HX_STACK_LINE(232)
 	Dynamic tmp = this->__handle;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(232)
-	bool tmp1 = (value == ::openfl::text::TextFieldType_obj::INPUT);		HX_STACK_VAR(tmp1,"tmp1");
+	bool tmp1 = (value == ((Dynamic)((int)1)));		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(232)
 	::openfl::_legacy::text::TextField_obj::lime_text_field_set_type(tmp,tmp1);
 	HX_STACK_LINE(232)
-	::openfl::text::TextFieldType tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
+	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(232)
 	return tmp2;
 }
@@ -1468,13 +1459,13 @@ Dynamic TextField_obj::__SetField(const ::String &inName,const Dynamic &inValue,
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"borderColor") ) { if (inCallProp == hx::paccAlways) return set_borderColor(inValue); }
-		if (HX_FIELD_EQ(inName,"gridFitType") ) { gridFitType=inValue.Cast< ::openfl::text::GridFitType >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"gridFitType") ) { gridFitType=inValue.Cast< Dynamic >(); return inValue; }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"__embedFonts") ) { __embedFonts=inValue.Cast< bool >(); return inValue; }
 		break;
 	case 13:
-		if (HX_FIELD_EQ(inName,"antiAliasType") ) { antiAliasType=inValue.Cast< ::openfl::text::AntiAliasType >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"antiAliasType") ) { antiAliasType=inValue.Cast< Dynamic >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"bottomScrollV") ) { bottomScrollV=inValue.Cast< int >(); return inValue; }
 		break;
 	case 15:
@@ -1598,9 +1589,9 @@ void TextField_obj::__GetFields(Array< ::String> &outFields)
 
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo sMemberStorageInfo[] = {
-	{hx::fsObject /*::openfl::text::AntiAliasType*/ ,(int)offsetof(TextField_obj,antiAliasType),HX_HCSTRING("antiAliasType","\x68","\xc4","\xfa","\xe7")},
+	{hx::fsObject /*Dynamic*/ ,(int)offsetof(TextField_obj,antiAliasType),HX_HCSTRING("antiAliasType","\x68","\xc4","\xfa","\xe7")},
 	{hx::fsInt,(int)offsetof(TextField_obj,bottomScrollV),HX_HCSTRING("bottomScrollV","\xfe","\xf7","\x87","\x8b")},
-	{hx::fsObject /*::openfl::text::GridFitType*/ ,(int)offsetof(TextField_obj,gridFitType),HX_HCSTRING("gridFitType","\x05","\xf3","\x13","\xb4")},
+	{hx::fsObject /*Dynamic*/ ,(int)offsetof(TextField_obj,gridFitType),HX_HCSTRING("gridFitType","\x05","\xf3","\x13","\xb4")},
 	{hx::fsInt,(int)offsetof(TextField_obj,maxScrollH),HX_HCSTRING("maxScrollH","\x57","\xad","\xfc","\x9a")},
 	{hx::fsInt,(int)offsetof(TextField_obj,maxScrollV),HX_HCSTRING("maxScrollV","\x65","\xad","\xfc","\x9a")},
 	{hx::fsInt,(int)offsetof(TextField_obj,numLines),HX_HCSTRING("numLines","\xd9","\xf1","\x11","\x32")},

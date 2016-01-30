@@ -45,8 +45,17 @@
 #ifndef INCLUDED_openfl__legacy_display_Stage
 #include <openfl/_legacy/display/Stage.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_display_StageAlign
+#include <openfl/_legacy/display/StageAlign.h>
+#endif
+#ifndef INCLUDED_openfl__legacy_display_StageDisplayState
+#include <openfl/_legacy/display/StageDisplayState.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_display_StageQuality
 #include <openfl/_legacy/display/StageQuality.h>
+#endif
+#ifndef INCLUDED_openfl__legacy_display_StageScaleMode
+#include <openfl/_legacy/display/StageScaleMode.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_display_TouchInfo
 #include <openfl/_legacy/display/TouchInfo.h>
@@ -92,15 +101,6 @@
 #endif
 #ifndef INCLUDED_openfl_display_Stage3D
 #include <openfl/display/Stage3D.h>
-#endif
-#ifndef INCLUDED_openfl_display_StageAlign
-#include <openfl/display/StageAlign.h>
-#endif
-#ifndef INCLUDED_openfl_display_StageDisplayState
-#include <openfl/display/StageDisplayState.h>
-#endif
-#ifndef INCLUDED_openfl_display_StageScaleMode
-#include <openfl/display/StageScaleMode.h>
 #endif
 #ifndef INCLUDED_openfl_events_FocusEvent
 #include <openfl/events/FocusEvent.h>
@@ -409,46 +409,42 @@ Void Stage_obj::__checkFocusInOuts( Dynamic event,Array< ::Dynamic > stack){
 			HX_STACK_LINE(237)
 			if ((tmp6)){
 				HX_STACK_LINE(239)
-				::String tmp7 = ::openfl::events::FocusEvent_obj::FOCUS_OUT;		HX_STACK_VAR(tmp7,"tmp7");
+				::openfl::_legacy::display::InteractiveObject tmp7 = newObject;		HX_STACK_VAR(tmp7,"tmp7");
 				HX_STACK_LINE(239)
-				::openfl::_legacy::display::InteractiveObject tmp8 = newObject;		HX_STACK_VAR(tmp8,"tmp8");
+				bool tmp8 = (event->__Field(HX_HCSTRING("flags","\x47","\x2b","\x8c","\x02"), hx::paccDynamic ) > (int)0);		HX_STACK_VAR(tmp8,"tmp8");
 				HX_STACK_LINE(239)
-				bool tmp9 = (event->__Field(HX_HCSTRING("flags","\x47","\x2b","\x8c","\x02"), hx::paccDynamic ) > (int)0);		HX_STACK_VAR(tmp9,"tmp9");
+				::openfl::events::FocusEvent tmp9 = ::openfl::events::FocusEvent_obj::__new(HX_HCSTRING("focusOut","\x96","\x6f","\x5e","\x11"),true,false,tmp7,tmp8,event->__Field(HX_HCSTRING("code","\x2d","\xb1","\xc4","\x41"), hx::paccDynamic ));		HX_STACK_VAR(tmp9,"tmp9");
 				HX_STACK_LINE(239)
-				::openfl::events::FocusEvent tmp10 = ::openfl::events::FocusEvent_obj::__new(tmp7,true,false,tmp8,tmp9,event->__Field(HX_HCSTRING("code","\x2d","\xb1","\xc4","\x41"), hx::paccDynamic ));		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(239)
-				::openfl::events::FocusEvent focusOut = tmp10;		HX_STACK_VAR(focusOut,"focusOut");
+				::openfl::events::FocusEvent focusOut = tmp9;		HX_STACK_VAR(focusOut,"focusOut");
 				HX_STACK_LINE(240)
-				::openfl::_legacy::display::InteractiveObject tmp11 = oldObject;		HX_STACK_VAR(tmp11,"tmp11");
+				::openfl::_legacy::display::InteractiveObject tmp10 = oldObject;		HX_STACK_VAR(tmp10,"tmp10");
 				HX_STACK_LINE(240)
-				focusOut->set_target(tmp11);
+				focusOut->set_target(tmp10);
 				HX_STACK_LINE(241)
-				::openfl::events::FocusEvent tmp12 = focusOut;		HX_STACK_VAR(tmp12,"tmp12");
+				::openfl::events::FocusEvent tmp11 = focusOut;		HX_STACK_VAR(tmp11,"tmp11");
 				HX_STACK_LINE(241)
-				oldObject->__fireEvent(tmp12);
+				oldObject->__fireEvent(tmp11);
 			}
 			HX_STACK_LINE(245)
 			bool tmp7 = (newObject != null());		HX_STACK_VAR(tmp7,"tmp7");
 			HX_STACK_LINE(245)
 			if ((tmp7)){
 				HX_STACK_LINE(247)
-				::String tmp8 = ::openfl::events::FocusEvent_obj::FOCUS_IN;		HX_STACK_VAR(tmp8,"tmp8");
+				::openfl::_legacy::display::InteractiveObject tmp8 = oldObject;		HX_STACK_VAR(tmp8,"tmp8");
 				HX_STACK_LINE(247)
-				::openfl::_legacy::display::InteractiveObject tmp9 = oldObject;		HX_STACK_VAR(tmp9,"tmp9");
+				bool tmp9 = (event->__Field(HX_HCSTRING("flags","\x47","\x2b","\x8c","\x02"), hx::paccDynamic ) > (int)0);		HX_STACK_VAR(tmp9,"tmp9");
 				HX_STACK_LINE(247)
-				bool tmp10 = (event->__Field(HX_HCSTRING("flags","\x47","\x2b","\x8c","\x02"), hx::paccDynamic ) > (int)0);		HX_STACK_VAR(tmp10,"tmp10");
+				::openfl::events::FocusEvent tmp10 = ::openfl::events::FocusEvent_obj::__new(HX_HCSTRING("focusIn","\xdd","\x45","\x83","\x41"),true,false,tmp8,tmp9,event->__Field(HX_HCSTRING("code","\x2d","\xb1","\xc4","\x41"), hx::paccDynamic ));		HX_STACK_VAR(tmp10,"tmp10");
 				HX_STACK_LINE(247)
-				::openfl::events::FocusEvent tmp11 = ::openfl::events::FocusEvent_obj::__new(tmp8,true,false,tmp9,tmp10,event->__Field(HX_HCSTRING("code","\x2d","\xb1","\xc4","\x41"), hx::paccDynamic ));		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(247)
-				::openfl::events::FocusEvent focusIn = tmp11;		HX_STACK_VAR(focusIn,"focusIn");
+				::openfl::events::FocusEvent focusIn = tmp10;		HX_STACK_VAR(focusIn,"focusIn");
 				HX_STACK_LINE(248)
-				::openfl::_legacy::display::InteractiveObject tmp12 = newObject;		HX_STACK_VAR(tmp12,"tmp12");
+				::openfl::_legacy::display::InteractiveObject tmp11 = newObject;		HX_STACK_VAR(tmp11,"tmp11");
 				HX_STACK_LINE(248)
-				focusIn->set_target(tmp12);
+				focusIn->set_target(tmp11);
 				HX_STACK_LINE(249)
-				::openfl::events::FocusEvent tmp13 = focusIn;		HX_STACK_VAR(tmp13,"tmp13");
+				::openfl::events::FocusEvent tmp12 = focusIn;		HX_STACK_VAR(tmp12,"tmp12");
 				HX_STACK_LINE(249)
-				newObject->__fireEvent(tmp13);
+				newObject->__fireEvent(tmp12);
 			}
 			HX_STACK_LINE(253)
 			this->__focusOverObjects = stack;
@@ -1059,20 +1055,16 @@ Float Stage_obj::__doProcessStageEvent( Dynamic event){
 			;break;
 			case (int)22: {
 				HX_STACK_LINE(503)
-				::String tmp4 = ::openfl::events::FocusEvent_obj::FOCUS_IN;		HX_STACK_VAR(tmp4,"tmp4");
+				::openfl::_legacy::events::Event tmp4 = ::openfl::_legacy::events::Event_obj::__new(HX_HCSTRING("focusIn","\xdd","\x45","\x83","\x41"),null(),null());		HX_STACK_VAR(tmp4,"tmp4");
 				HX_STACK_LINE(503)
-				::openfl::_legacy::events::Event tmp5 = ::openfl::_legacy::events::Event_obj::__new(tmp4,null(),null());		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(503)
-				this->__dispatchEvent(tmp5);
+				this->__dispatchEvent(tmp4);
 			}
 			;break;
 			case (int)23: {
 				HX_STACK_LINE(507)
-				::String tmp4 = ::openfl::events::FocusEvent_obj::FOCUS_OUT;		HX_STACK_VAR(tmp4,"tmp4");
+				::openfl::_legacy::events::Event tmp4 = ::openfl::_legacy::events::Event_obj::__new(HX_HCSTRING("focusOut","\x96","\x6f","\x5e","\x11"),null(),null());		HX_STACK_VAR(tmp4,"tmp4");
 				HX_STACK_LINE(507)
-				::openfl::_legacy::events::Event tmp5 = ::openfl::_legacy::events::Event_obj::__new(tmp4,null(),null());		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(507)
-				this->__dispatchEvent(tmp5);
+				this->__dispatchEvent(tmp4);
 			}
 			;break;
 			case (int)24: {
@@ -1470,11 +1462,11 @@ Void Stage_obj::__onFocus( Dynamic event){
 			HX_STACK_LINE(670)
 			if ((tmp5)){
 				HX_STACK_LINE(670)
-				tmp6 = ::openfl::events::FocusEvent_obj::MOUSE_FOCUS_CHANGE;
+				tmp6 = HX_HCSTRING("mouseFocusChange","\x43","\xf1","\x81","\x96");
 			}
 			else{
 				HX_STACK_LINE(670)
-				tmp6 = ::openfl::events::FocusEvent_obj::KEY_FOCUS_CHANGE;
+				tmp6 = HX_HCSTRING("keyFocusChange","\x09","\x9c","\x8e","\xe5");
 			}
 			HX_STACK_LINE(670)
 			int tmp7 = this->__focusOverObjects->length;		HX_STACK_VAR(tmp7,"tmp7");
@@ -1962,17 +1954,17 @@ Void Stage_obj::__onKey( Dynamic event,::String type){
 				HX_STACK_LINE(854)
 				if ((tmp33)){
 					HX_STACK_LINE(859)
-					::openfl::display::StageDisplayState tmp34 = this->get_displayState();		HX_STACK_VAR(tmp34,"tmp34");
+					::openfl::_legacy::display::StageDisplayState tmp34 = this->get_displayState();		HX_STACK_VAR(tmp34,"tmp34");
 					HX_STACK_LINE(859)
-					bool tmp35 = (tmp34 == ::openfl::display::StageDisplayState_obj::NORMAL);		HX_STACK_VAR(tmp35,"tmp35");
+					bool tmp35 = (tmp34 == ::openfl::_legacy::display::StageDisplayState_obj::NORMAL);		HX_STACK_VAR(tmp35,"tmp35");
 					HX_STACK_LINE(859)
 					if ((tmp35)){
 						HX_STACK_LINE(861)
-						this->set_displayState(::openfl::display::StageDisplayState_obj::FULL_SCREEN_INTERACTIVE);
+						this->set_displayState(::openfl::_legacy::display::StageDisplayState_obj::FULL_SCREEN_INTERACTIVE);
 					}
 					else{
 						HX_STACK_LINE(865)
-						this->set_displayState(::openfl::display::StageDisplayState_obj::NORMAL);
+						this->set_displayState(::openfl::_legacy::display::StageDisplayState_obj::NORMAL);
 					}
 				}
 			}
@@ -3012,7 +3004,7 @@ Float Stage_obj::__updateNextWake( ){
 
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,__updateNextWake,return )
 
-::openfl::display::StageAlign Stage_obj::get_align( ){
+::openfl::_legacy::display::StageAlign Stage_obj::get_align( ){
 	HX_STACK_FRAME("openfl._legacy.display.Stage","get_align",0xd4898fbc,"openfl._legacy.display.Stage.get_align","openfl/_legacy/display/Stage.hx",1258,0x8b30a073)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(1260)
@@ -3024,7 +3016,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,__updateNextWake,return )
 	HX_STACK_LINE(1261)
 	int tmp2 = i;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(1261)
-	::openfl::display::StageAlign tmp3 = ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::display::StageAlign >(),tmp2,null());		HX_STACK_VAR(tmp3,"tmp3");
+	::openfl::_legacy::display::StageAlign tmp3 = ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::_legacy::display::StageAlign >(),tmp2,null());		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(1261)
 	return tmp3;
 }
@@ -3032,7 +3024,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,__updateNextWake,return )
 
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_align,return )
 
-::openfl::display::StageAlign Stage_obj::set_align( ::openfl::display::StageAlign value){
+::openfl::_legacy::display::StageAlign Stage_obj::set_align( ::openfl::_legacy::display::StageAlign value){
 	HX_STACK_FRAME("openfl._legacy.display.Stage","set_align",0xb7da7bc8,"openfl._legacy.display.Stage.set_align","openfl/_legacy/display/Stage.hx",1266,0x8b30a073)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
@@ -3041,7 +3033,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_align,return )
 	HX_STACK_LINE(1268)
 	::openfl::_legacy::display::Stage_obj::lime_stage_set_align(tmp,value->__Index());
 	HX_STACK_LINE(1269)
-	::openfl::display::StageAlign tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
+	::openfl::_legacy::display::StageAlign tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(1269)
 	return tmp1;
 }
@@ -3076,7 +3068,7 @@ int Stage_obj::set_color( int value){
 
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_color,return )
 
-::openfl::display::StageDisplayState Stage_obj::get_displayState( ){
+::openfl::_legacy::display::StageDisplayState Stage_obj::get_displayState( ){
 	HX_STACK_FRAME("openfl._legacy.display.Stage","get_displayState",0xe50f3058,"openfl._legacy.display.Stage.get_displayState","openfl/_legacy/display/Stage.hx",1288,0x8b30a073)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(1290)
@@ -3088,7 +3080,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_color,return )
 	HX_STACK_LINE(1291)
 	int tmp2 = i;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(1291)
-	::openfl::display::StageDisplayState tmp3 = ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::display::StageDisplayState >(),tmp2,null());		HX_STACK_VAR(tmp3,"tmp3");
+	::openfl::_legacy::display::StageDisplayState tmp3 = ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::_legacy::display::StageDisplayState >(),tmp2,null());		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(1291)
 	return tmp3;
 }
@@ -3096,7 +3088,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_color,return )
 
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_displayState,return )
 
-::openfl::display::StageDisplayState Stage_obj::set_displayState( ::openfl::display::StageDisplayState value){
+::openfl::_legacy::display::StageDisplayState Stage_obj::set_displayState( ::openfl::_legacy::display::StageDisplayState value){
 	HX_STACK_FRAME("openfl._legacy.display.Stage","set_displayState",0x3b511dcc,"openfl._legacy.display.Stage.set_displayState","openfl/_legacy/display/Stage.hx",1296,0x8b30a073)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
@@ -3105,7 +3097,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_displayState,return )
 	HX_STACK_LINE(1298)
 	::openfl::_legacy::display::Stage_obj::lime_stage_set_display_state(tmp,value->__Index());
 	HX_STACK_LINE(1299)
-	::openfl::display::StageDisplayState tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
+	::openfl::_legacy::display::StageDisplayState tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(1299)
 	return tmp1;
 }
@@ -3274,7 +3266,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_quality,return )
 
 HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_quality,return )
 
-::openfl::display::StageScaleMode Stage_obj::get_scaleMode( ){
+::openfl::_legacy::display::StageScaleMode Stage_obj::get_scaleMode( ){
 	HX_STACK_FRAME("openfl._legacy.display.Stage","get_scaleMode",0x63415b84,"openfl._legacy.display.Stage.get_scaleMode","openfl/_legacy/display/Stage.hx",1370,0x8b30a073)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(1372)
@@ -3286,7 +3278,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_quality,return )
 	HX_STACK_LINE(1373)
 	int tmp2 = i;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(1373)
-	::openfl::display::StageScaleMode tmp3 = ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::display::StageScaleMode >(),tmp2,null());		HX_STACK_VAR(tmp3,"tmp3");
+	::openfl::_legacy::display::StageScaleMode tmp3 = ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::_legacy::display::StageScaleMode >(),tmp2,null());		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(1373)
 	return tmp3;
 }
@@ -3294,7 +3286,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Stage_obj,set_quality,return )
 
 HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_scaleMode,return )
 
-::openfl::display::StageScaleMode Stage_obj::set_scaleMode( ::openfl::display::StageScaleMode value){
+::openfl::_legacy::display::StageScaleMode Stage_obj::set_scaleMode( ::openfl::_legacy::display::StageScaleMode value){
 	HX_STACK_FRAME("openfl._legacy.display.Stage","set_scaleMode",0xa8473d90,"openfl._legacy.display.Stage.set_scaleMode","openfl/_legacy/display/Stage.hx",1378,0x8b30a073)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
@@ -3303,7 +3295,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Stage_obj,get_scaleMode,return )
 	HX_STACK_LINE(1380)
 	::openfl::_legacy::display::Stage_obj::lime_stage_set_scale_mode(tmp,value->__Index());
 	HX_STACK_LINE(1381)
-	::openfl::display::StageScaleMode tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
+	::openfl::_legacy::display::StageScaleMode tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(1381)
 	return tmp1;
 }

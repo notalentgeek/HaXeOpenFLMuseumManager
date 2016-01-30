@@ -33,7 +33,6 @@ class HXCPP_CLASS_ATTRIBUTES  IOErrorEvent_obj : public ::openfl::events::ErrorE
 
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
-		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("IOErrorEvent","\xb8","\x16","\xb3","\x65"); }
 

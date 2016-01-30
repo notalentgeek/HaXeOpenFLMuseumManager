@@ -7,18 +7,17 @@
 
 HX_DECLARE_CLASS3(openfl,_legacy,display,BitmapData)
 HX_DECLARE_CLASS3(openfl,_legacy,display,CapsStyle)
+HX_DECLARE_CLASS3(openfl,_legacy,display,GradientType)
 HX_DECLARE_CLASS3(openfl,_legacy,display,Graphics)
 HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
 HX_DECLARE_CLASS3(openfl,_legacy,display,IGraphicsData)
+HX_DECLARE_CLASS3(openfl,_legacy,display,InterpolationMethod)
 HX_DECLARE_CLASS3(openfl,_legacy,display,JointStyle)
 HX_DECLARE_CLASS3(openfl,_legacy,display,LineScaleMode)
 HX_DECLARE_CLASS3(openfl,_legacy,display,SpreadMethod)
 HX_DECLARE_CLASS3(openfl,_legacy,display,Tilesheet)
 HX_DECLARE_CLASS3(openfl,_legacy,display,TriangleCulling)
 HX_DECLARE_CLASS3(openfl,_legacy,geom,Matrix)
-HX_DECLARE_CLASS2(openfl,display,GradientType)
-HX_DECLARE_CLASS2(openfl,display,GraphicsPathWinding)
-HX_DECLARE_CLASS2(openfl,display,InterpolationMethod)
 namespace openfl{
 namespace _legacy{
 namespace display{
@@ -61,7 +60,7 @@ class HXCPP_CLASS_ATTRIBUTES  Graphics_obj : public hx::Object{
 		virtual Void beginFill( int color,hx::Null< Float >  alpha);
 		Dynamic beginFill_dyn();
 
-		virtual Void beginGradientFill( ::openfl::display::GradientType type,cpp::ArrayBase colors,cpp::ArrayBase alphas,cpp::ArrayBase ratios,::openfl::_legacy::geom::Matrix matrix,::openfl::_legacy::display::SpreadMethod spreadMethod,::openfl::display::InterpolationMethod interpolationMethod,hx::Null< Float >  focalPointRatio);
+		virtual Void beginGradientFill( ::openfl::_legacy::display::GradientType type,cpp::ArrayBase colors,cpp::ArrayBase alphas,cpp::ArrayBase ratios,::openfl::_legacy::geom::Matrix matrix,::openfl::_legacy::display::SpreadMethod spreadMethod,::openfl::_legacy::display::InterpolationMethod interpolationMethod,hx::Null< Float >  focalPointRatio);
 		Dynamic beginGradientFill_dyn();
 
 		virtual Void clear( );
@@ -100,7 +99,7 @@ class HXCPP_CLASS_ATTRIBUTES  Graphics_obj : public hx::Object{
 		virtual Void drawRoundRectComplex( Float x,Float y,Float width,Float height,Float topLeftRadius,Float topRightRadius,Float bottomLeftRadius,Float bottomRightRadius);
 		Dynamic drawRoundRectComplex_dyn();
 
-		virtual Void drawPath( Array< int > commands,Array< Float > data,::openfl::display::GraphicsPathWinding winding);
+		virtual Void drawPath( Array< int > commands,Array< Float > data,::String winding);
 		Dynamic drawPath_dyn();
 
 		virtual Void drawTiles( ::openfl::_legacy::display::Tilesheet sheet,Array< Float > data,hx::Null< bool >  smooth,hx::Null< int >  flags,hx::Null< int >  count);
@@ -115,7 +114,7 @@ class HXCPP_CLASS_ATTRIBUTES  Graphics_obj : public hx::Object{
 		virtual Void lineBitmapStyle( ::openfl::_legacy::display::BitmapData bitmap,::openfl::_legacy::geom::Matrix matrix,hx::Null< bool >  repeat,hx::Null< bool >  smooth);
 		Dynamic lineBitmapStyle_dyn();
 
-		virtual Void lineGradientStyle( ::openfl::display::GradientType type,cpp::ArrayBase colors,cpp::ArrayBase alphas,cpp::ArrayBase ratios,::openfl::_legacy::geom::Matrix matrix,::openfl::_legacy::display::SpreadMethod spreadMethod,::openfl::display::InterpolationMethod interpolationMethod,hx::Null< Float >  focalPointRatio);
+		virtual Void lineGradientStyle( ::openfl::_legacy::display::GradientType type,cpp::ArrayBase colors,cpp::ArrayBase alphas,cpp::ArrayBase ratios,::openfl::_legacy::geom::Matrix matrix,::openfl::_legacy::display::SpreadMethod spreadMethod,::openfl::_legacy::display::InterpolationMethod interpolationMethod,hx::Null< Float >  focalPointRatio);
 		Dynamic lineGradientStyle_dyn();
 
 		virtual Void lineStyle( Dynamic thickness,hx::Null< int >  color,hx::Null< Float >  alpha,hx::Null< bool >  pixelHinting,::openfl::_legacy::display::LineScaleMode scaleMode,::openfl::_legacy::display::CapsStyle caps,::openfl::_legacy::display::JointStyle joints,hx::Null< Float >  miterLimit);

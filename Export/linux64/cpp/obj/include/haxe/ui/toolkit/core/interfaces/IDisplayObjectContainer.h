@@ -109,7 +109,7 @@ class IDisplayObjectContainer_delegate_ : public IDisplayObjectContainer_obj
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
 		DELEGATE_haxe_ui_toolkit_core_interfaces_IDisplayObjectContainer
 		DELEGATE_haxe_ui_toolkit_core_interfaces_IDisplayObject
-		DELEGATE_haxe_ui_toolkit_core_interfaces_IClonable
+		DELEGATE_haxe_ui_toolkit_core_interfaces_IEventDispatcher
 };
 
 } // end namespace haxe

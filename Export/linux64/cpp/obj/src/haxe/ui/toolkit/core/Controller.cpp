@@ -241,7 +241,7 @@ HX_STACK_ARG(options,"options")
 	HX_END_LOCAL_FUNC1((void))
 
 	HX_STACK_LINE(43)
-	tmp5->__Field(HX_HCSTRING("addEventListener","\xcd","\x0b","\x64","\xf1"), hx::paccDynamic )(tmp6, Dynamic(new _Function_1_1(_g)),null(),null(),null());
+	tmp5->addEventListener(tmp6, Dynamic(new _Function_1_1(_g)),null(),null(),null());
 }
 ;
 	return null();

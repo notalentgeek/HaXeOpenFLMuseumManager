@@ -52,16 +52,16 @@ namespace controls{
 
 Void CheckBoxValue_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBoxValue","new",0x8364fb6a,"haxe.ui.toolkit.controls.CheckBoxValue.new","haxe/ui/toolkit/controls/CheckBox.hx",232,0xf2eee4e5)
+HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBoxValue","new",0x8364fb6a,"haxe.ui.toolkit.controls.CheckBoxValue.new","haxe/ui/toolkit/controls/CheckBox.hx",273,0xf2eee4e5)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(233)
+	HX_STACK_LINE(274)
 	super::__construct();
-	HX_STACK_LINE(234)
+	HX_STACK_LINE(275)
 	this->_value = HX_HCSTRING("unselected","\xb4","\x11","\x31","\x37");
-	HX_STACK_LINE(235)
+	HX_STACK_LINE(276)
 	this->addValue(HX_HCSTRING("selected","\x5b","\x2a","\x6d","\xb1"));
-	HX_STACK_LINE(236)
+	HX_STACK_LINE(277)
 	this->addValue(HX_HCSTRING("unselected","\xb4","\x11","\x31","\x37"));
 }
 ;

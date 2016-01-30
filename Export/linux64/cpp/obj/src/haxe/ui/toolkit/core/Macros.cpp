@@ -571,9 +571,9 @@ Void Macros_obj::insertLine( Dynamic fn,Dynamic e,int location){
 								HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","haxe/ui/toolkit/core/Macros.hx",543,0x3fba9eca)
 								{
 									hx::Anon __result = hx::Anon_obj::Create();
-									__result->Add(HX_HCSTRING("file","\x7c","\xce","\xbb","\x43") , HX_HCSTRING("/usr/share/haxe/lib/haxeui/1,8,4/haxe/ui/toolkit/core/Macros.hx","\x50","\xdd","\x6f","\x64"),false);
-									__result->Add(HX_HCSTRING("min","\x92","\x11","\x53","\x00") , (int)18014,false);
-									__result->Add(HX_HCSTRING("max","\xa4","\x0a","\x53","\x00") , (int)18043,false);
+									__result->Add(HX_HCSTRING("file","\x7c","\xce","\xbb","\x43") , HX_HCSTRING("/usr/share/haxe/lib/haxeui/1,8,6/haxe/ui/toolkit/core/Macros.hx","\x8e","\x0b","\x21","\x83"),false);
+									__result->Add(HX_HCSTRING("min","\x92","\x11","\x53","\x00") , (int)17502,false);
+									__result->Add(HX_HCSTRING("max","\xa4","\x0a","\x53","\x00") , (int)17531,false);
 									return __result;
 								}
 								return null();
@@ -612,9 +612,9 @@ Void Macros_obj::insertLine( Dynamic fn,Dynamic e,int location){
 							HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","haxe/ui/toolkit/core/Macros.hx",544,0x3fba9eca)
 							{
 								hx::Anon __result = hx::Anon_obj::Create();
-								__result->Add(HX_HCSTRING("file","\x7c","\xce","\xbb","\x43") , HX_HCSTRING("/usr/share/haxe/lib/haxeui/1,8,4/haxe/ui/toolkit/core/Macros.hx","\x50","\xdd","\x6f","\x64"),false);
-								__result->Add(HX_HCSTRING("min","\x92","\x11","\x53","\x00") , (int)18066,false);
-								__result->Add(HX_HCSTRING("max","\xa4","\x0a","\x53","\x00") , (int)18104,false);
+								__result->Add(HX_HCSTRING("file","\x7c","\xce","\xbb","\x43") , HX_HCSTRING("/usr/share/haxe/lib/haxeui/1,8,6/haxe/ui/toolkit/core/Macros.hx","\x8e","\x0b","\x21","\x83"),false);
+								__result->Add(HX_HCSTRING("min","\x92","\x11","\x53","\x00") , (int)17553,false);
+								__result->Add(HX_HCSTRING("max","\xa4","\x0a","\x53","\x00") , (int)17591,false);
 								return __result;
 							}
 							return null();
@@ -1199,209 +1199,209 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Macros_obj,hasInterface,return )
 			::String c = tmp2;		HX_STACK_VAR(c,"c");
 			HX_STACK_LINE(751)
 			++(_g);
-			HX_STACK_LINE(752)
+			HX_STACK_LINE(761)
 			::String tmp3 = c;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(752)
+			HX_STACK_LINE(761)
 			bool tmp4 = ::sys::FileSystem_obj::exists(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(752)
+			HX_STACK_LINE(761)
 			if ((tmp4)){
-				HX_STACK_LINE(753)
+				HX_STACK_LINE(762)
 				::String tmp5 = c;		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(753)
+				HX_STACK_LINE(762)
 				::String tmp6 = ::sys::io::File_obj::getContent(tmp5);		HX_STACK_VAR(tmp6,"tmp6");
-				HX_STACK_LINE(753)
+				HX_STACK_LINE(762)
 				::Xml tmp7 = ::Xml_obj::parse(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(753)
+				HX_STACK_LINE(762)
 				::Xml xml = tmp7;		HX_STACK_VAR(xml,"xml");
-				HX_STACK_LINE(754)
+				HX_STACK_LINE(763)
 				::Xml tmp8 = xml->firstElement();		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(754)
+				HX_STACK_LINE(763)
 				Array< ::String > assetPaths = ::haxe::ui::toolkit::util::XmlUtil_obj::getPathValues(tmp8,HX_HCSTRING("/project/assets/@path","\xfe","\x3d","\xae","\x84"));		HX_STACK_VAR(assetPaths,"assetPaths");
-				HX_STACK_LINE(755)
+				HX_STACK_LINE(764)
 				{
-					HX_STACK_LINE(755)
+					HX_STACK_LINE(764)
 					int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
-					HX_STACK_LINE(755)
+					HX_STACK_LINE(764)
 					while((true)){
-						HX_STACK_LINE(755)
+						HX_STACK_LINE(764)
 						bool tmp9 = (_g1 < assetPaths->length);		HX_STACK_VAR(tmp9,"tmp9");
-						HX_STACK_LINE(755)
+						HX_STACK_LINE(764)
 						bool tmp10 = !(tmp9);		HX_STACK_VAR(tmp10,"tmp10");
-						HX_STACK_LINE(755)
+						HX_STACK_LINE(764)
 						if ((tmp10)){
-							HX_STACK_LINE(755)
+							HX_STACK_LINE(764)
 							break;
 						}
-						HX_STACK_LINE(755)
+						HX_STACK_LINE(764)
 						::String tmp11 = assetPaths->__get(_g1);		HX_STACK_VAR(tmp11,"tmp11");
-						HX_STACK_LINE(755)
+						HX_STACK_LINE(764)
 						::String p = tmp11;		HX_STACK_VAR(p,"p");
-						HX_STACK_LINE(755)
+						HX_STACK_LINE(764)
 						++(_g1);
-						HX_STACK_LINE(756)
+						HX_STACK_LINE(765)
 						::String tmp12 = p;		HX_STACK_VAR(tmp12,"tmp12");
-						HX_STACK_LINE(756)
+						HX_STACK_LINE(765)
 						bool tmp13 = ::StringTools_obj::startsWith(tmp12,HX_HCSTRING("/","\x2f","\x00","\x00","\x00"));		HX_STACK_VAR(tmp13,"tmp13");
-						HX_STACK_LINE(756)
+						HX_STACK_LINE(765)
 						bool tmp14 = (tmp13 == false);		HX_STACK_VAR(tmp14,"tmp14");
-						HX_STACK_LINE(756)
+						HX_STACK_LINE(765)
 						if ((tmp14)){
-							HX_STACK_LINE(757)
+							HX_STACK_LINE(766)
 							::String tmp15 = (HX_HCSTRING("/","\x2f","\x00","\x00","\x00") + p);		HX_STACK_VAR(tmp15,"tmp15");
-							HX_STACK_LINE(757)
+							HX_STACK_LINE(766)
 							p = tmp15;
 						}
-						HX_STACK_LINE(759)
+						HX_STACK_LINE(768)
 						::String tmp15 = p;		HX_STACK_VAR(tmp15,"tmp15");
-						HX_STACK_LINE(759)
+						HX_STACK_LINE(768)
 						bool tmp16 = ::StringTools_obj::endsWith(tmp15,HX_HCSTRING("/","\x2f","\x00","\x00","\x00"));		HX_STACK_VAR(tmp16,"tmp16");
-						HX_STACK_LINE(759)
+						HX_STACK_LINE(768)
 						bool tmp17 = (tmp16 == false);		HX_STACK_VAR(tmp17,"tmp17");
-						HX_STACK_LINE(759)
+						HX_STACK_LINE(768)
 						if ((tmp17)){
-							HX_STACK_LINE(760)
+							HX_STACK_LINE(769)
 							::String tmp18 = (p + HX_HCSTRING("/","\x2f","\x00","\x00","\x00"));		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(760)
+							HX_STACK_LINE(769)
 							p = tmp18;
 						}
-						HX_STACK_LINE(762)
+						HX_STACK_LINE(771)
 						::String tmp18 = p;		HX_STACK_VAR(tmp18,"tmp18");
-						HX_STACK_LINE(762)
+						HX_STACK_LINE(771)
 						subs->push(tmp18);
 					}
 				}
-				HX_STACK_LINE(764)
+				HX_STACK_LINE(773)
 				break;
 			}
 		}
 	}
-	HX_STACK_LINE(768)
+	HX_STACK_LINE(777)
 	bool found = false;		HX_STACK_VAR(found,"found");
-	HX_STACK_LINE(769)
+	HX_STACK_LINE(778)
 	::String tmp = resourcePath;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(769)
+	HX_STACK_LINE(778)
 	bool tmp1 = ::sys::FileSystem_obj::exists(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(769)
+	HX_STACK_LINE(778)
 	bool tmp2 = (tmp1 == false);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(769)
+	HX_STACK_LINE(778)
 	if ((tmp2)){
-		HX_STACK_LINE(770)
+		HX_STACK_LINE(779)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(770)
+		HX_STACK_LINE(779)
 		while((true)){
-			HX_STACK_LINE(770)
+			HX_STACK_LINE(779)
 			bool tmp3 = (_g < paths->length);		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(770)
+			HX_STACK_LINE(779)
 			bool tmp4 = !(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(770)
+			HX_STACK_LINE(779)
 			if ((tmp4)){
-				HX_STACK_LINE(770)
+				HX_STACK_LINE(779)
 				break;
 			}
-			HX_STACK_LINE(770)
+			HX_STACK_LINE(779)
 			::String tmp5 = paths->__get(_g);		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(770)
+			HX_STACK_LINE(779)
 			::String path = tmp5;		HX_STACK_VAR(path,"path");
-			HX_STACK_LINE(770)
+			HX_STACK_LINE(779)
 			++(_g);
-			HX_STACK_LINE(771)
+			HX_STACK_LINE(780)
 			{
-				HX_STACK_LINE(771)
+				HX_STACK_LINE(780)
 				int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
-				HX_STACK_LINE(771)
+				HX_STACK_LINE(780)
 				while((true)){
-					HX_STACK_LINE(771)
+					HX_STACK_LINE(780)
 					bool tmp6 = (_g1 < subs->length);		HX_STACK_VAR(tmp6,"tmp6");
-					HX_STACK_LINE(771)
+					HX_STACK_LINE(780)
 					bool tmp7 = !(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-					HX_STACK_LINE(771)
+					HX_STACK_LINE(780)
 					if ((tmp7)){
-						HX_STACK_LINE(771)
+						HX_STACK_LINE(780)
 						break;
 					}
-					HX_STACK_LINE(771)
+					HX_STACK_LINE(780)
 					::String tmp8 = subs->__get(_g1);		HX_STACK_VAR(tmp8,"tmp8");
-					HX_STACK_LINE(771)
+					HX_STACK_LINE(780)
 					::String s = tmp8;		HX_STACK_VAR(s,"s");
-					HX_STACK_LINE(771)
+					HX_STACK_LINE(780)
 					++(_g1);
-					HX_STACK_LINE(772)
+					HX_STACK_LINE(781)
 					::String tmp9 = (path + s);		HX_STACK_VAR(tmp9,"tmp9");
-					HX_STACK_LINE(772)
+					HX_STACK_LINE(781)
 					::String tmp10 = resourcePath;		HX_STACK_VAR(tmp10,"tmp10");
-					HX_STACK_LINE(772)
+					HX_STACK_LINE(781)
 					::String tmp11 = (tmp9 + tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-					HX_STACK_LINE(772)
+					HX_STACK_LINE(781)
 					::String test = tmp11;		HX_STACK_VAR(test,"test");
-					HX_STACK_LINE(773)
+					HX_STACK_LINE(782)
 					int tmp12 = test.indexOf(HX_HCSTRING("/","\x2f","\x00","\x00","\x00"),null());		HX_STACK_VAR(tmp12,"tmp12");
-					HX_STACK_LINE(773)
+					HX_STACK_LINE(782)
 					bool tmp13 = (tmp12 == (int)0);		HX_STACK_VAR(tmp13,"tmp13");
-					HX_STACK_LINE(773)
+					HX_STACK_LINE(782)
 					bool tmp14 = !(tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-					HX_STACK_LINE(773)
+					HX_STACK_LINE(782)
 					bool tmp15;		HX_STACK_VAR(tmp15,"tmp15");
-					HX_STACK_LINE(773)
+					HX_STACK_LINE(782)
 					if ((tmp14)){
-						HX_STACK_LINE(773)
+						HX_STACK_LINE(782)
 						int tmp16 = test.indexOf(HX_HCSTRING("\\","\x5c","\x00","\x00","\x00"),null());		HX_STACK_VAR(tmp16,"tmp16");
-						HX_STACK_LINE(773)
+						HX_STACK_LINE(782)
 						int tmp17 = tmp16;		HX_STACK_VAR(tmp17,"tmp17");
-						HX_STACK_LINE(773)
+						HX_STACK_LINE(782)
 						tmp15 = (tmp17 == (int)0);
 					}
 					else{
-						HX_STACK_LINE(773)
+						HX_STACK_LINE(782)
 						tmp15 = true;
 					}
-					HX_STACK_LINE(773)
+					HX_STACK_LINE(782)
 					if ((tmp15)){
-						HX_STACK_LINE(774)
+						HX_STACK_LINE(783)
 						int tmp16 = test.length;		HX_STACK_VAR(tmp16,"tmp16");
-						HX_STACK_LINE(774)
+						HX_STACK_LINE(783)
 						::String tmp17 = test.substr((int)1,tmp16);		HX_STACK_VAR(tmp17,"tmp17");
-						HX_STACK_LINE(774)
+						HX_STACK_LINE(783)
 						test = tmp17;
 					}
-					HX_STACK_LINE(776)
+					HX_STACK_LINE(785)
 					::String tmp16 = test;		HX_STACK_VAR(tmp16,"tmp16");
-					HX_STACK_LINE(776)
+					HX_STACK_LINE(785)
 					bool tmp17 = ::sys::FileSystem_obj::exists(tmp16);		HX_STACK_VAR(tmp17,"tmp17");
-					HX_STACK_LINE(776)
+					HX_STACK_LINE(785)
 					if ((tmp17)){
-						HX_STACK_LINE(777)
+						HX_STACK_LINE(786)
 						resourcePath = test;
-						HX_STACK_LINE(778)
+						HX_STACK_LINE(787)
 						found = true;
-						HX_STACK_LINE(779)
+						HX_STACK_LINE(788)
 						break;
 					}
 				}
 			}
-			HX_STACK_LINE(783)
+			HX_STACK_LINE(792)
 			bool tmp6 = (found == true);		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(783)
+			HX_STACK_LINE(792)
 			if ((tmp6)){
-				HX_STACK_LINE(784)
+				HX_STACK_LINE(793)
 				break;
 			}
 		}
 	}
-	HX_STACK_LINE(789)
+	HX_STACK_LINE(798)
 	::String tmp3 = resourcePath;		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(789)
+	HX_STACK_LINE(798)
 	::String tmp4 = ::StringTools_obj::replace(tmp3,HX_HCSTRING("\\","\x5c","\x00","\x00","\x00"),HX_HCSTRING("/","\x2f","\x00","\x00","\x00"));		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(789)
+	HX_STACK_LINE(798)
 	resourcePath = tmp4;
-	HX_STACK_LINE(790)
+	HX_STACK_LINE(799)
 	::String tmp5 = resourcePath;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(790)
+	HX_STACK_LINE(799)
 	::String tmp6 = ::StringTools_obj::replace(tmp5,HX_HCSTRING("//","\x20","\x29","\x00","\x00"),HX_HCSTRING("/","\x2f","\x00","\x00","\x00"));		HX_STACK_VAR(tmp6,"tmp6");
-	HX_STACK_LINE(790)
+	HX_STACK_LINE(799)
 	resourcePath = tmp6;
-	HX_STACK_LINE(791)
+	HX_STACK_LINE(800)
 	::String tmp7 = resourcePath;		HX_STACK_VAR(tmp7,"tmp7");
-	HX_STACK_LINE(791)
+	HX_STACK_LINE(800)
 	return tmp7;
 }
 

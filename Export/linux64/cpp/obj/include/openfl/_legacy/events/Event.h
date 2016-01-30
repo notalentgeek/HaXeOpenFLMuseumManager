@@ -6,7 +6,6 @@
 #endif
 
 HX_DECLARE_CLASS3(openfl,_legacy,events,Event)
-HX_DECLARE_CLASS2(openfl,events,EventPhase)
 namespace openfl{
 namespace _legacy{
 namespace events{
@@ -42,7 +41,7 @@ class HXCPP_CLASS_ATTRIBUTES  Event_obj : public hx::Object{
 		bool __bubbles;
 		bool __cancelable;
 		Dynamic __currentTarget;
-		::openfl::events::EventPhase __eventPhase;
+		int __eventPhase;
 		bool __isCancelled;
 		bool __isCancelledNow;
 		Dynamic __target;
@@ -71,7 +70,7 @@ class HXCPP_CLASS_ATTRIBUTES  Event_obj : public hx::Object{
 		virtual bool __getIsCancelledNow( );
 		Dynamic __getIsCancelledNow_dyn();
 
-		virtual Void __setPhase( ::openfl::events::EventPhase value);
+		virtual Void __setPhase( int value);
 		Dynamic __setPhase_dyn();
 
 		virtual bool get_bubbles( );
@@ -86,7 +85,7 @@ class HXCPP_CLASS_ATTRIBUTES  Event_obj : public hx::Object{
 		virtual Dynamic set_currentTarget( Dynamic value);
 		Dynamic set_currentTarget_dyn();
 
-		virtual ::openfl::events::EventPhase get_eventPhase( );
+		virtual int get_eventPhase( );
 		Dynamic get_eventPhase_dyn();
 
 		virtual Dynamic get_target( );

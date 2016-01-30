@@ -27,9 +27,6 @@
 #ifndef INCLUDED_openfl_events_ErrorEvent
 #include <openfl/events/ErrorEvent.h>
 #endif
-#ifndef INCLUDED_openfl_events_EventPhase
-#include <openfl/events/EventPhase.h>
-#endif
 #ifndef INCLUDED_openfl_events_IOErrorEvent
 #include <openfl/events/IOErrorEvent.h>
 #endif
@@ -256,9 +253,9 @@ bool EventDispatcher_obj::dispatchEvent( ::openfl::_legacy::events::Event event)
 	HX_STACK_LINE(85)
 	event->set_currentTarget(hx::ObjectPtr<OBJ_>(this));
 	HX_STACK_LINE(87)
-	::openfl::events::EventPhase tmp7 = event->get_eventPhase();		HX_STACK_VAR(tmp7,"tmp7");
+	int tmp7 = event->get_eventPhase();		HX_STACK_VAR(tmp7,"tmp7");
 	HX_STACK_LINE(87)
-	bool tmp8 = (tmp7 == ::openfl::events::EventPhase_obj::CAPTURING_PHASE);		HX_STACK_VAR(tmp8,"tmp8");
+	bool tmp8 = (tmp7 == (int)1);		HX_STACK_VAR(tmp8,"tmp8");
 	HX_STACK_LINE(87)
 	bool capture = tmp8;		HX_STACK_VAR(capture,"capture");
 	HX_STACK_LINE(88)
@@ -503,11 +500,9 @@ Void EventDispatcher_obj::__dispatchIOErrorEvent( ){
 		HX_STACK_FRAME("openfl._legacy.events.EventDispatcher","__dispatchIOErrorEvent",0x8653da70,"openfl._legacy.events.EventDispatcher.__dispatchIOErrorEvent","openfl/_legacy/events/EventDispatcher.hx",187,0xebfd71ed)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(189)
-		::String tmp = ::openfl::events::IOErrorEvent_obj::IO_ERROR;		HX_STACK_VAR(tmp,"tmp");
+		::openfl::events::IOErrorEvent tmp = ::openfl::events::IOErrorEvent_obj::__new(HX_HCSTRING("ioError","\x02","\xfe","\x41","\x76"),null(),null(),null(),null());		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(189)
-		::openfl::events::IOErrorEvent tmp1 = ::openfl::events::IOErrorEvent_obj::__new(tmp,null(),null(),null(),null());		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(189)
-		this->dispatchEvent(tmp1);
+		this->dispatchEvent(tmp);
 	}
 return null();
 }

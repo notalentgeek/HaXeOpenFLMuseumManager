@@ -33,14 +33,11 @@
 #ifndef INCLUDED_openfl__legacy_text_TextField
 #include <openfl/_legacy/text/TextField.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_text_TextFieldAutoSize
+#include <openfl/_legacy/text/TextFieldAutoSize.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_text_TextFormat
 #include <openfl/_legacy/text/TextFormat.h>
-#endif
-#ifndef INCLUDED_openfl_text_TextFieldAutoSize
-#include <openfl/text/TextFieldAutoSize.h>
-#endif
-#ifndef INCLUDED_openfl_text_TextFieldType
-#include <openfl/text/TextFieldType.h>
 #endif
 namespace haxe{
 namespace ui{
@@ -61,7 +58,7 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(27)
 	::openfl::_legacy::text::TextField tmp1 = this->_tf;		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(27)
-	tmp1->set_type(::openfl::text::TextFieldType_obj::DYNAMIC);
+	tmp1->set_type(((Dynamic)((int)0)));
 	HX_STACK_LINE(28)
 	::openfl::_legacy::text::TextField tmp2 = this->_tf;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(28)
@@ -81,7 +78,7 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(32)
 	::openfl::_legacy::text::TextField tmp6 = this->_tf;		HX_STACK_VAR(tmp6,"tmp6");
 	HX_STACK_LINE(32)
-	tmp6->set_autoSize(::openfl::text::TextFieldAutoSize_obj::LEFT);
+	tmp6->set_autoSize(::openfl::_legacy::text::TextFieldAutoSize_obj::LEFT);
 	HX_STACK_LINE(33)
 	::openfl::_legacy::text::TextField tmp7 = this->_tf;		HX_STACK_VAR(tmp7,"tmp7");
 	HX_STACK_LINE(33)
@@ -311,9 +308,9 @@ bool TextDisplay_obj::get_interactive( ){
 	HX_STACK_LINE(122)
 	::openfl::_legacy::text::TextField tmp = this->_tf;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(122)
-	::openfl::text::TextFieldType tmp1 = tmp->get_type();		HX_STACK_VAR(tmp1,"tmp1");
+	Dynamic tmp1 = tmp->get_type();		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(122)
-	bool tmp2 = (tmp1 == ::openfl::text::TextFieldType_obj::INPUT);		HX_STACK_VAR(tmp2,"tmp2");
+	bool tmp2 = (tmp1 == ((Dynamic)((int)1)));		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(122)
 	return tmp2;
 }
@@ -332,7 +329,7 @@ bool TextDisplay_obj::set_interactive( bool value){
 		HX_STACK_LINE(127)
 		::openfl::_legacy::text::TextField tmp1 = this->_tf;		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(127)
-		tmp1->set_type(::openfl::text::TextFieldType_obj::INPUT);
+		tmp1->set_type(((Dynamic)((int)1)));
 		HX_STACK_LINE(128)
 		::openfl::_legacy::text::TextField tmp2 = this->_tf;		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(128)
@@ -346,7 +343,7 @@ bool TextDisplay_obj::set_interactive( bool value){
 		HX_STACK_LINE(131)
 		::openfl::_legacy::text::TextField tmp1 = this->_tf;		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(131)
-		tmp1->set_type(::openfl::text::TextFieldType_obj::DYNAMIC);
+		tmp1->set_type(((Dynamic)((int)0)));
 		HX_STACK_LINE(132)
 		::openfl::_legacy::text::TextField tmp2 = this->_tf;		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(132)
@@ -540,9 +537,9 @@ bool TextDisplay_obj::get_autoSize( ){
 	HX_STACK_LINE(184)
 	::openfl::_legacy::text::TextField tmp = this->_tf;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(184)
-	::openfl::text::TextFieldAutoSize tmp1 = tmp->get_autoSize();		HX_STACK_VAR(tmp1,"tmp1");
+	::openfl::_legacy::text::TextFieldAutoSize tmp1 = tmp->get_autoSize();		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(184)
-	bool tmp2 = (tmp1 != ::openfl::text::TextFieldAutoSize_obj::NONE);		HX_STACK_VAR(tmp2,"tmp2");
+	bool tmp2 = (tmp1 != ::openfl::_legacy::text::TextFieldAutoSize_obj::NONE);		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(184)
 	return tmp2;
 }
@@ -561,13 +558,13 @@ bool TextDisplay_obj::set_autoSize( bool value){
 		HX_STACK_LINE(189)
 		::openfl::_legacy::text::TextField tmp1 = this->_tf;		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(189)
-		tmp1->set_autoSize(::openfl::text::TextFieldAutoSize_obj::LEFT);
+		tmp1->set_autoSize(::openfl::_legacy::text::TextFieldAutoSize_obj::LEFT);
 	}
 	else{
 		HX_STACK_LINE(191)
 		::openfl::_legacy::text::TextField tmp1 = this->_tf;		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(191)
-		tmp1->set_autoSize(::openfl::text::TextFieldAutoSize_obj::NONE);
+		tmp1->set_autoSize(::openfl::_legacy::text::TextFieldAutoSize_obj::NONE);
 	}
 	HX_STACK_LINE(193)
 	bool tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");

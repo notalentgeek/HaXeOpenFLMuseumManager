@@ -85,6 +85,9 @@ class HXCPP_CLASS_ATTRIBUTES  ListPopupContent_obj : public ::haxe::ui::toolkit:
 		virtual int get_listSize( );
 		Dynamic get_listSize_dyn();
 
+		virtual ::haxe::ui::toolkit::containers::ListView GetListObject( );
+		Dynamic GetListObject_dyn();
+
 		int DELAY;
 		virtual Void _onListChange( ::haxe::ui::toolkit::events::UIEvent event);
 		Dynamic _onListChange_dyn();

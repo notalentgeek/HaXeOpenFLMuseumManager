@@ -6,7 +6,6 @@
 #endif
 
 HX_DECLARE_CLASS2(openfl,geom,Matrix3D)
-HX_DECLARE_CLASS2(openfl,geom,Orientation3D)
 HX_DECLARE_CLASS2(openfl,geom,Vector3D)
 namespace openfl{
 namespace geom{
@@ -79,7 +78,7 @@ class HXCPP_CLASS_ATTRIBUTES  Matrix3D_obj : public hx::Object{
 		virtual Void copyToMatrix3D( ::openfl::geom::Matrix3D other);
 		Dynamic copyToMatrix3D_dyn();
 
-		virtual Array< ::Dynamic > decompose( ::openfl::geom::Orientation3D orientationStyle);
+		virtual Array< ::Dynamic > decompose( Dynamic orientationStyle);
 		Dynamic decompose_dyn();
 
 		virtual ::openfl::geom::Vector3D deltaTransformVector( ::openfl::geom::Vector3D v);
@@ -109,7 +108,7 @@ class HXCPP_CLASS_ATTRIBUTES  Matrix3D_obj : public hx::Object{
 		virtual Void prependTranslation( Float x,Float y,Float z);
 		Dynamic prependTranslation_dyn();
 
-		virtual bool recompose( Array< ::Dynamic > components,::openfl::geom::Orientation3D orientationStyle);
+		virtual bool recompose( Array< ::Dynamic > components,Dynamic orientationStyle);
 		Dynamic recompose_dyn();
 
 		virtual ::openfl::geom::Vector3D transformVector( ::openfl::geom::Vector3D v);

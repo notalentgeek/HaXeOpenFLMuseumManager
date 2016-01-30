@@ -568,7 +568,7 @@ int ListView_obj::set_selectedIndex( int value){
 				HX_STACK_LINE(151)
 				++(_g);
 				HX_STACK_LINE(152)
-				selectedItem->__Field(HX_HCSTRING("set_state","\x74","\xbe","\x05","\xab"), hx::paccDynamic )(HX_HCSTRING("normal","\x27","\x72","\x69","\x30"));
+				selectedItem->set_state(HX_HCSTRING("normal","\x27","\x72","\x69","\x30"));
 			}
 		}
 		HX_STACK_LINE(154)
@@ -1143,11 +1143,11 @@ int index = __o_index.Default(-1);
 			HX_STACK_LINE(289)
 			item = tmp2;
 			HX_STACK_LINE(290)
-			item->__Field(HX_HCSTRING("set_autoSize","\x4d","\x67","\x8c","\xf9"), hx::paccDynamic )(true);
+			item->set_autoSize(true);
 			HX_STACK_LINE(291)
 			item->__FieldRef(HX_HCSTRING("hash","\xce","\x2f","\x08","\x45")) = dataHash;
 			HX_STACK_LINE(292)
-			item->__Field(HX_HCSTRING("set_percentWidth","\xfe","\x2a","\xfc","\x58"), hx::paccDynamic )((int)100);
+			item->set_percentWidth((int)100);
 			HX_STACK_LINE(294)
 			Dynamic tmp3 = data;		HX_STACK_VAR(tmp3,"tmp3");
 			HX_STACK_LINE(294)
@@ -1243,7 +1243,7 @@ int index = __o_index.Default(-1);
 			HX_STACK_LINE(312)
 			Dynamic tmp8 = this->_onListItemMouseOver_dyn();		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(312)
-			tmp6->__Field(HX_HCSTRING("addEventListener","\xcd","\x0b","\x64","\xf1"), hx::paccDynamic )(tmp7,tmp8,null(),null(),null());
+			tmp6->addEventListener(tmp7,tmp8,null(),null(),null());
 			HX_STACK_LINE(313)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp9;		HX_STACK_VAR(tmp9,"tmp9");
 			HX_STACK_LINE(313)
@@ -1253,7 +1253,7 @@ int index = __o_index.Default(-1);
 			HX_STACK_LINE(313)
 			Dynamic tmp11 = this->_onListItemMouseOut_dyn();		HX_STACK_VAR(tmp11,"tmp11");
 			HX_STACK_LINE(313)
-			tmp9->__Field(HX_HCSTRING("addEventListener","\xcd","\x0b","\x64","\xf1"), hx::paccDynamic )(tmp10,tmp11,null(),null(),null());
+			tmp9->addEventListener(tmp10,tmp11,null(),null(),null());
 			HX_STACK_LINE(314)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp12;		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(314)
@@ -1263,7 +1263,7 @@ int index = __o_index.Default(-1);
 			HX_STACK_LINE(314)
 			Dynamic tmp14 = this->_onListItemClick_dyn();		HX_STACK_VAR(tmp14,"tmp14");
 			HX_STACK_LINE(314)
-			tmp12->__Field(HX_HCSTRING("addEventListener","\xcd","\x0b","\x64","\xf1"), hx::paccDynamic )(tmp13,tmp14,null(),null(),null());
+			tmp12->addEventListener(tmp13,tmp14,null(),null(),null());
 		}
 	}
 return null();
@@ -1546,7 +1546,7 @@ bool raiseEvent = __o_raiseEvent.Default(true);
 						HX_STACK_LINE(385)
 						if ((tmp7)){
 							HX_STACK_LINE(386)
-							selectedItem->__Field(HX_HCSTRING("set_state","\x74","\xbe","\x05","\xab"), hx::paccDynamic )(HX_HCSTRING("normal","\x27","\x72","\x69","\x30"));
+							selectedItem->set_state(HX_HCSTRING("normal","\x27","\x72","\x69","\x30"));
 						}
 					}
 				}
@@ -1565,7 +1565,7 @@ bool raiseEvent = __o_raiseEvent.Default(true);
 			HX_STACK_LINE(393)
 			this->_selectedItems->remove(tmp5);
 			HX_STACK_LINE(394)
-			item->__Field(HX_HCSTRING("set_state","\x74","\xbe","\x05","\xab"), hx::paccDynamic )(HX_HCSTRING("over","\x54","\x91","\xb8","\x49"));
+			item->set_state(HX_HCSTRING("over","\x54","\x91","\xb8","\x49"));
 		}
 		else{
 			HX_STACK_LINE(396)
@@ -1573,7 +1573,7 @@ bool raiseEvent = __o_raiseEvent.Default(true);
 			HX_STACK_LINE(396)
 			this->_selectedItems->push(tmp5);
 			HX_STACK_LINE(397)
-			item->__Field(HX_HCSTRING("set_state","\x74","\xbe","\x05","\xab"), hx::paccDynamic )(HX_HCSTRING("selected","\x5b","\x2a","\x6d","\xb1"));
+			item->set_state(HX_HCSTRING("selected","\x5b","\x2a","\x6d","\xb1"));
 		}
 		HX_STACK_LINE(400)
 		::haxe::ui::toolkit::core::interfaces::IItemRenderer tmp5 = item;		HX_STACK_VAR(tmp5,"tmp5");
@@ -1791,9 +1791,9 @@ Void ListView_obj::ensureVisible( ::haxe::ui::toolkit::core::interfaces::IItemRe
 			vpos = tmp4;
 		}
 		HX_STACK_LINE(461)
-		Float tmp3 = item->__Field(HX_HCSTRING("get_y","\x50","\xa5","\x60","\x91"), hx::paccDynamic )();		HX_STACK_VAR(tmp3,"tmp3");
+		Float tmp3 = item->get_y();		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(461)
-		Float tmp4 = item->__Field(HX_HCSTRING("get_height","\xb0","\x77","\xd3","\xf2"), hx::paccDynamic )();		HX_STACK_VAR(tmp4,"tmp4");
+		Float tmp4 = item->get_height();		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(461)
 		Float tmp5 = (tmp3 + tmp4);		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(461)
@@ -1811,9 +1811,9 @@ Void ListView_obj::ensureVisible( ::haxe::ui::toolkit::core::interfaces::IItemRe
 			HX_STACK_LINE(462)
 			::haxe::ui::toolkit::controls::VScroll tmp11 = this->_vscroll;		HX_STACK_VAR(tmp11,"tmp11");
 			HX_STACK_LINE(462)
-			Float tmp12 = item->__Field(HX_HCSTRING("get_y","\x50","\xa5","\x60","\x91"), hx::paccDynamic )();		HX_STACK_VAR(tmp12,"tmp12");
+			Float tmp12 = item->get_y();		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(462)
-			Float tmp13 = item->__Field(HX_HCSTRING("get_height","\xb0","\x77","\xd3","\xf2"), hx::paccDynamic )();		HX_STACK_VAR(tmp13,"tmp13");
+			Float tmp13 = item->get_height();		HX_STACK_VAR(tmp13,"tmp13");
 			HX_STACK_LINE(462)
 			Float tmp14 = (tmp12 + tmp13);		HX_STACK_VAR(tmp14,"tmp14");
 			HX_STACK_LINE(462)
@@ -1827,7 +1827,7 @@ Void ListView_obj::ensureVisible( ::haxe::ui::toolkit::core::interfaces::IItemRe
 		}
 		else{
 			HX_STACK_LINE(463)
-			Float tmp11 = item->__Field(HX_HCSTRING("get_y","\x50","\xa5","\x60","\x91"), hx::paccDynamic )();		HX_STACK_VAR(tmp11,"tmp11");
+			Float tmp11 = item->get_y();		HX_STACK_VAR(tmp11,"tmp11");
 			HX_STACK_LINE(463)
 			Float tmp12 = vpos;		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(463)
@@ -1837,7 +1837,7 @@ Void ListView_obj::ensureVisible( ::haxe::ui::toolkit::core::interfaces::IItemRe
 				HX_STACK_LINE(464)
 				::haxe::ui::toolkit::controls::VScroll tmp14 = this->_vscroll;		HX_STACK_VAR(tmp14,"tmp14");
 				HX_STACK_LINE(464)
-				Float tmp15 = item->__Field(HX_HCSTRING("get_y","\x50","\xa5","\x60","\x91"), hx::paccDynamic )();		HX_STACK_VAR(tmp15,"tmp15");
+				Float tmp15 = item->get_y();		HX_STACK_VAR(tmp15,"tmp15");
 				HX_STACK_LINE(464)
 				tmp14->set_pos(tmp15);
 			}
@@ -1872,11 +1872,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ListView_obj,ensureVisible,(void))
 		HX_STACK_LINE(475)
 		Dynamic tmp4 = this->_itemRenderer;		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(475)
-		::haxe::ui::toolkit::core::interfaces::IItemRenderer tmp5;		HX_STACK_VAR(tmp5,"tmp5");
+		::haxe::ui::toolkit::core::renderers::ItemRenderer tmp5;		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(475)
-		tmp5 = hx::TCast< ::haxe::ui::toolkit::core::interfaces::IItemRenderer >::cast(tmp4);
+		tmp5 = hx::TCast< ::haxe::ui::toolkit::core::renderers::ItemRenderer >::cast(tmp4);
 		HX_STACK_LINE(475)
-		::haxe::ui::toolkit::core::interfaces::IItemRenderer tmp6 = tmp5->clone();		HX_STACK_VAR(tmp6,"tmp6");
+		::haxe::ui::toolkit::core::renderers::ItemRenderer tmp6 = hx::TCast< ::haxe::ui::toolkit::core::renderers::ItemRenderer >::cast(tmp5->clone());		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(475)
 		r = tmp6;
 	}
@@ -1942,7 +1942,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ListView_obj,ensureVisible,(void))
 	HX_STACK_LINE(489)
 	bool tmp5 = this->_allowSelection;		HX_STACK_VAR(tmp5,"tmp5");
 	HX_STACK_LINE(489)
-	r->__Field(HX_HCSTRING("set_useHandCursor","\x2f","\xbe","\x8c","\xb3"), hx::paccDynamic )(tmp5);
+	r->set_useHandCursor(tmp5);
 	HX_STACK_LINE(491)
 	::haxe::ui::toolkit::core::interfaces::IItemRenderer tmp6 = r;		HX_STACK_VAR(tmp6,"tmp6");
 	HX_STACK_LINE(491)

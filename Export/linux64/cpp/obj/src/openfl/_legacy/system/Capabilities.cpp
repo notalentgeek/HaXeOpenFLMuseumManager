@@ -24,9 +24,6 @@
 #ifndef INCLUDED_openfl__legacy_system_ScreenMode
 #include <openfl/_legacy/system/ScreenMode.h>
 #endif
-#ifndef INCLUDED_openfl_system_TouchscreenType
-#include <openfl/system/TouchscreenType.h>
-#endif
 namespace openfl{
 namespace _legacy{
 namespace _system{
@@ -111,7 +108,7 @@ bool Capabilities_obj::supports32BitProcesses;
 
 bool Capabilities_obj::supports64BitProcesses;
 
-::openfl::_system::TouchscreenType Capabilities_obj::touchscreenType;
+Dynamic Capabilities_obj::touchscreenType;
 
 ::String Capabilities_obj::version;
 
@@ -472,7 +469,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Capabilities_obj,get_screenModes,return )
 	HX_STACK_LINE(202)
 	if ((tmp)){
 		HX_STACK_LINE(204)
-		::String tmp1 = ::StringTools_obj::replace(HX_HCSTRING("3.5.2","\xfe","\xc5","\xff","\x7b"),HX_HCSTRING(".","\x2e","\x00","\x00","\x00"),HX_HCSTRING(",","\x2c","\x00","\x00","\x00"));		HX_STACK_VAR(tmp1,"tmp1");
+		::String tmp1 = ::StringTools_obj::replace(HX_HCSTRING("3.6.0","\x3d","\x88","\x00","\x7c"),HX_HCSTRING(".","\x2e","\x00","\x00","\x00"),HX_HCSTRING(",","\x2c","\x00","\x00","\x00"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(204)
 		::String tmp2 = (HX_HCSTRING(" ","\x20","\x00","\x00","\x00") + tmp1);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(204)
@@ -644,7 +641,7 @@ static hx::StaticInfo sStaticStorageInfo[] = {
 	{hx::fsString,(void *) &Capabilities_obj::serverString,HX_HCSTRING("serverString","\xf4","\xdb","\x68","\x98")},
 	{hx::fsBool,(void *) &Capabilities_obj::supports32BitProcesses,HX_HCSTRING("supports32BitProcesses","\xd3","\xe5","\x56","\xaa")},
 	{hx::fsBool,(void *) &Capabilities_obj::supports64BitProcesses,HX_HCSTRING("supports64BitProcesses","\xf2","\xda","\xdf","\x7d")},
-	{hx::fsObject /*::openfl::_system::TouchscreenType*/ ,(void *) &Capabilities_obj::touchscreenType,HX_HCSTRING("touchscreenType","\xc5","\x5c","\xc7","\x58")},
+	{hx::fsObject /*Dynamic*/ ,(void *) &Capabilities_obj::touchscreenType,HX_HCSTRING("touchscreenType","\xc5","\x5c","\xc7","\x58")},
 	{hx::fsString,(void *) &Capabilities_obj::version,HX_HCSTRING("version","\x18","\xe7","\xf1","\x7c")},
 	{hx::fsObject /*Array< ::Dynamic >*/ ,(void *) &Capabilities_obj::screenModes,HX_HCSTRING("screenModes","\xa4","\x70","\xdd","\xc3")},
 	{hx::fsObject /*Array< ::Dynamic >*/ ,(void *) &Capabilities_obj::screenResolutions,HX_HCSTRING("screenResolutions","\xbb","\xcd","\xc0","\xdd")},
@@ -863,7 +860,7 @@ void Capabilities_obj::__boot()
 	serverString= HX_HCSTRING("","\x00","\x00","\x00","\x00");
 	supports32BitProcesses= true;
 	supports64BitProcesses= true;
-	touchscreenType= ::openfl::_system::TouchscreenType_obj::FINGER;
+	touchscreenType= ((Dynamic)((int)0));
 	lime_capabilities_get_pixel_aspect_ratio= ::openfl::_legacy::Lib_obj::load(HX_HCSTRING("lime-legacy","\xc1","\x7f","\xb9","\x87"),HX_HCSTRING("lime_legacy_capabilities_get_pixel_aspect_ratio","\x23","\xe2","\xa3","\xad"),(int)0);
 	lime_capabilities_get_screen_dpi= ::openfl::_legacy::Lib_obj::load(HX_HCSTRING("lime-legacy","\xc1","\x7f","\xb9","\x87"),HX_HCSTRING("lime_legacy_capabilities_get_screen_dpi","\x30","\x41","\x8c","\x0b"),(int)0);
 	lime_capabilities_get_screen_resolution_x= ::openfl::_legacy::Lib_obj::load(HX_HCSTRING("lime-legacy","\xc1","\x7f","\xb9","\x87"),HX_HCSTRING("lime_legacy_capabilities_get_screen_resolution_x","\x32","\x5b","\x9b","\x64"),(int)0);

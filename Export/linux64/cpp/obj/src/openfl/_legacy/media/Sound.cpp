@@ -69,6 +69,9 @@
 #ifndef INCLUDED_openfl_media_SoundTransform
 #include <openfl/media/SoundTransform.h>
 #endif
+#ifndef INCLUDED_openfl_utils__Endian_Endian_Impl_
+#include <openfl/utils/_Endian/Endian_Impl_.h>
+#endif
 namespace openfl{
 namespace _legacy{
 namespace media{
@@ -163,19 +166,15 @@ bool useWeakReference = __o_useWeakReference.Default(false);
 		HX_STACK_LINE(67)
 		this->super::addEventListener(tmp,tmp1,tmp2,tmp3,tmp4);
 		HX_STACK_LINE(69)
-		::String tmp5 = type;		HX_STACK_VAR(tmp5,"tmp5");
+		bool tmp5 = (type == HX_HCSTRING("sampleData","\x74","\x3f","\x0b","\x5e"));		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(69)
-		::String tmp6 = ::openfl::events::SampleDataEvent_obj::SAMPLE_DATA;		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(69)
-		bool tmp7 = (tmp5 == tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(69)
-		if ((tmp7)){
+		if ((tmp5)){
 			HX_STACK_LINE(71)
-			Dynamic tmp8 = this->__handle;		HX_STACK_VAR(tmp8,"tmp8");
+			Dynamic tmp6 = this->__handle;		HX_STACK_VAR(tmp6,"tmp6");
 			HX_STACK_LINE(71)
-			bool tmp9 = (tmp8 != null());		HX_STACK_VAR(tmp9,"tmp9");
+			bool tmp7 = (tmp6 != null());		HX_STACK_VAR(tmp7,"tmp7");
 			HX_STACK_LINE(71)
-			if ((tmp9)){
+			if ((tmp7)){
 				HX_STACK_LINE(73)
 				HX_STACK_DO_THROW(HX_HCSTRING("Can't use dynamic sound once file loaded","\x98","\x42","\xab","\x4b"));
 			}
@@ -250,11 +249,9 @@ bool forcePlayAsMusic = __o_forcePlayAsMusic.Default(false);
 			HX_STACK_LINE(119)
 			::haxe::Log_obj::trace(tmp6,tmp7);
 			HX_STACK_LINE(120)
-			::String tmp8 = ::openfl::events::IOErrorEvent_obj::IO_ERROR;		HX_STACK_VAR(tmp8,"tmp8");
+			::openfl::events::IOErrorEvent tmp8 = ::openfl::events::IOErrorEvent_obj::__new(HX_HCSTRING("ioError","\x02","\xfe","\x41","\x76"),null(),null(),null(),null());		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(120)
-			::openfl::events::IOErrorEvent tmp9 = ::openfl::events::IOErrorEvent_obj::__new(tmp8,null(),null(),null(),null());		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(120)
-			this->dispatchEvent(tmp9);
+			this->dispatchEvent(tmp8);
 		}
 		else{
 			HX_STACK_LINE(124)
@@ -338,112 +335,114 @@ Float sampleRate = __o_sampleRate.Default(((Float)44100.0));
 		HX_STACK_LINE(154)
 		::openfl::_legacy::utils::ByteArray wav = tmp;		HX_STACK_VAR(wav,"wav");
 		HX_STACK_LINE(155)
-		wav->set_endian(HX_HCSTRING("littleEndian","\x31","\x2e","\x7b","\x07"));
+		::String tmp1 = ::openfl::utils::_Endian::Endian_Impl__obj::toString(((Dynamic)((int)1)));		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(155)
+		wav->set_endian(tmp1);
 		HX_STACK_LINE(157)
-		::String tmp1 = format;		HX_STACK_VAR(tmp1,"tmp1");
+		::String tmp2 = format;		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(157)
-		int tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+		int tmp3;		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(157)
-		::String _switch_1 = (tmp1);
+		::String _switch_1 = (tmp2);
 		if (  ( _switch_1==HX_HCSTRING("float","\x9c","\xc5","\x96","\x02"))){
 			HX_STACK_LINE(159)
-			tmp2 = (int)3;
+			tmp3 = (int)3;
 		}
 		else if (  ( _switch_1==HX_HCSTRING("short","\x7c","\x84","\x27","\x7c"))){
 			HX_STACK_LINE(160)
-			tmp2 = (int)1;
+			tmp3 = (int)1;
 		}
 		else  {
 			HX_STACK_LINE(161)
-			::String tmp3 = (HX_HCSTRING("Unsupported format ","\x7e","\x06","\x66","\xfe") + format);		HX_STACK_VAR(tmp3,"tmp3");
+			::String tmp4 = (HX_HCSTRING("Unsupported format ","\x7e","\x06","\x66","\xfe") + format);		HX_STACK_VAR(tmp4,"tmp4");
 			HX_STACK_LINE(161)
-			::openfl::errors::Error tmp4 = ::openfl::errors::Error_obj::__new(tmp3,null());		HX_STACK_VAR(tmp4,"tmp4");
+			::openfl::errors::Error tmp5 = ::openfl::errors::Error_obj::__new(tmp4,null());		HX_STACK_VAR(tmp5,"tmp5");
 			HX_STACK_LINE(161)
-			HX_STACK_DO_THROW(tmp4);
+			HX_STACK_DO_THROW(tmp5);
 		}
 ;
 ;
 		HX_STACK_LINE(157)
-		int audioFormat = tmp2;		HX_STACK_VAR(audioFormat,"audioFormat");
+		int audioFormat = tmp3;		HX_STACK_VAR(audioFormat,"audioFormat");
 		HX_STACK_LINE(165)
-		bool tmp3 = stereo;		HX_STACK_VAR(tmp3,"tmp3");
+		bool tmp4 = stereo;		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(165)
-		int tmp4;		HX_STACK_VAR(tmp4,"tmp4");
+		int tmp5;		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(165)
-		if ((tmp3)){
+		if ((tmp4)){
 			HX_STACK_LINE(165)
-			tmp4 = (int)2;
+			tmp5 = (int)2;
 		}
 		else{
 			HX_STACK_LINE(165)
-			tmp4 = (int)1;
+			tmp5 = (int)1;
 		}
 		HX_STACK_LINE(165)
-		int numChannels = tmp4;		HX_STACK_VAR(numChannels,"numChannels");
+		int numChannels = tmp5;		HX_STACK_VAR(numChannels,"numChannels");
 		HX_STACK_LINE(166)
-		Float tmp5 = sampleRate;		HX_STACK_VAR(tmp5,"tmp5");
+		Float tmp6 = sampleRate;		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(166)
-		int tmp6 = ::Std_obj::_int(tmp5);		HX_STACK_VAR(tmp6,"tmp6");
+		int tmp7 = ::Std_obj::_int(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(166)
-		int sampleRate1 = tmp6;		HX_STACK_VAR(sampleRate1,"sampleRate1");
+		int sampleRate1 = tmp7;		HX_STACK_VAR(sampleRate1,"sampleRate1");
 		HX_STACK_LINE(167)
-		::String tmp7 = format;		HX_STACK_VAR(tmp7,"tmp7");
+		::String tmp8 = format;		HX_STACK_VAR(tmp8,"tmp8");
 		HX_STACK_LINE(167)
-		int tmp8;		HX_STACK_VAR(tmp8,"tmp8");
+		int tmp9;		HX_STACK_VAR(tmp9,"tmp9");
 		HX_STACK_LINE(167)
-		::String _switch_2 = (tmp7);
+		::String _switch_2 = (tmp8);
 		if (  ( _switch_2==HX_HCSTRING("float","\x9c","\xc5","\x96","\x02"))){
 			HX_STACK_LINE(169)
-			tmp8 = (int)32;
+			tmp9 = (int)32;
 		}
 		else if (  ( _switch_2==HX_HCSTRING("short","\x7c","\x84","\x27","\x7c"))){
 			HX_STACK_LINE(170)
-			tmp8 = (int)16;
+			tmp9 = (int)16;
 		}
 		else  {
 			HX_STACK_LINE(171)
-			::String tmp9 = (HX_HCSTRING("Unsupported format ","\x7e","\x06","\x66","\xfe") + format);		HX_STACK_VAR(tmp9,"tmp9");
+			::String tmp10 = (HX_HCSTRING("Unsupported format ","\x7e","\x06","\x66","\xfe") + format);		HX_STACK_VAR(tmp10,"tmp10");
 			HX_STACK_LINE(171)
-			::openfl::errors::Error tmp10 = ::openfl::errors::Error_obj::__new(tmp9,null());		HX_STACK_VAR(tmp10,"tmp10");
+			::openfl::errors::Error tmp11 = ::openfl::errors::Error_obj::__new(tmp10,null());		HX_STACK_VAR(tmp11,"tmp11");
 			HX_STACK_LINE(171)
-			HX_STACK_DO_THROW(tmp10);
+			HX_STACK_DO_THROW(tmp11);
 		}
 ;
 ;
 		HX_STACK_LINE(167)
-		int bitsPerSample = tmp8;		HX_STACK_VAR(bitsPerSample,"bitsPerSample");
+		int bitsPerSample = tmp9;		HX_STACK_VAR(bitsPerSample,"bitsPerSample");
 		HX_STACK_LINE(175)
-		int tmp9 = (sampleRate1 * numChannels);		HX_STACK_VAR(tmp9,"tmp9");
+		int tmp10 = (sampleRate1 * numChannels);		HX_STACK_VAR(tmp10,"tmp10");
 		HX_STACK_LINE(175)
-		int tmp10 = bitsPerSample;		HX_STACK_VAR(tmp10,"tmp10");
+		int tmp11 = bitsPerSample;		HX_STACK_VAR(tmp11,"tmp11");
 		HX_STACK_LINE(175)
-		int tmp11 = (tmp9 * tmp10);		HX_STACK_VAR(tmp11,"tmp11");
+		int tmp12 = (tmp10 * tmp11);		HX_STACK_VAR(tmp12,"tmp12");
 		HX_STACK_LINE(175)
-		Float tmp12 = (Float(tmp11) / Float((int)8));		HX_STACK_VAR(tmp12,"tmp12");
+		Float tmp13 = (Float(tmp12) / Float((int)8));		HX_STACK_VAR(tmp13,"tmp13");
 		HX_STACK_LINE(175)
-		int tmp13 = ::Std_obj::_int(tmp12);		HX_STACK_VAR(tmp13,"tmp13");
+		int tmp14 = ::Std_obj::_int(tmp13);		HX_STACK_VAR(tmp14,"tmp14");
 		HX_STACK_LINE(175)
-		int byteRate = tmp13;		HX_STACK_VAR(byteRate,"byteRate");
+		int byteRate = tmp14;		HX_STACK_VAR(byteRate,"byteRate");
 		HX_STACK_LINE(176)
-		int tmp14 = (numChannels * bitsPerSample);		HX_STACK_VAR(tmp14,"tmp14");
+		int tmp15 = (numChannels * bitsPerSample);		HX_STACK_VAR(tmp15,"tmp15");
 		HX_STACK_LINE(176)
-		Float tmp15 = (Float(tmp14) / Float((int)8));		HX_STACK_VAR(tmp15,"tmp15");
+		Float tmp16 = (Float(tmp15) / Float((int)8));		HX_STACK_VAR(tmp16,"tmp16");
 		HX_STACK_LINE(176)
-		int tmp16 = ::Std_obj::_int(tmp15);		HX_STACK_VAR(tmp16,"tmp16");
+		int tmp17 = ::Std_obj::_int(tmp16);		HX_STACK_VAR(tmp17,"tmp17");
 		HX_STACK_LINE(176)
-		int blockAlign = tmp16;		HX_STACK_VAR(blockAlign,"blockAlign");
+		int blockAlign = tmp17;		HX_STACK_VAR(blockAlign,"blockAlign");
 		HX_STACK_LINE(177)
-		Float tmp17 = (Float(bytes->length) / Float(blockAlign));		HX_STACK_VAR(tmp17,"tmp17");
+		Float tmp18 = (Float(bytes->length) / Float(blockAlign));		HX_STACK_VAR(tmp18,"tmp18");
 		HX_STACK_LINE(177)
-		int tmp18 = ::Std_obj::_int(tmp17);		HX_STACK_VAR(tmp18,"tmp18");
+		int tmp19 = ::Std_obj::_int(tmp18);		HX_STACK_VAR(tmp19,"tmp19");
 		HX_STACK_LINE(177)
-		int numSamples = tmp18;		HX_STACK_VAR(numSamples,"numSamples");
+		int numSamples = tmp19;		HX_STACK_VAR(numSamples,"numSamples");
 		HX_STACK_LINE(179)
 		wav->writeUTFBytes(HX_HCSTRING("RIFF","\xb7","\x20","\x6b","\x36"));
 		HX_STACK_LINE(180)
-		int tmp19 = ((int)36 + bytes->length);		HX_STACK_VAR(tmp19,"tmp19");
+		int tmp20 = ((int)36 + bytes->length);		HX_STACK_VAR(tmp20,"tmp20");
 		HX_STACK_LINE(180)
-		wav->writeInt(tmp19);
+		wav->writeInt(tmp20);
 		HX_STACK_LINE(181)
 		wav->writeUTFBytes(HX_HCSTRING("WAVE","\xb9","\x2d","\xb3","\x39"));
 		HX_STACK_LINE(182)
@@ -451,49 +450,49 @@ Float sampleRate = __o_sampleRate.Default(((Float)44100.0));
 		HX_STACK_LINE(183)
 		wav->writeInt((int)16);
 		HX_STACK_LINE(184)
-		int tmp20 = audioFormat;		HX_STACK_VAR(tmp20,"tmp20");
+		int tmp21 = audioFormat;		HX_STACK_VAR(tmp21,"tmp21");
 		HX_STACK_LINE(184)
-		wav->writeShort(tmp20);
-		HX_STACK_LINE(185)
-		int tmp21 = numChannels;		HX_STACK_VAR(tmp21,"tmp21");
-		HX_STACK_LINE(185)
 		wav->writeShort(tmp21);
+		HX_STACK_LINE(185)
+		int tmp22 = numChannels;		HX_STACK_VAR(tmp22,"tmp22");
+		HX_STACK_LINE(185)
+		wav->writeShort(tmp22);
 		HX_STACK_LINE(186)
-		int tmp22 = sampleRate1;		HX_STACK_VAR(tmp22,"tmp22");
+		int tmp23 = sampleRate1;		HX_STACK_VAR(tmp23,"tmp23");
 		HX_STACK_LINE(186)
-		wav->writeInt(tmp22);
-		HX_STACK_LINE(187)
-		int tmp23 = byteRate;		HX_STACK_VAR(tmp23,"tmp23");
-		HX_STACK_LINE(187)
 		wav->writeInt(tmp23);
+		HX_STACK_LINE(187)
+		int tmp24 = byteRate;		HX_STACK_VAR(tmp24,"tmp24");
+		HX_STACK_LINE(187)
+		wav->writeInt(tmp24);
 		HX_STACK_LINE(188)
-		int tmp24 = blockAlign;		HX_STACK_VAR(tmp24,"tmp24");
+		int tmp25 = blockAlign;		HX_STACK_VAR(tmp25,"tmp25");
 		HX_STACK_LINE(188)
-		wav->writeShort(tmp24);
-		HX_STACK_LINE(189)
-		int tmp25 = bitsPerSample;		HX_STACK_VAR(tmp25,"tmp25");
-		HX_STACK_LINE(189)
 		wav->writeShort(tmp25);
+		HX_STACK_LINE(189)
+		int tmp26 = bitsPerSample;		HX_STACK_VAR(tmp26,"tmp26");
+		HX_STACK_LINE(189)
+		wav->writeShort(tmp26);
 		HX_STACK_LINE(190)
 		wav->writeUTFBytes(HX_HCSTRING("data","\x2a","\x56","\x63","\x42"));
 		HX_STACK_LINE(191)
-		int tmp26 = bytes->length;		HX_STACK_VAR(tmp26,"tmp26");
+		int tmp27 = bytes->length;		HX_STACK_VAR(tmp27,"tmp27");
 		HX_STACK_LINE(191)
-		wav->writeInt(tmp26);
+		wav->writeInt(tmp27);
 		HX_STACK_LINE(192)
-		::openfl::_legacy::utils::ByteArray tmp27 = bytes;		HX_STACK_VAR(tmp27,"tmp27");
+		::openfl::_legacy::utils::ByteArray tmp28 = bytes;		HX_STACK_VAR(tmp28,"tmp28");
 		HX_STACK_LINE(192)
-		int tmp28 = bytes->length;		HX_STACK_VAR(tmp28,"tmp28");
+		int tmp29 = bytes->length;		HX_STACK_VAR(tmp29,"tmp29");
 		HX_STACK_LINE(192)
-		wav->writeBytes(tmp27,(int)0,tmp28);
+		wav->writeBytes(tmp28,(int)0,tmp29);
 		HX_STACK_LINE(194)
 		wav->position = (int)0;
 		HX_STACK_LINE(195)
-		::openfl::_legacy::utils::ByteArray tmp29 = wav;		HX_STACK_VAR(tmp29,"tmp29");
+		::openfl::_legacy::utils::ByteArray tmp30 = wav;		HX_STACK_VAR(tmp30,"tmp30");
 		HX_STACK_LINE(195)
-		int tmp30 = wav->length;		HX_STACK_VAR(tmp30,"tmp30");
+		int tmp31 = wav->length;		HX_STACK_VAR(tmp31,"tmp31");
 		HX_STACK_LINE(195)
-		this->loadCompressedDataFromByteArray(tmp29,tmp30,null());
+		this->loadCompressedDataFromByteArray(tmp30,tmp31,null());
 	}
 return null();
 }
@@ -517,61 +516,59 @@ int loops = __o_loops.Default(0);
 		HX_STACK_LINE(204)
 		if ((tmp)){
 			HX_STACK_LINE(206)
-			::String tmp1 = ::openfl::events::SampleDataEvent_obj::SAMPLE_DATA;		HX_STACK_VAR(tmp1,"tmp1");
+			::openfl::events::SampleDataEvent tmp1 = ::openfl::events::SampleDataEvent_obj::__new(HX_HCSTRING("sampleData","\x74","\x3f","\x0b","\x5e"),null(),null());		HX_STACK_VAR(tmp1,"tmp1");
 			HX_STACK_LINE(206)
-			::openfl::events::SampleDataEvent tmp2 = ::openfl::events::SampleDataEvent_obj::__new(tmp1,null(),null());		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(206)
-			::openfl::events::SampleDataEvent request = tmp2;		HX_STACK_VAR(request,"request");
+			::openfl::events::SampleDataEvent request = tmp1;		HX_STACK_VAR(request,"request");
 			HX_STACK_LINE(207)
-			::openfl::events::SampleDataEvent tmp3 = request;		HX_STACK_VAR(tmp3,"tmp3");
+			::openfl::events::SampleDataEvent tmp2 = request;		HX_STACK_VAR(tmp2,"tmp2");
 			HX_STACK_LINE(207)
-			this->dispatchEvent(tmp3);
+			this->dispatchEvent(tmp2);
 			HX_STACK_LINE(209)
-			int tmp4 = request->data->length;		HX_STACK_VAR(tmp4,"tmp4");
+			int tmp3 = request->data->length;		HX_STACK_VAR(tmp3,"tmp3");
 			HX_STACK_LINE(209)
-			bool tmp5 = (tmp4 > (int)0);		HX_STACK_VAR(tmp5,"tmp5");
+			bool tmp4 = (tmp3 > (int)0);		HX_STACK_VAR(tmp4,"tmp4");
 			HX_STACK_LINE(209)
-			if ((tmp5)){
+			if ((tmp4)){
 				HX_STACK_LINE(211)
-				::openfl::_legacy::utils::ByteArray tmp6 = request->data;		HX_STACK_VAR(tmp6,"tmp6");
+				::openfl::_legacy::utils::ByteArray tmp5 = request->data;		HX_STACK_VAR(tmp5,"tmp5");
 				HX_STACK_LINE(211)
-				::openfl::media::SoundTransform tmp7 = soundTransform;		HX_STACK_VAR(tmp7,"tmp7");
+				::openfl::media::SoundTransform tmp6 = soundTransform;		HX_STACK_VAR(tmp6,"tmp6");
 				HX_STACK_LINE(211)
-				Dynamic tmp8 = ::openfl::_legacy::media::Sound_obj::lime_sound_channel_create_dynamic(tmp6,tmp7);		HX_STACK_VAR(tmp8,"tmp8");
+				Dynamic tmp7 = ::openfl::_legacy::media::Sound_obj::lime_sound_channel_create_dynamic(tmp5,tmp6);		HX_STACK_VAR(tmp7,"tmp7");
 				HX_STACK_LINE(211)
-				this->__handle = tmp8;
+				this->__handle = tmp7;
 			}
 			HX_STACK_LINE(215)
-			Dynamic tmp6 = this->__handle;		HX_STACK_VAR(tmp6,"tmp6");
+			Dynamic tmp5 = this->__handle;		HX_STACK_VAR(tmp5,"tmp5");
 			HX_STACK_LINE(215)
-			bool tmp7 = (tmp6 == null());		HX_STACK_VAR(tmp7,"tmp7");
+			bool tmp6 = (tmp5 == null());		HX_STACK_VAR(tmp6,"tmp6");
 			HX_STACK_LINE(215)
-			if ((tmp7)){
+			if ((tmp6)){
 				HX_STACK_LINE(217)
-				::openfl::_legacy::media::SoundChannel tmp8 = ::openfl::_legacy::media::SoundChannel_obj::__new(null(),startTime,loops,soundTransform);		HX_STACK_VAR(tmp8,"tmp8");
+				::openfl::_legacy::media::SoundChannel tmp7 = ::openfl::_legacy::media::SoundChannel_obj::__new(null(),startTime,loops,soundTransform);		HX_STACK_VAR(tmp7,"tmp7");
 				HX_STACK_LINE(217)
-				::openfl::_legacy::media::SoundChannel channel = tmp8;		HX_STACK_VAR(channel,"channel");
+				::openfl::_legacy::media::SoundChannel channel = tmp7;		HX_STACK_VAR(channel,"channel");
 				HX_STACK_LINE(218)
 				channel->__soundInstance = hx::ObjectPtr<OBJ_>(this);
 				HX_STACK_LINE(220)
-				::openfl::_legacy::media::SoundChannel tmp9 = channel;		HX_STACK_VAR(tmp9,"tmp9");
+				::openfl::_legacy::media::SoundChannel tmp8 = channel;		HX_STACK_VAR(tmp8,"tmp8");
 				HX_STACK_LINE(220)
-				return tmp9;
+				return tmp8;
 			}
 			HX_STACK_LINE(224)
-			Dynamic tmp8 = this->__handle;		HX_STACK_VAR(tmp8,"tmp8");
+			Dynamic tmp7 = this->__handle;		HX_STACK_VAR(tmp7,"tmp7");
 			HX_STACK_LINE(224)
-			::openfl::media::SoundTransform tmp9 = soundTransform;		HX_STACK_VAR(tmp9,"tmp9");
+			::openfl::media::SoundTransform tmp8 = soundTransform;		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(224)
-			::openfl::_legacy::media::SoundChannel tmp10 = ::openfl::_legacy::media::SoundChannel_obj::createDynamic(tmp8,tmp9,hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(tmp10,"tmp10");
+			::openfl::_legacy::media::SoundChannel tmp9 = ::openfl::_legacy::media::SoundChannel_obj::createDynamic(tmp7,tmp8,hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(tmp9,"tmp9");
 			HX_STACK_LINE(224)
-			::openfl::_legacy::media::SoundChannel result = tmp10;		HX_STACK_VAR(result,"result");
+			::openfl::_legacy::media::SoundChannel result = tmp9;		HX_STACK_VAR(result,"result");
 			HX_STACK_LINE(225)
 			this->__handle = null();
 			HX_STACK_LINE(226)
-			::openfl::_legacy::media::SoundChannel tmp11 = result;		HX_STACK_VAR(tmp11,"tmp11");
+			::openfl::_legacy::media::SoundChannel tmp10 = result;		HX_STACK_VAR(tmp10,"tmp10");
 			HX_STACK_LINE(226)
-			return tmp11;
+			return tmp10;
 		}
 		else{
 			HX_STACK_LINE(230)
@@ -717,13 +714,9 @@ Void Sound_obj::__onError( ::String msg){
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(msg,"msg")
 		HX_STACK_LINE(278)
-		::String tmp = ::openfl::events::IOErrorEvent_obj::IO_ERROR;		HX_STACK_VAR(tmp,"tmp");
+		::openfl::events::IOErrorEvent tmp = ::openfl::events::IOErrorEvent_obj::__new(HX_HCSTRING("ioError","\x02","\xfe","\x41","\x76"),true,false,msg,null());		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(278)
-		::String tmp1 = msg;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(278)
-		::openfl::events::IOErrorEvent tmp2 = ::openfl::events::IOErrorEvent_obj::__new(tmp,true,false,tmp1,null());		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(278)
-		this->dispatchEvent(tmp2);
+		this->dispatchEvent(tmp);
 		HX_STACK_LINE(279)
 		this->__handle = null();
 		HX_STACK_LINE(280)

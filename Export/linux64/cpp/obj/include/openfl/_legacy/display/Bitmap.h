@@ -12,9 +12,9 @@ HX_DECLARE_CLASS3(openfl,_legacy,display,Bitmap)
 HX_DECLARE_CLASS3(openfl,_legacy,display,BitmapData)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObject)
 HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
+HX_DECLARE_CLASS3(openfl,_legacy,display,PixelSnapping)
 HX_DECLARE_CLASS3(openfl,_legacy,events,EventDispatcher)
 HX_DECLARE_CLASS3(openfl,_legacy,events,IEventDispatcher)
-HX_DECLARE_CLASS2(openfl,display,PixelSnapping)
 namespace openfl{
 namespace _legacy{
 namespace display{
@@ -25,12 +25,12 @@ class HXCPP_CLASS_ATTRIBUTES  Bitmap_obj : public ::openfl::_legacy::display::Di
 		typedef ::openfl::_legacy::display::DisplayObject_obj super;
 		typedef Bitmap_obj OBJ_;
 		Bitmap_obj();
-		Void __construct(::openfl::_legacy::display::BitmapData bitmapData,::openfl::display::PixelSnapping pixelSnapping,hx::Null< bool >  __o_smoothing);
+		Void __construct(::openfl::_legacy::display::BitmapData bitmapData,::openfl::_legacy::display::PixelSnapping pixelSnapping,hx::Null< bool >  __o_smoothing);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="openfl._legacy.display.Bitmap")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< Bitmap_obj > __new(::openfl::_legacy::display::BitmapData bitmapData,::openfl::display::PixelSnapping pixelSnapping,hx::Null< bool >  __o_smoothing);
+		static hx::ObjectPtr< Bitmap_obj > __new(::openfl::_legacy::display::BitmapData bitmapData,::openfl::_legacy::display::PixelSnapping pixelSnapping,hx::Null< bool >  __o_smoothing);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~Bitmap_obj();
@@ -55,10 +55,10 @@ class HXCPP_CLASS_ATTRIBUTES  Bitmap_obj : public ::openfl::_legacy::display::Di
 		virtual ::openfl::_legacy::display::BitmapData set_bitmapData( ::openfl::_legacy::display::BitmapData value);
 		Dynamic set_bitmapData_dyn();
 
-		virtual ::openfl::display::PixelSnapping get_pixelSnapping( );
+		virtual ::openfl::_legacy::display::PixelSnapping get_pixelSnapping( );
 		Dynamic get_pixelSnapping_dyn();
 
-		virtual ::openfl::display::PixelSnapping set_pixelSnapping( ::openfl::display::PixelSnapping value);
+		virtual ::openfl::_legacy::display::PixelSnapping set_pixelSnapping( ::openfl::_legacy::display::PixelSnapping value);
 		Dynamic set_pixelSnapping_dyn();
 
 		virtual bool set_smoothing( bool value);

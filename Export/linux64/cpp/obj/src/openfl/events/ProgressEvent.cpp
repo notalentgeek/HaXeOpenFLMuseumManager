@@ -122,18 +122,6 @@ Dynamic ProgressEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inC
 	return super::__Field(inName,inCallProp);
 }
 
-bool ProgressEvent_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
-{
-	switch(inName.length) {
-	case 8:
-		if (HX_FIELD_EQ(inName,"PROGRESS") ) { outValue = PROGRESS; return true;  }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"SOCKET_DATA") ) { outValue = SOCKET_DATA; return true;  }
-	}
-	return false;
-}
-
 Dynamic ProgressEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
@@ -148,13 +136,6 @@ Dynamic ProgressEvent_obj::__SetField(const ::String &inName,const Dynamic &inVa
 
 bool ProgressEvent_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
 {
-	switch(inName.length) {
-	case 8:
-		if (HX_FIELD_EQ(inName,"PROGRESS") ) { PROGRESS=ioValue.Cast< ::String >(); return true; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"SOCKET_DATA") ) { SOCKET_DATA=ioValue.Cast< ::String >(); return true; }
-	}
 	return false;
 }
 
@@ -214,7 +195,7 @@ void ProgressEvent_obj::__register()
 	__mClass->mSuper = &super::__SGetClass();
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
-	__mClass->mGetStaticField = &ProgressEvent_obj::__GetStatic;
+	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
 	__mClass->mSetStaticField = &ProgressEvent_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);

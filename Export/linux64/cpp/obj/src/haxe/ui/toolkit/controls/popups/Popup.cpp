@@ -662,191 +662,203 @@ Dynamic Popup_obj::get_config( ){
 
 HX_DEFINE_DYNAMIC_FUNC0(Popup_obj,get_config,return )
 
+::haxe::ui::toolkit::controls::popups::PopupContent Popup_obj::GetContentObject( ){
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.Popup","GetContentObject",0xbac8b635,"haxe.ui.toolkit.controls.popups.Popup.GetContentObject","haxe/ui/toolkit/controls/popups/Popup.hx",172,0x52c99b44)
+	HX_STACK_THIS(this)
+	HX_STACK_LINE(172)
+	::haxe::ui::toolkit::controls::popups::PopupContent tmp = this->_content;		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(172)
+	return tmp;
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Popup_obj,GetContentObject,return )
+
 ::haxe::ui::toolkit::controls::Button Popup_obj::createStandardButton( int v){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.Popup","createStandardButton",0x74e22a5e,"haxe.ui.toolkit.controls.popups.Popup.createStandardButton","haxe/ui/toolkit/controls/popups/Popup.hx",175,0x52c99b44)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.Popup","createStandardButton",0x74e22a5e,"haxe.ui.toolkit.controls.popups.Popup.createStandardButton","haxe/ui/toolkit/controls/popups/Popup.hx",177,0x52c99b44)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(v,"v")
-	HX_STACK_LINE(175)
+	HX_STACK_LINE(177)
 	::haxe::ui::toolkit::controls::popups::Popup _g = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(176)
+	HX_STACK_LINE(178)
 	::haxe::ui::toolkit::controls::Button button = null();		HX_STACK_VAR(button,"button");
-	HX_STACK_LINE(177)
+	HX_STACK_LINE(179)
 	bool tmp = (v == (int)1);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(177)
+	HX_STACK_LINE(179)
 	if ((tmp)){
-		HX_STACK_LINE(178)
-		::haxe::ui::toolkit::controls::Button tmp1 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(178)
-		button = tmp1;
-		HX_STACK_LINE(179)
-		button->set_text(HX_HCSTRING("OK","\x1c","\x45","\x00","\x00"));
 		HX_STACK_LINE(180)
+		::haxe::ui::toolkit::controls::Button tmp1 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(180)
+		button = tmp1;
+		HX_STACK_LINE(181)
+		button->set_text(HX_HCSTRING("OK","\x1c","\x45","\x00","\x00"));
+		HX_STACK_LINE(182)
 		::String tmp2 = ::openfl::_legacy::events::MouseEvent_obj::CLICK;		HX_STACK_VAR(tmp2,"tmp2");
 
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_2_1,::haxe::ui::toolkit::controls::popups::Popup,_g)
 		int __ArgCount() const { return 1; }
 		Void run(Dynamic e){
-			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",181,0x52c99b44)
+			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",183,0x52c99b44)
 			HX_STACK_ARG(e,"e")
 			{
-				HX_STACK_LINE(181)
+				HX_STACK_LINE(183)
 				_g->clickButton((int)1);
 			}
 			return null();
 		}
 		HX_END_LOCAL_FUNC1((void))
 
-		HX_STACK_LINE(180)
+		HX_STACK_LINE(182)
 		button->addEventListener(tmp2, Dynamic(new _Function_2_1(_g)),null(),null(),null());
 	}
-	HX_STACK_LINE(184)
+	HX_STACK_LINE(186)
 	bool tmp1 = (v == (int)16);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(184)
+	HX_STACK_LINE(186)
 	if ((tmp1)){
-		HX_STACK_LINE(185)
-		::haxe::ui::toolkit::controls::Button tmp2 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(185)
-		button = tmp2;
-		HX_STACK_LINE(186)
-		button->set_text(HX_HCSTRING("Yes","\x07","\xe1","\x43","\x00"));
 		HX_STACK_LINE(187)
+		::haxe::ui::toolkit::controls::Button tmp2 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(187)
+		button = tmp2;
+		HX_STACK_LINE(188)
+		button->set_text(HX_HCSTRING("Yes","\x07","\xe1","\x43","\x00"));
+		HX_STACK_LINE(189)
 		::String tmp3 = ::openfl::_legacy::events::MouseEvent_obj::CLICK;		HX_STACK_VAR(tmp3,"tmp3");
 
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_2_1,::haxe::ui::toolkit::controls::popups::Popup,_g)
 		int __ArgCount() const { return 1; }
 		Void run(Dynamic e){
-			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",188,0x52c99b44)
+			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",190,0x52c99b44)
 			HX_STACK_ARG(e,"e")
 			{
-				HX_STACK_LINE(188)
+				HX_STACK_LINE(190)
 				_g->clickButton((int)16);
 			}
 			return null();
 		}
 		HX_END_LOCAL_FUNC1((void))
 
-		HX_STACK_LINE(187)
+		HX_STACK_LINE(189)
 		button->addEventListener(tmp3, Dynamic(new _Function_2_1(_g)),null(),null(),null());
 	}
-	HX_STACK_LINE(191)
+	HX_STACK_LINE(193)
 	bool tmp2 = (v == (int)256);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(191)
+	HX_STACK_LINE(193)
 	if ((tmp2)){
-		HX_STACK_LINE(192)
-		::haxe::ui::toolkit::controls::Button tmp3 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(192)
-		button = tmp3;
-		HX_STACK_LINE(193)
-		button->set_text(HX_HCSTRING("No","\x61","\x44","\x00","\x00"));
 		HX_STACK_LINE(194)
+		::haxe::ui::toolkit::controls::Button tmp3 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(194)
+		button = tmp3;
+		HX_STACK_LINE(195)
+		button->set_text(HX_HCSTRING("No","\x61","\x44","\x00","\x00"));
+		HX_STACK_LINE(196)
 		::String tmp4 = ::openfl::_legacy::events::MouseEvent_obj::CLICK;		HX_STACK_VAR(tmp4,"tmp4");
 
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_2_1,::haxe::ui::toolkit::controls::popups::Popup,_g)
 		int __ArgCount() const { return 1; }
 		Void run(Dynamic e){
-			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",195,0x52c99b44)
+			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",197,0x52c99b44)
 			HX_STACK_ARG(e,"e")
 			{
-				HX_STACK_LINE(195)
+				HX_STACK_LINE(197)
 				_g->clickButton((int)256);
 			}
 			return null();
 		}
 		HX_END_LOCAL_FUNC1((void))
 
-		HX_STACK_LINE(194)
+		HX_STACK_LINE(196)
 		button->addEventListener(tmp4, Dynamic(new _Function_2_1(_g)),null(),null(),null());
 	}
-	HX_STACK_LINE(198)
+	HX_STACK_LINE(200)
 	bool tmp3 = (v == (int)4096);		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(198)
+	HX_STACK_LINE(200)
 	if ((tmp3)){
-		HX_STACK_LINE(199)
-		::haxe::ui::toolkit::controls::Button tmp4 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(199)
-		button = tmp4;
-		HX_STACK_LINE(200)
-		button->set_text(HX_HCSTRING("Cancel","\x9a","\x61","\xc8","\xec"));
 		HX_STACK_LINE(201)
+		::haxe::ui::toolkit::controls::Button tmp4 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(201)
+		button = tmp4;
+		HX_STACK_LINE(202)
+		button->set_text(HX_HCSTRING("Cancel","\x9a","\x61","\xc8","\xec"));
+		HX_STACK_LINE(203)
 		::String tmp5 = ::openfl::_legacy::events::MouseEvent_obj::CLICK;		HX_STACK_VAR(tmp5,"tmp5");
 
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_2_1,::haxe::ui::toolkit::controls::popups::Popup,_g)
 		int __ArgCount() const { return 1; }
 		Void run(Dynamic e){
-			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",202,0x52c99b44)
+			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",204,0x52c99b44)
 			HX_STACK_ARG(e,"e")
 			{
-				HX_STACK_LINE(202)
+				HX_STACK_LINE(204)
 				_g->clickButton((int)4096);
 			}
 			return null();
 		}
 		HX_END_LOCAL_FUNC1((void))
 
-		HX_STACK_LINE(201)
+		HX_STACK_LINE(203)
 		button->addEventListener(tmp5, Dynamic(new _Function_2_1(_g)),null(),null(),null());
 	}
-	HX_STACK_LINE(205)
+	HX_STACK_LINE(207)
 	bool tmp4 = (v == (int)65536);		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(205)
+	HX_STACK_LINE(207)
 	if ((tmp4)){
-		HX_STACK_LINE(206)
-		::haxe::ui::toolkit::controls::Button tmp5 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(206)
-		button = tmp5;
-		HX_STACK_LINE(207)
-		button->set_text(HX_HCSTRING("Confirm","\xe0","\xc4","\x8a","\xdd"));
 		HX_STACK_LINE(208)
+		::haxe::ui::toolkit::controls::Button tmp5 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(208)
+		button = tmp5;
+		HX_STACK_LINE(209)
+		button->set_text(HX_HCSTRING("Confirm","\xe0","\xc4","\x8a","\xdd"));
+		HX_STACK_LINE(210)
 		::String tmp6 = ::openfl::_legacy::events::MouseEvent_obj::CLICK;		HX_STACK_VAR(tmp6,"tmp6");
 
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_2_1,::haxe::ui::toolkit::controls::popups::Popup,_g)
 		int __ArgCount() const { return 1; }
 		Void run(Dynamic e){
-			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",209,0x52c99b44)
+			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",211,0x52c99b44)
 			HX_STACK_ARG(e,"e")
 			{
-				HX_STACK_LINE(209)
+				HX_STACK_LINE(211)
 				_g->clickButton((int)65536);
 			}
 			return null();
 		}
 		HX_END_LOCAL_FUNC1((void))
 
-		HX_STACK_LINE(208)
+		HX_STACK_LINE(210)
 		button->addEventListener(tmp6, Dynamic(new _Function_2_1(_g)),null(),null(),null());
 	}
-	HX_STACK_LINE(212)
+	HX_STACK_LINE(214)
 	bool tmp5 = (v == (int)1048576);		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(212)
+	HX_STACK_LINE(214)
 	if ((tmp5)){
-		HX_STACK_LINE(213)
-		::haxe::ui::toolkit::controls::Button tmp6 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(213)
-		button = tmp6;
-		HX_STACK_LINE(214)
-		button->set_text(HX_HCSTRING("Close","\x98","\x87","\x90","\xdb"));
 		HX_STACK_LINE(215)
+		::haxe::ui::toolkit::controls::Button tmp6 = ::haxe::ui::toolkit::controls::Button_obj::__new();		HX_STACK_VAR(tmp6,"tmp6");
+		HX_STACK_LINE(215)
+		button = tmp6;
+		HX_STACK_LINE(216)
+		button->set_text(HX_HCSTRING("Close","\x98","\x87","\x90","\xdb"));
+		HX_STACK_LINE(217)
 		::String tmp7 = ::openfl::_legacy::events::MouseEvent_obj::CLICK;		HX_STACK_VAR(tmp7,"tmp7");
 
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_2_1,::haxe::ui::toolkit::controls::popups::Popup,_g)
 		int __ArgCount() const { return 1; }
 		Void run(Dynamic e){
-			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",216,0x52c99b44)
+			HX_STACK_FRAME("*","_Function_2_1",0x5201af78,"*._Function_2_1","haxe/ui/toolkit/controls/popups/Popup.hx",218,0x52c99b44)
 			HX_STACK_ARG(e,"e")
 			{
-				HX_STACK_LINE(216)
+				HX_STACK_LINE(218)
 				_g->clickButton((int)1048576);
 			}
 			return null();
 		}
 		HX_END_LOCAL_FUNC1((void))
 
-		HX_STACK_LINE(215)
+		HX_STACK_LINE(217)
 		button->addEventListener(tmp7, Dynamic(new _Function_2_1(_g)),null(),null(),null());
 	}
-	HX_STACK_LINE(220)
+	HX_STACK_LINE(222)
 	::haxe::ui::toolkit::controls::Button tmp6 = button;		HX_STACK_VAR(tmp6,"tmp6");
-	HX_STACK_LINE(220)
+	HX_STACK_LINE(222)
 	return tmp6;
 }
 
@@ -855,33 +867,33 @@ HX_DEFINE_DYNAMIC_FUNC1(Popup_obj,createStandardButton,return )
 
 Void Popup_obj::clickButton( int button){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.Popup","clickButton",0x9c455587,"haxe.ui.toolkit.controls.popups.Popup.clickButton","haxe/ui/toolkit/controls/popups/Popup.hx",224,0x52c99b44)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.Popup","clickButton",0x9c455587,"haxe.ui.toolkit.controls.popups.Popup.clickButton","haxe/ui/toolkit/controls/popups/Popup.hx",226,0x52c99b44)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(button,"button")
-		HX_STACK_LINE(225)
+		HX_STACK_LINE(227)
 		::haxe::ui::toolkit::controls::popups::PopupContent tmp = this->_content;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(225)
+		HX_STACK_LINE(227)
 		int tmp1 = button;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(225)
+		HX_STACK_LINE(227)
 		bool tmp2 = tmp->onButtonClicked(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(225)
+		HX_STACK_LINE(227)
 		bool tmp3 = (tmp2 == true);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(225)
+		HX_STACK_LINE(227)
 		if ((tmp3)){
-			HX_STACK_LINE(226)
+			HX_STACK_LINE(228)
 			::haxe::ui::toolkit::core::PopupManager tmp4 = ::haxe::ui::toolkit::core::PopupManager_obj::get_instance();		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(226)
+			HX_STACK_LINE(228)
 			tmp4->hidePopup(hx::ObjectPtr<OBJ_>(this),null());
 		}
-		HX_STACK_LINE(228)
+		HX_STACK_LINE(230)
 		Dynamic tmp4 = this->_fn_dyn();		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(228)
+		HX_STACK_LINE(230)
 		bool tmp5 = (tmp4 != null());		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(228)
+		HX_STACK_LINE(230)
 		if ((tmp5)){
-			HX_STACK_LINE(229)
+			HX_STACK_LINE(231)
 			int tmp6 = button;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(229)
+			HX_STACK_LINE(231)
 			this->_fn(tmp6);
 		}
 	}
@@ -893,18 +905,18 @@ HX_DEFINE_DYNAMIC_FUNC1(Popup_obj,clickButton,(void))
 
 Void Popup_obj::callClosingCallback( Dynamic button){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.Popup","callClosingCallback",0x1cd41509,"haxe.ui.toolkit.controls.popups.Popup.callClosingCallback","haxe/ui/toolkit/controls/popups/Popup.hx",233,0x52c99b44)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.Popup","callClosingCallback",0x1cd41509,"haxe.ui.toolkit.controls.popups.Popup.callClosingCallback","haxe/ui/toolkit/controls/popups/Popup.hx",235,0x52c99b44)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(button,"button")
-		HX_STACK_LINE(234)
+		HX_STACK_LINE(236)
 		Dynamic tmp = this->_fn_dyn();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(234)
+		HX_STACK_LINE(236)
 		bool tmp1 = (tmp != null());		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(234)
+		HX_STACK_LINE(236)
 		if ((tmp1)){
-			HX_STACK_LINE(235)
+			HX_STACK_LINE(237)
 			Dynamic tmp2 = button;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(235)
+			HX_STACK_LINE(237)
 			this->_fn(tmp2);
 		}
 	}
@@ -1010,6 +1022,9 @@ Dynamic Popup_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 		if (HX_FIELD_EQ(inName,"get_content") ) { return get_content_dyn(); }
 		if (HX_FIELD_EQ(inName,"clickButton") ) { return clickButton_dyn(); }
 		break;
+	case 16:
+		if (HX_FIELD_EQ(inName,"GetContentObject") ) { return GetContentObject_dyn(); }
+		break;
 	case 19:
 		if (HX_FIELD_EQ(inName,"callClosingCallback") ) { return callClosingCallback_dyn(); }
 		break;
@@ -1096,6 +1111,7 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("get_content","\x50","\xed","\x71","\x9f"),
 	HX_HCSTRING("config","\xc2","\x56","\xd2","\xc7"),
 	HX_HCSTRING("get_config","\x8b","\xc6","\x59","\xb8"),
+	HX_HCSTRING("GetContentObject","\x82","\x36","\x56","\x6f"),
 	HX_HCSTRING("createStandardButton","\x2b","\x55","\x0a","\x94"),
 	HX_HCSTRING("clickButton","\x5a","\xb8","\xe1","\x08"),
 	HX_HCSTRING("callClosingCallback","\xdc","\x02","\x9c","\xcc"),

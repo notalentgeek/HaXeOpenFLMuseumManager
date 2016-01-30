@@ -609,11 +609,9 @@ Void HScroll_obj::_onDeinc( ::openfl::_legacy::events::MouseEvent event){
 			HX_STACK_LINE(152)
 			::openfl::_legacy::utils::Timer tmp8 = this->_scrollTimer;		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(152)
-			::String tmp9 = ::openfl::events::TimerEvent_obj::TIMER_COMPLETE;		HX_STACK_VAR(tmp9,"tmp9");
+			Dynamic tmp9 = this->_onScrollTimerComplete_dyn();		HX_STACK_VAR(tmp9,"tmp9");
 			HX_STACK_LINE(152)
-			Dynamic tmp10 = this->_onScrollTimerComplete_dyn();		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(152)
-			tmp8->addEventListener(tmp9,tmp10,null(),null(),null());
+			tmp8->addEventListener(HX_HCSTRING("timerComplete","\x9e","\x49","\xcc","\x97"),tmp9,null(),null(),null());
 		}
 		HX_STACK_LINE(154)
 		::openfl::_legacy::utils::Timer tmp7 = this->_scrollTimer;		HX_STACK_VAR(tmp7,"tmp7");
@@ -670,11 +668,9 @@ Void HScroll_obj::_onInc( ::openfl::_legacy::events::MouseEvent event){
 			HX_STACK_LINE(168)
 			::openfl::_legacy::utils::Timer tmp8 = this->_scrollTimer;		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(168)
-			::String tmp9 = ::openfl::events::TimerEvent_obj::TIMER_COMPLETE;		HX_STACK_VAR(tmp9,"tmp9");
+			Dynamic tmp9 = this->_onScrollTimerComplete_dyn();		HX_STACK_VAR(tmp9,"tmp9");
 			HX_STACK_LINE(168)
-			Dynamic tmp10 = this->_onScrollTimerComplete_dyn();		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(168)
-			tmp8->addEventListener(tmp9,tmp10,null(),null(),null());
+			tmp8->addEventListener(HX_HCSTRING("timerComplete","\x9e","\x49","\xcc","\x97"),tmp9,null(),null(),null());
 		}
 		HX_STACK_LINE(170)
 		::openfl::_legacy::utils::Timer tmp7 = this->_scrollTimer;		HX_STACK_VAR(tmp7,"tmp7");

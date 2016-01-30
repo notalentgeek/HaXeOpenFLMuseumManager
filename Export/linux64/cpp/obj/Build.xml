@@ -67,17 +67,20 @@
    <depend name="include/haxe/lang/Iterable.h"/>
    <depend name="include/openfl/utils/_Object/Object_Impl_.h"/>
   </file>
-  <file name="src/openfl/text/TextFieldType.cpp">
-   <depend name="include/openfl/text/TextFieldType.h"/>
+  <file name="src/openfl/utils/_Endian/Endian_Impl_.cpp">
+   <depend name="include/openfl/utils/_Endian/Endian_Impl_.h"/>
   </file>
-  <file name="src/openfl/text/TextFieldAutoSize.cpp">
-   <depend name="include/openfl/text/TextFieldAutoSize.h"/>
+  <file name="src/openfl/text/_TextFieldType/TextFieldType_Impl_.cpp">
+   <depend name="include/openfl/text/_TextFieldType/TextFieldType_Impl_.h"/>
   </file>
-  <file name="src/openfl/text/GridFitType.cpp">
-   <depend name="include/openfl/text/GridFitType.h"/>
+  <file name="src/openfl/text/_GridFitType/GridFitType_Impl_.cpp">
+   <depend name="include/openfl/text/_GridFitType/GridFitType_Impl_.h"/>
   </file>
-  <file name="src/openfl/text/AntiAliasType.cpp">
-   <depend name="include/openfl/text/AntiAliasType.h"/>
+  <file name="src/openfl/text/_AntiAliasType/AntiAliasType_Impl_.cpp">
+   <depend name="include/openfl/text/_AntiAliasType/AntiAliasType_Impl_.h"/>
+  </file>
+  <file name="src/openfl/system/_TouchscreenType/TouchscreenType_Impl_.cpp">
+   <depend name="include/openfl/system/_TouchscreenType/TouchscreenType_Impl_.h"/>
   </file>
   <file name="src/openfl/system/SecurityDomain.cpp">
    <depend name="include/openfl/system/SecurityDomain.h"/>
@@ -99,8 +102,8 @@
   <file name="src/openfl/net/URLRequestHeader.cpp">
    <depend name="include/openfl/net/URLRequestHeader.h"/>
   </file>
-  <file name="src/openfl/net/URLLoaderDataFormat.cpp">
-   <depend name="include/openfl/net/URLLoaderDataFormat.h"/>
+  <file name="src/openfl/net/_URLLoaderDataFormat/URLLoaderDataFormat_Impl_.cpp">
+   <depend name="include/openfl/net/_URLLoaderDataFormat/URLLoaderDataFormat_Impl_.h"/>
   </file>
   <file name="src/openfl/media/SoundTransform.cpp">
    <depend name="include/openfl/media/SoundTransform.h"/>
@@ -114,17 +117,13 @@
   <file name="src/openfl/geom/Vector3D.cpp">
    <depend name="include/openfl/geom/Vector3D.h"/>
   </file>
-  <file name="src/openfl/geom/Orientation3D.cpp">
-   <depend name="include/openfl/geom/Orientation3D.h"/>
+  <file name="src/openfl/geom/_Orientation3D/Orientation3D_Impl_.cpp">
+   <depend name="include/openfl/geom/_Orientation3D/Orientation3D_Impl_.h"/>
   </file>
   <file name="src/openfl/geom/Matrix3D.cpp">
    <depend name="include/Type.h"/>
    <depend name="include/openfl/geom/Matrix3D.h"/>
-   <depend name="include/openfl/geom/Orientation3D.h"/>
    <depend name="include/openfl/geom/Vector3D.h"/>
-  </file>
-  <file name="src/openfl/filters/BitmapFilterQuality.cpp">
-   <depend name="include/openfl/filters/BitmapFilterQuality.h"/>
   </file>
   <file name="src/openfl/events/UncaughtErrorEvents.cpp">
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
@@ -149,6 +148,7 @@
    <depend name="include/openfl/_legacy/utils/IDataOutput.h"/>
    <depend name="include/openfl/_legacy/utils/IMemoryRange.h"/>
    <depend name="include/openfl/events/SampleDataEvent.h"/>
+   <depend name="include/openfl/utils/_Endian/Endian_Impl_.h"/>
   </file>
   <file name="src/openfl/events/ProgressEvent.cpp">
    <depend name="include/openfl/_legacy/events/Event.h"/>
@@ -168,9 +168,6 @@
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
    <depend name="include/openfl/events/FocusEvent.h"/>
-  </file>
-  <file name="src/openfl/events/EventPhase.cpp">
-   <depend name="include/openfl/events/EventPhase.h"/>
   </file>
   <file name="src/openfl/events/ErrorEvent.cpp">
    <depend name="include/openfl/_legacy/events/Event.h"/>
@@ -398,15 +395,6 @@
    <depend name="include/openfl/errors/Error.h"/>
    <depend name="include/openfl/geom/Matrix3D.h"/>
   </file>
-  <file name="src/openfl/display/StageScaleMode.cpp">
-   <depend name="include/openfl/display/StageScaleMode.h"/>
-  </file>
-  <file name="src/openfl/display/StageDisplayState.cpp">
-   <depend name="include/openfl/display/StageDisplayState.h"/>
-  </file>
-  <file name="src/openfl/display/StageAlign.cpp">
-   <depend name="include/openfl/display/StageAlign.h"/>
-  </file>
   <file name="src/openfl/display/Stage3D.cpp">
    <depend name="include/haxe/Timer.h"/>
    <depend name="include/openfl/_legacy/events/Event.h"/>
@@ -415,31 +403,16 @@
    <depend name="include/openfl/display/Stage3D.h"/>
    <depend name="include/openfl/display3D/Context3D.h"/>
   </file>
-  <file name="src/openfl/display/PixelSnapping.cpp">
-   <depend name="include/openfl/display/PixelSnapping.h"/>
-  </file>
   <file name="src/openfl/display/PNGEncoderOptions.cpp">
    <depend name="include/openfl/display/PNGEncoderOptions.h"/>
   </file>
   <file name="src/openfl/display/JPEGEncoderOptions.cpp">
    <depend name="include/openfl/display/JPEGEncoderOptions.h"/>
   </file>
-  <file name="src/openfl/display/InterpolationMethod.cpp">
-   <depend name="include/openfl/display/InterpolationMethod.h"/>
-  </file>
-  <file name="src/openfl/display/GraphicsPathWinding.cpp">
-   <depend name="include/openfl/display/GraphicsPathWinding.h"/>
-  </file>
-  <file name="src/openfl/display/GradientType.cpp">
-   <depend name="include/openfl/display/GradientType.h"/>
-  </file>
   <file name="src/openfl/display/FrameLabel.cpp">
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
    <depend name="include/openfl/display/FrameLabel.h"/>
-  </file>
-  <file name="src/openfl/display/BitmapDataChannel.cpp">
-   <depend name="include/openfl/display/BitmapDataChannel.h"/>
   </file>
   <file name="src/openfl/_legacy/utils/WeakRef.cpp">
    <depend name="include/Std.h"/>
@@ -494,6 +467,7 @@
    <depend name="include/openfl/errors/EOFError.h"/>
    <depend name="include/openfl/errors/Error.h"/>
    <depend name="include/openfl/errors/IOError.h"/>
+   <depend name="include/openfl/utils/_Endian/Endian_Impl_.h"/>
   </file>
   <file name="src/openfl/_legacy/utils/IDataInput.cpp">
    <depend name="include/haxe/io/Bytes.h"/>
@@ -534,6 +508,9 @@
   <file name="src/openfl/_legacy/text/TextFormat.cpp">
    <depend name="include/openfl/_legacy/text/TextFormat.h"/>
   </file>
+  <file name="src/openfl/_legacy/text/TextFieldAutoSize.cpp">
+   <depend name="include/openfl/_legacy/text/TextFieldAutoSize.h"/>
+  </file>
   <file name="src/openfl/_legacy/text/TextField.cpp">
    <depend name="include/StringTools.h"/>
    <depend name="include/Type.h"/>
@@ -545,12 +522,9 @@
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
    <depend name="include/openfl/_legacy/text/Font.h"/>
    <depend name="include/openfl/_legacy/text/TextField.h"/>
+   <depend name="include/openfl/_legacy/text/TextFieldAutoSize.h"/>
    <depend name="include/openfl/_legacy/text/TextFormat.h"/>
    <depend name="include/openfl/_legacy/text/TextLineMetrics.h"/>
-   <depend name="include/openfl/text/AntiAliasType.h"/>
-   <depend name="include/openfl/text/GridFitType.h"/>
-   <depend name="include/openfl/text/TextFieldAutoSize.h"/>
-   <depend name="include/openfl/text/TextFieldType.h"/>
   </file>
   <file name="src/openfl/_legacy/text/FontType.cpp">
    <depend name="include/openfl/_legacy/text/FontType.h"/>
@@ -574,10 +548,6 @@
    <depend name="include/openfl/_legacy/system/Capabilities.h"/>
    <depend name="include/openfl/_legacy/system/PixelFormat.h"/>
    <depend name="include/openfl/_legacy/system/ScreenMode.h"/>
-   <depend name="include/openfl/system/TouchscreenType.h"/>
-  </file>
-  <file name="src/openfl/system/TouchscreenType.cpp">
-   <depend name="include/openfl/system/TouchscreenType.h"/>
   </file>
   <file name="src/openfl/_legacy/net/URLRequestMethod.cpp">
    <depend name="include/openfl/_legacy/net/URLRequestMethod.h"/>
@@ -672,6 +642,7 @@
    <depend name="include/openfl/media/ID3Info.h"/>
    <depend name="include/openfl/media/SoundLoaderContext.h"/>
    <depend name="include/openfl/media/SoundTransform.h"/>
+   <depend name="include/openfl/utils/_Endian/Endian_Impl_.h"/>
   </file>
   <file name="src/openfl/_legacy/gl/GLTexture.cpp">
    <depend name="include/openfl/_legacy/gl/GLObject.h"/>
@@ -824,8 +795,17 @@
   <file name="src/openfl/_legacy/geom/Point.cpp">
    <depend name="include/openfl/_legacy/geom/Point.h"/>
   </file>
+  <file name="src/openfl/_legacy/display/StageScaleMode.cpp">
+   <depend name="include/openfl/_legacy/display/StageScaleMode.h"/>
+  </file>
   <file name="src/openfl/_legacy/display/StageQuality.cpp">
    <depend name="include/openfl/_legacy/display/StageQuality.h"/>
+  </file>
+  <file name="src/openfl/_legacy/display/StageDisplayState.cpp">
+   <depend name="include/openfl/_legacy/display/StageDisplayState.h"/>
+  </file>
+  <file name="src/openfl/_legacy/display/StageAlign.cpp">
+   <depend name="include/openfl/_legacy/display/StageAlign.h"/>
   </file>
   <file name="src/openfl/_legacy/display/TouchInfo.cpp">
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
@@ -844,6 +824,9 @@
    <depend name="include/openfl/_legacy/display/Shape.h"/>
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/openfl/_legacy/display/PixelSnapping.cpp">
+   <depend name="include/openfl/_legacy/display/PixelSnapping.h"/>
   </file>
   <file name="src/openfl/_legacy/display/OpenGLView.cpp">
    <depend name="include/openfl/_legacy/display/DirectRenderer.h"/>
@@ -891,7 +874,10 @@
    <depend name="include/openfl/_legacy/display/InteractiveObject.h"/>
    <depend name="include/openfl/_legacy/display/Sprite.h"/>
    <depend name="include/openfl/_legacy/display/Stage.h"/>
+   <depend name="include/openfl/_legacy/display/StageAlign.h"/>
+   <depend name="include/openfl/_legacy/display/StageDisplayState.h"/>
    <depend name="include/openfl/_legacy/display/StageQuality.h"/>
+   <depend name="include/openfl/_legacy/display/StageScaleMode.h"/>
    <depend name="include/openfl/_legacy/display/TouchInfo.h"/>
    <depend name="include/openfl/_legacy/events/Event.h"/>
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
@@ -907,9 +893,6 @@
    <depend name="include/openfl/_legacy/net/URLLoader.h"/>
    <depend name="include/openfl/_legacy/system/ScreenMode.h"/>
    <depend name="include/openfl/display/Stage3D.h"/>
-   <depend name="include/openfl/display/StageAlign.h"/>
-   <depend name="include/openfl/display/StageDisplayState.h"/>
-   <depend name="include/openfl/display/StageScaleMode.h"/>
    <depend name="include/openfl/events/FocusEvent.h"/>
   </file>
   <file name="src/openfl/_legacy/events/TouchEvent.cpp">
@@ -953,7 +936,6 @@
    <depend name="include/openfl/_legacy/utils/IDataOutput.h"/>
    <depend name="include/openfl/_legacy/utils/IMemoryRange.h"/>
    <depend name="include/openfl/events/UncaughtErrorEvents.h"/>
-   <depend name="include/openfl/net/URLLoaderDataFormat.h"/>
    <depend name="include/openfl/system/ApplicationDomain.h"/>
   </file>
   <file name="src/openfl/_legacy/net/URLLoader.cpp">
@@ -974,7 +956,6 @@
    <depend name="include/openfl/events/IOErrorEvent.h"/>
    <depend name="include/openfl/events/ProgressEvent.h"/>
    <depend name="include/openfl/events/TextEvent.h"/>
-   <depend name="include/openfl/net/URLLoaderDataFormat.h"/>
    <depend name="include/openfl/net/URLRequestHeader.h"/>
    <depend name="include/openfl/net/URLVariables.h"/>
   </file>
@@ -988,6 +969,7 @@
    <depend name="include/openfl/_legacy/display/InteractiveObject.h"/>
    <depend name="include/openfl/_legacy/display/Loader.h"/>
    <depend name="include/openfl/_legacy/display/LoaderInfo.h"/>
+   <depend name="include/openfl/_legacy/display/PixelSnapping.h"/>
    <depend name="include/openfl/_legacy/display/Sprite.h"/>
    <depend name="include/openfl/_legacy/events/Event.h"/>
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
@@ -998,7 +980,6 @@
    <depend name="include/openfl/_legacy/utils/IDataInput.h"/>
    <depend name="include/openfl/_legacy/utils/IDataOutput.h"/>
    <depend name="include/openfl/_legacy/utils/IMemoryRange.h"/>
-   <depend name="include/openfl/display/PixelSnapping.h"/>
    <depend name="include/openfl/system/LoaderContext.h"/>
   </file>
   <file name="src/openfl/_legacy/display/LineScaleMode.cpp">
@@ -1007,6 +988,9 @@
   <file name="src/openfl/_legacy/display/JointStyle.cpp">
    <depend name="include/openfl/_legacy/display/JointStyle.h"/>
   </file>
+  <file name="src/openfl/_legacy/display/InterpolationMethod.cpp">
+   <depend name="include/openfl/_legacy/display/InterpolationMethod.h"/>
+  </file>
   <file name="src/openfl/_legacy/display/IGraphicsData.cpp">
    <depend name="include/openfl/_legacy/display/IGraphicsData.h"/>
   </file>
@@ -1014,18 +998,20 @@
    <depend name="include/openfl/_legacy/Lib.h"/>
    <depend name="include/openfl/_legacy/display/BitmapData.h"/>
    <depend name="include/openfl/_legacy/display/CapsStyle.h"/>
+   <depend name="include/openfl/_legacy/display/GradientType.h"/>
    <depend name="include/openfl/_legacy/display/Graphics.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
    <depend name="include/openfl/_legacy/display/IGraphicsData.h"/>
+   <depend name="include/openfl/_legacy/display/InterpolationMethod.h"/>
    <depend name="include/openfl/_legacy/display/JointStyle.h"/>
    <depend name="include/openfl/_legacy/display/LineScaleMode.h"/>
    <depend name="include/openfl/_legacy/display/SpreadMethod.h"/>
    <depend name="include/openfl/_legacy/display/Tilesheet.h"/>
    <depend name="include/openfl/_legacy/display/TriangleCulling.h"/>
    <depend name="include/openfl/_legacy/geom/Matrix.h"/>
-   <depend name="include/openfl/display/GradientType.h"/>
-   <depend name="include/openfl/display/GraphicsPathWinding.h"/>
-   <depend name="include/openfl/display/InterpolationMethod.h"/>
+  </file>
+  <file name="src/openfl/_legacy/display/GradientType.cpp">
+   <depend name="include/openfl/_legacy/display/GradientType.h"/>
   </file>
   <file name="src/openfl/_legacy/display/DirectRenderer.cpp">
    <depend name="include/openfl/_legacy/Lib.h"/>
@@ -1079,10 +1065,10 @@
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
    <depend name="include/openfl/_legacy/display/Graphics.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
+   <depend name="include/openfl/_legacy/display/PixelSnapping.h"/>
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
    <depend name="include/openfl/_legacy/geom/Matrix.h"/>
-   <depend name="include/openfl/display/PixelSnapping.h"/>
   </file>
   <file name="src/openfl/_legacy/Memory.cpp">
    <depend name="include/haxe/io/Bytes.h"/>
@@ -1551,9 +1537,8 @@
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
    <depend name="include/openfl/_legacy/text/TextField.h"/>
+   <depend name="include/openfl/_legacy/text/TextFieldAutoSize.h"/>
    <depend name="include/openfl/_legacy/text/TextFormat.h"/>
-   <depend name="include/openfl/text/TextFieldAutoSize.h"/>
-   <depend name="include/openfl/text/TextFieldType.h"/>
   </file>
   <file name="src/haxe/ui/toolkit/text/ITextDisplay.cpp">
    <depend name="include/haxe/ui/toolkit/core/interfaces/IClonable.h"/>
@@ -1626,16 +1611,16 @@
    <depend name="include/haxe/ui/toolkit/style/StyleHelper.h"/>
    <depend name="include/openfl/_legacy/display/BitmapData.h"/>
    <depend name="include/openfl/_legacy/display/CapsStyle.h"/>
+   <depend name="include/openfl/_legacy/display/GradientType.h"/>
    <depend name="include/openfl/_legacy/display/Graphics.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
+   <depend name="include/openfl/_legacy/display/InterpolationMethod.h"/>
    <depend name="include/openfl/_legacy/display/JointStyle.h"/>
    <depend name="include/openfl/_legacy/display/LineScaleMode.h"/>
    <depend name="include/openfl/_legacy/display/SpreadMethod.h"/>
    <depend name="include/openfl/_legacy/geom/Matrix.h"/>
    <depend name="include/openfl/_legacy/geom/Point.h"/>
    <depend name="include/openfl/_legacy/geom/Rectangle.h"/>
-   <depend name="include/openfl/display/GradientType.h"/>
-   <depend name="include/openfl/display/InterpolationMethod.h"/>
   </file>
   <file name="src/haxe/ui/toolkit/style/Style.cpp">
    <depend name="include/Reflect.h"/>
@@ -1867,7 +1852,6 @@
    <depend name="include/Reflect.h"/>
    <depend name="include/Std.h"/>
    <depend name="include/openfl/_legacy/events/Event.h"/>
-   <depend name="include/openfl/events/EventPhase.h"/>
   </file>
   <file name="src/haxe/ui/toolkit/data/XMLDataSource.cpp">
    <depend name="include/Reflect.h"/>
@@ -2192,11 +2176,11 @@
    <depend name="include/openfl/_legacy/display/MovieClip.h"/>
    <depend name="include/openfl/_legacy/display/Sprite.h"/>
    <depend name="include/openfl/_legacy/display/Stage.h"/>
+   <depend name="include/openfl/_legacy/display/StageAlign.h"/>
+   <depend name="include/openfl/_legacy/display/StageScaleMode.h"/>
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
    <depend name="include/openfl/_legacy/system/Capabilities.h"/>
-   <depend name="include/openfl/display/StageAlign.h"/>
-   <depend name="include/openfl/display/StageScaleMode.h"/>
   </file>
   <file name="src/haxe/ui/toolkit/core/ToolTipManager.cpp">
    <depend name="include/haxe/ui/toolkit/containers/Box.h"/>
@@ -3236,10 +3220,10 @@
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
    <depend name="include/openfl/_legacy/display/InteractiveObject.h"/>
+   <depend name="include/openfl/_legacy/display/PixelSnapping.h"/>
    <depend name="include/openfl/_legacy/display/Sprite.h"/>
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
-   <depend name="include/openfl/display/PixelSnapping.h"/>
   </file>
   <file name="src/haxe/ui/toolkit/controls/HSlider.cpp">
    <depend name="include/Std.h"/>
@@ -3437,7 +3421,6 @@
    <depend name="include/haxe/ui/toolkit/layout/VerticalLayout.h"/>
   </file>
   <file name="src/haxe/ui/toolkit/core/interfaces/IItemRenderer.cpp">
-   <depend name="include/haxe/ui/toolkit/core/interfaces/IClonable.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IComponent.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IDisplayObject.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IDisplayObjectContainer.h"/>
@@ -3514,15 +3497,20 @@
    <depend name="include/haxe/ui/toolkit/layout/HorizontalLayout.h"/>
    <depend name="include/haxe/ui/toolkit/layout/Layout.h"/>
    <depend name="include/haxe/ui/toolkit/style/Style.h"/>
+   <depend name="include/openfl/_legacy/display/CapsStyle.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>
+   <depend name="include/openfl/_legacy/display/Graphics.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
    <depend name="include/openfl/_legacy/display/InteractiveObject.h"/>
+   <depend name="include/openfl/_legacy/display/JointStyle.h"/>
+   <depend name="include/openfl/_legacy/display/LineScaleMode.h"/>
    <depend name="include/openfl/_legacy/display/Sprite.h"/>
    <depend name="include/openfl/_legacy/events/Event.h"/>
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/MouseEvent.h"/>
+   <depend name="include/openfl/_legacy/geom/Rectangle.h"/>
   </file>
   <file name="src/haxe/ui/toolkit/controls/CalendarLayout.cpp">
    <depend name="include/haxe/ui/toolkit/controls/CalendarLayout.h"/>
@@ -4640,7 +4628,6 @@
    <depend name="include/haxe/ui/toolkit/style/StyleManager.h"/>
   </file>
   <file name="src/haxe/ui/toolkit/core/interfaces/IStateComponent.cpp">
-   <depend name="include/haxe/ui/toolkit/core/interfaces/IClonable.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IComponent.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IDisplayObject.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IDisplayObjectContainer.h"/>
@@ -4692,7 +4679,6 @@
    <depend name="include/openfl/_legacy/geom/Rectangle.h"/>
   </file>
   <file name="src/haxe/ui/toolkit/core/interfaces/IComponent.cpp">
-   <depend name="include/haxe/ui/toolkit/core/interfaces/IClonable.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IComponent.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IDisplayObject.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IDisplayObjectContainer.h"/>
@@ -5120,6 +5106,7 @@
    <depend name="include/CollectionGlobal.h"/>
    <depend name="include/ObjectTag.h"/>
    <depend name="include/ObjectVisitor.h"/>
+   <depend name="include/Std.h"/>
    <depend name="include/UIPopupEditObjectVisitor.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Container.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Grid.h"/>
@@ -5129,6 +5116,7 @@
    <depend name="include/haxe/ui/toolkit/controls/Button.h"/>
    <depend name="include/haxe/ui/toolkit/controls/Text.h"/>
    <depend name="include/haxe/ui/toolkit/controls/TextInput.h"/>
+   <depend name="include/haxe/ui/toolkit/controls/popups/ListPopupContent.h"/>
    <depend name="include/haxe/ui/toolkit/controls/popups/Popup.h"/>
    <depend name="include/haxe/ui/toolkit/controls/popups/PopupContent.h"/>
    <depend name="include/haxe/ui/toolkit/controls/selection/ListSelector.h"/>
@@ -5816,7 +5804,6 @@
    <depend name="include/openfl/_legacy/geom/Rectangle.h"/>
    <depend name="include/openfl/_legacy/geom/Transform.h"/>
    <depend name="include/openfl/_legacy/net/URLLoader.h"/>
-   <depend name="include/openfl/events/EventPhase.h"/>
   </file>
   <file name="src/openfl/_legacy/Lib.cpp">
    <depend name="include/Std.h"/>
@@ -5921,7 +5908,6 @@
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/_EventDispatcher/Listener.h"/>
    <depend name="include/openfl/events/ErrorEvent.h"/>
-   <depend name="include/openfl/events/EventPhase.h"/>
    <depend name="include/openfl/events/IOErrorEvent.h"/>
    <depend name="include/openfl/events/TextEvent.h"/>
   </file>
@@ -5950,22 +5936,15 @@
    <depend name="include/openfl/_legacy/display/MovieClip.h"/>
    <depend name="include/openfl/_legacy/display/Sprite.h"/>
    <depend name="include/openfl/_legacy/display/Stage.h"/>
+   <depend name="include/openfl/_legacy/display/StageAlign.h"/>
+   <depend name="include/openfl/_legacy/display/StageScaleMode.h"/>
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
    <depend name="include/openfl/_legacy/net/URLLoader.h"/>
-   <depend name="include/openfl/display/StageAlign.h"/>
-   <depend name="include/openfl/display/StageScaleMode.h"/>
    <depend name="include/sys/FileSystem.h"/>
   </file>
   <file name="src/__boot__.cpp">
    <depend name="include/sys/_FileSystem/FileKind.h"/>
-   <depend name="include/openfl/text/TextFieldType.h"/>
-   <depend name="include/openfl/text/TextFieldAutoSize.h"/>
-   <depend name="include/openfl/text/GridFitType.h"/>
-   <depend name="include/openfl/text/AntiAliasType.h"/>
-   <depend name="include/openfl/net/URLLoaderDataFormat.h"/>
-   <depend name="include/openfl/geom/Orientation3D.h"/>
-   <depend name="include/openfl/events/EventPhase.h"/>
    <depend name="include/openfl/display3D/Context3DWrapMode.h"/>
    <depend name="include/openfl/display3D/Context3DVertexBufferFormat.h"/>
    <depend name="include/openfl/display3D/Context3DTextureFormat.h"/>
@@ -5973,25 +5952,24 @@
    <depend name="include/openfl/display3D/Context3DProgramType.h"/>
    <depend name="include/openfl/display3D/Context3DMipFilter.h"/>
    <depend name="include/openfl/display3D/Context3DBufferUsage.h"/>
-   <depend name="include/openfl/display/StageScaleMode.h"/>
-   <depend name="include/openfl/display/StageDisplayState.h"/>
-   <depend name="include/openfl/display/StageAlign.h"/>
-   <depend name="include/openfl/display/PixelSnapping.h"/>
-   <depend name="include/openfl/display/InterpolationMethod.h"/>
-   <depend name="include/openfl/display/GraphicsPathWinding.h"/>
-   <depend name="include/openfl/display/GradientType.h"/>
    <depend name="include/openfl/_legacy/utils/CompressionAlgorithm.h"/>
+   <depend name="include/openfl/_legacy/text/TextFieldAutoSize.h"/>
    <depend name="include/openfl/_legacy/text/FontType.h"/>
    <depend name="include/openfl/_legacy/text/FontStyle.h"/>
    <depend name="include/openfl/_legacy/system/PixelFormat.h"/>
-   <depend name="include/openfl/system/TouchscreenType.h"/>
    <depend name="include/openfl/_legacy/net/_URLLoader/ManagersThreadMessage.h"/>
    <depend name="include/openfl/_legacy/media/InternalAudioType.h"/>
    <depend name="include/openfl/_legacy/display/TriangleCulling.h"/>
+   <depend name="include/openfl/_legacy/display/StageScaleMode.h"/>
    <depend name="include/openfl/_legacy/display/StageQuality.h"/>
+   <depend name="include/openfl/_legacy/display/StageDisplayState.h"/>
+   <depend name="include/openfl/_legacy/display/StageAlign.h"/>
    <depend name="include/openfl/_legacy/display/SpreadMethod.h"/>
+   <depend name="include/openfl/_legacy/display/PixelSnapping.h"/>
    <depend name="include/openfl/_legacy/display/LineScaleMode.h"/>
    <depend name="include/openfl/_legacy/display/JointStyle.h"/>
+   <depend name="include/openfl/_legacy/display/InterpolationMethod.h"/>
+   <depend name="include/openfl/_legacy/display/GradientType.h"/>
    <depend name="include/openfl/_legacy/display/CapsStyle.h"/>
    <depend name="include/openfl/_legacy/display/BlendMode.h"/>
    <depend name="include/openfl/_legacy/AssetType.h"/>
@@ -6024,9 +6002,15 @@
    <depend name="include/sys/io/FileOutput.h"/>
    <depend name="include/sys/io/File.h"/>
    <depend name="include/sys/FileSystem.h"/>
+   <depend name="include/openfl/utils/_Endian/Endian_Impl_.h"/>
+   <depend name="include/openfl/text/_TextFieldType/TextFieldType_Impl_.h"/>
+   <depend name="include/openfl/text/_GridFitType/GridFitType_Impl_.h"/>
+   <depend name="include/openfl/text/_AntiAliasType/AntiAliasType_Impl_.h"/>
+   <depend name="include/openfl/system/_TouchscreenType/TouchscreenType_Impl_.h"/>
    <depend name="include/openfl/system/SecurityDomain.h"/>
    <depend name="include/openfl/system/ApplicationDomain.h"/>
-   <depend name="include/openfl/filters/BitmapFilterQuality.h"/>
+   <depend name="include/openfl/net/_URLLoaderDataFormat/URLLoaderDataFormat_Impl_.h"/>
+   <depend name="include/openfl/geom/_Orientation3D/Orientation3D_Impl_.h"/>
    <depend name="include/openfl/events/UncaughtErrorEvent.h"/>
    <depend name="include/openfl/events/TimerEvent.h"/>
    <depend name="include/openfl/events/SampleDataEvent.h"/>
@@ -6036,11 +6020,11 @@
    <depend name="include/openfl/events/ErrorEvent.h"/>
    <depend name="include/openfl/events/TextEvent.h"/>
    <depend name="include/openfl/errors/Error.h"/>
+   <depend name="include/openfl/display3D/textures/Texture.h"/>
    <depend name="include/openfl/display3D/_Context3DTriangleFace/Context3DTriangleFace_Impl_.h"/>
    <depend name="include/openfl/display3D/_Context3DCompareMode/Context3DCompareMode_Impl_.h"/>
    <depend name="include/openfl/display3D/Context3DClearMask.h"/>
    <depend name="include/openfl/display3D/Context3D.h"/>
-   <depend name="include/openfl/display/BitmapDataChannel.h"/>
    <depend name="include/openfl/_legacy/utils/WeakRef.h"/>
    <depend name="include/openfl/_legacy/utils/UInt8Array.h"/>
    <depend name="include/openfl/_legacy/utils/Int16Array.h"/>

@@ -43,10 +43,10 @@ namespace containers{
 
 Void Container_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ui.toolkit.containers.Container","new",0xbd640df9,"haxe.ui.toolkit.containers.Container.new","haxe/ui/toolkit/containers/Container.hx",8,0xc0b4ee97)
+HX_STACK_FRAME("haxe.ui.toolkit.containers.Container","new",0xbd640df9,"haxe.ui.toolkit.containers.Container.new","haxe/ui/toolkit/containers/Container.hx",9,0xc0b4ee97)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(8)
+	HX_STACK_LINE(9)
 	super::__construct();
 }
 ;
@@ -80,33 +80,37 @@ Container_obj::operator ::haxe::ui::toolkit::core::interfaces::IClonable_obj *()
 	::haxe::ui::toolkit::core::Component tmp = hx::TCast< ::haxe::ui::toolkit::core::Component >::cast(this->super::clone());		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(1)
 	::haxe::ui::toolkit::containers::Container c = ((::haxe::ui::toolkit::containers::Container)(tmp));		HX_STACK_VAR(c,"c");
-	HX_STACK_LINE(15)
+	HX_STACK_LINE(16)
 	{
-		HX_STACK_LINE(15)
+		HX_STACK_LINE(16)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(15)
+		HX_STACK_LINE(16)
 		Array< ::haxe::ui::toolkit::core::interfaces::IDisplayObject > _g1 = this->get_children();		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(15)
+		HX_STACK_LINE(16)
 		while((true)){
-			HX_STACK_LINE(15)
+			HX_STACK_LINE(16)
 			bool tmp1 = (_g < _g1->length);		HX_STACK_VAR(tmp1,"tmp1");
-			HX_STACK_LINE(15)
+			HX_STACK_LINE(16)
 			bool tmp2 = !(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(15)
+			HX_STACK_LINE(16)
 			if ((tmp2)){
-				HX_STACK_LINE(15)
+				HX_STACK_LINE(16)
 				break;
 			}
-			HX_STACK_LINE(15)
+			HX_STACK_LINE(16)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp3 = _g1->__get(_g);		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(15)
+			HX_STACK_LINE(16)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObject child = tmp3;		HX_STACK_VAR(child,"child");
-			HX_STACK_LINE(15)
+			HX_STACK_LINE(16)
 			++(_g);
-			HX_STACK_LINE(16)
-			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp4 = child->clone();		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(16)
-			c->addChild(tmp4);
+			HX_STACK_LINE(17)
+			::haxe::ui::toolkit::core::DisplayObject tmp4;		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(17)
+			tmp4 = hx::TCast< ::haxe::ui::toolkit::core::DisplayObject >::cast(child);
+			HX_STACK_LINE(17)
+			::haxe::ui::toolkit::core::DisplayObject tmp5 = tmp4->clone();		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(17)
+			c->addChild(tmp5);
 		}
 	}
 	HX_STACK_LINE(1)

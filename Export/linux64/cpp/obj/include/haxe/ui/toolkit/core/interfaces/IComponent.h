@@ -8,7 +8,6 @@
 #ifndef INCLUDED_haxe_ui_toolkit_core_interfaces_IStyleableDisplayObject
 #include <haxe/ui/toolkit/core/interfaces/IStyleableDisplayObject.h>
 #endif
-HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IClonable)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IComponent)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDisplayObject)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDisplayObjectContainer)
@@ -88,7 +87,7 @@ class IComponent_delegate_ : public IComponent_obj
 		DELEGATE_haxe_ui_toolkit_core_interfaces_IStyleableDisplayObject
 		DELEGATE_haxe_ui_toolkit_core_interfaces_IDisplayObjectContainer
 		DELEGATE_haxe_ui_toolkit_core_interfaces_IDisplayObject
-		DELEGATE_haxe_ui_toolkit_core_interfaces_IClonable
+		DELEGATE_haxe_ui_toolkit_core_interfaces_IEventDispatcher
 };
 
 } // end namespace haxe

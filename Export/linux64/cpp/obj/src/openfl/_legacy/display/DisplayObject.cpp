@@ -66,9 +66,6 @@
 #ifndef INCLUDED_openfl__legacy_net_URLLoader
 #include <openfl/_legacy/net/URLLoader.h>
 #endif
-#ifndef INCLUDED_openfl_events_EventPhase
-#include <openfl/events/EventPhase.h>
-#endif
 namespace openfl{
 namespace _legacy{
 namespace display{
@@ -542,7 +539,7 @@ Void DisplayObject_obj::__fireEvent( ::openfl::_legacy::events::Event event){
 		HX_STACK_LINE(221)
 		if ((tmp2)){
 			HX_STACK_LINE(223)
-			event->__setPhase(::openfl::events::EventPhase_obj::CAPTURING_PHASE);
+			event->__setPhase((int)1);
 			HX_STACK_LINE(224)
 			event->set_target(hx::ObjectPtr<OBJ_>(this));
 			HX_STACK_LINE(225)
@@ -578,7 +575,7 @@ Void DisplayObject_obj::__fireEvent( ::openfl::_legacy::events::Event event){
 			}
 		}
 		HX_STACK_LINE(243)
-		event->__setPhase(::openfl::events::EventPhase_obj::AT_TARGET);
+		event->__setPhase((int)2);
 		HX_STACK_LINE(244)
 		::openfl::_legacy::events::Event tmp3 = event;		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(244)
@@ -595,7 +592,7 @@ Void DisplayObject_obj::__fireEvent( ::openfl::_legacy::events::Event event){
 		HX_STACK_LINE(252)
 		if ((tmp5)){
 			HX_STACK_LINE(254)
-			event->__setPhase(::openfl::events::EventPhase_obj::BUBBLING_PHASE);
+			event->__setPhase((int)3);
 			HX_STACK_LINE(256)
 			{
 				HX_STACK_LINE(256)

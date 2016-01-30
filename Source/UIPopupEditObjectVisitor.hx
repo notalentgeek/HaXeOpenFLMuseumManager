@@ -19,8 +19,6 @@ class UIPopupEditObjectVisitor{
 
 
 
-    //private var displaySentenceListViewObject                     :Text                       = null;
-    //private var displaySentenceListViewObject                     :Text                       = null;
     private var collectionGlobalObject                          :CollectionGlobal           = null;
     private var displayExplanationTextObject                    :Text                       = null;
     private var displayPopularTagListSelectorObject             :ListSelector               = null;
@@ -66,7 +64,6 @@ class UIPopupEditObjectVisitor{
 
             });
 
-            //displaySentenceListViewObject                         = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplaySentence"          , Text          , true);
             displayExplanationTextObject                        = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayExplanation"       , Text          , true);
             displayPopularTagListSelectorObject                 = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayPopularTag"        , ListSelector      , true);
             displayPreviousVisitorTextObject                    = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayPreviousVisitor"   , Text          , true);
@@ -90,10 +87,8 @@ class UIPopupEditObjectVisitor{
                 var buttonControlInt:Int = 0;
                 buttonControlInt |= PopupButton.OK;
 
-                var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupDisplaySentence.xml");
-                displaySentencePopupObject = PopupManager.instance.showCustom(iDisplayObject, "Edit Visitor", buttonControlInt, function(_button){});
-                displaySentenceListViewObject = displaySentencePopupObject.content.findChild("UIPopupDisplaySentence_DisplaySentence", ListView , true);
-
+                displaySentencePopupObject = PopupManager.instance.showList(selectedVisitorObject.GetSentenceStringArray(), "Display Sentence", buttonControlInt, function(_button){});
+                displaySentencePopupObject.height = 200;
 
             }
 
@@ -127,38 +122,37 @@ class UIPopupEditObjectVisitor{
 
             if(selectedVisitorObject != null){
 
+                displayExplanationTextObject.disabled = false;
+                displayPopularTagListSelectorObject.disabled = false;
+                displayPreviousVisitorTextObject.disabled = false;
+                displaySentenceButtonObject.disabled = false;
+                displaySentenceButtonObject.disabled = false;
+                displayTargetExhibitionTextObject.disabled = false;
+                displayVisitorIndexTextObject.disabled = false;
+                inputNameTextInputObject.disabled = false;
+                resetButtonObject.disabled = false;
+                selectCurrentExhibitionListSelectorObject.disabled = false;
+                selectModeListSelectorObject.disabled = false;
+
                 UpdateDisplayExplanationTextObjectVoid();
                 UpdateDisplayPopularTagListSelectorObjectVoid();
+                UpdateDisplaySentenceListViewObjectVoid();
 
-                if(displaySentencePopupObject != null){
-                    var updateSentenceBool:Bool = false;
-                    var loopCounter1Int:Int = 0;
-                    if(selectedVisitorSentenceStringArray.length != selectedVisitorObject.GetSentenceStringArray().length){ updateSentenceBool = true; }
-                    while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
-                        if(updateSentenceBool == true){ break; }
-                        if(selectedVisitorSentenceStringArray[loopCounter1Int] != selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]){
-                            updateSentenceBool = true;
-                            break;
-                        }
-                        loopCounter1Int ++;
-                    }
-                    if(updateSentenceBool == true){
-                        CollectionFunction.ClearArray(selectedVisitorSentenceStringArray);
-                        if(displaySentenceListViewObject != null){
-                            displaySentenceListViewObject.dataSource.removeAll();
-                            var loopCounter1Int:Int = 0;
-                            while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
-                                var textObject:Text = new Text();
-                                textObject.multiline = true;
-                                textObject.percentWidth = 100.0;
-                                textObject.text = "";
-                                textObject.wrapLines = true;
-                                displaySentenceListViewObject.dataSource.createFromString(selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]);
-                                loopCounter1Int ++;
-                            }
-                        }
-                    }
-                }
+            }
+
+            if(selectVisitorListSelectorObject.selectedIndex == -1){
+
+                displayExplanationTextObject.disabled = true;
+                displayPopularTagListSelectorObject.disabled = true;
+                displayPreviousVisitorTextObject.disabled = true;
+                displaySentenceButtonObject.disabled = true;
+                displaySentenceButtonObject.disabled = true;
+                displayTargetExhibitionTextObject.disabled = true;
+                displayVisitorIndexTextObject.disabled = true;
+                inputNameTextInputObject.disabled = true;
+                resetButtonObject.disabled = true;
+                selectCurrentExhibitionListSelectorObject.disabled = true;
+                selectModeListSelectorObject.disabled = true;
 
             }
 
@@ -166,9 +160,21 @@ class UIPopupEditObjectVisitor{
 
     }
 
-    private function ResetDisplayExplanationTextObjectVoid(){ displayExplanationTextObject.text = ""; }
-    private function ResetDisplayPopularTagListSelectorObjectVoid(){ displayPopularTagListSelectorObject.dataSource.removeAll(); }
-    private function ResetDisplaySentenceListViewObjectVoid(){ if(displaySentenceListViewObject != null){ displaySentenceListViewObject.text = ""; } }
+    private function ResetDisplayExplanationTextObjectVoid(){
+        if(displayExplanationTextObject != null){
+            displayExplanationTextObject.text = "";
+        }
+    }
+    private function ResetDisplayPopularTagListSelectorObjectVoid(){
+        if(displayPopularTagListSelectorObject != null){
+            displayPopularTagListSelectorObject.dataSource.removeAll();
+        }
+    }
+    private function ResetDisplaySentenceListViewObjectVoid(){
+        if(displaySentencePopupObject != null){
+            Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
+        }
+    }
 
     private function ResetSelectVisitorListSelectorObjectVoid(){
 
@@ -243,6 +249,32 @@ class UIPopupEditObjectVisitor{
         }
     }
 
+    private function UpdateDisplaySentenceListViewObjectVoid(){
 
+        if(displaySentencePopupObject != null){
+            var updateSentenceBool:Bool = false;
+            var loopCounter1Int:Int = 0;
+            if(selectedVisitorSentenceStringArray.length != selectedVisitorObject.GetSentenceStringArray().length){ updateSentenceBool = true; }
+            while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
+                if(updateSentenceBool == true){ break; }
+                if(selectedVisitorSentenceStringArray[loopCounter1Int] != selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]){
+                    updateSentenceBool = true;
+                    break;
+                }
+                loopCounter1Int ++;
+            }
+            if(updateSentenceBool == true){
+                CollectionFunction.ClearArray(selectedVisitorSentenceStringArray);
+                Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
+                var loopCounter1Int:Int = 0;
+                while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
+                    selectedVisitorSentenceStringArray.push(selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]);
+                    Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]);
+                    loopCounter1Int ++;
+                }
+            }
+        }
+
+    }
 
 }

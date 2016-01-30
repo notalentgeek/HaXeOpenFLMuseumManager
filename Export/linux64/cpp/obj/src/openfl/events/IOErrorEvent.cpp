@@ -120,15 +120,6 @@ Dynamic IOErrorEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCa
 	return super::__Field(inName,inCallProp);
 }
 
-bool IOErrorEvent_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
-{
-	switch(inName.length) {
-	case 8:
-		if (HX_FIELD_EQ(inName,"IO_ERROR") ) { outValue = IO_ERROR; return true;  }
-	}
-	return false;
-}
-
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
@@ -168,7 +159,7 @@ void IOErrorEvent_obj::__register()
 	__mClass->mSuper = &super::__SGetClass();
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
-	__mClass->mGetStaticField = &IOErrorEvent_obj::__GetStatic;
+	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
 	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);

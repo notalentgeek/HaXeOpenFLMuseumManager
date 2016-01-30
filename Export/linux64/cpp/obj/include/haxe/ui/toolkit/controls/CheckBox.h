@@ -28,7 +28,14 @@ HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDrawable)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IEventDispatcher)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IStateComponent)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IStyleableDisplayObject)
+HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObject)
+HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObjectContainer)
+HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
+HX_DECLARE_CLASS3(openfl,_legacy,display,InteractiveObject)
+HX_DECLARE_CLASS3(openfl,_legacy,display,Sprite)
 HX_DECLARE_CLASS3(openfl,_legacy,events,Event)
+HX_DECLARE_CLASS3(openfl,_legacy,events,EventDispatcher)
+HX_DECLARE_CLASS3(openfl,_legacy,events,IEventDispatcher)
 HX_DECLARE_CLASS3(openfl,_legacy,events,MouseEvent)
 namespace haxe{
 namespace ui{
@@ -67,8 +74,13 @@ class HXCPP_CLASS_ATTRIBUTES  CheckBox_obj : public ::haxe::ui::toolkit::core::S
 		::haxe::ui::toolkit::controls::CheckBoxValue _value;
 		::haxe::ui::toolkit::controls::Text _label;
 		bool _selected;
+		::openfl::_legacy::display::Sprite _eventTarget;
 		bool _down;
 		virtual Void initialize( );
+
+		virtual Void invalidate( hx::Null< int >  type,hx::Null< bool >  recursive);
+
+		virtual Void dispose( );
 
 		virtual Void _onMouseOver( ::openfl::_legacy::events::MouseEvent event);
 		Dynamic _onMouseOver_dyn();
@@ -115,6 +127,9 @@ class HXCPP_CLASS_ATTRIBUTES  CheckBox_obj : public ::haxe::ui::toolkit::core::S
 		virtual Void applyStyle( );
 
 		virtual Array< ::String > get_states( );
+
+		virtual Void resizeEventTarget( );
+		Dynamic resizeEventTarget_dyn();
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject clone( );
 

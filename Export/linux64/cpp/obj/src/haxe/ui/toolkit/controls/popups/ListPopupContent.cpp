@@ -117,7 +117,7 @@ HX_STACK_ARG(__o_selectedIndex,"selectedIndex")
 HX_STACK_ARG(fn,"fn")
 int selectedIndex = __o_selectedIndex.Default(-1);
 {
-	HX_STACK_LINE(89)
+	HX_STACK_LINE(91)
 	this->DELAY = (int)0;
 	HX_STACK_LINE(21)
 	this->_selectedIndex = (int)-1;
@@ -333,29 +333,39 @@ int ListPopupContent_obj::get_listSize( ){
 
 HX_DEFINE_DYNAMIC_FUNC0(ListPopupContent_obj,get_listSize,return )
 
+::haxe::ui::toolkit::containers::ListView ListPopupContent_obj::GetListObject( ){
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.ListPopupContent","GetListObject",0xd68bd441,"haxe.ui.toolkit.controls.popups.ListPopupContent.GetListObject","haxe/ui/toolkit/controls/popups/ListPopupContent.hx",83,0x70518bc1)
+	HX_STACK_THIS(this)
+	HX_STACK_LINE(83)
+	::haxe::ui::toolkit::containers::ListView tmp = this->_list;		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(83)
+	return tmp;
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(ListPopupContent_obj,GetListObject,return )
+
 Void ListPopupContent_obj::_onListChange( ::haxe::ui::toolkit::events::UIEvent event){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.ListPopupContent","_onListChange",0x8f0e6fba,"haxe.ui.toolkit.controls.popups.ListPopupContent._onListChange","haxe/ui/toolkit/controls/popups/ListPopupContent.hx",91,0x70518bc1)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.ListPopupContent","_onListChange",0x8f0e6fba,"haxe.ui.toolkit.controls.popups.ListPopupContent._onListChange","haxe/ui/toolkit/controls/popups/ListPopupContent.hx",93,0x70518bc1)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(92)
+		HX_STACK_LINE(94)
 		int tmp = this->DELAY;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(92)
+		HX_STACK_LINE(94)
 		::openfl::_legacy::utils::Timer tmp1 = ::openfl::_legacy::utils::Timer_obj::__new(tmp,(int)1);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(92)
+		HX_STACK_LINE(94)
 		this->hideTimer = tmp1;
-		HX_STACK_LINE(93)
+		HX_STACK_LINE(95)
 		::openfl::_legacy::utils::Timer tmp2 = this->hideTimer;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(93)
-		::String tmp3 = ::openfl::events::TimerEvent_obj::TIMER_COMPLETE;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(93)
-		Dynamic tmp4 = this->_onTimerComplete_dyn();		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(93)
-		tmp2->addEventListener(tmp3,tmp4,null(),null(),null());
-		HX_STACK_LINE(94)
-		::openfl::_legacy::utils::Timer tmp5 = this->hideTimer;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(94)
-		tmp5->start();
+		HX_STACK_LINE(95)
+		Dynamic tmp3 = this->_onTimerComplete_dyn();		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(95)
+		tmp2->addEventListener(HX_HCSTRING("timerComplete","\x9e","\x49","\xcc","\x97"),tmp3,null(),null(),null());
+		HX_STACK_LINE(96)
+		::openfl::_legacy::utils::Timer tmp4 = this->hideTimer;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(96)
+		tmp4->start();
 	}
 return null();
 }
@@ -365,62 +375,60 @@ HX_DEFINE_DYNAMIC_FUNC1(ListPopupContent_obj,_onListChange,(void))
 
 Void ListPopupContent_obj::_onTimerComplete( ::openfl::events::TimerEvent event){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.ListPopupContent","_onTimerComplete",0x1524add2,"haxe.ui.toolkit.controls.popups.ListPopupContent._onTimerComplete","haxe/ui/toolkit/controls/popups/ListPopupContent.hx",97,0x70518bc1)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.ListPopupContent","_onTimerComplete",0x1524add2,"haxe.ui.toolkit.controls.popups.ListPopupContent._onTimerComplete","haxe/ui/toolkit/controls/popups/ListPopupContent.hx",99,0x70518bc1)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(98)
+		HX_STACK_LINE(100)
 		::openfl::_legacy::utils::Timer tmp = this->hideTimer;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(98)
-		::String tmp1 = ::openfl::events::TimerEvent_obj::TIMER_COMPLETE;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(98)
-		Dynamic tmp2 = this->_onTimerComplete_dyn();		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(98)
-		tmp->removeEventListener(tmp1,tmp2,null());
-		HX_STACK_LINE(99)
-		::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp3 = this->get_parent();		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(99)
-		bool tmp4 = ::Std_obj::is(tmp3,hx::ClassOf< ::haxe::ui::toolkit::controls::popups::Popup >());		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(99)
-		if ((tmp4)){
-			HX_STACK_LINE(100)
-			::haxe::ui::toolkit::core::PopupManager tmp5 = ::haxe::ui::toolkit::core::PopupManager_obj::get_instance();		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(100)
-			::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp6 = this->get_parent();		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(100)
-			::haxe::ui::toolkit::controls::popups::Popup tmp7;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(100)
-			tmp7 = hx::TCast< ::haxe::ui::toolkit::controls::popups::Popup >::cast(tmp6);
-			HX_STACK_LINE(100)
-			tmp5->hidePopup(tmp7,null());
+		HX_STACK_LINE(100)
+		Dynamic tmp1 = this->_onTimerComplete_dyn();		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(100)
+		tmp->removeEventListener(HX_HCSTRING("timerComplete","\x9e","\x49","\xcc","\x97"),tmp1,null());
+		HX_STACK_LINE(101)
+		::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp2 = this->get_parent();		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(101)
+		bool tmp3 = ::Std_obj::is(tmp2,hx::ClassOf< ::haxe::ui::toolkit::controls::popups::Popup >());		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(101)
+		if ((tmp3)){
+			HX_STACK_LINE(102)
+			::haxe::ui::toolkit::core::PopupManager tmp4 = ::haxe::ui::toolkit::core::PopupManager_obj::get_instance();		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(102)
+			::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp5 = this->get_parent();		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(102)
+			::haxe::ui::toolkit::controls::popups::Popup tmp6;		HX_STACK_VAR(tmp6,"tmp6");
+			HX_STACK_LINE(102)
+			tmp6 = hx::TCast< ::haxe::ui::toolkit::controls::popups::Popup >::cast(tmp5);
+			HX_STACK_LINE(102)
+			tmp4->hidePopup(tmp6,null());
 		}
-		HX_STACK_LINE(103)
-		Dynamic tmp5 = this->_fn_dyn();		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(103)
-		bool tmp6 = (tmp5 != null());		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(103)
-		if ((tmp6)){
-			HX_STACK_LINE(104)
-			::haxe::ui::toolkit::containers::ListView tmp7 = this->_list;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(104)
-			::haxe::ui::toolkit::core::interfaces::IItemRenderer tmp8 = tmp7->get_selectedItems()->__get((int)0);		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(104)
-			::haxe::ui::toolkit::core::interfaces::IItemRenderer item = tmp8;		HX_STACK_VAR(item,"item");
-			HX_STACK_LINE(105)
-			::haxe::ui::toolkit::containers::ListView tmp9 = this->_list;		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(105)
-			::haxe::ui::toolkit::core::interfaces::IItemRenderer tmp10 = item;		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(105)
-			int tmp11 = tmp9->getItemIndex(tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(105)
-			int index = tmp11;		HX_STACK_VAR(index,"index");
+		HX_STACK_LINE(105)
+		Dynamic tmp4 = this->_fn_dyn();		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(105)
+		bool tmp5 = (tmp4 != null());		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(105)
+		if ((tmp5)){
 			HX_STACK_LINE(106)
-			Dynamic tmp12 = item->get_data();		HX_STACK_VAR(tmp12,"tmp12");
+			::haxe::ui::toolkit::containers::ListView tmp6 = this->_list;		HX_STACK_VAR(tmp6,"tmp6");
 			HX_STACK_LINE(106)
-			tmp12->__FieldRef(HX_HCSTRING("index","\x12","\x9b","\x14","\xbe")) = index;
+			::haxe::ui::toolkit::core::interfaces::IItemRenderer tmp7 = tmp6->get_selectedItems()->__get((int)0);		HX_STACK_VAR(tmp7,"tmp7");
+			HX_STACK_LINE(106)
+			::haxe::ui::toolkit::core::interfaces::IItemRenderer item = tmp7;		HX_STACK_VAR(item,"item");
 			HX_STACK_LINE(107)
-			::haxe::ui::toolkit::core::interfaces::IItemRenderer tmp13 = item;		HX_STACK_VAR(tmp13,"tmp13");
+			::haxe::ui::toolkit::containers::ListView tmp8 = this->_list;		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(107)
-			this->_fn(tmp13);
+			::haxe::ui::toolkit::core::interfaces::IItemRenderer tmp9 = item;		HX_STACK_VAR(tmp9,"tmp9");
+			HX_STACK_LINE(107)
+			int tmp10 = tmp8->getItemIndex(tmp9);		HX_STACK_VAR(tmp10,"tmp10");
+			HX_STACK_LINE(107)
+			int index = tmp10;		HX_STACK_VAR(index,"index");
+			HX_STACK_LINE(108)
+			Dynamic tmp11 = item->get_data();		HX_STACK_VAR(tmp11,"tmp11");
+			HX_STACK_LINE(108)
+			tmp11->__FieldRef(HX_HCSTRING("index","\x12","\x9b","\x14","\xbe")) = index;
+			HX_STACK_LINE(109)
+			::haxe::ui::toolkit::core::interfaces::IItemRenderer tmp12 = item;		HX_STACK_VAR(tmp12,"tmp12");
+			HX_STACK_LINE(109)
+			this->_fn(tmp12);
 		}
 	}
 return null();
@@ -431,22 +439,22 @@ HX_DEFINE_DYNAMIC_FUNC1(ListPopupContent_obj,_onTimerComplete,(void))
 
 Void ListPopupContent_obj::setSelectedIndexNoEvent( int index){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.ListPopupContent","setSelectedIndexNoEvent",0x8f95cad2,"haxe.ui.toolkit.controls.popups.ListPopupContent.setSelectedIndexNoEvent","haxe/ui/toolkit/controls/popups/ListPopupContent.hx",114,0x70518bc1)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.ListPopupContent","setSelectedIndexNoEvent",0x8f95cad2,"haxe.ui.toolkit.controls.popups.ListPopupContent.setSelectedIndexNoEvent","haxe/ui/toolkit/controls/popups/ListPopupContent.hx",116,0x70518bc1)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(index,"index")
-		HX_STACK_LINE(115)
+		HX_STACK_LINE(117)
 		this->_selectedIndex = index;
-		HX_STACK_LINE(116)
+		HX_STACK_LINE(118)
 		::haxe::ui::toolkit::containers::ListView tmp = this->_list;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(116)
+		HX_STACK_LINE(118)
 		bool tmp1 = tmp->get_ready();		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(116)
+		HX_STACK_LINE(118)
 		if ((tmp1)){
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			::haxe::ui::toolkit::containers::ListView tmp2 = this->_list;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			int tmp3 = index;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			tmp2->setSelectedIndexNoEvent(tmp3);
 		}
 	}
@@ -540,6 +548,7 @@ Dynamic ListPopupContent_obj::__Field(const ::String &inName,hx::PropertyAccess 
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"selectedIndex") ) { if (inCallProp == hx::paccAlways) return get_selectedIndex(); }
+		if (HX_FIELD_EQ(inName,"GetListObject") ) { return GetListObject_dyn(); }
 		if (HX_FIELD_EQ(inName,"_onListChange") ) { return _onListChange_dyn(); }
 		break;
 	case 14:
@@ -628,6 +637,7 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("get_selectedIndex","\x0e","\x82","\xc6","\xba"),
 	HX_HCSTRING("set_selectedIndex","\x1a","\x5a","\x34","\xde"),
 	HX_HCSTRING("get_listSize","\x48","\x24","\x62","\xe1"),
+	HX_HCSTRING("GetListObject","\xd3","\x55","\x08","\x1c"),
 	HX_HCSTRING("DELAY","\x63","\x0f","\x15","\x55"),
 	HX_HCSTRING("_onListChange","\x4c","\xf1","\x8a","\xd4"),
 	HX_HCSTRING("_onTimerComplete","\x80","\xf3","\x2f","\x0a"),

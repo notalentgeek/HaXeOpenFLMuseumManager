@@ -60,6 +60,12 @@
 #ifndef INCLUDED_openfl__legacy_display_Stage
 #include <openfl/_legacy/display/Stage.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_display_StageAlign
+#include <openfl/_legacy/display/StageAlign.h>
+#endif
+#ifndef INCLUDED_openfl__legacy_display_StageScaleMode
+#include <openfl/_legacy/display/StageScaleMode.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_events_EventDispatcher
 #include <openfl/_legacy/events/EventDispatcher.h>
 #endif
@@ -68,12 +74,6 @@
 #endif
 #ifndef INCLUDED_openfl__legacy_net_URLLoader
 #include <openfl/_legacy/net/URLLoader.h>
-#endif
-#ifndef INCLUDED_openfl_display_StageAlign
-#include <openfl/display/StageAlign.h>
-#endif
-#ifndef INCLUDED_openfl_display_StageScaleMode
-#include <openfl/display/StageScaleMode.h>
 #endif
 #ifndef INCLUDED_sys_FileSystem
 #include <sys/FileSystem.h>
@@ -205,13 +205,13 @@ Void ApplicationMain_obj::main( ){
 				HX_STACK_LINE(54)
 				::openfl::_legacy::display::Stage tmp24 = tmp23->get_stage();		HX_STACK_VAR(tmp24,"tmp24");
 				HX_STACK_LINE(54)
-				tmp24->set_align(::openfl::display::StageAlign_obj::TOP_LEFT);
+				tmp24->set_align(::openfl::_legacy::display::StageAlign_obj::TOP_LEFT);
 				HX_STACK_LINE(55)
 				::openfl::_legacy::display::MovieClip tmp25 = ::openfl::_legacy::Lib_obj::get_current();		HX_STACK_VAR(tmp25,"tmp25");
 				HX_STACK_LINE(55)
 				::openfl::_legacy::display::Stage tmp26 = tmp25->get_stage();		HX_STACK_VAR(tmp26,"tmp26");
 				HX_STACK_LINE(55)
-				tmp26->set_scaleMode(::openfl::display::StageScaleMode_obj::NO_SCALE);
+				tmp26->set_scaleMode(::openfl::_legacy::display::StageScaleMode_obj::NO_SCALE);
 				HX_STACK_LINE(56)
 				::openfl::_legacy::display::LoaderInfo tmp27 = ::openfl::_legacy::display::LoaderInfo_obj::create(null());		HX_STACK_VAR(tmp27,"tmp27");
 				HX_STACK_LINE(56)

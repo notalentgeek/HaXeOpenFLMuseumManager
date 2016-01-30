@@ -64,7 +64,6 @@ class HXCPP_CLASS_ATTRIBUTES  TableViewRow_obj : public ::haxe::ui::toolkit::con
 		operator ::haxe::ui::toolkit::core::interfaces::IStyleableDisplayObject_obj *();
 		operator ::haxe::ui::toolkit::core::interfaces::IComponent_obj *();
 		operator ::haxe::ui::toolkit::core::interfaces::IEventDispatcher_obj *();
-		operator ::haxe::ui::toolkit::core::interfaces::IClonable_obj *();
 		operator ::haxe::ui::toolkit::core::interfaces::IStateComponent_obj *();
 		operator ::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer_obj *();
 		::String __ToString() const { return HX_HCSTRING("TableViewRow","\x67","\x2e","\x66","\xfc"); }

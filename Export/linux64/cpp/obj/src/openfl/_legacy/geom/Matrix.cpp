@@ -460,11 +460,7 @@ Void Matrix_obj::copyRowTo( int row,::openfl::geom::Vector3D vector3D){
 				}
 				else{
 					HX_STACK_LINE(168)
-					vector3D->x = (int)0;
-					HX_STACK_LINE(168)
-					vector3D->y = (int)0;
-					HX_STACK_LINE(168)
-					vector3D->z = (int)1;
+					vector3D->setTo((int)0,(int)0,(int)1);
 				}
 			}
 		}

@@ -5,13 +5,9 @@
 #include <hxcpp.h>
 #endif
 
-#ifndef INCLUDED_haxe_ui_toolkit_core_interfaces_IClonable
-#include <haxe/ui/toolkit/core/interfaces/IClonable.h>
-#endif
 #ifndef INCLUDED_haxe_ui_toolkit_core_interfaces_IStateComponent
 #include <haxe/ui/toolkit/core/interfaces/IStateComponent.h>
 #endif
-HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IClonable)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IComponent)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDisplayObject)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDisplayObjectContainer)
@@ -26,9 +22,9 @@ namespace core{
 namespace interfaces{
 
 
-class HXCPP_CLASS_ATTRIBUTES  IItemRenderer_obj : public ::haxe::ui::toolkit::core::interfaces::IClonable_obj{
+class HXCPP_CLASS_ATTRIBUTES  IItemRenderer_obj : public ::haxe::ui::toolkit::core::interfaces::IStateComponent_obj{
 	public:
-		typedef ::haxe::ui::toolkit::core::interfaces::IClonable_obj super;
+		typedef ::haxe::ui::toolkit::core::interfaces::IStateComponent_obj super;
 		typedef IItemRenderer_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
 		virtual Dynamic get_data( )=0;
@@ -62,7 +58,12 @@ class IItemRenderer_delegate_ : public IItemRenderer_obj
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
 		DELEGATE_haxe_ui_toolkit_core_interfaces_IItemRenderer
-		DELEGATE_haxe_ui_toolkit_core_interfaces_IClonable
+		DELEGATE_haxe_ui_toolkit_core_interfaces_IStateComponent
+		DELEGATE_haxe_ui_toolkit_core_interfaces_IComponent
+		DELEGATE_haxe_ui_toolkit_core_interfaces_IStyleableDisplayObject
+		DELEGATE_haxe_ui_toolkit_core_interfaces_IDisplayObjectContainer
+		DELEGATE_haxe_ui_toolkit_core_interfaces_IDisplayObject
+		DELEGATE_haxe_ui_toolkit_core_interfaces_IEventDispatcher
 };
 
 } // end namespace haxe

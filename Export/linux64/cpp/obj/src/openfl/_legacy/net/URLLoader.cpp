@@ -51,9 +51,6 @@
 #ifndef INCLUDED_openfl_events_TextEvent
 #include <openfl/events/TextEvent.h>
 #endif
-#ifndef INCLUDED_openfl_net_URLLoaderDataFormat
-#include <openfl/net/URLLoaderDataFormat.h>
-#endif
 #ifndef INCLUDED_openfl_net_URLRequestHeader
 #include <openfl/net/URLRequestHeader.h>
 #endif
@@ -81,7 +78,7 @@ HX_STACK_ARG(request,"request")
 	HX_STACK_LINE(199)
 	this->state = (int)0;
 	HX_STACK_LINE(200)
-	this->dataFormat = ::openfl::net::URLLoaderDataFormat_obj::TEXT;
+	this->dataFormat = ((Dynamic)((int)1));
 	HX_STACK_LINE(202)
 	bool tmp = (request != null());		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(202)
@@ -281,25 +278,27 @@ Void URLLoader_obj::loadInCURLThread( ::openfl::_legacy::net::URLRequest request
 				HX_STACK_LINE(282)
 				{
 					HX_STACK_LINE(282)
-					::openfl::net::URLLoaderDataFormat tmp6 = this->dataFormat;		HX_STACK_VAR(tmp6,"tmp6");
+					Dynamic tmp6 = this->dataFormat;		HX_STACK_VAR(tmp6,"tmp6");
 					HX_STACK_LINE(282)
-					::openfl::net::URLLoaderDataFormat _g = tmp6;		HX_STACK_VAR(_g,"_g");
+					Dynamic _g = tmp6;		HX_STACK_VAR(_g,"_g");
 					HX_STACK_LINE(282)
-					switch( (int)(_g->__Index())){
+					Dynamic tmp7 = _g;		HX_STACK_VAR(tmp7,"tmp7");
+					HX_STACK_LINE(282)
+					switch( (int)(tmp7)){
 						case (int)1: {
 							HX_STACK_LINE(284)
-							::String tmp7 = bytes->asString();		HX_STACK_VAR(tmp7,"tmp7");
+							::String tmp8 = bytes->asString();		HX_STACK_VAR(tmp8,"tmp8");
 							HX_STACK_LINE(284)
-							this->data = tmp7;
+							this->data = tmp8;
 						}
 						;break;
 						case (int)2: {
 							HX_STACK_LINE(285)
-							::String tmp7 = bytes->asString();		HX_STACK_VAR(tmp7,"tmp7");
+							::String tmp8 = bytes->asString();		HX_STACK_VAR(tmp8,"tmp8");
 							HX_STACK_LINE(285)
-							::openfl::net::URLVariables tmp8 = ::openfl::net::URLVariables_obj::__new(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
+							::openfl::net::URLVariables tmp9 = ::openfl::net::URLVariables_obj::__new(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
 							HX_STACK_LINE(285)
-							this->data = tmp8;
+							this->data = tmp9;
 						}
 						;break;
 						default: {
@@ -374,13 +373,9 @@ Void URLLoader_obj::onError( ::String msg){
 		HX_STACK_LINE(322)
 		tmp1->remove(hx::ObjectPtr<OBJ_>(this));
 		HX_STACK_LINE(323)
-		::String tmp2 = ::openfl::events::IOErrorEvent_obj::IO_ERROR;		HX_STACK_VAR(tmp2,"tmp2");
+		::openfl::events::IOErrorEvent tmp2 = ::openfl::events::IOErrorEvent_obj::__new(HX_HCSTRING("ioError","\x02","\xfe","\x41","\x76"),true,false,msg,null());		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(323)
-		::String tmp3 = msg;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(323)
-		::openfl::events::IOErrorEvent tmp4 = ::openfl::events::IOErrorEvent_obj::__new(tmp2,true,false,tmp3,null());		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(323)
-		::openfl::_legacy::net::URLLoader_obj::enqueueEvent(hx::ObjectPtr<OBJ_>(this),tmp4);
+		::openfl::_legacy::net::URLLoader_obj::enqueueEvent(hx::ObjectPtr<OBJ_>(this),tmp2);
 	}
 return null();
 }
@@ -462,19 +457,17 @@ Void URLLoader_obj::update( ){
 			HX_STACK_LINE(340)
 			if ((tmp10)){
 				HX_STACK_LINE(341)
-				::String tmp11 = ::openfl::events::ProgressEvent_obj::PROGRESS;		HX_STACK_VAR(tmp11,"tmp11");
+				int tmp11 = this->bytesLoaded;		HX_STACK_VAR(tmp11,"tmp11");
 				HX_STACK_LINE(341)
-				int tmp12 = this->bytesLoaded;		HX_STACK_VAR(tmp12,"tmp12");
+				int tmp12 = this->bytesTotal;		HX_STACK_VAR(tmp12,"tmp12");
 				HX_STACK_LINE(341)
-				int tmp13 = this->bytesTotal;		HX_STACK_VAR(tmp13,"tmp13");
+				::openfl::events::ProgressEvent tmp13 = ::openfl::events::ProgressEvent_obj::__new(HX_HCSTRING("progress","\xad","\xf7","\x2a","\x86"),false,false,tmp11,tmp12);		HX_STACK_VAR(tmp13,"tmp13");
 				HX_STACK_LINE(341)
-				::openfl::events::ProgressEvent tmp14 = ::openfl::events::ProgressEvent_obj::__new(tmp11,false,false,tmp12,tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(341)
-				::openfl::events::ProgressEvent evt = tmp14;		HX_STACK_VAR(evt,"evt");
+				::openfl::events::ProgressEvent evt = tmp13;		HX_STACK_VAR(evt,"evt");
 				HX_STACK_LINE(342)
-				::openfl::events::ProgressEvent tmp15 = evt;		HX_STACK_VAR(tmp15,"tmp15");
+				::openfl::events::ProgressEvent tmp14 = evt;		HX_STACK_VAR(tmp14,"tmp14");
 				HX_STACK_LINE(342)
-				::openfl::_legacy::net::URLLoader_obj::enqueueEvent(hx::ObjectPtr<OBJ_>(this),tmp15);
+				::openfl::_legacy::net::URLLoader_obj::enqueueEvent(hx::ObjectPtr<OBJ_>(this),tmp14);
 			}
 			HX_STACK_LINE(345)
 			::openfl::_legacy::net::_URLLoader::URLLoadersManager tmp11 = ::openfl::_legacy::net::_URLLoader::URLLoadersManager_obj::getInstance();		HX_STACK_VAR(tmp11,"tmp11");
@@ -505,27 +498,29 @@ Void URLLoader_obj::update( ){
 				HX_STACK_LINE(351)
 				{
 					HX_STACK_LINE(351)
-					::openfl::net::URLLoaderDataFormat tmp20 = this->dataFormat;		HX_STACK_VAR(tmp20,"tmp20");
+					Dynamic tmp20 = this->dataFormat;		HX_STACK_VAR(tmp20,"tmp20");
 					HX_STACK_LINE(351)
-					::openfl::net::URLLoaderDataFormat _g = tmp20;		HX_STACK_VAR(_g,"_g");
+					Dynamic _g = tmp20;		HX_STACK_VAR(_g,"_g");
 					HX_STACK_LINE(351)
-					switch( (int)(_g->__Index())){
+					Dynamic tmp21 = _g;		HX_STACK_VAR(tmp21,"tmp21");
+					HX_STACK_LINE(351)
+					switch( (int)(tmp21)){
 						case (int)1: case (int)2: {
 							HX_STACK_LINE(353)
-							bool tmp21 = (bytes == null());		HX_STACK_VAR(tmp21,"tmp21");
+							bool tmp22 = (bytes == null());		HX_STACK_VAR(tmp22,"tmp22");
 							HX_STACK_LINE(353)
-							Dynamic tmp22;		HX_STACK_VAR(tmp22,"tmp22");
+							Dynamic tmp23;		HX_STACK_VAR(tmp23,"tmp23");
 							HX_STACK_LINE(353)
-							if ((tmp21)){
+							if ((tmp22)){
 								HX_STACK_LINE(353)
-								tmp22 = HX_HCSTRING("","\x00","\x00","\x00","\x00");
+								tmp23 = HX_HCSTRING("","\x00","\x00","\x00","\x00");
 							}
 							else{
 								HX_STACK_LINE(353)
-								tmp22 = bytes->asString();
+								tmp23 = bytes->asString();
 							}
 							HX_STACK_LINE(353)
-							this->data = tmp22;
+							this->data = tmp23;
 						}
 						;break;
 						default: {
@@ -543,21 +538,19 @@ Void URLLoader_obj::update( ){
 				}
 				else{
 					HX_STACK_LINE(361)
-					::String tmp21 = ::openfl::events::IOErrorEvent_obj::IO_ERROR;		HX_STACK_VAR(tmp21,"tmp21");
+					Dynamic tmp21 = this->data;		HX_STACK_VAR(tmp21,"tmp21");
 					HX_STACK_LINE(361)
-					Dynamic tmp22 = this->data;		HX_STACK_VAR(tmp22,"tmp22");
+					int tmp22 = code;		HX_STACK_VAR(tmp22,"tmp22");
 					HX_STACK_LINE(361)
-					int tmp23 = code;		HX_STACK_VAR(tmp23,"tmp23");
+					::openfl::events::IOErrorEvent tmp23 = ::openfl::events::IOErrorEvent_obj::__new(HX_HCSTRING("ioError","\x02","\xfe","\x41","\x76"),true,false,tmp21,tmp22);		HX_STACK_VAR(tmp23,"tmp23");
 					HX_STACK_LINE(361)
-					::openfl::events::IOErrorEvent tmp24 = ::openfl::events::IOErrorEvent_obj::__new(tmp21,true,false,tmp22,tmp23);		HX_STACK_VAR(tmp24,"tmp24");
-					HX_STACK_LINE(361)
-					::openfl::events::IOErrorEvent event = tmp24;		HX_STACK_VAR(event,"event");
+					::openfl::events::IOErrorEvent event = tmp23;		HX_STACK_VAR(event,"event");
 					HX_STACK_LINE(362)
 					this->__handle = null();
 					HX_STACK_LINE(363)
-					::openfl::events::IOErrorEvent tmp25 = event;		HX_STACK_VAR(tmp25,"tmp25");
+					::openfl::events::IOErrorEvent tmp24 = event;		HX_STACK_VAR(tmp24,"tmp24");
 					HX_STACK_LINE(363)
-					::openfl::_legacy::net::URLLoader_obj::enqueueEvent(hx::ObjectPtr<OBJ_>(this),tmp25);
+					::openfl::_legacy::net::URLLoader_obj::enqueueEvent(hx::ObjectPtr<OBJ_>(this),tmp24);
 				}
 			}
 			else{
@@ -580,21 +573,15 @@ Void URLLoader_obj::update( ){
 					HX_STACK_LINE(368)
 					::String errorMessage = tmp21;		HX_STACK_VAR(errorMessage,"errorMessage");
 					HX_STACK_LINE(369)
-					::String tmp22 = ::openfl::events::IOErrorEvent_obj::IO_ERROR;		HX_STACK_VAR(tmp22,"tmp22");
+					::openfl::events::IOErrorEvent tmp22 = ::openfl::events::IOErrorEvent_obj::__new(HX_HCSTRING("ioError","\x02","\xfe","\x41","\x76"),true,false,errorMessage,code);		HX_STACK_VAR(tmp22,"tmp22");
 					HX_STACK_LINE(369)
-					::String tmp23 = errorMessage;		HX_STACK_VAR(tmp23,"tmp23");
-					HX_STACK_LINE(369)
-					int tmp24 = code;		HX_STACK_VAR(tmp24,"tmp24");
-					HX_STACK_LINE(369)
-					::openfl::events::IOErrorEvent tmp25 = ::openfl::events::IOErrorEvent_obj::__new(tmp22,true,false,tmp23,tmp24);		HX_STACK_VAR(tmp25,"tmp25");
-					HX_STACK_LINE(369)
-					::openfl::events::IOErrorEvent event = tmp25;		HX_STACK_VAR(event,"event");
+					::openfl::events::IOErrorEvent event = tmp22;		HX_STACK_VAR(event,"event");
 					HX_STACK_LINE(370)
 					this->__handle = null();
 					HX_STACK_LINE(371)
-					::openfl::events::IOErrorEvent tmp26 = event;		HX_STACK_VAR(tmp26,"tmp26");
+					::openfl::events::IOErrorEvent tmp23 = event;		HX_STACK_VAR(tmp23,"tmp23");
 					HX_STACK_LINE(371)
-					::openfl::_legacy::net::URLLoader_obj::enqueueEvent(hx::ObjectPtr<OBJ_>(this),tmp26);
+					::openfl::_legacy::net::URLLoader_obj::enqueueEvent(hx::ObjectPtr<OBJ_>(this),tmp23);
 				}
 			}
 		}
@@ -883,7 +870,7 @@ Dynamic URLLoader_obj::__SetField(const ::String &inName,const Dynamic &inValue,
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"bytesTotal") ) { bytesTotal=inValue.Cast< int >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"dataFormat") ) { dataFormat=inValue.Cast< ::openfl::net::URLLoaderDataFormat >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"dataFormat") ) { dataFormat=inValue.Cast< Dynamic >(); return inValue; }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"bytesLoaded") ) { bytesLoaded=inValue.Cast< int >(); return inValue; }
@@ -919,7 +906,7 @@ static hx::StorageInfo sMemberStorageInfo[] = {
 	{hx::fsInt,(int)offsetof(URLLoader_obj,bytesLoaded),HX_HCSTRING("bytesLoaded","\xd0","\x66","\xca","\x99")},
 	{hx::fsInt,(int)offsetof(URLLoader_obj,bytesTotal),HX_HCSTRING("bytesTotal","\x59","\x57","\xda","\x45")},
 	{hx::fsObject /*Dynamic*/ ,(int)offsetof(URLLoader_obj,data),HX_HCSTRING("data","\x2a","\x56","\x63","\x42")},
-	{hx::fsObject /*::openfl::net::URLLoaderDataFormat*/ ,(int)offsetof(URLLoader_obj,dataFormat),HX_HCSTRING("dataFormat","\x01","\x55","\x30","\xe9")},
+	{hx::fsObject /*Dynamic*/ ,(int)offsetof(URLLoader_obj,dataFormat),HX_HCSTRING("dataFormat","\x01","\x55","\x30","\xe9")},
 	{hx::fsInt,(int)offsetof(URLLoader_obj,state),HX_HCSTRING("state","\x11","\x76","\x0b","\x84")},
 	{hx::fsObject /*Dynamic*/ ,(int)offsetof(URLLoader_obj,__handle),HX_HCSTRING("__handle","\xc8","\xee","\x2c","\x60")},
 	{hx::fsObject /*Dynamic*/ ,(int)offsetof(URLLoader_obj,__onComplete),HX_HCSTRING("__onComplete","\x18","\x50","\x12","\x96")},

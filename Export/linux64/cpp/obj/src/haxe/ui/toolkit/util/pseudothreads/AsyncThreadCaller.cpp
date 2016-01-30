@@ -244,19 +244,17 @@ Void AsyncThreadCaller_obj::run( ::openfl::_legacy::events::Event event){
 			}
 			else{
 				HX_STACK_LINE(56)
-				::String tmp16 = ::openfl::events::ProgressEvent_obj::PROGRESS;		HX_STACK_VAR(tmp16,"tmp16");
+				::haxe::ui::toolkit::util::pseudothreads::IRunnable tmp16 = this->_runnableWorker;		HX_STACK_VAR(tmp16,"tmp16");
 				HX_STACK_LINE(56)
-				::haxe::ui::toolkit::util::pseudothreads::IRunnable tmp17 = this->_runnableWorker;		HX_STACK_VAR(tmp17,"tmp17");
+				int tmp17 = tmp16->get_progress();		HX_STACK_VAR(tmp17,"tmp17");
 				HX_STACK_LINE(56)
-				int tmp18 = tmp17->get_progress();		HX_STACK_VAR(tmp18,"tmp18");
+				::haxe::ui::toolkit::util::pseudothreads::IRunnable tmp18 = this->_runnableWorker;		HX_STACK_VAR(tmp18,"tmp18");
 				HX_STACK_LINE(56)
-				::haxe::ui::toolkit::util::pseudothreads::IRunnable tmp19 = this->_runnableWorker;		HX_STACK_VAR(tmp19,"tmp19");
+				int tmp19 = tmp18->get_total();		HX_STACK_VAR(tmp19,"tmp19");
 				HX_STACK_LINE(56)
-				int tmp20 = tmp19->get_total();		HX_STACK_VAR(tmp20,"tmp20");
+				::openfl::events::ProgressEvent tmp20 = ::openfl::events::ProgressEvent_obj::__new(HX_HCSTRING("progress","\xad","\xf7","\x2a","\x86"),false,false,tmp17,tmp19);		HX_STACK_VAR(tmp20,"tmp20");
 				HX_STACK_LINE(56)
-				::openfl::events::ProgressEvent tmp21 = ::openfl::events::ProgressEvent_obj::__new(tmp16,false,false,tmp18,tmp20);		HX_STACK_VAR(tmp21,"tmp21");
-				HX_STACK_LINE(56)
-				this->dispatchEvent(tmp21);
+				this->dispatchEvent(tmp20);
 			}
 		}
 	}

@@ -535,35 +535,13 @@ Float Vector3D_obj::normalize( ){
 	HX_STACK_FRAME("openfl.geom.Vector3D","normalize",0x09bfa687,"openfl.geom.Vector3D.normalize","openfl/geom/Vector3D.hx",141,0xc7821076)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(143)
-	Float tmp = this->x;		HX_STACK_VAR(tmp,"tmp");
+	Float tmp = this->get_length();		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(143)
-	Float tmp1 = this->x;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(143)
-	Float tmp2 = (tmp * tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(143)
-	Float tmp3 = this->y;		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(143)
-	Float tmp4 = this->y;		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(143)
-	Float tmp5 = (tmp3 * tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(143)
-	Float tmp6 = (tmp2 + tmp5);		HX_STACK_VAR(tmp6,"tmp6");
-	HX_STACK_LINE(143)
-	Float tmp7 = this->z;		HX_STACK_VAR(tmp7,"tmp7");
-	HX_STACK_LINE(143)
-	Float tmp8 = this->z;		HX_STACK_VAR(tmp8,"tmp8");
-	HX_STACK_LINE(143)
-	Float tmp9 = (tmp7 * tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-	HX_STACK_LINE(143)
-	Float tmp10 = (tmp6 + tmp9);		HX_STACK_VAR(tmp10,"tmp10");
-	HX_STACK_LINE(143)
-	Float tmp11 = ::Math_obj::sqrt(tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-	HX_STACK_LINE(143)
-	Float l = tmp11;		HX_STACK_VAR(l,"l");
+	Float l = tmp;		HX_STACK_VAR(l,"l");
 	HX_STACK_LINE(145)
-	bool tmp12 = (l != (int)0);		HX_STACK_VAR(tmp12,"tmp12");
+	bool tmp1 = (l != (int)0);		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(145)
-	if ((tmp12)){
+	if ((tmp1)){
 		HX_STACK_LINE(147)
 		hx::DivEq(this->x,l);
 		HX_STACK_LINE(148)
@@ -572,9 +550,9 @@ Float Vector3D_obj::normalize( ){
 		hx::DivEq(this->z,l);
 	}
 	HX_STACK_LINE(153)
-	Float tmp13 = l;		HX_STACK_VAR(tmp13,"tmp13");
+	Float tmp2 = l;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(153)
-	return tmp13;
+	return tmp2;
 }
 
 
@@ -777,65 +755,39 @@ Float Vector3D_obj::angleBetween( ::openfl::geom::Vector3D a,::openfl::geom::Vec
 	HX_STACK_ARG(a,"a")
 	HX_STACK_ARG(b,"b")
 	HX_STACK_LINE(38)
-	Float tmp = (a->x * a->x);		HX_STACK_VAR(tmp,"tmp");
+	Float tmp = a->get_length();		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(38)
-	Float tmp1 = (a->y * a->y);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(38)
-	Float tmp2 = (tmp + tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(38)
-	Float tmp3 = (a->z * a->z);		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(38)
-	Float tmp4 = (tmp2 + tmp3);		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(38)
-	Float tmp5 = ::Math_obj::sqrt(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(38)
-	Float la = tmp5;		HX_STACK_VAR(la,"la");
+	Float la = tmp;		HX_STACK_VAR(la,"la");
 	HX_STACK_LINE(39)
-	Float tmp6 = (b->x * b->x);		HX_STACK_VAR(tmp6,"tmp6");
+	Float tmp1 = b->get_length();		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(39)
-	Float tmp7 = (b->y * b->y);		HX_STACK_VAR(tmp7,"tmp7");
-	HX_STACK_LINE(39)
-	Float tmp8 = (tmp6 + tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-	HX_STACK_LINE(39)
-	Float tmp9 = (b->z * b->z);		HX_STACK_VAR(tmp9,"tmp9");
-	HX_STACK_LINE(39)
-	Float tmp10 = (tmp8 + tmp9);		HX_STACK_VAR(tmp10,"tmp10");
-	HX_STACK_LINE(39)
-	Float tmp11 = ::Math_obj::sqrt(tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-	HX_STACK_LINE(39)
-	Float lb = tmp11;		HX_STACK_VAR(lb,"lb");
+	Float lb = tmp1;		HX_STACK_VAR(lb,"lb");
 	HX_STACK_LINE(40)
-	Float tmp12 = (a->x * b->x);		HX_STACK_VAR(tmp12,"tmp12");
+	::openfl::geom::Vector3D tmp2 = b;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(40)
-	Float tmp13 = (a->y * b->y);		HX_STACK_VAR(tmp13,"tmp13");
+	Float tmp3 = a->dotProduct(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(40)
-	Float tmp14 = (tmp12 + tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-	HX_STACK_LINE(40)
-	Float tmp15 = (a->z * b->z);		HX_STACK_VAR(tmp15,"tmp15");
-	HX_STACK_LINE(40)
-	Float tmp16 = (tmp14 + tmp15);		HX_STACK_VAR(tmp16,"tmp16");
-	HX_STACK_LINE(40)
-	Float dot = tmp16;		HX_STACK_VAR(dot,"dot");
+	Float dot = tmp3;		HX_STACK_VAR(dot,"dot");
 	HX_STACK_LINE(42)
-	bool tmp17 = (la != (int)0);		HX_STACK_VAR(tmp17,"tmp17");
+	bool tmp4 = (la != (int)0);		HX_STACK_VAR(tmp4,"tmp4");
 	HX_STACK_LINE(42)
-	if ((tmp17)){
+	if ((tmp4)){
 		HX_STACK_LINE(44)
 		hx::DivEq(dot,la);
 	}
 	HX_STACK_LINE(48)
-	bool tmp18 = (lb != (int)0);		HX_STACK_VAR(tmp18,"tmp18");
+	bool tmp5 = (lb != (int)0);		HX_STACK_VAR(tmp5,"tmp5");
 	HX_STACK_LINE(48)
-	if ((tmp18)){
+	if ((tmp5)){
 		HX_STACK_LINE(50)
 		hx::DivEq(dot,lb);
 	}
 	HX_STACK_LINE(54)
-	Float tmp19 = dot;		HX_STACK_VAR(tmp19,"tmp19");
+	Float tmp6 = dot;		HX_STACK_VAR(tmp6,"tmp6");
 	HX_STACK_LINE(54)
-	Float tmp20 = ::Math_obj::acos(tmp19);		HX_STACK_VAR(tmp20,"tmp20");
+	Float tmp7 = ::Math_obj::acos(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
 	HX_STACK_LINE(54)
-	return tmp20;
+	return tmp7;
 }
 
 

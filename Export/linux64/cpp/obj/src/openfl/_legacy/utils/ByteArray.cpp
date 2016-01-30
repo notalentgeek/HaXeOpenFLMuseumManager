@@ -36,6 +36,9 @@
 #ifndef INCLUDED_openfl_errors_IOError
 #include <openfl/errors/IOError.h>
 #endif
+#ifndef INCLUDED_openfl_utils__Endian_Endian_Impl_
+#include <openfl/utils/_Endian/Endian_Impl_.h>
+#endif
 namespace openfl{
 namespace _legacy{
 namespace utils{
@@ -2028,11 +2031,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ByteArray_obj,get_byteLength,return )
 	HX_STACK_LINE(803)
 	if ((tmp)){
 		HX_STACK_LINE(803)
-		tmp1 = HX_HCSTRING("bigEndian","\x7b","\xd5","\x5a","\x20");
+		tmp1 = ::openfl::utils::_Endian::Endian_Impl__obj::toString(((Dynamic)((int)0)));
 	}
 	else{
 		HX_STACK_LINE(803)
-		tmp1 = HX_HCSTRING("littleEndian","\x31","\x2e","\x7b","\x07");
+		tmp1 = ::openfl::utils::_Endian::Endian_Impl__obj::toString(((Dynamic)((int)1)));
 	}
 	HX_STACK_LINE(803)
 	return tmp1;
@@ -2046,13 +2049,17 @@ HX_DEFINE_DYNAMIC_FUNC0(ByteArray_obj,get_endian,return )
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
 	HX_STACK_LINE(804)
-	bool tmp = (value == HX_HCSTRING("bigEndian","\x7b","\xd5","\x5a","\x20"));		HX_STACK_VAR(tmp,"tmp");
+	::String tmp = value;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(804)
-	this->bigEndian = tmp;
+	Dynamic tmp1 = ::openfl::utils::_Endian::Endian_Impl__obj::fromString(tmp);		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(804)
-	::String tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
+	bool tmp2 = (tmp1 == ((Dynamic)((int)0)));		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(804)
-	return tmp1;
+	this->bigEndian = tmp2;
+	HX_STACK_LINE(804)
+	::String tmp3 = value;		HX_STACK_VAR(tmp3,"tmp3");
+	HX_STACK_LINE(804)
+	return tmp3;
 }
 
 

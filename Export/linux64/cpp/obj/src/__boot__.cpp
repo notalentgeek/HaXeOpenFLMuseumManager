@@ -3,27 +3,6 @@
 #ifndef INCLUDED_sys__FileSystem_FileKind
 #include <sys/_FileSystem/FileKind.h>
 #endif
-#ifndef INCLUDED_openfl_text_TextFieldType
-#include <openfl/text/TextFieldType.h>
-#endif
-#ifndef INCLUDED_openfl_text_TextFieldAutoSize
-#include <openfl/text/TextFieldAutoSize.h>
-#endif
-#ifndef INCLUDED_openfl_text_GridFitType
-#include <openfl/text/GridFitType.h>
-#endif
-#ifndef INCLUDED_openfl_text_AntiAliasType
-#include <openfl/text/AntiAliasType.h>
-#endif
-#ifndef INCLUDED_openfl_net_URLLoaderDataFormat
-#include <openfl/net/URLLoaderDataFormat.h>
-#endif
-#ifndef INCLUDED_openfl_geom_Orientation3D
-#include <openfl/geom/Orientation3D.h>
-#endif
-#ifndef INCLUDED_openfl_events_EventPhase
-#include <openfl/events/EventPhase.h>
-#endif
 #ifndef INCLUDED_openfl_display3D_Context3DWrapMode
 #include <openfl/display3D/Context3DWrapMode.h>
 #endif
@@ -45,29 +24,11 @@
 #ifndef INCLUDED_openfl_display3D_Context3DBufferUsage
 #include <openfl/display3D/Context3DBufferUsage.h>
 #endif
-#ifndef INCLUDED_openfl_display_StageScaleMode
-#include <openfl/display/StageScaleMode.h>
-#endif
-#ifndef INCLUDED_openfl_display_StageDisplayState
-#include <openfl/display/StageDisplayState.h>
-#endif
-#ifndef INCLUDED_openfl_display_StageAlign
-#include <openfl/display/StageAlign.h>
-#endif
-#ifndef INCLUDED_openfl_display_PixelSnapping
-#include <openfl/display/PixelSnapping.h>
-#endif
-#ifndef INCLUDED_openfl_display_InterpolationMethod
-#include <openfl/display/InterpolationMethod.h>
-#endif
-#ifndef INCLUDED_openfl_display_GraphicsPathWinding
-#include <openfl/display/GraphicsPathWinding.h>
-#endif
-#ifndef INCLUDED_openfl_display_GradientType
-#include <openfl/display/GradientType.h>
-#endif
 #ifndef INCLUDED_openfl__legacy_utils_CompressionAlgorithm
 #include <openfl/_legacy/utils/CompressionAlgorithm.h>
+#endif
+#ifndef INCLUDED_openfl__legacy_text_TextFieldAutoSize
+#include <openfl/_legacy/text/TextFieldAutoSize.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_text_FontType
 #include <openfl/_legacy/text/FontType.h>
@@ -78,9 +39,6 @@
 #ifndef INCLUDED_openfl__legacy_system_PixelFormat
 #include <openfl/_legacy/system/PixelFormat.h>
 #endif
-#ifndef INCLUDED_openfl_system_TouchscreenType
-#include <openfl/system/TouchscreenType.h>
-#endif
 #ifndef INCLUDED_openfl__legacy_net__URLLoader_ManagersThreadMessage
 #include <openfl/_legacy/net/_URLLoader/ManagersThreadMessage.h>
 #endif
@@ -90,17 +48,35 @@
 #ifndef INCLUDED_openfl__legacy_display_TriangleCulling
 #include <openfl/_legacy/display/TriangleCulling.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_display_StageScaleMode
+#include <openfl/_legacy/display/StageScaleMode.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_display_StageQuality
 #include <openfl/_legacy/display/StageQuality.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_display_StageDisplayState
+#include <openfl/_legacy/display/StageDisplayState.h>
+#endif
+#ifndef INCLUDED_openfl__legacy_display_StageAlign
+#include <openfl/_legacy/display/StageAlign.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_display_SpreadMethod
 #include <openfl/_legacy/display/SpreadMethod.h>
+#endif
+#ifndef INCLUDED_openfl__legacy_display_PixelSnapping
+#include <openfl/_legacy/display/PixelSnapping.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_display_LineScaleMode
 #include <openfl/_legacy/display/LineScaleMode.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_display_JointStyle
 #include <openfl/_legacy/display/JointStyle.h>
+#endif
+#ifndef INCLUDED_openfl__legacy_display_InterpolationMethod
+#include <openfl/_legacy/display/InterpolationMethod.h>
+#endif
+#ifndef INCLUDED_openfl__legacy_display_GradientType
+#include <openfl/_legacy/display/GradientType.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_display_CapsStyle
 #include <openfl/_legacy/display/CapsStyle.h>
@@ -198,14 +174,32 @@
 #ifndef INCLUDED_sys_FileSystem
 #include <sys/FileSystem.h>
 #endif
+#ifndef INCLUDED_openfl_utils__Endian_Endian_Impl_
+#include <openfl/utils/_Endian/Endian_Impl_.h>
+#endif
+#ifndef INCLUDED_openfl_text__TextFieldType_TextFieldType_Impl_
+#include <openfl/text/_TextFieldType/TextFieldType_Impl_.h>
+#endif
+#ifndef INCLUDED_openfl_text__GridFitType_GridFitType_Impl_
+#include <openfl/text/_GridFitType/GridFitType_Impl_.h>
+#endif
+#ifndef INCLUDED_openfl_text__AntiAliasType_AntiAliasType_Impl_
+#include <openfl/text/_AntiAliasType/AntiAliasType_Impl_.h>
+#endif
+#ifndef INCLUDED_openfl_system__TouchscreenType_TouchscreenType_Impl_
+#include <openfl/system/_TouchscreenType/TouchscreenType_Impl_.h>
+#endif
 #ifndef INCLUDED_openfl_system_SecurityDomain
 #include <openfl/system/SecurityDomain.h>
 #endif
 #ifndef INCLUDED_openfl_system_ApplicationDomain
 #include <openfl/system/ApplicationDomain.h>
 #endif
-#ifndef INCLUDED_openfl_filters_BitmapFilterQuality
-#include <openfl/filters/BitmapFilterQuality.h>
+#ifndef INCLUDED_openfl_net__URLLoaderDataFormat_URLLoaderDataFormat_Impl_
+#include <openfl/net/_URLLoaderDataFormat/URLLoaderDataFormat_Impl_.h>
+#endif
+#ifndef INCLUDED_openfl_geom__Orientation3D_Orientation3D_Impl_
+#include <openfl/geom/_Orientation3D/Orientation3D_Impl_.h>
 #endif
 #ifndef INCLUDED_openfl_events_UncaughtErrorEvent
 #include <openfl/events/UncaughtErrorEvent.h>
@@ -234,6 +228,9 @@
 #ifndef INCLUDED_openfl_errors_Error
 #include <openfl/errors/Error.h>
 #endif
+#ifndef INCLUDED_openfl_display3D_textures_Texture
+#include <openfl/display3D/textures/Texture.h>
+#endif
 #ifndef INCLUDED_openfl_display3D__Context3DTriangleFace_Context3DTriangleFace_Impl_
 #include <openfl/display3D/_Context3DTriangleFace/Context3DTriangleFace_Impl_.h>
 #endif
@@ -245,9 +242,6 @@
 #endif
 #ifndef INCLUDED_openfl_display3D_Context3D
 #include <openfl/display3D/Context3D.h>
-#endif
-#ifndef INCLUDED_openfl_display_BitmapDataChannel
-#include <openfl/display/BitmapDataChannel.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_utils_WeakRef
 #include <openfl/_legacy/utils/WeakRef.h>
@@ -551,9 +545,6 @@
 #endif
 #ifndef INCLUDED_openfl_errors_ArgumentError
 #include <openfl/errors/ArgumentError.h>
-#endif
-#ifndef INCLUDED_openfl_display3D_textures_Texture
-#include <openfl/display3D/textures/Texture.h>
 #endif
 #ifndef INCLUDED_openfl_display3D_textures_RectangleTexture
 #include <openfl/display3D/textures/RectangleTexture.h>
@@ -1481,13 +1472,6 @@ void __boot_all()
 __files__boot();
 hx::RegisterResources( hx::GetResources() );
 ::sys::_FileSystem::FileKind_obj::__register();
-::openfl::text::TextFieldType_obj::__register();
-::openfl::text::TextFieldAutoSize_obj::__register();
-::openfl::text::GridFitType_obj::__register();
-::openfl::text::AntiAliasType_obj::__register();
-::openfl::net::URLLoaderDataFormat_obj::__register();
-::openfl::geom::Orientation3D_obj::__register();
-::openfl::events::EventPhase_obj::__register();
 ::openfl::display3D::Context3DWrapMode_obj::__register();
 ::openfl::display3D::Context3DVertexBufferFormat_obj::__register();
 ::openfl::display3D::Context3DTextureFormat_obj::__register();
@@ -1495,25 +1479,24 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::display3D::Context3DProgramType_obj::__register();
 ::openfl::display3D::Context3DMipFilter_obj::__register();
 ::openfl::display3D::Context3DBufferUsage_obj::__register();
-::openfl::display::StageScaleMode_obj::__register();
-::openfl::display::StageDisplayState_obj::__register();
-::openfl::display::StageAlign_obj::__register();
-::openfl::display::PixelSnapping_obj::__register();
-::openfl::display::InterpolationMethod_obj::__register();
-::openfl::display::GraphicsPathWinding_obj::__register();
-::openfl::display::GradientType_obj::__register();
 ::openfl::_legacy::utils::CompressionAlgorithm_obj::__register();
+::openfl::_legacy::text::TextFieldAutoSize_obj::__register();
 ::openfl::_legacy::text::FontType_obj::__register();
 ::openfl::_legacy::text::FontStyle_obj::__register();
 ::openfl::_legacy::_system::PixelFormat_obj::__register();
-::openfl::_system::TouchscreenType_obj::__register();
 ::openfl::_legacy::net::_URLLoader::ManagersThreadMessage_obj::__register();
 ::openfl::_legacy::media::InternalAudioType_obj::__register();
 ::openfl::_legacy::display::TriangleCulling_obj::__register();
+::openfl::_legacy::display::StageScaleMode_obj::__register();
 ::openfl::_legacy::display::StageQuality_obj::__register();
+::openfl::_legacy::display::StageDisplayState_obj::__register();
+::openfl::_legacy::display::StageAlign_obj::__register();
 ::openfl::_legacy::display::SpreadMethod_obj::__register();
+::openfl::_legacy::display::PixelSnapping_obj::__register();
 ::openfl::_legacy::display::LineScaleMode_obj::__register();
 ::openfl::_legacy::display::JointStyle_obj::__register();
+::openfl::_legacy::display::InterpolationMethod_obj::__register();
+::openfl::_legacy::display::GradientType_obj::__register();
 ::openfl::_legacy::display::CapsStyle_obj::__register();
 ::openfl::_legacy::display::BlendMode_obj::__register();
 ::openfl::_legacy::AssetType_obj::__register();
@@ -1546,9 +1529,15 @@ hx::RegisterResources( hx::GetResources() );
 ::sys::io::FileOutput_obj::__register();
 ::sys::io::File_obj::__register();
 ::sys::FileSystem_obj::__register();
+::openfl::utils::_Endian::Endian_Impl__obj::__register();
+::openfl::text::_TextFieldType::TextFieldType_Impl__obj::__register();
+::openfl::text::_GridFitType::GridFitType_Impl__obj::__register();
+::openfl::text::_AntiAliasType::AntiAliasType_Impl__obj::__register();
+::openfl::_system::_TouchscreenType::TouchscreenType_Impl__obj::__register();
 ::openfl::_system::SecurityDomain_obj::__register();
 ::openfl::_system::ApplicationDomain_obj::__register();
-::openfl::filters::BitmapFilterQuality_obj::__register();
+::openfl::net::_URLLoaderDataFormat::URLLoaderDataFormat_Impl__obj::__register();
+::openfl::geom::_Orientation3D::Orientation3D_Impl__obj::__register();
 ::openfl::events::UncaughtErrorEvent_obj::__register();
 ::openfl::events::TimerEvent_obj::__register();
 ::openfl::events::SampleDataEvent_obj::__register();
@@ -1558,11 +1547,11 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::events::ErrorEvent_obj::__register();
 ::openfl::events::TextEvent_obj::__register();
 ::openfl::errors::Error_obj::__register();
+::openfl::display3D::textures::Texture_obj::__register();
 ::openfl::display3D::_Context3DTriangleFace::Context3DTriangleFace_Impl__obj::__register();
 ::openfl::display3D::_Context3DCompareMode::Context3DCompareMode_Impl__obj::__register();
 ::openfl::display3D::Context3DClearMask_obj::__register();
 ::openfl::display3D::Context3D_obj::__register();
-::openfl::display::BitmapDataChannel_obj::__register();
 ::openfl::_legacy::utils::WeakRef_obj::__register();
 ::openfl::_legacy::utils::UInt8Array_obj::__register();
 ::openfl::_legacy::utils::Int16Array_obj::__register();
@@ -1664,7 +1653,6 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::errors::EOFError_obj::__register();
 ::openfl::errors::IOError_obj::__register();
 ::openfl::errors::ArgumentError_obj::__register();
-::openfl::display3D::textures::Texture_obj::__register();
 ::openfl::display3D::textures::RectangleTexture_obj::__register();
 ::openfl::display3D::textures::CubeTexture_obj::__register();
 ::openfl::display3D::textures::TextureBase_obj::__register();
@@ -1972,13 +1960,6 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_legacy::events::IEventDispatcher_obj::__register();
 ::ApplicationMain_obj::__register();
 ::sys::_FileSystem::FileKind_obj::__boot();
-::openfl::text::TextFieldType_obj::__boot();
-::openfl::text::TextFieldAutoSize_obj::__boot();
-::openfl::text::GridFitType_obj::__boot();
-::openfl::text::AntiAliasType_obj::__boot();
-::openfl::net::URLLoaderDataFormat_obj::__boot();
-::openfl::geom::Orientation3D_obj::__boot();
-::openfl::events::EventPhase_obj::__boot();
 ::openfl::display3D::Context3DWrapMode_obj::__boot();
 ::openfl::display3D::Context3DVertexBufferFormat_obj::__boot();
 ::openfl::display3D::Context3DTextureFormat_obj::__boot();
@@ -1986,25 +1967,24 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::display3D::Context3DProgramType_obj::__boot();
 ::openfl::display3D::Context3DMipFilter_obj::__boot();
 ::openfl::display3D::Context3DBufferUsage_obj::__boot();
-::openfl::display::StageScaleMode_obj::__boot();
-::openfl::display::StageDisplayState_obj::__boot();
-::openfl::display::StageAlign_obj::__boot();
-::openfl::display::PixelSnapping_obj::__boot();
-::openfl::display::InterpolationMethod_obj::__boot();
-::openfl::display::GraphicsPathWinding_obj::__boot();
-::openfl::display::GradientType_obj::__boot();
 ::openfl::_legacy::utils::CompressionAlgorithm_obj::__boot();
+::openfl::_legacy::text::TextFieldAutoSize_obj::__boot();
 ::openfl::_legacy::text::FontType_obj::__boot();
 ::openfl::_legacy::text::FontStyle_obj::__boot();
 ::openfl::_legacy::_system::PixelFormat_obj::__boot();
-::openfl::_system::TouchscreenType_obj::__boot();
 ::openfl::_legacy::net::_URLLoader::ManagersThreadMessage_obj::__boot();
 ::openfl::_legacy::media::InternalAudioType_obj::__boot();
 ::openfl::_legacy::display::TriangleCulling_obj::__boot();
+::openfl::_legacy::display::StageScaleMode_obj::__boot();
 ::openfl::_legacy::display::StageQuality_obj::__boot();
+::openfl::_legacy::display::StageDisplayState_obj::__boot();
+::openfl::_legacy::display::StageAlign_obj::__boot();
 ::openfl::_legacy::display::SpreadMethod_obj::__boot();
+::openfl::_legacy::display::PixelSnapping_obj::__boot();
 ::openfl::_legacy::display::LineScaleMode_obj::__boot();
 ::openfl::_legacy::display::JointStyle_obj::__boot();
+::openfl::_legacy::display::InterpolationMethod_obj::__boot();
+::openfl::_legacy::display::GradientType_obj::__boot();
 ::openfl::_legacy::display::CapsStyle_obj::__boot();
 ::openfl::_legacy::display::BlendMode_obj::__boot();
 ::openfl::_legacy::AssetType_obj::__boot();
@@ -2117,11 +2097,11 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_legacy::utils::Int16Array_obj::__boot();
 ::openfl::_legacy::utils::UInt8Array_obj::__boot();
 ::openfl::_legacy::utils::WeakRef_obj::__boot();
-::openfl::display::BitmapDataChannel_obj::__boot();
 ::openfl::display3D::Context3D_obj::__boot();
 ::openfl::display3D::Context3DClearMask_obj::__boot();
 ::openfl::display3D::_Context3DCompareMode::Context3DCompareMode_Impl__obj::__boot();
 ::openfl::display3D::_Context3DTriangleFace::Context3DTriangleFace_Impl__obj::__boot();
+::openfl::display3D::textures::Texture_obj::__boot();
 ::openfl::errors::Error_obj::__boot();
 ::openfl::events::TextEvent_obj::__boot();
 ::openfl::events::ErrorEvent_obj::__boot();
@@ -2131,9 +2111,15 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::events::SampleDataEvent_obj::__boot();
 ::openfl::events::TimerEvent_obj::__boot();
 ::openfl::events::UncaughtErrorEvent_obj::__boot();
-::openfl::filters::BitmapFilterQuality_obj::__boot();
+::openfl::geom::_Orientation3D::Orientation3D_Impl__obj::__boot();
+::openfl::net::_URLLoaderDataFormat::URLLoaderDataFormat_Impl__obj::__boot();
 ::openfl::_system::ApplicationDomain_obj::__boot();
 ::openfl::_system::SecurityDomain_obj::__boot();
+::openfl::_system::_TouchscreenType::TouchscreenType_Impl__obj::__boot();
+::openfl::text::_AntiAliasType::AntiAliasType_Impl__obj::__boot();
+::openfl::text::_GridFitType::GridFitType_Impl__obj::__boot();
+::openfl::text::_TextFieldType::TextFieldType_Impl__obj::__boot();
+::openfl::utils::_Endian::Endian_Impl__obj::__boot();
 ::sys::FileSystem_obj::__boot();
 ::sys::io::File_obj::__boot();
 ::sys::io::FileOutput_obj::__boot();

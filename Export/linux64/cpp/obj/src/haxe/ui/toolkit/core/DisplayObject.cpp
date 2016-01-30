@@ -2200,7 +2200,7 @@ Dynamic DisplayObject_obj::set_onInit( Dynamic value){
 	Dynamic tmp1 = this->_handleEvent_dyn();		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(19)
 	this->addEventListener(tmp,tmp1,null(),null(),null());
-	HX_STACK_LINE(19)
+	HX_STACK_LINE(20)
 	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(19)
 	return tmp2;
@@ -2307,7 +2307,7 @@ Dynamic DisplayObject_obj::set_onMouseUp( Dynamic value){
 	this->addEventListener(tmp,tmp1,null(),null(),null());
 	HX_STACK_LINE(20)
 	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(19)
+	HX_STACK_LINE(20)
 	return tmp2;
 }
 
@@ -2433,7 +2433,7 @@ Dynamic DisplayObject_obj::set_onRollOut( Dynamic value){
 	this->addEventListener(tmp,tmp1,null(),null(),null());
 	HX_STACK_LINE(20)
 	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(19)
+	HX_STACK_LINE(20)
 	return tmp2;
 }
 
@@ -2517,7 +2517,7 @@ Dynamic DisplayObject_obj::set_onRemoved( Dynamic value){
 	this->addEventListener(tmp,tmp1,null(),null(),null());
 	HX_STACK_LINE(20)
 	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(19)
+	HX_STACK_LINE(20)
 	return tmp2;
 }
 
@@ -2727,7 +2727,7 @@ Dynamic DisplayObject_obj::set_onRefresh( Dynamic value){
 	this->addEventListener(tmp,tmp1,null(),null(),null());
 	HX_STACK_LINE(20)
 	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(19)
+	HX_STACK_LINE(20)
 	return tmp2;
 }
 

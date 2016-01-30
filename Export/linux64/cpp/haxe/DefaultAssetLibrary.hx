@@ -184,13 +184,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
-		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
-		useManifest = true;
-		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -923,8 +919,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
-		
 		#end
 		
 		#if flash
@@ -1149,8 +1143,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/Layout/UIPopupAddObjectTag.xml", AssetType.TEXT);
 		path.set ("assets/Layout/UIPopupEditObjectMuseum.xml", "assets/Layout/UIPopupEditObjectMuseum.xml");
 		type.set ("assets/Layout/UIPopupEditObjectMuseum.xml", AssetType.TEXT);
-		path.set ("assets/Layout/UIPopupDisplaySentence.xml", "assets/Layout/UIPopupDisplaySentence.xml");
-		type.set ("assets/Layout/UIPopupDisplaySentence.xml", AssetType.TEXT);
 		path.set ("assets/Layout/UIPopupRemoveObjectMuseum.xml", "assets/Layout/UIPopupRemoveObjectMuseum.xml");
 		type.set ("assets/Layout/UIPopupRemoveObjectMuseum.xml", AssetType.TEXT);
 		path.set ("assets/Layout/UIPopupEditObjectVisitor.xml", "assets/Layout/UIPopupEditObjectVisitor.xml");
@@ -1171,8 +1163,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("layout/UIPopupAddObjectTag.xml", AssetType.TEXT);
 		path.set ("layout/UIPopupEditObjectMuseum.xml", "layout/UIPopupEditObjectMuseum.xml");
 		type.set ("layout/UIPopupEditObjectMuseum.xml", AssetType.TEXT);
-		path.set ("layout/UIPopupDisplaySentence.xml", "layout/UIPopupDisplaySentence.xml");
-		type.set ("layout/UIPopupDisplaySentence.xml", AssetType.TEXT);
 		path.set ("layout/UIPopupRemoveObjectMuseum.xml", "layout/UIPopupRemoveObjectMuseum.xml");
 		type.set ("layout/UIPopupRemoveObjectMuseum.xml", AssetType.TEXT);
 		path.set ("layout/UIPopupEditObjectVisitor.xml", "layout/UIPopupEditObjectVisitor.xml");
@@ -1520,9 +1510,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/Layout/UIPopupEditObjectMuseum.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/Layout/UIPopupDisplaySentence.xml";
-		path.set (id, id);
-		type.set (id, AssetType.TEXT);
 		id = "assets/Layout/UIPopupRemoveObjectMuseum.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
@@ -1551,9 +1538,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "layout/UIPopupEditObjectMuseum.xml";
-		path.set (id, id);
-		type.set (id, AssetType.TEXT);
-		id = "layout/UIPopupDisplaySentence.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "layout/UIPopupRemoveObjectMuseum.xml";
@@ -1670,8 +1654,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("fonts/Oxygen-Bold.ttf", __ASSET__fonts_oxygen_bold_ttf);
 		type.set ("fonts/Oxygen-Bold.ttf", AssetType.FONT);
-		useManifest = true;
-		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -2569,8 +2551,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-
-
 #elseif html5
 
 
@@ -2648,8 +2628,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:keep #if display private #end class __ASSET__fonts_oxygen_ttf extends lime.text.Font { public function new () { super (); name = "Oxygen Regular"; } } 
 @:keep #if display private #end class __ASSET__fonts_oxygen_bold_ttf extends lime.text.Font { public function new () { super (); name = "Oxygen Bold"; } } 
-
-
 
 
 

@@ -7,7 +7,6 @@
 
 HX_DECLARE_CLASS3(openfl,_legacy,_system,Capabilities)
 HX_DECLARE_CLASS3(openfl,_legacy,_system,ScreenMode)
-HX_DECLARE_CLASS2(openfl,_system,TouchscreenType)
 namespace openfl{
 namespace _legacy{
 namespace _system{
@@ -65,7 +64,7 @@ class HXCPP_CLASS_ATTRIBUTES  Capabilities_obj : public hx::Object{
 		static ::String serverString;
 		static bool supports32BitProcesses;
 		static bool supports64BitProcesses;
-		static ::openfl::_system::TouchscreenType touchscreenType;
+		static Dynamic touchscreenType;
 		static ::String version;
 		static Array< ::Dynamic > screenModes;
 		static Array< ::Dynamic > screenResolutions;

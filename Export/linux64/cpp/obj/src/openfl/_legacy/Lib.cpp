@@ -804,102 +804,98 @@ Void Lib_obj::rethrow( Dynamic error){
 		HX_STACK_FRAME("openfl._legacy.Lib","rethrow",0x964500e6,"openfl._legacy.Lib.rethrow","openfl/_legacy/Lib.hx",325,0x739f021f)
 		HX_STACK_ARG(error,"error")
 		HX_STACK_LINE(327)
-		::String tmp = ::openfl::events::UncaughtErrorEvent_obj::UNCAUGHT_ERROR;		HX_STACK_VAR(tmp,"tmp");
+		::openfl::events::UncaughtErrorEvent tmp = ::openfl::events::UncaughtErrorEvent_obj::__new(HX_HCSTRING("uncaughtError","\xf3","\x98","\x8b","\x8b"),true,true,error);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(327)
-		Dynamic tmp1 = error;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(327)
-		::openfl::events::UncaughtErrorEvent tmp2 = ::openfl::events::UncaughtErrorEvent_obj::__new(tmp,true,true,tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(327)
-		::openfl::events::UncaughtErrorEvent event = tmp2;		HX_STACK_VAR(event,"event");
+		::openfl::events::UncaughtErrorEvent event = tmp;		HX_STACK_VAR(event,"event");
 		HX_STACK_LINE(329)
-		Dynamic tmp3 = ::openfl::_legacy::Lib_obj::__uncaughtExceptionHandler_dyn();		HX_STACK_VAR(tmp3,"tmp3");
+		Dynamic tmp1 = ::openfl::_legacy::Lib_obj::__uncaughtExceptionHandler_dyn();		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(329)
-		bool tmp4 = (tmp3 != null());		HX_STACK_VAR(tmp4,"tmp4");
+		bool tmp2 = (tmp1 != null());		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(329)
-		bool tmp5;		HX_STACK_VAR(tmp5,"tmp5");
+		bool tmp3;		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(329)
-		if ((tmp4)){
+		if ((tmp2)){
 			HX_STACK_LINE(329)
-			::openfl::events::UncaughtErrorEvent tmp6 = event;		HX_STACK_VAR(tmp6,"tmp6");
+			::openfl::events::UncaughtErrorEvent tmp4 = event;		HX_STACK_VAR(tmp4,"tmp4");
 			HX_STACK_LINE(329)
-			::openfl::events::UncaughtErrorEvent tmp7 = tmp6;		HX_STACK_VAR(tmp7,"tmp7");
+			::openfl::events::UncaughtErrorEvent tmp5 = tmp4;		HX_STACK_VAR(tmp5,"tmp5");
 			HX_STACK_LINE(329)
-			tmp5 = ::openfl::_legacy::Lib_obj::__uncaughtExceptionHandler(tmp7);
+			tmp3 = ::openfl::_legacy::Lib_obj::__uncaughtExceptionHandler(tmp5);
 		}
 		else{
 			HX_STACK_LINE(329)
-			tmp5 = false;
+			tmp3 = false;
 		}
 		HX_STACK_LINE(329)
-		if ((tmp5)){
+		if ((tmp3)){
 			HX_STACK_LINE(331)
 			return null();
 		}
 		HX_STACK_LINE(335)
-		::openfl::_legacy::display::MovieClip tmp6 = ::openfl::_legacy::Lib_obj::get_current();		HX_STACK_VAR(tmp6,"tmp6");
+		::openfl::_legacy::display::MovieClip tmp4 = ::openfl::_legacy::Lib_obj::get_current();		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(335)
-		::openfl::events::UncaughtErrorEvents tmp7 = tmp6->loaderInfo->uncaughtErrorEvents;		HX_STACK_VAR(tmp7,"tmp7");
+		::openfl::events::UncaughtErrorEvents tmp5 = tmp4->loaderInfo->uncaughtErrorEvents;		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(335)
-		::openfl::events::UncaughtErrorEvent tmp8 = event;		HX_STACK_VAR(tmp8,"tmp8");
+		::openfl::events::UncaughtErrorEvent tmp6 = event;		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(335)
-		tmp7->dispatchEvent(tmp8);
+		tmp5->dispatchEvent(tmp6);
 		HX_STACK_LINE(337)
-		bool tmp9 = event->__getIsCancelled();		HX_STACK_VAR(tmp9,"tmp9");
+		bool tmp7 = event->__getIsCancelled();		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(337)
-		bool tmp10 = !(tmp9);		HX_STACK_VAR(tmp10,"tmp10");
+		bool tmp8 = !(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
 		HX_STACK_LINE(337)
-		if ((tmp10)){
+		if ((tmp8)){
 			HX_STACK_LINE(339)
 			::String message = HX_HCSTRING("","\x00","\x00","\x00","\x00");		HX_STACK_VAR(message,"message");
 			HX_STACK_LINE(341)
-			bool tmp11 = (error != null());		HX_STACK_VAR(tmp11,"tmp11");
+			bool tmp9 = (error != null());		HX_STACK_VAR(tmp9,"tmp9");
 			HX_STACK_LINE(341)
-			bool tmp12;		HX_STACK_VAR(tmp12,"tmp12");
+			bool tmp10;		HX_STACK_VAR(tmp10,"tmp10");
 			HX_STACK_LINE(341)
-			if ((tmp11)){
+			if ((tmp9)){
 				HX_STACK_LINE(341)
-				tmp12 = (error != HX_HCSTRING("","\x00","\x00","\x00","\x00"));
+				tmp10 = (error != HX_HCSTRING("","\x00","\x00","\x00","\x00"));
 			}
 			else{
 				HX_STACK_LINE(341)
-				tmp12 = false;
+				tmp10 = false;
 			}
 			HX_STACK_LINE(341)
-			if ((tmp12)){
+			if ((tmp10)){
 				HX_STACK_LINE(343)
-				Dynamic tmp13 = error;		HX_STACK_VAR(tmp13,"tmp13");
+				Dynamic tmp11 = error;		HX_STACK_VAR(tmp11,"tmp11");
 				HX_STACK_LINE(343)
-				::String tmp14 = ::Std_obj::string(tmp13);		HX_STACK_VAR(tmp14,"tmp14");
+				::String tmp12 = ::Std_obj::string(tmp11);		HX_STACK_VAR(tmp12,"tmp12");
 				HX_STACK_LINE(343)
-				::String tmp15 = (tmp14 + HX_HCSTRING("","\x00","\x00","\x00","\x00"));		HX_STACK_VAR(tmp15,"tmp15");
+				::String tmp13 = (tmp12 + HX_HCSTRING("","\x00","\x00","\x00","\x00"));		HX_STACK_VAR(tmp13,"tmp13");
 				HX_STACK_LINE(343)
-				message = tmp15;
+				message = tmp13;
 			}
 			HX_STACK_LINE(347)
 			Array< ::Dynamic > stack = ::haxe::CallStack_obj::exceptionStack();		HX_STACK_VAR(stack,"stack");
 			HX_STACK_LINE(349)
-			bool tmp13 = (stack->length > (int)0);		HX_STACK_VAR(tmp13,"tmp13");
+			bool tmp11 = (stack->length > (int)0);		HX_STACK_VAR(tmp11,"tmp11");
 			HX_STACK_LINE(349)
-			if ((tmp13)){
+			if ((tmp11)){
 				HX_STACK_LINE(351)
-				::String tmp14 = ::haxe::CallStack_obj::toString(stack);		HX_STACK_VAR(tmp14,"tmp14");
+				::String tmp12 = ::haxe::CallStack_obj::toString(stack);		HX_STACK_VAR(tmp12,"tmp12");
 				HX_STACK_LINE(351)
-				::String tmp15 = (tmp14 + HX_HCSTRING("\n","\x0a","\x00","\x00","\x00"));		HX_STACK_VAR(tmp15,"tmp15");
+				::String tmp13 = (tmp12 + HX_HCSTRING("\n","\x0a","\x00","\x00","\x00"));		HX_STACK_VAR(tmp13,"tmp13");
 				HX_STACK_LINE(351)
-				hx::AddEq(message,tmp15);
+				hx::AddEq(message,tmp13);
 			}
 			else{
 				HX_STACK_LINE(355)
 				hx::AddEq(message,HX_HCSTRING("\n","\x0a","\x00","\x00","\x00"));
 			}
 			HX_STACK_LINE(362)
-			::haxe::io::Output tmp14 = ::Sys_obj::_stderr();		HX_STACK_VAR(tmp14,"tmp14");
+			::haxe::io::Output tmp12 = ::Sys_obj::_stderr();		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(362)
-			::String tmp15 = message;		HX_STACK_VAR(tmp15,"tmp15");
+			::String tmp13 = message;		HX_STACK_VAR(tmp13,"tmp13");
 			HX_STACK_LINE(362)
-			::haxe::io::Bytes tmp16 = ::haxe::io::Bytes_obj::ofString(tmp15);		HX_STACK_VAR(tmp16,"tmp16");
+			::haxe::io::Bytes tmp14 = ::haxe::io::Bytes_obj::ofString(tmp13);		HX_STACK_VAR(tmp14,"tmp14");
 			HX_STACK_LINE(362)
-			tmp14->write(tmp16);
+			tmp12->write(tmp14);
 			HX_STACK_LINE(364)
 			::Sys_obj::exit((int)1);
 		}

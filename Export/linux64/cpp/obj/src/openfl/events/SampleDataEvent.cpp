@@ -21,6 +21,9 @@
 #ifndef INCLUDED_openfl_events_SampleDataEvent
 #include <openfl/events/SampleDataEvent.h>
 #endif
+#ifndef INCLUDED_openfl_utils__Endian_Endian_Impl_
+#include <openfl/utils/_Endian/Endian_Impl_.h>
+#endif
 namespace openfl{
 namespace events{
 
@@ -49,7 +52,9 @@ bool cancelable = __o_cancelable.Default(false);
 	HX_STACK_LINE(22)
 	::openfl::_legacy::utils::ByteArray tmp4 = this->data;		HX_STACK_VAR(tmp4,"tmp4");
 	HX_STACK_LINE(22)
-	tmp4->set_endian(HX_HCSTRING("littleEndian","\x31","\x2e","\x7b","\x07"));
+	::String tmp5 = ::openfl::utils::_Endian::Endian_Impl__obj::toString(((Dynamic)((int)1)));		HX_STACK_VAR(tmp5,"tmp5");
+	HX_STACK_LINE(22)
+	tmp4->set_endian(tmp5);
 	HX_STACK_LINE(23)
 	this->position = ((Float)0.0);
 }
@@ -147,15 +152,6 @@ Dynamic SampleDataEvent_obj::__Field(const ::String &inName,hx::PropertyAccess i
 	return super::__Field(inName,inCallProp);
 }
 
-bool SampleDataEvent_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
-{
-	switch(inName.length) {
-	case 11:
-		if (HX_FIELD_EQ(inName,"SAMPLE_DATA") ) { outValue = SAMPLE_DATA; return true;  }
-	}
-	return false;
-}
-
 Dynamic SampleDataEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
@@ -170,10 +166,6 @@ Dynamic SampleDataEvent_obj::__SetField(const ::String &inName,const Dynamic &in
 
 bool SampleDataEvent_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
 {
-	switch(inName.length) {
-	case 11:
-		if (HX_FIELD_EQ(inName,"SAMPLE_DATA") ) { SAMPLE_DATA=ioValue.Cast< ::String >(); return true; }
-	}
 	return false;
 }
 
@@ -229,7 +221,7 @@ void SampleDataEvent_obj::__register()
 	__mClass->mSuper = &super::__SGetClass();
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
-	__mClass->mGetStaticField = &SampleDataEvent_obj::__GetStatic;
+	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
 	__mClass->mSetStaticField = &SampleDataEvent_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);

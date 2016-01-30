@@ -51,30 +51,18 @@
         <!--##################################################-->
 
         <text text="Popular Tag" />
-        <!--
-        <scrollview height="200" width="100%" >
-            <grid collumn="2" width="100%">
-                <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPopularTagObject" multiline="true" text=" " width="50%" wrapLines="false" />
-                <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPopularTagCounter" multiline="true" text=" " width="50%" wrapLines="false" />
-            </grid>
-        </scrollview>
-        -->
         <listSelector id="UIPopupEditObjectVisitor_DisplayPopularTag" text=" " width="100%" >
         </listSelector>
+
         <!--##################################################-->
 
         <text text="Reset" />
-        <button id="UIPopupEditObjectVisitor_ButtonReset" text="Reset" width="100%" />
+        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonReset" text="Reset" width="100%" />
 
         <!--##################################################-->
 
         <text text="Sentence" />
-        <!--
-        <scrollview height="200" width="100%" >
-            <text disabled="true" id="UIPopupEditObjectVisitor_DisplaySentence" multiline="true" text=" " width="100%" wrapLines="true" />
-        </scrollview>
-        -->
-        <button id="UIPopupEditObjectVisitor_ButtonDisplaySentence" text="Display Sentence" width="100%" />
+        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonDisplaySentence" text="Display Sentence" width="100%" />
 
         <!--##################################################-->
 

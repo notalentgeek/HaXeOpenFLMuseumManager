@@ -35,6 +35,8 @@ class HXCPP_CLASS_ATTRIBUTES  TextFormatAlign_obj : public hx::Object{
 		static ::String RIGHT;
 		static ::String CENTER;
 		static ::String JUSTIFY;
+		static ::String START;
+		static ::String END;
 };
 
 } // end namespace openfl

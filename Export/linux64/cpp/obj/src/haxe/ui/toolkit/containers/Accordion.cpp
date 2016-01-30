@@ -118,18 +118,18 @@ namespace containers{
 
 Void Accordion_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","new",0x97feb2c0,"haxe.ui.toolkit.containers.Accordion.new","haxe/ui/toolkit/containers/Accordion.hx",18,0x8ce13fb0)
+HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","new",0x97feb2c0,"haxe.ui.toolkit.containers.Accordion.new","haxe/ui/toolkit/containers/Accordion.hx",19,0x8ce13fb0)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(21)
+	HX_STACK_LINE(22)
 	this->_selectedIndex = (int)-1;
-	HX_STACK_LINE(24)
-	super::__construct();
 	HX_STACK_LINE(25)
-	this->_autoSize = false;
+	super::__construct();
 	HX_STACK_LINE(26)
-	this->_panels = Array_obj< ::haxe::ui::toolkit::core::interfaces::IDisplayObject >::__new();
+	this->_autoSize = false;
 	HX_STACK_LINE(27)
+	this->_panels = Array_obj< ::haxe::ui::toolkit::core::interfaces::IDisplayObject >::__new();
+	HX_STACK_LINE(28)
 	this->_buttons = Array_obj< ::Dynamic >::__new();
 }
 ;
@@ -158,25 +158,25 @@ Accordion_obj::operator ::haxe::ui::toolkit::core::interfaces::IClonable_obj *()
 	{ return new ::haxe::ui::toolkit::core::interfaces::IClonable_delegate_< Accordion_obj >(this); }
 Void Accordion_obj::initialize( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","initialize",0xf9fb5af0,"haxe.ui.toolkit.containers.Accordion.initialize","haxe/ui/toolkit/containers/Accordion.hx",33,0x8ce13fb0)
+		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","initialize",0xf9fb5af0,"haxe.ui.toolkit.containers.Accordion.initialize","haxe/ui/toolkit/containers/Accordion.hx",34,0x8ce13fb0)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(34)
+		HX_STACK_LINE(35)
 		this->super::initialize();
-		HX_STACK_LINE(36)
+		HX_STACK_LINE(37)
 		int tmp = this->_selectedIndex;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(36)
+		HX_STACK_LINE(37)
 		bool tmp1 = (tmp != (int)-1);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(36)
+		HX_STACK_LINE(37)
 		if ((tmp1)){
-			HX_STACK_LINE(37)
-			int tmp2 = this->_selectedIndex;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(37)
-			int cachedIndex = tmp2;		HX_STACK_VAR(cachedIndex,"cachedIndex");
 			HX_STACK_LINE(38)
+			int tmp2 = this->_selectedIndex;		HX_STACK_VAR(tmp2,"tmp2");
+			HX_STACK_LINE(38)
+			int cachedIndex = tmp2;		HX_STACK_VAR(cachedIndex,"cachedIndex");
+			HX_STACK_LINE(39)
 			this->_selectedIndex = (int)-1;
-			HX_STACK_LINE(39)
+			HX_STACK_LINE(40)
 			int tmp3 = cachedIndex;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(39)
+			HX_STACK_LINE(40)
 			this->showPage(tmp3);
 		}
 	}
@@ -185,174 +185,174 @@ return null();
 
 
 ::haxe::ui::toolkit::core::interfaces::IDisplayObject Accordion_obj::addChild( ::haxe::ui::toolkit::core::interfaces::IDisplayObject child){
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","addChild",0x28fb515b,"haxe.ui.toolkit.containers.Accordion.addChild","haxe/ui/toolkit/containers/Accordion.hx",46,0x8ce13fb0)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","addChild",0x28fb515b,"haxe.ui.toolkit.containers.Accordion.addChild","haxe/ui/toolkit/containers/Accordion.hx",47,0x8ce13fb0)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(child,"child")
-	HX_STACK_LINE(47)
+	HX_STACK_LINE(48)
 	::haxe::ui::toolkit::core::interfaces::IDisplayObject r = null();		HX_STACK_VAR(r,"r");
-	HX_STACK_LINE(48)
+	HX_STACK_LINE(49)
 	::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp = child;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(48)
+	HX_STACK_LINE(49)
 	bool tmp1 = ::Std_obj::is(tmp,hx::ClassOf< ::haxe::ui::toolkit::containers::AccordionButton >());		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(48)
+	HX_STACK_LINE(49)
 	if ((tmp1)){
-		HX_STACK_LINE(49)
+		HX_STACK_LINE(50)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp2 = child;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(49)
+		HX_STACK_LINE(50)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp3 = this->super::addChild(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(49)
+		HX_STACK_LINE(50)
 		r = tmp3;
 	}
 	else{
-		HX_STACK_LINE(51)
+		HX_STACK_LINE(52)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp2 = child;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(51)
+		HX_STACK_LINE(52)
 		bool tmp3 = ::Std_obj::is(tmp2,hx::ClassOf< ::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer >());		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(51)
+		HX_STACK_LINE(52)
 		if ((tmp3)){
-			HX_STACK_LINE(52)
+			HX_STACK_LINE(53)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp4;		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(52)
+			HX_STACK_LINE(53)
 			tmp4 = hx::TCast< ::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer >::cast(child);
-			HX_STACK_LINE(52)
+			HX_STACK_LINE(53)
 			tmp4->set_autoSize(false);
 		}
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(55)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp4 = child;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(55)
 		bool tmp5 = ::Std_obj::is(tmp4,hx::ClassOf< ::haxe::ui::toolkit::core::StyleableDisplayObject >());		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(55)
 		if ((tmp5)){
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(56)
 			::haxe::ui::toolkit::core::StyleableDisplayObject tmp6;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(56)
 			tmp6 = hx::TCast< ::haxe::ui::toolkit::core::StyleableDisplayObject >::cast(child);
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(56)
 			tmp6->set_styleName(HX_HCSTRING("page","\x4f","\xda","\x51","\x4a"));
 		}
-		HX_STACK_LINE(57)
-		child->set_percentHeight((int)100);
 		HX_STACK_LINE(58)
+		child->set_percentHeight((int)100);
+		HX_STACK_LINE(59)
 		child->set_percentWidth((int)100);
-		HX_STACK_LINE(59)
+		HX_STACK_LINE(60)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp6 = child;		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(59)
+		HX_STACK_LINE(60)
 		this->_panels->push(tmp6);
-		HX_STACK_LINE(61)
-		::haxe::ui::toolkit::containers::AccordionButton tmp7 = ::haxe::ui::toolkit::containers::AccordionButton_obj::__new();		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(61)
-		::haxe::ui::toolkit::containers::AccordionButton button = tmp7;		HX_STACK_VAR(button,"button");
 		HX_STACK_LINE(62)
+		::haxe::ui::toolkit::containers::AccordionButton tmp7 = ::haxe::ui::toolkit::containers::AccordionButton_obj::__new();		HX_STACK_VAR(tmp7,"tmp7");
+		HX_STACK_LINE(62)
+		::haxe::ui::toolkit::containers::AccordionButton button = tmp7;		HX_STACK_VAR(button,"button");
+		HX_STACK_LINE(63)
 		button->set_styleName(HX_HCSTRING("expandable","\xf4","\x90","\xfa","\x55"));
-		HX_STACK_LINE(63)
+		HX_STACK_LINE(64)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp8 = child;		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(63)
+		HX_STACK_LINE(64)
 		bool tmp9 = ::Std_obj::is(tmp8,hx::ClassOf< ::haxe::ui::toolkit::core::Component >());		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(63)
+		HX_STACK_LINE(64)
 		if ((tmp9)){
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(65)
 			::haxe::ui::toolkit::core::Component tmp10;		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(65)
 			tmp10 = hx::TCast< ::haxe::ui::toolkit::core::Component >::cast(child);
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(65)
 			::String tmp11 = tmp10->get_text();		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(64)
+			HX_STACK_LINE(65)
 			button->set_text(tmp11);
 		}
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(67)
 		int tmp10 = this->_panels->length;		HX_STACK_VAR(tmp10,"tmp10");
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(67)
 		int tmp11 = (tmp10 - (int)1);		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(67)
 		button->userData = tmp11;
-		HX_STACK_LINE(67)
-		int tmp12 = this->_panels->length;		HX_STACK_VAR(tmp12,"tmp12");
-		HX_STACK_LINE(67)
-		int tmp13 = (tmp12 - (int)1);		HX_STACK_VAR(tmp13,"tmp13");
-		HX_STACK_LINE(67)
-		::String tmp14 = (HX_HCSTRING("accordionButton_","\x85","\xf0","\xd7","\xbc") + tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-		HX_STACK_LINE(67)
-		button->set_id(tmp14);
 		HX_STACK_LINE(68)
-		button->set_percentWidth((int)100);
+		int tmp12 = this->_panels->length;		HX_STACK_VAR(tmp12,"tmp12");
+		HX_STACK_LINE(68)
+		int tmp13 = (tmp12 - (int)1);		HX_STACK_VAR(tmp13,"tmp13");
+		HX_STACK_LINE(68)
+		::String tmp14 = (HX_HCSTRING("accordionButton_","\x85","\xf0","\xd7","\xbc") + tmp13);		HX_STACK_VAR(tmp14,"tmp14");
+		HX_STACK_LINE(68)
+		button->set_id(tmp14);
 		HX_STACK_LINE(69)
-		button->set_toggle(true);
+		button->set_percentWidth((int)100);
 		HX_STACK_LINE(70)
-		button->set_selected(false);
+		button->set_toggle(true);
 		HX_STACK_LINE(71)
+		button->set_selected(false);
+		HX_STACK_LINE(72)
 		button->set_allowSelection(false);
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(73)
 		::String tmp15 = HX_HCSTRING("haxeui_click","\x03","\x6b","\xd3","\x5c");		HX_STACK_VAR(tmp15,"tmp15");
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(73)
 		Dynamic tmp16 = this->_onButtonClick_dyn();		HX_STACK_VAR(tmp16,"tmp16");
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(73)
 		button->addEventListener(tmp15,tmp16,null(),null(),null());
-		HX_STACK_LINE(73)
+		HX_STACK_LINE(74)
 		::haxe::ui::toolkit::containers::AccordionButton tmp17 = button;		HX_STACK_VAR(tmp17,"tmp17");
-		HX_STACK_LINE(73)
+		HX_STACK_LINE(74)
 		this->_buttons->push(tmp17);
-		HX_STACK_LINE(75)
-		::haxe::ui::toolkit::containers::AccordionButton tmp18 = button;		HX_STACK_VAR(tmp18,"tmp18");
-		HX_STACK_LINE(75)
-		this->addChild(tmp18);
 		HX_STACK_LINE(76)
+		::haxe::ui::toolkit::containers::AccordionButton tmp18 = button;		HX_STACK_VAR(tmp18,"tmp18");
+		HX_STACK_LINE(76)
+		this->addChild(tmp18);
+		HX_STACK_LINE(77)
 		child->set_visible(false);
-		HX_STACK_LINE(77)
+		HX_STACK_LINE(78)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp19 = child;		HX_STACK_VAR(tmp19,"tmp19");
-		HX_STACK_LINE(77)
+		HX_STACK_LINE(78)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp20 = this->super::addChild(tmp19);		HX_STACK_VAR(tmp20,"tmp20");
-		HX_STACK_LINE(77)
+		HX_STACK_LINE(78)
 		r = tmp20;
 	}
-	HX_STACK_LINE(79)
+	HX_STACK_LINE(80)
 	::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp2 = r;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(79)
+	HX_STACK_LINE(80)
 	return tmp2;
 }
 
 
 ::haxe::ui::toolkit::core::interfaces::IDisplayObject Accordion_obj::removeChild( ::haxe::ui::toolkit::core::interfaces::IDisplayObject child,hx::Null< bool >  __o_dispose){
 bool dispose = __o_dispose.Default(true);
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","removeChild",0xced1c918,"haxe.ui.toolkit.containers.Accordion.removeChild","haxe/ui/toolkit/containers/Accordion.hx",82,0x8ce13fb0)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","removeChild",0xced1c918,"haxe.ui.toolkit.containers.Accordion.removeChild","haxe/ui/toolkit/containers/Accordion.hx",83,0x8ce13fb0)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(child,"child")
 	HX_STACK_ARG(dispose,"dispose")
 {
-		HX_STACK_LINE(83)
+		HX_STACK_LINE(84)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp = child;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(83)
+		HX_STACK_LINE(84)
 		bool tmp1 = ::Std_obj::is(tmp,hx::ClassOf< ::haxe::ui::toolkit::containers::AccordionButton >());		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(83)
+		HX_STACK_LINE(84)
 		if ((tmp1)){
-			HX_STACK_LINE(84)
+			HX_STACK_LINE(85)
 			::haxe::ui::toolkit::containers::AccordionButton tmp2 = ((::haxe::ui::toolkit::containers::AccordionButton)(child));		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(84)
+			HX_STACK_LINE(85)
 			this->_buttons->remove(tmp2);
 		}
 		else{
-			HX_STACK_LINE(86)
+			HX_STACK_LINE(87)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp2 = child;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(86)
+			HX_STACK_LINE(87)
 			this->_panels->remove(tmp2);
 		}
-		HX_STACK_LINE(88)
+		HX_STACK_LINE(89)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp2 = child;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(88)
+		HX_STACK_LINE(89)
 		bool tmp3 = dispose;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(88)
+		HX_STACK_LINE(89)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp4 = this->super::removeChild(tmp2,tmp3);		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(88)
+		HX_STACK_LINE(89)
 		return tmp4;
 	}
 }
 
 
 int Accordion_obj::get_selectedIndex( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","get_selectedIndex",0xa954cc6e,"haxe.ui.toolkit.containers.Accordion.get_selectedIndex","haxe/ui/toolkit/containers/Accordion.hx",96,0x8ce13fb0)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","get_selectedIndex",0xa954cc6e,"haxe.ui.toolkit.containers.Accordion.get_selectedIndex","haxe/ui/toolkit/containers/Accordion.hx",97,0x8ce13fb0)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(97)
+	HX_STACK_LINE(98)
 	int tmp = this->_selectedIndex;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(97)
+	HX_STACK_LINE(98)
 	return tmp;
 }
 
@@ -360,27 +360,27 @@ int Accordion_obj::get_selectedIndex( ){
 HX_DEFINE_DYNAMIC_FUNC0(Accordion_obj,get_selectedIndex,return )
 
 int Accordion_obj::set_selectedIndex( int value){
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","set_selectedIndex",0xccc2a47a,"haxe.ui.toolkit.containers.Accordion.set_selectedIndex","haxe/ui/toolkit/containers/Accordion.hx",100,0x8ce13fb0)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","set_selectedIndex",0xccc2a47a,"haxe.ui.toolkit.containers.Accordion.set_selectedIndex","haxe/ui/toolkit/containers/Accordion.hx",101,0x8ce13fb0)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(101)
+	HX_STACK_LINE(102)
 	bool tmp = this->_ready;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(101)
+	HX_STACK_LINE(102)
 	bool tmp1 = (tmp == true);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(101)
+	HX_STACK_LINE(102)
 	if ((tmp1)){
-		HX_STACK_LINE(102)
+		HX_STACK_LINE(103)
 		::haxe::ui::toolkit::containers::AccordionButton tmp2 = this->_buttons->__get(value).StaticCast< ::haxe::ui::toolkit::containers::AccordionButton >();		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(102)
+		HX_STACK_LINE(103)
 		tmp2->set_selected(true);
 	}
 	else{
-		HX_STACK_LINE(104)
+		HX_STACK_LINE(105)
 		this->_selectedIndex = value;
 	}
-	HX_STACK_LINE(106)
+	HX_STACK_LINE(107)
 	int tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(106)
+	HX_STACK_LINE(107)
 	return tmp2;
 }
 
@@ -388,22 +388,22 @@ int Accordion_obj::set_selectedIndex( int value){
 HX_DEFINE_DYNAMIC_FUNC1(Accordion_obj,set_selectedIndex,return )
 
 ::haxe::ui::toolkit::controls::Button Accordion_obj::get_selectedButton( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","get_selectedButton",0xc6cb6116,"haxe.ui.toolkit.containers.Accordion.get_selectedButton","haxe/ui/toolkit/containers/Accordion.hx",113,0x8ce13fb0)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","get_selectedButton",0xc6cb6116,"haxe.ui.toolkit.containers.Accordion.get_selectedButton","haxe/ui/toolkit/containers/Accordion.hx",114,0x8ce13fb0)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(115)
+	HX_STACK_LINE(116)
 	int tmp = this->_selectedIndex;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(115)
+	HX_STACK_LINE(116)
 	bool tmp1 = (tmp == (int)-1);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(115)
+	HX_STACK_LINE(116)
 	if ((tmp1)){
-		HX_STACK_LINE(116)
+		HX_STACK_LINE(117)
 		return null();
 	}
-	HX_STACK_LINE(119)
+	HX_STACK_LINE(120)
 	int tmp2 = this->_selectedIndex;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(119)
+	HX_STACK_LINE(120)
 	::haxe::ui::toolkit::controls::Button tmp3 = this->getButton(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(119)
+	HX_STACK_LINE(120)
 	return tmp3;
 }
 
@@ -411,12 +411,12 @@ HX_DEFINE_DYNAMIC_FUNC1(Accordion_obj,set_selectedIndex,return )
 HX_DEFINE_DYNAMIC_FUNC0(Accordion_obj,get_selectedButton,return )
 
 ::haxe::ui::toolkit::controls::Button Accordion_obj::getButton( int index){
-	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","getButton",0x9443d588,"haxe.ui.toolkit.containers.Accordion.getButton","haxe/ui/toolkit/containers/Accordion.hx",122,0x8ce13fb0)
+	HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","getButton",0x9443d588,"haxe.ui.toolkit.containers.Accordion.getButton","haxe/ui/toolkit/containers/Accordion.hx",123,0x8ce13fb0)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(index,"index")
-	HX_STACK_LINE(123)
+	HX_STACK_LINE(124)
 	::haxe::ui::toolkit::containers::AccordionButton tmp = this->_buttons->__get(index).StaticCast< ::haxe::ui::toolkit::containers::AccordionButton >();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(123)
+	HX_STACK_LINE(124)
 	return tmp;
 }
 
@@ -425,14 +425,14 @@ HX_DEFINE_DYNAMIC_FUNC1(Accordion_obj,getButton,return )
 
 Void Accordion_obj::showPage( int index){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","showPage",0x1bbd1f8c,"haxe.ui.toolkit.containers.Accordion.showPage","haxe/ui/toolkit/containers/Accordion.hx",126,0x8ce13fb0)
+		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","showPage",0x1bbd1f8c,"haxe.ui.toolkit.containers.Accordion.showPage","haxe/ui/toolkit/containers/Accordion.hx",127,0x8ce13fb0)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(index,"index")
-		HX_STACK_LINE(127)
-		::haxe::ui::toolkit::containers::AccordionButton tmp = this->_buttons->__get(index).StaticCast< ::haxe::ui::toolkit::containers::AccordionButton >();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(127)
-		::haxe::ui::toolkit::containers::AccordionButton button = tmp;		HX_STACK_VAR(button,"button");
 		HX_STACK_LINE(128)
+		::haxe::ui::toolkit::containers::AccordionButton tmp = this->_buttons->__get(index).StaticCast< ::haxe::ui::toolkit::containers::AccordionButton >();		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(128)
+		::haxe::ui::toolkit::containers::AccordionButton button = tmp;		HX_STACK_VAR(button,"button");
+		HX_STACK_LINE(129)
 		button->set_selected(true);
 	}
 return null();
@@ -443,22 +443,22 @@ HX_DEFINE_DYNAMIC_FUNC1(Accordion_obj,showPage,(void))
 
 Void Accordion_obj::_onButtonClick( ::haxe::ui::toolkit::events::UIEvent event){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","_onButtonClick",0x726ac3f8,"haxe.ui.toolkit.containers.Accordion._onButtonClick","haxe/ui/toolkit/containers/Accordion.hx",131,0x8ce13fb0)
+		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","_onButtonClick",0x726ac3f8,"haxe.ui.toolkit.containers.Accordion._onButtonClick","haxe/ui/toolkit/containers/Accordion.hx",132,0x8ce13fb0)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(132)
+		HX_STACK_LINE(133)
 		::haxe::ui::toolkit::core::Component tmp = event->get_component();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(132)
+		HX_STACK_LINE(133)
 		int index = tmp->userData;		HX_STACK_VAR(index,"index");
-		HX_STACK_LINE(133)
+		HX_STACK_LINE(134)
 		int tmp1 = index;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(133)
+		HX_STACK_LINE(134)
 		this->showPanel(tmp1);
-		HX_STACK_LINE(134)
+		HX_STACK_LINE(135)
 		::String tmp2 = HX_HCSTRING("haxeui_change","\x55","\x86","\x4e","\x89");		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(134)
+		HX_STACK_LINE(135)
 		::haxe::ui::toolkit::events::UIEvent tmp3 = ::haxe::ui::toolkit::events::UIEvent_obj::__new(tmp2,null(),null(),null());		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(134)
+		HX_STACK_LINE(135)
 		this->dispatchEvent(tmp3);
 	}
 return null();
@@ -469,82 +469,82 @@ HX_DEFINE_DYNAMIC_FUNC1(Accordion_obj,_onButtonClick,(void))
 
 Void Accordion_obj::showPanel( int index){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","showPanel",0x29c3cb27,"haxe.ui.toolkit.containers.Accordion.showPanel","haxe/ui/toolkit/containers/Accordion.hx",137,0x8ce13fb0)
+		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","showPanel",0x29c3cb27,"haxe.ui.toolkit.containers.Accordion.showPanel","haxe/ui/toolkit/containers/Accordion.hx",138,0x8ce13fb0)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(index,"index")
-		HX_STACK_LINE(138)
-		::haxe::ui::toolkit::containers::AccordionButton tmp = this->_buttons->__get(index).StaticCast< ::haxe::ui::toolkit::containers::AccordionButton >();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(138)
-		::haxe::ui::toolkit::containers::AccordionButton button = tmp;		HX_STACK_VAR(button,"button");
 		HX_STACK_LINE(139)
+		::haxe::ui::toolkit::containers::AccordionButton tmp = this->_buttons->__get(index).StaticCast< ::haxe::ui::toolkit::containers::AccordionButton >();		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(139)
+		::haxe::ui::toolkit::containers::AccordionButton button = tmp;		HX_STACK_VAR(button,"button");
+		HX_STACK_LINE(140)
 		button->set_selected(true);
-		HX_STACK_LINE(140)
+		HX_STACK_LINE(141)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp1 = this->_panels->__get(index);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(140)
+		HX_STACK_LINE(141)
 		::haxe::ui::toolkit::core::Component panel = ((::haxe::ui::toolkit::core::Component)(tmp1));		HX_STACK_VAR(panel,"panel");
-		HX_STACK_LINE(142)
-		::haxe::ui::toolkit::containers::AccordionButton buttonOld = null();		HX_STACK_VAR(buttonOld,"buttonOld");
 		HX_STACK_LINE(143)
+		::haxe::ui::toolkit::containers::AccordionButton buttonOld = null();		HX_STACK_VAR(buttonOld,"buttonOld");
+		HX_STACK_LINE(144)
 		::haxe::ui::toolkit::core::Component panelOld = null();		HX_STACK_VAR(panelOld,"panelOld");
-		HX_STACK_LINE(144)
+		HX_STACK_LINE(145)
 		::haxe::ui::toolkit::core::interfaces::ILayout tmp2 = this->get_layout();		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(144)
+		HX_STACK_LINE(145)
 		Float tmp3 = tmp2->get_usableHeight();		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(144)
+		HX_STACK_LINE(145)
 		Float ucy = tmp3;		HX_STACK_VAR(ucy,"ucy");
-		HX_STACK_LINE(145)
+		HX_STACK_LINE(146)
 		int tmp4 = this->_selectedIndex;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(145)
+		HX_STACK_LINE(146)
 		bool tmp5 = (tmp4 > (int)-1);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(145)
+		HX_STACK_LINE(146)
 		if ((tmp5)){
-			HX_STACK_LINE(146)
+			HX_STACK_LINE(147)
 			int tmp6 = this->_selectedIndex;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(146)
+			HX_STACK_LINE(147)
 			::haxe::ui::toolkit::containers::AccordionButton tmp7 = this->_buttons->__get(tmp6).StaticCast< ::haxe::ui::toolkit::containers::AccordionButton >();		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(146)
+			HX_STACK_LINE(147)
 			buttonOld = tmp7;
-			HX_STACK_LINE(147)
+			HX_STACK_LINE(148)
 			int tmp8 = this->_selectedIndex;		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(147)
+			HX_STACK_LINE(148)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp9 = this->_panels->__get(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(147)
+			HX_STACK_LINE(148)
 			panelOld = ((::haxe::ui::toolkit::core::Component)(tmp9));
-			HX_STACK_LINE(148)
+			HX_STACK_LINE(149)
 			bool tmp10 = (button != buttonOld);		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(148)
+			HX_STACK_LINE(149)
 			if ((tmp10)){
-				HX_STACK_LINE(149)
+				HX_STACK_LINE(150)
 				::haxe::ui::toolkit::containers::AccordionButton tmp11 = buttonOld;		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(149)
+				HX_STACK_LINE(150)
 				this->unselectButton(tmp11);
 			}
 		}
-		HX_STACK_LINE(152)
+		HX_STACK_LINE(153)
 		::String tmp6 = ::haxe::ui::toolkit::core::Toolkit_obj::getTransitionForClass(hx::ClassOf< ::haxe::ui::toolkit::containers::Accordion >());		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(152)
+		HX_STACK_LINE(153)
 		::String transition = tmp6;		HX_STACK_VAR(transition,"transition");
-		HX_STACK_LINE(153)
+		HX_STACK_LINE(154)
 		Float tmp7 = ::haxe::ui::toolkit::core::Toolkit_obj::getTransitionTimeForClass(hx::ClassOf< ::haxe::ui::toolkit::containers::Accordion >());		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(153)
+		HX_STACK_LINE(154)
 		Float transitionTime = tmp7;		HX_STACK_VAR(transitionTime,"transitionTime");
-		HX_STACK_LINE(154)
+		HX_STACK_LINE(155)
 		bool tmp8 = (transition == HX_HCSTRING("slide","\x31","\xc5","\xc7","\x7e"));		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(154)
+		HX_STACK_LINE(155)
 		if ((tmp8)){
-			HX_STACK_LINE(155)
-			panel->set_percentHeight((int)-1);
 			HX_STACK_LINE(156)
-			panel->set_height((int)0);
+			panel->set_percentHeight((int)-1);
 			HX_STACK_LINE(157)
+			panel->set_height((int)0);
+			HX_STACK_LINE(158)
 			panel->set_visible(true);
-			HX_STACK_LINE(158)
+			HX_STACK_LINE(159)
 			::haxe::ui::toolkit::core::Component tmp9 = panel;		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(158)
+			HX_STACK_LINE(159)
 			Float tmp10 = transitionTime;		HX_STACK_VAR(tmp10,"tmp10");
 			struct _Function_2_1{
 				inline static Dynamic Block( Float &ucy){
-					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","haxe/ui/toolkit/containers/Accordion.hx",158,0x8ce13fb0)
+					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","haxe/ui/toolkit/containers/Accordion.hx",159,0x8ce13fb0)
 					{
 						hx::Anon __result = hx::Anon_obj::Create();
 						__result->Add(HX_HCSTRING("height","\xe7","\x07","\x4c","\x02") , ucy,false);
@@ -554,52 +554,52 @@ Void Accordion_obj::showPanel( int index){
 					return null();
 				}
 			};
-			HX_STACK_LINE(158)
-			Dynamic tmp11 = _Function_2_1::Block(ucy);		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(158)
-			::motion::actuators::GenericActuator tmp12 = ::motion::Actuate_obj::tween(tmp9,tmp10,tmp11,true,null());		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(158)
-			::motion::easing::IEasing tmp13 = ::motion::easing::Quart_obj::get_easeOut();		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(158)
-			::motion::actuators::GenericActuator tmp14 = tmp12->ease(tmp13);		HX_STACK_VAR(tmp14,"tmp14");
 			HX_STACK_LINE(159)
-			Dynamic tmp15 = this->_onTweenUpdate_dyn();		HX_STACK_VAR(tmp15,"tmp15");
-			HX_STACK_LINE(158)
-			::motion::actuators::GenericActuator tmp16 = tmp14->onUpdate(tmp15,cpp::ArrayBase_obj::__new().Add(ucy).Add(panel).Add(panelOld));		HX_STACK_VAR(tmp16,"tmp16");
+			Dynamic tmp11 = _Function_2_1::Block(ucy);		HX_STACK_VAR(tmp11,"tmp11");
+			HX_STACK_LINE(159)
+			::motion::actuators::GenericActuator tmp12 = ::motion::Actuate_obj::tween(tmp9,tmp10,tmp11,true,null());		HX_STACK_VAR(tmp12,"tmp12");
+			HX_STACK_LINE(159)
+			::motion::easing::IEasing tmp13 = ::motion::easing::Quart_obj::get_easeOut();		HX_STACK_VAR(tmp13,"tmp13");
+			HX_STACK_LINE(159)
+			::motion::actuators::GenericActuator tmp14 = tmp12->ease(tmp13);		HX_STACK_VAR(tmp14,"tmp14");
 			HX_STACK_LINE(160)
+			Dynamic tmp15 = this->_onTweenUpdate_dyn();		HX_STACK_VAR(tmp15,"tmp15");
+			HX_STACK_LINE(159)
+			::motion::actuators::GenericActuator tmp16 = tmp14->onUpdate(tmp15,cpp::ArrayBase_obj::__new().Add(ucy).Add(panel).Add(panelOld));		HX_STACK_VAR(tmp16,"tmp16");
+			HX_STACK_LINE(161)
 			Dynamic tmp17 = this->_onTweenComplete_dyn();		HX_STACK_VAR(tmp17,"tmp17");
-			HX_STACK_LINE(158)
+			HX_STACK_LINE(159)
 			tmp16->onComplete(tmp17,cpp::ArrayBase_obj::__new().Add(panel).Add(panelOld).Add(buttonOld));
 		}
 		else{
-			HX_STACK_LINE(161)
+			HX_STACK_LINE(162)
 			bool tmp9 = (transition == HX_HCSTRING("fade","\x7c","\xb5","\xb5","\x43"));		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(161)
+			HX_STACK_LINE(162)
 			if ((tmp9)){
-				HX_STACK_LINE(162)
-				::openfl::_legacy::display::Sprite tmp10 = panel->get_sprite();		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(162)
-				tmp10->set_alpha((int)0);
 				HX_STACK_LINE(163)
+				::openfl::_legacy::display::Sprite tmp10 = panel->get_sprite();		HX_STACK_VAR(tmp10,"tmp10");
+				HX_STACK_LINE(163)
+				tmp10->set_alpha((int)0);
+				HX_STACK_LINE(164)
 				panel->set_visible(true);
-				HX_STACK_LINE(164)
+				HX_STACK_LINE(165)
 				bool tmp11 = (panelOld != null());		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(164)
+				HX_STACK_LINE(165)
 				if ((tmp11)){
-					HX_STACK_LINE(165)
-					::haxe::ui::toolkit::containers::AccordionButton tmp12 = buttonOld;		HX_STACK_VAR(tmp12,"tmp12");
-					HX_STACK_LINE(165)
-					this->unselectButton(tmp12);
 					HX_STACK_LINE(166)
+					::haxe::ui::toolkit::containers::AccordionButton tmp12 = buttonOld;		HX_STACK_VAR(tmp12,"tmp12");
+					HX_STACK_LINE(166)
+					this->unselectButton(tmp12);
+					HX_STACK_LINE(167)
 					panelOld->set_visible(false);
 				}
-				HX_STACK_LINE(168)
+				HX_STACK_LINE(169)
 				::openfl::_legacy::display::Sprite tmp12 = panel->get_sprite();		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(168)
+				HX_STACK_LINE(169)
 				Float tmp13 = transitionTime;		HX_STACK_VAR(tmp13,"tmp13");
 				struct _Function_3_1{
 					inline static Dynamic Block( ){
-						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","haxe/ui/toolkit/containers/Accordion.hx",168,0x8ce13fb0)
+						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","haxe/ui/toolkit/containers/Accordion.hx",169,0x8ce13fb0)
 						{
 							hx::Anon __result = hx::Anon_obj::Create();
 							__result->Add(HX_HCSTRING("alpha","\x5e","\xa7","\x96","\x21") , (int)1,false);
@@ -608,40 +608,40 @@ Void Accordion_obj::showPanel( int index){
 						return null();
 					}
 				};
-				HX_STACK_LINE(168)
+				HX_STACK_LINE(169)
 				Dynamic tmp14 = _Function_3_1::Block();		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(168)
+				HX_STACK_LINE(169)
 				::motion::actuators::GenericActuator tmp15 = ::motion::Actuate_obj::tween(tmp12,tmp13,tmp14,true,null());		HX_STACK_VAR(tmp15,"tmp15");
-				HX_STACK_LINE(168)
+				HX_STACK_LINE(169)
 				::motion::easing::IEasing tmp16 = ::motion::easing::Linear_obj::get_easeNone();		HX_STACK_VAR(tmp16,"tmp16");
-				HX_STACK_LINE(168)
+				HX_STACK_LINE(169)
 				tmp15->ease(tmp16);
 			}
 			else{
-				HX_STACK_LINE(170)
+				HX_STACK_LINE(171)
 				panel->set_visible(true);
-				HX_STACK_LINE(171)
+				HX_STACK_LINE(172)
 				bool tmp10 = (panelOld != null());		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(171)
+				HX_STACK_LINE(172)
 				if ((tmp10)){
-					HX_STACK_LINE(172)
-					::haxe::ui::toolkit::containers::AccordionButton tmp11 = buttonOld;		HX_STACK_VAR(tmp11,"tmp11");
-					HX_STACK_LINE(172)
-					this->unselectButton(tmp11);
 					HX_STACK_LINE(173)
+					::haxe::ui::toolkit::containers::AccordionButton tmp11 = buttonOld;		HX_STACK_VAR(tmp11,"tmp11");
+					HX_STACK_LINE(173)
+					this->unselectButton(tmp11);
+					HX_STACK_LINE(174)
 					panelOld->set_visible(false);
 				}
 			}
 		}
-		HX_STACK_LINE(177)
+		HX_STACK_LINE(178)
 		bool tmp9 = (panelOld == panel);		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(177)
+		HX_STACK_LINE(178)
 		if ((tmp9)){
-			HX_STACK_LINE(178)
+			HX_STACK_LINE(179)
 			this->_selectedIndex = (int)-1;
 		}
 		else{
-			HX_STACK_LINE(180)
+			HX_STACK_LINE(181)
 			this->_selectedIndex = index;
 		}
 	}
@@ -653,10 +653,10 @@ HX_DEFINE_DYNAMIC_FUNC1(Accordion_obj,showPanel,(void))
 
 Void Accordion_obj::unselectButton( ::haxe::ui::toolkit::controls::Button button){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","unselectButton",0xeb2ad787,"haxe.ui.toolkit.containers.Accordion.unselectButton","haxe/ui/toolkit/containers/Accordion.hx",187,0x8ce13fb0)
+		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","unselectButton",0xeb2ad787,"haxe.ui.toolkit.containers.Accordion.unselectButton","haxe/ui/toolkit/containers/Accordion.hx",188,0x8ce13fb0)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(button,"button")
-		HX_STACK_LINE(187)
+		HX_STACK_LINE(188)
 		button->set_selected(false);
 	}
 return null();
@@ -667,26 +667,26 @@ HX_DEFINE_DYNAMIC_FUNC1(Accordion_obj,unselectButton,(void))
 
 Void Accordion_obj::_onTweenUpdate( Float ucy,::haxe::ui::toolkit::core::Component panel,::haxe::ui::toolkit::core::Component panelOld){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","_onTweenUpdate",0x07c04dd6,"haxe.ui.toolkit.containers.Accordion._onTweenUpdate","haxe/ui/toolkit/containers/Accordion.hx",191,0x8ce13fb0)
+		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","_onTweenUpdate",0x07c04dd6,"haxe.ui.toolkit.containers.Accordion._onTweenUpdate","haxe/ui/toolkit/containers/Accordion.hx",192,0x8ce13fb0)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(ucy,"ucy")
 		HX_STACK_ARG(panel,"panel")
 		HX_STACK_ARG(panelOld,"panelOld")
-		HX_STACK_LINE(192)
+		HX_STACK_LINE(193)
 		bool tmp = (panelOld != null());		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(192)
+		HX_STACK_LINE(193)
 		if ((tmp)){
-			HX_STACK_LINE(193)
+			HX_STACK_LINE(194)
 			Float tmp1 = ucy;		HX_STACK_VAR(tmp1,"tmp1");
-			HX_STACK_LINE(193)
+			HX_STACK_LINE(194)
 			Float tmp2 = panel->get_height();		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(193)
+			HX_STACK_LINE(194)
 			Float tmp3 = (tmp1 - tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(193)
+			HX_STACK_LINE(194)
 			panelOld->set_height(tmp3);
-			HX_STACK_LINE(194)
+			HX_STACK_LINE(195)
 			Float tmp4 = panelOld->get_height();		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(194)
+			HX_STACK_LINE(195)
 			panelOld->set_clipHeight(tmp4);
 		}
 	}
@@ -698,24 +698,24 @@ HX_DEFINE_DYNAMIC_FUNC3(Accordion_obj,_onTweenUpdate,(void))
 
 Void Accordion_obj::_onTweenComplete( ::haxe::ui::toolkit::core::Component panel,::haxe::ui::toolkit::core::Component panelOld,::haxe::ui::toolkit::controls::Button buttonOld){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","_onTweenComplete",0xba9e15c6,"haxe.ui.toolkit.containers.Accordion._onTweenComplete","haxe/ui/toolkit/containers/Accordion.hx",198,0x8ce13fb0)
+		HX_STACK_FRAME("haxe.ui.toolkit.containers.Accordion","_onTweenComplete",0xba9e15c6,"haxe.ui.toolkit.containers.Accordion._onTweenComplete","haxe/ui/toolkit/containers/Accordion.hx",199,0x8ce13fb0)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(panel,"panel")
 		HX_STACK_ARG(panelOld,"panelOld")
 		HX_STACK_ARG(buttonOld,"buttonOld")
-		HX_STACK_LINE(199)
-		panel->clearClip();
 		HX_STACK_LINE(200)
+		panel->clearClip();
+		HX_STACK_LINE(201)
 		panel->set_percentHeight((int)100);
-		HX_STACK_LINE(201)
+		HX_STACK_LINE(202)
 		bool tmp = (panelOld != null());		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(201)
+		HX_STACK_LINE(202)
 		if ((tmp)){
-			HX_STACK_LINE(202)
+			HX_STACK_LINE(203)
 			panelOld->set_visible(false);
-			HX_STACK_LINE(203)
+			HX_STACK_LINE(204)
 			::haxe::ui::toolkit::controls::Button tmp1 = buttonOld;		HX_STACK_VAR(tmp1,"tmp1");
-			HX_STACK_LINE(203)
+			HX_STACK_LINE(204)
 			this->unselectButton(tmp1);
 		}
 	}
@@ -732,43 +732,47 @@ HX_DEFINE_DYNAMIC_FUNC3(Accordion_obj,_onTweenComplete,(void))
 	::haxe::ui::toolkit::containers::VBox tmp = hx::TCast< ::haxe::ui::toolkit::containers::VBox >::cast(this->super::clone());		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(1)
 	::haxe::ui::toolkit::containers::Accordion c = ((::haxe::ui::toolkit::containers::Accordion)(tmp));		HX_STACK_VAR(c,"c");
-	HX_STACK_LINE(211)
-	c->removeAllChildren(null());
 	HX_STACK_LINE(212)
+	c->removeAllChildren(null());
+	HX_STACK_LINE(213)
 	{
-		HX_STACK_LINE(212)
+		HX_STACK_LINE(213)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(212)
+		HX_STACK_LINE(213)
 		Array< ::haxe::ui::toolkit::core::interfaces::IDisplayObject > _g1 = this->get_children();		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(212)
+		HX_STACK_LINE(213)
 		while((true)){
-			HX_STACK_LINE(212)
+			HX_STACK_LINE(213)
 			bool tmp1 = (_g < _g1->length);		HX_STACK_VAR(tmp1,"tmp1");
-			HX_STACK_LINE(212)
+			HX_STACK_LINE(213)
 			bool tmp2 = !(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(212)
+			HX_STACK_LINE(213)
 			if ((tmp2)){
-				HX_STACK_LINE(212)
+				HX_STACK_LINE(213)
 				break;
 			}
-			HX_STACK_LINE(212)
+			HX_STACK_LINE(213)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp3 = _g1->__get(_g);		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(212)
+			HX_STACK_LINE(213)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObject child = tmp3;		HX_STACK_VAR(child,"child");
-			HX_STACK_LINE(212)
+			HX_STACK_LINE(213)
 			++(_g);
-			HX_STACK_LINE(213)
+			HX_STACK_LINE(214)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp4 = child;		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(213)
+			HX_STACK_LINE(214)
 			bool tmp5 = ::Std_obj::is(tmp4,hx::ClassOf< ::haxe::ui::toolkit::containers::AccordionButton >());		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(213)
+			HX_STACK_LINE(214)
 			bool tmp6 = (tmp5 == false);		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(213)
+			HX_STACK_LINE(214)
 			if ((tmp6)){
-				HX_STACK_LINE(214)
-				::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp7 = child->clone();		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(214)
-				c->addChild(tmp7);
+				HX_STACK_LINE(215)
+				::haxe::ui::toolkit::core::DisplayObject tmp7;		HX_STACK_VAR(tmp7,"tmp7");
+				HX_STACK_LINE(215)
+				tmp7 = hx::TCast< ::haxe::ui::toolkit::core::DisplayObject >::cast(child);
+				HX_STACK_LINE(215)
+				::haxe::ui::toolkit::core::DisplayObject tmp8 = tmp7->clone();		HX_STACK_VAR(tmp8,"tmp8");
+				HX_STACK_LINE(215)
+				c->addChild(tmp8);
 			}
 		}
 	}

@@ -9,6 +9,9 @@
 #ifndef INCLUDED_openfl__legacy_display_CapsStyle
 #include <openfl/_legacy/display/CapsStyle.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_display_GradientType
+#include <openfl/_legacy/display/GradientType.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_display_Graphics
 #include <openfl/_legacy/display/Graphics.h>
 #endif
@@ -17,6 +20,9 @@
 #endif
 #ifndef INCLUDED_openfl__legacy_display_IGraphicsData
 #include <openfl/_legacy/display/IGraphicsData.h>
+#endif
+#ifndef INCLUDED_openfl__legacy_display_InterpolationMethod
+#include <openfl/_legacy/display/InterpolationMethod.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_display_JointStyle
 #include <openfl/_legacy/display/JointStyle.h>
@@ -35,15 +41,6 @@
 #endif
 #ifndef INCLUDED_openfl__legacy_geom_Matrix
 #include <openfl/_legacy/geom/Matrix.h>
-#endif
-#ifndef INCLUDED_openfl_display_GradientType
-#include <openfl/display/GradientType.h>
-#endif
-#ifndef INCLUDED_openfl_display_GraphicsPathWinding
-#include <openfl/display/GraphicsPathWinding.h>
-#endif
-#ifndef INCLUDED_openfl_display_InterpolationMethod
-#include <openfl/display/InterpolationMethod.h>
 #endif
 namespace openfl{
 namespace _legacy{
@@ -153,7 +150,7 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC2(Graphics_obj,beginFill,(void))
 
-Void Graphics_obj::beginGradientFill( ::openfl::display::GradientType type,cpp::ArrayBase colors,cpp::ArrayBase alphas,cpp::ArrayBase ratios,::openfl::_legacy::geom::Matrix matrix,::openfl::_legacy::display::SpreadMethod spreadMethod,::openfl::display::InterpolationMethod interpolationMethod,hx::Null< Float >  __o_focalPointRatio){
+Void Graphics_obj::beginGradientFill( ::openfl::_legacy::display::GradientType type,cpp::ArrayBase colors,cpp::ArrayBase alphas,cpp::ArrayBase ratios,::openfl::_legacy::geom::Matrix matrix,::openfl::_legacy::display::SpreadMethod spreadMethod,::openfl::_legacy::display::InterpolationMethod interpolationMethod,hx::Null< Float >  __o_focalPointRatio){
 Float focalPointRatio = __o_focalPointRatio.Default(((Float)0.0));
 	HX_STACK_FRAME("openfl._legacy.display.Graphics","beginGradientFill",0x9aa063a9,"openfl._legacy.display.Graphics.beginGradientFill","openfl/_legacy/display/Graphics.hx",57,0x485def00)
 	HX_STACK_THIS(this)
@@ -526,7 +523,7 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC8(Graphics_obj,drawRoundRectComplex,(void))
 
-Void Graphics_obj::drawPath( Array< int > commands,Array< Float > data,::openfl::display::GraphicsPathWinding winding){
+Void Graphics_obj::drawPath( Array< int > commands,Array< Float > data,::String winding){
 {
 		HX_STACK_FRAME("openfl._legacy.display.Graphics","drawPath",0xa274861c,"openfl._legacy.display.Graphics.drawPath","openfl/_legacy/display/Graphics.hx",163,0x485def00)
 		HX_STACK_THIS(this)
@@ -536,7 +533,7 @@ Void Graphics_obj::drawPath( Array< int > commands,Array< Float > data,::openfl:
 		HX_STACK_LINE(165)
 		Dynamic tmp = this->__handle;		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(165)
-		bool tmp1 = (winding == ::openfl::display::GraphicsPathWinding_obj::EVEN_ODD);		HX_STACK_VAR(tmp1,"tmp1");
+		bool tmp1 = (winding == HX_HCSTRING("evenOdd","\xb5","\xc6","\x7e","\x06"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(165)
 		::openfl::_legacy::display::Graphics_obj::lime_gfx_draw_path(tmp,commands,data,tmp1);
 	}
@@ -673,7 +670,7 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC4(Graphics_obj,lineBitmapStyle,(void))
 
-Void Graphics_obj::lineGradientStyle( ::openfl::display::GradientType type,cpp::ArrayBase colors,cpp::ArrayBase alphas,cpp::ArrayBase ratios,::openfl::_legacy::geom::Matrix matrix,::openfl::_legacy::display::SpreadMethod spreadMethod,::openfl::display::InterpolationMethod interpolationMethod,hx::Null< Float >  __o_focalPointRatio){
+Void Graphics_obj::lineGradientStyle( ::openfl::_legacy::display::GradientType type,cpp::ArrayBase colors,cpp::ArrayBase alphas,cpp::ArrayBase ratios,::openfl::_legacy::geom::Matrix matrix,::openfl::_legacy::display::SpreadMethod spreadMethod,::openfl::_legacy::display::InterpolationMethod interpolationMethod,hx::Null< Float >  __o_focalPointRatio){
 Float focalPointRatio = __o_focalPointRatio.Default(((Float)0.0));
 	HX_STACK_FRAME("openfl._legacy.display.Graphics","lineGradientStyle",0x2e8f4bda,"openfl._legacy.display.Graphics.lineGradientStyle","openfl/_legacy/display/Graphics.hx",206,0x485def00)
 	HX_STACK_THIS(this)

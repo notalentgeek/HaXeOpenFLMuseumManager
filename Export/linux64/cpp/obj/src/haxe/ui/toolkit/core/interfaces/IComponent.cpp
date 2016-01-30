@@ -1,8 +1,5 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_haxe_ui_toolkit_core_interfaces_IClonable
-#include <haxe/ui/toolkit/core/interfaces/IClonable.h>
-#endif
 #ifndef INCLUDED_haxe_ui_toolkit_core_interfaces_IComponent
 #include <haxe/ui/toolkit/core/interfaces/IComponent.h>
 #endif

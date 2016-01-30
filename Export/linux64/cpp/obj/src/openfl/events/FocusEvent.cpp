@@ -165,24 +165,6 @@ Dynamic FocusEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCall
 	return super::__Field(inName,inCallProp);
 }
 
-bool FocusEvent_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
-{
-	switch(inName.length) {
-	case 8:
-		if (HX_FIELD_EQ(inName,"FOCUS_IN") ) { outValue = FOCUS_IN; return true;  }
-		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"FOCUS_OUT") ) { outValue = FOCUS_OUT; return true;  }
-		break;
-	case 16:
-		if (HX_FIELD_EQ(inName,"KEY_FOCUS_CHANGE") ) { outValue = KEY_FOCUS_CHANGE; return true;  }
-		break;
-	case 18:
-		if (HX_FIELD_EQ(inName,"MOUSE_FOCUS_CHANGE") ) { outValue = MOUSE_FOCUS_CHANGE; return true;  }
-	}
-	return false;
-}
-
 Dynamic FocusEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
@@ -200,19 +182,6 @@ Dynamic FocusEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue
 
 bool FocusEvent_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
 {
-	switch(inName.length) {
-	case 8:
-		if (HX_FIELD_EQ(inName,"FOCUS_IN") ) { FOCUS_IN=ioValue.Cast< ::String >(); return true; }
-		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"FOCUS_OUT") ) { FOCUS_OUT=ioValue.Cast< ::String >(); return true; }
-		break;
-	case 16:
-		if (HX_FIELD_EQ(inName,"KEY_FOCUS_CHANGE") ) { KEY_FOCUS_CHANGE=ioValue.Cast< ::String >(); return true; }
-		break;
-	case 18:
-		if (HX_FIELD_EQ(inName,"MOUSE_FOCUS_CHANGE") ) { MOUSE_FOCUS_CHANGE=ioValue.Cast< ::String >(); return true; }
-	}
 	return false;
 }
 
@@ -283,7 +252,7 @@ void FocusEvent_obj::__register()
 	__mClass->mSuper = &super::__SGetClass();
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
-	__mClass->mGetStaticField = &FocusEvent_obj::__GetStatic;
+	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
 	__mClass->mSetStaticField = &FocusEvent_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);

@@ -127,18 +127,6 @@ Dynamic TextEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 	return super::__Field(inName,inCallProp);
 }
 
-bool TextEvent_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
-{
-	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"LINK") ) { outValue = LINK; return true;  }
-		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"TEXT_INPUT") ) { outValue = TEXT_INPUT; return true;  }
-	}
-	return false;
-}
-
 Dynamic TextEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
@@ -150,13 +138,6 @@ Dynamic TextEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue,
 
 bool TextEvent_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
 {
-	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"LINK") ) { LINK=ioValue.Cast< ::String >(); return true; }
-		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"TEXT_INPUT") ) { TEXT_INPUT=ioValue.Cast< ::String >(); return true; }
-	}
 	return false;
 }
 
@@ -213,7 +194,7 @@ void TextEvent_obj::__register()
 	__mClass->mSuper = &super::__SGetClass();
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
-	__mClass->mGetStaticField = &TextEvent_obj::__GetStatic;
+	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
 	__mClass->mSetStaticField = &TextEvent_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);

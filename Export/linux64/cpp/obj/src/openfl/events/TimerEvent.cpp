@@ -118,18 +118,6 @@ Dynamic TimerEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCall
 	return super::__Field(inName,inCallProp);
 }
 
-bool TimerEvent_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
-{
-	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"TIMER") ) { outValue = TIMER; return true;  }
-		break;
-	case 14:
-		if (HX_FIELD_EQ(inName,"TIMER_COMPLETE") ) { outValue = TIMER_COMPLETE; return true;  }
-	}
-	return false;
-}
-
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
@@ -174,7 +162,7 @@ void TimerEvent_obj::__register()
 	__mClass->mSuper = &super::__SGetClass();
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
-	__mClass->mGetStaticField = &TimerEvent_obj::__GetStatic;
+	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
 	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);

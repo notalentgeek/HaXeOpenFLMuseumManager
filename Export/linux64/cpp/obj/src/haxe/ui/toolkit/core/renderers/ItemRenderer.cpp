@@ -459,13 +459,13 @@ Void ItemRenderer_obj::attachEvent( ::haxe::ui::toolkit::core::interfaces::IDisp
 			HX_STACK_LINE(100)
 			Dynamic tmp3 = this->_onComponentEvent_dyn();		HX_STACK_VAR(tmp3,"tmp3");
 			HX_STACK_LINE(100)
-			c->__Field(HX_HCSTRING("removeEventListener","\xca","\x87","\x75","\x55"), hx::paccDynamic )(tmp2,tmp3,null());
+			c->removeEventListener(tmp2,tmp3,null());
 			HX_STACK_LINE(101)
 			::String tmp4 = HX_HCSTRING("haxeui_change","\x55","\x86","\x4e","\x89");		HX_STACK_VAR(tmp4,"tmp4");
 			HX_STACK_LINE(101)
 			Dynamic tmp5 = this->_onComponentEvent_dyn();		HX_STACK_VAR(tmp5,"tmp5");
 			HX_STACK_LINE(101)
-			c->__Field(HX_HCSTRING("addEventListener","\xcd","\x0b","\x64","\xf1"), hx::paccDynamic )(tmp4,tmp5,null(),null(),null());
+			c->addEventListener(tmp4,tmp5,null(),null(),null());
 		}
 		else{
 			HX_STACK_LINE(102)
@@ -479,13 +479,13 @@ Void ItemRenderer_obj::attachEvent( ::haxe::ui::toolkit::core::interfaces::IDisp
 				HX_STACK_LINE(103)
 				Dynamic tmp5 = this->_onComponentEvent_dyn();		HX_STACK_VAR(tmp5,"tmp5");
 				HX_STACK_LINE(103)
-				c->__Field(HX_HCSTRING("removeEventListener","\xca","\x87","\x75","\x55"), hx::paccDynamic )(tmp4,tmp5,null());
+				c->removeEventListener(tmp4,tmp5,null());
 				HX_STACK_LINE(104)
 				::String tmp6 = HX_HCSTRING("haxeui_click","\x03","\x6b","\xd3","\x5c");		HX_STACK_VAR(tmp6,"tmp6");
 				HX_STACK_LINE(104)
 				Dynamic tmp7 = this->_onComponentEvent_dyn();		HX_STACK_VAR(tmp7,"tmp7");
 				HX_STACK_LINE(104)
-				c->__Field(HX_HCSTRING("addEventListener","\xcd","\x0b","\x64","\xf1"), hx::paccDynamic )(tmp6,tmp7,null(),null(),null());
+				c->addEventListener(tmp6,tmp7,null(),null(),null());
 			}
 			else{
 				HX_STACK_LINE(105)
@@ -499,13 +499,13 @@ Void ItemRenderer_obj::attachEvent( ::haxe::ui::toolkit::core::interfaces::IDisp
 					HX_STACK_LINE(106)
 					Dynamic tmp7 = this->_onComponentEvent_dyn();		HX_STACK_VAR(tmp7,"tmp7");
 					HX_STACK_LINE(106)
-					c->__Field(HX_HCSTRING("removeEventListener","\xca","\x87","\x75","\x55"), hx::paccDynamic )(tmp6,tmp7,null());
+					c->removeEventListener(tmp6,tmp7,null());
 					HX_STACK_LINE(107)
 					::String tmp8 = HX_HCSTRING("haxeui_change","\x55","\x86","\x4e","\x89");		HX_STACK_VAR(tmp8,"tmp8");
 					HX_STACK_LINE(107)
 					Dynamic tmp9 = this->_onComponentEvent_dyn();		HX_STACK_VAR(tmp9,"tmp9");
 					HX_STACK_LINE(107)
-					c->__Field(HX_HCSTRING("addEventListener","\xcd","\x0b","\x64","\xf1"), hx::paccDynamic )(tmp8,tmp9,null(),null(),null());
+					c->addEventListener(tmp8,tmp9,null(),null(),null());
 				}
 				else{
 					HX_STACK_LINE(108)
@@ -519,13 +519,13 @@ Void ItemRenderer_obj::attachEvent( ::haxe::ui::toolkit::core::interfaces::IDisp
 						HX_STACK_LINE(109)
 						Dynamic tmp9 = this->_onComponentEvent_dyn();		HX_STACK_VAR(tmp9,"tmp9");
 						HX_STACK_LINE(109)
-						c->__Field(HX_HCSTRING("removeEventListener","\xca","\x87","\x75","\x55"), hx::paccDynamic )(tmp8,tmp9,null());
+						c->removeEventListener(tmp8,tmp9,null());
 						HX_STACK_LINE(110)
 						::String tmp10 = HX_HCSTRING("haxeui_change","\x55","\x86","\x4e","\x89");		HX_STACK_VAR(tmp10,"tmp10");
 						HX_STACK_LINE(110)
 						Dynamic tmp11 = this->_onComponentEvent_dyn();		HX_STACK_VAR(tmp11,"tmp11");
 						HX_STACK_LINE(110)
-						c->__Field(HX_HCSTRING("addEventListener","\xcd","\x0b","\x64","\xf1"), hx::paccDynamic )(tmp10,tmp11,null(),null(),null());
+						c->addEventListener(tmp10,tmp11,null(),null(),null());
 					}
 				}
 			}
@@ -1031,9 +1031,13 @@ HX_DEFINE_DYNAMIC_FUNC1(ItemRenderer_obj,isInteractive,return )
 			HX_STACK_LINE(194)
 			++(_g);
 			HX_STACK_LINE(195)
-			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp4 = child->clone();		HX_STACK_VAR(tmp4,"tmp4");
+			::haxe::ui::toolkit::core::DisplayObject tmp4;		HX_STACK_VAR(tmp4,"tmp4");
 			HX_STACK_LINE(195)
-			c->addChild(tmp4);
+			tmp4 = hx::TCast< ::haxe::ui::toolkit::core::DisplayObject >::cast(child);
+			HX_STACK_LINE(195)
+			::haxe::ui::toolkit::core::DisplayObject tmp5 = tmp4->clone();		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(195)
+			c->addChild(tmp5);
 		}
 	}
 	HX_STACK_LINE(1)

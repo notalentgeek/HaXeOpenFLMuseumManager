@@ -216,38 +216,36 @@ bool SoundChannel_obj::__checkComplete( ){
 		HX_STACK_LINE(130)
 		if ((tmp4)){
 			HX_STACK_LINE(132)
-			::String tmp5 = ::openfl::events::SampleDataEvent_obj::SAMPLE_DATA;		HX_STACK_VAR(tmp5,"tmp5");
+			::openfl::events::SampleDataEvent tmp5 = ::openfl::events::SampleDataEvent_obj::__new(HX_HCSTRING("sampleData","\x74","\x3f","\x0b","\x5e"),null(),null());		HX_STACK_VAR(tmp5,"tmp5");
 			HX_STACK_LINE(132)
-			::openfl::events::SampleDataEvent tmp6 = ::openfl::events::SampleDataEvent_obj::__new(tmp5,null(),null());		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(132)
-			::openfl::events::SampleDataEvent request = tmp6;		HX_STACK_VAR(request,"request");
+			::openfl::events::SampleDataEvent request = tmp5;		HX_STACK_VAR(request,"request");
 			HX_STACK_LINE(133)
-			Dynamic tmp7 = this->__handle;		HX_STACK_VAR(tmp7,"tmp7");
+			Dynamic tmp6 = this->__handle;		HX_STACK_VAR(tmp6,"tmp6");
 			HX_STACK_LINE(133)
-			Float tmp8 = ::openfl::_legacy::media::SoundChannel_obj::lime_sound_channel_get_data_position(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
+			Float tmp7 = ::openfl::_legacy::media::SoundChannel_obj::lime_sound_channel_get_data_position(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
 			HX_STACK_LINE(133)
-			request->position = tmp8;
+			request->position = tmp7;
 			HX_STACK_LINE(135)
-			::openfl::_legacy::utils::ByteArray tmp9 = this->__dynamicBytes;		HX_STACK_VAR(tmp9,"tmp9");
+			::openfl::_legacy::utils::ByteArray tmp8 = this->__dynamicBytes;		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(135)
-			int tmp10 = tmp9->length;		HX_STACK_VAR(tmp10,"tmp10");
+			int tmp9 = tmp8->length;		HX_STACK_VAR(tmp9,"tmp9");
 			HX_STACK_LINE(135)
-			bool tmp11 = (tmp10 > (int)0);		HX_STACK_VAR(tmp11,"tmp11");
+			bool tmp10 = (tmp9 > (int)0);		HX_STACK_VAR(tmp10,"tmp10");
 			HX_STACK_LINE(135)
-			if ((tmp11)){
+			if ((tmp10)){
 				HX_STACK_LINE(137)
-				Dynamic tmp12 = this->__handle;		HX_STACK_VAR(tmp12,"tmp12");
+				Dynamic tmp11 = this->__handle;		HX_STACK_VAR(tmp11,"tmp11");
 				HX_STACK_LINE(137)
-				::openfl::_legacy::utils::ByteArray tmp13 = this->__dynamicBytes;		HX_STACK_VAR(tmp13,"tmp13");
+				::openfl::_legacy::utils::ByteArray tmp12 = this->__dynamicBytes;		HX_STACK_VAR(tmp12,"tmp12");
 				HX_STACK_LINE(137)
-				::openfl::_legacy::media::SoundChannel_obj::lime_sound_channel_add_data(tmp12,tmp13);
+				::openfl::_legacy::media::SoundChannel_obj::lime_sound_channel_add_data(tmp11,tmp12);
 			}
 			HX_STACK_LINE(141)
-			::openfl::_legacy::events::EventDispatcher tmp12 = this->__dataProvider;		HX_STACK_VAR(tmp12,"tmp12");
+			::openfl::_legacy::events::EventDispatcher tmp11 = this->__dataProvider;		HX_STACK_VAR(tmp11,"tmp11");
 			HX_STACK_LINE(141)
-			::openfl::events::SampleDataEvent tmp13 = request;		HX_STACK_VAR(tmp13,"tmp13");
+			::openfl::events::SampleDataEvent tmp12 = request;		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(141)
-			tmp12->dispatchEvent(tmp13);
+			tmp11->dispatchEvent(tmp12);
 			HX_STACK_LINE(142)
 			this->__dynamicBytes = request->data;
 		}
@@ -606,27 +604,25 @@ bool SoundChannel_obj::__audioThreadRunning;
 	HX_STACK_LINE(93)
 	(::openfl::_legacy::media::SoundChannel_obj::__dynamicSoundCount)++;
 	HX_STACK_LINE(96)
-	::String tmp2 = ::openfl::events::SampleDataEvent_obj::SAMPLE_DATA;		HX_STACK_VAR(tmp2,"tmp2");
+	::openfl::events::SampleDataEvent tmp2 = ::openfl::events::SampleDataEvent_obj::__new(HX_HCSTRING("sampleData","\x74","\x3f","\x0b","\x5e"),null(),null());		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(96)
-	::openfl::events::SampleDataEvent tmp3 = ::openfl::events::SampleDataEvent_obj::__new(tmp2,null(),null());		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(96)
-	::openfl::events::SampleDataEvent request = tmp3;		HX_STACK_VAR(request,"request");
+	::openfl::events::SampleDataEvent request = tmp2;		HX_STACK_VAR(request,"request");
 	HX_STACK_LINE(97)
-	Dynamic tmp4 = handle;		HX_STACK_VAR(tmp4,"tmp4");
+	Dynamic tmp3 = handle;		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(97)
-	Float tmp5 = ::openfl::_legacy::media::SoundChannel_obj::lime_sound_channel_get_data_position(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
+	Float tmp4 = ::openfl::_legacy::media::SoundChannel_obj::lime_sound_channel_get_data_position(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
 	HX_STACK_LINE(97)
-	request->position = tmp5;
+	request->position = tmp4;
 	HX_STACK_LINE(98)
-	::openfl::events::SampleDataEvent tmp6 = request;		HX_STACK_VAR(tmp6,"tmp6");
+	::openfl::events::SampleDataEvent tmp5 = request;		HX_STACK_VAR(tmp5,"tmp5");
 	HX_STACK_LINE(98)
-	dataProvider->dispatchEvent(tmp6);
+	dataProvider->dispatchEvent(tmp5);
 	HX_STACK_LINE(99)
 	result->__dynamicBytes = request->data;
 	HX_STACK_LINE(101)
-	::openfl::_legacy::media::SoundChannel tmp7 = result;		HX_STACK_VAR(tmp7,"tmp7");
+	::openfl::_legacy::media::SoundChannel tmp6 = result;		HX_STACK_VAR(tmp6,"tmp6");
 	HX_STACK_LINE(101)
-	return tmp7;
+	return tmp6;
 }
 
 

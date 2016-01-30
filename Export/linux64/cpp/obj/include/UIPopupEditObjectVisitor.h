@@ -107,6 +107,9 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		virtual Void UpdateDisplayPopularTagListSelectorObjectVoid( );
 		Dynamic UpdateDisplayPopularTagListSelectorObjectVoid_dyn();
 
+		virtual Void UpdateDisplaySentenceListViewObjectVoid( );
+		Dynamic UpdateDisplaySentenceListViewObjectVoid_dyn();
+
 };
 
 

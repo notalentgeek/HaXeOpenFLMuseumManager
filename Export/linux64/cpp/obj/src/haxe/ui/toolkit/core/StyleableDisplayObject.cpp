@@ -892,35 +892,84 @@ Void StyleableDisplayObject_obj::applyStyle( ){
 				HX_STACK_LINE(233)
 				::openfl::_legacy::display::Sprite tmp18 = this->_sprite;		HX_STACK_VAR(tmp18,"tmp18");
 				HX_STACK_LINE(233)
-				::haxe::ui::toolkit::style::Style tmp19 = this->_baseStyle;		HX_STACK_VAR(tmp19,"tmp19");
+				bool tmp19 = (tmp18->get_filters() == null());		HX_STACK_VAR(tmp19,"tmp19");
 				HX_STACK_LINE(233)
-				::openfl::_legacy::filters::BitmapFilter tmp20 = tmp19->get_filter();		HX_STACK_VAR(tmp20,"tmp20");
+				bool tmp20 = !(tmp19);		HX_STACK_VAR(tmp20,"tmp20");
 				HX_STACK_LINE(233)
-				tmp18->set_filters(Array_obj< ::Dynamic >::__new().Add(tmp20));
+				bool tmp21;		HX_STACK_VAR(tmp21,"tmp21");
+				HX_STACK_LINE(233)
+				if ((tmp20)){
+					HX_STACK_LINE(233)
+					::openfl::_legacy::display::Sprite tmp22 = this->_sprite;		HX_STACK_VAR(tmp22,"tmp22");
+					HX_STACK_LINE(233)
+					::openfl::_legacy::display::Sprite tmp23 = tmp22;		HX_STACK_VAR(tmp23,"tmp23");
+					HX_STACK_LINE(233)
+					::haxe::ui::toolkit::style::Style tmp24 = this->_baseStyle;		HX_STACK_VAR(tmp24,"tmp24");
+					HX_STACK_LINE(233)
+					::haxe::ui::toolkit::style::Style tmp25 = tmp24;		HX_STACK_VAR(tmp25,"tmp25");
+					HX_STACK_LINE(233)
+					::openfl::_legacy::filters::BitmapFilter tmp26 = tmp25->get_filter();		HX_STACK_VAR(tmp26,"tmp26");
+					HX_STACK_LINE(233)
+					::openfl::_legacy::filters::BitmapFilter tmp27 = tmp26;		HX_STACK_VAR(tmp27,"tmp27");
+					HX_STACK_LINE(233)
+					::openfl::_legacy::filters::BitmapFilter tmp28 = tmp27;		HX_STACK_VAR(tmp28,"tmp28");
+					HX_STACK_LINE(233)
+					int tmp29 = tmp23->get_filters()->indexOf(tmp28,null());		HX_STACK_VAR(tmp29,"tmp29");
+					HX_STACK_LINE(233)
+					int tmp30 = tmp29;		HX_STACK_VAR(tmp30,"tmp30");
+					HX_STACK_LINE(233)
+					tmp21 = (tmp30 == (int)-1);
+				}
+				else{
+					HX_STACK_LINE(233)
+					tmp21 = true;
+				}
+				HX_STACK_LINE(233)
+				if ((tmp21)){
+					HX_STACK_LINE(234)
+					::openfl::_legacy::display::Sprite tmp22 = this->_sprite;		HX_STACK_VAR(tmp22,"tmp22");
+					HX_STACK_LINE(234)
+					::haxe::ui::toolkit::style::Style tmp23 = this->_baseStyle;		HX_STACK_VAR(tmp23,"tmp23");
+					HX_STACK_LINE(234)
+					::openfl::_legacy::filters::BitmapFilter tmp24 = tmp23->get_filter();		HX_STACK_VAR(tmp24,"tmp24");
+					HX_STACK_LINE(234)
+					tmp22->set_filters(Array_obj< ::Dynamic >::__new().Add(tmp24));
+				}
 			}
 			else{
-				HX_STACK_LINE(235)
+				HX_STACK_LINE(237)
 				::openfl::_legacy::display::Sprite tmp18 = this->_sprite;		HX_STACK_VAR(tmp18,"tmp18");
-				HX_STACK_LINE(235)
+				HX_STACK_LINE(237)
 				tmp18->set_filters(Array_obj< ::Dynamic >::__new());
 			}
-			HX_STACK_LINE(239)
-			::haxe::ui::toolkit::style::Style tmp18 = this->_baseStyle;		HX_STACK_VAR(tmp18,"tmp18");
-			HX_STACK_LINE(239)
-			bool tmp19 = tmp18->get_visibleSet();		HX_STACK_VAR(tmp19,"tmp19");
-			HX_STACK_LINE(239)
-			bool tmp20 = (tmp19 == true);		HX_STACK_VAR(tmp20,"tmp20");
-			HX_STACK_LINE(239)
+			HX_STACK_LINE(240)
+			::openfl::_legacy::display::Sprite tmp18 = this->_sprite;		HX_STACK_VAR(tmp18,"tmp18");
+			HX_STACK_LINE(240)
+			Float tmp19 = tmp18->get_alpha();		HX_STACK_VAR(tmp19,"tmp19");
+			HX_STACK_LINE(240)
+			bool tmp20 = (tmp19 < (int)1);		HX_STACK_VAR(tmp20,"tmp20");
+			HX_STACK_LINE(240)
 			if ((tmp20)){
-				HX_STACK_LINE(240)
-				::haxe::ui::toolkit::style::Style tmp21 = this->_baseStyle;		HX_STACK_VAR(tmp21,"tmp21");
-				HX_STACK_LINE(240)
-				bool tmp22 = tmp21->get_visible();		HX_STACK_VAR(tmp22,"tmp22");
-				HX_STACK_LINE(240)
-				this->set_visible(tmp22);
+				HX_STACK_LINE(241)
+				this->reapplyFilters();
+			}
+			HX_STACK_LINE(246)
+			::haxe::ui::toolkit::style::Style tmp21 = this->_baseStyle;		HX_STACK_VAR(tmp21,"tmp21");
+			HX_STACK_LINE(246)
+			bool tmp22 = tmp21->get_visibleSet();		HX_STACK_VAR(tmp22,"tmp22");
+			HX_STACK_LINE(246)
+			bool tmp23 = (tmp22 == true);		HX_STACK_VAR(tmp23,"tmp23");
+			HX_STACK_LINE(246)
+			if ((tmp23)){
+				HX_STACK_LINE(247)
+				::haxe::ui::toolkit::style::Style tmp24 = this->_baseStyle;		HX_STACK_VAR(tmp24,"tmp24");
+				HX_STACK_LINE(247)
+				bool tmp25 = tmp24->get_visible();		HX_STACK_VAR(tmp25,"tmp25");
+				HX_STACK_LINE(247)
+				this->set_visible(tmp25);
 			}
 		}
-		HX_STACK_LINE(244)
+		HX_STACK_LINE(251)
 		this->invalidate((int)16,null());
 	}
 return null();
@@ -929,9 +978,90 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC0(StyleableDisplayObject_obj,applyStyle,(void))
 
+Void StyleableDisplayObject_obj::reapplyFilters( ){
+{
+		HX_STACK_FRAME("haxe.ui.toolkit.core.StyleableDisplayObject","reapplyFilters",0xca396c0b,"haxe.ui.toolkit.core.StyleableDisplayObject.reapplyFilters","haxe/ui/toolkit/core/StyleableDisplayObject.hx",254,0xd6d306bb)
+		HX_STACK_THIS(this)
+		HX_STACK_LINE(255)
+		::openfl::_legacy::display::Sprite tmp = this->_sprite;		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(255)
+		bool tmp1 = (tmp->get_filters() != null());		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(255)
+		bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(255)
+		if ((tmp1)){
+			HX_STACK_LINE(255)
+			::openfl::_legacy::display::Sprite tmp3 = this->_sprite;		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(255)
+			::openfl::_legacy::display::Sprite tmp4 = tmp3;		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(255)
+			int tmp5 = tmp4->get_filters()->length;		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(255)
+			int tmp6 = tmp5;		HX_STACK_VAR(tmp6,"tmp6");
+			HX_STACK_LINE(255)
+			tmp2 = (tmp6 > (int)0);
+		}
+		else{
+			HX_STACK_LINE(255)
+			tmp2 = false;
+		}
+		HX_STACK_LINE(255)
+		if ((tmp2)){
+			HX_STACK_LINE(256)
+			::openfl::_legacy::display::Sprite tmp3 = this->_sprite;		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(256)
+			::openfl::_legacy::display::Sprite tmp4 = this->_sprite;		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(256)
+			tmp3->set_filters(tmp4->get_filters());
+		}
+		HX_STACK_LINE(258)
+		{
+			HX_STACK_LINE(258)
+			int _g = (int)0;		HX_STACK_VAR(_g,"_g");
+			HX_STACK_LINE(258)
+			Array< ::haxe::ui::toolkit::core::interfaces::IDisplayObject > _g1 = this->_children;		HX_STACK_VAR(_g1,"_g1");
+			HX_STACK_LINE(258)
+			while((true)){
+				HX_STACK_LINE(258)
+				bool tmp3 = (_g < _g1->length);		HX_STACK_VAR(tmp3,"tmp3");
+				HX_STACK_LINE(258)
+				bool tmp4 = !(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
+				HX_STACK_LINE(258)
+				if ((tmp4)){
+					HX_STACK_LINE(258)
+					break;
+				}
+				HX_STACK_LINE(258)
+				::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp5 = _g1->__get(_g);		HX_STACK_VAR(tmp5,"tmp5");
+				HX_STACK_LINE(258)
+				::haxe::ui::toolkit::core::interfaces::IDisplayObject c = tmp5;		HX_STACK_VAR(c,"c");
+				HX_STACK_LINE(258)
+				++(_g);
+				HX_STACK_LINE(259)
+				::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp6 = c;		HX_STACK_VAR(tmp6,"tmp6");
+				HX_STACK_LINE(259)
+				bool tmp7 = ::Std_obj::is(tmp6,hx::ClassOf< ::haxe::ui::toolkit::core::StyleableDisplayObject >());		HX_STACK_VAR(tmp7,"tmp7");
+				HX_STACK_LINE(259)
+				if ((tmp7)){
+					HX_STACK_LINE(260)
+					::haxe::ui::toolkit::core::StyleableDisplayObject tmp8;		HX_STACK_VAR(tmp8,"tmp8");
+					HX_STACK_LINE(260)
+					tmp8 = hx::TCast< ::haxe::ui::toolkit::core::StyleableDisplayObject >::cast(c);
+					HX_STACK_LINE(260)
+					tmp8->reapplyFilters();
+				}
+			}
+		}
+	}
+return null();
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(StyleableDisplayObject_obj,reapplyFilters,(void))
+
 Void StyleableDisplayObject_obj::buildStyles( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.core.StyleableDisplayObject","buildStyles",0xab726125,"haxe.ui.toolkit.core.StyleableDisplayObject.buildStyles","haxe/ui/toolkit/core/StyleableDisplayObject.hx",247,0xd6d306bb)
+		HX_STACK_FRAME("haxe.ui.toolkit.core.StyleableDisplayObject","buildStyles",0xab726125,"haxe.ui.toolkit.core.StyleableDisplayObject.buildStyles","haxe/ui/toolkit/core/StyleableDisplayObject.hx",265,0xd6d306bb)
 		HX_STACK_THIS(this)
 	}
 return null();
@@ -942,63 +1072,63 @@ HX_DEFINE_DYNAMIC_FUNC0(StyleableDisplayObject_obj,buildStyles,(void))
 
 Void StyleableDisplayObject_obj::clearStyles( hx::Null< bool >  __o_recursive){
 bool recursive = __o_recursive.Default(false);
-	HX_STACK_FRAME("haxe.ui.toolkit.core.StyleableDisplayObject","clearStyles",0xeeee88c4,"haxe.ui.toolkit.core.StyleableDisplayObject.clearStyles","haxe/ui/toolkit/core/StyleableDisplayObject.hx",251,0xd6d306bb)
+	HX_STACK_FRAME("haxe.ui.toolkit.core.StyleableDisplayObject","clearStyles",0xeeee88c4,"haxe.ui.toolkit.core.StyleableDisplayObject.clearStyles","haxe/ui/toolkit/core/StyleableDisplayObject.hx",269,0xd6d306bb)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(recursive,"recursive")
 {
-		HX_STACK_LINE(252)
+		HX_STACK_LINE(270)
 		::haxe::ds::StringMap tmp = ::haxe::ds::StringMap_obj::__new();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(252)
+		HX_STACK_LINE(270)
 		this->_storedStyles = tmp;
-		HX_STACK_LINE(253)
+		HX_STACK_LINE(271)
 		bool tmp1 = (recursive == true);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(253)
+		HX_STACK_LINE(271)
 		bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(253)
+		HX_STACK_LINE(271)
 		if ((tmp1)){
-			HX_STACK_LINE(253)
+			HX_STACK_LINE(271)
 			tmp2 = (this->get_children() != null());
 		}
 		else{
-			HX_STACK_LINE(253)
+			HX_STACK_LINE(271)
 			tmp2 = false;
 		}
-		HX_STACK_LINE(253)
+		HX_STACK_LINE(271)
 		if ((tmp2)){
-			HX_STACK_LINE(254)
+			HX_STACK_LINE(272)
 			int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(254)
+			HX_STACK_LINE(272)
 			Array< ::haxe::ui::toolkit::core::interfaces::IDisplayObject > _g1 = this->get_children();		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(254)
+			HX_STACK_LINE(272)
 			while((true)){
-				HX_STACK_LINE(254)
+				HX_STACK_LINE(272)
 				bool tmp3 = (_g < _g1->length);		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(254)
+				HX_STACK_LINE(272)
 				bool tmp4 = !(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
-				HX_STACK_LINE(254)
+				HX_STACK_LINE(272)
 				if ((tmp4)){
-					HX_STACK_LINE(254)
+					HX_STACK_LINE(272)
 					break;
 				}
-				HX_STACK_LINE(254)
+				HX_STACK_LINE(272)
 				::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp5 = _g1->__get(_g);		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(254)
+				HX_STACK_LINE(272)
 				::haxe::ui::toolkit::core::interfaces::IDisplayObject c = tmp5;		HX_STACK_VAR(c,"c");
-				HX_STACK_LINE(254)
+				HX_STACK_LINE(272)
 				++(_g);
-				HX_STACK_LINE(255)
+				HX_STACK_LINE(273)
 				::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp6 = c;		HX_STACK_VAR(tmp6,"tmp6");
-				HX_STACK_LINE(255)
+				HX_STACK_LINE(273)
 				bool tmp7 = ::Std_obj::is(tmp6,hx::ClassOf< ::haxe::ui::toolkit::core::StyleableDisplayObject >());		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(255)
+				HX_STACK_LINE(273)
 				if ((tmp7)){
-					HX_STACK_LINE(256)
+					HX_STACK_LINE(274)
 					::haxe::ui::toolkit::core::StyleableDisplayObject tmp8;		HX_STACK_VAR(tmp8,"tmp8");
-					HX_STACK_LINE(256)
+					HX_STACK_LINE(274)
 					tmp8 = hx::TCast< ::haxe::ui::toolkit::core::StyleableDisplayObject >::cast(c);
-					HX_STACK_LINE(256)
+					HX_STACK_LINE(274)
 					bool tmp9 = recursive;		HX_STACK_VAR(tmp9,"tmp9");
-					HX_STACK_LINE(256)
+					HX_STACK_LINE(274)
 					tmp8->clearStyles(tmp9);
 				}
 			}
@@ -1012,342 +1142,342 @@ HX_DEFINE_DYNAMIC_FUNC1(StyleableDisplayObject_obj,clearStyles,(void))
 
 Void StyleableDisplayObject_obj::refreshStyle( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.core.StyleableDisplayObject","refreshStyle",0xdb339a81,"haxe.ui.toolkit.core.StyleableDisplayObject.refreshStyle","haxe/ui/toolkit/core/StyleableDisplayObject.hx",262,0xd6d306bb)
+		HX_STACK_FRAME("haxe.ui.toolkit.core.StyleableDisplayObject","refreshStyle",0xdb339a81,"haxe.ui.toolkit.core.StyleableDisplayObject.refreshStyle","haxe/ui/toolkit/core/StyleableDisplayObject.hx",280,0xd6d306bb)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(263)
+		HX_STACK_LINE(281)
 		bool tmp = this->_lazyLoadStyles;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(263)
+		HX_STACK_LINE(281)
 		bool tmp1 = (tmp == false);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(263)
+		HX_STACK_LINE(281)
 		if ((tmp1)){
-			HX_STACK_LINE(264)
+			HX_STACK_LINE(282)
 			this->buildStyles();
 		}
-		HX_STACK_LINE(266)
+		HX_STACK_LINE(284)
 		bool tmp2 = ::Std_obj::is(hx::ObjectPtr<OBJ_>(this),hx::ClassOf< ::haxe::ui::toolkit::core::StateComponent >());		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(266)
+		HX_STACK_LINE(284)
 		if ((tmp2)){
-			HX_STACK_LINE(267)
+			HX_STACK_LINE(285)
 			::haxe::ui::toolkit::core::StateComponent tmp3;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(267)
+			HX_STACK_LINE(285)
 			tmp3 = hx::TCast< ::haxe::ui::toolkit::core::StateComponent >::cast(hx::ObjectPtr<OBJ_>(this));
-			HX_STACK_LINE(267)
+			HX_STACK_LINE(285)
 			::String tmp4 = tmp3->get_state();		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(267)
+			HX_STACK_LINE(285)
 			::String state = tmp4;		HX_STACK_VAR(state,"state");
-			HX_STACK_LINE(268)
+			HX_STACK_LINE(286)
 			bool tmp5 = (state == null());		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(268)
+			HX_STACK_LINE(286)
 			if ((tmp5)){
-				HX_STACK_LINE(269)
+				HX_STACK_LINE(287)
 				state = HX_HCSTRING("normal","\x27","\x72","\x69","\x30");
 			}
-			HX_STACK_LINE(271)
+			HX_STACK_LINE(289)
 			::String tmp6 = state;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(271)
+			HX_STACK_LINE(289)
 			::haxe::ui::toolkit::style::Style tmp7 = this->retrieveStyle(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(271)
+			HX_STACK_LINE(289)
 			this->_baseStyle = tmp7;
-			HX_STACK_LINE(272)
+			HX_STACK_LINE(290)
 			::haxe::ui::toolkit::style::Style tmp8 = this->_baseStyle;		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(272)
+			HX_STACK_LINE(290)
 			bool tmp9 = (tmp8 == null());		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(272)
+			HX_STACK_LINE(290)
 			if ((tmp9)){
-				HX_STACK_LINE(273)
+				HX_STACK_LINE(291)
 				::haxe::ui::toolkit::style::StyleManager tmp10 = ::haxe::ui::toolkit::style::StyleManager_obj::get_instance();		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(273)
+				HX_STACK_LINE(291)
 				::haxe::ui::toolkit::core::StateComponent tmp11;		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(273)
+				HX_STACK_LINE(291)
 				tmp11 = hx::TCast< ::haxe::ui::toolkit::core::StateComponent >::cast(hx::ObjectPtr<OBJ_>(this));
-				HX_STACK_LINE(273)
+				HX_STACK_LINE(291)
 				::String tmp12 = tmp11->get_state();		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(273)
+				HX_STACK_LINE(291)
 				::haxe::ui::toolkit::style::Style tmp13 = tmp10->buildStyleFor(hx::ObjectPtr<OBJ_>(this),tmp12);		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(273)
+				HX_STACK_LINE(291)
 				this->_baseStyle = tmp13;
 			}
 		}
 		else{
-			HX_STACK_LINE(276)
+			HX_STACK_LINE(294)
 			::haxe::ui::toolkit::style::StyleManager tmp3 = ::haxe::ui::toolkit::style::StyleManager_obj::get_instance();		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(276)
+			HX_STACK_LINE(294)
 			::haxe::ui::toolkit::style::Style tmp4 = tmp3->buildStyleFor(hx::ObjectPtr<OBJ_>(this),null());		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(276)
+			HX_STACK_LINE(294)
 			this->_baseStyle = tmp4;
 		}
-		HX_STACK_LINE(279)
+		HX_STACK_LINE(297)
 		::haxe::ui::toolkit::style::Style tmp3 = this->_baseStyle;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(279)
+		HX_STACK_LINE(297)
 		::haxe::ui::toolkit::style::Style tmp4 = this->_inlineStyle;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(279)
+		HX_STACK_LINE(297)
 		tmp3->merge(tmp4);
-		HX_STACK_LINE(281)
+		HX_STACK_LINE(299)
 		::haxe::ui::toolkit::style::Style tmp5 = this->_baseStyle;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(281)
+		HX_STACK_LINE(299)
 		bool tmp6 = (tmp5 != null());		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(281)
+		HX_STACK_LINE(299)
 		if ((tmp6)){
-			HX_STACK_LINE(283)
+			HX_STACK_LINE(301)
 			::haxe::ui::toolkit::style::Style tmp7 = this->_baseStyle;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(283)
+			HX_STACK_LINE(301)
 			int tmp8 = tmp7->get_width();		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(283)
+			HX_STACK_LINE(301)
 			int tmp9 = (int)-1;		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(283)
+			HX_STACK_LINE(301)
 			bool tmp10 = (tmp8 != tmp9);		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(283)
+			HX_STACK_LINE(301)
 			bool tmp11;		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(283)
+			HX_STACK_LINE(301)
 			if ((tmp10)){
-				HX_STACK_LINE(283)
+				HX_STACK_LINE(301)
 				Float tmp12 = this->get_width();		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(283)
+				HX_STACK_LINE(301)
 				Float tmp13 = tmp12;		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(283)
+				HX_STACK_LINE(301)
 				tmp11 = (tmp13 == (int)0);
 			}
 			else{
-				HX_STACK_LINE(283)
+				HX_STACK_LINE(301)
 				tmp11 = false;
 			}
-			HX_STACK_LINE(283)
+			HX_STACK_LINE(301)
 			if ((tmp11)){
-				HX_STACK_LINE(284)
+				HX_STACK_LINE(302)
 				::haxe::ui::toolkit::style::Style tmp12 = this->_baseStyle;		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(284)
+				HX_STACK_LINE(302)
 				int tmp13 = tmp12->get_width();		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(284)
+				HX_STACK_LINE(302)
 				this->set_width(tmp13);
 			}
-			HX_STACK_LINE(286)
+			HX_STACK_LINE(304)
 			::haxe::ui::toolkit::style::Style tmp12 = this->_baseStyle;		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(286)
+			HX_STACK_LINE(304)
 			int tmp13 = tmp12->get_height();		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(286)
+			HX_STACK_LINE(304)
 			int tmp14 = (int)-1;		HX_STACK_VAR(tmp14,"tmp14");
-			HX_STACK_LINE(286)
+			HX_STACK_LINE(304)
 			bool tmp15 = (tmp13 != tmp14);		HX_STACK_VAR(tmp15,"tmp15");
-			HX_STACK_LINE(286)
+			HX_STACK_LINE(304)
 			bool tmp16;		HX_STACK_VAR(tmp16,"tmp16");
-			HX_STACK_LINE(286)
+			HX_STACK_LINE(304)
 			if ((tmp15)){
-				HX_STACK_LINE(286)
+				HX_STACK_LINE(304)
 				Float tmp17 = this->get_height();		HX_STACK_VAR(tmp17,"tmp17");
-				HX_STACK_LINE(286)
+				HX_STACK_LINE(304)
 				Float tmp18 = tmp17;		HX_STACK_VAR(tmp18,"tmp18");
-				HX_STACK_LINE(286)
+				HX_STACK_LINE(304)
 				tmp16 = (tmp18 == (int)0);
 			}
 			else{
-				HX_STACK_LINE(286)
+				HX_STACK_LINE(304)
 				tmp16 = false;
 			}
-			HX_STACK_LINE(286)
+			HX_STACK_LINE(304)
 			if ((tmp16)){
-				HX_STACK_LINE(287)
+				HX_STACK_LINE(305)
 				::haxe::ui::toolkit::style::Style tmp17 = this->_baseStyle;		HX_STACK_VAR(tmp17,"tmp17");
-				HX_STACK_LINE(287)
+				HX_STACK_LINE(305)
 				int tmp18 = tmp17->get_height();		HX_STACK_VAR(tmp18,"tmp18");
-				HX_STACK_LINE(287)
+				HX_STACK_LINE(305)
 				this->set_height(tmp18);
 			}
-			HX_STACK_LINE(290)
+			HX_STACK_LINE(308)
 			::haxe::ui::toolkit::style::Style tmp17 = this->_baseStyle;		HX_STACK_VAR(tmp17,"tmp17");
-			HX_STACK_LINE(290)
+			HX_STACK_LINE(308)
 			int tmp18 = tmp17->get_percentWidth();		HX_STACK_VAR(tmp18,"tmp18");
-			HX_STACK_LINE(290)
+			HX_STACK_LINE(308)
 			int tmp19 = (int)-1;		HX_STACK_VAR(tmp19,"tmp19");
-			HX_STACK_LINE(290)
+			HX_STACK_LINE(308)
 			bool tmp20 = (tmp18 != tmp19);		HX_STACK_VAR(tmp20,"tmp20");
-			HX_STACK_LINE(290)
+			HX_STACK_LINE(308)
 			bool tmp21;		HX_STACK_VAR(tmp21,"tmp21");
-			HX_STACK_LINE(290)
+			HX_STACK_LINE(308)
 			if ((tmp20)){
-				HX_STACK_LINE(290)
+				HX_STACK_LINE(308)
 				Float tmp22 = this->get_percentWidth();		HX_STACK_VAR(tmp22,"tmp22");
-				HX_STACK_LINE(290)
+				HX_STACK_LINE(308)
 				Float tmp23 = tmp22;		HX_STACK_VAR(tmp23,"tmp23");
-				HX_STACK_LINE(290)
+				HX_STACK_LINE(308)
 				tmp21 = (tmp23 == (int)-1);
 			}
 			else{
-				HX_STACK_LINE(290)
+				HX_STACK_LINE(308)
 				tmp21 = false;
 			}
-			HX_STACK_LINE(290)
+			HX_STACK_LINE(308)
 			if ((tmp21)){
-				HX_STACK_LINE(291)
+				HX_STACK_LINE(309)
 				::haxe::ui::toolkit::style::Style tmp22 = this->_baseStyle;		HX_STACK_VAR(tmp22,"tmp22");
-				HX_STACK_LINE(291)
+				HX_STACK_LINE(309)
 				int tmp23 = tmp22->get_percentWidth();		HX_STACK_VAR(tmp23,"tmp23");
-				HX_STACK_LINE(291)
+				HX_STACK_LINE(309)
 				this->set_percentWidth(tmp23);
 			}
-			HX_STACK_LINE(293)
+			HX_STACK_LINE(311)
 			::haxe::ui::toolkit::style::Style tmp22 = this->_baseStyle;		HX_STACK_VAR(tmp22,"tmp22");
-			HX_STACK_LINE(293)
+			HX_STACK_LINE(311)
 			int tmp23 = tmp22->get_percentHeight();		HX_STACK_VAR(tmp23,"tmp23");
-			HX_STACK_LINE(293)
+			HX_STACK_LINE(311)
 			int tmp24 = (int)-1;		HX_STACK_VAR(tmp24,"tmp24");
-			HX_STACK_LINE(293)
+			HX_STACK_LINE(311)
 			bool tmp25 = (tmp23 != tmp24);		HX_STACK_VAR(tmp25,"tmp25");
-			HX_STACK_LINE(293)
+			HX_STACK_LINE(311)
 			bool tmp26;		HX_STACK_VAR(tmp26,"tmp26");
-			HX_STACK_LINE(293)
+			HX_STACK_LINE(311)
 			if ((tmp25)){
-				HX_STACK_LINE(293)
+				HX_STACK_LINE(311)
 				Float tmp27 = this->get_percentHeight();		HX_STACK_VAR(tmp27,"tmp27");
-				HX_STACK_LINE(293)
+				HX_STACK_LINE(311)
 				Float tmp28 = tmp27;		HX_STACK_VAR(tmp28,"tmp28");
-				HX_STACK_LINE(293)
+				HX_STACK_LINE(311)
 				tmp26 = (tmp28 == (int)-1);
 			}
 			else{
-				HX_STACK_LINE(293)
+				HX_STACK_LINE(311)
 				tmp26 = false;
 			}
-			HX_STACK_LINE(293)
+			HX_STACK_LINE(311)
 			if ((tmp26)){
-				HX_STACK_LINE(294)
+				HX_STACK_LINE(312)
 				::haxe::ui::toolkit::style::Style tmp27 = this->_baseStyle;		HX_STACK_VAR(tmp27,"tmp27");
-				HX_STACK_LINE(294)
+				HX_STACK_LINE(312)
 				int tmp28 = tmp27->get_percentHeight();		HX_STACK_VAR(tmp28,"tmp28");
-				HX_STACK_LINE(294)
+				HX_STACK_LINE(312)
 				this->set_percentHeight(tmp28);
 			}
-			HX_STACK_LINE(296)
+			HX_STACK_LINE(314)
 			::haxe::ui::toolkit::style::Style tmp27 = this->_baseStyle;		HX_STACK_VAR(tmp27,"tmp27");
-			HX_STACK_LINE(296)
+			HX_STACK_LINE(314)
 			bool tmp28 = tmp27->get_autoSizeSet();		HX_STACK_VAR(tmp28,"tmp28");
-			HX_STACK_LINE(296)
+			HX_STACK_LINE(314)
 			if ((tmp28)){
-				HX_STACK_LINE(297)
+				HX_STACK_LINE(315)
 				::haxe::ui::toolkit::style::Style tmp29 = this->_baseStyle;		HX_STACK_VAR(tmp29,"tmp29");
-				HX_STACK_LINE(297)
+				HX_STACK_LINE(315)
 				bool tmp30 = tmp29->get_autoSize();		HX_STACK_VAR(tmp30,"tmp30");
-				HX_STACK_LINE(297)
+				HX_STACK_LINE(315)
 				this->set_autoSize(tmp30);
 			}
-			HX_STACK_LINE(301)
+			HX_STACK_LINE(319)
 			::haxe::ui::toolkit::core::interfaces::ILayout tmp29 = this->get_layout();		HX_STACK_VAR(tmp29,"tmp29");
-			HX_STACK_LINE(301)
+			HX_STACK_LINE(319)
 			bool tmp30 = (tmp29 != null());		HX_STACK_VAR(tmp30,"tmp30");
-			HX_STACK_LINE(301)
+			HX_STACK_LINE(319)
 			if ((tmp30)){
-				HX_STACK_LINE(302)
+				HX_STACK_LINE(320)
 				::haxe::ui::toolkit::style::Style tmp31 = this->_baseStyle;		HX_STACK_VAR(tmp31,"tmp31");
-				HX_STACK_LINE(302)
+				HX_STACK_LINE(320)
 				int tmp32 = tmp31->get_paddingLeft();		HX_STACK_VAR(tmp32,"tmp32");
-				HX_STACK_LINE(302)
+				HX_STACK_LINE(320)
 				bool tmp33 = (tmp32 != (int)-1);		HX_STACK_VAR(tmp33,"tmp33");
-				HX_STACK_LINE(302)
+				HX_STACK_LINE(320)
 				if ((tmp33)){
-					HX_STACK_LINE(303)
+					HX_STACK_LINE(321)
 					::haxe::ui::toolkit::core::interfaces::ILayout tmp34 = this->get_layout();		HX_STACK_VAR(tmp34,"tmp34");
-					HX_STACK_LINE(303)
+					HX_STACK_LINE(321)
 					::openfl::_legacy::geom::Rectangle tmp35 = tmp34->get_padding();		HX_STACK_VAR(tmp35,"tmp35");
-					HX_STACK_LINE(303)
+					HX_STACK_LINE(321)
 					::haxe::ui::toolkit::style::Style tmp36 = this->_baseStyle;		HX_STACK_VAR(tmp36,"tmp36");
-					HX_STACK_LINE(303)
+					HX_STACK_LINE(321)
 					int tmp37 = tmp36->get_paddingLeft();		HX_STACK_VAR(tmp37,"tmp37");
-					HX_STACK_LINE(303)
+					HX_STACK_LINE(321)
 					tmp35->set_left(tmp37);
 				}
-				HX_STACK_LINE(305)
+				HX_STACK_LINE(323)
 				::haxe::ui::toolkit::style::Style tmp34 = this->_baseStyle;		HX_STACK_VAR(tmp34,"tmp34");
-				HX_STACK_LINE(305)
+				HX_STACK_LINE(323)
 				int tmp35 = tmp34->get_paddingTop();		HX_STACK_VAR(tmp35,"tmp35");
-				HX_STACK_LINE(305)
+				HX_STACK_LINE(323)
 				bool tmp36 = (tmp35 != (int)-1);		HX_STACK_VAR(tmp36,"tmp36");
-				HX_STACK_LINE(305)
+				HX_STACK_LINE(323)
 				if ((tmp36)){
-					HX_STACK_LINE(306)
+					HX_STACK_LINE(324)
 					::haxe::ui::toolkit::core::interfaces::ILayout tmp37 = this->get_layout();		HX_STACK_VAR(tmp37,"tmp37");
-					HX_STACK_LINE(306)
+					HX_STACK_LINE(324)
 					::openfl::_legacy::geom::Rectangle tmp38 = tmp37->get_padding();		HX_STACK_VAR(tmp38,"tmp38");
-					HX_STACK_LINE(306)
+					HX_STACK_LINE(324)
 					::haxe::ui::toolkit::style::Style tmp39 = this->_baseStyle;		HX_STACK_VAR(tmp39,"tmp39");
-					HX_STACK_LINE(306)
+					HX_STACK_LINE(324)
 					int tmp40 = tmp39->get_paddingTop();		HX_STACK_VAR(tmp40,"tmp40");
-					HX_STACK_LINE(306)
+					HX_STACK_LINE(324)
 					tmp38->set_top(tmp40);
 				}
-				HX_STACK_LINE(308)
+				HX_STACK_LINE(326)
 				::haxe::ui::toolkit::style::Style tmp37 = this->_baseStyle;		HX_STACK_VAR(tmp37,"tmp37");
-				HX_STACK_LINE(308)
+				HX_STACK_LINE(326)
 				int tmp38 = tmp37->get_paddingRight();		HX_STACK_VAR(tmp38,"tmp38");
-				HX_STACK_LINE(308)
+				HX_STACK_LINE(326)
 				bool tmp39 = (tmp38 != (int)-1);		HX_STACK_VAR(tmp39,"tmp39");
-				HX_STACK_LINE(308)
+				HX_STACK_LINE(326)
 				if ((tmp39)){
-					HX_STACK_LINE(309)
+					HX_STACK_LINE(327)
 					::haxe::ui::toolkit::core::interfaces::ILayout tmp40 = this->get_layout();		HX_STACK_VAR(tmp40,"tmp40");
-					HX_STACK_LINE(309)
+					HX_STACK_LINE(327)
 					::openfl::_legacy::geom::Rectangle tmp41 = tmp40->get_padding();		HX_STACK_VAR(tmp41,"tmp41");
-					HX_STACK_LINE(309)
+					HX_STACK_LINE(327)
 					::haxe::ui::toolkit::style::Style tmp42 = this->_baseStyle;		HX_STACK_VAR(tmp42,"tmp42");
-					HX_STACK_LINE(309)
+					HX_STACK_LINE(327)
 					int tmp43 = tmp42->get_paddingRight();		HX_STACK_VAR(tmp43,"tmp43");
-					HX_STACK_LINE(309)
+					HX_STACK_LINE(327)
 					tmp41->set_right(tmp43);
 				}
-				HX_STACK_LINE(311)
+				HX_STACK_LINE(329)
 				::haxe::ui::toolkit::style::Style tmp40 = this->_baseStyle;		HX_STACK_VAR(tmp40,"tmp40");
-				HX_STACK_LINE(311)
+				HX_STACK_LINE(329)
 				int tmp41 = tmp40->get_paddingBottom();		HX_STACK_VAR(tmp41,"tmp41");
-				HX_STACK_LINE(311)
+				HX_STACK_LINE(329)
 				bool tmp42 = (tmp41 != (int)-1);		HX_STACK_VAR(tmp42,"tmp42");
-				HX_STACK_LINE(311)
+				HX_STACK_LINE(329)
 				if ((tmp42)){
-					HX_STACK_LINE(312)
+					HX_STACK_LINE(330)
 					::haxe::ui::toolkit::core::interfaces::ILayout tmp43 = this->get_layout();		HX_STACK_VAR(tmp43,"tmp43");
-					HX_STACK_LINE(312)
+					HX_STACK_LINE(330)
 					::openfl::_legacy::geom::Rectangle tmp44 = tmp43->get_padding();		HX_STACK_VAR(tmp44,"tmp44");
-					HX_STACK_LINE(312)
+					HX_STACK_LINE(330)
 					::haxe::ui::toolkit::style::Style tmp45 = this->_baseStyle;		HX_STACK_VAR(tmp45,"tmp45");
-					HX_STACK_LINE(312)
+					HX_STACK_LINE(330)
 					int tmp46 = tmp45->get_paddingBottom();		HX_STACK_VAR(tmp46,"tmp46");
-					HX_STACK_LINE(312)
+					HX_STACK_LINE(330)
 					tmp44->set_bottom(tmp46);
 				}
-				HX_STACK_LINE(314)
+				HX_STACK_LINE(332)
 				::haxe::ui::toolkit::style::Style tmp43 = this->_baseStyle;		HX_STACK_VAR(tmp43,"tmp43");
-				HX_STACK_LINE(314)
+				HX_STACK_LINE(332)
 				int tmp44 = tmp43->get_spacingX();		HX_STACK_VAR(tmp44,"tmp44");
-				HX_STACK_LINE(314)
+				HX_STACK_LINE(332)
 				bool tmp45 = (tmp44 != (int)-1);		HX_STACK_VAR(tmp45,"tmp45");
-				HX_STACK_LINE(314)
+				HX_STACK_LINE(332)
 				if ((tmp45)){
-					HX_STACK_LINE(315)
+					HX_STACK_LINE(333)
 					::haxe::ui::toolkit::core::interfaces::ILayout tmp46 = this->_layout;		HX_STACK_VAR(tmp46,"tmp46");
-					HX_STACK_LINE(315)
+					HX_STACK_LINE(333)
 					::haxe::ui::toolkit::style::Style tmp47 = this->_baseStyle;		HX_STACK_VAR(tmp47,"tmp47");
-					HX_STACK_LINE(315)
+					HX_STACK_LINE(333)
 					int tmp48 = tmp47->get_spacingX();		HX_STACK_VAR(tmp48,"tmp48");
-					HX_STACK_LINE(315)
+					HX_STACK_LINE(333)
 					tmp46->set_spacingX(tmp48);
 				}
-				HX_STACK_LINE(317)
+				HX_STACK_LINE(335)
 				::haxe::ui::toolkit::style::Style tmp46 = this->_baseStyle;		HX_STACK_VAR(tmp46,"tmp46");
-				HX_STACK_LINE(317)
+				HX_STACK_LINE(335)
 				int tmp47 = tmp46->get_spacingY();		HX_STACK_VAR(tmp47,"tmp47");
-				HX_STACK_LINE(317)
+				HX_STACK_LINE(335)
 				bool tmp48 = (tmp47 != (int)-1);		HX_STACK_VAR(tmp48,"tmp48");
-				HX_STACK_LINE(317)
+				HX_STACK_LINE(335)
 				if ((tmp48)){
-					HX_STACK_LINE(318)
+					HX_STACK_LINE(336)
 					::haxe::ui::toolkit::core::interfaces::ILayout tmp49 = this->_layout;		HX_STACK_VAR(tmp49,"tmp49");
-					HX_STACK_LINE(318)
+					HX_STACK_LINE(336)
 					::haxe::ui::toolkit::style::Style tmp50 = this->_baseStyle;		HX_STACK_VAR(tmp50,"tmp50");
-					HX_STACK_LINE(318)
+					HX_STACK_LINE(336)
 					int tmp51 = tmp50->get_spacingY();		HX_STACK_VAR(tmp51,"tmp51");
-					HX_STACK_LINE(318)
+					HX_STACK_LINE(336)
 					tmp49->set_spacingY(tmp51);
 				}
 			}
 		}
-		HX_STACK_LINE(323)
+		HX_STACK_LINE(341)
 		this->applyStyle();
 	}
 return null();
@@ -1472,6 +1602,9 @@ Dynamic StyleableDisplayObject_obj::__Field(const ::String &inName,hx::PropertyA
 		if (HX_FIELD_EQ(inName,"set_styleName") ) { return set_styleName_dyn(); }
 		if (HX_FIELD_EQ(inName,"retrieveStyle") ) { return retrieveStyle_dyn(); }
 		break;
+	case 14:
+		if (HX_FIELD_EQ(inName,"reapplyFilters") ) { return reapplyFilters_dyn(); }
+		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"_lazyLoadStyles") ) { return _lazyLoadStyles; }
 		if (HX_FIELD_EQ(inName,"get_styleString") ) { return get_styleString_dyn(); }
@@ -1566,6 +1699,7 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("storeStyle","\x90","\x51","\x9c","\xc1"),
 	HX_HCSTRING("retrieveStyle","\x15","\x79","\x56","\xc0"),
 	HX_HCSTRING("applyStyle","\xe3","\x20","\x6f","\x2f"),
+	HX_HCSTRING("reapplyFilters","\x20","\x92","\xd4","\x7e"),
 	HX_HCSTRING("buildStyles","\xf0","\xcb","\x43","\x66"),
 	HX_HCSTRING("clearStyles","\x8f","\xf3","\xbf","\xa9"),
 	HX_HCSTRING("refreshStyle","\x56","\xa1","\x9f","\x97"),

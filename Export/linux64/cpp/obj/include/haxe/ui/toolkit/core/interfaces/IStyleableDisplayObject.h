@@ -91,7 +91,7 @@ class IStyleableDisplayObject_delegate_ : public IStyleableDisplayObject_obj
 		DELEGATE_haxe_ui_toolkit_core_interfaces_IStyleableDisplayObject
 		DELEGATE_haxe_ui_toolkit_core_interfaces_IDisplayObjectContainer
 		DELEGATE_haxe_ui_toolkit_core_interfaces_IDisplayObject
-		DELEGATE_haxe_ui_toolkit_core_interfaces_IClonable
+		DELEGATE_haxe_ui_toolkit_core_interfaces_IEventDispatcher
 };
 
 } // end namespace haxe

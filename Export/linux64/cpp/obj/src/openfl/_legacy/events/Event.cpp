@@ -9,9 +9,6 @@
 #ifndef INCLUDED_openfl__legacy_events_Event
 #include <openfl/_legacy/events/Event.h>
 #endif
-#ifndef INCLUDED_openfl_events_EventPhase
-#include <openfl/events/EventPhase.h>
-#endif
 namespace openfl{
 namespace _legacy{
 namespace events{
@@ -41,7 +38,7 @@ bool cancelable = __o_cancelable.Default(false);
 	HX_STACK_LINE(64)
 	this->__currentTarget = null();
 	HX_STACK_LINE(65)
-	this->__eventPhase = ::openfl::events::EventPhase_obj::AT_TARGET;
+	this->__eventPhase = (int)2;
 }
 ;
 	return null();
@@ -283,7 +280,7 @@ bool Event_obj::__getIsCancelledNow( ){
 
 HX_DEFINE_DYNAMIC_FUNC0(Event_obj,__getIsCancelledNow,return )
 
-Void Event_obj::__setPhase( ::openfl::events::EventPhase value){
+Void Event_obj::__setPhase( int value){
 {
 		HX_STACK_FRAME("openfl._legacy.events.Event","__setPhase",0xec9075de,"openfl._legacy.events.Event.__setPhase","openfl/_legacy/events/Event.hx",159,0xcca9b1d4)
 		HX_STACK_THIS(this)
@@ -346,11 +343,11 @@ Dynamic Event_obj::set_currentTarget( Dynamic value){
 
 HX_DEFINE_DYNAMIC_FUNC1(Event_obj,set_currentTarget,return )
 
-::openfl::events::EventPhase Event_obj::get_eventPhase( ){
+int Event_obj::get_eventPhase( ){
 	HX_STACK_FRAME("openfl._legacy.events.Event","get_eventPhase",0x2e4bd20f,"openfl._legacy.events.Event.get_eventPhase","openfl/_legacy/events/Event.hx",175,0xcca9b1d4)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(175)
-	::openfl::events::EventPhase tmp = this->__eventPhase;		HX_STACK_VAR(tmp,"tmp");
+	int tmp = this->__eventPhase;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(175)
 	return tmp;
 }
@@ -620,7 +617,7 @@ Dynamic Event_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"__cancelable") ) { __cancelable=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"__eventPhase") ) { __eventPhase=inValue.Cast< ::openfl::events::EventPhase >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__eventPhase") ) { __eventPhase=inValue.Cast< int >(); return inValue; }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"currentTarget") ) { if (inCallProp == hx::paccAlways) return set_currentTarget(inValue); }
@@ -715,7 +712,7 @@ static hx::StorageInfo sMemberStorageInfo[] = {
 	{hx::fsBool,(int)offsetof(Event_obj,__bubbles),HX_HCSTRING("__bubbles","\x47","\x0c","\xa5","\xe2")},
 	{hx::fsBool,(int)offsetof(Event_obj,__cancelable),HX_HCSTRING("__cancelable","\x34","\x1b","\x0d","\xfd")},
 	{hx::fsObject /*Dynamic*/ ,(int)offsetof(Event_obj,__currentTarget),HX_HCSTRING("__currentTarget","\x4a","\xad","\xfb","\xf1")},
-	{hx::fsObject /*::openfl::events::EventPhase*/ ,(int)offsetof(Event_obj,__eventPhase),HX_HCSTRING("__eventPhase","\xe1","\xac","\xd7","\x76")},
+	{hx::fsInt,(int)offsetof(Event_obj,__eventPhase),HX_HCSTRING("__eventPhase","\xe1","\xac","\xd7","\x76")},
 	{hx::fsBool,(int)offsetof(Event_obj,__isCancelled),HX_HCSTRING("__isCancelled","\x27","\x7e","\x2d","\x49")},
 	{hx::fsBool,(int)offsetof(Event_obj,__isCancelledNow),HX_HCSTRING("__isCancelledNow","\x2f","\x25","\xd8","\x53")},
 	{hx::fsObject /*Dynamic*/ ,(int)offsetof(Event_obj,__target),HX_HCSTRING("__target","\x71","\x5e","\x1c","\x2f")},

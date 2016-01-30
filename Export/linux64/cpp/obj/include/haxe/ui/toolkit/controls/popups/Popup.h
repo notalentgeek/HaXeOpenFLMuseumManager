@@ -90,6 +90,9 @@ class HXCPP_CLASS_ATTRIBUTES  Popup_obj : public ::haxe::ui::toolkit::containers
 		virtual Dynamic get_config( );
 		Dynamic get_config_dyn();
 
+		virtual ::haxe::ui::toolkit::controls::popups::PopupContent GetContentObject( );
+		Dynamic GetContentObject_dyn();
+
 		virtual ::haxe::ui::toolkit::controls::Button createStandardButton( int v);
 		Dynamic createStandardButton_dyn();
 

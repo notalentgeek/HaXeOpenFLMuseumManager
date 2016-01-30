@@ -114,6 +114,9 @@ class HXCPP_CLASS_ATTRIBUTES  StyleableDisplayObject_obj : public ::haxe::ui::to
 		virtual Void applyStyle( );
 		Dynamic applyStyle_dyn();
 
+		virtual Void reapplyFilters( );
+		Dynamic reapplyFilters_dyn();
+
 		virtual Void buildStyles( );
 		Dynamic buildStyles_dyn();
 

@@ -55,10 +55,10 @@ namespace containers{
 
 Void AccordionButton_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ui.toolkit.containers.AccordionButton","new",0x45354852,"haxe.ui.toolkit.containers.AccordionButton.new","haxe/ui/toolkit/containers/Accordion.hx",223,0x8ce13fb0)
+HX_STACK_FRAME("haxe.ui.toolkit.containers.AccordionButton","new",0x45354852,"haxe.ui.toolkit.containers.AccordionButton.new","haxe/ui/toolkit/containers/Accordion.hx",224,0x8ce13fb0)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(223)
+	HX_STACK_LINE(224)
 	super::__construct();
 }
 ;

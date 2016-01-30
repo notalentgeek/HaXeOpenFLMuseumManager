@@ -28,11 +28,17 @@
 #ifndef INCLUDED_openfl__legacy_display_CapsStyle
 #include <openfl/_legacy/display/CapsStyle.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_display_GradientType
+#include <openfl/_legacy/display/GradientType.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_display_Graphics
 #include <openfl/_legacy/display/Graphics.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_display_IBitmapDrawable
 #include <openfl/_legacy/display/IBitmapDrawable.h>
+#endif
+#ifndef INCLUDED_openfl__legacy_display_InterpolationMethod
+#include <openfl/_legacy/display/InterpolationMethod.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_display_JointStyle
 #include <openfl/_legacy/display/JointStyle.h>
@@ -51,12 +57,6 @@
 #endif
 #ifndef INCLUDED_openfl__legacy_geom_Rectangle
 #include <openfl/_legacy/geom/Rectangle.h>
-#endif
-#ifndef INCLUDED_openfl_display_GradientType
-#include <openfl/display/GradientType.h>
-#endif
-#ifndef INCLUDED_openfl_display_InterpolationMethod
-#include <openfl/display/InterpolationMethod.h>
 #endif
 namespace haxe{
 namespace ui{
@@ -316,7 +316,7 @@ Void StyleHelper_obj::paintStyle( ::openfl::_legacy::display::Graphics g,::haxe:
 					HX_STACK_LINE(86)
 					::openfl::_legacy::geom::Matrix tmp29 = matrix;		HX_STACK_VAR(tmp29,"tmp29");
 					HX_STACK_LINE(82)
-					g->beginGradientFill(::openfl::display::GradientType_obj::LINEAR,colors,alphas,ratios,tmp29,::openfl::_legacy::display::SpreadMethod_obj::PAD,::openfl::display::InterpolationMethod_obj::LINEAR_RGB,(int)0);
+					g->beginGradientFill(::openfl::_legacy::display::GradientType_obj::LINEAR,colors,alphas,ratios,tmp29,::openfl::_legacy::display::SpreadMethod_obj::PAD,::openfl::_legacy::display::InterpolationMethod_obj::LINEAR_RGB,(int)0);
 				}
 				else{
 					HX_STACK_LINE(94)

@@ -33,6 +33,10 @@ Dynamic TextFormatAlign_obj::__Create(hx::DynamicArray inArgs)
 
 ::String TextFormatAlign_obj::JUSTIFY;
 
+::String TextFormatAlign_obj::START;
+
+::String TextFormatAlign_obj::END;
+
 
 TextFormatAlign_obj::TextFormatAlign_obj()
 {
@@ -45,6 +49,8 @@ static hx::StaticInfo sStaticStorageInfo[] = {
 	{hx::fsString,(void *) &TextFormatAlign_obj::RIGHT,HX_HCSTRING("RIGHT","\xbc","\x43","\x52","\x67")},
 	{hx::fsString,(void *) &TextFormatAlign_obj::CENTER,HX_HCSTRING("CENTER","\xd5","\xd1","\x5d","\xb8")},
 	{hx::fsString,(void *) &TextFormatAlign_obj::JUSTIFY,HX_HCSTRING("JUSTIFY","\x30","\xb3","\x89","\x03")},
+	{hx::fsString,(void *) &TextFormatAlign_obj::START,HX_HCSTRING("START","\x42","\xac","\xf9","\x01")},
+	{hx::fsString,(void *) &TextFormatAlign_obj::END,HX_HCSTRING("END","\xbb","\x9f","\x34","\x00")},
 	{ hx::fsUnknown, 0, null()}
 };
 #endif
@@ -55,6 +61,8 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(TextFormatAlign_obj::RIGHT,"RIGHT");
 	HX_MARK_MEMBER_NAME(TextFormatAlign_obj::CENTER,"CENTER");
 	HX_MARK_MEMBER_NAME(TextFormatAlign_obj::JUSTIFY,"JUSTIFY");
+	HX_MARK_MEMBER_NAME(TextFormatAlign_obj::START,"START");
+	HX_MARK_MEMBER_NAME(TextFormatAlign_obj::END,"END");
 };
 
 #ifdef HXCPP_VISIT_ALLOCS
@@ -64,6 +72,8 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(TextFormatAlign_obj::RIGHT,"RIGHT");
 	HX_VISIT_MEMBER_NAME(TextFormatAlign_obj::CENTER,"CENTER");
 	HX_VISIT_MEMBER_NAME(TextFormatAlign_obj::JUSTIFY,"JUSTIFY");
+	HX_VISIT_MEMBER_NAME(TextFormatAlign_obj::START,"START");
+	HX_VISIT_MEMBER_NAME(TextFormatAlign_obj::END,"END");
 };
 
 #endif
@@ -75,6 +85,8 @@ static ::String sStaticFields[] = {
 	HX_HCSTRING("RIGHT","\xbc","\x43","\x52","\x67"),
 	HX_HCSTRING("CENTER","\xd5","\xd1","\x5d","\xb8"),
 	HX_HCSTRING("JUSTIFY","\x30","\xb3","\x89","\x03"),
+	HX_HCSTRING("START","\x42","\xac","\xf9","\x01"),
+	HX_HCSTRING("END","\xbb","\x9f","\x34","\x00"),
 	::String(null()) };
 
 void TextFormatAlign_obj::__register()
@@ -108,6 +120,8 @@ void TextFormatAlign_obj::__boot()
 	RIGHT= HX_HCSTRING("right","\xdc","\x0b","\x64","\xe9");
 	CENTER= HX_HCSTRING("center","\xd5","\x25","\xdb","\x05");
 	JUSTIFY= HX_HCSTRING("justify","\x50","\xdf","\xb5","\x83");
+	START= HX_HCSTRING("left","\x07","\x08","\xb0","\x47");
+	END= HX_HCSTRING("right","\xdc","\x0b","\x64","\xe9");
 }
 
 } // end namespace openfl

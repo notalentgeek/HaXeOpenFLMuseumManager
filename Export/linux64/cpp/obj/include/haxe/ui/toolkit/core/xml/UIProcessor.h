@@ -9,7 +9,6 @@
 #include <haxe/ui/toolkit/core/xml/XMLProcessor.h>
 #endif
 HX_DECLARE_CLASS0(Xml)
-HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IClonable)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDisplayObject)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IEventDispatcher)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,core,xml,IXMLProcessor)

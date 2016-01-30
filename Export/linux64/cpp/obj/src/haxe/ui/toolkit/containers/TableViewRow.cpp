@@ -194,7 +194,6 @@ hx::Object *TableViewRow_obj::__ToInterface(const hx::type_info &inType) {
 	if (inType==typeid( ::haxe::ui::toolkit::core::interfaces::IStyleableDisplayObject_obj)) return operator ::haxe::ui::toolkit::core::interfaces::IStyleableDisplayObject_obj *();
 	if (inType==typeid( ::haxe::ui::toolkit::core::interfaces::IComponent_obj)) return operator ::haxe::ui::toolkit::core::interfaces::IComponent_obj *();
 	if (inType==typeid( ::haxe::ui::toolkit::core::interfaces::IEventDispatcher_obj)) return operator ::haxe::ui::toolkit::core::interfaces::IEventDispatcher_obj *();
-	if (inType==typeid( ::haxe::ui::toolkit::core::interfaces::IClonable_obj)) return operator ::haxe::ui::toolkit::core::interfaces::IClonable_obj *();
 	if (inType==typeid( ::haxe::ui::toolkit::core::interfaces::IStateComponent_obj)) return operator ::haxe::ui::toolkit::core::interfaces::IStateComponent_obj *();
 	if (inType==typeid( ::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer_obj)) return operator ::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer_obj *();
 	return super::__ToInterface(inType);
@@ -208,8 +207,6 @@ TableViewRow_obj::operator ::haxe::ui::toolkit::core::interfaces::IComponent_obj
 	{ return new ::haxe::ui::toolkit::core::interfaces::IComponent_delegate_< TableViewRow_obj >(this); }
 TableViewRow_obj::operator ::haxe::ui::toolkit::core::interfaces::IEventDispatcher_obj *()
 	{ return new ::haxe::ui::toolkit::core::interfaces::IEventDispatcher_delegate_< TableViewRow_obj >(this); }
-TableViewRow_obj::operator ::haxe::ui::toolkit::core::interfaces::IClonable_obj *()
-	{ return new ::haxe::ui::toolkit::core::interfaces::IClonable_delegate_< TableViewRow_obj >(this); }
 TableViewRow_obj::operator ::haxe::ui::toolkit::core::interfaces::IStateComponent_obj *()
 	{ return new ::haxe::ui::toolkit::core::interfaces::IStateComponent_delegate_< TableViewRow_obj >(this); }
 TableViewRow_obj::operator ::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer_obj *()

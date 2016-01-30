@@ -54,9 +54,6 @@
 #ifndef INCLUDED_openfl_events_UncaughtErrorEvents
 #include <openfl/events/UncaughtErrorEvents.h>
 #endif
-#ifndef INCLUDED_openfl_net_URLLoaderDataFormat
-#include <openfl/net/URLLoaderDataFormat.h>
-#endif
 #ifndef INCLUDED_openfl_system_ApplicationDomain
 #include <openfl/system/ApplicationDomain.h>
 #endif
@@ -80,7 +77,7 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(43)
 	this->frameRate = (int)0;
 	HX_STACK_LINE(44)
-	this->dataFormat = ::openfl::net::URLLoaderDataFormat_obj::BINARY;
+	this->dataFormat = ((Dynamic)((int)0));
 	HX_STACK_LINE(45)
 	this->loaderURL = null();
 }

@@ -128,15 +128,6 @@ Dynamic UncaughtErrorEvent_obj::__Field(const ::String &inName,hx::PropertyAcces
 	return super::__Field(inName,inCallProp);
 }
 
-bool UncaughtErrorEvent_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
-{
-	switch(inName.length) {
-	case 14:
-		if (HX_FIELD_EQ(inName,"UNCAUGHT_ERROR") ) { outValue = UNCAUGHT_ERROR; return true;  }
-	}
-	return false;
-}
-
 Dynamic UncaughtErrorEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
@@ -148,10 +139,6 @@ Dynamic UncaughtErrorEvent_obj::__SetField(const ::String &inName,const Dynamic 
 
 bool UncaughtErrorEvent_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
 {
-	switch(inName.length) {
-	case 14:
-		if (HX_FIELD_EQ(inName,"UNCAUGHT_ERROR") ) { UNCAUGHT_ERROR=ioValue.Cast< ::String >(); return true; }
-	}
 	return false;
 }
 
@@ -204,7 +191,7 @@ void UncaughtErrorEvent_obj::__register()
 	__mClass->mSuper = &super::__SGetClass();
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
-	__mClass->mGetStaticField = &UncaughtErrorEvent_obj::__GetStatic;
+	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
 	__mClass->mSetStaticField = &UncaughtErrorEvent_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);

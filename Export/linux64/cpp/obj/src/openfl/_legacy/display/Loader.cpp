@@ -27,6 +27,9 @@
 #ifndef INCLUDED_openfl__legacy_display_LoaderInfo
 #include <openfl/_legacy/display/LoaderInfo.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_display_PixelSnapping
+#include <openfl/_legacy/display/PixelSnapping.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_display_Sprite
 #include <openfl/_legacy/display/Sprite.h>
 #endif
@@ -56,9 +59,6 @@
 #endif
 #ifndef INCLUDED_openfl__legacy_utils_IMemoryRange
 #include <openfl/_legacy/utils/IMemoryRange.h>
-#endif
-#ifndef INCLUDED_openfl_display_PixelSnapping
-#include <openfl/display/PixelSnapping.h>
 #endif
 #ifndef INCLUDED_openfl_system_LoaderContext
 #include <openfl/system/LoaderContext.h>

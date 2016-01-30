@@ -236,25 +236,19 @@ Void Timer_obj::timer_onTimer( ){
 			HX_STACK_LINE(122)
 			this->stop();
 			HX_STACK_LINE(123)
-			::String tmp3 = ::openfl::events::TimerEvent_obj::TIMER;		HX_STACK_VAR(tmp3,"tmp3");
+			::openfl::events::TimerEvent tmp3 = ::openfl::events::TimerEvent_obj::__new(HX_HCSTRING("timer","\xc5","\xbf","\x35","\x10"),null(),null());		HX_STACK_VAR(tmp3,"tmp3");
 			HX_STACK_LINE(123)
-			::openfl::events::TimerEvent tmp4 = ::openfl::events::TimerEvent_obj::__new(tmp3,null(),null());		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(123)
+			this->dispatchEvent(tmp3);
+			HX_STACK_LINE(124)
+			::openfl::events::TimerEvent tmp4 = ::openfl::events::TimerEvent_obj::__new(HX_HCSTRING("timerComplete","\x9e","\x49","\xcc","\x97"),null(),null());		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(124)
 			this->dispatchEvent(tmp4);
-			HX_STACK_LINE(124)
-			::String tmp5 = ::openfl::events::TimerEvent_obj::TIMER_COMPLETE;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(124)
-			::openfl::events::TimerEvent tmp6 = ::openfl::events::TimerEvent_obj::__new(tmp5,null(),null());		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(124)
-			this->dispatchEvent(tmp6);
 		}
 		else{
 			HX_STACK_LINE(128)
-			::String tmp3 = ::openfl::events::TimerEvent_obj::TIMER;		HX_STACK_VAR(tmp3,"tmp3");
+			::openfl::events::TimerEvent tmp3 = ::openfl::events::TimerEvent_obj::__new(HX_HCSTRING("timer","\xc5","\xbf","\x35","\x10"),null(),null());		HX_STACK_VAR(tmp3,"tmp3");
 			HX_STACK_LINE(128)
-			::openfl::events::TimerEvent tmp4 = ::openfl::events::TimerEvent_obj::__new(tmp3,null(),null());		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(128)
-			this->dispatchEvent(tmp4);
+			this->dispatchEvent(tmp3);
 		}
 	}
 return null();

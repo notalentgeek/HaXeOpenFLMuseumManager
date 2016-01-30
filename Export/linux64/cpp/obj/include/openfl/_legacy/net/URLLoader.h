@@ -13,7 +13,6 @@ HX_DECLARE_CLASS3(openfl,_legacy,events,EventDispatcher)
 HX_DECLARE_CLASS3(openfl,_legacy,events,IEventDispatcher)
 HX_DECLARE_CLASS3(openfl,_legacy,net,URLLoader)
 HX_DECLARE_CLASS3(openfl,_legacy,net,URLRequest)
-HX_DECLARE_CLASS2(openfl,net,URLLoaderDataFormat)
 namespace openfl{
 namespace _legacy{
 namespace net{
@@ -49,7 +48,7 @@ class HXCPP_CLASS_ATTRIBUTES  URLLoader_obj : public ::openfl::_legacy::events::
 		int bytesLoaded;
 		int bytesTotal;
 		Dynamic data;
-		::openfl::net::URLLoaderDataFormat dataFormat;
+		Dynamic dataFormat;
 		int state;
 		Dynamic __handle;
 		Dynamic __onComplete;

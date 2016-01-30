@@ -21,6 +21,9 @@
 #ifndef INCLUDED_openfl__legacy_display_IBitmapDrawable
 #include <openfl/_legacy/display/IBitmapDrawable.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_display_PixelSnapping
+#include <openfl/_legacy/display/PixelSnapping.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_events_EventDispatcher
 #include <openfl/_legacy/events/EventDispatcher.h>
 #endif
@@ -30,14 +33,11 @@
 #ifndef INCLUDED_openfl__legacy_geom_Matrix
 #include <openfl/_legacy/geom/Matrix.h>
 #endif
-#ifndef INCLUDED_openfl_display_PixelSnapping
-#include <openfl/display/PixelSnapping.h>
-#endif
 namespace openfl{
 namespace _legacy{
 namespace display{
 
-Void Bitmap_obj::__construct(::openfl::_legacy::display::BitmapData bitmapData,::openfl::display::PixelSnapping pixelSnapping,hx::Null< bool >  __o_smoothing)
+Void Bitmap_obj::__construct(::openfl::_legacy::display::BitmapData bitmapData,::openfl::_legacy::display::PixelSnapping pixelSnapping,hx::Null< bool >  __o_smoothing)
 {
 HX_STACK_FRAME("openfl._legacy.display.Bitmap","new",0x890ca811,"openfl._legacy.display.Bitmap.new","openfl/_legacy/display/Bitmap.hx",16,0x223e911c)
 HX_STACK_THIS(this)
@@ -53,11 +53,11 @@ bool smoothing = __o_smoothing.Default(false);
 	HX_STACK_LINE(20)
 	bool tmp1 = (pixelSnapping == null());		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(20)
-	::openfl::display::PixelSnapping tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+	::openfl::_legacy::display::PixelSnapping tmp2;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(20)
 	if ((tmp1)){
 		HX_STACK_LINE(20)
-		tmp2 = ::openfl::display::PixelSnapping_obj::AUTO;
+		tmp2 = ::openfl::_legacy::display::PixelSnapping_obj::AUTO;
 	}
 	else{
 		HX_STACK_LINE(20)
@@ -97,7 +97,7 @@ bool smoothing = __o_smoothing.Default(false);
 //Bitmap_obj::~Bitmap_obj() { }
 
 Dynamic Bitmap_obj::__CreateEmpty() { return  new Bitmap_obj; }
-hx::ObjectPtr< Bitmap_obj > Bitmap_obj::__new(::openfl::_legacy::display::BitmapData bitmapData,::openfl::display::PixelSnapping pixelSnapping,hx::Null< bool >  __o_smoothing)
+hx::ObjectPtr< Bitmap_obj > Bitmap_obj::__new(::openfl::_legacy::display::BitmapData bitmapData,::openfl::_legacy::display::PixelSnapping pixelSnapping,hx::Null< bool >  __o_smoothing)
 {  hx::ObjectPtr< Bitmap_obj > _result_ = new Bitmap_obj();
 	_result_->__construct(bitmapData,pixelSnapping,__o_smoothing);
 	return _result_;}
@@ -173,7 +173,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Bitmap_obj,__rebuild,(void))
 
 HX_DEFINE_DYNAMIC_FUNC1(Bitmap_obj,set_bitmapData,return )
 
-::openfl::display::PixelSnapping Bitmap_obj::get_pixelSnapping( ){
+::openfl::_legacy::display::PixelSnapping Bitmap_obj::get_pixelSnapping( ){
 	HX_STACK_FRAME("openfl._legacy.display.Bitmap","get_pixelSnapping",0x6eee452a,"openfl._legacy.display.Bitmap.get_pixelSnapping","openfl/_legacy/display/Bitmap.hx",73,0x223e911c)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(75)
@@ -185,7 +185,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Bitmap_obj,set_bitmapData,return )
 	HX_STACK_LINE(76)
 	int tmp2 = i;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(76)
-	::openfl::display::PixelSnapping tmp3 = ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::display::PixelSnapping >(),tmp2,null());		HX_STACK_VAR(tmp3,"tmp3");
+	::openfl::_legacy::display::PixelSnapping tmp3 = ::Type_obj::createEnumIndex(hx::ClassOf< ::openfl::_legacy::display::PixelSnapping >(),tmp2,null());		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(76)
 	return tmp3;
 }
@@ -193,7 +193,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Bitmap_obj,set_bitmapData,return )
 
 HX_DEFINE_DYNAMIC_FUNC0(Bitmap_obj,get_pixelSnapping,return )
 
-::openfl::display::PixelSnapping Bitmap_obj::set_pixelSnapping( ::openfl::display::PixelSnapping value){
+::openfl::_legacy::display::PixelSnapping Bitmap_obj::set_pixelSnapping( ::openfl::_legacy::display::PixelSnapping value){
 	HX_STACK_FRAME("openfl._legacy.display.Bitmap","set_pixelSnapping",0x925c1d36,"openfl._legacy.display.Bitmap.set_pixelSnapping","openfl/_legacy/display/Bitmap.hx",81,0x223e911c)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
@@ -213,7 +213,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Bitmap_obj,get_pixelSnapping,return )
 		::openfl::_legacy::display::Bitmap_obj::lime_display_object_set_pixel_snapping(tmp1,value->__Index());
 	}
 	HX_STACK_LINE(93)
-	::openfl::display::PixelSnapping tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
+	::openfl::_legacy::display::PixelSnapping tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(93)
 	return tmp1;
 }

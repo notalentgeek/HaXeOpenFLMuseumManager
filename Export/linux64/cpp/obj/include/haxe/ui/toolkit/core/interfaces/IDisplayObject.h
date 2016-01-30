@@ -5,9 +5,6 @@
 #include <hxcpp.h>
 #endif
 
-#ifndef INCLUDED_haxe_ui_toolkit_core_interfaces_IClonable
-#include <haxe/ui/toolkit/core/interfaces/IClonable.h>
-#endif
 #ifndef INCLUDED_haxe_ui_toolkit_core_interfaces_IEventDispatcher
 #include <haxe/ui/toolkit/core/interfaces/IEventDispatcher.h>
 #endif
@@ -37,9 +34,9 @@ namespace core{
 namespace interfaces{
 
 
-class HXCPP_CLASS_ATTRIBUTES  IDisplayObject_obj : public ::haxe::ui::toolkit::core::interfaces::IClonable_obj{
+class HXCPP_CLASS_ATTRIBUTES  IDisplayObject_obj : public ::haxe::ui::toolkit::core::interfaces::IEventDispatcher_obj{
 	public:
-		typedef ::haxe::ui::toolkit::core::interfaces::IClonable_obj super;
+		typedef ::haxe::ui::toolkit::core::interfaces::IEventDispatcher_obj super;
 		typedef IDisplayObject_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
 		virtual ::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer get_parent( )=0;
@@ -221,7 +218,7 @@ class IDisplayObject_delegate_ : public IDisplayObject_obj
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
 		DELEGATE_haxe_ui_toolkit_core_interfaces_IDisplayObject
-		DELEGATE_haxe_ui_toolkit_core_interfaces_IClonable
+		DELEGATE_haxe_ui_toolkit_core_interfaces_IEventDispatcher
 };
 
 } // end namespace haxe

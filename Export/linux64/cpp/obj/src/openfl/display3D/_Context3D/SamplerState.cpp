@@ -18,7 +18,7 @@ namespace _Context3D{
 
 Void SamplerState_obj::__construct()
 {
-HX_STACK_FRAME("openfl.display3D._Context3D.SamplerState","new",0xe10565af,"openfl.display3D._Context3D.SamplerState.new","openfl/display3D/Context3D.hx",1098,0xc899cbb9)
+HX_STACK_FRAME("openfl.display3D._Context3D.SamplerState","new",0xe10565af,"openfl.display3D._Context3D.SamplerState.new","openfl/display3D/Context3D.hx",1102,0xc899cbb9)
 HX_STACK_THIS(this)
 {
 }

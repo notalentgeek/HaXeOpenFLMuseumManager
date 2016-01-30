@@ -46,12 +46,14 @@ class HXCPP_CLASS_ATTRIBUTES  Texture_obj : public ::openfl::display3D::textures
 
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
+		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
 		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Texture","\xbb","\xf0","\x31","\x6c"); }
 
+		static void __boot();
 		bool optimizeForRenderToTexture;
 		bool mipmapsGenerated;
 		virtual Void uploadCompressedTextureFromByteArray( ::openfl::_legacy::utils::ByteArray data,int byteArrayOffset,hx::Null< bool >  async);
@@ -66,6 +68,7 @@ class HXCPP_CLASS_ATTRIBUTES  Texture_obj : public ::openfl::display3D::textures
 		virtual Void uploadFromUInt8Array( ::openfl::_legacy::utils::UInt8Array data,hx::Null< int >  miplevel);
 		Dynamic uploadFromUInt8Array_dyn();
 
+		static int internalFormat;
 };
 
 } // end namespace openfl

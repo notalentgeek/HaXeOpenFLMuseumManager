@@ -16,7 +16,10 @@ HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
 HX_DECLARE_CLASS3(openfl,_legacy,display,InteractiveObject)
 HX_DECLARE_CLASS3(openfl,_legacy,display,Sprite)
 HX_DECLARE_CLASS3(openfl,_legacy,display,Stage)
+HX_DECLARE_CLASS3(openfl,_legacy,display,StageAlign)
+HX_DECLARE_CLASS3(openfl,_legacy,display,StageDisplayState)
 HX_DECLARE_CLASS3(openfl,_legacy,display,StageQuality)
+HX_DECLARE_CLASS3(openfl,_legacy,display,StageScaleMode)
 HX_DECLARE_CLASS3(openfl,_legacy,display,TouchInfo)
 HX_DECLARE_CLASS3(openfl,_legacy,events,Event)
 HX_DECLARE_CLASS3(openfl,_legacy,events,EventDispatcher)
@@ -26,9 +29,6 @@ HX_DECLARE_CLASS3(openfl,_legacy,geom,Point)
 HX_DECLARE_CLASS3(openfl,_legacy,geom,Rectangle)
 HX_DECLARE_CLASS3(openfl,_legacy,_system,ScreenMode)
 HX_DECLARE_CLASS2(openfl,display,Stage3D)
-HX_DECLARE_CLASS2(openfl,display,StageAlign)
-HX_DECLARE_CLASS2(openfl,display,StageDisplayState)
-HX_DECLARE_CLASS2(openfl,display,StageScaleMode)
 namespace openfl{
 namespace _legacy{
 namespace display{
@@ -176,10 +176,10 @@ class HXCPP_CLASS_ATTRIBUTES  Stage_obj : public ::openfl::_legacy::display::Dis
 		virtual Float __updateNextWake( );
 		Dynamic __updateNextWake_dyn();
 
-		virtual ::openfl::display::StageAlign get_align( );
+		virtual ::openfl::_legacy::display::StageAlign get_align( );
 		Dynamic get_align_dyn();
 
-		virtual ::openfl::display::StageAlign set_align( ::openfl::display::StageAlign value);
+		virtual ::openfl::_legacy::display::StageAlign set_align( ::openfl::_legacy::display::StageAlign value);
 		Dynamic set_align_dyn();
 
 		virtual int get_color( );
@@ -188,10 +188,10 @@ class HXCPP_CLASS_ATTRIBUTES  Stage_obj : public ::openfl::_legacy::display::Dis
 		virtual int set_color( int value);
 		Dynamic set_color_dyn();
 
-		virtual ::openfl::display::StageDisplayState get_displayState( );
+		virtual ::openfl::_legacy::display::StageDisplayState get_displayState( );
 		Dynamic get_displayState_dyn();
 
-		virtual ::openfl::display::StageDisplayState set_displayState( ::openfl::display::StageDisplayState value);
+		virtual ::openfl::_legacy::display::StageDisplayState set_displayState( ::openfl::_legacy::display::StageDisplayState value);
 		Dynamic set_displayState_dyn();
 
 		virtual Float get_dpiScale( );
@@ -215,10 +215,10 @@ class HXCPP_CLASS_ATTRIBUTES  Stage_obj : public ::openfl::_legacy::display::Dis
 		virtual ::openfl::_legacy::display::StageQuality set_quality( ::openfl::_legacy::display::StageQuality value);
 		Dynamic set_quality_dyn();
 
-		virtual ::openfl::display::StageScaleMode get_scaleMode( );
+		virtual ::openfl::_legacy::display::StageScaleMode get_scaleMode( );
 		Dynamic get_scaleMode_dyn();
 
-		virtual ::openfl::display::StageScaleMode set_scaleMode( ::openfl::display::StageScaleMode value);
+		virtual ::openfl::_legacy::display::StageScaleMode set_scaleMode( ::openfl::_legacy::display::StageScaleMode value);
 		Dynamic set_scaleMode_dyn();
 
 		virtual ::openfl::_legacy::geom::Rectangle get_softKeyboardRect( );

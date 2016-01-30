@@ -14,12 +14,9 @@ HX_DECLARE_CLASS3(openfl,_legacy,display,InteractiveObject)
 HX_DECLARE_CLASS3(openfl,_legacy,events,EventDispatcher)
 HX_DECLARE_CLASS3(openfl,_legacy,events,IEventDispatcher)
 HX_DECLARE_CLASS3(openfl,_legacy,text,TextField)
+HX_DECLARE_CLASS3(openfl,_legacy,text,TextFieldAutoSize)
 HX_DECLARE_CLASS3(openfl,_legacy,text,TextFormat)
 HX_DECLARE_CLASS3(openfl,_legacy,text,TextLineMetrics)
-HX_DECLARE_CLASS2(openfl,text,AntiAliasType)
-HX_DECLARE_CLASS2(openfl,text,GridFitType)
-HX_DECLARE_CLASS2(openfl,text,TextFieldAutoSize)
-HX_DECLARE_CLASS2(openfl,text,TextFieldType)
 namespace openfl{
 namespace _legacy{
 namespace text{
@@ -52,9 +49,9 @@ class HXCPP_CLASS_ATTRIBUTES  TextField_obj : public ::openfl::_legacy::display:
 		::String __ToString() const { return HX_HCSTRING("TextField","\xad","\x04","\x54","\x3b"); }
 
 		static void __boot();
-		::openfl::text::AntiAliasType antiAliasType;
+		Dynamic antiAliasType;
 		int bottomScrollV;
-		::openfl::text::GridFitType gridFitType;
+		Dynamic gridFitType;
 		int maxScrollH;
 		int maxScrollV;
 		int numLines;
@@ -86,10 +83,10 @@ class HXCPP_CLASS_ATTRIBUTES  TextField_obj : public ::openfl::_legacy::display:
 		virtual Void setTextFormat( ::openfl::_legacy::text::TextFormat format,hx::Null< int >  beginIndex,hx::Null< int >  endIndex);
 		Dynamic setTextFormat_dyn();
 
-		virtual ::openfl::text::TextFieldAutoSize get_autoSize( );
+		virtual ::openfl::_legacy::text::TextFieldAutoSize get_autoSize( );
 		Dynamic get_autoSize_dyn();
 
-		virtual ::openfl::text::TextFieldAutoSize set_autoSize( ::openfl::text::TextFieldAutoSize value);
+		virtual ::openfl::_legacy::text::TextFieldAutoSize set_autoSize( ::openfl::_legacy::text::TextFieldAutoSize value);
 		Dynamic set_autoSize_dyn();
 
 		virtual bool get_background( );
@@ -200,10 +197,10 @@ class HXCPP_CLASS_ATTRIBUTES  TextField_obj : public ::openfl::_legacy::display:
 		virtual Float get_textHeight( );
 		Dynamic get_textHeight_dyn();
 
-		virtual ::openfl::text::TextFieldType get_type( );
+		virtual Dynamic get_type( );
 		Dynamic get_type_dyn();
 
-		virtual ::openfl::text::TextFieldType set_type( ::openfl::text::TextFieldType value);
+		virtual Dynamic set_type( Dynamic value);
 		Dynamic set_type_dyn();
 
 		virtual bool get_wordWrap( );

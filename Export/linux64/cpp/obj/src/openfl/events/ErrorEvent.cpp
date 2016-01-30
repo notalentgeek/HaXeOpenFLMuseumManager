@@ -120,15 +120,6 @@ Dynamic ErrorEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCall
 	return super::__Field(inName,inCallProp);
 }
 
-bool ErrorEvent_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
-{
-	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"ERROR") ) { outValue = ERROR; return true;  }
-	}
-	return false;
-}
-
 Dynamic ErrorEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
@@ -140,10 +131,6 @@ Dynamic ErrorEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue
 
 bool ErrorEvent_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
 {
-	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"ERROR") ) { ERROR=ioValue.Cast< ::String >(); return true; }
-	}
 	return false;
 }
 
@@ -196,7 +183,7 @@ void ErrorEvent_obj::__register()
 	__mClass->mSuper = &super::__SGetClass();
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
-	__mClass->mGetStaticField = &ErrorEvent_obj::__GetStatic;
+	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
 	__mClass->mSetStaticField = &ErrorEvent_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
