@@ -49,7 +49,8 @@ class Main extends Sprite{
         super();
 
         Toolkit.init();
-        Toolkit.setTransitionForClass(haxe.ui.toolkit.containers.Accordion, "none");
+        Toolkit.setTransitionForClass(Accordion, "none");
+        Toolkit.setTransitionForClass(Popup, "none");
         Toolkit.openFullscreen(function(_root:Root){
 
             /*Init GUI object here.*/

@@ -5723,6 +5723,7 @@
    <depend name="include/haxe/ui/toolkit/containers/Accordion.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Container.h"/>
    <depend name="include/haxe/ui/toolkit/containers/VBox.h"/>
+   <depend name="include/haxe/ui/toolkit/controls/popups/Popup.h"/>
    <depend name="include/haxe/ui/toolkit/core/Component.h"/>
    <depend name="include/haxe/ui/toolkit/core/DisplayObject.h"/>
    <depend name="include/haxe/ui/toolkit/core/DisplayObjectContainer.h"/>
@@ -5733,6 +5734,7 @@
    <depend name="include/haxe/ui/toolkit/core/interfaces/IComponent.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IDisplayObject.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IDisplayObjectContainer.h"/>
+   <depend name="include/haxe/ui/toolkit/core/interfaces/IDraggable.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IDrawable.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IEventDispatcher.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IStyleableDisplayObject.h"/>

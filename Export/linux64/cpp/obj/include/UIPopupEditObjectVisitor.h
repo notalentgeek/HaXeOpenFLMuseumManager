@@ -10,8 +10,6 @@ HX_DECLARE_CLASS0(ObjectVisitor)
 HX_DECLARE_CLASS0(UIPopupEditObjectVisitor)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Container)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Grid)
-HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,ListView)
-HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,ScrollView)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,VBox)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,controls,Button)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,controls,Text)
@@ -64,10 +62,10 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 
 		::CollectionGlobal collectionGlobalObject;
 		::haxe::ui::toolkit::controls::Text displayExplanationTextObject;
-		::haxe::ui::toolkit::controls::selection::ListSelector displayPopularTagListSelectorObject;
+		::haxe::ui::toolkit::controls::Button displayPopularTagButtonObject;
+		::haxe::ui::toolkit::controls::popups::Popup displayPopularTagPopupObject;
 		::haxe::ui::toolkit::controls::Text displayPreviousVisitorTextObject;
 		::haxe::ui::toolkit::controls::Button displaySentenceButtonObject;
-		::haxe::ui::toolkit::containers::ListView displaySentenceListViewObject;
 		::haxe::ui::toolkit::controls::popups::Popup displaySentencePopupObject;
 		::haxe::ui::toolkit::controls::Text displayTargetExhibitionTextObject;
 		::haxe::ui::toolkit::controls::Text displayVisitorIndexTextObject;

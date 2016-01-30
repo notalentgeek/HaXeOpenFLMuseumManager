@@ -51,8 +51,7 @@
         <!--##################################################-->
 
         <text text="Popular Tag" />
-        <listSelector id="UIPopupEditObjectVisitor_DisplayPopularTag" text=" " width="100%" >
-        </listSelector>
+        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonDisplayPopularTag" text="Display Popular Tag" width="100%" />
 
         <!--##################################################-->
 
