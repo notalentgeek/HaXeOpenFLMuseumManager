@@ -7,6 +7,11 @@ enum EnumMuseumMode{
     REQ_CH_PARENT;
     MRK_DEL;
 }
+enum EnumVisitorMode{
+    HARDWARE_MANUAL;
+    SOFTWARE_AUTO;
+    SOFTWARE_MANUAL;
+}
 enum EnumTagFeelType{
     NEGATIVE;
     NEUTRAL;

@@ -23,6 +23,7 @@ class ObjectVisitor{
     private var visitedCorrectExhibitionBool:Bool = true;
     private var visitExhibitionStructArray:Array<StructVisitorVisitExhibition> = new Array<StructVisitorVisitExhibition>();
     private var visitMuseumStructArray:Array<StructVisitorVisitMuseum> = new Array<StructVisitorVisitMuseum>(); /*PENDING:*/
+    private var visitorModeEnum:EnumVisitorMode = null;
     private var visitorUIObject:ObjectVisitorUI = null;
     public function new(
         _collectionGlobalObject:CollectionGlobal,
@@ -162,48 +163,6 @@ class ObjectVisitor{
     }
     private function GenerateSentenceVoid(_amount:Int){ return ""; }
     private function SortTagCounterVoid(){ tagCounterStructArray.sort(function(_a:StructTagCounter, _b:StructTagCounter){ return _b.tagCounterInt - _a.tagCounterInt; }); }
-    private function UpdateHeavyVoid(){
-        exhibitionCurrentObject.SetVisitorCurrentIntVoid(exhibitionCurrentObject.GetVisitorCurrentInt() + 1);
-        exhibitionCurrentObject.SetVisitorTotalIntVoid(exhibitionCurrentObject.GetVisitorTotalInt() + 1);
-        var loopCounter1Int:Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
-            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineFullVoid();
-            loopCounter1Int ++;
-        }
-        loopCounter1Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
-            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].DetermineFullVoid();
-            loopCounter1Int ++;
-        }
-        loopCounter1Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
-            if(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameAltString != "EXH_ARC"){
-                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineChildVoid();
-                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineFullVoid();
-            }
-            loopCounter1Int ++;
-        }
-        loopCounter1Int = 0;
-        var necessaryHeightInt:Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(targetInt);
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
-            if(necessaryHeightInt < Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height)){
-                necessaryHeightInt = Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height);
-            }
-            loopCounter1Int ++;
-        }
-        collectionGlobalObject.GetUIMuseumAbsoluteObject().height = necessaryHeightInt;
-
-        var visitorVisitExhibitionStruct:StructVisitorVisitExhibition = {
-            currentExhibitionTimeInt:0,
-            exhibitionNameAltString:""
-        };
-        visitorVisitExhibitionStruct.currentExhibitionTimeInt = timeExhibitionInt;
-        visitorVisitExhibitionStruct.exhibitionNameAltString = exhibitionCurrentObject.GetNameStruct().nameAltString;
-        visitExhibitionStructArray.push(visitorVisitExhibitionStruct);
-    }
     public  function AIAutoExhibitionChangeVoid(){
         if(finishedBool == false){
             var randomFloat:Float = Math.random();
@@ -215,6 +174,7 @@ class ObjectVisitor{
             }
         }
     }
+
     public function DetermineIndexLocalVoid(){ indexLocalInt = exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.indexOf(this); }
     public function GenerateExhibitionTargetVoid(_targetInt:Int){
         CollectionFunction.ClearArray(exhibitionTargetObjectArray);
@@ -323,7 +283,58 @@ class ObjectVisitor{
     public function GetSentenceStringArray(){ return sentenceStringArray; }
     public function GetTagCounterStructArray(){ return tagCounterStructArray; }
     public function GetTagObjectArray(){ return tagObjectArray; }
-    public function GetVisitorUIObject(){ return visitorUIObject; }
     public function GetVisitCorrectExhibitionBool(){ return visitedCorrectExhibitionBool; }
+    public function GetVisitorModeEnum(){ return visitorModeEnum(); }
+    public function GetVisitorUIObject(){ return visitorUIObject; }
     public function SetIndexLocalIntVoid(_indexLocalInt:Int){ indexLocalInt = _indexLocalInt; }
+    public function SetVisitorModeEnumVoid(_visitorModeEnum:EnumVisitorMode){ visitorModeEnum = _visitorModeEnum; }
+    private function UpdateHeavyVoid(){
+        exhibitionCurrentObject.SetVisitorCurrentIntVoid(exhibitionCurrentObject.GetVisitorCurrentInt() + 1);
+        exhibitionCurrentObject.SetVisitorTotalIntVoid(exhibitionCurrentObject.GetVisitorTotalInt() + 1);
+        var loopCounter1Int:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetFloorObjectArray().length){
+            collectionGlobalObject.GetFloorObjectArray()[loopCounter1Int].DetermineFullVoid();
+            loopCounter1Int ++;
+        }
+        loopCounter1Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetRoomObjectArray().length){
+            collectionGlobalObject.GetRoomObjectArray()[loopCounter1Int].DetermineFullVoid();
+            loopCounter1Int ++;
+        }
+        loopCounter1Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
+            if(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameAltString != "EXH_ARC"){
+                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineChildVoid();
+                collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].DetermineFullVoid();
+            }
+            loopCounter1Int ++;
+        }
+        loopCounter1Int = 0;
+        var necessaryHeightInt:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(targetInt);
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
+            if(necessaryHeightInt < Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height)){
+                necessaryHeightInt = Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height);
+            }
+            loopCounter1Int ++;
+        }
+        collectionGlobalObject.GetUIMuseumAbsoluteObject().height = necessaryHeightInt;
+
+        var visitorVisitExhibitionStruct:StructVisitorVisitExhibition = {
+            currentExhibitionTimeInt:0,
+            exhibitionNameAltString:""
+        };
+        visitorVisitExhibitionStruct.currentExhibitionTimeInt = timeExhibitionInt;
+        visitorVisitExhibitionStruct.exhibitionNameAltString = exhibitionCurrentObject.GetNameStruct().nameAltString;
+        visitExhibitionStructArray.push(visitorVisitExhibitionStruct);
+    }
+    public function UpdateVoid(){
+
+        if(visitorModeEnum == HARDWARE_MANUAL){ /*PENDING:*/ }
+        else if(visitorModeEnum == SOFTWARE_AUTO){ AIAutoExhibitionChangeVoid(); }
+        else if(visitorModeEnum == SOFTWARE_MANUAL){ /*PENDING:*/ }
+
+    }
 }
