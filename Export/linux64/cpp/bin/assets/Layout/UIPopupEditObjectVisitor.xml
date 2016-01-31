@@ -16,7 +16,8 @@
 
         <!--##################################################-->
 
-        <text text="Current Exhibition" />
+        <text text="Current/Move Exhibition" />
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayCurrentExhibition" multiline="true" style="borderColor:0x000000;borderSize:1"  text=" " width="100%" wrapLines="true" />
         <listSelector disabled="true" id="UIPopupEditObjectVisitor_SelectCurrentExhibition" text=" " width="100%" >
         </listSelector>
 
@@ -35,6 +36,9 @@
                 Software Manual,
             </array>
         </listSelector>
+        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonChangeAllHardwareManual" text="All Visitor Hardware Manual" width="100%" />
+        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonChangeAllSoftwareAuto" text="All Visitor Software Manual" width="100%" />
+        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonChangeAllSoftwareManual" text="All Visitor Software Manual" width="100%" />
 
         <!--##################################################-->
 
@@ -44,7 +48,7 @@
         <!--##################################################-->
 
         <text text="Previous Visitor" />
-        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPreviousVisitor" multiline="true" text=" " width="100%" wrapLines="true" />
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPreviousVisitor" multiline="true" style="borderColor:0x000000;borderSize:1" text=" " width="100%" wrapLines="true" />
 
         <!--##################################################-->
 
@@ -55,6 +59,7 @@
 
         <text text="Reset" />
         <button disabled="true" id="UIPopupEditObjectVisitor_ButtonReset" text="Reset" width="100%" />
+        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonResetAll" text="All Visitor Reset" width="100%" />
 
         <!--##################################################-->
 
@@ -68,8 +73,13 @@
 
         <!--##################################################-->
 
-        <text text="Visitor Index" />
-        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayVisitorIndex" multiline="true" text=" " width="100%" wrapLines="true" />
+        <text text="Visitor Index Global" />
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayVisitorIndexGlobal" multiline="true" style="borderColor:0x000000;borderSize:1"  text=" " width="100%" wrapLines="true" />
+
+        <!--##################################################-->
+
+        <text text="Visitor Index Local" />
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayVisitorIndexLocal" multiline="true" style="borderColor:0x000000;borderSize:1"  text=" " width="100%" wrapLines="true" />
 
         <!--##################################################-->
 

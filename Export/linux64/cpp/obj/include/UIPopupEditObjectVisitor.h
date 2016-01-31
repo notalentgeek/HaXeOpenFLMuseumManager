@@ -60,7 +60,11 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("UIPopupEditObjectVisitor","\xed","\x1b","\x5e","\x0d"); }
 
+		::haxe::ui::toolkit::controls::Button changeAllHardwareManualButtonObject;
+		::haxe::ui::toolkit::controls::Button changeAllSoftwareAutoButtonObject;
+		::haxe::ui::toolkit::controls::Button changeAllSoftwareManualButtonObject;
 		::CollectionGlobal collectionGlobalObject;
+		::haxe::ui::toolkit::controls::Text displayCurrentExhibitionTextObject;
 		::haxe::ui::toolkit::controls::Button displayExplanationButtonObject;
 		::haxe::ui::toolkit::controls::popups::Popup displayExplanationPopupObject;
 		::haxe::ui::toolkit::controls::Button displayPopularTagButtonObject;
@@ -69,11 +73,13 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		::haxe::ui::toolkit::controls::Button displaySentenceButtonObject;
 		::haxe::ui::toolkit::controls::popups::Popup displaySentencePopupObject;
 		::haxe::ui::toolkit::controls::Text displayTargetExhibitionTextObject;
-		::haxe::ui::toolkit::controls::Text displayVisitorIndexTextObject;
+		::haxe::ui::toolkit::controls::Text displayVisitorIndexGlobalTextObject;
+		::haxe::ui::toolkit::controls::Text displayVisitorIndexLocalTextObject;
 		::haxe::ui::toolkit::containers::Grid gridObject;
 		::haxe::ui::toolkit::controls::TextInput inputNameTextInputObject;
 		::haxe::ui::toolkit::controls::Button mainButtonObject;
 		::haxe::ui::toolkit::controls::popups::Popup popupObject;
+		::haxe::ui::toolkit::controls::Button resetAllButtonObject;
 		::haxe::ui::toolkit::controls::Button resetButtonObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectCurrentExhibitionListSelectorObject;
 		Array< ::String > selectedVisitorExplanationStringArray;
@@ -88,6 +94,9 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		virtual Void UpdateVoid( );
 		Dynamic UpdateVoid_dyn();
 
+		virtual Void ResetDisplayCurrentExhibitionTextObjectVoid( );
+		Dynamic ResetDisplayCurrentExhibitionTextObjectVoid_dyn();
+
 		virtual Void ResetDisplayExplanationTextObjectVoid( );
 		Dynamic ResetDisplayExplanationTextObjectVoid_dyn();
 
@@ -100,8 +109,23 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		virtual Void ResetDisplayTargetExhibitionTextObjectVoid( );
 		Dynamic ResetDisplayTargetExhibitionTextObjectVoid_dyn();
 
+		virtual Void ResetDisplayVisitorIndexGlobalTextObjectVoid( );
+		Dynamic ResetDisplayVisitorIndexGlobalTextObjectVoid_dyn();
+
+		virtual Void ResetDisplayVisitorIndexLocalTextObjectVoid( );
+		Dynamic ResetDisplayVisitorIndexLocalTextObjectVoid_dyn();
+
+		virtual Void ResetInputNameTextInputObjectVoid( );
+		Dynamic ResetInputNameTextInputObjectVoid_dyn();
+
+		virtual Void ResetSelectCurrentExhibitionListSelectorObject( );
+		Dynamic ResetSelectCurrentExhibitionListSelectorObject_dyn();
+
 		virtual Void ResetSelectVisitorListSelectorObjectVoid( );
 		Dynamic ResetSelectVisitorListSelectorObjectVoid_dyn();
+
+		virtual Void UpdateDisplayCurrentExhibitionTextObjectVoid( );
+		Dynamic UpdateDisplayCurrentExhibitionTextObjectVoid_dyn();
 
 		virtual Void UpdateDisplayExplanationTextObjectVoid( );
 		Dynamic UpdateDisplayExplanationTextObjectVoid_dyn();
@@ -114,6 +138,18 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 
 		virtual Void UpdateDisplayTargetExhibitionTextObjectVoid( );
 		Dynamic UpdateDisplayTargetExhibitionTextObjectVoid_dyn();
+
+		virtual Void UpdateDisplayVisitorIndexGlobalTextObjectVoid( );
+		Dynamic UpdateDisplayVisitorIndexGlobalTextObjectVoid_dyn();
+
+		virtual Void UpdateDisplayVisitorIndexLocalTextObjectVoid( );
+		Dynamic UpdateDisplayVisitorIndexLocalTextObjectVoid_dyn();
+
+		virtual Void UpdateInputNameTextInputObjectVoid( );
+		Dynamic UpdateInputNameTextInputObjectVoid_dyn();
+
+		virtual Void UpdateSelectCurrentExhibitionListSelectorObjectVoid( );
+		Dynamic UpdateSelectCurrentExhibitionListSelectorObjectVoid_dyn();
 
 };
 

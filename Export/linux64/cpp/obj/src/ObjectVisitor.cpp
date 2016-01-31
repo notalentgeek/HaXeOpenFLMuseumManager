@@ -1716,12 +1716,24 @@ bool ObjectVisitor_obj::GetFinishedBool( ){
 
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetFinishedBool,return )
 
-int ObjectVisitor_obj::GetIndexLocalInt( ){
-	HX_STACK_FRAME("ObjectVisitor","GetIndexLocalInt",0x9b8f97df,"ObjectVisitor.GetIndexLocalInt","ObjectVisitor.hx",319,0xe713038f)
+int ObjectVisitor_obj::GetIndexGlobalInt( ){
+	HX_STACK_FRAME("ObjectVisitor","GetIndexGlobalInt",0xd2c1d351,"ObjectVisitor.GetIndexGlobalInt","ObjectVisitor.hx",319,0xe713038f)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(319)
-	int tmp = this->indexLocalInt;		HX_STACK_VAR(tmp,"tmp");
+	int tmp = this->indexGlobalInt;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(319)
+	return tmp;
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetIndexGlobalInt,return )
+
+int ObjectVisitor_obj::GetIndexLocalInt( ){
+	HX_STACK_FRAME("ObjectVisitor","GetIndexLocalInt",0x9b8f97df,"ObjectVisitor.GetIndexLocalInt","ObjectVisitor.hx",320,0xe713038f)
+	HX_STACK_THIS(this)
+	HX_STACK_LINE(320)
+	int tmp = this->indexLocalInt;		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(320)
 	return tmp;
 }
 
@@ -1729,11 +1741,11 @@ int ObjectVisitor_obj::GetIndexLocalInt( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetIndexLocalInt,return )
 
 ::String ObjectVisitor_obj::GetNameString( ){
-	HX_STACK_FRAME("ObjectVisitor","GetNameString",0xa627bf73,"ObjectVisitor.GetNameString","ObjectVisitor.hx",320,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetNameString",0xa627bf73,"ObjectVisitor.GetNameString","ObjectVisitor.hx",321,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(320)
+	HX_STACK_LINE(321)
 	::String tmp = this->nameString;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(320)
+	HX_STACK_LINE(321)
 	return tmp;
 }
 
@@ -1741,11 +1753,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetIndexLocalInt,return )
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetNameString,return )
 
 int ObjectVisitor_obj::GetScoreInt( ){
-	HX_STACK_FRAME("ObjectVisitor","GetScoreInt",0x032bdaf4,"ObjectVisitor.GetScoreInt","ObjectVisitor.hx",321,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetScoreInt",0x032bdaf4,"ObjectVisitor.GetScoreInt","ObjectVisitor.hx",322,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(321)
+	HX_STACK_LINE(322)
 	int tmp = this->scoreInt;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(321)
+	HX_STACK_LINE(322)
 	return tmp;
 }
 
@@ -1753,9 +1765,9 @@ int ObjectVisitor_obj::GetScoreInt( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetScoreInt,return )
 
 Array< ::String > ObjectVisitor_obj::GetSentenceStringArray( ){
-	HX_STACK_FRAME("ObjectVisitor","GetSentenceStringArray",0x830c324e,"ObjectVisitor.GetSentenceStringArray","ObjectVisitor.hx",322,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetSentenceStringArray",0x830c324e,"ObjectVisitor.GetSentenceStringArray","ObjectVisitor.hx",323,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(322)
+	HX_STACK_LINE(323)
 	return this->sentenceStringArray;
 }
 
@@ -1763,9 +1775,9 @@ Array< ::String > ObjectVisitor_obj::GetSentenceStringArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetSentenceStringArray,return )
 
 cpp::ArrayBase ObjectVisitor_obj::GetTagCounterStructArray( ){
-	HX_STACK_FRAME("ObjectVisitor","GetTagCounterStructArray",0x729f3dcb,"ObjectVisitor.GetTagCounterStructArray","ObjectVisitor.hx",323,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetTagCounterStructArray",0x729f3dcb,"ObjectVisitor.GetTagCounterStructArray","ObjectVisitor.hx",324,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(323)
+	HX_STACK_LINE(324)
 	return this->tagCounterStructArray;
 }
 
@@ -1773,9 +1785,9 @@ cpp::ArrayBase ObjectVisitor_obj::GetTagCounterStructArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetTagCounterStructArray,return )
 
 Array< ::Dynamic > ObjectVisitor_obj::GetTagObjectArray( ){
-	HX_STACK_FRAME("ObjectVisitor","GetTagObjectArray",0xee77bf97,"ObjectVisitor.GetTagObjectArray","ObjectVisitor.hx",324,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetTagObjectArray",0xee77bf97,"ObjectVisitor.GetTagObjectArray","ObjectVisitor.hx",325,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(324)
+	HX_STACK_LINE(325)
 	return this->tagObjectArray;
 }
 
@@ -1783,11 +1795,11 @@ Array< ::Dynamic > ObjectVisitor_obj::GetTagObjectArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetTagObjectArray,return )
 
 ::ObjectVisitorUI ObjectVisitor_obj::GetVisitorUIObject( ){
-	HX_STACK_FRAME("ObjectVisitor","GetVisitorUIObject",0xb3f4d08a,"ObjectVisitor.GetVisitorUIObject","ObjectVisitor.hx",325,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetVisitorUIObject",0xb3f4d08a,"ObjectVisitor.GetVisitorUIObject","ObjectVisitor.hx",326,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(325)
+	HX_STACK_LINE(326)
 	::ObjectVisitorUI tmp = this->visitorUIObject;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(325)
+	HX_STACK_LINE(326)
 	return tmp;
 }
 
@@ -1795,11 +1807,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetTagObjectArray,return )
 HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetVisitorUIObject,return )
 
 bool ObjectVisitor_obj::GetVisitCorrectExhibitionBool( ){
-	HX_STACK_FRAME("ObjectVisitor","GetVisitCorrectExhibitionBool",0x6c55624f,"ObjectVisitor.GetVisitCorrectExhibitionBool","ObjectVisitor.hx",326,0xe713038f)
+	HX_STACK_FRAME("ObjectVisitor","GetVisitCorrectExhibitionBool",0x6c55624f,"ObjectVisitor.GetVisitCorrectExhibitionBool","ObjectVisitor.hx",327,0xe713038f)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(326)
+	HX_STACK_LINE(327)
 	bool tmp = this->visitedCorrectExhibitionBool;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(326)
+	HX_STACK_LINE(327)
 	return tmp;
 }
 
@@ -1808,10 +1820,10 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectVisitor_obj,GetVisitCorrectExhibitionBool,return )
 
 Void ObjectVisitor_obj::SetIndexLocalIntVoid( int _indexLocalInt){
 {
-		HX_STACK_FRAME("ObjectVisitor","SetIndexLocalIntVoid",0xfce71a47,"ObjectVisitor.SetIndexLocalIntVoid","ObjectVisitor.hx",327,0xe713038f)
+		HX_STACK_FRAME("ObjectVisitor","SetIndexLocalIntVoid",0xfce71a47,"ObjectVisitor.SetIndexLocalIntVoid","ObjectVisitor.hx",328,0xe713038f)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_indexLocalInt,"_indexLocalInt")
-		HX_STACK_LINE(327)
+		HX_STACK_LINE(328)
 		this->indexLocalInt = _indexLocalInt;
 	}
 return null();
@@ -1920,6 +1932,7 @@ Dynamic ObjectVisitor_obj::__Field(const ::String &inName,hx::PropertyAccess inC
 		if (HX_FIELD_EQ(inName,"roomCurrentObject") ) { return roomCurrentObject; }
 		if (HX_FIELD_EQ(inName,"timeExhibitionInt") ) { return timeExhibitionInt; }
 		if (HX_FIELD_EQ(inName,"AddTagCounterVoid") ) { return AddTagCounterVoid_dyn(); }
+		if (HX_FIELD_EQ(inName,"GetIndexGlobalInt") ) { return GetIndexGlobalInt_dyn(); }
 		if (HX_FIELD_EQ(inName,"GetTagObjectArray") ) { return GetTagObjectArray_dyn(); }
 		break;
 	case 18:
@@ -2145,6 +2158,7 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("GetExhibitionTargetObjectArray","\x64","\xe8","\x76","\x98"),
 	HX_HCSTRING("GetExplanationStringArray","\x45","\x8f","\x80","\xcf"),
 	HX_HCSTRING("GetFinishedBool","\x52","\x42","\x6d","\x6e"),
+	HX_HCSTRING("GetIndexGlobalInt","\xf0","\x14","\xb3","\x89"),
 	HX_HCSTRING("GetIndexLocalInt","\x20","\xaf","\x52","\x2f"),
 	HX_HCSTRING("GetNameString","\x92","\x05","\x12","\x3a"),
 	HX_HCSTRING("GetScoreInt","\x53","\x0b","\xe2","\x18"),

@@ -106,6 +106,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual bool GetFinishedBool( );
 		Dynamic GetFinishedBool_dyn();
 
+		virtual int GetIndexGlobalInt( );
+		Dynamic GetIndexGlobalInt_dyn();
+
 		virtual int GetIndexLocalInt( );
 		Dynamic GetIndexLocalInt_dyn();
 

@@ -316,6 +316,7 @@ class ObjectVisitor{
     public function GetExhibitionTargetObjectArray(){ return exhibitionTargetObjectArray; }
     public function GetExplanationStringArray(){ return explanationStringArray; }
     public function GetFinishedBool(){ return finishedBool; }
+    public function GetIndexGlobalInt(){ return indexGlobalInt; }
     public function GetIndexLocalInt(){ return indexLocalInt; }
     public function GetNameString(){ return nameString; }
     public function GetScoreInt(){ return scoreInt; }
