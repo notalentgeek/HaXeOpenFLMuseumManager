@@ -183,17 +183,15 @@ Void CollectionPremade_obj::PremadeVisitorObjectVoid( int _amountInt,::Collectio
 			HX_STACK_LINE(34)
 			::CollectionGlobal tmp2 = _collectionGlobalObject;		HX_STACK_VAR(tmp2,"tmp2");
 			HX_STACK_LINE(34)
-			::ObjectMuseum tmp3 = ::CollectionFunction_obj::PickRandomFromArrayT(_collectionGlobalObject->GetExhibitionObjectArray());		HX_STACK_VAR(tmp3,"tmp3");
+			int tmp3 = _collectionGlobalObject->PutIndexGlobalVisitorInt();		HX_STACK_VAR(tmp3,"tmp3");
 			HX_STACK_LINE(34)
-			int tmp4 = _collectionGlobalObject->PutIndexGlobalVisitorInt();		HX_STACK_VAR(tmp4,"tmp4");
+			int tmp4 = _collectionGlobalObject->GetIndexGlobalVisitorInt();		HX_STACK_VAR(tmp4,"tmp4");
 			HX_STACK_LINE(34)
-			int tmp5 = _collectionGlobalObject->GetIndexGlobalVisitorInt();		HX_STACK_VAR(tmp5,"tmp5");
+			::String tmp5 = (HX_HCSTRING("Visitor ","\xd2","\xd0","\x5e","\x02") + tmp4);		HX_STACK_VAR(tmp5,"tmp5");
 			HX_STACK_LINE(34)
-			::String tmp6 = (HX_HCSTRING("Visitor ","\xd2","\xd0","\x5e","\x02") + tmp5);		HX_STACK_VAR(tmp6,"tmp6");
+			::ObjectVisitor tmp6 = ::ObjectVisitor_obj::__new(tmp2,tmp3,tmp5);		HX_STACK_VAR(tmp6,"tmp6");
 			HX_STACK_LINE(34)
-			::ObjectVisitor tmp7 = ::ObjectVisitor_obj::__new(tmp2,tmp3,tmp4,tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(34)
-			::ObjectVisitor visitorObject = tmp7;		HX_STACK_VAR(visitorObject,"visitorObject");
+			::ObjectVisitor visitorObject = tmp6;		HX_STACK_VAR(visitorObject,"visitorObject");
 			HX_STACK_LINE(35)
 			(loopCounter1Int)++;
 		}

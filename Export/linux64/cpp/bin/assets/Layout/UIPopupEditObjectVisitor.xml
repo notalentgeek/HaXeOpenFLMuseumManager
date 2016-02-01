@@ -36,9 +36,9 @@
                 Software Manual,
             </array>
         </listSelector>
-        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonChangeAllHardwareManual" text="All Visitor Hardware Manual" width="100%" />
-        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonChangeAllSoftwareAuto" text="All Visitor Software Manual" width="100%" />
-        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonChangeAllSoftwareManual" text="All Visitor Software Manual" width="100%" />
+        <button id="UIPopupEditObjectVisitor_ButtonChangeAllHardwareManual" text="All Visitor Hardware Manual" width="100%" />
+        <button id="UIPopupEditObjectVisitor_ButtonChangeAllSoftwareAuto" text="All Visitor Software Manual" width="100%" />
+        <button id="UIPopupEditObjectVisitor_ButtonChangeAllSoftwareManual" text="All Visitor Software Manual" width="100%" />
 
         <!--##################################################-->
 
@@ -59,7 +59,7 @@
 
         <text text="Reset" />
         <button disabled="true" id="UIPopupEditObjectVisitor_ButtonReset" text="Reset" width="100%" />
-        <button disabled="true" id="UIPopupEditObjectVisitor_ButtonResetAll" text="All Visitor Reset" width="100%" />
+        <button id="UIPopupEditObjectVisitor_ButtonResetAll" text="All Visitor Reset" width="100%" />
 
         <!--##################################################-->
 

@@ -91,6 +91,7 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		::haxe::ui::toolkit::controls::selection::ListSelector selectVisitorListSelectorObject;
 		::String selectVisitorListSelectorPrevString;
 		::String selectVisitorListSelectorString;
+		::String visitorModePrevString;
 		virtual Void UpdateVoid( );
 		Dynamic UpdateVoid_dyn();
 
@@ -121,6 +122,9 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		virtual Void ResetSelectCurrentExhibitionListSelectorObject( );
 		Dynamic ResetSelectCurrentExhibitionListSelectorObject_dyn();
 
+		virtual Void ResetSelectModeListSelectorObjectVoid( );
+		Dynamic ResetSelectModeListSelectorObjectVoid_dyn();
+
 		virtual Void ResetSelectVisitorListSelectorObjectVoid( );
 		Dynamic ResetSelectVisitorListSelectorObjectVoid_dyn();
 
@@ -145,11 +149,11 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectVisitor_obj : public hx::Object{
 		virtual Void UpdateDisplayVisitorIndexLocalTextObjectVoid( );
 		Dynamic UpdateDisplayVisitorIndexLocalTextObjectVoid_dyn();
 
-		virtual Void UpdateInputNameTextInputObjectVoid( );
-		Dynamic UpdateInputNameTextInputObjectVoid_dyn();
-
 		virtual Void UpdateSelectCurrentExhibitionListSelectorObjectVoid( );
 		Dynamic UpdateSelectCurrentExhibitionListSelectorObjectVoid_dyn();
+
+		virtual Void UpdateSelectModeListSelectorObjectVoid( );
+		Dynamic UpdateSelectModeListSelectorObjectVoid_dyn();
 
 };
 

@@ -447,7 +447,7 @@ Void Main_obj::UpdateSlowVoid( ){
 		HX_STACK_LINE(128)
 		::ObjectVisitor tmp41 = tmp36->GetVisitorObjectArray()->__get(tmp40).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp41,"tmp41");
 		HX_STACK_LINE(128)
-		tmp41->AIAutoExhibitionChangeVoid();
+		tmp41->UpdateVoid();
 		HX_STACK_LINE(129)
 		(this->loopCounterMainInt)++;
 	}
@@ -568,7 +568,7 @@ Void Main_obj::UpdateNormalVoid( ){
 			HX_STACK_LINE(148)
 			::ObjectVisitor tmp38 = tmp37->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp38,"tmp38");
 			HX_STACK_LINE(148)
-			tmp38->AIAutoExhibitionChangeVoid();
+			tmp38->UpdateVoid();
 			HX_STACK_LINE(149)
 			(loopCounter1Int)++;
 		}
@@ -691,7 +691,7 @@ Void Main_obj::UpdateFastVoid( ){
 			HX_STACK_LINE(165)
 			::ObjectVisitor tmp6 = tmp5->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp6,"tmp6");
 			HX_STACK_LINE(165)
-			tmp6->AIAutoExhibitionChangeVoid();
+			tmp6->UpdateVoid();
 			HX_STACK_LINE(165)
 			(loopCounter1Int)++;
 		}

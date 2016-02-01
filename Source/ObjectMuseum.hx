@@ -176,8 +176,10 @@ class ObjectMuseum{
         if(typeEnum == EXH){
             var loopCounter1Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-                if(nameStruct.nameAltString == collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetExhibitionCurrentObject().GetNameStruct().nameAltString){
-                    childStruct.childVisitorObjectArray.push(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
+                if(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetExhibitionCurrentObject() != null){
+                    if(nameStruct.nameAltString == collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetExhibitionCurrentObject().GetNameStruct().nameAltString){
+                        childStruct.childVisitorObjectArray.push(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
+                    }
                 }
                 loopCounter1Int ++;
             }

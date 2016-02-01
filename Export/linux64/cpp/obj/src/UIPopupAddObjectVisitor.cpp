@@ -185,15 +185,13 @@ HX_STACK_ARG(_root,"_root")
 						HX_STACK_LINE(56)
 						::CollectionGlobal tmp10 = _g->collectionGlobalObject;		HX_STACK_VAR(tmp10,"tmp10");
 						HX_STACK_LINE(56)
-						::ObjectMuseum tmp11 = exhibitionObject;		HX_STACK_VAR(tmp11,"tmp11");
+						int tmp11 = _g->collectionGlobalObject->PutIndexGlobalVisitorInt();		HX_STACK_VAR(tmp11,"tmp11");
 						HX_STACK_LINE(56)
-						int tmp12 = _g->collectionGlobalObject->PutIndexGlobalVisitorInt();		HX_STACK_VAR(tmp12,"tmp12");
+						::String tmp12 = _g->inputNameTextInputObject->get_text();		HX_STACK_VAR(tmp12,"tmp12");
 						HX_STACK_LINE(56)
-						::String tmp13 = _g->inputNameTextInputObject->get_text();		HX_STACK_VAR(tmp13,"tmp13");
+						::ObjectVisitor tmp13 = ::ObjectVisitor_obj::__new(tmp10,tmp11,tmp12);		HX_STACK_VAR(tmp13,"tmp13");
 						HX_STACK_LINE(56)
-						::ObjectVisitor tmp14 = ::ObjectVisitor_obj::__new(tmp10,tmp11,tmp12,tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-						HX_STACK_LINE(56)
-						::ObjectVisitor visitorObject = tmp14;		HX_STACK_VAR(visitorObject,"visitorObject");
+						::ObjectVisitor visitorObject = tmp13;		HX_STACK_VAR(visitorObject,"visitorObject");
 					}
 				}
 				return null();

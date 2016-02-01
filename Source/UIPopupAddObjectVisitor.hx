@@ -53,7 +53,7 @@ class UIPopupAddObjectVisitor{
                 if(_button == PopupButton.OK){
 
                     var exhibitionObject:ObjectMuseum = CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, selectExhibitionStartListSelectorObject.text);
-                    var visitorObject:ObjectVisitor = new ObjectVisitor(collectionGlobalObject, exhibitionObject, collectionGlobalObject.PutIndexGlobalVisitorInt(), inputNameTextInputObject.text);
+                    var visitorObject:ObjectVisitor = new ObjectVisitor(collectionGlobalObject, collectionGlobalObject.PutIndexGlobalVisitorInt(), inputNameTextInputObject.text);
 
                 }
 

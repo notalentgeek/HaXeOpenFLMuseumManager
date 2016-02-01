@@ -6,6 +6,7 @@
 #endif
 
 HX_DECLARE_CLASS0(CollectionGlobal)
+HX_DECLARE_CLASS0(EnumVisitorMode)
 HX_DECLARE_CLASS0(ObjectMuseum)
 HX_DECLARE_CLASS0(ObjectTag)
 HX_DECLARE_CLASS0(ObjectVisitor)
@@ -24,12 +25,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		typedef hx::Object super;
 		typedef ObjectVisitor_obj OBJ_;
 		ObjectVisitor_obj();
-		Void __construct(::CollectionGlobal _collectionGlobalObject,::ObjectMuseum _exhibitionCurrentObject,int _indexGlobalInt,::String _nameString);
+		Void __construct(::CollectionGlobal _collectionGlobalObject,int _indexGlobalInt,::String _nameString);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectVisitor")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectVisitor_obj > __new(::CollectionGlobal _collectionGlobalObject,::ObjectMuseum _exhibitionCurrentObject,int _indexGlobalInt,::String _nameString);
+		static hx::ObjectPtr< ObjectVisitor_obj > __new(::CollectionGlobal _collectionGlobalObject,int _indexGlobalInt,::String _nameString);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectVisitor_obj();
@@ -66,6 +67,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		bool visitedCorrectExhibitionBool;
 		cpp::ArrayBase visitExhibitionStructArray;
 		cpp::ArrayBase visitMuseumStructArray;
+		::EnumVisitorMode visitorModeEnum;
 		::ObjectVisitorUI visitorUIObject;
 		virtual Void AddRemoveVisitorFromExhibitionVoid( bool _isAdd);
 		Dynamic AddRemoveVisitorFromExhibitionVoid_dyn();
@@ -76,14 +78,8 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual Void ChangeExhibitionCurrentVoid( ::ObjectMuseum _exhibitionTargetObject);
 		Dynamic ChangeExhibitionCurrentVoid_dyn();
 
-		virtual ::String GenerateSentenceVoid( int _amount);
-		Dynamic GenerateSentenceVoid_dyn();
-
 		virtual Void SortTagCounterVoid( );
 		Dynamic SortTagCounterVoid_dyn();
-
-		virtual Void UpdateHeavyVoid( );
-		Dynamic UpdateHeavyVoid_dyn();
 
 		virtual Void AIAutoExhibitionChangeVoid( );
 		Dynamic AIAutoExhibitionChangeVoid_dyn();
@@ -127,14 +123,32 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual Array< ::Dynamic > GetTagObjectArray( );
 		Dynamic GetTagObjectArray_dyn();
 
-		virtual ::ObjectVisitorUI GetVisitorUIObject( );
-		Dynamic GetVisitorUIObject_dyn();
-
 		virtual bool GetVisitCorrectExhibitionBool( );
 		Dynamic GetVisitCorrectExhibitionBool_dyn();
 
+		virtual ::EnumVisitorMode GetVisitorModeEnum( );
+		Dynamic GetVisitorModeEnum_dyn();
+
+		virtual ::ObjectVisitorUI GetVisitorUIObject( );
+		Dynamic GetVisitorUIObject_dyn();
+
+		virtual Void ResetVoid( );
+		Dynamic ResetVoid_dyn();
+
 		virtual Void SetIndexLocalIntVoid( int _indexLocalInt);
 		Dynamic SetIndexLocalIntVoid_dyn();
+
+		virtual Void SetNameStringVoid( ::String _nameString);
+		Dynamic SetNameStringVoid_dyn();
+
+		virtual Void SetVisitorModeEnumVoid( ::EnumVisitorMode _visitorModeEnum);
+		Dynamic SetVisitorModeEnumVoid_dyn();
+
+		virtual Void UpdateHeavyVoid( );
+		Dynamic UpdateHeavyVoid_dyn();
+
+		virtual Void UpdateVoid( );
+		Dynamic UpdateVoid_dyn();
 
 };
 

@@ -147,6 +147,9 @@
 #ifndef INCLUDED_EnumTagFeelType
 #include <EnumTagFeelType.h>
 #endif
+#ifndef INCLUDED_EnumVisitorMode
+#include <EnumVisitorMode.h>
+#endif
 #ifndef INCLUDED_EnumMuseumMode
 #include <EnumMuseumMode.h>
 #endif
@@ -1520,6 +1523,7 @@ hx::RegisterResources( hx::GetResources() );
 ::EnumTagTypeSub_obj::__register();
 ::EnumTagType_obj::__register();
 ::EnumTagFeelType_obj::__register();
+::EnumVisitorMode_obj::__register();
 ::EnumMuseumMode_obj::__register();
 ::EnumMuseumType_obj::__register();
 ::sys::net::Socket_obj::__register();
@@ -2008,6 +2012,7 @@ hx::RegisterResources( hx::GetResources() );
 ::EnumTagTypeSub_obj::__boot();
 ::EnumTagType_obj::__boot();
 ::EnumTagFeelType_obj::__boot();
+::EnumVisitorMode_obj::__boot();
 ::EnumMuseumMode_obj::__boot();
 ::EnumMuseumType_obj::__boot();
 ::openfl::_legacy::utils::ByteArray_obj::__init__();

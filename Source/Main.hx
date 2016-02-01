@@ -125,7 +125,7 @@ class Main extends Sprite{
         collectionGlobalObject.GetExhibitionObjectArray()[loopCounterMainInt%collectionGlobalObject.GetExhibitionObjectArray().length].UpdateVoid();
         collectionGlobalObject.GetFloorObjectArray()[loopCounterMainInt%collectionGlobalObject.GetFloorObjectArray().length].UpdateVoid();
         collectionGlobalObject.GetRoomObjectArray()[loopCounterMainInt%collectionGlobalObject.GetRoomObjectArray().length].UpdateVoid();
-        collectionGlobalObject.GetVisitorObjectArray()[loopCounterMainInt%collectionGlobalObject.GetVisitorObjectArray().length].AIAutoExhibitionChangeVoid();
+        collectionGlobalObject.GetVisitorObjectArray()[loopCounterMainInt%collectionGlobalObject.GetVisitorObjectArray().length].UpdateVoid();
         loopCounterMainInt ++;
 
     }
@@ -145,7 +145,7 @@ class Main extends Sprite{
         loopCounterMainInt ++;
         var loopCounter1Int:Int = 0;
         while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].AIAutoExhibitionChangeVoid();
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].UpdateVoid();
             loopCounter1Int ++;
         }
 
@@ -162,7 +162,7 @@ class Main extends Sprite{
         loopCounter1Int = 0;
         while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){ collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].UpdateVoid(); loopCounter1Int ++; }
         loopCounter1Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){ collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].AIAutoExhibitionChangeVoid(); loopCounter1Int ++; }
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){ collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].UpdateVoid(); loopCounter1Int ++; }
 
     }
 

@@ -26,17 +26,19 @@ class ObjectVisitorUI extends Sprite{
     }
     public function GetButtonObject(){ return buttonObject; }
     public function UpdateVoid(_object:ObjectVisitor){
-        widthInt = Math.round(_object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().width);
-        buttonObject.width = widthInt;
-        buttonObject.height = heightInt;
-        buttonObject.id = _object.GetNameString();
-        buttonObject.text = _object.GetNameString();
-        buttonObject.x = _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().x;
-        buttonObject.y =
-            _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().y +
-            _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().height +
-            (_object.GetVisitorUIObject().GetButtonObject().height*_object.GetIndexLocalInt()) +
-            5 +
-            (_object.GetIndexLocalInt()*5);        
+        if(_object.GetExhibitionCurrentObject() != null){
+            widthInt = Math.round(_object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().width);
+            buttonObject.width = widthInt;
+            buttonObject.height = heightInt;
+            buttonObject.id = _object.GetNameString();
+            buttonObject.text = _object.GetNameString();
+            buttonObject.x = _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().x;
+            buttonObject.y =
+                _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().y +
+                _object.GetExhibitionCurrentObject().GetMuseumUIObject().GetButtonObject().height +
+                (_object.GetVisitorUIObject().GetButtonObject().height*_object.GetIndexLocalInt()) +
+                5 +
+                (_object.GetIndexLocalInt()*5);
+        }
     }
 }

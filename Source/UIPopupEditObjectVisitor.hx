@@ -51,6 +51,7 @@ class UIPopupEditObjectVisitor{
     private var selectVisitorListSelectorObject                 :ListSelector               = null;
     private var selectVisitorListSelectorPrevString             :String                     = "";
     private var selectVisitorListSelectorString                 :String                     = "";
+    private var visitorModePrevString                           :String                     = "asd";
 
     public function new(
         _collectionGlobalObject     :CollectionGlobal,
@@ -68,6 +69,13 @@ class UIPopupEditObjectVisitor{
             var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupEditObjectVisitor.xml");
             popupObject = PopupManager.instance.showCustom(iDisplayObject, "Edit Visitor", buttonControlInt, function(_button){
 
+                if(_button == PopupButton.OK){
+                    if(selectedVisitorObject != null){
+
+                        selectedVisitorObject.SetNameStringVoid(inputNameTextInputObject.text);
+
+                    }
+                }
 
 
             });
@@ -95,6 +103,30 @@ class UIPopupEditObjectVisitor{
             selectModeListSelectorObject.method                 = "default";
             selectVisitorListSelectorObject.method              = "default";
 
+            changeAllHardwareManualButtonObject.onClick = function(_e){
+                var loopCounter1Int:Int = 0;
+                while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+                    collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].SetVisitorModeEnumVoid(HARDWARE_MANUAL);
+                    selectModeListSelectorObject.text = "Hardware Manual";
+                    loopCounter1Int ++;
+                }
+            }
+            changeAllSoftwareAutoButtonObject.onClick = function(_e){
+                var loopCounter1Int:Int = 0;
+                while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+                    collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].SetVisitorModeEnumVoid(SOFTWARE_AUTO);
+                    selectModeListSelectorObject.text = "Software Auto";
+                    loopCounter1Int ++;
+                }
+            }
+            changeAllSoftwareManualButtonObject.onClick = function(_e){
+                var loopCounter1Int:Int = 0;
+                while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+                    collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].SetVisitorModeEnumVoid(SOFTWARE_MANUAL);
+                    selectModeListSelectorObject.text = "Software Manual";
+                    loopCounter1Int ++;
+                }
+            }
             UpdateDisplayCurrentExhibitionTextObjectVoid();
             displayExplanationButtonObject.onClick = function(_e){
 
@@ -141,8 +173,26 @@ class UIPopupEditObjectVisitor{
             UpdateDisplayTargetExhibitionTextObjectVoid();
             UpdateDisplayVisitorIndexGlobalTextObjectVoid();
             UpdateDisplayVisitorIndexLocalTextObjectVoid();
-            UpdateInputNameTextInputObjectVoid();
+            //UpdateInputNameTextInputObjectVoid();
+            resetButtonObject.onClick = function(_e){
+
+                if(selectedVisitorObject != null){
+                    selectedVisitorObject.ResetVoid();
+                }
+
+            }
+            resetAllButtonObject.onClick = function(_e){
+
+                var loopCounter1Int:Int = 0;
+                while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+                    collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].ResetVoid();
+                    loopCounter1Int ++;
+                }
+
+            }
             UpdateSelectCurrentExhibitionListSelectorObjectVoid();
+            UpdateSelectModeListSelectorObjectVoid();
+
         }
 
     }
@@ -154,6 +204,17 @@ class UIPopupEditObjectVisitor{
             selectVisitorListSelectorString = selectVisitorListSelectorObject.text;
             if(selectVisitorListSelectorString != selectVisitorListSelectorPrevString){
 
+                selectedVisitorObject = CollectionFunction.FindVisitorObject(collectionGlobalObject, selectVisitorListSelectorString);
+                if(selectCurrentExhibitionListSelectorObject != null && selectedVisitorObject != null){
+                    if(selectedVisitorObject.GetExhibitionCurrentObject() == null){
+                        selectCurrentExhibitionListSelectorObject.text = "In Lobby";
+                    }
+                    else{
+                        selectCurrentExhibitionListSelectorObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
+                    }
+                }
+                selectVisitorListSelectorPrevString = selectVisitorListSelectorString;
+
                 ResetDisplayCurrentExhibitionTextObjectVoid();
                 ResetDisplayExplanationTextObjectVoid();
                 ResetDisplayPopularTagListSelectorObjectVoid();
@@ -163,33 +224,25 @@ class UIPopupEditObjectVisitor{
                 ResetDisplayVisitorIndexLocalTextObjectVoid();
                 ResetInputNameTextInputObjectVoid();
                 ResetSelectCurrentExhibitionListSelectorObject();
+                ResetSelectModeListSelectorObjectVoid();
 
                 ResetSelectVisitorListSelectorObjectVoid();
-
-                selectedVisitorObject = CollectionFunction.FindVisitorObject(collectionGlobalObject, selectVisitorListSelectorString);
-                if(selectCurrentExhibitionListSelectorObject != null && selectedVisitorObject != null){
-                    selectCurrentExhibitionListSelectorObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
-                }
-                selectVisitorListSelectorPrevString = selectVisitorListSelectorString;
 
             }
 
             if(selectedVisitorObject != null){
 
-                changeAllHardwareManualButtonObject.disabled = false;
-                changeAllSoftwareAutoButtonObject.disabled = false;
-                changeAllSoftwareManualButtonObject.disabled = false;
                 displayExplanationButtonObject.disabled = false;
                 displayPopularTagButtonObject.disabled = false;
                 displayPopularTagButtonObject.disabled = false;
                 displaySentenceButtonObject.disabled = false;
                 displaySentenceButtonObject.disabled = false;
                 inputNameTextInputObject.disabled = false;
-                resetAllButtonObject.disabled = false;
                 resetButtonObject.disabled = false;
                 selectCurrentExhibitionListSelectorObject.disabled = false;
                 selectModeListSelectorObject.disabled = false;
 
+                //UpdateInputNameTextInputObjectVoid();
                 UpdateDisplayCurrentExhibitionTextObjectVoid();
                 UpdateDisplayExplanationTextObjectVoid();
                 UpdateDisplayPopularTagListSelectorObjectVoid();
@@ -197,22 +250,19 @@ class UIPopupEditObjectVisitor{
                 UpdateDisplayTargetExhibitionTextObjectVoid();
                 UpdateDisplayVisitorIndexGlobalTextObjectVoid();
                 UpdateDisplayVisitorIndexLocalTextObjectVoid();
-                UpdateInputNameTextInputObjectVoid();
                 UpdateSelectCurrentExhibitionListSelectorObjectVoid();
+                UpdateSelectModeListSelectorObjectVoid();
+
             }
 
             if(selectVisitorListSelectorObject.selectedIndex == -1){
 
-                changeAllHardwareManualButtonObject.disabled = true;
-                changeAllSoftwareAutoButtonObject.disabled = true;
-                changeAllSoftwareManualButtonObject.disabled = true;
                 displayExplanationButtonObject.disabled = true;
                 displayPopularTagButtonObject.disabled = true;
                 displayPopularTagButtonObject.disabled = true;
                 displaySentenceButtonObject.disabled = true;
                 displaySentenceButtonObject.disabled = true;
                 inputNameTextInputObject.disabled = true;
-                resetAllButtonObject.disabled = true;
                 resetButtonObject.disabled = true;
                 selectCurrentExhibitionListSelectorObject.disabled = true;
                 selectModeListSelectorObject.disabled = true;
@@ -253,12 +303,25 @@ class UIPopupEditObjectVisitor{
         if(displayVisitorIndexLocalTextObject != null){ displayVisitorIndexLocalTextObject.text = " "; }
     }
     private function ResetInputNameTextInputObjectVoid(){
-        if(inputNameTextInputObject != null){ inputNameTextInputObject.text = " "; }
+        if(inputNameTextInputObject != null && selectedVisitorObject != null){ inputNameTextInputObject.text = selectedVisitorObject.GetNameString(); }
     }
     private function ResetSelectCurrentExhibitionListSelectorObject(){
-        if(selectCurrentExhibitionListSelectorObject != null){
+        if(selectCurrentExhibitionListSelectorObject != null && selectedVisitorObject != null){
             selectCurrentExhibitionListSelectorObject.selectedIndex = -1;
-            selectCurrentExhibitionListSelectorObject.text = " ";
+            if(selectedVisitorObject.GetExhibitionCurrentObject() != null){
+                selectCurrentExhibitionListSelectorObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
+            }
+            else{
+                selectCurrentExhibitionListSelectorObject.text = "In Lobby";
+            }
+            
+        }
+    }
+    private function ResetSelectModeListSelectorObjectVoid(){
+        if(selectModeListSelectorObject != null && selectedVisitorObject != null){
+            if(selectedVisitorObject.GetVisitorModeEnum() == HARDWARE_MANUAL){ selectModeListSelectorObject.text = "Hardware Manual"; }
+            else if(selectedVisitorObject.GetVisitorModeEnum() == SOFTWARE_AUTO){ selectModeListSelectorObject.text = "Software Auto"; }
+            else if(selectedVisitorObject.GetVisitorModeEnum() == SOFTWARE_MANUAL){ selectModeListSelectorObject.text = "Software Manual"; }
         }
     }
 
@@ -277,7 +340,12 @@ class UIPopupEditObjectVisitor{
 
     private function UpdateDisplayCurrentExhibitionTextObjectVoid(){
         if(selectedVisitorObject != null){
-            displayCurrentExhibitionTextObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
+            if(selectedVisitorObject.GetExhibitionCurrentObject() == null){
+                displayCurrentExhibitionTextObject.text = "In Lobby";
+            }
+            else{
+                displayCurrentExhibitionTextObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
+            }
         }
     }
     private function UpdateDisplayExplanationTextObjectVoid(){
@@ -398,22 +466,48 @@ class UIPopupEditObjectVisitor{
         if(selectedVisitorObject != null){ displayVisitorIndexLocalTextObject.text = "" + selectedVisitorObject.GetIndexLocalInt(); } 
     }
 
+    /*
     private function UpdateInputNameTextInputObjectVoid(){
         if(selectedVisitorObject != null){ inputNameTextInputObject.text = selectedVisitorObject.GetNameString(); }
     }
+    */
 
     private function UpdateSelectCurrentExhibitionListSelectorObjectVoid(){
         if(selectedVisitorObject != null){
-            if(selectCurrentExhibitionListSelectorObject.dataSource.size() != collectionGlobalObject.GetExhibitionObjectArray().length){
-                selectCurrentExhibitionListSelectorObject.dataSource.removeAll();
-                var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
-                    selectCurrentExhibitionListSelectorObject.dataSource.createFromString(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameFullString);
-                    selectCurrentExhibitionListSelectorObject.selectedIndex = -1;
-                    selectCurrentExhibitionListSelectorObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
-                    loopCounter1Int ++;
+            if(selectModeListSelectorObject.text != "Software Manual"){
+                selectCurrentExhibitionListSelectorObject.disabled = true;
+                ResetSelectCurrentExhibitionListSelectorObject();
+                selectCurrentExhibitionListSelectorObject.text = "Please change to Software Manual.";
+            }
+            else{
+                selectCurrentExhibitionListSelectorObject.disabled = false;
+                if(selectCurrentExhibitionListSelectorObject.dataSource.size() != collectionGlobalObject.GetExhibitionObjectArray().length){
+                    selectCurrentExhibitionListSelectorObject.dataSource.removeAll();
+                    var loopCounter1Int:Int = 0;
+                    while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
+                        selectCurrentExhibitionListSelectorObject.dataSource.createFromString(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameFullString);
+                        selectCurrentExhibitionListSelectorObject.selectedIndex = -1;
+                        if(selectedVisitorObject.GetExhibitionCurrentObject() == null){
+                            selectCurrentExhibitionListSelectorObject.text = "In Lobby";
+                        }
+                        else{
+                            selectCurrentExhibitionListSelectorObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
+                        }
+                        loopCounter1Int ++;
+                    }
+                }
+                if(selectCurrentExhibitionListSelectorObject.text != selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameAltString){
+                    selectedVisitorObject.ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, selectCurrentExhibitionListSelectorObject.text));
                 }
             }
+        }
+    }
+
+    private function UpdateSelectModeListSelectorObjectVoid(){
+        if(selectedVisitorObject != null){
+            if(selectModeListSelectorObject.text == "Hardware Manual"){ selectedVisitorObject.SetVisitorModeEnumVoid(HARDWARE_MANUAL); }
+            else if(selectModeListSelectorObject.text == "Software Auto"){ selectedVisitorObject.SetVisitorModeEnumVoid(SOFTWARE_AUTO); }
+            else if(selectModeListSelectorObject.text == "Software Manual"){ selectedVisitorObject.SetVisitorModeEnumVoid(SOFTWARE_MANUAL); }
         }
     }
 

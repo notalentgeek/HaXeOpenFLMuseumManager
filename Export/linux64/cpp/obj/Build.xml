@@ -5104,6 +5104,8 @@
   <file name="src/UIPopupEditObjectVisitor.cpp">
    <depend name="include/CollectionFunction.h"/>
    <depend name="include/CollectionGlobal.h"/>
+   <depend name="include/EnumMuseumType.h"/>
+   <depend name="include/EnumVisitorMode.h"/>
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectTag.h"/>
    <depend name="include/ObjectVisitor.h"/>
@@ -5389,6 +5391,7 @@
    <depend name="include/CollectionFunction.h"/>
    <depend name="include/CollectionGlobal.h"/>
    <depend name="include/EnumMuseumMode.h"/>
+   <depend name="include/EnumVisitorMode.h"/>
    <depend name="include/ObjectGeneratorSentence.h"/>
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectTag.h"/>
@@ -5681,6 +5684,9 @@
   </file>
   <file name="src/EnumTagFeelType.cpp">
    <depend name="include/EnumTagFeelType.h"/>
+  </file>
+  <file name="src/EnumVisitorMode.cpp">
+   <depend name="include/EnumVisitorMode.h"/>
   </file>
   <file name="src/EnumMuseumMode.cpp">
    <depend name="include/EnumMuseumMode.h"/>
@@ -5996,6 +6002,7 @@
    <depend name="include/EnumTagTypeSub.h"/>
    <depend name="include/EnumTagType.h"/>
    <depend name="include/EnumTagFeelType.h"/>
+   <depend name="include/EnumVisitorMode.h"/>
    <depend name="include/EnumMuseumMode.h"/>
    <depend name="include/EnumMuseumType.h"/>
    <depend name="include/sys/net/Socket.h"/>

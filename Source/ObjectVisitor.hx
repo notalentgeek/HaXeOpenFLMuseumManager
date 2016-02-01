@@ -1,3 +1,4 @@
+import CollectionEnum;
 import CollectionFunction;
 import CollectionStruct;
 class ObjectVisitor{
@@ -27,7 +28,6 @@ class ObjectVisitor{
     private var visitorUIObject:ObjectVisitorUI = null;
     public function new(
         _collectionGlobalObject:CollectionGlobal,
-        _exhibitionCurrentObject:ObjectMuseum,
         _indexGlobalInt:Int,
         _nameString:String
     ){
@@ -36,8 +36,9 @@ class ObjectVisitor{
         nameString = _nameString;
         collectionGlobalObject.GetVisitorObjectArray().push(this);
         visitorUIObject = new ObjectVisitorUI(collectionGlobalObject);
-        ChangeExhibitionCurrentVoid(_exhibitionCurrentObject);
         collectionGlobalObject.DetermineExhibitionFullThresholdVoid();
+        GenerateExhibitionTargetVoid(targetInt);
+        visitorModeEnum = SOFTWARE_AUTO;
     }
     private function AddRemoveVisitorFromExhibitionVoid(_isAdd:Bool){
         if(_isAdd == true ){ exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.push(this); }
@@ -154,14 +155,12 @@ class ObjectVisitor{
             UpdateHeavyVoid();
 
             if(exhibitionVisitedObjectArray.length > 1){
-                var threeSentenceString:String = GenerateSentenceVoid(3);
                 sentenceStringArray.push(threeSentenceString);
             }
             if(exhibitionVisitedObjectArray.length >= collectionGlobalObject.GetExhibitionObjectArray().length){ finishedBool = true; }
             timeExhibitionInt = 0;
         }
     }
-    private function GenerateSentenceVoid(_amount:Int){ return ""; }
     private function SortTagCounterVoid(){ tagCounterStructArray.sort(function(_a:StructTagCounter, _b:StructTagCounter){ return _b.tagCounterInt - _a.tagCounterInt; }); }
     public  function AIAutoExhibitionChangeVoid(){
         if(finishedBool == false){
@@ -175,14 +174,19 @@ class ObjectVisitor{
         }
     }
 
-    public function DetermineIndexLocalVoid(){ indexLocalInt = exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.indexOf(this); }
+    public function DetermineIndexLocalVoid(){ if(exhibitionCurrentObject != null){ indexLocalInt = exhibitionCurrentObject.GetChildStruct().childVisitorObjectArray.indexOf(this); } }
     public function GenerateExhibitionTargetVoid(_targetInt:Int){
         CollectionFunction.ClearArray(exhibitionTargetObjectArray);
         var loopCounter1Int:Int = 0;
         /*Sort level 1.*/
         while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
-            if(exhibitionCurrentObject.GetNameStruct().nameAltString != collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameAltString){
+            if(exhibitionCurrentObject == null){
                 exhibitionTargetObjectArray.push(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int]);
+            }
+            else{
+                if(exhibitionCurrentObject.GetNameStruct().nameAltString != collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameAltString){
+                    exhibitionTargetObjectArray.push(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int]);
+                }
             }
             loopCounter1Int ++;
         }
@@ -284,9 +288,17 @@ class ObjectVisitor{
     public function GetTagCounterStructArray(){ return tagCounterStructArray; }
     public function GetTagObjectArray(){ return tagObjectArray; }
     public function GetVisitCorrectExhibitionBool(){ return visitedCorrectExhibitionBool; }
-    public function GetVisitorModeEnum(){ return visitorModeEnum(); }
+    public function GetVisitorModeEnum(){ return visitorModeEnum; }
     public function GetVisitorUIObject(){ return visitorUIObject; }
+    public function ResetVoid(){
+        CollectionFunction.ClearArray(explanationStringArray);
+        CollectionFunction.ClearArray(sentenceStringArray);
+        finishedBool = false;
+        scoreInt = 0;
+        visitedCorrectExhibitionBool = true;
+    }
     public function SetIndexLocalIntVoid(_indexLocalInt:Int){ indexLocalInt = _indexLocalInt; }
+    public function SetNameStringVoid(_nameString:String){ nameString = _nameString; }
     public function SetVisitorModeEnumVoid(_visitorModeEnum:EnumVisitorMode){ visitorModeEnum = _visitorModeEnum; }
     private function UpdateHeavyVoid(){
         exhibitionCurrentObject.SetVisitorCurrentIntVoid(exhibitionCurrentObject.GetVisitorCurrentInt() + 1);
@@ -331,6 +343,8 @@ class ObjectVisitor{
         visitExhibitionStructArray.push(visitorVisitExhibitionStruct);
     }
     public function UpdateVoid(){
+
+        //if(nameString == "Visitor 1"){ trace(visitorModeEnum); }
 
         if(visitorModeEnum == HARDWARE_MANUAL){ /*PENDING:*/ }
         else if(visitorModeEnum == SOFTWARE_AUTO){ AIAutoExhibitionChangeVoid(); }

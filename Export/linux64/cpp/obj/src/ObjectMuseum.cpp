@@ -959,147 +959,158 @@ Void ObjectMuseum_obj::DetermineChildVoid( ){
 					break;
 				}
 				HX_STACK_LINE(179)
-				Dynamic tmp9 = this->nameStruct;		HX_STACK_VAR(tmp9,"tmp9");
+				::CollectionGlobal tmp9 = this->collectionGlobalObject;		HX_STACK_VAR(tmp9,"tmp9");
 				HX_STACK_LINE(179)
-				::String tmp10 = tmp9->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp10,"tmp10");
+				::ObjectVisitor tmp10 = tmp9->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp10,"tmp10");
 				HX_STACK_LINE(179)
-				::CollectionGlobal tmp11 = this->collectionGlobalObject;		HX_STACK_VAR(tmp11,"tmp11");
+				::ObjectMuseum tmp11 = tmp10->GetExhibitionCurrentObject();		HX_STACK_VAR(tmp11,"tmp11");
 				HX_STACK_LINE(179)
-				::ObjectVisitor tmp12 = tmp11->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp12,"tmp12");
+				bool tmp12 = (tmp11 != null());		HX_STACK_VAR(tmp12,"tmp12");
 				HX_STACK_LINE(179)
-				::ObjectMuseum tmp13 = tmp12->GetExhibitionCurrentObject();		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(179)
-				Dynamic tmp14 = tmp13->GetNameStruct();		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(179)
-				::String tmp15 = tmp14->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp15,"tmp15");
-				HX_STACK_LINE(179)
-				bool tmp16 = (tmp10 == tmp15);		HX_STACK_VAR(tmp16,"tmp16");
-				HX_STACK_LINE(179)
-				if ((tmp16)){
+				if ((tmp12)){
 					HX_STACK_LINE(180)
-					Dynamic tmp17 = this->childStruct;		HX_STACK_VAR(tmp17,"tmp17");
+					Dynamic tmp13 = this->nameStruct;		HX_STACK_VAR(tmp13,"tmp13");
 					HX_STACK_LINE(180)
-					::CollectionGlobal tmp18 = this->collectionGlobalObject;		HX_STACK_VAR(tmp18,"tmp18");
+					::String tmp14 = tmp13->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp14,"tmp14");
 					HX_STACK_LINE(180)
-					::ObjectVisitor tmp19 = tmp18->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp19,"tmp19");
+					::CollectionGlobal tmp15 = this->collectionGlobalObject;		HX_STACK_VAR(tmp15,"tmp15");
 					HX_STACK_LINE(180)
-					tmp17->__Field(HX_HCSTRING("childVisitorObjectArray","\x08","\xc6","\xea","\x8c"), hx::paccDynamic )->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp19);
+					::ObjectVisitor tmp16 = tmp15->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp16,"tmp16");
+					HX_STACK_LINE(180)
+					::ObjectMuseum tmp17 = tmp16->GetExhibitionCurrentObject();		HX_STACK_VAR(tmp17,"tmp17");
+					HX_STACK_LINE(180)
+					Dynamic tmp18 = tmp17->GetNameStruct();		HX_STACK_VAR(tmp18,"tmp18");
+					HX_STACK_LINE(180)
+					::String tmp19 = tmp18->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp19,"tmp19");
+					HX_STACK_LINE(180)
+					bool tmp20 = (tmp14 == tmp19);		HX_STACK_VAR(tmp20,"tmp20");
+					HX_STACK_LINE(180)
+					if ((tmp20)){
+						HX_STACK_LINE(181)
+						Dynamic tmp21 = this->childStruct;		HX_STACK_VAR(tmp21,"tmp21");
+						HX_STACK_LINE(181)
+						::CollectionGlobal tmp22 = this->collectionGlobalObject;		HX_STACK_VAR(tmp22,"tmp22");
+						HX_STACK_LINE(181)
+						::ObjectVisitor tmp23 = tmp22->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp23,"tmp23");
+						HX_STACK_LINE(181)
+						tmp21->__Field(HX_HCSTRING("childVisitorObjectArray","\x08","\xc6","\xea","\x8c"), hx::paccDynamic )->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp23);
+					}
 				}
-				HX_STACK_LINE(182)
+				HX_STACK_LINE(184)
 				(loopCounter1Int)++;
 			}
 		}
 		else{
-			HX_STACK_LINE(185)
+			HX_STACK_LINE(187)
 			::EnumMuseumType tmp4 = this->typeEnum;		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(185)
+			HX_STACK_LINE(187)
 			bool tmp5 = (tmp4 == ::EnumMuseumType_obj::FLR);		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(185)
+			HX_STACK_LINE(187)
 			if ((tmp5)){
-				HX_STACK_LINE(186)
+				HX_STACK_LINE(188)
 				int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-				HX_STACK_LINE(187)
+				HX_STACK_LINE(189)
 				while((true)){
-					HX_STACK_LINE(187)
+					HX_STACK_LINE(189)
 					int tmp6 = loopCounter1Int;		HX_STACK_VAR(tmp6,"tmp6");
-					HX_STACK_LINE(187)
+					HX_STACK_LINE(189)
 					::CollectionGlobal tmp7 = this->collectionGlobalObject;		HX_STACK_VAR(tmp7,"tmp7");
-					HX_STACK_LINE(187)
+					HX_STACK_LINE(189)
 					int tmp8 = tmp7->GetRoomObjectArray()->length;		HX_STACK_VAR(tmp8,"tmp8");
-					HX_STACK_LINE(187)
+					HX_STACK_LINE(189)
 					bool tmp9 = (tmp6 < tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-					HX_STACK_LINE(187)
+					HX_STACK_LINE(189)
 					bool tmp10 = !(tmp9);		HX_STACK_VAR(tmp10,"tmp10");
-					HX_STACK_LINE(187)
+					HX_STACK_LINE(189)
 					if ((tmp10)){
-						HX_STACK_LINE(187)
+						HX_STACK_LINE(189)
 						break;
 					}
-					HX_STACK_LINE(188)
+					HX_STACK_LINE(190)
 					Dynamic tmp11 = this->nameStruct;		HX_STACK_VAR(tmp11,"tmp11");
-					HX_STACK_LINE(188)
+					HX_STACK_LINE(190)
 					::String tmp12 = tmp11->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp12,"tmp12");
-					HX_STACK_LINE(188)
+					HX_STACK_LINE(190)
 					::CollectionGlobal tmp13 = this->collectionGlobalObject;		HX_STACK_VAR(tmp13,"tmp13");
-					HX_STACK_LINE(188)
+					HX_STACK_LINE(190)
 					::ObjectMuseum tmp14 = tmp13->GetRoomObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp14,"tmp14");
-					HX_STACK_LINE(188)
+					HX_STACK_LINE(190)
 					::ObjectMuseum tmp15 = tmp14->GetParentObject();		HX_STACK_VAR(tmp15,"tmp15");
-					HX_STACK_LINE(188)
+					HX_STACK_LINE(190)
 					Dynamic tmp16 = tmp15->GetNameStruct();		HX_STACK_VAR(tmp16,"tmp16");
-					HX_STACK_LINE(188)
+					HX_STACK_LINE(190)
 					::String tmp17 = tmp16->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp17,"tmp17");
-					HX_STACK_LINE(188)
+					HX_STACK_LINE(190)
 					bool tmp18 = (tmp12 == tmp17);		HX_STACK_VAR(tmp18,"tmp18");
-					HX_STACK_LINE(188)
+					HX_STACK_LINE(190)
 					if ((tmp18)){
-						HX_STACK_LINE(189)
+						HX_STACK_LINE(191)
 						Dynamic tmp19 = this->childStruct;		HX_STACK_VAR(tmp19,"tmp19");
-						HX_STACK_LINE(189)
+						HX_STACK_LINE(191)
 						::CollectionGlobal tmp20 = this->collectionGlobalObject;		HX_STACK_VAR(tmp20,"tmp20");
-						HX_STACK_LINE(189)
+						HX_STACK_LINE(191)
 						::ObjectMuseum tmp21 = tmp20->GetRoomObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp21,"tmp21");
-						HX_STACK_LINE(189)
+						HX_STACK_LINE(191)
 						tmp19->__Field(HX_HCSTRING("childMuseumObjectArray","\x6c","\x8f","\xed","\x67"), hx::paccDynamic )->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp21);
 					}
-					HX_STACK_LINE(191)
+					HX_STACK_LINE(193)
 					(loopCounter1Int)++;
 				}
 			}
 			else{
-				HX_STACK_LINE(194)
+				HX_STACK_LINE(196)
 				::EnumMuseumType tmp6 = this->typeEnum;		HX_STACK_VAR(tmp6,"tmp6");
-				HX_STACK_LINE(194)
+				HX_STACK_LINE(196)
 				bool tmp7 = (tmp6 == ::EnumMuseumType_obj::ROM);		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(194)
+				HX_STACK_LINE(196)
 				if ((tmp7)){
-					HX_STACK_LINE(195)
+					HX_STACK_LINE(197)
 					int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-					HX_STACK_LINE(196)
+					HX_STACK_LINE(198)
 					while((true)){
-						HX_STACK_LINE(196)
+						HX_STACK_LINE(198)
 						int tmp8 = loopCounter1Int;		HX_STACK_VAR(tmp8,"tmp8");
-						HX_STACK_LINE(196)
+						HX_STACK_LINE(198)
 						::CollectionGlobal tmp9 = this->collectionGlobalObject;		HX_STACK_VAR(tmp9,"tmp9");
-						HX_STACK_LINE(196)
+						HX_STACK_LINE(198)
 						int tmp10 = tmp9->GetExhibitionObjectArray()->length;		HX_STACK_VAR(tmp10,"tmp10");
-						HX_STACK_LINE(196)
+						HX_STACK_LINE(198)
 						bool tmp11 = (tmp8 < tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-						HX_STACK_LINE(196)
+						HX_STACK_LINE(198)
 						bool tmp12 = !(tmp11);		HX_STACK_VAR(tmp12,"tmp12");
-						HX_STACK_LINE(196)
+						HX_STACK_LINE(198)
 						if ((tmp12)){
-							HX_STACK_LINE(196)
+							HX_STACK_LINE(198)
 							break;
 						}
-						HX_STACK_LINE(197)
+						HX_STACK_LINE(199)
 						Dynamic tmp13 = this->nameStruct;		HX_STACK_VAR(tmp13,"tmp13");
-						HX_STACK_LINE(197)
+						HX_STACK_LINE(199)
 						::String tmp14 = tmp13->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp14,"tmp14");
-						HX_STACK_LINE(197)
+						HX_STACK_LINE(199)
 						::CollectionGlobal tmp15 = this->collectionGlobalObject;		HX_STACK_VAR(tmp15,"tmp15");
-						HX_STACK_LINE(197)
+						HX_STACK_LINE(199)
 						::ObjectMuseum tmp16 = tmp15->GetExhibitionObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp16,"tmp16");
-						HX_STACK_LINE(197)
+						HX_STACK_LINE(199)
 						::ObjectMuseum tmp17 = tmp16->GetParentObject();		HX_STACK_VAR(tmp17,"tmp17");
-						HX_STACK_LINE(197)
+						HX_STACK_LINE(199)
 						Dynamic tmp18 = tmp17->GetNameStruct();		HX_STACK_VAR(tmp18,"tmp18");
-						HX_STACK_LINE(197)
+						HX_STACK_LINE(199)
 						::String tmp19 = tmp18->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp19,"tmp19");
-						HX_STACK_LINE(197)
+						HX_STACK_LINE(199)
 						bool tmp20 = (tmp14 == tmp19);		HX_STACK_VAR(tmp20,"tmp20");
-						HX_STACK_LINE(197)
+						HX_STACK_LINE(199)
 						if ((tmp20)){
-							HX_STACK_LINE(198)
+							HX_STACK_LINE(200)
 							Dynamic tmp21 = this->childStruct;		HX_STACK_VAR(tmp21,"tmp21");
-							HX_STACK_LINE(198)
+							HX_STACK_LINE(200)
 							::CollectionGlobal tmp22 = this->collectionGlobalObject;		HX_STACK_VAR(tmp22,"tmp22");
-							HX_STACK_LINE(198)
+							HX_STACK_LINE(200)
 							::ObjectMuseum tmp23 = tmp22->GetExhibitionObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp23,"tmp23");
-							HX_STACK_LINE(198)
+							HX_STACK_LINE(200)
 							tmp21->__Field(HX_HCSTRING("childMuseumObjectArray","\x6c","\x8f","\xed","\x67"), hx::paccDynamic )->__Field(HX_HCSTRING("push","\xda","\x11","\x61","\x4a"), hx::paccDynamic )(tmp23);
 						}
-						HX_STACK_LINE(200)
+						HX_STACK_LINE(202)
 						(loopCounter1Int)++;
 					}
 				}
@@ -1114,33 +1125,33 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,DetermineChildVoid,(void))
 
 Void ObjectMuseum_obj::DetermineFullVoid( ){
 {
-		HX_STACK_FRAME("ObjectMuseum","DetermineFullVoid",0x39b0f279,"ObjectMuseum.DetermineFullVoid","ObjectMuseum.hx",204,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","DetermineFullVoid",0x39b0f279,"ObjectMuseum.DetermineFullVoid","ObjectMuseum.hx",206,0x96e8244d)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(205)
+		HX_STACK_LINE(207)
 		int tmp = this->visitorCurrentInt;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(205)
+		HX_STACK_LINE(207)
 		::CollectionGlobal tmp1 = this->collectionGlobalObject;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(205)
+		HX_STACK_LINE(207)
 		int tmp2 = tmp1->GetExhibitionFullThresholdInt();		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(205)
+		HX_STACK_LINE(207)
 		bool tmp3 = (tmp >= tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(205)
+		HX_STACK_LINE(207)
 		if ((tmp3)){
-			HX_STACK_LINE(205)
+			HX_STACK_LINE(207)
 			this->fullBool = true;
 		}
 		else{
-			HX_STACK_LINE(206)
+			HX_STACK_LINE(208)
 			int tmp4 = this->visitorCurrentInt;		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(206)
+			HX_STACK_LINE(208)
 			::CollectionGlobal tmp5 = this->collectionGlobalObject;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(206)
+			HX_STACK_LINE(208)
 			int tmp6 = tmp5->GetExhibitionFullThresholdInt();		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(206)
+			HX_STACK_LINE(208)
 			bool tmp7 = (tmp4 < tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(206)
+			HX_STACK_LINE(208)
 			if ((tmp7)){
-				HX_STACK_LINE(206)
+				HX_STACK_LINE(208)
 				this->fullBool = false;
 			}
 		}
@@ -1153,11 +1164,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,DetermineFullVoid,(void))
 
 Void ObjectMuseum_obj::DetermineIndexVoid( ){
 {
-		HX_STACK_FRAME("ObjectMuseum","DetermineIndexVoid",0x93890cd0,"ObjectMuseum.DetermineIndexVoid","ObjectMuseum.hx",208,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","DetermineIndexVoid",0x93890cd0,"ObjectMuseum.DetermineIndexVoid","ObjectMuseum.hx",210,0x96e8244d)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(209)
+		HX_STACK_LINE(211)
 		this->DetermineIndexGlobalVoid();
-		HX_STACK_LINE(210)
+		HX_STACK_LINE(212)
 		this->DetermineIndexLocalVoid();
 	}
 return null();
@@ -1168,79 +1179,79 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,DetermineIndexVoid,(void))
 
 Void ObjectMuseum_obj::DetermineSiblingVoid( ){
 {
-		HX_STACK_FRAME("ObjectMuseum","DetermineSiblingVoid",0x044fbd40,"ObjectMuseum.DetermineSiblingVoid","ObjectMuseum.hx",212,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","DetermineSiblingVoid",0x044fbd40,"ObjectMuseum.DetermineSiblingVoid","ObjectMuseum.hx",214,0x96e8244d)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(213)
+		HX_STACK_LINE(215)
 		::CollectionFunction_obj::ClearArray(this->siblingObjectArray);
-		HX_STACK_LINE(214)
+		HX_STACK_LINE(216)
 		Array< ::Dynamic > tempObjectArray = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(tempObjectArray,"tempObjectArray");
-		HX_STACK_LINE(215)
+		HX_STACK_LINE(217)
 		::EnumMuseumType tmp = this->typeEnum;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(215)
+		HX_STACK_LINE(217)
 		bool tmp1 = (tmp == ::EnumMuseumType_obj::EXH);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(215)
+		HX_STACK_LINE(217)
 		if ((tmp1)){
-			HX_STACK_LINE(215)
+			HX_STACK_LINE(217)
 			::CollectionGlobal tmp2 = this->collectionGlobalObject;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(215)
+			HX_STACK_LINE(217)
 			tempObjectArray = tmp2->GetExhibitionObjectArray();
 		}
 		else{
-			HX_STACK_LINE(216)
+			HX_STACK_LINE(218)
 			::EnumMuseumType tmp2 = this->typeEnum;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(216)
+			HX_STACK_LINE(218)
 			bool tmp3 = (tmp2 == ::EnumMuseumType_obj::ROM);		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(216)
+			HX_STACK_LINE(218)
 			if ((tmp3)){
-				HX_STACK_LINE(216)
+				HX_STACK_LINE(218)
 				::CollectionGlobal tmp4 = this->collectionGlobalObject;		HX_STACK_VAR(tmp4,"tmp4");
-				HX_STACK_LINE(216)
+				HX_STACK_LINE(218)
 				tempObjectArray = tmp4->GetRoomObjectArray();
 			}
 		}
-		HX_STACK_LINE(217)
+		HX_STACK_LINE(219)
 		int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-		HX_STACK_LINE(218)
+		HX_STACK_LINE(220)
 		::EnumMuseumType tmp2 = this->typeEnum;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(218)
+		HX_STACK_LINE(220)
 		bool tmp3 = (tmp2 != ::EnumMuseumType_obj::FLR);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(218)
+		HX_STACK_LINE(220)
 		if ((tmp3)){
-			HX_STACK_LINE(219)
+			HX_STACK_LINE(221)
 			while((true)){
-				HX_STACK_LINE(219)
+				HX_STACK_LINE(221)
 				bool tmp4 = (loopCounter1Int < tempObjectArray->length);		HX_STACK_VAR(tmp4,"tmp4");
-				HX_STACK_LINE(219)
+				HX_STACK_LINE(221)
 				bool tmp5 = !(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(219)
+				HX_STACK_LINE(221)
 				if ((tmp5)){
-					HX_STACK_LINE(219)
+					HX_STACK_LINE(221)
 					break;
 				}
-				HX_STACK_LINE(220)
+				HX_STACK_LINE(222)
 				::ObjectMuseum tmp6 = this->parentObject;		HX_STACK_VAR(tmp6,"tmp6");
-				HX_STACK_LINE(220)
+				HX_STACK_LINE(222)
 				Dynamic tmp7 = tmp6->GetNameStruct();		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(220)
+				HX_STACK_LINE(222)
 				::String tmp8 = tmp7->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(220)
+				HX_STACK_LINE(222)
 				::ObjectMuseum tmp9 = tempObjectArray->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(220)
+				HX_STACK_LINE(222)
 				::ObjectMuseum tmp10 = tmp9->GetParentObject();		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(220)
+				HX_STACK_LINE(222)
 				Dynamic tmp11 = tmp10->GetNameStruct();		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(220)
+				HX_STACK_LINE(222)
 				::String tmp12 = tmp11->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(220)
+				HX_STACK_LINE(222)
 				bool tmp13 = (tmp8 == tmp12);		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(220)
+				HX_STACK_LINE(222)
 				if ((tmp13)){
-					HX_STACK_LINE(221)
+					HX_STACK_LINE(223)
 					::ObjectMuseum tmp14 = tempObjectArray->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp14,"tmp14");
-					HX_STACK_LINE(221)
+					HX_STACK_LINE(223)
 					this->siblingObjectArray->push(tmp14);
 				}
-				HX_STACK_LINE(223)
+				HX_STACK_LINE(225)
 				(loopCounter1Int)++;
 			}
 		}
@@ -1252,11 +1263,11 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,DetermineSiblingVoid,(void))
 
 Dynamic ObjectMuseum_obj::GetChildStruct( ){
-	HX_STACK_FRAME("ObjectMuseum","GetChildStruct",0xe7838cf8,"ObjectMuseum.GetChildStruct","ObjectMuseum.hx",227,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetChildStruct",0xe7838cf8,"ObjectMuseum.GetChildStruct","ObjectMuseum.hx",229,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(227)
+	HX_STACK_LINE(229)
 	Dynamic tmp = this->childStruct;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(227)
+	HX_STACK_LINE(229)
 	return tmp;
 }
 
@@ -1264,9 +1275,9 @@ Dynamic ObjectMuseum_obj::GetChildStruct( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetChildStruct,return )
 
 Array< ::String > ObjectMuseum_obj::GetExplanationStringArray( ){
-	HX_STACK_FRAME("ObjectMuseum","GetExplanationStringArray",0x0bf34da8,"ObjectMuseum.GetExplanationStringArray","ObjectMuseum.hx",228,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetExplanationStringArray",0x0bf34da8,"ObjectMuseum.GetExplanationStringArray","ObjectMuseum.hx",230,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(228)
+	HX_STACK_LINE(230)
 	return this->explanationStringArray;
 }
 
@@ -1274,11 +1285,11 @@ Array< ::String > ObjectMuseum_obj::GetExplanationStringArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetExplanationStringArray,return )
 
 bool ObjectMuseum_obj::GetFullBool( ){
-	HX_STACK_FRAME("ObjectMuseum","GetFullBool",0x7d6b0f12,"ObjectMuseum.GetFullBool","ObjectMuseum.hx",229,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetFullBool",0x7d6b0f12,"ObjectMuseum.GetFullBool","ObjectMuseum.hx",231,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(229)
+	HX_STACK_LINE(231)
 	bool tmp = this->fullBool;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(229)
+	HX_STACK_LINE(231)
 	return tmp;
 }
 
@@ -1286,11 +1297,11 @@ bool ObjectMuseum_obj::GetFullBool( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetFullBool,return )
 
 int ObjectMuseum_obj::GetIndexLocalInt( ){
-	HX_STACK_FRAME("ObjectMuseum","GetIndexLocalInt",0x7cdd491d,"ObjectMuseum.GetIndexLocalInt","ObjectMuseum.hx",230,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetIndexLocalInt",0x7cdd491d,"ObjectMuseum.GetIndexLocalInt","ObjectMuseum.hx",232,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(230)
+	HX_STACK_LINE(232)
 	int tmp = this->indexLocalInt;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(230)
+	HX_STACK_LINE(232)
 	return tmp;
 }
 
@@ -1298,11 +1309,11 @@ int ObjectMuseum_obj::GetIndexLocalInt( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetIndexLocalInt,return )
 
 ::ObjectMuseumUI ObjectMuseum_obj::GetMuseumUIObject( ){
-	HX_STACK_FRAME("ObjectMuseum","GetMuseumUIObject",0x9b3f2f7e,"ObjectMuseum.GetMuseumUIObject","ObjectMuseum.hx",231,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetMuseumUIObject",0x9b3f2f7e,"ObjectMuseum.GetMuseumUIObject","ObjectMuseum.hx",233,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(231)
+	HX_STACK_LINE(233)
 	::ObjectMuseumUI tmp = this->museumUIObject;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(231)
+	HX_STACK_LINE(233)
 	return tmp;
 }
 
@@ -1310,11 +1321,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetIndexLocalInt,return )
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetMuseumUIObject,return )
 
 ::EnumMuseumMode ObjectMuseum_obj::GetMuseumModeEnum( ){
-	HX_STACK_FRAME("ObjectMuseum","GetMuseumModeEnum",0x051f8f6f,"ObjectMuseum.GetMuseumModeEnum","ObjectMuseum.hx",232,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetMuseumModeEnum",0x051f8f6f,"ObjectMuseum.GetMuseumModeEnum","ObjectMuseum.hx",234,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(232)
+	HX_STACK_LINE(234)
 	::EnumMuseumMode tmp = this->museumModeEnum;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(232)
+	HX_STACK_LINE(234)
 	return tmp;
 }
 
@@ -1322,11 +1333,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetMuseumUIObject,return )
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetMuseumModeEnum,return )
 
 Dynamic ObjectMuseum_obj::GetNameStruct( ){
-	HX_STACK_FRAME("ObjectMuseum","GetNameStruct",0x46430cf9,"ObjectMuseum.GetNameStruct","ObjectMuseum.hx",233,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetNameStruct",0x46430cf9,"ObjectMuseum.GetNameStruct","ObjectMuseum.hx",235,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(233)
+	HX_STACK_LINE(235)
 	Dynamic tmp = this->nameStruct;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(233)
+	HX_STACK_LINE(235)
 	return tmp;
 }
 
@@ -1334,11 +1345,11 @@ Dynamic ObjectMuseum_obj::GetNameStruct( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetNameStruct,return )
 
 ::ObjectMuseum ObjectMuseum_obj::GetParentObject( ){
-	HX_STACK_FRAME("ObjectMuseum","GetParentObject",0x099b05c2,"ObjectMuseum.GetParentObject","ObjectMuseum.hx",234,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetParentObject",0x099b05c2,"ObjectMuseum.GetParentObject","ObjectMuseum.hx",236,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(234)
+	HX_STACK_LINE(236)
 	::ObjectMuseum tmp = this->parentObject;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(234)
+	HX_STACK_LINE(236)
 	return tmp;
 }
 
@@ -1346,9 +1357,9 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetNameStruct,return )
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetParentObject,return )
 
 Array< ::Dynamic > ObjectMuseum_obj::GetSiblingObjectArray( ){
-	HX_STACK_FRAME("ObjectMuseum","GetSiblingObjectArray",0x1ca2b371,"ObjectMuseum.GetSiblingObjectArray","ObjectMuseum.hx",235,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetSiblingObjectArray",0x1ca2b371,"ObjectMuseum.GetSiblingObjectArray","ObjectMuseum.hx",237,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(235)
+	HX_STACK_LINE(237)
 	return this->siblingObjectArray;
 }
 
@@ -1356,9 +1367,9 @@ Array< ::Dynamic > ObjectMuseum_obj::GetSiblingObjectArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetSiblingObjectArray,return )
 
 Array< ::Dynamic > ObjectMuseum_obj::GetTagObjectArray( ){
-	HX_STACK_FRAME("ObjectMuseum","GetTagObjectArray",0x31252499,"ObjectMuseum.GetTagObjectArray","ObjectMuseum.hx",236,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetTagObjectArray",0x31252499,"ObjectMuseum.GetTagObjectArray","ObjectMuseum.hx",238,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(236)
+	HX_STACK_LINE(238)
 	return this->tagObjectArray;
 }
 
@@ -1366,11 +1377,11 @@ Array< ::Dynamic > ObjectMuseum_obj::GetTagObjectArray( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetTagObjectArray,return )
 
 ::EnumMuseumType ObjectMuseum_obj::GetTypeEnum( ){
-	HX_STACK_FRAME("ObjectMuseum","GetTypeEnum",0xd81d7094,"ObjectMuseum.GetTypeEnum","ObjectMuseum.hx",237,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetTypeEnum",0xd81d7094,"ObjectMuseum.GetTypeEnum","ObjectMuseum.hx",239,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(237)
+	HX_STACK_LINE(239)
 	::EnumMuseumType tmp = this->typeEnum;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(237)
+	HX_STACK_LINE(239)
 	return tmp;
 }
 
@@ -1378,11 +1389,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetTagObjectArray,return )
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetTypeEnum,return )
 
 int ObjectMuseum_obj::GetVisitorCurrentInt( ){
-	HX_STACK_FRAME("ObjectMuseum","GetVisitorCurrentInt",0x43f11eab,"ObjectMuseum.GetVisitorCurrentInt","ObjectMuseum.hx",238,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetVisitorCurrentInt",0x43f11eab,"ObjectMuseum.GetVisitorCurrentInt","ObjectMuseum.hx",240,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(238)
+	HX_STACK_LINE(240)
 	int tmp = this->visitorCurrentInt;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(238)
+	HX_STACK_LINE(240)
 	return tmp;
 }
 
@@ -1390,11 +1401,11 @@ int ObjectMuseum_obj::GetVisitorCurrentInt( ){
 HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetVisitorCurrentInt,return )
 
 int ObjectMuseum_obj::GetVisitorTotalInt( ){
-	HX_STACK_FRAME("ObjectMuseum","GetVisitorTotalInt",0xf507f8c0,"ObjectMuseum.GetVisitorTotalInt","ObjectMuseum.hx",239,0x96e8244d)
+	HX_STACK_FRAME("ObjectMuseum","GetVisitorTotalInt",0xf507f8c0,"ObjectMuseum.GetVisitorTotalInt","ObjectMuseum.hx",241,0x96e8244d)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(239)
+	HX_STACK_LINE(241)
 	int tmp = this->visitorTotalInt;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(239)
+	HX_STACK_LINE(241)
 	return tmp;
 }
 
@@ -1403,15 +1414,15 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,GetVisitorTotalInt,return )
 
 Void ObjectMuseum_obj::Reset( ){
 {
-		HX_STACK_FRAME("ObjectMuseum","Reset",0xf1a39492,"ObjectMuseum.Reset","ObjectMuseum.hx",240,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","Reset",0xf1a39492,"ObjectMuseum.Reset","ObjectMuseum.hx",242,0x96e8244d)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(241)
-		this->fullBool = false;
-		HX_STACK_LINE(242)
-		this->museumModeEnum = null();
 		HX_STACK_LINE(243)
-		this->visitorCurrentInt = (int)0;
+		this->fullBool = false;
 		HX_STACK_LINE(244)
+		this->museumModeEnum = null();
+		HX_STACK_LINE(245)
+		this->visitorCurrentInt = (int)0;
+		HX_STACK_LINE(246)
 		this->visitorTotalInt = (int)0;
 	}
 return null();
@@ -1422,12 +1433,12 @@ HX_DEFINE_DYNAMIC_FUNC0(ObjectMuseum_obj,Reset,(void))
 
 Void ObjectMuseum_obj::SetNameAltStringVoid( ::String _nameAltString){
 {
-		HX_STACK_FRAME("ObjectMuseum","SetNameAltStringVoid",0xc739009e,"ObjectMuseum.SetNameAltStringVoid","ObjectMuseum.hx",246,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","SetNameAltStringVoid",0xc739009e,"ObjectMuseum.SetNameAltStringVoid","ObjectMuseum.hx",248,0x96e8244d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_nameAltString,"_nameAltString")
-		HX_STACK_LINE(246)
+		HX_STACK_LINE(248)
 		Dynamic tmp = this->nameStruct;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(246)
+		HX_STACK_LINE(248)
 		tmp->__FieldRef(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c")) = _nameAltString;
 	}
 return null();
@@ -1438,12 +1449,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectMuseum_obj,SetNameAltStringVoid,(void))
 
 Void ObjectMuseum_obj::SetNameFullStringVoid( ::String _nameFullString){
 {
-		HX_STACK_FRAME("ObjectMuseum","SetNameFullStringVoid",0xe87d4fe4,"ObjectMuseum.SetNameFullStringVoid","ObjectMuseum.hx",247,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","SetNameFullStringVoid",0xe87d4fe4,"ObjectMuseum.SetNameFullStringVoid","ObjectMuseum.hx",249,0x96e8244d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_nameFullString,"_nameFullString")
-		HX_STACK_LINE(247)
+		HX_STACK_LINE(249)
 		Dynamic tmp = this->nameStruct;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(247)
+		HX_STACK_LINE(249)
 		tmp->__FieldRef(HX_HCSTRING("nameFullString","\xeb","\xfd","\x77","\xd9")) = _nameFullString;
 	}
 return null();
@@ -1454,10 +1465,10 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectMuseum_obj,SetNameFullStringVoid,(void))
 
 Void ObjectMuseum_obj::SetMuseumModeEnumVoid( ::EnumMuseumMode _museumModeEnum){
 {
-		HX_STACK_FRAME("ObjectMuseum","SetMuseumModeEnumVoid",0x4443306f,"ObjectMuseum.SetMuseumModeEnumVoid","ObjectMuseum.hx",248,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","SetMuseumModeEnumVoid",0x4443306f,"ObjectMuseum.SetMuseumModeEnumVoid","ObjectMuseum.hx",250,0x96e8244d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_museumModeEnum,"_museumModeEnum")
-		HX_STACK_LINE(248)
+		HX_STACK_LINE(250)
 		this->museumModeEnum = _museumModeEnum;
 	}
 return null();
@@ -1468,10 +1479,10 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectMuseum_obj,SetMuseumModeEnumVoid,(void))
 
 Void ObjectMuseum_obj::SetParentObjectVoid( ::ObjectMuseum _parentObject){
 {
-		HX_STACK_FRAME("ObjectMuseum","SetParentObjectVoid",0x9d87f142,"ObjectMuseum.SetParentObjectVoid","ObjectMuseum.hx",249,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","SetParentObjectVoid",0x9d87f142,"ObjectMuseum.SetParentObjectVoid","ObjectMuseum.hx",251,0x96e8244d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_parentObject,"_parentObject")
-		HX_STACK_LINE(249)
+		HX_STACK_LINE(251)
 		this->parentObject = _parentObject;
 	}
 return null();
@@ -1482,12 +1493,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectMuseum_obj,SetParentObjectVoid,(void))
 
 Void ObjectMuseum_obj::SetTagObjectArrayVoid( Array< ::Dynamic > _tagObjectArray){
 {
-		HX_STACK_FRAME("ObjectMuseum","SetTagObjectArrayVoid",0x3a0ba299,"ObjectMuseum.SetTagObjectArrayVoid","ObjectMuseum.hx",250,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","SetTagObjectArrayVoid",0x3a0ba299,"ObjectMuseum.SetTagObjectArrayVoid","ObjectMuseum.hx",252,0x96e8244d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_tagObjectArray,"_tagObjectArray")
-		HX_STACK_LINE(251)
+		HX_STACK_LINE(253)
 		::CollectionFunction_obj::ClearArray(this->tagObjectArray);
-		HX_STACK_LINE(252)
+		HX_STACK_LINE(254)
 		this->tagObjectArray = _tagObjectArray;
 	}
 return null();
@@ -1498,10 +1509,10 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectMuseum_obj,SetTagObjectArrayVoid,(void))
 
 Void ObjectMuseum_obj::SetVisitorCurrentIntVoid( int _visitorCurrentInt){
 {
-		HX_STACK_FRAME("ObjectMuseum","SetVisitorCurrentIntVoid",0x5764c113,"ObjectMuseum.SetVisitorCurrentIntVoid","ObjectMuseum.hx",254,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","SetVisitorCurrentIntVoid",0x5764c113,"ObjectMuseum.SetVisitorCurrentIntVoid","ObjectMuseum.hx",256,0x96e8244d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_visitorCurrentInt,"_visitorCurrentInt")
-		HX_STACK_LINE(254)
+		HX_STACK_LINE(256)
 		this->visitorCurrentInt = _visitorCurrentInt;
 	}
 return null();
@@ -1512,10 +1523,10 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectMuseum_obj,SetVisitorCurrentIntVoid,(void))
 
 Void ObjectMuseum_obj::SetVisitorTotalIntVoid( int _visitorTotalInt){
 {
-		HX_STACK_FRAME("ObjectMuseum","SetVisitorTotalIntVoid",0xde2bc4a8,"ObjectMuseum.SetVisitorTotalIntVoid","ObjectMuseum.hx",255,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","SetVisitorTotalIntVoid",0xde2bc4a8,"ObjectMuseum.SetVisitorTotalIntVoid","ObjectMuseum.hx",257,0x96e8244d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_visitorTotalInt,"_visitorTotalInt")
-		HX_STACK_LINE(255)
+		HX_STACK_LINE(257)
 		this->visitorTotalInt = _visitorTotalInt;
 	}
 return null();
@@ -1526,290 +1537,290 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectMuseum_obj,SetVisitorTotalIntVoid,(void))
 
 Void ObjectMuseum_obj::UpdateVoid( ){
 {
-		HX_STACK_FRAME("ObjectMuseum","UpdateVoid",0x2298805a,"ObjectMuseum.UpdateVoid","ObjectMuseum.hx",257,0x96e8244d)
+		HX_STACK_FRAME("ObjectMuseum","UpdateVoid",0x2298805a,"ObjectMuseum.UpdateVoid","ObjectMuseum.hx",259,0x96e8244d)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(258)
+		HX_STACK_LINE(260)
 		::EnumMuseumMode tmp = this->museumModeEnum;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(258)
+		HX_STACK_LINE(260)
 		bool tmp1 = (tmp == ::EnumMuseumMode_obj::MRK_DEL);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(258)
+		HX_STACK_LINE(260)
 		if ((tmp1)){
-			HX_STACK_LINE(261)
+			HX_STACK_LINE(263)
 			::EnumMuseumType tmp2 = this->typeEnum;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(261)
+			HX_STACK_LINE(263)
 			bool tmp3 = (tmp2 == ::EnumMuseumType_obj::EXH);		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(261)
+			HX_STACK_LINE(263)
 			if ((tmp3)){
-				HX_STACK_LINE(262)
+				HX_STACK_LINE(264)
 				Dynamic tmp4 = this->childStruct;		HX_STACK_VAR(tmp4,"tmp4");
-				HX_STACK_LINE(262)
+				HX_STACK_LINE(264)
 				int tmp5 = tmp4->__Field(HX_HCSTRING("childVisitorObjectArray","\x08","\xc6","\xea","\x8c"), hx::paccDynamic )->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(262)
+				HX_STACK_LINE(264)
 				bool tmp6 = (tmp5 != (int)0);		HX_STACK_VAR(tmp6,"tmp6");
-				HX_STACK_LINE(262)
+				HX_STACK_LINE(264)
 				if ((tmp6)){
-					HX_STACK_LINE(263)
+					HX_STACK_LINE(265)
 					int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-					HX_STACK_LINE(264)
+					HX_STACK_LINE(266)
 					while((true)){
-						HX_STACK_LINE(264)
+						HX_STACK_LINE(266)
 						int tmp7 = loopCounter1Int;		HX_STACK_VAR(tmp7,"tmp7");
-						HX_STACK_LINE(264)
+						HX_STACK_LINE(266)
 						Dynamic tmp8 = this->childStruct;		HX_STACK_VAR(tmp8,"tmp8");
-						HX_STACK_LINE(264)
+						HX_STACK_LINE(266)
 						int tmp9 = tmp8->__Field(HX_HCSTRING("childVisitorObjectArray","\x08","\xc6","\xea","\x8c"), hx::paccDynamic )->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp9,"tmp9");
-						HX_STACK_LINE(264)
+						HX_STACK_LINE(266)
 						bool tmp10 = (tmp7 < tmp9);		HX_STACK_VAR(tmp10,"tmp10");
-						HX_STACK_LINE(264)
+						HX_STACK_LINE(266)
 						bool tmp11 = !(tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-						HX_STACK_LINE(264)
+						HX_STACK_LINE(266)
 						if ((tmp11)){
-							HX_STACK_LINE(264)
+							HX_STACK_LINE(266)
 							break;
 						}
-						HX_STACK_LINE(265)
+						HX_STACK_LINE(267)
 						Dynamic tmp12 = this->childStruct;		HX_STACK_VAR(tmp12,"tmp12");
-						HX_STACK_LINE(265)
+						HX_STACK_LINE(267)
 						::ObjectVisitor tmp13 = tmp12->__Field(HX_HCSTRING("childVisitorObjectArray","\x08","\xc6","\xea","\x8c"), hx::paccDynamic )->__GetItem(loopCounter1Int);		HX_STACK_VAR(tmp13,"tmp13");
-						HX_STACK_LINE(265)
+						HX_STACK_LINE(267)
 						bool tmp14 = tmp13->GetFinishedBool();		HX_STACK_VAR(tmp14,"tmp14");
-						HX_STACK_LINE(265)
+						HX_STACK_LINE(267)
 						bool tmp15 = (tmp14 == true);		HX_STACK_VAR(tmp15,"tmp15");
-						HX_STACK_LINE(265)
+						HX_STACK_LINE(267)
 						if ((tmp15)){
-							HX_STACK_LINE(266)
+							HX_STACK_LINE(268)
 							Dynamic tmp16 = this->childStruct;		HX_STACK_VAR(tmp16,"tmp16");
-							HX_STACK_LINE(266)
+							HX_STACK_LINE(268)
 							::ObjectVisitor tmp17 = tmp16->__Field(HX_HCSTRING("childVisitorObjectArray","\x08","\xc6","\xea","\x8c"), hx::paccDynamic )->__GetItem(loopCounter1Int);		HX_STACK_VAR(tmp17,"tmp17");
-							HX_STACK_LINE(266)
+							HX_STACK_LINE(268)
 							::CollectionGlobal tmp18 = this->collectionGlobalObject;		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(266)
+							HX_STACK_LINE(268)
 							::ObjectMuseum tmp19 = tmp18->GetArchiveExhibitionObject();		HX_STACK_VAR(tmp19,"tmp19");
-							HX_STACK_LINE(266)
+							HX_STACK_LINE(268)
 							tmp17->ChangeExhibitionCurrentVoid(tmp19);
-							HX_STACK_LINE(267)
+							HX_STACK_LINE(269)
 							this->UpdateHeavyVoid();
 						}
-						HX_STACK_LINE(269)
+						HX_STACK_LINE(271)
 						(loopCounter1Int)++;
 					}
 				}
 				else{
-					HX_STACK_LINE(272)
+					HX_STACK_LINE(274)
 					Dynamic tmp7 = this->childStruct;		HX_STACK_VAR(tmp7,"tmp7");
-					HX_STACK_LINE(272)
+					HX_STACK_LINE(274)
 					int tmp8 = tmp7->__Field(HX_HCSTRING("childMuseumObjectArray","\x6c","\x8f","\xed","\x67"), hx::paccDynamic )->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp8,"tmp8");
-					HX_STACK_LINE(272)
+					HX_STACK_LINE(274)
 					bool tmp9 = (tmp8 == (int)0);		HX_STACK_VAR(tmp9,"tmp9");
-					HX_STACK_LINE(272)
+					HX_STACK_LINE(274)
 					if ((tmp9)){
-						HX_STACK_LINE(273)
-						::CollectionGlobal tmp10 = this->collectionGlobalObject;		HX_STACK_VAR(tmp10,"tmp10");
-						HX_STACK_LINE(273)
-						::haxe::ui::toolkit::containers::Absolute tmp11 = tmp10->GetUIMuseumAbsoluteObject();		HX_STACK_VAR(tmp11,"tmp11");
-						HX_STACK_LINE(273)
-						::ObjectMuseumUI tmp12 = this->museumUIObject;		HX_STACK_VAR(tmp12,"tmp12");
-						HX_STACK_LINE(273)
-						::haxe::ui::toolkit::controls::Button tmp13 = tmp12->GetButtonObject();		HX_STACK_VAR(tmp13,"tmp13");
-						HX_STACK_LINE(273)
-						tmp11->removeChild(tmp13,null());
-						HX_STACK_LINE(274)
-						::CollectionGlobal tmp14 = this->collectionGlobalObject;		HX_STACK_VAR(tmp14,"tmp14");
-						HX_STACK_LINE(274)
-						tmp14->GetExhibitionObjectArray()->remove(hx::ObjectPtr<OBJ_>(this));
 						HX_STACK_LINE(275)
-						this->museumUIObject = null();
+						::CollectionGlobal tmp10 = this->collectionGlobalObject;		HX_STACK_VAR(tmp10,"tmp10");
+						HX_STACK_LINE(275)
+						::haxe::ui::toolkit::containers::Absolute tmp11 = tmp10->GetUIMuseumAbsoluteObject();		HX_STACK_VAR(tmp11,"tmp11");
+						HX_STACK_LINE(275)
+						::ObjectMuseumUI tmp12 = this->museumUIObject;		HX_STACK_VAR(tmp12,"tmp12");
+						HX_STACK_LINE(275)
+						::haxe::ui::toolkit::controls::Button tmp13 = tmp12->GetButtonObject();		HX_STACK_VAR(tmp13,"tmp13");
+						HX_STACK_LINE(275)
+						tmp11->removeChild(tmp13,null());
 						HX_STACK_LINE(276)
+						::CollectionGlobal tmp14 = this->collectionGlobalObject;		HX_STACK_VAR(tmp14,"tmp14");
+						HX_STACK_LINE(276)
+						tmp14->GetExhibitionObjectArray()->remove(hx::ObjectPtr<OBJ_>(this));
+						HX_STACK_LINE(277)
+						this->museumUIObject = null();
+						HX_STACK_LINE(278)
 						this->UpdateHeavyVoid();
 					}
 				}
 			}
 			else{
-				HX_STACK_LINE(279)
+				HX_STACK_LINE(281)
 				::EnumMuseumType tmp4 = this->typeEnum;		HX_STACK_VAR(tmp4,"tmp4");
-				HX_STACK_LINE(279)
+				HX_STACK_LINE(281)
 				bool tmp5 = (tmp4 == ::EnumMuseumType_obj::FLR);		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(279)
+				HX_STACK_LINE(281)
 				if ((tmp5)){
-					HX_STACK_LINE(280)
+					HX_STACK_LINE(282)
 					Dynamic tmp6 = this->childStruct;		HX_STACK_VAR(tmp6,"tmp6");
-					HX_STACK_LINE(280)
+					HX_STACK_LINE(282)
 					int tmp7 = tmp6->__Field(HX_HCSTRING("childMuseumObjectArray","\x6c","\x8f","\xed","\x67"), hx::paccDynamic )->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp7,"tmp7");
-					HX_STACK_LINE(280)
+					HX_STACK_LINE(282)
 					bool tmp8 = (tmp7 != (int)0);		HX_STACK_VAR(tmp8,"tmp8");
-					HX_STACK_LINE(280)
+					HX_STACK_LINE(282)
 					if ((tmp8)){
-						HX_STACK_LINE(281)
+						HX_STACK_LINE(283)
 						int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-						HX_STACK_LINE(282)
+						HX_STACK_LINE(284)
 						while((true)){
-							HX_STACK_LINE(282)
+							HX_STACK_LINE(284)
 							int tmp9 = loopCounter1Int;		HX_STACK_VAR(tmp9,"tmp9");
-							HX_STACK_LINE(282)
+							HX_STACK_LINE(284)
 							::CollectionGlobal tmp10 = this->collectionGlobalObject;		HX_STACK_VAR(tmp10,"tmp10");
-							HX_STACK_LINE(282)
+							HX_STACK_LINE(284)
 							int tmp11 = tmp10->GetRoomObjectArray()->length;		HX_STACK_VAR(tmp11,"tmp11");
-							HX_STACK_LINE(282)
+							HX_STACK_LINE(284)
 							bool tmp12 = (tmp9 < tmp11);		HX_STACK_VAR(tmp12,"tmp12");
-							HX_STACK_LINE(282)
+							HX_STACK_LINE(284)
 							bool tmp13 = !(tmp12);		HX_STACK_VAR(tmp13,"tmp13");
-							HX_STACK_LINE(282)
+							HX_STACK_LINE(284)
 							if ((tmp13)){
-								HX_STACK_LINE(282)
+								HX_STACK_LINE(284)
 								break;
 							}
-							HX_STACK_LINE(283)
+							HX_STACK_LINE(285)
 							Dynamic tmp14 = this->nameStruct;		HX_STACK_VAR(tmp14,"tmp14");
-							HX_STACK_LINE(283)
+							HX_STACK_LINE(285)
 							::String tmp15 = tmp14->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp15,"tmp15");
-							HX_STACK_LINE(283)
+							HX_STACK_LINE(285)
 							::CollectionGlobal tmp16 = this->collectionGlobalObject;		HX_STACK_VAR(tmp16,"tmp16");
-							HX_STACK_LINE(283)
+							HX_STACK_LINE(285)
 							::ObjectMuseum tmp17 = tmp16->GetRoomObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp17,"tmp17");
-							HX_STACK_LINE(283)
+							HX_STACK_LINE(285)
 							::ObjectMuseum tmp18 = tmp17->GetParentObject();		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(283)
+							HX_STACK_LINE(285)
 							Dynamic tmp19 = tmp18->GetNameStruct();		HX_STACK_VAR(tmp19,"tmp19");
-							HX_STACK_LINE(283)
+							HX_STACK_LINE(285)
 							::String tmp20 = tmp19->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp20,"tmp20");
-							HX_STACK_LINE(283)
+							HX_STACK_LINE(285)
 							bool tmp21 = (tmp15 == tmp20);		HX_STACK_VAR(tmp21,"tmp21");
-							HX_STACK_LINE(283)
+							HX_STACK_LINE(285)
 							if ((tmp21)){
-								HX_STACK_LINE(284)
+								HX_STACK_LINE(286)
 								::CollectionGlobal tmp22 = this->collectionGlobalObject;		HX_STACK_VAR(tmp22,"tmp22");
-								HX_STACK_LINE(284)
+								HX_STACK_LINE(286)
 								::ObjectMuseum tmp23 = tmp22->GetRoomObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp23,"tmp23");
-								HX_STACK_LINE(284)
+								HX_STACK_LINE(286)
 								tmp23->SetMuseumModeEnumVoid(::EnumMuseumMode_obj::REQ_CH_PARENT);
-								HX_STACK_LINE(285)
+								HX_STACK_LINE(287)
 								this->UpdateHeavyVoid();
 							}
-							HX_STACK_LINE(287)
+							HX_STACK_LINE(289)
 							(loopCounter1Int)++;
 						}
 					}
 					else{
-						HX_STACK_LINE(290)
+						HX_STACK_LINE(292)
 						Dynamic tmp9 = this->childStruct;		HX_STACK_VAR(tmp9,"tmp9");
-						HX_STACK_LINE(290)
+						HX_STACK_LINE(292)
 						int tmp10 = tmp9->__Field(HX_HCSTRING("childMuseumObjectArray","\x6c","\x8f","\xed","\x67"), hx::paccDynamic )->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp10,"tmp10");
-						HX_STACK_LINE(290)
+						HX_STACK_LINE(292)
 						bool tmp11 = (tmp10 == (int)0);		HX_STACK_VAR(tmp11,"tmp11");
-						HX_STACK_LINE(290)
+						HX_STACK_LINE(292)
 						if ((tmp11)){
-							HX_STACK_LINE(291)
-							::CollectionGlobal tmp12 = this->collectionGlobalObject;		HX_STACK_VAR(tmp12,"tmp12");
-							HX_STACK_LINE(291)
-							::haxe::ui::toolkit::containers::Absolute tmp13 = tmp12->GetUIMuseumAbsoluteObject();		HX_STACK_VAR(tmp13,"tmp13");
-							HX_STACK_LINE(291)
-							::ObjectMuseumUI tmp14 = this->museumUIObject;		HX_STACK_VAR(tmp14,"tmp14");
-							HX_STACK_LINE(291)
-							::haxe::ui::toolkit::controls::Button tmp15 = tmp14->GetButtonObject();		HX_STACK_VAR(tmp15,"tmp15");
-							HX_STACK_LINE(291)
-							tmp13->removeChild(tmp15,null());
-							HX_STACK_LINE(292)
-							::CollectionGlobal tmp16 = this->collectionGlobalObject;		HX_STACK_VAR(tmp16,"tmp16");
-							HX_STACK_LINE(292)
-							tmp16->GetFloorObjectArray()->remove(hx::ObjectPtr<OBJ_>(this));
 							HX_STACK_LINE(293)
-							this->museumUIObject = null();
+							::CollectionGlobal tmp12 = this->collectionGlobalObject;		HX_STACK_VAR(tmp12,"tmp12");
+							HX_STACK_LINE(293)
+							::haxe::ui::toolkit::containers::Absolute tmp13 = tmp12->GetUIMuseumAbsoluteObject();		HX_STACK_VAR(tmp13,"tmp13");
+							HX_STACK_LINE(293)
+							::ObjectMuseumUI tmp14 = this->museumUIObject;		HX_STACK_VAR(tmp14,"tmp14");
+							HX_STACK_LINE(293)
+							::haxe::ui::toolkit::controls::Button tmp15 = tmp14->GetButtonObject();		HX_STACK_VAR(tmp15,"tmp15");
+							HX_STACK_LINE(293)
+							tmp13->removeChild(tmp15,null());
 							HX_STACK_LINE(294)
+							::CollectionGlobal tmp16 = this->collectionGlobalObject;		HX_STACK_VAR(tmp16,"tmp16");
+							HX_STACK_LINE(294)
+							tmp16->GetFloorObjectArray()->remove(hx::ObjectPtr<OBJ_>(this));
+							HX_STACK_LINE(295)
+							this->museumUIObject = null();
+							HX_STACK_LINE(296)
 							this->UpdateHeavyVoid();
 						}
 					}
 				}
 				else{
-					HX_STACK_LINE(297)
+					HX_STACK_LINE(299)
 					::EnumMuseumType tmp6 = this->typeEnum;		HX_STACK_VAR(tmp6,"tmp6");
-					HX_STACK_LINE(297)
+					HX_STACK_LINE(299)
 					bool tmp7 = (tmp6 == ::EnumMuseumType_obj::ROM);		HX_STACK_VAR(tmp7,"tmp7");
-					HX_STACK_LINE(297)
+					HX_STACK_LINE(299)
 					if ((tmp7)){
-						HX_STACK_LINE(298)
+						HX_STACK_LINE(300)
 						Dynamic tmp8 = this->childStruct;		HX_STACK_VAR(tmp8,"tmp8");
-						HX_STACK_LINE(298)
+						HX_STACK_LINE(300)
 						int tmp9 = tmp8->__Field(HX_HCSTRING("childMuseumObjectArray","\x6c","\x8f","\xed","\x67"), hx::paccDynamic )->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp9,"tmp9");
-						HX_STACK_LINE(298)
+						HX_STACK_LINE(300)
 						bool tmp10 = (tmp9 != (int)0);		HX_STACK_VAR(tmp10,"tmp10");
-						HX_STACK_LINE(298)
+						HX_STACK_LINE(300)
 						if ((tmp10)){
-							HX_STACK_LINE(299)
+							HX_STACK_LINE(301)
 							int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-							HX_STACK_LINE(300)
+							HX_STACK_LINE(302)
 							while((true)){
-								HX_STACK_LINE(300)
+								HX_STACK_LINE(302)
 								int tmp11 = loopCounter1Int;		HX_STACK_VAR(tmp11,"tmp11");
-								HX_STACK_LINE(300)
+								HX_STACK_LINE(302)
 								::CollectionGlobal tmp12 = this->collectionGlobalObject;		HX_STACK_VAR(tmp12,"tmp12");
-								HX_STACK_LINE(300)
+								HX_STACK_LINE(302)
 								int tmp13 = tmp12->GetExhibitionObjectArray()->length;		HX_STACK_VAR(tmp13,"tmp13");
-								HX_STACK_LINE(300)
+								HX_STACK_LINE(302)
 								bool tmp14 = (tmp11 < tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-								HX_STACK_LINE(300)
+								HX_STACK_LINE(302)
 								bool tmp15 = !(tmp14);		HX_STACK_VAR(tmp15,"tmp15");
-								HX_STACK_LINE(300)
+								HX_STACK_LINE(302)
 								if ((tmp15)){
-									HX_STACK_LINE(300)
+									HX_STACK_LINE(302)
 									break;
 								}
-								HX_STACK_LINE(301)
+								HX_STACK_LINE(303)
 								Dynamic tmp16 = this->nameStruct;		HX_STACK_VAR(tmp16,"tmp16");
-								HX_STACK_LINE(301)
+								HX_STACK_LINE(303)
 								::String tmp17 = tmp16->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp17,"tmp17");
-								HX_STACK_LINE(301)
+								HX_STACK_LINE(303)
 								::CollectionGlobal tmp18 = this->collectionGlobalObject;		HX_STACK_VAR(tmp18,"tmp18");
-								HX_STACK_LINE(301)
+								HX_STACK_LINE(303)
 								::ObjectMuseum tmp19 = tmp18->GetExhibitionObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp19,"tmp19");
-								HX_STACK_LINE(301)
+								HX_STACK_LINE(303)
 								::ObjectMuseum tmp20 = tmp19->GetParentObject();		HX_STACK_VAR(tmp20,"tmp20");
-								HX_STACK_LINE(301)
+								HX_STACK_LINE(303)
 								Dynamic tmp21 = tmp20->GetNameStruct();		HX_STACK_VAR(tmp21,"tmp21");
-								HX_STACK_LINE(301)
+								HX_STACK_LINE(303)
 								::String tmp22 = tmp21->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp22,"tmp22");
-								HX_STACK_LINE(301)
+								HX_STACK_LINE(303)
 								bool tmp23 = (tmp17 == tmp22);		HX_STACK_VAR(tmp23,"tmp23");
-								HX_STACK_LINE(301)
+								HX_STACK_LINE(303)
 								if ((tmp23)){
-									HX_STACK_LINE(302)
+									HX_STACK_LINE(304)
 									::CollectionGlobal tmp24 = this->collectionGlobalObject;		HX_STACK_VAR(tmp24,"tmp24");
-									HX_STACK_LINE(302)
+									HX_STACK_LINE(304)
 									::ObjectMuseum tmp25 = tmp24->GetExhibitionObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp25,"tmp25");
-									HX_STACK_LINE(302)
+									HX_STACK_LINE(304)
 									tmp25->SetMuseumModeEnumVoid(::EnumMuseumMode_obj::REQ_CH_PARENT);
-									HX_STACK_LINE(303)
+									HX_STACK_LINE(305)
 									this->UpdateHeavyVoid();
 								}
-								HX_STACK_LINE(305)
+								HX_STACK_LINE(307)
 								(loopCounter1Int)++;
 							}
 						}
 						else{
-							HX_STACK_LINE(308)
+							HX_STACK_LINE(310)
 							Dynamic tmp11 = this->childStruct;		HX_STACK_VAR(tmp11,"tmp11");
-							HX_STACK_LINE(308)
+							HX_STACK_LINE(310)
 							int tmp12 = tmp11->__Field(HX_HCSTRING("childMuseumObjectArray","\x6c","\x8f","\xed","\x67"), hx::paccDynamic )->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic );		HX_STACK_VAR(tmp12,"tmp12");
-							HX_STACK_LINE(308)
+							HX_STACK_LINE(310)
 							bool tmp13 = (tmp12 == (int)0);		HX_STACK_VAR(tmp13,"tmp13");
-							HX_STACK_LINE(308)
+							HX_STACK_LINE(310)
 							if ((tmp13)){
-								HX_STACK_LINE(309)
-								::CollectionGlobal tmp14 = this->collectionGlobalObject;		HX_STACK_VAR(tmp14,"tmp14");
-								HX_STACK_LINE(309)
-								::haxe::ui::toolkit::containers::Absolute tmp15 = tmp14->GetUIMuseumAbsoluteObject();		HX_STACK_VAR(tmp15,"tmp15");
-								HX_STACK_LINE(309)
-								::ObjectMuseumUI tmp16 = this->museumUIObject;		HX_STACK_VAR(tmp16,"tmp16");
-								HX_STACK_LINE(309)
-								::haxe::ui::toolkit::controls::Button tmp17 = tmp16->GetButtonObject();		HX_STACK_VAR(tmp17,"tmp17");
-								HX_STACK_LINE(309)
-								tmp15->removeChild(tmp17,null());
-								HX_STACK_LINE(310)
-								::CollectionGlobal tmp18 = this->collectionGlobalObject;		HX_STACK_VAR(tmp18,"tmp18");
-								HX_STACK_LINE(310)
-								tmp18->GetRoomObjectArray()->remove(hx::ObjectPtr<OBJ_>(this));
 								HX_STACK_LINE(311)
-								this->museumUIObject = null();
+								::CollectionGlobal tmp14 = this->collectionGlobalObject;		HX_STACK_VAR(tmp14,"tmp14");
+								HX_STACK_LINE(311)
+								::haxe::ui::toolkit::containers::Absolute tmp15 = tmp14->GetUIMuseumAbsoluteObject();		HX_STACK_VAR(tmp15,"tmp15");
+								HX_STACK_LINE(311)
+								::ObjectMuseumUI tmp16 = this->museumUIObject;		HX_STACK_VAR(tmp16,"tmp16");
+								HX_STACK_LINE(311)
+								::haxe::ui::toolkit::controls::Button tmp17 = tmp16->GetButtonObject();		HX_STACK_VAR(tmp17,"tmp17");
+								HX_STACK_LINE(311)
+								tmp15->removeChild(tmp17,null());
 								HX_STACK_LINE(312)
+								::CollectionGlobal tmp18 = this->collectionGlobalObject;		HX_STACK_VAR(tmp18,"tmp18");
+								HX_STACK_LINE(312)
+								tmp18->GetRoomObjectArray()->remove(hx::ObjectPtr<OBJ_>(this));
+								HX_STACK_LINE(313)
+								this->museumUIObject = null();
+								HX_STACK_LINE(314)
 								this->UpdateHeavyVoid();
 							}
 						}
