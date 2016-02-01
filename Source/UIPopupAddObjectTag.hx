@@ -192,6 +192,8 @@ class UIPopupAddObjectTag{
             selectFeelListSelectorObject                = popupObject.content.findChild("UIPopupAddObjectTag_SelectFeel"        , ListSelector  , true);
             selectGeneralListSelectorObject             = popupObject.content.findChild("UIPopupAddObjectTag_SelectGeneral"     , ListSelector  , true);
             selectTagTypeListSelectorObject             = popupObject.content.findChild("UIPopupAddObjectTag_SelectTagType"     , ListSelector  , true);
+            selectFeelListSelectorObject.method         = "default";
+            selectGeneralListSelectorObject.method      = "default";
             selectTagTypeListSelectorObject.method      = "default";
 
             CreateGUIObjectVoid();

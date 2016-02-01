@@ -1,24 +1,31 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<scrollview width="100%" height="200">
-    <grid width="100%" id="UIPopupAddObjectTag_Grid">
+<?xml encoding="utf-8" version="1.0" ?>
+<scrollview height="200" width="100%" >
+    <grid id="UIPopupAddObjectTag_Grid" width="100%" >
+
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Name" />
-        <textInput text=" " width="100%" id="UIPopupAddObjectTag_InputName" />
-
-        <text text="General" />
-        <listSelector text=" " width="100%" id="UIPopupAddObjectTag_SelectGeneral">
-            <array>Yes, No</array>
-        </listSelector>
+        <textInput id="UIPopupAddObjectTag_InputName" text=" " width="100%" />
+        
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Feel" />
-        <listSelector text=" " width="100%" id="UIPopupAddObjectTag_SelectFeel">
+        <listSelector id="UIPopupAddObjectTag_SelectFeel" text=" " width="100%" >
             <array>POSITIVE, NEUTRAL, NEGATIVE</array>
         </listSelector>
+        
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+        <text text="General" />
+        <listSelector id="UIPopupAddObjectTag_SelectGeneral" text=" " width="100%" >
+            <array>Yes, No</array>
+        </listSelector>
+        
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Tag Type" />
-        <listSelector text=" " width="100%" id="UIPopupAddObjectTag_SelectTagType">
+        <listSelector id="UIPopupAddObjectTag_SelectTagType" text=" " width="100%" >
             <array>
-                
                 ADJ,
                 ADV,
                 NOUN_ALIVE_ABSTRACT,
@@ -35,9 +42,10 @@
                 NOUN_INANIMATE_WEAR_CONCRETE,
                 VERB_INTRANSITIVE,
                 VERB_TRANSITIVE
-
             </array>
         </listSelector>
+
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
     </grid>
 </scrollview>
