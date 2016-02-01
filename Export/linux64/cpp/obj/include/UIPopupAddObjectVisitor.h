@@ -63,7 +63,6 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupAddObjectVisitor_obj : public hx::Object{
 		::haxe::ui::toolkit::containers::Grid gridObject;
 		::haxe::ui::toolkit::controls::TextInput inputNameTextInputObject;
 		::haxe::ui::toolkit::controls::popups::Popup popupObject;
-		::haxe::ui::toolkit::controls::selection::ListSelector selectExhibitionStartListSelectorObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector selectPreviousVisitorListSelectorObject;
 		virtual Void UpdateVoid( );
 		Dynamic UpdateVoid_dyn();

@@ -29,7 +29,6 @@ class UIPopupAddObjectVisitor{
     private var gridObject                                  :Grid               = null;
     private var inputNameTextInputObject                    :TextInput          = null;
     private var popupObject                                 :Popup              = null;
-    private var selectExhibitionStartListSelectorObject     :ListSelector       = null;
     private var selectPreviousVisitorListSelectorObject     :ListSelector       = null;
 
     public function new(_collectionGlobalObject:CollectionGlobal, _root:Root){
@@ -52,7 +51,6 @@ class UIPopupAddObjectVisitor{
                 If a popup controller/component returns null then the popup is not active.*/
                 if(_button == PopupButton.OK){
 
-                    var exhibitionObject:ObjectMuseum = CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, selectExhibitionStartListSelectorObject.text);
                     var visitorObject:ObjectVisitor = new ObjectVisitor(collectionGlobalObject, collectionGlobalObject.PutIndexGlobalVisitorInt(), inputNameTextInputObject.text);
 
                 }
@@ -61,18 +59,11 @@ class UIPopupAddObjectVisitor{
 
             gridObject                              = popupObject.content.findChild("UIPopupAddObjectVisitor_Grid"                  , Grid            , true);
             inputNameTextInputObject                = popupObject.content.findChild("UIPopupAddObjectVisitor_InputName"             , TextInput       , true);
-            selectExhibitionStartListSelectorObject = popupObject.content.findChild("UIPopupAddObjectVisitor_SelectStartExhibition" , ListSelector    , true);
             selectPreviousVisitorListSelectorObject = popupObject.content.findChild("UIPopupAddObjectVisitor_SelectPreviousVisitor" , ListSelector    , true);
 
-            selectExhibitionStartListSelectorObject.method = "default";
             selectPreviousVisitorListSelectorObject.method = "default";
 
             var loopCounter1Int:Int = 0;
-            while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
-                selectExhibitionStartListSelectorObject.dataSource.createFromString(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameFullString);
-                loopCounter1Int ++;
-            }
-            loopCounter1Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
                 selectPreviousVisitorListSelectorObject.dataSource.createFromString(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetNameString());
                 loopCounter1Int ++;

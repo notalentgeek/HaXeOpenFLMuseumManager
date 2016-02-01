@@ -5227,10 +5227,7 @@
    <depend name="include/openfl/_legacy/events/Event.h"/>
   </file>
   <file name="src/UIPopupAddObjectVisitor.cpp">
-   <depend name="include/CollectionFunction.h"/>
    <depend name="include/CollectionGlobal.h"/>
-   <depend name="include/EnumMuseumType.h"/>
-   <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectVisitor.h"/>
    <depend name="include/UIPopupAddObjectVisitor.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Container.h"/>

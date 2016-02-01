@@ -242,7 +242,6 @@ class UIPopupEditObjectVisitor{
                 selectCurrentExhibitionListSelectorObject.disabled = false;
                 selectModeListSelectorObject.disabled = false;
 
-                //UpdateInputNameTextInputObjectVoid();
                 UpdateDisplayCurrentExhibitionTextObjectVoid();
                 UpdateDisplayExplanationTextObjectVoid();
                 UpdateDisplayPopularTagListSelectorObjectVoid();
@@ -465,12 +464,6 @@ class UIPopupEditObjectVisitor{
     private function UpdateDisplayVisitorIndexLocalTextObjectVoid(){
         if(selectedVisitorObject != null){ displayVisitorIndexLocalTextObject.text = "" + selectedVisitorObject.GetIndexLocalInt(); } 
     }
-
-    /*
-    private function UpdateInputNameTextInputObjectVoid(){
-        if(selectedVisitorObject != null){ inputNameTextInputObject.text = selectedVisitorObject.GetNameString(); }
-    }
-    */
 
     private function UpdateSelectCurrentExhibitionListSelectorObjectVoid(){
         if(selectedVisitorObject != null){
