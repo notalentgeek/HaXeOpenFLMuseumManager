@@ -2,8 +2,6 @@
 <scrollview height="200" width="100%" >
     <grid id="UIPopupEditObjectVisitor_Grid" width="100%" >
 
-
-
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Visitor" />

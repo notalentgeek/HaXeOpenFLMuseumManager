@@ -63,6 +63,7 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupAddObjectMuseum_obj : public hx::Object{
 		::haxe::ui::toolkit::containers::Grid gridObject;
 		::haxe::ui::toolkit::controls::selection::ListSelector listSelectorParentObject;
 		cpp::ArrayBase listSelectorTagStructArray;
+		::haxe::ui::toolkit::controls::selection::ListSelector listSelectorTagObject;
 		int listSelectorTypeInt;
 		::haxe::ui::toolkit::controls::selection::ListSelector listSelectorTypeObject;
 		int listSelectorTypePrevInt;

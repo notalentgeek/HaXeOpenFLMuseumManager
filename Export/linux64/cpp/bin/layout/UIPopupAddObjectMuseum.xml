@@ -1,26 +1,39 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<scrollview width="100%" height="200">
-    <grid width="100%" id="UIPopupAddObjectMuseum_Grid">
+<?xml encoding="utf-8" version="1.0" ?>
+<scrollview width="100%" height="200" >
+    <grid id="UIPopupAddObjectMuseum_Grid" width="100%" >
+
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Type"/>
-        <listSelector text=" " width="100%" id="UIPopupAddObjectMuseum_SelectType">
+        <listSelector id="UIPopupAddObjectMuseum_SelectType" text=" " width="100%" >
             <array>Exhibition, Floor, Room</array>
         </listSelector>
 
-        <text text="Parent Object" />
-        <listSelector text=" " width="100%" id="UIPopupAddObjectMuseum_SelectObjectParent">
-            <array></array>
-        </listSelector>
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
-        <text text="Full Name" />
-        <textinput text="" width="100%" id="UIPopupAddObjectMuseum_InputFullName" />
+
+
+        <!--##################################################-->
 
         <text text="Alternative Name" />
-        <textinput text="" width="100%" id="UIPopupAddObjectMuseum_InputAltName" />
+        <textinput disabled="true" id="UIPopupAddObjectMuseum_InputAltName" text=" " width="100%" />
 
-        <text text="Tags" id="UIPopupAddObjectMuseum_SelectTagText_1"/>
-        <listSelector text=" " width="100%" id="UIPopupAddObjectMuseum_SelectTag_1">
-        </listSelector>
+        <!--##################################################-->
+
+        <text text="Full Name" />
+        <textinput disabled="true" id="UIPopupAddObjectMuseum_InputFullName" text=" " width="100%" />
+
+        <!--##################################################-->
+
+        <text text="Parent Object" />
+        <listSelector disabled="true" id="UIPopupAddObjectMuseum_SelectObjectParent" text=" " width="100%" ></listSelector>
+        
+        <!--##################################################-->
+
+        <text id="UIPopupAddObjectMuseum_SelectTagText_1" text="Tags" />
+        <listSelector disabled="true" id="UIPopupAddObjectMuseum_SelectTag_1" text=" " width="100%" ></listSelector>
+
+        <!--##################################################-->
 
     </grid>
 </scrollview>

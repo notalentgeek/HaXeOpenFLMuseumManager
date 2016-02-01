@@ -31,6 +31,7 @@ class UIPopupAddObjectMuseum{
     private var gridObject                  :Grid                           = null;                                 /*Grid layout.*/
     private var listSelectorParentObject    :ListSelector                   = null;                                 /*List selector for parent object.*/
     private var listSelectorTagStructArray  :Array<StructListSelectorTag>   = new Array<StructListSelectorTag>();   /*Array of list selector to choose multiple tags.*/
+    private var listSelectorTagObject       :ListSelector                   = null;
     /*An index to determine which set of parent object can be choose.
     PENDING: Instead of using int I can use listSelectorObject.text instead and then compare the String.*/
     private var listSelectorTypeInt         :Int                            = -1;
@@ -112,7 +113,7 @@ class UIPopupAddObjectMuseum{
             listSelectorTypeObject.method = "default";
 
             CollectionFunction.ClearArray(listSelectorTagStructArray);
-            var listSelectorTagObject:ListSelector = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTag_1", ListSelector, true);
+            listSelectorTagObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTag_1", ListSelector, true);
             listSelectorTagObject.method = "default";
             var listSelectorTagTextObject:Text = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTagText_1", Text, true);
             var listSelectorTagStruct = {
@@ -138,6 +139,21 @@ class UIPopupAddObjectMuseum{
     public function UpdateVoid(){
 
         if(popupObject != null && listSelectorParentObject != null && listSelectorTypeObject != null){
+
+            if(listSelectorTypeObject.selectedIndex == -1 || listSelectorTypeObject.text == "" || listSelectorTypeObject.text == " "){
+                listSelectorParentObject.disabled = true;
+                listSelectorTagObject.disabled = true;
+                nameAltTextInputObject.disabled = true;
+                nameFullTextInputObject.disabled = true;
+            }
+            else{
+                listSelectorTagObject.disabled = false;
+                nameAltTextInputObject.disabled = false;
+                nameFullTextInputObject.disabled = false;
+            }
+            if(listSelectorTypeObject.text != "Floor"){
+                listSelectorParentObject.disabled = false;
+            }
 
             listSelectorTypeInt = listSelectorTypeObject.selectedIndex;
             if(listSelectorTypeInt == -1){ listSelectorParentObject.disabled = true; }
