@@ -207,7 +207,7 @@ Void ObjectMuseumUI_obj::UpdateVoid( ::ObjectMuseum _object,int _widthMaxInt){
 			HX_STACK_LINE(39)
 			Dynamic tmp16 = _object->GetNameStruct();		HX_STACK_VAR(tmp16,"tmp16");
 			HX_STACK_LINE(39)
-			::String tmp17 = tmp16->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp17,"tmp17");
+			::String tmp17 = tmp16->__Field(HX_HCSTRING("nameFullString","\xeb","\xfd","\x77","\xd9"), hx::paccDynamic );		HX_STACK_VAR(tmp17,"tmp17");
 			HX_STACK_LINE(39)
 			tmp15->set_id(tmp17);
 			HX_STACK_LINE(40)
@@ -215,7 +215,7 @@ Void ObjectMuseumUI_obj::UpdateVoid( ::ObjectMuseum _object,int _widthMaxInt){
 			HX_STACK_LINE(40)
 			Dynamic tmp19 = _object->GetNameStruct();		HX_STACK_VAR(tmp19,"tmp19");
 			HX_STACK_LINE(40)
-			::String tmp20 = tmp19->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp20,"tmp20");
+			::String tmp20 = tmp19->__Field(HX_HCSTRING("nameFullString","\xeb","\xfd","\x77","\xd9"), hx::paccDynamic );		HX_STACK_VAR(tmp20,"tmp20");
 			HX_STACK_LINE(40)
 			tmp18->set_text(tmp20);
 			HX_STACK_LINE(41)
@@ -314,7 +314,7 @@ Void ObjectMuseumUI_obj::UpdateVoid( ::ObjectMuseum _object,int _widthMaxInt){
 				HX_STACK_LINE(49)
 				Dynamic tmp22 = _object->GetNameStruct();		HX_STACK_VAR(tmp22,"tmp22");
 				HX_STACK_LINE(49)
-				::String tmp23 = tmp22->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp23,"tmp23");
+				::String tmp23 = tmp22->__Field(HX_HCSTRING("nameFullString","\xeb","\xfd","\x77","\xd9"), hx::paccDynamic );		HX_STACK_VAR(tmp23,"tmp23");
 				HX_STACK_LINE(49)
 				tmp21->set_id(tmp23);
 				HX_STACK_LINE(50)
@@ -322,7 +322,7 @@ Void ObjectMuseumUI_obj::UpdateVoid( ::ObjectMuseum _object,int _widthMaxInt){
 				HX_STACK_LINE(50)
 				Dynamic tmp25 = _object->GetNameStruct();		HX_STACK_VAR(tmp25,"tmp25");
 				HX_STACK_LINE(50)
-				::String tmp26 = tmp25->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp26,"tmp26");
+				::String tmp26 = tmp25->__Field(HX_HCSTRING("nameFullString","\xeb","\xfd","\x77","\xd9"), hx::paccDynamic );		HX_STACK_VAR(tmp26,"tmp26");
 				HX_STACK_LINE(50)
 				tmp24->set_text(tmp26);
 				HX_STACK_LINE(51)
