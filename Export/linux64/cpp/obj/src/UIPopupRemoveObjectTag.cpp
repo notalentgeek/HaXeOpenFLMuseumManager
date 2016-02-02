@@ -325,125 +325,200 @@ Void UIPopupRemoveObjectTag_obj::UpdateVoid( ){
 		}
 		HX_STACK_LINE(91)
 		if ((tmp4)){
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(94)
 			::haxe::ui::toolkit::controls::selection::ListSelector tmp5 = this->selectGeneralOrNotListSelectorObject;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(94)
 			::String tmp6 = tmp5->get_text();		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(93)
-			this->selectGeneralOrNotString = tmp6;
 			HX_STACK_LINE(94)
-			::String tmp7 = this->selectGeneralOrNotString;		HX_STACK_VAR(tmp7,"tmp7");
+			bool tmp7 = (tmp6 == HX_HCSTRING("","\x00","\x00","\x00","\x00"));		HX_STACK_VAR(tmp7,"tmp7");
 			HX_STACK_LINE(94)
-			::String tmp8 = this->selectGeneralOrNotPrevString;		HX_STACK_VAR(tmp8,"tmp8");
+			bool tmp8 = !(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
 			HX_STACK_LINE(94)
-			bool tmp9 = (tmp7 != tmp8);		HX_STACK_VAR(tmp9,"tmp9");
+			bool tmp9 = tmp8;		HX_STACK_VAR(tmp9,"tmp9");
+			HX_STACK_LINE(94)
+			bool tmp10;		HX_STACK_VAR(tmp10,"tmp10");
 			HX_STACK_LINE(94)
 			if ((tmp9)){
+				HX_STACK_LINE(95)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp11 = this->selectGeneralOrNotListSelectorObject;		HX_STACK_VAR(tmp11,"tmp11");
+				HX_STACK_LINE(95)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp12 = tmp11;		HX_STACK_VAR(tmp12,"tmp12");
+				HX_STACK_LINE(95)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp13 = tmp12;		HX_STACK_VAR(tmp13,"tmp13");
+				HX_STACK_LINE(95)
+				::String tmp14 = tmp13->get_text();		HX_STACK_VAR(tmp14,"tmp14");
+				HX_STACK_LINE(95)
+				::String tmp15 = tmp14;		HX_STACK_VAR(tmp15,"tmp15");
+				HX_STACK_LINE(95)
+				::String tmp16 = tmp15;		HX_STACK_VAR(tmp16,"tmp16");
+				HX_STACK_LINE(95)
+				tmp10 = (tmp16 == HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));
+			}
+			else{
+				HX_STACK_LINE(94)
+				tmp10 = true;
+			}
+			HX_STACK_LINE(94)
+			bool tmp11 = !(tmp10);		HX_STACK_VAR(tmp11,"tmp11");
+			HX_STACK_LINE(94)
+			bool tmp12;		HX_STACK_VAR(tmp12,"tmp12");
+			HX_STACK_LINE(94)
+			if ((tmp11)){
 				HX_STACK_LINE(96)
-				::haxe::ui::toolkit::controls::selection::ListSelector tmp10 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp10,"tmp10");
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp13 = this->selectGeneralOrNotListSelectorObject;		HX_STACK_VAR(tmp13,"tmp13");
 				HX_STACK_LINE(96)
-				::haxe::ui::toolkit::data::IDataSource tmp11 = tmp10->get_dataSource();		HX_STACK_VAR(tmp11,"tmp11");
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp14 = tmp13;		HX_STACK_VAR(tmp14,"tmp14");
 				HX_STACK_LINE(96)
-				tmp11->removeAll();
-				HX_STACK_LINE(97)
-				::haxe::ui::toolkit::controls::selection::ListSelector tmp12 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(97)
-				tmp12->set_selectedIndex((int)-1);
+				int tmp15 = tmp14->get_selectedIndex();		HX_STACK_VAR(tmp15,"tmp15");
+				HX_STACK_LINE(96)
+				int tmp16 = tmp15;		HX_STACK_VAR(tmp16,"tmp16");
+				HX_STACK_LINE(96)
+				tmp12 = (tmp16 == (int)-1);
+			}
+			else{
+				HX_STACK_LINE(94)
+				tmp12 = true;
+			}
+			HX_STACK_LINE(93)
+			if ((tmp12)){
+				HX_STACK_LINE(98)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp13 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp13,"tmp13");
+				HX_STACK_LINE(98)
+				tmp13->set_disabled(true);
 				HX_STACK_LINE(99)
-				::String tmp13 = this->selectGeneralOrNotString;		HX_STACK_VAR(tmp13,"tmp13");
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp14 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp14,"tmp14");
 				HX_STACK_LINE(99)
-				bool tmp14 = (tmp13 == HX_HCSTRING("Yes","\x07","\xe1","\x43","\x00"));		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(99)
-				if ((tmp14)){
-					HX_STACK_LINE(101)
+				tmp14->set_selectedIndex((int)-1);
+				HX_STACK_LINE(100)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp15 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp15,"tmp15");
+				HX_STACK_LINE(100)
+				tmp15->set_text(HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));
+			}
+			else{
+				HX_STACK_LINE(102)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp13 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp13,"tmp13");
+				HX_STACK_LINE(102)
+				tmp13->set_disabled(false);
+			}
+			HX_STACK_LINE(104)
+			::haxe::ui::toolkit::controls::selection::ListSelector tmp13 = this->selectGeneralOrNotListSelectorObject;		HX_STACK_VAR(tmp13,"tmp13");
+			HX_STACK_LINE(104)
+			::String tmp14 = tmp13->get_text();		HX_STACK_VAR(tmp14,"tmp14");
+			HX_STACK_LINE(104)
+			this->selectGeneralOrNotString = tmp14;
+			HX_STACK_LINE(105)
+			::String tmp15 = this->selectGeneralOrNotString;		HX_STACK_VAR(tmp15,"tmp15");
+			HX_STACK_LINE(105)
+			::String tmp16 = this->selectGeneralOrNotPrevString;		HX_STACK_VAR(tmp16,"tmp16");
+			HX_STACK_LINE(105)
+			bool tmp17 = (tmp15 != tmp16);		HX_STACK_VAR(tmp17,"tmp17");
+			HX_STACK_LINE(105)
+			if ((tmp17)){
+				HX_STACK_LINE(107)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp18 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp18,"tmp18");
+				HX_STACK_LINE(107)
+				::haxe::ui::toolkit::data::IDataSource tmp19 = tmp18->get_dataSource();		HX_STACK_VAR(tmp19,"tmp19");
+				HX_STACK_LINE(107)
+				tmp19->removeAll();
+				HX_STACK_LINE(108)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp20 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp20,"tmp20");
+				HX_STACK_LINE(108)
+				tmp20->set_selectedIndex((int)-1);
+				HX_STACK_LINE(110)
+				::String tmp21 = this->selectGeneralOrNotString;		HX_STACK_VAR(tmp21,"tmp21");
+				HX_STACK_LINE(110)
+				bool tmp22 = (tmp21 == HX_HCSTRING("Yes","\x07","\xe1","\x43","\x00"));		HX_STACK_VAR(tmp22,"tmp22");
+				HX_STACK_LINE(110)
+				if ((tmp22)){
+					HX_STACK_LINE(112)
 					int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-					HX_STACK_LINE(102)
+					HX_STACK_LINE(113)
 					while((true)){
-						HX_STACK_LINE(102)
-						int tmp15 = loopCounter1Int;		HX_STACK_VAR(tmp15,"tmp15");
-						HX_STACK_LINE(102)
-						::CollectionGlobal tmp16 = this->collectionGlobalObject;		HX_STACK_VAR(tmp16,"tmp16");
-						HX_STACK_LINE(102)
-						int tmp17 = tmp16->GetTagGeneralObjectArray()->length;		HX_STACK_VAR(tmp17,"tmp17");
-						HX_STACK_LINE(102)
-						bool tmp18 = (tmp15 < tmp17);		HX_STACK_VAR(tmp18,"tmp18");
-						HX_STACK_LINE(102)
-						bool tmp19 = !(tmp18);		HX_STACK_VAR(tmp19,"tmp19");
-						HX_STACK_LINE(102)
-						if ((tmp19)){
-							HX_STACK_LINE(102)
+						HX_STACK_LINE(113)
+						int tmp23 = loopCounter1Int;		HX_STACK_VAR(tmp23,"tmp23");
+						HX_STACK_LINE(113)
+						::CollectionGlobal tmp24 = this->collectionGlobalObject;		HX_STACK_VAR(tmp24,"tmp24");
+						HX_STACK_LINE(113)
+						int tmp25 = tmp24->GetTagGeneralObjectArray()->length;		HX_STACK_VAR(tmp25,"tmp25");
+						HX_STACK_LINE(113)
+						bool tmp26 = (tmp23 < tmp25);		HX_STACK_VAR(tmp26,"tmp26");
+						HX_STACK_LINE(113)
+						bool tmp27 = !(tmp26);		HX_STACK_VAR(tmp27,"tmp27");
+						HX_STACK_LINE(113)
+						if ((tmp27)){
+							HX_STACK_LINE(113)
 							break;
 						}
-						HX_STACK_LINE(104)
-						::haxe::ui::toolkit::controls::selection::ListSelector tmp20 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp20,"tmp20");
-						HX_STACK_LINE(104)
-						::haxe::ui::toolkit::data::IDataSource tmp21 = tmp20->get_dataSource();		HX_STACK_VAR(tmp21,"tmp21");
-						HX_STACK_LINE(104)
-						::CollectionGlobal tmp22 = this->collectionGlobalObject;		HX_STACK_VAR(tmp22,"tmp22");
-						HX_STACK_LINE(104)
-						::ObjectTag tmp23 = tmp22->GetTagGeneralObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp23,"tmp23");
-						HX_STACK_LINE(104)
-						::String tmp24 = tmp23->GetNameString();		HX_STACK_VAR(tmp24,"tmp24");
-						HX_STACK_LINE(104)
-						tmp21->createFromString(tmp24,null());
-						HX_STACK_LINE(105)
+						HX_STACK_LINE(115)
+						::haxe::ui::toolkit::controls::selection::ListSelector tmp28 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp28,"tmp28");
+						HX_STACK_LINE(115)
+						::haxe::ui::toolkit::data::IDataSource tmp29 = tmp28->get_dataSource();		HX_STACK_VAR(tmp29,"tmp29");
+						HX_STACK_LINE(115)
+						::CollectionGlobal tmp30 = this->collectionGlobalObject;		HX_STACK_VAR(tmp30,"tmp30");
+						HX_STACK_LINE(115)
+						::ObjectTag tmp31 = tmp30->GetTagGeneralObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp31,"tmp31");
+						HX_STACK_LINE(115)
+						::String tmp32 = tmp31->GetNameString();		HX_STACK_VAR(tmp32,"tmp32");
+						HX_STACK_LINE(115)
+						tmp29->createFromString(tmp32,null());
+						HX_STACK_LINE(116)
 						(loopCounter1Int)++;
 					}
 				}
 				else{
-					HX_STACK_LINE(110)
-					::String tmp15 = this->selectGeneralOrNotString;		HX_STACK_VAR(tmp15,"tmp15");
-					HX_STACK_LINE(110)
-					bool tmp16 = (tmp15 == HX_HCSTRING("No","\x61","\x44","\x00","\x00"));		HX_STACK_VAR(tmp16,"tmp16");
-					HX_STACK_LINE(110)
-					if ((tmp16)){
-						HX_STACK_LINE(112)
+					HX_STACK_LINE(121)
+					::String tmp23 = this->selectGeneralOrNotString;		HX_STACK_VAR(tmp23,"tmp23");
+					HX_STACK_LINE(121)
+					bool tmp24 = (tmp23 == HX_HCSTRING("No","\x61","\x44","\x00","\x00"));		HX_STACK_VAR(tmp24,"tmp24");
+					HX_STACK_LINE(121)
+					if ((tmp24)){
+						HX_STACK_LINE(123)
 						int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-						HX_STACK_LINE(113)
+						HX_STACK_LINE(124)
 						while((true)){
-							HX_STACK_LINE(113)
-							int tmp17 = loopCounter1Int;		HX_STACK_VAR(tmp17,"tmp17");
-							HX_STACK_LINE(113)
-							::CollectionGlobal tmp18 = this->collectionGlobalObject;		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(113)
-							int tmp19 = tmp18->GetTagObjectArray()->length;		HX_STACK_VAR(tmp19,"tmp19");
-							HX_STACK_LINE(113)
-							bool tmp20 = (tmp17 < tmp19);		HX_STACK_VAR(tmp20,"tmp20");
-							HX_STACK_LINE(113)
-							bool tmp21 = !(tmp20);		HX_STACK_VAR(tmp21,"tmp21");
-							HX_STACK_LINE(113)
-							if ((tmp21)){
-								HX_STACK_LINE(113)
+							HX_STACK_LINE(124)
+							int tmp25 = loopCounter1Int;		HX_STACK_VAR(tmp25,"tmp25");
+							HX_STACK_LINE(124)
+							::CollectionGlobal tmp26 = this->collectionGlobalObject;		HX_STACK_VAR(tmp26,"tmp26");
+							HX_STACK_LINE(124)
+							int tmp27 = tmp26->GetTagObjectArray()->length;		HX_STACK_VAR(tmp27,"tmp27");
+							HX_STACK_LINE(124)
+							bool tmp28 = (tmp25 < tmp27);		HX_STACK_VAR(tmp28,"tmp28");
+							HX_STACK_LINE(124)
+							bool tmp29 = !(tmp28);		HX_STACK_VAR(tmp29,"tmp29");
+							HX_STACK_LINE(124)
+							if ((tmp29)){
+								HX_STACK_LINE(124)
 								break;
 							}
-							HX_STACK_LINE(115)
-							::haxe::ui::toolkit::controls::selection::ListSelector tmp22 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp22,"tmp22");
-							HX_STACK_LINE(115)
-							::haxe::ui::toolkit::data::IDataSource tmp23 = tmp22->get_dataSource();		HX_STACK_VAR(tmp23,"tmp23");
-							HX_STACK_LINE(115)
-							::CollectionGlobal tmp24 = this->collectionGlobalObject;		HX_STACK_VAR(tmp24,"tmp24");
-							HX_STACK_LINE(115)
-							::ObjectTag tmp25 = tmp24->GetTagObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp25,"tmp25");
-							HX_STACK_LINE(115)
-							::String tmp26 = tmp25->GetNameString();		HX_STACK_VAR(tmp26,"tmp26");
-							HX_STACK_LINE(115)
-							tmp23->createFromString(tmp26,null());
-							HX_STACK_LINE(116)
+							HX_STACK_LINE(126)
+							::haxe::ui::toolkit::controls::selection::ListSelector tmp30 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp30,"tmp30");
+							HX_STACK_LINE(126)
+							::haxe::ui::toolkit::data::IDataSource tmp31 = tmp30->get_dataSource();		HX_STACK_VAR(tmp31,"tmp31");
+							HX_STACK_LINE(126)
+							::CollectionGlobal tmp32 = this->collectionGlobalObject;		HX_STACK_VAR(tmp32,"tmp32");
+							HX_STACK_LINE(126)
+							::ObjectTag tmp33 = tmp32->GetTagObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp33,"tmp33");
+							HX_STACK_LINE(126)
+							::String tmp34 = tmp33->GetNameString();		HX_STACK_VAR(tmp34,"tmp34");
+							HX_STACK_LINE(126)
+							tmp31->createFromString(tmp34,null());
+							HX_STACK_LINE(127)
 							(loopCounter1Int)++;
 						}
 					}
 				}
-				HX_STACK_LINE(122)
-				::String tmp15 = this->selectGeneralOrNotString;		HX_STACK_VAR(tmp15,"tmp15");
-				HX_STACK_LINE(122)
-				this->selectGeneralOrNotPrevString = tmp15;
+				HX_STACK_LINE(133)
+				::String tmp23 = this->selectGeneralOrNotString;		HX_STACK_VAR(tmp23,"tmp23");
+				HX_STACK_LINE(133)
+				this->selectGeneralOrNotPrevString = tmp23;
 			}
-			HX_STACK_LINE(126)
-			::haxe::ui::toolkit::controls::selection::ListSelector tmp10 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(126)
-			::String tmp11 = tmp10->get_text();		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(126)
-			this->selectTagNameString = tmp11;
+			HX_STACK_LINE(137)
+			::haxe::ui::toolkit::controls::selection::ListSelector tmp18 = this->selectTagListSelectorObject;		HX_STACK_VAR(tmp18,"tmp18");
+			HX_STACK_LINE(137)
+			::String tmp19 = tmp18->get_text();		HX_STACK_VAR(tmp19,"tmp19");
+			HX_STACK_LINE(137)
+			this->selectTagNameString = tmp19;
 		}
 	}
 return null();

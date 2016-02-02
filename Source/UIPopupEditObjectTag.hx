@@ -215,6 +215,31 @@ class UIPopupEditObjectTag{
 
         if(popupObject != null){
 
+            if(
+                selectGeneralListSelectorObject.text            == ""   ||
+                selectGeneralListSelectorObject.text            == " "  ||
+                selectGeneralListSelectorObject.selectedIndex   == -1
+            ){
+                selectTagListSelectorObject.disabled            = true;
+                selectTagListSelectorObject.selectedIndex       = -1;
+                selectTagListSelectorObject.text                = " ";
+            }
+            else{ selectTagListSelectorObject.disabled          = false; }
+            if(
+                selectTagListSelectorObject.text                == ""   ||
+                selectTagListSelectorObject.text                == " "  ||
+                selectTagListSelectorObject.selectedIndex       == -1
+            ){
+                inputTagNameTextInputObject.disabled            = true;
+                selectFeelListSelectorObject.disabled           = true;
+                selectTagTypeListSelectorObject.disabled        = true;
+            }
+            else{
+                inputTagNameTextInputObject.disabled            = false;
+                selectFeelListSelectorObject.disabled           = false;
+                selectTagTypeListSelectorObject.disabled        = false;
+            }
+
             selectTagNameListSelectorString = selectTagListSelectorObject.text;
             if(selectTagNameListSelectorString != selectTagNameListSelectorPrevString){
 

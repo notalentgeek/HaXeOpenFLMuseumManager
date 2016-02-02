@@ -308,146 +308,223 @@ Void UIPopupRemoveObjectMuseum_obj::UpdateVoid( ){
 		}
 		HX_STACK_LINE(75)
 		if ((tmp4)){
-			HX_STACK_LINE(76)
+			HX_STACK_LINE(78)
 			::haxe::ui::toolkit::controls::selection::ListSelector tmp5 = this->selectTypeListSelectorObject;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(76)
-			::String tmp6 = tmp5->get_text();		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(76)
-			this->selectTypeListSelectorTextString = tmp6;
-			HX_STACK_LINE(77)
-			::String tmp7 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(77)
-			::String tmp8 = this->selectTypeListSelectorTextPrevString;		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(77)
-			bool tmp9 = (tmp7 != tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(77)
-			if ((tmp9)){
+			HX_STACK_LINE(78)
+			int tmp6 = tmp5->get_selectedIndex();		HX_STACK_VAR(tmp6,"tmp6");
+			HX_STACK_LINE(78)
+			int tmp7 = (int)-1;		HX_STACK_VAR(tmp7,"tmp7");
+			HX_STACK_LINE(78)
+			bool tmp8 = (tmp6 == tmp7);		HX_STACK_VAR(tmp8,"tmp8");
+			HX_STACK_LINE(78)
+			bool tmp9 = !(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
+			HX_STACK_LINE(78)
+			bool tmp10 = tmp9;		HX_STACK_VAR(tmp10,"tmp10");
+			HX_STACK_LINE(78)
+			bool tmp11;		HX_STACK_VAR(tmp11,"tmp11");
+			HX_STACK_LINE(78)
+			if ((tmp10)){
+				HX_STACK_LINE(79)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp12 = this->selectTypeListSelectorObject;		HX_STACK_VAR(tmp12,"tmp12");
+				HX_STACK_LINE(79)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp13 = tmp12;		HX_STACK_VAR(tmp13,"tmp13");
+				HX_STACK_LINE(79)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp14 = tmp13;		HX_STACK_VAR(tmp14,"tmp14");
+				HX_STACK_LINE(79)
+				::String tmp15 = tmp14->get_text();		HX_STACK_VAR(tmp15,"tmp15");
+				HX_STACK_LINE(79)
+				::String tmp16 = tmp15;		HX_STACK_VAR(tmp16,"tmp16");
+				HX_STACK_LINE(79)
+				::String tmp17 = tmp16;		HX_STACK_VAR(tmp17,"tmp17");
+				HX_STACK_LINE(79)
+				tmp11 = (tmp17 == HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));
+			}
+			else{
 				HX_STACK_LINE(78)
-				::haxe::ui::toolkit::controls::selection::ListSelector tmp10 = this->selectObjectMuseumListSelectorObject;		HX_STACK_VAR(tmp10,"tmp10");
+				tmp11 = true;
+			}
+			HX_STACK_LINE(78)
+			bool tmp12 = !(tmp11);		HX_STACK_VAR(tmp12,"tmp12");
+			HX_STACK_LINE(78)
+			bool tmp13;		HX_STACK_VAR(tmp13,"tmp13");
+			HX_STACK_LINE(78)
+			if ((tmp12)){
+				HX_STACK_LINE(80)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp14 = this->selectTypeListSelectorObject;		HX_STACK_VAR(tmp14,"tmp14");
+				HX_STACK_LINE(80)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp15 = tmp14;		HX_STACK_VAR(tmp15,"tmp15");
+				HX_STACK_LINE(80)
+				::String tmp16 = tmp15->get_text();		HX_STACK_VAR(tmp16,"tmp16");
+				HX_STACK_LINE(80)
+				::String tmp17 = tmp16;		HX_STACK_VAR(tmp17,"tmp17");
+				HX_STACK_LINE(80)
+				tmp13 = (tmp17 == HX_HCSTRING("","\x00","\x00","\x00","\x00"));
+			}
+			else{
 				HX_STACK_LINE(78)
-				tmp10->set_selectedIndex((int)-1);
-				HX_STACK_LINE(79)
-				::haxe::ui::toolkit::controls::selection::ListSelector tmp11 = this->selectObjectMuseumListSelectorObject;		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(79)
-				::haxe::ui::toolkit::data::IDataSource tmp12 = tmp11->get_dataSource();		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(79)
-				tmp12->removeAll();
-				HX_STACK_LINE(81)
+				tmp13 = true;
+			}
+			HX_STACK_LINE(77)
+			if ((tmp13)){
+				HX_STACK_LINE(82)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp14 = this->selectObjectMuseumListSelectorObject;		HX_STACK_VAR(tmp14,"tmp14");
+				HX_STACK_LINE(82)
+				tmp14->set_disabled(true);
+				HX_STACK_LINE(83)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp15 = this->selectObjectMuseumListSelectorObject;		HX_STACK_VAR(tmp15,"tmp15");
+				HX_STACK_LINE(83)
+				tmp15->set_selectedIndex((int)-1);
+				HX_STACK_LINE(84)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp16 = this->selectObjectMuseumListSelectorObject;		HX_STACK_VAR(tmp16,"tmp16");
+				HX_STACK_LINE(84)
+				tmp16->set_text(HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));
+			}
+			else{
+				HX_STACK_LINE(86)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp14 = this->selectObjectMuseumListSelectorObject;		HX_STACK_VAR(tmp14,"tmp14");
+				HX_STACK_LINE(86)
+				tmp14->set_disabled(false);
+			}
+			HX_STACK_LINE(88)
+			::haxe::ui::toolkit::controls::selection::ListSelector tmp14 = this->selectTypeListSelectorObject;		HX_STACK_VAR(tmp14,"tmp14");
+			HX_STACK_LINE(88)
+			::String tmp15 = tmp14->get_text();		HX_STACK_VAR(tmp15,"tmp15");
+			HX_STACK_LINE(88)
+			this->selectTypeListSelectorTextString = tmp15;
+			HX_STACK_LINE(89)
+			::String tmp16 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp16,"tmp16");
+			HX_STACK_LINE(89)
+			::String tmp17 = this->selectTypeListSelectorTextPrevString;		HX_STACK_VAR(tmp17,"tmp17");
+			HX_STACK_LINE(89)
+			bool tmp18 = (tmp16 != tmp17);		HX_STACK_VAR(tmp18,"tmp18");
+			HX_STACK_LINE(89)
+			if ((tmp18)){
+				HX_STACK_LINE(90)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp19 = this->selectObjectMuseumListSelectorObject;		HX_STACK_VAR(tmp19,"tmp19");
+				HX_STACK_LINE(90)
+				tmp19->set_selectedIndex((int)-1);
+				HX_STACK_LINE(91)
+				::haxe::ui::toolkit::controls::selection::ListSelector tmp20 = this->selectObjectMuseumListSelectorObject;		HX_STACK_VAR(tmp20,"tmp20");
+				HX_STACK_LINE(91)
+				::haxe::ui::toolkit::data::IDataSource tmp21 = tmp20->get_dataSource();		HX_STACK_VAR(tmp21,"tmp21");
+				HX_STACK_LINE(91)
+				tmp21->removeAll();
+				HX_STACK_LINE(93)
 				Array< ::Dynamic > tempMuseumObjectArray = null();		HX_STACK_VAR(tempMuseumObjectArray,"tempMuseumObjectArray");
-				HX_STACK_LINE(82)
-				::String tmp13 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(82)
-				bool tmp14 = (tmp13 == HX_HCSTRING("Exhibition","\x6f","\xac","\x10","\xf1"));		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(82)
-				if ((tmp14)){
-					HX_STACK_LINE(82)
-					::CollectionGlobal tmp15 = this->collectionGlobalObject;		HX_STACK_VAR(tmp15,"tmp15");
-					HX_STACK_LINE(82)
-					tempMuseumObjectArray = tmp15->GetExhibitionObjectArray();
-				}
-				else{
-					HX_STACK_LINE(83)
-					::String tmp15 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp15,"tmp15");
-					HX_STACK_LINE(83)
-					bool tmp16 = (tmp15 == HX_HCSTRING("Floor","\xac","\x41","\xc4","\x95"));		HX_STACK_VAR(tmp16,"tmp16");
-					HX_STACK_LINE(83)
-					if ((tmp16)){
-						HX_STACK_LINE(83)
-						::CollectionGlobal tmp17 = this->collectionGlobalObject;		HX_STACK_VAR(tmp17,"tmp17");
-						HX_STACK_LINE(83)
-						tempMuseumObjectArray = tmp17->GetFloorObjectArray();
-					}
-					else{
-						HX_STACK_LINE(84)
-						::String tmp17 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp17,"tmp17");
-						HX_STACK_LINE(84)
-						bool tmp18 = (tmp17 == HX_HCSTRING("Room","\x3b","\x1a","\x88","\x36"));		HX_STACK_VAR(tmp18,"tmp18");
-						HX_STACK_LINE(84)
-						if ((tmp18)){
-							HX_STACK_LINE(84)
-							::CollectionGlobal tmp19 = this->collectionGlobalObject;		HX_STACK_VAR(tmp19,"tmp19");
-							HX_STACK_LINE(84)
-							tempMuseumObjectArray = tmp19->GetRoomObjectArray();
-						}
-					}
-				}
-				HX_STACK_LINE(86)
-				::String tmp15 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp15,"tmp15");
-				HX_STACK_LINE(86)
-				bool tmp16 = (tmp15 == HX_HCSTRING("Exhibition","\x6f","\xac","\x10","\xf1"));		HX_STACK_VAR(tmp16,"tmp16");
-				HX_STACK_LINE(86)
-				bool tmp17 = !(tmp16);		HX_STACK_VAR(tmp17,"tmp17");
-				HX_STACK_LINE(86)
-				bool tmp18 = tmp17;		HX_STACK_VAR(tmp18,"tmp18");
-				HX_STACK_LINE(86)
-				bool tmp19;		HX_STACK_VAR(tmp19,"tmp19");
-				HX_STACK_LINE(86)
-				if ((tmp18)){
-					HX_STACK_LINE(86)
-					::String tmp20 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp20,"tmp20");
-					HX_STACK_LINE(86)
-					::String tmp21 = tmp20;		HX_STACK_VAR(tmp21,"tmp21");
-					HX_STACK_LINE(86)
-					::String tmp22 = tmp21;		HX_STACK_VAR(tmp22,"tmp22");
-					HX_STACK_LINE(86)
-					tmp19 = (tmp22 == HX_HCSTRING("Floor","\xac","\x41","\xc4","\x95"));
-				}
-				else{
-					HX_STACK_LINE(86)
-					tmp19 = true;
-				}
-				HX_STACK_LINE(86)
-				bool tmp20 = !(tmp19);		HX_STACK_VAR(tmp20,"tmp20");
-				HX_STACK_LINE(86)
-				bool tmp21;		HX_STACK_VAR(tmp21,"tmp21");
-				HX_STACK_LINE(86)
-				if ((tmp20)){
-					HX_STACK_LINE(86)
-					::String tmp22 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp22,"tmp22");
-					HX_STACK_LINE(86)
-					::String tmp23 = tmp22;		HX_STACK_VAR(tmp23,"tmp23");
-					HX_STACK_LINE(86)
-					tmp21 = (tmp23 == HX_HCSTRING("Room","\x3b","\x1a","\x88","\x36"));
-				}
-				else{
-					HX_STACK_LINE(86)
-					tmp21 = true;
-				}
-				HX_STACK_LINE(86)
-				if ((tmp21)){
-					HX_STACK_LINE(87)
-					int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-					HX_STACK_LINE(88)
-					while((true)){
-						HX_STACK_LINE(88)
-						bool tmp22 = (loopCounter1Int < tempMuseumObjectArray->length);		HX_STACK_VAR(tmp22,"tmp22");
-						HX_STACK_LINE(88)
-						bool tmp23 = !(tmp22);		HX_STACK_VAR(tmp23,"tmp23");
-						HX_STACK_LINE(88)
-						if ((tmp23)){
-							HX_STACK_LINE(88)
-							break;
-						}
-						HX_STACK_LINE(89)
-						::haxe::ui::toolkit::controls::selection::ListSelector tmp24 = this->selectObjectMuseumListSelectorObject;		HX_STACK_VAR(tmp24,"tmp24");
-						HX_STACK_LINE(89)
-						::haxe::ui::toolkit::data::IDataSource tmp25 = tmp24->get_dataSource();		HX_STACK_VAR(tmp25,"tmp25");
-						HX_STACK_LINE(89)
-						::ObjectMuseum tmp26 = tempMuseumObjectArray->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp26,"tmp26");
-						HX_STACK_LINE(89)
-						Dynamic tmp27 = tmp26->GetNameStruct();		HX_STACK_VAR(tmp27,"tmp27");
-						HX_STACK_LINE(89)
-						::String tmp28 = tmp27->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp28,"tmp28");
-						HX_STACK_LINE(89)
-						tmp25->createFromString(tmp28,null());
-						HX_STACK_LINE(90)
-						(loopCounter1Int)++;
-					}
-				}
 				HX_STACK_LINE(94)
 				::String tmp22 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp22,"tmp22");
 				HX_STACK_LINE(94)
-				this->selectTypeListSelectorTextPrevString = tmp22;
+				bool tmp23 = (tmp22 == HX_HCSTRING("Exhibition","\x6f","\xac","\x10","\xf1"));		HX_STACK_VAR(tmp23,"tmp23");
+				HX_STACK_LINE(94)
+				if ((tmp23)){
+					HX_STACK_LINE(94)
+					::CollectionGlobal tmp24 = this->collectionGlobalObject;		HX_STACK_VAR(tmp24,"tmp24");
+					HX_STACK_LINE(94)
+					tempMuseumObjectArray = tmp24->GetExhibitionObjectArray();
+				}
+				else{
+					HX_STACK_LINE(95)
+					::String tmp24 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp24,"tmp24");
+					HX_STACK_LINE(95)
+					bool tmp25 = (tmp24 == HX_HCSTRING("Floor","\xac","\x41","\xc4","\x95"));		HX_STACK_VAR(tmp25,"tmp25");
+					HX_STACK_LINE(95)
+					if ((tmp25)){
+						HX_STACK_LINE(95)
+						::CollectionGlobal tmp26 = this->collectionGlobalObject;		HX_STACK_VAR(tmp26,"tmp26");
+						HX_STACK_LINE(95)
+						tempMuseumObjectArray = tmp26->GetFloorObjectArray();
+					}
+					else{
+						HX_STACK_LINE(96)
+						::String tmp26 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp26,"tmp26");
+						HX_STACK_LINE(96)
+						bool tmp27 = (tmp26 == HX_HCSTRING("Room","\x3b","\x1a","\x88","\x36"));		HX_STACK_VAR(tmp27,"tmp27");
+						HX_STACK_LINE(96)
+						if ((tmp27)){
+							HX_STACK_LINE(96)
+							::CollectionGlobal tmp28 = this->collectionGlobalObject;		HX_STACK_VAR(tmp28,"tmp28");
+							HX_STACK_LINE(96)
+							tempMuseumObjectArray = tmp28->GetRoomObjectArray();
+						}
+					}
+				}
+				HX_STACK_LINE(98)
+				::String tmp24 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp24,"tmp24");
+				HX_STACK_LINE(98)
+				bool tmp25 = (tmp24 == HX_HCSTRING("Exhibition","\x6f","\xac","\x10","\xf1"));		HX_STACK_VAR(tmp25,"tmp25");
+				HX_STACK_LINE(98)
+				bool tmp26 = !(tmp25);		HX_STACK_VAR(tmp26,"tmp26");
+				HX_STACK_LINE(98)
+				bool tmp27 = tmp26;		HX_STACK_VAR(tmp27,"tmp27");
+				HX_STACK_LINE(98)
+				bool tmp28;		HX_STACK_VAR(tmp28,"tmp28");
+				HX_STACK_LINE(98)
+				if ((tmp27)){
+					HX_STACK_LINE(98)
+					::String tmp29 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp29,"tmp29");
+					HX_STACK_LINE(98)
+					::String tmp30 = tmp29;		HX_STACK_VAR(tmp30,"tmp30");
+					HX_STACK_LINE(98)
+					::String tmp31 = tmp30;		HX_STACK_VAR(tmp31,"tmp31");
+					HX_STACK_LINE(98)
+					tmp28 = (tmp31 == HX_HCSTRING("Floor","\xac","\x41","\xc4","\x95"));
+				}
+				else{
+					HX_STACK_LINE(98)
+					tmp28 = true;
+				}
+				HX_STACK_LINE(98)
+				bool tmp29 = !(tmp28);		HX_STACK_VAR(tmp29,"tmp29");
+				HX_STACK_LINE(98)
+				bool tmp30;		HX_STACK_VAR(tmp30,"tmp30");
+				HX_STACK_LINE(98)
+				if ((tmp29)){
+					HX_STACK_LINE(98)
+					::String tmp31 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp31,"tmp31");
+					HX_STACK_LINE(98)
+					::String tmp32 = tmp31;		HX_STACK_VAR(tmp32,"tmp32");
+					HX_STACK_LINE(98)
+					tmp30 = (tmp32 == HX_HCSTRING("Room","\x3b","\x1a","\x88","\x36"));
+				}
+				else{
+					HX_STACK_LINE(98)
+					tmp30 = true;
+				}
+				HX_STACK_LINE(98)
+				if ((tmp30)){
+					HX_STACK_LINE(99)
+					int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
+					HX_STACK_LINE(100)
+					while((true)){
+						HX_STACK_LINE(100)
+						bool tmp31 = (loopCounter1Int < tempMuseumObjectArray->length);		HX_STACK_VAR(tmp31,"tmp31");
+						HX_STACK_LINE(100)
+						bool tmp32 = !(tmp31);		HX_STACK_VAR(tmp32,"tmp32");
+						HX_STACK_LINE(100)
+						if ((tmp32)){
+							HX_STACK_LINE(100)
+							break;
+						}
+						HX_STACK_LINE(101)
+						::haxe::ui::toolkit::controls::selection::ListSelector tmp33 = this->selectObjectMuseumListSelectorObject;		HX_STACK_VAR(tmp33,"tmp33");
+						HX_STACK_LINE(101)
+						::haxe::ui::toolkit::data::IDataSource tmp34 = tmp33->get_dataSource();		HX_STACK_VAR(tmp34,"tmp34");
+						HX_STACK_LINE(101)
+						::ObjectMuseum tmp35 = tempMuseumObjectArray->__get(loopCounter1Int).StaticCast< ::ObjectMuseum >();		HX_STACK_VAR(tmp35,"tmp35");
+						HX_STACK_LINE(101)
+						Dynamic tmp36 = tmp35->GetNameStruct();		HX_STACK_VAR(tmp36,"tmp36");
+						HX_STACK_LINE(101)
+						::String tmp37 = tmp36->__Field(HX_HCSTRING("nameAltString","\x0f","\xa7","\x65","\x6c"), hx::paccDynamic );		HX_STACK_VAR(tmp37,"tmp37");
+						HX_STACK_LINE(101)
+						tmp34->createFromString(tmp37,null());
+						HX_STACK_LINE(102)
+						(loopCounter1Int)++;
+					}
+				}
+				HX_STACK_LINE(106)
+				::String tmp31 = this->selectTypeListSelectorTextString;		HX_STACK_VAR(tmp31,"tmp31");
+				HX_STACK_LINE(106)
+				this->selectTypeListSelectorTextPrevString = tmp31;
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 <?xml encoding="utf-8" version="1.0" ?>
-<scrollview width="100%" height="200" >
+<scrollview height="200" width="100%" >
     <grid id="UIPopupAddObjectMuseum_Grid" width="100%" >
 
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->

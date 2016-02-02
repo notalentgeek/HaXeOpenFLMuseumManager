@@ -90,6 +90,17 @@ class UIPopupRemoveObjectTag{
 
         if(popupObject != null && selectTagListSelectorObject != null && selectGeneralOrNotListSelectorObject != null){
 
+            if(
+                selectGeneralOrNotListSelectorObject.text           == ""   ||
+                selectGeneralOrNotListSelectorObject.text           == " "  ||
+                selectGeneralOrNotListSelectorObject.selectedIndex  == -1
+            ){
+                selectTagListSelectorObject.disabled                = true;
+                selectTagListSelectorObject.selectedIndex           = -1;
+                selectTagListSelectorObject.text                    = " ";
+            }
+            else{ selectTagListSelectorObject.disabled              = false; }
+
             selectGeneralOrNotString = selectGeneralOrNotListSelectorObject.text;
             if(selectGeneralOrNotString != selectGeneralOrNotPrevString){
 

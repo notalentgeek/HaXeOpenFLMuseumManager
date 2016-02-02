@@ -140,6 +140,31 @@ class UIPopupEditObjectMuseum{
 
         if(popupObject != null){
 
+            if(
+                selectTypeListSelectorObject.text                   == ""   ||
+                selectTypeListSelectorObject.text                   == " "  ||
+                selectTypeListSelectorObject.selectedIndex          == -1
+            ){
+                selectObjectMuseumListSelectorObject.disabled       = true;
+                selectObjectMuseumListSelectorObject.selectedIndex  = -1;
+                selectObjectMuseumListSelectorObject.text           = " ";
+            }
+            else{ selectObjectMuseumListSelectorObject.disabled = false; }
+            if(
+                selectObjectMuseumListSelectorObject.text           == ""   ||
+                selectObjectMuseumListSelectorObject.text           == " "  ||
+                selectObjectMuseumListSelectorObject.selectedIndex  == -1
+            ){
+                nameAltTextInputObject.disabled                     = true;
+                nameFullTextInputObject.disabled                    = true;
+                selectParentNameFullListSelectorObject.disabled     = true;
+            }
+            else{
+                nameAltTextInputObject.disabled                     = false;
+                nameFullTextInputObject.disabled                    = false;
+                selectParentNameFullListSelectorObject.disabled     = false;
+            }
+
             if(selectTypeListSelectorObject.selectedIndex != -1){
 
                 selectTypeListSelectorString = selectTypeListSelectorObject.text;
@@ -349,12 +374,11 @@ class UIPopupEditObjectMuseum{
                 while(loopCounter1Int <= listSelectorTagStructArray.length){
 
                     var tempListSelectorTagObject:ListSelector = popupObject.content.findChild("UIPopupEditObjectMuseum_SelectTag_" + loopCounter1Int, ListSelector, true);
-                    tempUsedTagStringArray.remove(tempListSelectorTagObject.text);
+                    if(tempListSelectorTagObject != null){ tempUsedTagStringArray.remove(tempListSelectorTagObject.text); }
                     loopCounter1Int ++;
 
                 }
                 loopCounter1Int = 0;
-                trace("TEST9.");
                 while(loopCounter1Int < tempUsedTagStringArray.length){
 
                     listSelectorTagObject.dataSource.createFromString(tempUsedTagStringArray[loopCounter1Int]);

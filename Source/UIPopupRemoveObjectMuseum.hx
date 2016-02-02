@@ -73,6 +73,18 @@ class UIPopupRemoveObjectMuseum{
     public function UpdateVoid(){
 
         if(popupObject != null && selectTypeListSelectorObject != null && selectObjectMuseumListSelectorObject != null){
+
+            if(
+                selectTypeListSelectorObject.selectedIndex          == -1   ||
+                selectTypeListSelectorObject.text                   == " "  ||
+                selectTypeListSelectorObject.text                   == ""
+            ){
+                selectObjectMuseumListSelectorObject.disabled       = true;
+                selectObjectMuseumListSelectorObject.selectedIndex  = -1;
+                selectObjectMuseumListSelectorObject.text           = " ";
+            }
+            else{ selectObjectMuseumListSelectorObject.disabled     = false; }
+
             selectTypeListSelectorTextString = selectTypeListSelectorObject.text;
             if(selectTypeListSelectorTextString != selectTypeListSelectorTextPrevString){
                 selectObjectMuseumListSelectorObject.selectedIndex = -1;

@@ -1,27 +1,45 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<scrollview width="100%" height="200">
-    <grid width="100%" id="UIPopupEditObjectMuseum_Grid">
+<?xml encoding="utf-8" version="1.0" ?>
+<scrollview  width="100%" height="200" >
+    <grid id="UIPopupEditObjectMuseum_Grid" width="100%" >
 
-        <text text="Type"/>
-        <listSelector text=" " width="100%" id="UIPopupEditObjectMuseum_SelectType">
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+        <text text="Type" /> 
+        <listSelector id="UIPopupEditObjectMuseum_SelectType" text=" " width="100%" >
             <array>Exhibition, Floor, Room</array>
         </listSelector>
 
-        <text text="Museum Object"/>
-        <listSelector text=" " width="100%" id="UIPopupEditObjectMuseum_SelectObjectMuseum">
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+
+        <!--##################################################-->
+
+        <text text="Museum Object" />
+        <listSelector disabled="true" id="UIPopupEditObjectMuseum_SelectObjectMuseum" text=" " width="100%" >
             <array>Exhibition, Floor, Room</array>
         </listSelector>
+
+        <!--##################################################-->
+
+
+
+        <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
         <text text="Parent Object" />
-        <listSelector text=" " width="100%" id="UIPopupEditObjectMuseum_SelectParentObject">
-            <array></array>
-        </listSelector>
+        <listSelector disabled="true" id="UIPopupEditObjectMuseum_SelectParentObject" text=" " width="100%" ></listSelector>
+
+        <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
         <text text="Full Name" />
-        <textinput text="" width="100%" id="UIPopupEditObjectMuseum_InputFullName" />
+        <textinput disabled="true" id="UIPopupEditObjectMuseum_InputFullName" text="" width="100%" />
+
+        <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
         <text text="Alternative Name" />
-        <textinput text="" width="100%" id="UIPopupEditObjectMuseum_InputAltName" />
+        <textinput disabled="true" id="UIPopupEditObjectMuseum_InputAltName" text="" width="100%" />
+
+        <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
     </grid>
 </scrollview>
