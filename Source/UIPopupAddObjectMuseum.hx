@@ -196,6 +196,16 @@ class UIPopupAddObjectMuseum{
                         gridObject.removeChild(listSelectorTagStructArray[loopCounter1Int].listSelectorObject);
                         gridObject.removeChild(listSelectorTagStructArray[loopCounter1Int].textObject);
                         listSelectorTagStructArray.remove(listSelectorTagStructArray[loopCounter1Int]);
+
+                        /*Re - adjust the list selector id.*/
+                        var loopCounter2Int:Int = 1;
+                        while(loopCounter2Int <= listSelectorTagStructArray.length){
+
+                            listSelectorTagStructArray[loopCounter2Int - 1].listSelectorObject.id = "UIPopupEditObjectMuseum_SelectTag_" + loopCounter2Int;
+                            listSelectorTagStructArray[loopCounter2Int - 1].textObject.id = "UIPopupEditObjectMuseum_SelectTagText_" + loopCounter2Int;
+                            loopCounter2Int ++;
+
+                        }
                     }
                 }
                 else if(listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex == 0 && listSelectorTagStructArray.length == 1){

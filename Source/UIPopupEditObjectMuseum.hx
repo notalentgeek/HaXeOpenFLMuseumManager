@@ -320,11 +320,15 @@ class UIPopupEditObjectMuseum{
 
             /*For when the ListSelector struct array is having lenght equal to 1 and loopCounter1Int is not having index equal to the ListSelector array length minus 1,
                 reset the value of the of the following ListSelector.
-            If the condition other than those, remove the ListSelector from the ListSelector struct array and from the grid layout.*/
+            If the condition other than those, remove the ListSelector from the ListSelector struct array and from the grid layout.
+            This codes below affects when user deleting tags.*/
             var loopCounter1Int:Int = 0;
             while(loopCounter1Int < listSelectorTagStructArray.length){
 
-                if(listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex == 0 && listSelectorTagStructArray.length > 1){
+                if(
+                    listSelectorTagStructArray.length                                               >  1 &&
+                    listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex    == 0
+                ){
                     if(loopCounter1Int == listSelectorTagStructArray.length - 1){
                         listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex = -1;
                     }
@@ -332,6 +336,16 @@ class UIPopupEditObjectMuseum{
                         gridObject.removeChild(listSelectorTagStructArray[loopCounter1Int].listSelectorObject);
                         gridObject.removeChild(listSelectorTagStructArray[loopCounter1Int].textObject);
                         listSelectorTagStructArray.remove(listSelectorTagStructArray[loopCounter1Int]);
+
+                        /*Re - adjust the list selector id.*/
+                        var loopCounter2Int:Int = 1;
+                        while(loopCounter2Int <= listSelectorTagStructArray.length){
+
+                            listSelectorTagStructArray[loopCounter2Int - 1].listSelectorObject.id = "UIPopupEditObjectMuseum_SelectTag_" + loopCounter2Int;
+                            listSelectorTagStructArray[loopCounter2Int - 1].textObject.id = "UIPopupEditObjectMuseum_SelectTagText_" + loopCounter2Int;
+                            loopCounter2Int ++;
+
+                        }
                     }
                 }
                 else if(listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex == 0 && listSelectorTagStructArray.length == 1){
@@ -365,19 +379,25 @@ class UIPopupEditObjectMuseum{
                 gridObject.addChild(listSelectorTagObject);
 
                 var tempUsedTagStringArray:Array<String> = new Array<String>();
+                /*This loop is for adding every possible tags into the list selector.*/
                 var loopCounter1Int:Int = 0;
                 while(loopCounter1Int < collectionGlobalObject.GetTagObjectArray().length){
                     tempUsedTagStringArray.push(collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString());
                     loopCounter1Int ++;
                 }
+                /*This loop is for removing tag that is inputted in previous list selector.*/
                 loopCounter1Int = 1;
                 while(loopCounter1Int <= listSelectorTagStructArray.length){
 
                     var tempListSelectorTagObject:ListSelector = popupObject.content.findChild("UIPopupEditObjectMuseum_SelectTag_" + loopCounter1Int, ListSelector, true);
-                    if(tempListSelectorTagObject != null){ tempUsedTagStringArray.remove(tempListSelectorTagObject.text); }
+                    //if(tempListSelectorTagObject != null){ tempUsedTagStringArray.remove(tempListSelectorTagObject.text); }
+                    trace(tempListSelectorTagObject);
+                    trace("UIPopupEditObjectMuseum_SelectTag_" + loopCounter1Int);
+                    tempUsedTagStringArray.remove(tempListSelectorTagObject.text);
                     loopCounter1Int ++;
 
                 }
+                /*Add every tag that is not yet added within the museum object into the list selector.*/
                 loopCounter1Int = 0;
                 while(loopCounter1Int < tempUsedTagStringArray.length){
 
