@@ -12,6 +12,7 @@ HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Container)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Grid)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,VBox)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,controls,Button)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,controls,Text)
 HX_DECLARE_CLASS4(haxe,ui,toolkit,controls,TextInput)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,controls,popups,Popup)
 HX_DECLARE_CLASS5(haxe,ui,toolkit,controls,selection,ListSelector)
@@ -61,6 +62,9 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectMuseum_obj : public hx::Object{
 
 		::haxe::ui::toolkit::controls::Button buttonObject;
 		::CollectionGlobal collectionGlobalObject;
+		::haxe::ui::toolkit::controls::Text displayFullTextObject;
+		::haxe::ui::toolkit::controls::Text displayVisitorCurrentTextObject;
+		::haxe::ui::toolkit::controls::Text displayVisitorTotalTextObject;
 		::haxe::ui::toolkit::containers::Grid gridObject;
 		cpp::ArrayBase listSelectorTagStructArray;
 		Array< ::Dynamic > museumButtonObjectArray;

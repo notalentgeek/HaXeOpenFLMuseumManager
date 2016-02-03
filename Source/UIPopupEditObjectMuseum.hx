@@ -24,6 +24,9 @@ class UIPopupEditObjectMuseum{
 
     private var buttonObject                            :Button                         = null;                                 /*The main button to activate this popup.*/
     private var collectionGlobalObject                  :CollectionGlobal               = null;                                 /*Referece variable to collecrionGlobalObject that stores most of global variables.*/
+    private var displayFullTextObject                   :Text                           = null;
+    private var displayVisitorCurrentTextObject         :Text                           = null;
+    private var displayVisitorTotalTextObject           :Text                           = null;
     private var gridObject                              :Grid                           = null;                                 /*Grid layout.*/
     private var listSelectorTagStructArray              :Array<StructListSelectorTag>   = new Array<StructListSelectorTag>();   /*Array of list selector to choose multiple tags.*/
     private var museumButtonObjectArray                 :Array<Button>                  = new Array<Button>();
@@ -105,6 +108,9 @@ class UIPopupEditObjectMuseum{
             selectTypeListSelectorString = "";
             selectTypeListSelectorPrevString = "";
 
+            displayFullTextObject = popupObject.content.findChild("UIPopupEditObjectMuseum_DisplayFull", Text, true);
+            displayVisitorCurrentTextObject = popupObject.content.findChild("UIPopupEditObjectMuseum_DisplayVisitorCurrent", Text, true);
+            displayVisitorTotalTextObject = popupObject.content.findChild("UIPopupEditObjectMuseum_DisplayVisitorTotal", Text, true);
             gridObject = popupObject.content.findChild("UIPopupEditObjectMuseum_Grid", Grid, true);
             nameAltTextInputObject = popupObject.content.findChild("UIPopupEditObjectMuseum_InputAltName", TextInput, true);
             nameAltTextInputObject.disabled = true;
@@ -133,6 +139,12 @@ class UIPopupEditObjectMuseum{
 
                     selectedMuseumObject = museumObject;
 
+                    var fullString:String = "";
+                    if(museumObject.GetFullBool() == true){ fullString = "True"; }
+                    else if(museumObject.GetFullBool() == false){ fullString = "False"; }
+                    displayFullTextObject.text = fullString;
+                    displayVisitorCurrentTextObject.text = "" + museumObject.GetVisitorCurrentInt();
+                    displayVisitorTotalTextObject.text = "" + museumObject.GetVisitorTotalInt();
                     nameAltTextInputObject.disabled = false;
                     nameAltTextInputObject.text = museumObject.GetNameStruct().nameAltString;
                     nameFullTextInputObject.disabled = false;
@@ -345,6 +357,12 @@ class UIPopupEditObjectMuseum{
                     }
                     CollectionFunction.ClearArray(listSelectorTagStructArray);
 
+                    var fullString:String = "";
+                    if(selectedMuseumObject.GetFullBool() == true){ fullString = "True"; }
+                    else if(selectedMuseumObject.GetFullBool() == false){ fullString = "False"; }
+                    displayFullTextObject.text = fullString;
+                    displayVisitorCurrentTextObject.text = "" + selectedMuseumObject.GetVisitorCurrentInt();
+                    displayVisitorTotalTextObject.text = "" + selectedMuseumObject.GetVisitorTotalInt();
                     nameAltTextInputObject.disabled = false;
                     nameAltTextInputObject.text = " ";
                     nameFullTextInputObject.disabled = false;

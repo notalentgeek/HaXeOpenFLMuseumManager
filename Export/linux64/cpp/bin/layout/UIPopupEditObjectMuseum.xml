@@ -21,6 +21,20 @@
         <!--##################################################-->
 
 
+        <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+
+        <text text="Alternative Name" />
+        <textinput disabled="true" id="UIPopupEditObjectMuseum_InputAltName" text="" width="100%" />
+        
+        <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+
+        <text text="Full Name" />
+        <textinput disabled="true" id="UIPopupEditObjectMuseum_InputFullName" text="" width="100%" />
+
+        <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+        
+        <text text="Full" />
+        <text disabled="true" id="UIPopupEditObjectMuseum_DisplayFull" multiline="true" style="borderColor:0x000000;borderSize:1"  text=" " width="100%" wrapLines="true" />
 
         <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
@@ -28,14 +42,14 @@
         <listSelector disabled="true" id="UIPopupEditObjectMuseum_SelectParentObject" text=" " width="100%" ></listSelector>
 
         <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
-
-        <text text="Full Name" />
-        <textinput disabled="true" id="UIPopupEditObjectMuseum_InputFullName" text="" width="100%" />
+        
+        <text text="Visitor Current" />
+        <text disabled="true" id="UIPopupEditObjectMuseum_DisplayVisitorCurrent" multiline="true" style="borderColor:0x000000;borderSize:1"  text=" " width="100%" wrapLines="true" />
 
         <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
-        <text text="Alternative Name" />
-        <textinput disabled="true" id="UIPopupEditObjectMuseum_InputAltName" text="" width="100%" />
+        <text text="Visitor Total" />
+        <text disabled="true" id="UIPopupEditObjectMuseum_DisplayVisitorTotal" multiline="true" style="borderColor:0x000000;borderSize:1"  text=" " width="100%" wrapLines="true" />
 
         <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
