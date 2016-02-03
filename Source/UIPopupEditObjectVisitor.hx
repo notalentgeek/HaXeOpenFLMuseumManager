@@ -51,6 +51,7 @@ class UIPopupEditObjectVisitor{
     private var selectVisitorListSelectorObject                 :ListSelector               = null;
     private var selectVisitorListSelectorPrevString             :String                     = "";
     private var selectVisitorListSelectorString                 :String                     = "";
+    private var visitorButtonObjectArray                        :Array<Button>              = new Array<Button>();
     private var visitorModePrevString                           :String                     = "asd";
 
     public function new(
@@ -72,7 +73,7 @@ class UIPopupEditObjectVisitor{
                 if(_button == PopupButton.OK){
                     if(selectedVisitorObject != null){
 
-                        selectedVisitorObject.SetNameStringVoid(inputNameTextInputObject.text);
+                        selectedVisitorObject.SetNameStringVoid(inputNameTextInputObject.text, this);
 
                     }
                 }
@@ -102,6 +103,27 @@ class UIPopupEditObjectVisitor{
             selectCurrentExhibitionListSelectorObject.method    = "default";
             selectModeListSelectorObject.method                 = "default";
             selectVisitorListSelectorObject.method              = "default";
+
+            if(_e.component.userData != null){
+                var string:String = "" + _e.component.userData;
+                var stringArray:Array<String> = string.split("*");
+                var nameString:String = stringArray[1];
+                var visitorObject:ObjectVisitor = CollectionFunction.FindVisitorObject(collectionGlobalObject, nameString);
+
+                if(visitorObject != null){
+
+                    selectedVisitorObject = visitorObject;
+                    inputNameTextInputObject.text = selectedVisitorObject.GetNameString();
+                    selectCurrentExhibitionListSelectorObject.selectedIndex = 0;
+                    selectVisitorListSelectorObject.selectedIndex = 0;
+                    selectVisitorListSelectorObject.text = selectedVisitorObject.GetNameString();
+                    selectVisitorListSelectorString = selectVisitorListSelectorObject.text;
+                    selectVisitorListSelectorPrevString = selectVisitorListSelectorObject.text;
+
+                    ResetSelectVisitorListSelectorObjectVoid();
+
+                }
+            }
 
             changeAllHardwareManualButtonObject.onClick = function(_e){
                 var loopCounter1Int:Int = 0;
@@ -173,7 +195,6 @@ class UIPopupEditObjectVisitor{
             UpdateDisplayTargetExhibitionTextObjectVoid();
             UpdateDisplayVisitorIndexGlobalTextObjectVoid();
             UpdateDisplayVisitorIndexLocalTextObjectVoid();
-            //UpdateInputNameTextInputObjectVoid();
             resetButtonObject.onClick = function(_e){
 
                 if(selectedVisitorObject != null){
@@ -191,14 +212,27 @@ class UIPopupEditObjectVisitor{
 
             }
             UpdateSelectCurrentExhibitionListSelectorObjectVoid();
-            UpdateSelectModeListSelectorObjectVoid();
+            ResetSelectModeListSelectorObjectVoid();
 
         }
 
     }
 
     public function UpdateVoid(){
-
+        var updateVisitorButtonBool:Bool = false;
+        if(visitorButtonObjectArray.length != collectionGlobalObject.GetVisitorObjectArray().length){ updateVisitorButtonBool = true; }
+        var loopCounter1Int:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            if(visitorButtonObjectArray[loopCounter1Int] != collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject()){
+                if(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().id != null){ updateVisitorButtonBool = true; }
+                else if(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().id == null){ updateVisitorButtonBool = false; }
+            }
+            else{ updateVisitorButtonBool = false; }
+            loopCounter1Int ++;
+        }
+        if(updateVisitorButtonBool == true){
+            UpdateVisitorButtonObjectArrayVoid();
+        }
         if(popupObject != null){
 
             selectVisitorListSelectorString = selectVisitorListSelectorObject.text;
@@ -501,6 +535,18 @@ class UIPopupEditObjectVisitor{
             if(selectModeListSelectorObject.text == "Hardware Manual"){ selectedVisitorObject.SetVisitorModeEnumVoid(HARDWARE_MANUAL); }
             else if(selectModeListSelectorObject.text == "Software Auto"){ selectedVisitorObject.SetVisitorModeEnumVoid(SOFTWARE_AUTO); }
             else if(selectModeListSelectorObject.text == "Software Manual"){ selectedVisitorObject.SetVisitorModeEnumVoid(SOFTWARE_MANUAL); }
+        }
+    }
+
+    public function UpdateVisitorButtonObjectArrayVoid(){
+        CollectionFunction.ClearArray(visitorButtonObjectArray);
+        var loopCounter1Int:Int = 0;
+        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().userData
+                = collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().id;
+            visitorButtonObjectArray.push(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject());
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().onClick = mainButtonObject.onClick;
+            loopCounter1Int ++;
         }
     }
 

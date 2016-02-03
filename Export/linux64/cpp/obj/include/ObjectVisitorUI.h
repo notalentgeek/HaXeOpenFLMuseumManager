@@ -40,12 +40,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitorUI_obj : public ::openfl::_legacy::di
 		typedef ::openfl::_legacy::display::Sprite_obj super;
 		typedef ObjectVisitorUI_obj OBJ_;
 		ObjectVisitorUI_obj();
-		Void __construct(::CollectionGlobal _collectionGlobalObject);
+		Void __construct(::CollectionGlobal _collectionGlobalObject,::ObjectVisitor _visitorObject);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectVisitorUI")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectVisitorUI_obj > __new(::CollectionGlobal _collectionGlobalObject);
+		static hx::ObjectPtr< ObjectVisitorUI_obj > __new(::CollectionGlobal _collectionGlobalObject,::ObjectVisitor _visitorObject);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectVisitorUI_obj();
@@ -65,13 +65,14 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitorUI_obj : public ::openfl::_legacy::di
 		int widthInt;
 		int heightInt;
 		int indexLocalInt;
+		::ObjectVisitor visitorObject;
 		::String textString;
 		int xInt;
 		int yInt;
 		virtual ::haxe::ui::toolkit::controls::Button GetButtonObject( );
 		Dynamic GetButtonObject_dyn();
 
-		virtual Void UpdateVoid( ::ObjectVisitor _object);
+		virtual Void UpdateVoid( );
 		Dynamic UpdateVoid_dyn();
 
 };

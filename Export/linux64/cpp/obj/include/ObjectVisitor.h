@@ -11,6 +11,7 @@ HX_DECLARE_CLASS0(ObjectMuseum)
 HX_DECLARE_CLASS0(ObjectTag)
 HX_DECLARE_CLASS0(ObjectVisitor)
 HX_DECLARE_CLASS0(ObjectVisitorUI)
+HX_DECLARE_CLASS0(UIPopupEditObjectVisitor)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObject)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObjectContainer)
 HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
@@ -138,7 +139,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		virtual Void SetIndexLocalIntVoid( int _indexLocalInt);
 		Dynamic SetIndexLocalIntVoid_dyn();
 
-		virtual Void SetNameStringVoid( ::String _nameString);
+		virtual Void SetNameStringVoid( ::String _nameString,::UIPopupEditObjectVisitor _uiPopupEditObjectVisitor);
 		Dynamic SetNameStringVoid_dyn();
 
 		virtual Void SetVisitorModeEnumVoid( ::EnumVisitorMode _visitorModeEnum);

@@ -140,15 +140,15 @@ class UIPopupEditObjectMuseum{
                     selectedMuseumObject = museumObject;
 
                     var fullString:String = "";
-                    if(museumObject.GetFullBool() == true){ fullString = "True"; }
-                    else if(museumObject.GetFullBool() == false){ fullString = "False"; }
+                    if(selectedMuseumObject.GetFullBool() == true){ fullString = "True"; }
+                    else if(selectedMuseumObject.GetFullBool() == false){ fullString = "False"; }
                     displayFullTextObject.text = fullString;
-                    displayVisitorCurrentTextObject.text = "" + museumObject.GetVisitorCurrentInt();
-                    displayVisitorTotalTextObject.text = "" + museumObject.GetVisitorTotalInt();
+                    displayVisitorCurrentTextObject.text = "" + selectedMuseumObject.GetVisitorCurrentInt();
+                    displayVisitorTotalTextObject.text = "" + selectedMuseumObject.GetVisitorTotalInt();
                     nameAltTextInputObject.disabled = false;
-                    nameAltTextInputObject.text = museumObject.GetNameStruct().nameAltString;
+                    nameAltTextInputObject.text = selectedMuseumObject.GetNameStruct().nameAltString;
                     nameFullTextInputObject.disabled = false;
-                    nameFullTextInputObject.text = museumObject.GetNameStruct().nameFullString;                    
+                    nameFullTextInputObject.text = selectedMuseumObject.GetNameStruct().nameFullString;                    
                     selectTypeListSelectorObject.disabled = false;
                     var nameFullEnumString:String = "";
                     if(enumString == "EXH"){ nameFullEnumString = "Exhibition" ;}
@@ -244,6 +244,7 @@ class UIPopupEditObjectMuseum{
 
         }
         if(updateMuseumButtonBool == true){
+            CollectionFunction.ClearArray(museumButtonObjectArray);
             var loopCounter1Int:Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
                 collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().userData

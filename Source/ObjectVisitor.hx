@@ -35,7 +35,7 @@ class ObjectVisitor{
         indexGlobalInt = _indexGlobalInt;
         nameString = _nameString;
         collectionGlobalObject.GetVisitorObjectArray().push(this);
-        visitorUIObject = new ObjectVisitorUI(collectionGlobalObject);
+        visitorUIObject = new ObjectVisitorUI(collectionGlobalObject, this);
         collectionGlobalObject.DetermineExhibitionFullThresholdVoid();
         GenerateExhibitionTargetVoid(targetInt);
         visitorModeEnum = SOFTWARE_AUTO;
@@ -291,6 +291,7 @@ class ObjectVisitor{
     public function GetVisitorModeEnum(){ return visitorModeEnum; }
     public function GetVisitorUIObject(){ return visitorUIObject; }
     public function ResetVoid(){
+        CollectionFunction.ClearArray(exhibitionVisitedObjectArray);
         CollectionFunction.ClearArray(explanationStringArray);
         CollectionFunction.ClearArray(sentenceStringArray);
         finishedBool = false;
@@ -298,7 +299,14 @@ class ObjectVisitor{
         visitedCorrectExhibitionBool = true;
     }
     public function SetIndexLocalIntVoid(_indexLocalInt:Int){ indexLocalInt = _indexLocalInt; }
-    public function SetNameStringVoid(_nameString:String){ nameString = _nameString; }
+    public function SetNameStringVoid(_nameString:String, ?_uiPopupEditObjectVisitor:UIPopupEditObjectVisitor){
+        nameString = _nameString;
+
+        visitorUIObject.GetButtonObject().id = "Button*" + nameString;
+        if(_uiPopupEditObjectVisitor != null){
+            _uiPopupEditObjectVisitor.UpdateVisitorButtonObjectArrayVoid();
+        }
+    }
     public function SetVisitorModeEnumVoid(_visitorModeEnum:EnumVisitorMode){ visitorModeEnum = _visitorModeEnum; }
     private function UpdateHeavyVoid(){
         exhibitionCurrentObject.SetVisitorCurrentIntVoid(exhibitionCurrentObject.GetVisitorCurrentInt() + 1);
@@ -326,7 +334,7 @@ class ObjectVisitor{
         while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
             collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].DetermineIndexLocalVoid();
             collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GenerateExhibitionTargetVoid(targetInt);
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int]);
+            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().UpdateVoid();
             if(necessaryHeightInt < Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height)){
                 necessaryHeightInt = Math.round(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().y + collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().height);
             }
@@ -343,8 +351,6 @@ class ObjectVisitor{
         visitExhibitionStructArray.push(visitorVisitExhibitionStruct);
     }
     public function UpdateVoid(){
-
-        //if(nameString == "Visitor 1"){ trace(visitorModeEnum); }
 
         if(visitorModeEnum == HARDWARE_MANUAL){ /*PENDING:*/ }
         else if(visitorModeEnum == SOFTWARE_AUTO){ AIAutoExhibitionChangeVoid(); }

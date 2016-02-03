@@ -818,11 +818,7 @@ Void ObjectMuseum_obj::UpdateHeavyVoid( ){
 			HX_STACK_LINE(160)
 			::ObjectVisitorUI tmp18 = tmp17->GetVisitorUIObject();		HX_STACK_VAR(tmp18,"tmp18");
 			HX_STACK_LINE(160)
-			::CollectionGlobal tmp19 = this->collectionGlobalObject;		HX_STACK_VAR(tmp19,"tmp19");
-			HX_STACK_LINE(160)
-			::ObjectVisitor tmp20 = tmp19->GetVisitorObjectArray()->__get(loopCounter1Int).StaticCast< ::ObjectVisitor >();		HX_STACK_VAR(tmp20,"tmp20");
-			HX_STACK_LINE(160)
-			tmp18->UpdateVoid(tmp20);
+			tmp18->UpdateVoid();
 			HX_STACK_LINE(161)
 			(loopCounter1Int)++;
 		}
