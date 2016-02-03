@@ -16,9 +16,7 @@
         <!--##################################################-->
 
         <text text="Museum Object" />
-        <listSelector disabled="true" id="UIPopupEditObjectMuseum_SelectObjectMuseum" text=" " width="100%" >
-            <array>Exhibition, Floor, Room</array>
-        </listSelector>
+        <listSelector disabled="true" id="UIPopupEditObjectMuseum_SelectObjectMuseum" text=" " width="100%" ></listSelector>
 
         <!--##################################################-->
 

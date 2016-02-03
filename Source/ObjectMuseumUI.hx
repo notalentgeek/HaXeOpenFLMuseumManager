@@ -36,7 +36,7 @@ class ObjectMuseumUI extends Sprite{
             widthInt = Math.round(((_widthMaxInt - Lib.current.stage.stageWidth/4) - 5)/2);
             buttonObject.width = widthInt;
             buttonObject.height = heightInt;
-            buttonObject.id = _object.GetNameStruct().nameFullString;
+            buttonObject.id = "Button*" + _object.GetNameStruct().nameAltString;
             buttonObject.text = _object.GetNameStruct().nameFullString;
             buttonObject.x = (buttonObject.width*_object.GetIndexLocalInt()) + (_object.GetIndexLocalInt()*5);
             buttonObject.y = 0;
@@ -46,7 +46,7 @@ class ObjectMuseumUI extends Sprite{
             widthInt = Math.round(((_object.GetParentObject().GetMuseumUIObject().GetButtonObject().width) - ((_object.GetSiblingObjectArray().length - 1)*5))/_object.GetSiblingObjectArray().length);
             buttonObject.width = widthInt;
             buttonObject.height = heightInt;
-            buttonObject.id = _object.GetNameStruct().nameFullString;
+            buttonObject.id = "Button*" + _object.GetNameStruct().nameAltString;
             buttonObject.text = _object.GetNameStruct().nameFullString;
             buttonObject.x = _object.GetParentObject().GetMuseumUIObject().GetButtonObject().x + (_object.GetIndexLocalInt()*buttonObject.width) + (_object.GetIndexLocalInt()*5);
             buttonObject.y =
