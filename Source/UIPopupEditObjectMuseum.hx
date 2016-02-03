@@ -157,9 +157,9 @@ class UIPopupEditObjectMuseum{
                         loopCounter1Int ++;
                     }
                     selectObjectMuseumListSelectorObject.disabled = false;
+                    selectObjectMuseumListSelectorObject.selectedIndex = 0;
                     selectObjectMuseumListSelectorObject.text = nameFullTextInputObject.text;
                     if(museumObject.GetParentObject() != null){
-                        trace("YEYEYEYE.");
                         selectParentNameFullListSelectorObject.disabled = false;
                         selectParentNameFullListSelectorObject.text = museumObject.GetParentObject().GetNameStruct().nameFullString;
                     }
