@@ -35,7 +35,7 @@
             </array>
         </listSelector>
         <button id="UIPopupEditObjectVisitor_ButtonChangeAllHardwareManual" text="All Visitor Hardware Manual" width="100%" />
-        <button id="UIPopupEditObjectVisitor_ButtonChangeAllSoftwareAuto" text="All Visitor Software Manual" width="100%" />
+        <button id="UIPopupEditObjectVisitor_ButtonChangeAllSoftwareAuto" text="All Visitor Software Auto" width="100%" />
         <button id="UIPopupEditObjectVisitor_ButtonChangeAllSoftwareManual" text="All Visitor Software Manual" width="100%" />
 
         <!--##################################################-->
