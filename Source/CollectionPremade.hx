@@ -1,6 +1,26 @@
 import CollectionEnum;
+
+
+
+
+
 class CollectionPremade{
+
+
+
+
+
+    /*==================================================
+    Constructor.*/
     public function new(){}
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================
+    Premade function to create all exhibition object.*/
     public static function PremadeExhibitionObjectVoid(_collectionGlobalObject:CollectionGlobal){
         new ObjectMuseum(_collectionGlobalObject, "EXH_001", "First Exhibition", "ROM_001", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
         new ObjectMuseum(_collectionGlobalObject, "EXH_002", "Second Exhibition", "ROM_001", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
@@ -15,11 +35,27 @@ class CollectionPremade{
         new ObjectMuseum(_collectionGlobalObject, "EXH_011", "Eleventh Exhibition", "ROM_006", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
         new ObjectMuseum(_collectionGlobalObject, "EXH_012", "Twelveth Exhibition", "ROM_006", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
     }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================
+    Premade function to create all floor object.*/
     public static function PremadeFloorObjectVoid(_collectionGlobalObject:CollectionGlobal){
         new ObjectMuseum(_collectionGlobalObject, "FLR_001", "First Floor", "XXX_XXX", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), FLR);
         new ObjectMuseum(_collectionGlobalObject, "FLR_002", "Second Floor", "XXX_XXX", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), FLR);
         new ObjectMuseum(_collectionGlobalObject, "FLR_003", "Third Floor", "XXX_XXX", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), FLR);
     }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================
+    Function to create all room object.*/
     public static function PremadeRoomObjectVoid(_collectionGlobalObject:CollectionGlobal){
         new ObjectMuseum(_collectionGlobalObject, "ROM_001", "First Room", "FLR_001", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
         new ObjectMuseum(_collectionGlobalObject, "ROM_002", "Second Room", "FLR_001", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
@@ -28,6 +64,14 @@ class CollectionPremade{
         new ObjectMuseum(_collectionGlobalObject, "ROM_005", "Fifth Room", "FLR_003", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
         new ObjectMuseum(_collectionGlobalObject, "ROM_006", "Sixth Room", "FLR_003", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
     }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================
+    Function to create all visitor object.*/
     public static function PremadeVisitorObjectVoid(_amountInt:Int, _collectionGlobalObject:CollectionGlobal){
         var loopCounter1Int:Int = 0;
         while(loopCounter1Int < _amountInt){
@@ -35,4 +79,10 @@ class CollectionPremade{
             loopCounter1Int ++;
         }
     }
+    /*==================================================*/
+
+
+
+
+
 }
