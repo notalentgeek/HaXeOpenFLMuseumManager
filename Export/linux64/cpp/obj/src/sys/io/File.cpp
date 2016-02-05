@@ -31,7 +31,7 @@ Dynamic File_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::String File_obj::getContent( ::String path){
-	HX_STACK_FRAME("sys.io.File","getContent",0xb28b4a0e,"sys.io.File.getContent","/usr/lib/haxe/std/cpp/_std/sys/io/File.hx",27,0x02078759)
+	HX_STACK_FRAME("sys.io.File","getContent",0xb28b4a0e,"sys.io.File.getContent","/usr/share/haxe/std/cpp/_std/sys/io/File.hx",27,0xa9f746ff)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(28)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -49,7 +49,7 @@ Dynamic File_obj::__Create(hx::DynamicArray inArgs)
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(File_obj,getContent,return )
 
 ::haxe::io::Bytes File_obj::getBytes( ::String path){
-	HX_STACK_FRAME("sys.io.File","getBytes",0xbe457600,"sys.io.File.getBytes","/usr/lib/haxe/std/cpp/_std/sys/io/File.hx",32,0x02078759)
+	HX_STACK_FRAME("sys.io.File","getBytes",0xbe457600,"sys.io.File.getBytes","/usr/share/haxe/std/cpp/_std/sys/io/File.hx",32,0xa9f746ff)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(33)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -82,6 +82,15 @@ bool File_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Proper
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"file_contents") ) { outValue = file_contents; return true;  }
+	}
+	return false;
+}
+
+bool File_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 13:
+		if (HX_FIELD_EQ(inName,"file_contents") ) { file_contents=ioValue.Cast< Dynamic >(); return true; }
 	}
 	return false;
 }
@@ -123,7 +132,7 @@ void File_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &File_obj::__GetStatic;
-	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &File_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);

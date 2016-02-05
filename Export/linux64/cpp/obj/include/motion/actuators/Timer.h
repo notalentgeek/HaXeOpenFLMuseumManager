@@ -37,15 +37,6 @@ class HXCPP_CLASS_ATTRIBUTES  Timer_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Timer","\xa5","\x2f","\x63","\xa3"); }
 
 		static void __boot();
-		Float mTime;
-		Float mFireAt;
-		bool mRunning;
-		Dynamic run;
-		inline Dynamic &run_dyn() {return run; }
-
-		virtual Void stop( );
-		Dynamic stop_dyn();
-
 		static Array< ::Dynamic > sRunningTimers;
 		static Dynamic measure( Dynamic f,Dynamic pos);
 		static Dynamic measure_dyn();
@@ -58,6 +49,15 @@ class HXCPP_CLASS_ATTRIBUTES  Timer_obj : public hx::Object{
 
 		static Float stamp( );
 		static Dynamic stamp_dyn();
+
+		Float mTime;
+		Float mFireAt;
+		bool mRunning;
+		Dynamic run;
+		inline Dynamic &run_dyn() {return run; }
+
+		virtual Void stop( );
+		Dynamic stop_dyn();
 
 };
 

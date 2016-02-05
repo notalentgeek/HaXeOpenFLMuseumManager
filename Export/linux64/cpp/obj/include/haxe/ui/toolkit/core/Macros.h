@@ -34,6 +34,7 @@ class HXCPP_CLASS_ATTRIBUTES  Macros_obj : public hx::Object{
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Macros","\x07","\x0f","\x20","\xe5"); }
 

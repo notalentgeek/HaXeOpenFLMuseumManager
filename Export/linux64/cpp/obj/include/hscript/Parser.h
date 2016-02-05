@@ -36,7 +36,6 @@ class HXCPP_CLASS_ATTRIBUTES  Parser_obj : public hx::Object{
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -44,6 +43,10 @@ class HXCPP_CLASS_ATTRIBUTES  Parser_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Parser","\xff","\x10","\x1d","\x22"); }
 
 		static void __boot();
+		static int p1;
+		static int readPos;
+		static int tokenMin;
+		static int tokenMax;
 		int line;
 		::String opChars;
 		::String identChars;
@@ -148,10 +151,6 @@ class HXCPP_CLASS_ATTRIBUTES  Parser_obj : public hx::Object{
 		virtual ::String tokenString( ::hscript::Token t);
 		Dynamic tokenString_dyn();
 
-		static int p1;
-		static int readPos;
-		static int tokenMin;
-		static int tokenMax;
 };
 
 } // end namespace hscript

@@ -34,6 +34,24 @@ class HXCPP_CLASS_ATTRIBUTES  Vector3D_obj : public hx::Object{
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Vector3D","\x54","\x90","\x6f","\x48"); }
 
+		static ::openfl::geom::Vector3D X_AXIS;
+		static ::openfl::geom::Vector3D Y_AXIS;
+		static ::openfl::geom::Vector3D Z_AXIS;
+		static Float angleBetween( ::openfl::geom::Vector3D a,::openfl::geom::Vector3D b);
+		static Dynamic angleBetween_dyn();
+
+		static Float distance( ::openfl::geom::Vector3D pt1,::openfl::geom::Vector3D pt2);
+		static Dynamic distance_dyn();
+
+		static ::openfl::geom::Vector3D get_X_AXIS( );
+		static Dynamic get_X_AXIS_dyn();
+
+		static ::openfl::geom::Vector3D get_Y_AXIS( );
+		static Dynamic get_Y_AXIS_dyn();
+
+		static ::openfl::geom::Vector3D get_Z_AXIS( );
+		static Dynamic get_Z_AXIS_dyn();
+
 		Float length;
 		Float lengthSquared;
 		Float w;
@@ -93,24 +111,6 @@ class HXCPP_CLASS_ATTRIBUTES  Vector3D_obj : public hx::Object{
 
 		virtual Float get_lengthSquared( );
 		Dynamic get_lengthSquared_dyn();
-
-		static ::openfl::geom::Vector3D X_AXIS;
-		static ::openfl::geom::Vector3D Y_AXIS;
-		static ::openfl::geom::Vector3D Z_AXIS;
-		static Float angleBetween( ::openfl::geom::Vector3D a,::openfl::geom::Vector3D b);
-		static Dynamic angleBetween_dyn();
-
-		static Float distance( ::openfl::geom::Vector3D pt1,::openfl::geom::Vector3D pt2);
-		static Dynamic distance_dyn();
-
-		static ::openfl::geom::Vector3D get_X_AXIS( );
-		static Dynamic get_X_AXIS_dyn();
-
-		static ::openfl::geom::Vector3D get_Y_AXIS( );
-		static Dynamic get_Y_AXIS_dyn();
-
-		static ::openfl::geom::Vector3D get_Z_AXIS( );
-		static Dynamic get_Z_AXIS_dyn();
 
 };
 

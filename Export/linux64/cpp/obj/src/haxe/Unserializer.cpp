@@ -41,7 +41,7 @@ namespace haxe{
 
 Void Unserializer_obj::__construct(::String buf)
 {
-HX_STACK_FRAME("haxe.Unserializer","new",0xa8f5e205,"haxe.Unserializer.new","/usr/lib/haxe/std/haxe/Unserializer.hx",99,0xcde24acb)
+HX_STACK_FRAME("haxe.Unserializer","new",0xa8f5e205,"haxe.Unserializer.new","/usr/share/haxe/std/haxe/Unserializer.hx",99,0x4786e765)
 HX_STACK_THIS(this)
 HX_STACK_ARG(buf,"buf")
 {
@@ -92,7 +92,7 @@ Dynamic Unserializer_obj::__Create(hx::DynamicArray inArgs)
 
 Void Unserializer_obj::setResolver( Dynamic r){
 {
-		HX_STACK_FRAME("haxe.Unserializer","setResolver",0x5545046d,"haxe.Unserializer.setResolver","/usr/lib/haxe/std/haxe/Unserializer.hx",124,0xcde24acb)
+		HX_STACK_FRAME("haxe.Unserializer","setResolver",0x5545046d,"haxe.Unserializer.setResolver","/usr/share/haxe/std/haxe/Unserializer.hx",124,0x4786e765)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(r,"r")
 		HX_STACK_LINE(125)
@@ -101,14 +101,14 @@ Void Unserializer_obj::setResolver( Dynamic r){
 		if ((tmp)){
 			struct _Function_2_1{
 				inline static Dynamic Block( ){
-					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/lib/haxe/std/haxe/Unserializer.hx",126,0xcde24acb)
+					HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/haxe/Unserializer.hx",126,0x4786e765)
 					{
 						hx::Anon __result = hx::Anon_obj::Create();
 
 						HX_BEGIN_LOCAL_FUNC_S0(hx::LocalFunc,_Function_3_1)
 						int __ArgCount() const { return 1; }
 						::hx::Class run(::String _){
-							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/usr/lib/haxe/std/haxe/Unserializer.hx",127,0xcde24acb)
+							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/usr/share/haxe/std/haxe/Unserializer.hx",127,0x4786e765)
 							HX_STACK_ARG(_,"_")
 							{
 								HX_STACK_LINE(127)
@@ -123,7 +123,7 @@ Void Unserializer_obj::setResolver( Dynamic r){
 						HX_BEGIN_LOCAL_FUNC_S0(hx::LocalFunc,_Function_3_2)
 						int __ArgCount() const { return 1; }
 						::Enum run(::String _){
-							HX_STACK_FRAME("*","_Function_3_2",0x520271ba,"*._Function_3_2","/usr/lib/haxe/std/haxe/Unserializer.hx",128,0xcde24acb)
+							HX_STACK_FRAME("*","_Function_3_2",0x520271ba,"*._Function_3_2","/usr/share/haxe/std/haxe/Unserializer.hx",128,0x4786e765)
 							HX_STACK_ARG(_,"_")
 							{
 								HX_STACK_LINE(128)
@@ -156,7 +156,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Unserializer_obj,setResolver,(void))
 
 int Unserializer_obj::readDigits( ){
-	HX_STACK_FRAME("haxe.Unserializer","readDigits",0x75598b17,"haxe.Unserializer.readDigits","/usr/lib/haxe/std/haxe/Unserializer.hx",147,0xcde24acb)
+	HX_STACK_FRAME("haxe.Unserializer","readDigits",0x75598b17,"haxe.Unserializer.readDigits","/usr/share/haxe/std/haxe/Unserializer.hx",147,0x4786e765)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(148)
 	int k = (int)0;		HX_STACK_VAR(k,"k");
@@ -253,7 +253,7 @@ int Unserializer_obj::readDigits( ){
 HX_DEFINE_DYNAMIC_FUNC0(Unserializer_obj,readDigits,return )
 
 Float Unserializer_obj::readFloat( ){
-	HX_STACK_FRAME("haxe.Unserializer","readFloat",0x5bd86dcb,"haxe.Unserializer.readFloat","/usr/lib/haxe/std/haxe/Unserializer.hx",172,0xcde24acb)
+	HX_STACK_FRAME("haxe.Unserializer","readFloat",0x5bd86dcb,"haxe.Unserializer.readFloat","/usr/share/haxe/std/haxe/Unserializer.hx",172,0x4786e765)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(173)
 	int tmp = this->pos;		HX_STACK_VAR(tmp,"tmp");
@@ -345,7 +345,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Unserializer_obj,readFloat,return )
 
 Void Unserializer_obj::unserializeObject( Dynamic o){
 {
-		HX_STACK_FRAME("haxe.Unserializer","unserializeObject",0x1b3e66eb,"haxe.Unserializer.unserializeObject","/usr/lib/haxe/std/haxe/Unserializer.hx",185,0xcde24acb)
+		HX_STACK_FRAME("haxe.Unserializer","unserializeObject",0x1b3e66eb,"haxe.Unserializer.unserializeObject","/usr/share/haxe/std/haxe/Unserializer.hx",185,0x4786e765)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(o,"o")
 		HX_STACK_LINE(186)
@@ -412,7 +412,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Unserializer_obj,unserializeObject,(void))
 
 Dynamic Unserializer_obj::unserializeEnum( ::Enum edecl,::String tag){
-	HX_STACK_FRAME("haxe.Unserializer","unserializeEnum",0x5018b02d,"haxe.Unserializer.unserializeEnum","/usr/lib/haxe/std/haxe/Unserializer.hx",200,0xcde24acb)
+	HX_STACK_FRAME("haxe.Unserializer","unserializeEnum",0x5018b02d,"haxe.Unserializer.unserializeEnum","/usr/share/haxe/std/haxe/Unserializer.hx",200,0x4786e765)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(edecl,"edecl")
 	HX_STACK_ARG(tag,"tag")
@@ -489,7 +489,7 @@ Dynamic Unserializer_obj::unserializeEnum( ::Enum edecl,::String tag){
 HX_DEFINE_DYNAMIC_FUNC2(Unserializer_obj,unserializeEnum,return )
 
 Dynamic Unserializer_obj::unserialize( ){
-	HX_STACK_FRAME("haxe.Unserializer","unserialize",0x92cca30c,"haxe.Unserializer.unserialize","/usr/lib/haxe/std/haxe/Unserializer.hx",232,0xcde24acb)
+	HX_STACK_FRAME("haxe.Unserializer","unserialize",0x92cca30c,"haxe.Unserializer.unserialize","/usr/share/haxe/std/haxe/Unserializer.hx",232,0x4786e765)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(233)
 	{
@@ -710,7 +710,7 @@ Dynamic Unserializer_obj::unserialize( ){
 			case (int)111: {
 				struct _Function_3_1{
 					inline static Dynamic Block( ){
-						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/lib/haxe/std/haxe/Unserializer.hx",280,0xcde24acb)
+						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/haxe/Unserializer.hx",280,0x4786e765)
 						{
 							hx::Anon __result = hx::Anon_obj::Create();
 							return __result;
@@ -2039,7 +2039,7 @@ Dynamic Unserializer_obj::DEFAULT_RESOLVER;
 Array< int > Unserializer_obj::CODES;
 
 Array< int > Unserializer_obj::initCodes( ){
-	HX_STACK_FRAME("haxe.Unserializer","initCodes",0xee42ccdb,"haxe.Unserializer.initCodes","/usr/lib/haxe/std/haxe/Unserializer.hx",67,0xcde24acb)
+	HX_STACK_FRAME("haxe.Unserializer","initCodes",0xee42ccdb,"haxe.Unserializer.initCodes","/usr/share/haxe/std/haxe/Unserializer.hx",67,0x4786e765)
 	HX_STACK_LINE(72)
 	Array< int > codes = Array_obj< int >::__new();		HX_STACK_VAR(codes,"codes");
 	HX_STACK_LINE(74)
@@ -2085,7 +2085,7 @@ Array< int > Unserializer_obj::initCodes( ){
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Unserializer_obj,initCodes,return )
 
 Dynamic Unserializer_obj::run( ::String v){
-	HX_STACK_FRAME("haxe.Unserializer","run",0xa8f8f8f0,"haxe.Unserializer.run","/usr/lib/haxe/std/haxe/Unserializer.hx",459,0xcde24acb)
+	HX_STACK_FRAME("haxe.Unserializer","run",0xa8f8f8f0,"haxe.Unserializer.run","/usr/share/haxe/std/haxe/Unserializer.hx",459,0x4786e765)
 	HX_STACK_ARG(v,"v")
 	HX_STACK_LINE(460)
 	::haxe::Unserializer tmp = ::haxe::Unserializer_obj::__new(v);		HX_STACK_VAR(tmp,"tmp");

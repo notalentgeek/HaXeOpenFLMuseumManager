@@ -37,6 +37,7 @@ class HXCPP_CLASS_ATTRIBUTES  StyleHelper_obj : public hx::Object{
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("StyleHelper","\x5f","\xa9","\x18","\x60"); }
 

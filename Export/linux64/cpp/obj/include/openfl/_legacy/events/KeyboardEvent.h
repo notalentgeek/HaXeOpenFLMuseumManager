@@ -40,6 +40,8 @@ class HXCPP_CLASS_ATTRIBUTES  KeyboardEvent_obj : public ::openfl::_legacy::even
 		::String __ToString() const { return HX_HCSTRING("KeyboardEvent","\xd3","\x8d","\x88","\x91"); }
 
 		static void __boot();
+		static ::String KEY_DOWN;
+		static ::String KEY_UP;
 		bool altKey;
 		int charCode;
 		bool ctrlKey;
@@ -52,8 +54,6 @@ class HXCPP_CLASS_ATTRIBUTES  KeyboardEvent_obj : public ::openfl::_legacy::even
 
 		virtual ::String toString( );
 
-		static ::String KEY_DOWN;
-		static ::String KEY_UP;
 };
 
 } // end namespace openfl

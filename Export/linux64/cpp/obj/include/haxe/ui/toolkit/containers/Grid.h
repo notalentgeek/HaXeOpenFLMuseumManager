@@ -48,7 +48,6 @@ class HXCPP_CLASS_ATTRIBUTES  Grid_obj : public ::haxe::ui::toolkit::containers:
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		hx::Object *__ToInterface(const hx::type_info &inType);

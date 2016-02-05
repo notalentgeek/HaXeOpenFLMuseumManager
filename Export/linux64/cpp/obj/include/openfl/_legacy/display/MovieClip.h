@@ -40,7 +40,6 @@ class HXCPP_CLASS_ATTRIBUTES  MovieClip_obj : public ::openfl::_legacy::display:
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		HX_DECLARE_IMPLEMENT_DYNAMIC;
 		static void __register();

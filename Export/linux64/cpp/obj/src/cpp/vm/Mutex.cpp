@@ -8,7 +8,7 @@ namespace vm{
 
 Void Mutex_obj::__construct()
 {
-HX_STACK_FRAME("cpp.vm.Mutex","new",0xabb3ca05,"cpp.vm.Mutex.new","/usr/lib/haxe/std/cpp/vm/Mutex.hx",27,0x24931aaa)
+HX_STACK_FRAME("cpp.vm.Mutex","new",0xabb3ca05,"cpp.vm.Mutex.new","/usr/share/haxe/std/cpp/vm/Mutex.hx",27,0x71a7c450)
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(28)
@@ -35,7 +35,7 @@ Dynamic Mutex_obj::__Create(hx::DynamicArray inArgs)
 
 Void Mutex_obj::acquire( ){
 {
-		HX_STACK_FRAME("cpp.vm.Mutex","acquire",0xc3527bfb,"cpp.vm.Mutex.acquire","/usr/lib/haxe/std/cpp/vm/Mutex.hx",31,0x24931aaa)
+		HX_STACK_FRAME("cpp.vm.Mutex","acquire",0xc3527bfb,"cpp.vm.Mutex.acquire","/usr/share/haxe/std/cpp/vm/Mutex.hx",31,0x71a7c450)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(31)
 		::__hxcpp_mutex_acquire(this->m);
@@ -48,7 +48,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Mutex_obj,acquire,(void))
 
 Void Mutex_obj::release( ){
 {
-		HX_STACK_FRAME("cpp.vm.Mutex","release",0x675bb5ec,"cpp.vm.Mutex.release","/usr/lib/haxe/std/cpp/vm/Mutex.hx",37,0x24931aaa)
+		HX_STACK_FRAME("cpp.vm.Mutex","release",0x675bb5ec,"cpp.vm.Mutex.release","/usr/share/haxe/std/cpp/vm/Mutex.hx",37,0x71a7c450)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(37)
 		::__hxcpp_mutex_release(this->m);
@@ -98,11 +98,6 @@ Dynamic Mutex_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool Mutex_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void Mutex_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("m","\x6d","\x00","\x00","\x00"));
@@ -144,7 +139,7 @@ void Mutex_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &Mutex_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

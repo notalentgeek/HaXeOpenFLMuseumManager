@@ -38,6 +38,11 @@ class HXCPP_CLASS_ATTRIBUTES  Screen_obj : public hx::Object{
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Screen","\x8c","\xaf","\xf1","\x7b"); }
 
+		static ::haxe::ui::toolkit::core::Screen _instance;
+		static ::haxe::ui::toolkit::core::Screen instance;
+		static ::haxe::ui::toolkit::core::Screen get_instance( );
+		static Dynamic get_instance_dyn();
+
 		Float _cursorX;
 		Float _cursorY;
 		Float width;
@@ -64,11 +69,6 @@ class HXCPP_CLASS_ATTRIBUTES  Screen_obj : public hx::Object{
 
 		virtual Void _onScreenMouseMove( ::openfl::_legacy::events::MouseEvent event);
 		Dynamic _onScreenMouseMove_dyn();
-
-		static ::haxe::ui::toolkit::core::Screen _instance;
-		static ::haxe::ui::toolkit::core::Screen instance;
-		static ::haxe::ui::toolkit::core::Screen get_instance( );
-		static Dynamic get_instance_dyn();
 
 };
 

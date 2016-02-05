@@ -35,6 +35,14 @@ class HXCPP_CLASS_ATTRIBUTES  EReg_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("EReg","\x0f","\x4a","\xda","\x2d"); }
 
 		static void __boot();
+		static Dynamic regexp_new_options;
+		static Dynamic &regexp_new_options_dyn() { return regexp_new_options;}
+		static Dynamic regexp_match;
+		static Dynamic &regexp_match_dyn() { return regexp_match;}
+		static Dynamic regexp_matched;
+		static Dynamic &regexp_matched_dyn() { return regexp_matched;}
+		static Dynamic regexp_matched_pos;
+		static Dynamic &regexp_matched_pos_dyn() { return regexp_matched_pos;}
 		Dynamic r;
 		::String last;
 		bool global;
@@ -56,14 +64,6 @@ class HXCPP_CLASS_ATTRIBUTES  EReg_obj : public hx::Object{
 		virtual ::String map( ::String s,Dynamic f);
 		Dynamic map_dyn();
 
-		static Dynamic regexp_new_options;
-		static Dynamic &regexp_new_options_dyn() { return regexp_new_options;}
-		static Dynamic regexp_match;
-		static Dynamic &regexp_match_dyn() { return regexp_match;}
-		static Dynamic regexp_matched;
-		static Dynamic &regexp_matched_dyn() { return regexp_matched;}
-		static Dynamic regexp_matched_pos;
-		static Dynamic &regexp_matched_pos_dyn() { return regexp_matched_pos;}
 };
 
 

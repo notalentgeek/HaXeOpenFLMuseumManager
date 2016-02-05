@@ -1357,6 +1357,75 @@ bool Lib_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Propert
 	return false;
 }
 
+bool Lib_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 4:
+		if (HX_FIELD_EQ(inName,"file") ) { file=ioValue.Cast< ::String >(); return true; }
+		break;
+	case 5:
+		if (HX_FIELD_EQ(inName,"VSYNC") ) { VSYNC=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"HW_AA") ) { HW_AA=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"stage") ) { stage=ioValue.Cast< ::openfl::_legacy::display::Stage >(); return true; }
+		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"company") ) { company=ioValue.Cast< ::String >(); return true; }
+		if (HX_FIELD_EQ(inName,"current") ) { current=ioValue.Cast< ::openfl::_legacy::display::MovieClip >(); return true; }
+		if (HX_FIELD_EQ(inName,"version") ) { version=ioValue.Cast< ::String >(); return true; }
+		if (HX_FIELD_EQ(inName,"__stage") ) { __stage=ioValue.Cast< ::openfl::_legacy::display::Stage >(); return true; }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"HARDWARE") ) { HARDWARE=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"__isInit") ) { __isInit=ioValue.Cast< bool >(); return true; }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"RESIZABLE") ) { RESIZABLE=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"initWidth") ) { initWidth=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"__current") ) { __current=ioValue.Cast< ::openfl::_legacy::display::MovieClip >(); return true; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"FULLSCREEN") ) { FULLSCREEN=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"BORDERLESS") ) { BORDERLESS=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"initHeight") ) { initHeight=ioValue.Cast< int >(); return true; }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"HW_AA_HIRES") ) { HW_AA_HIRES=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"packageName") ) { packageName=ioValue.Cast< ::String >(); return true; }
+		if (HX_FIELD_EQ(inName,"__mainFrame") ) { __mainFrame=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"DEPTH_BUFFER") ) { DEPTH_BUFFER=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_get_url") ) { lime_get_url=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"ALLOW_SHADERS") ) { ALLOW_SHADERS=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"__moduleNames") ) { __moduleNames=ioValue.Cast< ::haxe::ds::StringMap >(); return true; }
+		break;
+	case 14:
+		if (HX_FIELD_EQ(inName,"STENCIL_BUFFER") ) { STENCIL_BUFFER=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"silentRecreate") ) { silentRecreate=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"__sentWarnings") ) { __sentWarnings=ioValue.Cast< ::haxe::ds::StringMap >(); return true; }
+		break;
+	case 15:
+		if (HX_FIELD_EQ(inName,"REQUIRE_SHADERS") ) { REQUIRE_SHADERS=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"__loadedNekoAPI") ) { __loadedNekoAPI=ioValue.Cast< bool >(); return true; }
+		break;
+	case 16:
+		if (HX_FIELD_EQ(inName,"lime_set_package") ) { lime_set_package=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 20:
+		if (HX_FIELD_EQ(inName,"lime_get_frame_stage") ) { lime_get_frame_stage=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_pause_animation") ) { lime_pause_animation=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 21:
+		if (HX_FIELD_EQ(inName,"lime_resume_animation") ) { lime_resume_animation=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 26:
+		if (HX_FIELD_EQ(inName,"__uncaughtExceptionHandler") ) { __uncaughtExceptionHandler=ioValue.Cast< Dynamic >(); return true; }
+	}
+	return false;
+}
+
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
@@ -1546,7 +1615,7 @@ void Lib_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &Lib_obj::__GetStatic;
-	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &Lib_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);

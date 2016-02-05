@@ -25,20 +25,13 @@ class HXCPP_CLASS_ATTRIBUTES  IResourceHook_obj : public hx::Interface{
 		typedef IResourceHook_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
 		virtual ::openfl::_legacy::display::BitmapData getBitmapData( ::String resourceId,::String locale)=0;
-		virtual Dynamic getBitmapData_dyn()=0;
+virtual Dynamic getBitmapData_dyn()=0;
 		virtual ::String getText( ::String resourceId,::String locale)=0;
-		virtual Dynamic getText_dyn()=0;
+virtual Dynamic getText_dyn()=0;
 		virtual ::openfl::_legacy::utils::ByteArray getBytes( ::String resourceId,::String locale)=0;
-		virtual Dynamic getBytes_dyn()=0;
+virtual Dynamic getBytes_dyn()=0;
 };
 
-#define DELEGATE_haxe_ui_toolkit_resources_IResourceHook \
-virtual ::openfl::_legacy::display::BitmapData getBitmapData( ::String resourceId,::String locale) { return mDelegate->getBitmapData(resourceId,locale);}  \
-virtual Dynamic getBitmapData_dyn() { return mDelegate->getBitmapData_dyn();}  \
-virtual ::String getText( ::String resourceId,::String locale) { return mDelegate->getText(resourceId,locale);}  \
-virtual Dynamic getText_dyn() { return mDelegate->getText_dyn();}  \
-virtual ::openfl::_legacy::utils::ByteArray getBytes( ::String resourceId,::String locale) { return mDelegate->getBytes(resourceId,locale);}  \
-virtual Dynamic getBytes_dyn() { return mDelegate->getBytes_dyn();}  \
 
 
 template<typename IMPL>
@@ -50,7 +43,12 @@ class IResourceHook_delegate_ : public IResourceHook_obj
 		IResourceHook_delegate_(IMPL *inDelegate) : mDelegate(inDelegate) {}
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
-		DELEGATE_haxe_ui_toolkit_resources_IResourceHook
+		::openfl::_legacy::display::BitmapData getBitmapData( ::String resourceId,::String locale) { return mDelegate->getBitmapData(resourceId,locale);}
+		Dynamic getBitmapData_dyn() { return mDelegate->getBitmapData_dyn();}
+		::String getText( ::String resourceId,::String locale) { return mDelegate->getText(resourceId,locale);}
+		Dynamic getText_dyn() { return mDelegate->getText_dyn();}
+		::openfl::_legacy::utils::ByteArray getBytes( ::String resourceId,::String locale) { return mDelegate->getBytes(resourceId,locale);}
+		Dynamic getBytes_dyn() { return mDelegate->getBytes_dyn();}
 };
 
 } // end namespace haxe

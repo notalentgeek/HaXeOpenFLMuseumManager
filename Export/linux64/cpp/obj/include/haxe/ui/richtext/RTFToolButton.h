@@ -50,11 +50,11 @@ class HXCPP_CLASS_ATTRIBUTES  RTFToolButton_obj : public ::haxe::ui::toolkit::co
 		::String __ToString() const { return HX_HCSTRING("RTFToolButton","\xce","\xc6","\xc7","\x1c"); }
 
 		static void __boot();
+		static Dynamic __meta__;
 		virtual ::haxe::ui::toolkit::core::DisplayObject clone( );
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );
 
-		static Dynamic __meta__;
 };
 
 } // end namespace haxe

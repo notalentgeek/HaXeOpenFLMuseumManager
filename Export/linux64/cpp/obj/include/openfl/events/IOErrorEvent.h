@@ -37,11 +37,11 @@ class HXCPP_CLASS_ATTRIBUTES  IOErrorEvent_obj : public ::openfl::events::ErrorE
 		::String __ToString() const { return HX_HCSTRING("IOErrorEvent","\xb8","\x16","\xb3","\x65"); }
 
 		static void __boot();
+		static ::String IO_ERROR;
 		virtual ::openfl::_legacy::events::Event clone( );
 
 		virtual ::String toString( );
 
-		static ::String IO_ERROR;
 };
 
 } // end namespace openfl

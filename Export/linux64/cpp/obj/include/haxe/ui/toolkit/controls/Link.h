@@ -49,7 +49,6 @@ class HXCPP_CLASS_ATTRIBUTES  Link_obj : public ::haxe::ui::toolkit::controls::T
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -57,6 +56,9 @@ class HXCPP_CLASS_ATTRIBUTES  Link_obj : public ::haxe::ui::toolkit::controls::T
 		::String __ToString() const { return HX_HCSTRING("Link","\x1a","\x44","\x8c","\x32"); }
 
 		static void __boot();
+		static ::String STATE_NORMAL;
+		static ::String STATE_OVER;
+		static ::String STATE_DOWN;
 		bool _isDown;
 		bool _isOver;
 		virtual Void initialize( );
@@ -80,9 +82,6 @@ class HXCPP_CLASS_ATTRIBUTES  Link_obj : public ::haxe::ui::toolkit::controls::T
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );
 
-		static ::String STATE_NORMAL;
-		static ::String STATE_OVER;
-		static ::String STATE_DOWN;
 };
 
 } // end namespace haxe

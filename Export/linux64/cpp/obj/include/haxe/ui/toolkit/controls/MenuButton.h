@@ -62,6 +62,7 @@ class HXCPP_CLASS_ATTRIBUTES  MenuButton_obj : public ::haxe::ui::toolkit::contr
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("MenuButton","\x11","\xa1","\x15","\xb3"); }
 
+		static ::haxe::ui::toolkit::controls::MenuButton _currentMenuButton;
 		::haxe::ui::toolkit::controls::Menu _menu;
 		virtual Void initialize( );
 
@@ -92,7 +93,6 @@ class HXCPP_CLASS_ATTRIBUTES  MenuButton_obj : public ::haxe::ui::toolkit::contr
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );
 
-		static ::haxe::ui::toolkit::controls::MenuButton _currentMenuButton;
 };
 
 } // end namespace haxe

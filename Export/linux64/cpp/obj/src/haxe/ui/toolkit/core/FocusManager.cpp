@@ -77,6 +77,18 @@ bool FocusManager_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx
 	return false;
 }
 
+bool FocusManager_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 8:
+		if (HX_FIELD_EQ(inName,"instance") ) { instance=ioValue.Cast< ::haxe::ui::toolkit::core::FocusManager >(); return true; }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"_instance") ) { _instance=ioValue.Cast< ::haxe::ui::toolkit::core::FocusManager >(); return true; }
+	}
+	return false;
+}
+
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
@@ -117,7 +129,7 @@ void FocusManager_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &FocusManager_obj::__GetStatic;
-	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &FocusManager_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);

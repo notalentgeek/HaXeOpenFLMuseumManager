@@ -43,6 +43,12 @@ class HXCPP_CLASS_ATTRIBUTES  SocketInput_obj : public ::haxe::io::Input_obj{
 		::String __ToString() const { return HX_HCSTRING("SocketInput","\x37","\xf7","\x80","\xbe"); }
 
 		static void __boot();
+		static Dynamic socket_recv;
+		static Dynamic &socket_recv_dyn() { return socket_recv;}
+		static Dynamic socket_recv_char;
+		static Dynamic &socket_recv_char_dyn() { return socket_recv_char;}
+		static Dynamic socket_close;
+		static Dynamic &socket_close_dyn() { return socket_close;}
 		Dynamic __s;
 		virtual int readByte( );
 
@@ -50,12 +56,6 @@ class HXCPP_CLASS_ATTRIBUTES  SocketInput_obj : public ::haxe::io::Input_obj{
 
 		virtual Void close( );
 
-		static Dynamic socket_recv;
-		static Dynamic &socket_recv_dyn() { return socket_recv;}
-		static Dynamic socket_recv_char;
-		static Dynamic &socket_recv_char_dyn() { return socket_recv_char;}
-		static Dynamic socket_close;
-		static Dynamic &socket_close_dyn() { return socket_close;}
 };
 
 } // end namespace sys

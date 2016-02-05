@@ -50,6 +50,7 @@ class HXCPP_CLASS_ATTRIBUTES  Assets_obj : public hx::Object{
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Assets","\xa3","\xbc","\x97","\x80"); }
 

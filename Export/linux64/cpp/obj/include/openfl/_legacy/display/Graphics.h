@@ -50,6 +50,61 @@ class HXCPP_CLASS_ATTRIBUTES  Graphics_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Graphics","\xeb","\xb4","\x19","\xec"); }
 
 		static void __boot();
+		static int TILE_SCALE;
+		static int TILE_ROTATION;
+		static int TILE_RGB;
+		static int TILE_ALPHA;
+		static int TILE_TRANS_2x2;
+		static int TILE_RECT;
+		static int TILE_ORIGIN;
+		static int TILE_SMOOTH;
+		static int TILE_BLEND_NORMAL;
+		static int TILE_BLEND_ADD;
+		static int RGBA( int rgb,hx::Null< int >  alpha);
+		static Dynamic RGBA_dyn();
+
+		static Dynamic lime_gfx_clear;
+		static Dynamic &lime_gfx_clear_dyn() { return lime_gfx_clear;}
+		static Dynamic lime_gfx_begin_fill;
+		static Dynamic &lime_gfx_begin_fill_dyn() { return lime_gfx_begin_fill;}
+		static Dynamic lime_gfx_begin_bitmap_fill;
+		static Dynamic &lime_gfx_begin_bitmap_fill_dyn() { return lime_gfx_begin_bitmap_fill;}
+		static Dynamic lime_gfx_line_bitmap_fill;
+		static Dynamic &lime_gfx_line_bitmap_fill_dyn() { return lime_gfx_line_bitmap_fill;}
+		static Dynamic lime_gfx_begin_gradient_fill;
+		static Dynamic &lime_gfx_begin_gradient_fill_dyn() { return lime_gfx_begin_gradient_fill;}
+		static Dynamic lime_gfx_line_gradient_fill;
+		static Dynamic &lime_gfx_line_gradient_fill_dyn() { return lime_gfx_line_gradient_fill;}
+		static Dynamic lime_gfx_end_fill;
+		static Dynamic &lime_gfx_end_fill_dyn() { return lime_gfx_end_fill;}
+		static Dynamic lime_gfx_line_style;
+		static Dynamic &lime_gfx_line_style_dyn() { return lime_gfx_line_style;}
+		static Dynamic lime_gfx_move_to;
+		static Dynamic &lime_gfx_move_to_dyn() { return lime_gfx_move_to;}
+		static Dynamic lime_gfx_line_to;
+		static Dynamic &lime_gfx_line_to_dyn() { return lime_gfx_line_to;}
+		static Dynamic lime_gfx_curve_to;
+		static Dynamic &lime_gfx_curve_to_dyn() { return lime_gfx_curve_to;}
+		static Dynamic lime_gfx_arc_to;
+		static Dynamic &lime_gfx_arc_to_dyn() { return lime_gfx_arc_to;}
+		static Dynamic lime_gfx_draw_ellipse;
+		static Dynamic &lime_gfx_draw_ellipse_dyn() { return lime_gfx_draw_ellipse;}
+		static Dynamic lime_gfx_draw_data;
+		static Dynamic &lime_gfx_draw_data_dyn() { return lime_gfx_draw_data;}
+		static Dynamic lime_gfx_draw_datum;
+		static Dynamic &lime_gfx_draw_datum_dyn() { return lime_gfx_draw_datum;}
+		static Dynamic lime_gfx_draw_rect;
+		static Dynamic &lime_gfx_draw_rect_dyn() { return lime_gfx_draw_rect;}
+		static Dynamic lime_gfx_draw_path;
+		static Dynamic &lime_gfx_draw_path_dyn() { return lime_gfx_draw_path;}
+		static Dynamic lime_gfx_draw_tiles;
+		static Dynamic &lime_gfx_draw_tiles_dyn() { return lime_gfx_draw_tiles;}
+		static Dynamic lime_gfx_draw_points;
+		static Dynamic &lime_gfx_draw_points_dyn() { return lime_gfx_draw_points;}
+		static Dynamic lime_gfx_draw_round_rect;
+		static Dynamic &lime_gfx_draw_round_rect_dyn() { return lime_gfx_draw_round_rect;}
+		static Dynamic lime_gfx_draw_triangles;
+		static Dynamic &lime_gfx_draw_triangles_dyn() { return lime_gfx_draw_triangles;}
 		Dynamic __handle;
 		virtual Void arcTo( Float controlX,Float controlY,Float x,Float y);
 		Dynamic arcTo_dyn();
@@ -126,61 +181,6 @@ class HXCPP_CLASS_ATTRIBUTES  Graphics_obj : public hx::Object{
 		virtual Void moveTo( Float x,Float y);
 		Dynamic moveTo_dyn();
 
-		static int TILE_SCALE;
-		static int TILE_ROTATION;
-		static int TILE_RGB;
-		static int TILE_ALPHA;
-		static int TILE_TRANS_2x2;
-		static int TILE_RECT;
-		static int TILE_ORIGIN;
-		static int TILE_SMOOTH;
-		static int TILE_BLEND_NORMAL;
-		static int TILE_BLEND_ADD;
-		static int RGBA( int rgb,hx::Null< int >  alpha);
-		static Dynamic RGBA_dyn();
-
-		static Dynamic lime_gfx_clear;
-		static Dynamic &lime_gfx_clear_dyn() { return lime_gfx_clear;}
-		static Dynamic lime_gfx_begin_fill;
-		static Dynamic &lime_gfx_begin_fill_dyn() { return lime_gfx_begin_fill;}
-		static Dynamic lime_gfx_begin_bitmap_fill;
-		static Dynamic &lime_gfx_begin_bitmap_fill_dyn() { return lime_gfx_begin_bitmap_fill;}
-		static Dynamic lime_gfx_line_bitmap_fill;
-		static Dynamic &lime_gfx_line_bitmap_fill_dyn() { return lime_gfx_line_bitmap_fill;}
-		static Dynamic lime_gfx_begin_gradient_fill;
-		static Dynamic &lime_gfx_begin_gradient_fill_dyn() { return lime_gfx_begin_gradient_fill;}
-		static Dynamic lime_gfx_line_gradient_fill;
-		static Dynamic &lime_gfx_line_gradient_fill_dyn() { return lime_gfx_line_gradient_fill;}
-		static Dynamic lime_gfx_end_fill;
-		static Dynamic &lime_gfx_end_fill_dyn() { return lime_gfx_end_fill;}
-		static Dynamic lime_gfx_line_style;
-		static Dynamic &lime_gfx_line_style_dyn() { return lime_gfx_line_style;}
-		static Dynamic lime_gfx_move_to;
-		static Dynamic &lime_gfx_move_to_dyn() { return lime_gfx_move_to;}
-		static Dynamic lime_gfx_line_to;
-		static Dynamic &lime_gfx_line_to_dyn() { return lime_gfx_line_to;}
-		static Dynamic lime_gfx_curve_to;
-		static Dynamic &lime_gfx_curve_to_dyn() { return lime_gfx_curve_to;}
-		static Dynamic lime_gfx_arc_to;
-		static Dynamic &lime_gfx_arc_to_dyn() { return lime_gfx_arc_to;}
-		static Dynamic lime_gfx_draw_ellipse;
-		static Dynamic &lime_gfx_draw_ellipse_dyn() { return lime_gfx_draw_ellipse;}
-		static Dynamic lime_gfx_draw_data;
-		static Dynamic &lime_gfx_draw_data_dyn() { return lime_gfx_draw_data;}
-		static Dynamic lime_gfx_draw_datum;
-		static Dynamic &lime_gfx_draw_datum_dyn() { return lime_gfx_draw_datum;}
-		static Dynamic lime_gfx_draw_rect;
-		static Dynamic &lime_gfx_draw_rect_dyn() { return lime_gfx_draw_rect;}
-		static Dynamic lime_gfx_draw_path;
-		static Dynamic &lime_gfx_draw_path_dyn() { return lime_gfx_draw_path;}
-		static Dynamic lime_gfx_draw_tiles;
-		static Dynamic &lime_gfx_draw_tiles_dyn() { return lime_gfx_draw_tiles;}
-		static Dynamic lime_gfx_draw_points;
-		static Dynamic &lime_gfx_draw_points_dyn() { return lime_gfx_draw_points;}
-		static Dynamic lime_gfx_draw_round_rect;
-		static Dynamic &lime_gfx_draw_round_rect_dyn() { return lime_gfx_draw_round_rect;}
-		static Dynamic lime_gfx_draw_triangles;
-		static Dynamic &lime_gfx_draw_triangles_dyn() { return lime_gfx_draw_triangles;}
 };
 
 } // end namespace openfl

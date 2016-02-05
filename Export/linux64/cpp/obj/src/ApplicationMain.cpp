@@ -354,6 +354,25 @@ bool ApplicationMain_obj::__GetStatic(const ::String &inName, Dynamic &outValue,
 	return false;
 }
 
+bool ApplicationMain_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 4:
+		if (HX_FIELD_EQ(inName,"barA") ) { barA=ioValue.Cast< ::openfl::_legacy::display::Sprite >(); return true; }
+		if (HX_FIELD_EQ(inName,"barB") ) { barB=ioValue.Cast< ::openfl::_legacy::display::Sprite >(); return true; }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"container") ) { container=ioValue.Cast< ::openfl::_legacy::display::Sprite >(); return true; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"forceWidth") ) { forceWidth=ioValue.Cast< int >(); return true; }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"forceHeight") ) { forceHeight=ioValue.Cast< int >(); return true; }
+	}
+	return false;
+}
+
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
@@ -406,7 +425,7 @@ void ApplicationMain_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &ApplicationMain_obj::__GetStatic;
-	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &ApplicationMain_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);

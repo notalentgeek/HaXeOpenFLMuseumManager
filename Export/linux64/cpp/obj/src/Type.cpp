@@ -26,7 +26,7 @@ Dynamic Type_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::hx::Class Type_obj::getClass( Dynamic o){
-	HX_STACK_FRAME("Type","getClass",0xc4e49bd6,"Type.getClass","/usr/lib/haxe/std/cpp/_std/Type.hx",35,0x728dd546)
+	HX_STACK_FRAME("Type","getClass",0xc4e49bd6,"Type.getClass","/usr/share/haxe/std/cpp/_std/Type.hx",35,0x978d9ce0)
 	HX_STACK_ARG(o,"o")
 	HX_STACK_LINE(36)
 	bool tmp = (o == null());		HX_STACK_VAR(tmp,"tmp");
@@ -91,7 +91,7 @@ Dynamic Type_obj::__Create(hx::DynamicArray inArgs)
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getClass,return )
 
 ::hx::Class Type_obj::getSuperClass( ::hx::Class c){
-	HX_STACK_FRAME("Type","getSuperClass",0xd9ffa85f,"Type.getSuperClass","/usr/lib/haxe/std/cpp/_std/Type.hx",52,0x728dd546)
+	HX_STACK_FRAME("Type","getSuperClass",0xd9ffa85f,"Type.getSuperClass","/usr/share/haxe/std/cpp/_std/Type.hx",52,0x978d9ce0)
 	HX_STACK_ARG(c,"c")
 	HX_STACK_LINE(53)
 	::hx::Class tmp = c->GetSuper();		HX_STACK_VAR(tmp,"tmp");
@@ -103,7 +103,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getClass,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getSuperClass,return )
 
 ::String Type_obj::getClassName( ::hx::Class c){
-	HX_STACK_FRAME("Type","getClassName",0x8e66dd41,"Type.getClassName","/usr/lib/haxe/std/cpp/_std/Type.hx",56,0x728dd546)
+	HX_STACK_FRAME("Type","getClassName",0x8e66dd41,"Type.getClassName","/usr/share/haxe/std/cpp/_std/Type.hx",56,0x978d9ce0)
 	HX_STACK_ARG(c,"c")
 	HX_STACK_LINE(57)
 	bool tmp = (c == null());		HX_STACK_VAR(tmp,"tmp");
@@ -120,7 +120,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getSuperClass,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getClassName,return )
 
 ::hx::Class Type_obj::resolveClass( ::String name){
-	HX_STACK_FRAME("Type","resolveClass",0x23b06bc0,"Type.resolveClass","/usr/lib/haxe/std/cpp/_std/Type.hx",66,0x728dd546)
+	HX_STACK_FRAME("Type","resolveClass",0x23b06bc0,"Type.resolveClass","/usr/share/haxe/std/cpp/_std/Type.hx",66,0x978d9ce0)
 	HX_STACK_ARG(name,"name")
 	HX_STACK_LINE(67)
 	::String tmp = name;		HX_STACK_VAR(tmp,"tmp");
@@ -156,7 +156,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getClassName,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,resolveClass,return )
 
 ::Enum Type_obj::resolveEnum( ::String name){
-	HX_STACK_FRAME("Type","resolveEnum",0x26394079,"Type.resolveEnum","/usr/lib/haxe/std/cpp/_std/Type.hx",73,0x728dd546)
+	HX_STACK_FRAME("Type","resolveEnum",0x26394079,"Type.resolveEnum","/usr/share/haxe/std/cpp/_std/Type.hx",73,0x978d9ce0)
 	HX_STACK_ARG(name,"name")
 	HX_STACK_LINE(74)
 	::String tmp = name;		HX_STACK_VAR(tmp,"tmp");
@@ -198,7 +198,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,resolveClass,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,resolveEnum,return )
 
 Dynamic Type_obj::createInstance( ::hx::Class cl,cpp::ArrayBase args){
-	HX_STACK_FRAME("Type","createInstance",0xab84f9c5,"Type.createInstance","/usr/lib/haxe/std/cpp/_std/Type.hx",80,0x728dd546)
+	HX_STACK_FRAME("Type","createInstance",0xab84f9c5,"Type.createInstance","/usr/share/haxe/std/cpp/_std/Type.hx",80,0x978d9ce0)
 	HX_STACK_ARG(cl,"cl")
 	HX_STACK_ARG(args,"args")
 	HX_STACK_LINE(81)
@@ -218,7 +218,7 @@ Dynamic Type_obj::createInstance( ::hx::Class cl,cpp::ArrayBase args){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(Type_obj,createInstance,return )
 
 Dynamic Type_obj::createEmptyInstance( ::hx::Class cl){
-	HX_STACK_FRAME("Type","createEmptyInstance",0xcb752312,"Type.createEmptyInstance","/usr/lib/haxe/std/cpp/_std/Type.hx",86,0x728dd546)
+	HX_STACK_FRAME("Type","createEmptyInstance",0xcb752312,"Type.createEmptyInstance","/usr/share/haxe/std/cpp/_std/Type.hx",86,0x978d9ce0)
 	HX_STACK_ARG(cl,"cl")
 	HX_STACK_LINE(87)
 	Dynamic tmp = cl->ConstructEmpty();		HX_STACK_VAR(tmp,"tmp");
@@ -230,7 +230,7 @@ Dynamic Type_obj::createEmptyInstance( ::hx::Class cl){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,createEmptyInstance,return )
 
 Dynamic Type_obj::createEnum( ::Enum e,::String constr,cpp::ArrayBase params){
-	HX_STACK_FRAME("Type","createEnum",0xd8d56d31,"Type.createEnum","/usr/lib/haxe/std/cpp/_std/Type.hx",90,0x728dd546)
+	HX_STACK_FRAME("Type","createEnum",0xd8d56d31,"Type.createEnum","/usr/share/haxe/std/cpp/_std/Type.hx",90,0x978d9ce0)
 	HX_STACK_ARG(e,"e")
 	HX_STACK_ARG(constr,"constr")
 	HX_STACK_ARG(params,"params")
@@ -246,7 +246,7 @@ Dynamic Type_obj::createEnum( ::Enum e,::String constr,cpp::ArrayBase params){
 STATIC_HX_DEFINE_DYNAMIC_FUNC3(Type_obj,createEnum,return )
 
 Dynamic Type_obj::createEnumIndex( ::Enum e,int index,cpp::ArrayBase params){
-	HX_STACK_FRAME("Type","createEnumIndex",0xd21e2c21,"Type.createEnumIndex","/usr/lib/haxe/std/cpp/_std/Type.hx",94,0x728dd546)
+	HX_STACK_FRAME("Type","createEnumIndex",0xd21e2c21,"Type.createEnumIndex","/usr/share/haxe/std/cpp/_std/Type.hx",94,0x978d9ce0)
 	HX_STACK_ARG(e,"e")
 	HX_STACK_ARG(index,"index")
 	HX_STACK_ARG(params,"params")
@@ -279,7 +279,7 @@ Dynamic Type_obj::createEnumIndex( ::Enum e,int index,cpp::ArrayBase params){
 STATIC_HX_DEFINE_DYNAMIC_FUNC3(Type_obj,createEnumIndex,return )
 
 Array< ::String > Type_obj::getClassFields( ::hx::Class c){
-	HX_STACK_FRAME("Type","getClassFields",0x7edf22ef,"Type.getClassFields","/usr/lib/haxe/std/cpp/_std/Type.hx",105,0x728dd546)
+	HX_STACK_FRAME("Type","getClassFields",0x7edf22ef,"Type.getClassFields","/usr/share/haxe/std/cpp/_std/Type.hx",105,0x978d9ce0)
 	HX_STACK_ARG(c,"c")
 	HX_STACK_LINE(105)
 	return c->GetClassFields();
@@ -289,7 +289,7 @@ Array< ::String > Type_obj::getClassFields( ::hx::Class c){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getClassFields,return )
 
 Array< ::String > Type_obj::getEnumConstructs( ::Enum e){
-	HX_STACK_FRAME("Type","getEnumConstructs",0x7f46cf7f,"Type.getEnumConstructs","/usr/lib/haxe/std/cpp/_std/Type.hx",109,0x728dd546)
+	HX_STACK_FRAME("Type","getEnumConstructs",0x7f46cf7f,"Type.getEnumConstructs","/usr/share/haxe/std/cpp/_std/Type.hx",109,0x978d9ce0)
 	HX_STACK_ARG(e,"e")
 	HX_STACK_LINE(109)
 	return e->GetClassFields();
@@ -299,7 +299,7 @@ Array< ::String > Type_obj::getEnumConstructs( ::Enum e){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getEnumConstructs,return )
 
 bool Type_obj::enumEq( Dynamic a,Dynamic b){
-	HX_STACK_FRAME("Type","enumEq",0x855650e1,"Type.enumEq","/usr/lib/haxe/std/cpp/_std/Type.hx",128,0x728dd546)
+	HX_STACK_FRAME("Type","enumEq",0x855650e1,"Type.enumEq","/usr/share/haxe/std/cpp/_std/Type.hx",128,0x978d9ce0)
 	HX_STACK_ARG(a,"a")
 	HX_STACK_ARG(b,"b")
 	HX_STACK_LINE(129)

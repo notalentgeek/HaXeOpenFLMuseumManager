@@ -36,6 +36,7 @@ class HXCPP_CLASS_ATTRIBUTES  OpenGLView_obj : public ::openfl::_legacy::display
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("OpenGLView","\x94","\x0e","\xac","\x6e"); }
 

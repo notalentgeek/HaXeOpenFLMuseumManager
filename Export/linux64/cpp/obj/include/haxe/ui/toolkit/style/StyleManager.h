@@ -47,6 +47,11 @@ class HXCPP_CLASS_ATTRIBUTES  StyleManager_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("StyleManager","\x5c","\xd9","\xdd","\x08"); }
 
+		static ::haxe::ui::toolkit::style::StyleManager _instance;
+		static ::haxe::ui::toolkit::style::StyleManager instance;
+		static ::haxe::ui::toolkit::style::StyleManager get_instance( );
+		static Dynamic get_instance_dyn();
+
 		::haxe::ds::StringMap _styles;
 		Array< ::String > _rules;
 		int stylesBuilt;
@@ -104,11 +109,6 @@ class HXCPP_CLASS_ATTRIBUTES  StyleManager_obj : public hx::Object{
 
 		virtual bool get_hasStyles( );
 		Dynamic get_hasStyles_dyn();
-
-		static ::haxe::ui::toolkit::style::StyleManager _instance;
-		static ::haxe::ui::toolkit::style::StyleManager instance;
-		static ::haxe::ui::toolkit::style::StyleManager get_instance( );
-		static Dynamic get_instance_dyn();
 
 };
 

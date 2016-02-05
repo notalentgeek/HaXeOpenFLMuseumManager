@@ -38,6 +38,32 @@ class HXCPP_CLASS_ATTRIBUTES  Event_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Event","\xfa","\x37","\xf2","\x08"); }
 
 		static void __boot();
+		static ::String ACTIVATE;
+		static ::String ADDED;
+		static ::String ADDED_TO_STAGE;
+		static ::String CANCEL;
+		static ::String CHANGE;
+		static ::String CLOSE;
+		static ::String COMPLETE;
+		static ::String CONNECT;
+		static ::String CONTEXT3D_CREATE;
+		static ::String DEACTIVATE;
+		static ::String ENTER_FRAME;
+		static ::String ID3;
+		static ::String INIT;
+		static ::String MOUSE_LEAVE;
+		static ::String OPEN;
+		static ::String REMOVED;
+		static ::String REMOVED_FROM_STAGE;
+		static ::String RENDER;
+		static ::String RESIZE;
+		static ::String SCROLL;
+		static ::String SELECT;
+		static ::String SOUND_COMPLETE;
+		static ::String TAB_CHILDREN_CHANGE;
+		static ::String TAB_ENABLED_CHANGE;
+		static ::String TAB_INDEX_CHANGE;
+		static ::String UNLOAD;
 		bool __bubbles;
 		bool __cancelable;
 		Dynamic __currentTarget;
@@ -97,32 +123,6 @@ class HXCPP_CLASS_ATTRIBUTES  Event_obj : public hx::Object{
 		virtual ::String get_type( );
 		Dynamic get_type_dyn();
 
-		static ::String ACTIVATE;
-		static ::String ADDED;
-		static ::String ADDED_TO_STAGE;
-		static ::String CANCEL;
-		static ::String CHANGE;
-		static ::String CLOSE;
-		static ::String COMPLETE;
-		static ::String CONNECT;
-		static ::String CONTEXT3D_CREATE;
-		static ::String DEACTIVATE;
-		static ::String ENTER_FRAME;
-		static ::String ID3;
-		static ::String INIT;
-		static ::String MOUSE_LEAVE;
-		static ::String OPEN;
-		static ::String REMOVED;
-		static ::String REMOVED_FROM_STAGE;
-		static ::String RENDER;
-		static ::String RESIZE;
-		static ::String SCROLL;
-		static ::String SELECT;
-		static ::String SOUND_COMPLETE;
-		static ::String TAB_CHILDREN_CHANGE;
-		static ::String TAB_ENABLED_CHANGE;
-		static ::String TAB_INDEX_CHANGE;
-		static ::String UNLOAD;
 };
 
 } // end namespace openfl

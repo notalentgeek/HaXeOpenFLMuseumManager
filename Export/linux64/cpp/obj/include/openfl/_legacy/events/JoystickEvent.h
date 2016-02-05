@@ -33,7 +33,6 @@ class HXCPP_CLASS_ATTRIBUTES  JoystickEvent_obj : public ::openfl::_legacy::even
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -41,6 +40,13 @@ class HXCPP_CLASS_ATTRIBUTES  JoystickEvent_obj : public ::openfl::_legacy::even
 		::String __ToString() const { return HX_HCSTRING("JoystickEvent","\x9e","\x7d","\x3c","\xe7"); }
 
 		static void __boot();
+		static ::String AXIS_MOVE;
+		static ::String BALL_MOVE;
+		static ::String BUTTON_DOWN;
+		static ::String BUTTON_UP;
+		static ::String HAT_MOVE;
+		static ::String DEVICE_ADDED;
+		static ::String DEVICE_REMOVED;
 		Array< Float > axis;
 		int device;
 		int id;
@@ -51,13 +57,6 @@ class HXCPP_CLASS_ATTRIBUTES  JoystickEvent_obj : public ::openfl::_legacy::even
 
 		virtual ::String toString( );
 
-		static ::String AXIS_MOVE;
-		static ::String BALL_MOVE;
-		static ::String BUTTON_DOWN;
-		static ::String BUTTON_UP;
-		static ::String HAT_MOVE;
-		static ::String DEVICE_ADDED;
-		static ::String DEVICE_REMOVED;
 };
 
 } // end namespace openfl

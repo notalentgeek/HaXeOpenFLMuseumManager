@@ -40,6 +40,7 @@ class HXCPP_CLASS_ATTRIBUTES  OptimizedPerlin_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("OptimizedPerlin","\xbb","\xfa","\x7d","\x3b"); }
 
 		static void __boot();
+		static Array< int > P;
 		int octaves;
 		Array< Float > aOctFreq;
 		Array< Float > aOctPers;
@@ -57,7 +58,6 @@ class HXCPP_CLASS_ATTRIBUTES  OptimizedPerlin_obj : public hx::Object{
 		virtual Void seedOffset( int iSeed);
 		Dynamic seedOffset_dyn();
 
-		static Array< int > P;
 };
 
 } // end namespace openfl

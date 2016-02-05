@@ -63,6 +63,104 @@ class HXCPP_CLASS_ATTRIBUTES  DisplayObject_obj : public ::openfl::_legacy::even
 		::String __ToString() const { return HX_HCSTRING("DisplayObject","\x81","\x8a","\x92","\x1e"); }
 
 		static void __boot();
+		static Dynamic lime_create_display_object;
+		static Dynamic &lime_create_display_object_dyn() { return lime_create_display_object;}
+		static Dynamic lime_display_object_get_graphics;
+		static Dynamic &lime_display_object_get_graphics_dyn() { return lime_display_object_get_graphics;}
+		static Dynamic lime_display_object_draw_to_surface;
+		static Dynamic &lime_display_object_draw_to_surface_dyn() { return lime_display_object_draw_to_surface;}
+		static Dynamic lime_display_object_get_id;
+		static Dynamic &lime_display_object_get_id_dyn() { return lime_display_object_get_id;}
+		static Dynamic lime_display_object_get_x;
+		static Dynamic &lime_display_object_get_x_dyn() { return lime_display_object_get_x;}
+		static Dynamic lime_display_object_set_x;
+		static Dynamic &lime_display_object_set_x_dyn() { return lime_display_object_set_x;}
+		static Dynamic lime_display_object_get_y;
+		static Dynamic &lime_display_object_get_y_dyn() { return lime_display_object_get_y;}
+		static Dynamic lime_display_object_set_y;
+		static Dynamic &lime_display_object_set_y_dyn() { return lime_display_object_set_y;}
+		static Dynamic lime_display_object_get_z;
+		static Dynamic &lime_display_object_get_z_dyn() { return lime_display_object_get_z;}
+		static Dynamic lime_display_object_set_z;
+		static Dynamic &lime_display_object_set_z_dyn() { return lime_display_object_set_z;}
+		static Dynamic lime_display_object_get_scale_x;
+		static Dynamic &lime_display_object_get_scale_x_dyn() { return lime_display_object_get_scale_x;}
+		static Dynamic lime_display_object_set_scale_x;
+		static Dynamic &lime_display_object_set_scale_x_dyn() { return lime_display_object_set_scale_x;}
+		static Dynamic lime_display_object_get_scale_y;
+		static Dynamic &lime_display_object_get_scale_y_dyn() { return lime_display_object_get_scale_y;}
+		static Dynamic lime_display_object_set_scale_y;
+		static Dynamic &lime_display_object_set_scale_y_dyn() { return lime_display_object_set_scale_y;}
+		static Dynamic lime_display_object_get_mouse_x;
+		static Dynamic &lime_display_object_get_mouse_x_dyn() { return lime_display_object_get_mouse_x;}
+		static Dynamic lime_display_object_get_mouse_y;
+		static Dynamic &lime_display_object_get_mouse_y_dyn() { return lime_display_object_get_mouse_y;}
+		static Dynamic lime_display_object_get_rotation;
+		static Dynamic &lime_display_object_get_rotation_dyn() { return lime_display_object_get_rotation;}
+		static Dynamic lime_display_object_set_rotation;
+		static Dynamic &lime_display_object_set_rotation_dyn() { return lime_display_object_set_rotation;}
+		static Dynamic lime_display_object_get_bg;
+		static Dynamic &lime_display_object_get_bg_dyn() { return lime_display_object_get_bg;}
+		static Dynamic lime_display_object_set_bg;
+		static Dynamic &lime_display_object_set_bg_dyn() { return lime_display_object_set_bg;}
+		static Dynamic lime_display_object_get_name;
+		static Dynamic &lime_display_object_get_name_dyn() { return lime_display_object_get_name;}
+		static Dynamic lime_display_object_set_name;
+		static Dynamic &lime_display_object_set_name_dyn() { return lime_display_object_set_name;}
+		static Dynamic lime_display_object_get_width;
+		static Dynamic &lime_display_object_get_width_dyn() { return lime_display_object_get_width;}
+		static Dynamic lime_display_object_set_width;
+		static Dynamic &lime_display_object_set_width_dyn() { return lime_display_object_set_width;}
+		static Dynamic lime_display_object_get_height;
+		static Dynamic &lime_display_object_get_height_dyn() { return lime_display_object_get_height;}
+		static Dynamic lime_display_object_set_height;
+		static Dynamic &lime_display_object_set_height_dyn() { return lime_display_object_set_height;}
+		static Dynamic lime_display_object_get_alpha;
+		static Dynamic &lime_display_object_get_alpha_dyn() { return lime_display_object_get_alpha;}
+		static Dynamic lime_display_object_set_alpha;
+		static Dynamic &lime_display_object_set_alpha_dyn() { return lime_display_object_set_alpha;}
+		static Dynamic lime_display_object_get_blend_mode;
+		static Dynamic &lime_display_object_get_blend_mode_dyn() { return lime_display_object_get_blend_mode;}
+		static Dynamic lime_display_object_set_blend_mode;
+		static Dynamic &lime_display_object_set_blend_mode_dyn() { return lime_display_object_set_blend_mode;}
+		static Dynamic lime_display_object_get_cache_as_bitmap;
+		static Dynamic &lime_display_object_get_cache_as_bitmap_dyn() { return lime_display_object_get_cache_as_bitmap;}
+		static Dynamic lime_display_object_set_cache_as_bitmap;
+		static Dynamic &lime_display_object_set_cache_as_bitmap_dyn() { return lime_display_object_set_cache_as_bitmap;}
+		static Dynamic lime_display_object_get_pedantic_bitmap_caching;
+		static Dynamic &lime_display_object_get_pedantic_bitmap_caching_dyn() { return lime_display_object_get_pedantic_bitmap_caching;}
+		static Dynamic lime_display_object_set_pedantic_bitmap_caching;
+		static Dynamic &lime_display_object_set_pedantic_bitmap_caching_dyn() { return lime_display_object_set_pedantic_bitmap_caching;}
+		static Dynamic lime_display_object_get_visible;
+		static Dynamic &lime_display_object_get_visible_dyn() { return lime_display_object_get_visible;}
+		static Dynamic lime_display_object_set_visible;
+		static Dynamic &lime_display_object_set_visible_dyn() { return lime_display_object_set_visible;}
+		static Dynamic lime_display_object_set_filters;
+		static Dynamic &lime_display_object_set_filters_dyn() { return lime_display_object_set_filters;}
+		static Dynamic lime_display_object_global_to_local;
+		static Dynamic &lime_display_object_global_to_local_dyn() { return lime_display_object_global_to_local;}
+		static Dynamic lime_display_object_local_to_global;
+		static Dynamic &lime_display_object_local_to_global_dyn() { return lime_display_object_local_to_global;}
+		static Dynamic lime_display_object_set_scale9_grid;
+		static Dynamic &lime_display_object_set_scale9_grid_dyn() { return lime_display_object_set_scale9_grid;}
+		static Dynamic lime_display_object_set_scroll_rect;
+		static Dynamic &lime_display_object_set_scroll_rect_dyn() { return lime_display_object_set_scroll_rect;}
+		static Dynamic lime_display_object_set_mask;
+		static Dynamic &lime_display_object_set_mask_dyn() { return lime_display_object_set_mask;}
+		static Dynamic lime_display_object_set_matrix;
+		static Dynamic &lime_display_object_set_matrix_dyn() { return lime_display_object_set_matrix;}
+		static Dynamic lime_display_object_get_matrix;
+		static Dynamic &lime_display_object_get_matrix_dyn() { return lime_display_object_get_matrix;}
+		static Dynamic lime_display_object_get_color_transform;
+		static Dynamic &lime_display_object_get_color_transform_dyn() { return lime_display_object_get_color_transform;}
+		static Dynamic lime_display_object_set_color_transform;
+		static Dynamic &lime_display_object_set_color_transform_dyn() { return lime_display_object_set_color_transform;}
+		static Dynamic lime_display_object_get_pixel_bounds;
+		static Dynamic &lime_display_object_get_pixel_bounds_dyn() { return lime_display_object_get_pixel_bounds;}
+		static Dynamic lime_display_object_get_bounds;
+		static Dynamic &lime_display_object_get_bounds_dyn() { return lime_display_object_get_bounds;}
+		static Dynamic lime_display_object_hit_test_point;
+		static Dynamic &lime_display_object_hit_test_point_dyn() { return lime_display_object_hit_test_point;}
 		::openfl::_legacy::display::Graphics graphics;
 		::openfl::_legacy::display::LoaderInfo loaderInfo;
 		::openfl::_legacy::display::DisplayObject mask;
@@ -292,104 +390,6 @@ class HXCPP_CLASS_ATTRIBUTES  DisplayObject_obj : public ::openfl::_legacy::even
 		virtual Float set_z( Float value);
 		Dynamic set_z_dyn();
 
-		static Dynamic lime_create_display_object;
-		static Dynamic &lime_create_display_object_dyn() { return lime_create_display_object;}
-		static Dynamic lime_display_object_get_graphics;
-		static Dynamic &lime_display_object_get_graphics_dyn() { return lime_display_object_get_graphics;}
-		static Dynamic lime_display_object_draw_to_surface;
-		static Dynamic &lime_display_object_draw_to_surface_dyn() { return lime_display_object_draw_to_surface;}
-		static Dynamic lime_display_object_get_id;
-		static Dynamic &lime_display_object_get_id_dyn() { return lime_display_object_get_id;}
-		static Dynamic lime_display_object_get_x;
-		static Dynamic &lime_display_object_get_x_dyn() { return lime_display_object_get_x;}
-		static Dynamic lime_display_object_set_x;
-		static Dynamic &lime_display_object_set_x_dyn() { return lime_display_object_set_x;}
-		static Dynamic lime_display_object_get_y;
-		static Dynamic &lime_display_object_get_y_dyn() { return lime_display_object_get_y;}
-		static Dynamic lime_display_object_set_y;
-		static Dynamic &lime_display_object_set_y_dyn() { return lime_display_object_set_y;}
-		static Dynamic lime_display_object_get_z;
-		static Dynamic &lime_display_object_get_z_dyn() { return lime_display_object_get_z;}
-		static Dynamic lime_display_object_set_z;
-		static Dynamic &lime_display_object_set_z_dyn() { return lime_display_object_set_z;}
-		static Dynamic lime_display_object_get_scale_x;
-		static Dynamic &lime_display_object_get_scale_x_dyn() { return lime_display_object_get_scale_x;}
-		static Dynamic lime_display_object_set_scale_x;
-		static Dynamic &lime_display_object_set_scale_x_dyn() { return lime_display_object_set_scale_x;}
-		static Dynamic lime_display_object_get_scale_y;
-		static Dynamic &lime_display_object_get_scale_y_dyn() { return lime_display_object_get_scale_y;}
-		static Dynamic lime_display_object_set_scale_y;
-		static Dynamic &lime_display_object_set_scale_y_dyn() { return lime_display_object_set_scale_y;}
-		static Dynamic lime_display_object_get_mouse_x;
-		static Dynamic &lime_display_object_get_mouse_x_dyn() { return lime_display_object_get_mouse_x;}
-		static Dynamic lime_display_object_get_mouse_y;
-		static Dynamic &lime_display_object_get_mouse_y_dyn() { return lime_display_object_get_mouse_y;}
-		static Dynamic lime_display_object_get_rotation;
-		static Dynamic &lime_display_object_get_rotation_dyn() { return lime_display_object_get_rotation;}
-		static Dynamic lime_display_object_set_rotation;
-		static Dynamic &lime_display_object_set_rotation_dyn() { return lime_display_object_set_rotation;}
-		static Dynamic lime_display_object_get_bg;
-		static Dynamic &lime_display_object_get_bg_dyn() { return lime_display_object_get_bg;}
-		static Dynamic lime_display_object_set_bg;
-		static Dynamic &lime_display_object_set_bg_dyn() { return lime_display_object_set_bg;}
-		static Dynamic lime_display_object_get_name;
-		static Dynamic &lime_display_object_get_name_dyn() { return lime_display_object_get_name;}
-		static Dynamic lime_display_object_set_name;
-		static Dynamic &lime_display_object_set_name_dyn() { return lime_display_object_set_name;}
-		static Dynamic lime_display_object_get_width;
-		static Dynamic &lime_display_object_get_width_dyn() { return lime_display_object_get_width;}
-		static Dynamic lime_display_object_set_width;
-		static Dynamic &lime_display_object_set_width_dyn() { return lime_display_object_set_width;}
-		static Dynamic lime_display_object_get_height;
-		static Dynamic &lime_display_object_get_height_dyn() { return lime_display_object_get_height;}
-		static Dynamic lime_display_object_set_height;
-		static Dynamic &lime_display_object_set_height_dyn() { return lime_display_object_set_height;}
-		static Dynamic lime_display_object_get_alpha;
-		static Dynamic &lime_display_object_get_alpha_dyn() { return lime_display_object_get_alpha;}
-		static Dynamic lime_display_object_set_alpha;
-		static Dynamic &lime_display_object_set_alpha_dyn() { return lime_display_object_set_alpha;}
-		static Dynamic lime_display_object_get_blend_mode;
-		static Dynamic &lime_display_object_get_blend_mode_dyn() { return lime_display_object_get_blend_mode;}
-		static Dynamic lime_display_object_set_blend_mode;
-		static Dynamic &lime_display_object_set_blend_mode_dyn() { return lime_display_object_set_blend_mode;}
-		static Dynamic lime_display_object_get_cache_as_bitmap;
-		static Dynamic &lime_display_object_get_cache_as_bitmap_dyn() { return lime_display_object_get_cache_as_bitmap;}
-		static Dynamic lime_display_object_set_cache_as_bitmap;
-		static Dynamic &lime_display_object_set_cache_as_bitmap_dyn() { return lime_display_object_set_cache_as_bitmap;}
-		static Dynamic lime_display_object_get_pedantic_bitmap_caching;
-		static Dynamic &lime_display_object_get_pedantic_bitmap_caching_dyn() { return lime_display_object_get_pedantic_bitmap_caching;}
-		static Dynamic lime_display_object_set_pedantic_bitmap_caching;
-		static Dynamic &lime_display_object_set_pedantic_bitmap_caching_dyn() { return lime_display_object_set_pedantic_bitmap_caching;}
-		static Dynamic lime_display_object_get_visible;
-		static Dynamic &lime_display_object_get_visible_dyn() { return lime_display_object_get_visible;}
-		static Dynamic lime_display_object_set_visible;
-		static Dynamic &lime_display_object_set_visible_dyn() { return lime_display_object_set_visible;}
-		static Dynamic lime_display_object_set_filters;
-		static Dynamic &lime_display_object_set_filters_dyn() { return lime_display_object_set_filters;}
-		static Dynamic lime_display_object_global_to_local;
-		static Dynamic &lime_display_object_global_to_local_dyn() { return lime_display_object_global_to_local;}
-		static Dynamic lime_display_object_local_to_global;
-		static Dynamic &lime_display_object_local_to_global_dyn() { return lime_display_object_local_to_global;}
-		static Dynamic lime_display_object_set_scale9_grid;
-		static Dynamic &lime_display_object_set_scale9_grid_dyn() { return lime_display_object_set_scale9_grid;}
-		static Dynamic lime_display_object_set_scroll_rect;
-		static Dynamic &lime_display_object_set_scroll_rect_dyn() { return lime_display_object_set_scroll_rect;}
-		static Dynamic lime_display_object_set_mask;
-		static Dynamic &lime_display_object_set_mask_dyn() { return lime_display_object_set_mask;}
-		static Dynamic lime_display_object_set_matrix;
-		static Dynamic &lime_display_object_set_matrix_dyn() { return lime_display_object_set_matrix;}
-		static Dynamic lime_display_object_get_matrix;
-		static Dynamic &lime_display_object_get_matrix_dyn() { return lime_display_object_get_matrix;}
-		static Dynamic lime_display_object_get_color_transform;
-		static Dynamic &lime_display_object_get_color_transform_dyn() { return lime_display_object_get_color_transform;}
-		static Dynamic lime_display_object_set_color_transform;
-		static Dynamic &lime_display_object_set_color_transform_dyn() { return lime_display_object_set_color_transform;}
-		static Dynamic lime_display_object_get_pixel_bounds;
-		static Dynamic &lime_display_object_get_pixel_bounds_dyn() { return lime_display_object_get_pixel_bounds;}
-		static Dynamic lime_display_object_get_bounds;
-		static Dynamic &lime_display_object_get_bounds_dyn() { return lime_display_object_get_bounds;}
-		static Dynamic lime_display_object_hit_test_point;
-		static Dynamic &lime_display_object_hit_test_point_dyn() { return lime_display_object_hit_test_point;}
 };
 
 } // end namespace openfl

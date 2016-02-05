@@ -34,7 +34,6 @@ class HXCPP_CLASS_ATTRIBUTES  UncaughtErrorEvent_obj : public ::openfl::events::
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -42,12 +41,12 @@ class HXCPP_CLASS_ATTRIBUTES  UncaughtErrorEvent_obj : public ::openfl::events::
 		::String __ToString() const { return HX_HCSTRING("UncaughtErrorEvent","\x47","\x72","\x9a","\xe0"); }
 
 		static void __boot();
+		static ::String UNCAUGHT_ERROR;
 		Dynamic error;
 		virtual ::openfl::_legacy::events::Event clone( );
 
 		virtual ::String toString( );
 
-		static ::String UNCAUGHT_ERROR;
 };
 
 } // end namespace openfl

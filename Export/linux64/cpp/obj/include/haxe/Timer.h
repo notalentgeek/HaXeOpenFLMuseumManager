@@ -36,18 +36,6 @@ class HXCPP_CLASS_ATTRIBUTES  Timer_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Timer","\xa5","\x2f","\x63","\xa3"); }
 
 		static void __boot();
-		Float mTime;
-		Float mFireAt;
-		bool mRunning;
-		Dynamic run;
-		inline Dynamic &run_dyn() {return run; }
-
-		virtual Void stop( );
-		Dynamic stop_dyn();
-
-		virtual Void __check( Float inTime);
-		Dynamic __check_dyn();
-
 		static Array< ::Dynamic > sRunningTimers;
 		static ::haxe::Timer delay( Dynamic f,int time);
 		static Dynamic delay_dyn();
@@ -69,6 +57,18 @@ class HXCPP_CLASS_ATTRIBUTES  Timer_obj : public hx::Object{
 
 		static Dynamic lime_time_stamp;
 		static Dynamic &lime_time_stamp_dyn() { return lime_time_stamp;}
+		Float mTime;
+		Float mFireAt;
+		bool mRunning;
+		Dynamic run;
+		inline Dynamic &run_dyn() {return run; }
+
+		virtual Void stop( );
+		Dynamic stop_dyn();
+
+		virtual Void __check( Float inTime);
+		Dynamic __check_dyn();
+
 };
 
 } // end namespace haxe

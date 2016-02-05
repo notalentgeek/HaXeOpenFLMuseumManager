@@ -61,7 +61,7 @@ namespace haxe{
 
 Void Http_obj::__construct(::String url)
 {
-HX_STACK_FRAME("haxe.Http","new",0x57ac51e2,"haxe.Http.new","/usr/lib/haxe/std/haxe/Http.hx",88,0xa3eb858e)
+HX_STACK_FRAME("haxe.Http","new",0x57ac51e2,"haxe.Http.new","/usr/share/haxe/std/haxe/Http.hx",88,0x6694f828)
 HX_STACK_THIS(this)
 HX_STACK_ARG(url,"url")
 {
@@ -97,7 +97,7 @@ Dynamic Http_obj::__Create(hx::DynamicArray inArgs)
 
 Void Http_obj::request( Dynamic post){
 {
-		HX_STACK_FRAME("haxe.Http","request",0xb2c949d1,"haxe.Http.request","/usr/lib/haxe/std/haxe/Http.hx",195,0xa3eb858e)
+		HX_STACK_FRAME("haxe.Http","request",0xb2c949d1,"haxe.Http.request","/usr/share/haxe/std/haxe/Http.hx",195,0x6694f828)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(post,"post")
 		HX_STACK_LINE(195)
@@ -120,7 +120,7 @@ Void Http_obj::request( Dynamic post){
 		HX_BEGIN_LOCAL_FUNC_S5(hx::LocalFunc,_Function_1_1,Dynamic,old,::haxe::Http,_g,::haxe::Http,me1,::haxe::io::BytesOutput,output,Array< bool >,err)
 		int __ArgCount() const { return 1; }
 		Void run(::String e){
-			HX_STACK_FRAME("*","_Function_1_1",0x5200ed37,"*._Function_1_1","/usr/lib/haxe/std/haxe/Http.hx",336,0xa3eb858e)
+			HX_STACK_FRAME("*","_Function_1_1",0x5200ed37,"*._Function_1_1","/usr/share/haxe/std/haxe/Http.hx",336,0x6694f828)
 			HX_STACK_ARG(e,"e")
 			{
 				HX_STACK_LINE(340)
@@ -174,7 +174,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Http_obj,request,(void))
 
 Void Http_obj::customRequest( bool post,::haxe::io::Output api,Dynamic sock,::String method){
 {
-		HX_STACK_FRAME("haxe.Http","customRequest",0x68e97fa0,"haxe.Http.customRequest","/usr/lib/haxe/std/haxe/Http.hx",371,0xa3eb858e)
+		HX_STACK_FRAME("haxe.Http","customRequest",0x68e97fa0,"haxe.Http.customRequest","/usr/share/haxe/std/haxe/Http.hx",371,0x6694f828)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(post,"post")
 		HX_STACK_ARG(api,"api")
@@ -666,7 +666,7 @@ Void Http_obj::customRequest( bool post,::haxe::io::Output api,Dynamic sock,::St
 					HX_BEGIN_LOCAL_FUNC_S0(hx::LocalFunc,_Function_4_1)
 					int __ArgCount() const { return 1; }
 					bool run(Dynamic h){
-						HX_STACK_FRAME("*","_Function_4_1",0x520333fa,"*._Function_4_1","/usr/lib/haxe/std/haxe/Http.hx",477,0xa3eb858e)
+						HX_STACK_FRAME("*","_Function_4_1",0x520333fa,"*._Function_4_1","/usr/share/haxe/std/haxe/Http.hx",477,0x6694f828)
 						HX_STACK_ARG(h,"h")
 						{
 							HX_STACK_LINE(477)
@@ -1026,7 +1026,7 @@ HX_DEFINE_DYNAMIC_FUNC4(Http_obj,customRequest,(void))
 
 Void Http_obj::readHttpResponse( ::haxe::io::Output api,Dynamic sock){
 {
-		HX_STACK_FRAME("haxe.Http","readHttpResponse",0x6bff43dd,"haxe.Http.readHttpResponse","/usr/lib/haxe/std/haxe/Http.hx",534,0xa3eb858e)
+		HX_STACK_FRAME("haxe.Http","readHttpResponse",0x6bff43dd,"haxe.Http.readHttpResponse","/usr/share/haxe/std/haxe/Http.hx",534,0x6694f828)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(api,"api")
 		HX_STACK_ARG(sock,"sock")
@@ -1778,7 +1778,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC2(Http_obj,readHttpResponse,(void))
 
 bool Http_obj::readChunk( ::EReg chunk_re,::haxe::io::Output api,::haxe::io::Bytes buf,int len){
-	HX_STACK_FRAME("haxe.Http","readChunk",0xeebfa239,"haxe.Http.readChunk","/usr/lib/haxe/std/haxe/Http.hx",674,0xa3eb858e)
+	HX_STACK_FRAME("haxe.Http","readChunk",0xeebfa239,"haxe.Http.readChunk","/usr/share/haxe/std/haxe/Http.hx",674,0x6694f828)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(chunk_re,"chunk_re")
 	HX_STACK_ARG(api,"api")
@@ -2094,7 +2094,7 @@ HX_DEFINE_DYNAMIC_FUNC4(Http_obj,readChunk,return )
 HX_BEGIN_DEFAULT_FUNC(__default_onData,Http_obj)
 Void run(::String data){
 {
-		HX_STACK_FRAME("haxe.Http","onData",0x4f093aa7,"haxe.Http.onData","/usr/lib/haxe/std/haxe/Http.hx",740,0xa3eb858e)
+		HX_STACK_FRAME("haxe.Http","onData",0x4f093aa7,"haxe.Http.onData","/usr/share/haxe/std/haxe/Http.hx",740,0x6694f828)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(data,"data")
 	}
@@ -2106,7 +2106,7 @@ HX_END_DEFAULT_FUNC
 HX_BEGIN_DEFAULT_FUNC(__default_onError,Http_obj)
 Void run(::String msg){
 {
-		HX_STACK_FRAME("haxe.Http","onError",0x77abd4ab,"haxe.Http.onError","/usr/lib/haxe/std/haxe/Http.hx",750,0xa3eb858e)
+		HX_STACK_FRAME("haxe.Http","onError",0x77abd4ab,"haxe.Http.onError","/usr/share/haxe/std/haxe/Http.hx",750,0x6694f828)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(msg,"msg")
 	}
@@ -2118,7 +2118,7 @@ HX_END_DEFAULT_FUNC
 HX_BEGIN_DEFAULT_FUNC(__default_onStatus,Http_obj)
 Void run(int status){
 {
-		HX_STACK_FRAME("haxe.Http","onStatus",0xf341a4ef,"haxe.Http.onStatus","/usr/lib/haxe/std/haxe/Http.hx",760,0xa3eb858e)
+		HX_STACK_FRAME("haxe.Http","onStatus",0xf341a4ef,"haxe.Http.onStatus","/usr/share/haxe/std/haxe/Http.hx",760,0x6694f828)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(status,"status")
 	}

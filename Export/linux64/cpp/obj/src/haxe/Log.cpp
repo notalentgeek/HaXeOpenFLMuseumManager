@@ -29,7 +29,7 @@ Dynamic Log_obj::__Create(hx::DynamicArray inArgs)
 HX_BEGIN_DEFAULT_FUNC(__default_trace,Log_obj)
 Void run(Dynamic v,Dynamic infos){
 {
-		HX_STACK_FRAME("haxe.Log","trace",0x5d6e40b3,"haxe.Log.trace","/usr/lib/haxe/std/haxe/Log.hx",45,0x3a211262)
+		HX_STACK_FRAME("haxe.Log","trace",0x5d6e40b3,"haxe.Log.trace","/usr/share/haxe/std/haxe/Log.hx",45,0x4faa7108)
 		HX_STACK_ARG(v,"v")
 		HX_STACK_ARG(infos,"infos")
 		HX_STACK_LINE(73)
@@ -111,6 +111,15 @@ bool Log_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Propert
 	return false;
 }
 
+bool Log_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 5:
+		if (HX_FIELD_EQ(inName,"trace") ) { trace=ioValue.Cast< Dynamic >(); return true; }
+	}
+	return false;
+}
+
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
@@ -146,7 +155,7 @@ void Log_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &Log_obj::__GetStatic;
-	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &Log_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);

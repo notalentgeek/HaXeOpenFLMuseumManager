@@ -40,12 +40,12 @@ class HXCPP_CLASS_ATTRIBUTES  SystemEvent_obj : public ::openfl::_legacy::events
 		::String __ToString() const { return HX_HCSTRING("SystemEvent","\x8b","\xb6","\x6d","\x5e"); }
 
 		static void __boot();
+		static ::String SYSTEM;
 		int data;
 		virtual ::openfl::_legacy::events::Event clone( );
 
 		virtual ::String toString( );
 
-		static ::String SYSTEM;
 };
 
 } // end namespace openfl

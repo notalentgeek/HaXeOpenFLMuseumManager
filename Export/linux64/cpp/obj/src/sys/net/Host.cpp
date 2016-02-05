@@ -11,7 +11,7 @@ namespace net{
 
 Void Host_obj::__construct(::String name)
 {
-HX_STACK_FRAME("sys.net.Host","new",0x056496ac,"sys.net.Host.new","/usr/lib/haxe/std/cpp/_std/sys/net/Host.hx",29,0x920a2124)
+HX_STACK_FRAME("sys.net.Host","new",0x056496ac,"sys.net.Host.new","/usr/share/haxe/std/cpp/_std/sys/net/Host.hx",29,0xdbe212be)
 HX_STACK_THIS(this)
 HX_STACK_ARG(name,"name")
 {
@@ -40,7 +40,7 @@ Dynamic Host_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 void Host_obj::__init__() {
-HX_STACK_FRAME("sys.net.Host","__init__",0xecfcc384,"sys.net.Host.__init__","/usr/lib/haxe/std/cpp/_std/sys/net/Host.hx",45,0x920a2124)
+HX_STACK_FRAME("sys.net.Host","__init__",0xecfcc384,"sys.net.Host.__init__","/usr/share/haxe/std/cpp/_std/sys/net/Host.hx",45,0xdbe212be)
 {
 	HX_STACK_LINE(46)
 	Dynamic tmp = ::cpp::Lib_obj::load(HX_HCSTRING("std","\xa3","\xa8","\x57","\x00"),HX_HCSTRING("socket_init","\x5c","\x82","\xcf","\x81"),(int)0);		HX_STACK_VAR(tmp,"tmp");
@@ -50,7 +50,7 @@ HX_STACK_FRAME("sys.net.Host","__init__",0xecfcc384,"sys.net.Host.__init__","/us
 }
 
 ::String Host_obj::toString( ){
-	HX_STACK_FRAME("sys.net.Host","toString",0xe5efb6e0,"sys.net.Host.toString","/usr/lib/haxe/std/cpp/_std/sys/net/Host.hx",33,0x920a2124)
+	HX_STACK_FRAME("sys.net.Host","toString",0xe5efb6e0,"sys.net.Host.toString","/usr/share/haxe/std/cpp/_std/sys/net/Host.hx",33,0xdbe212be)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(34)
 	int tmp = this->ip;		HX_STACK_VAR(tmp,"tmp");

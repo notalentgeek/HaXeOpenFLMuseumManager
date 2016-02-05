@@ -67,6 +67,13 @@ class HXCPP_CLASS_ATTRIBUTES  OptionBox_obj : public ::haxe::ui::toolkit::core::
 		::String __ToString() const { return HX_HCSTRING("OptionBox","\x76","\x59","\x26","\x24"); }
 
 		static void __boot();
+		static ::String STATE_NORMAL;
+		static ::String STATE_OVER;
+		static ::String STATE_DOWN;
+		static ::haxe::ds::StringMap _groups;
+		static bool optionInGroup( ::String value,::haxe::ui::toolkit::controls::OptionBox option);
+		static Dynamic optionInGroup_dyn();
+
 		::haxe::ui::toolkit::controls::OptionBoxValue _value;
 		::haxe::ui::toolkit::controls::Text _label;
 		::String _group;
@@ -110,13 +117,6 @@ class HXCPP_CLASS_ATTRIBUTES  OptionBox_obj : public ::haxe::ui::toolkit::core::
 		virtual ::haxe::ui::toolkit::core::DisplayObject clone( );
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );
-
-		static ::String STATE_NORMAL;
-		static ::String STATE_OVER;
-		static ::String STATE_DOWN;
-		static ::haxe::ds::StringMap _groups;
-		static bool optionInGroup( ::String value,::haxe::ui::toolkit::controls::OptionBox option);
-		static Dynamic optionInGroup_dyn();
 
 };
 

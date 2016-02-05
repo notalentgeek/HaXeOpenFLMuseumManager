@@ -37,7 +37,6 @@ class HXCPP_CLASS_ATTRIBUTES  FocusEvent_obj : public ::openfl::_legacy::events:
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -45,6 +44,10 @@ class HXCPP_CLASS_ATTRIBUTES  FocusEvent_obj : public ::openfl::_legacy::events:
 		::String __ToString() const { return HX_HCSTRING("FocusEvent","\x42","\x6d","\xd7","\x2e"); }
 
 		static void __boot();
+		static ::String FOCUS_IN;
+		static ::String FOCUS_OUT;
+		static ::String KEY_FOCUS_CHANGE;
+		static ::String MOUSE_FOCUS_CHANGE;
 		int keyCode;
 		::openfl::_legacy::display::InteractiveObject relatedObject;
 		bool shiftKey;
@@ -52,10 +55,6 @@ class HXCPP_CLASS_ATTRIBUTES  FocusEvent_obj : public ::openfl::_legacy::events:
 
 		virtual ::String toString( );
 
-		static ::String FOCUS_IN;
-		static ::String FOCUS_OUT;
-		static ::String KEY_FOCUS_CHANGE;
-		static ::String MOUSE_FOCUS_CHANGE;
 };
 
 } // end namespace openfl

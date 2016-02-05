@@ -43,6 +43,23 @@ class HXCPP_CLASS_ATTRIBUTES  Tilesheet_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Tilesheet","\x91","\xb0","\x20","\x16"); }
 
 		static void __boot();
+		static int TILE_SCALE;
+		static int TILE_ROTATION;
+		static int TILE_RGB;
+		static int TILE_ALPHA;
+		static int TILE_TRANS_2x2;
+		static int TILE_RECT;
+		static int TILE_ORIGIN;
+		static int TILE_BLEND_NORMAL;
+		static int TILE_BLEND_ADD;
+		static int TILE_BLEND_MULTIPLY;
+		static int TILE_BLEND_SCREEN;
+		static int TILE_BLEND_SUBTRACT;
+		static ::openfl::_legacy::geom::Point defaultRatio;
+		static Dynamic lime_tilesheet_create;
+		static Dynamic &lime_tilesheet_create_dyn() { return lime_tilesheet_create;}
+		static Dynamic lime_tilesheet_add_rect;
+		static Dynamic &lime_tilesheet_add_rect_dyn() { return lime_tilesheet_add_rect;}
 		::openfl::_legacy::display::BitmapData __bitmap;
 		Dynamic __handle;
 		int _bitmapHeight;
@@ -65,23 +82,6 @@ class HXCPP_CLASS_ATTRIBUTES  Tilesheet_obj : public hx::Object{
 		virtual ::openfl::_legacy::geom::Rectangle getTileUVs( int index);
 		Dynamic getTileUVs_dyn();
 
-		static int TILE_SCALE;
-		static int TILE_ROTATION;
-		static int TILE_RGB;
-		static int TILE_ALPHA;
-		static int TILE_TRANS_2x2;
-		static int TILE_RECT;
-		static int TILE_ORIGIN;
-		static int TILE_BLEND_NORMAL;
-		static int TILE_BLEND_ADD;
-		static int TILE_BLEND_MULTIPLY;
-		static int TILE_BLEND_SCREEN;
-		static int TILE_BLEND_SUBTRACT;
-		static ::openfl::_legacy::geom::Point defaultRatio;
-		static Dynamic lime_tilesheet_create;
-		static Dynamic &lime_tilesheet_create_dyn() { return lime_tilesheet_create;}
-		static Dynamic lime_tilesheet_add_rect;
-		static Dynamic &lime_tilesheet_add_rect_dyn() { return lime_tilesheet_add_rect;}
 };
 
 } // end namespace openfl

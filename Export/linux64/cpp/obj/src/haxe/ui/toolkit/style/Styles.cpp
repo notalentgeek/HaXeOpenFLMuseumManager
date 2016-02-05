@@ -230,11 +230,6 @@ Dynamic Styles_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx:
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool Styles_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void Styles_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("_styles","\xc1","\xf7","\x49","\x84"));
@@ -283,7 +278,7 @@ void Styles_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &Styles_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

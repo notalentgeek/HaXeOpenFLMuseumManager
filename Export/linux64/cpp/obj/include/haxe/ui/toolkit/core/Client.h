@@ -38,6 +38,11 @@ class HXCPP_CLASS_ATTRIBUTES  Client_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Client","\x6b","\x3e","\xe4","\x3e"); }
 
+		static ::haxe::ui::toolkit::core::Client _instance;
+		static ::haxe::ui::toolkit::core::Client instance;
+		static ::haxe::ui::toolkit::core::Client get_instance( );
+		static Dynamic get_instance_dyn();
+
 		virtual Void init( );
 		Dynamic init_dyn();
 
@@ -76,11 +81,6 @@ class HXCPP_CLASS_ATTRIBUTES  Client_obj : public hx::Object{
 
 		virtual Float get_windowHeight( );
 		Dynamic get_windowHeight_dyn();
-
-		static ::haxe::ui::toolkit::core::Client _instance;
-		static ::haxe::ui::toolkit::core::Client instance;
-		static ::haxe::ui::toolkit::core::Client get_instance( );
-		static Dynamic get_instance_dyn();
 
 };
 

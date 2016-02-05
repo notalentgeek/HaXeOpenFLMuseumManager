@@ -51,6 +51,28 @@ class HXCPP_CLASS_ATTRIBUTES  URLLoadersManager_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("URLLoadersManager","\xfc","\xf8","\x08","\x2d"); }
 
 		static void __boot();
+		static ::openfl::_legacy::net::_URLLoader::URLLoadersManager instance;
+		static ::openfl::_legacy::net::_URLLoader::URLLoadersManager getInstance( );
+		static Dynamic getInstance_dyn();
+
+		static Dynamic lime_curl_create;
+		static Dynamic &lime_curl_create_dyn() { return lime_curl_create;}
+		static Dynamic lime_curl_process_loaders;
+		static Dynamic &lime_curl_process_loaders_dyn() { return lime_curl_process_loaders;}
+		static Dynamic lime_curl_update_loader;
+		static Dynamic &lime_curl_update_loader_dyn() { return lime_curl_update_loader;}
+		static Dynamic lime_curl_get_code;
+		static Dynamic &lime_curl_get_code_dyn() { return lime_curl_get_code;}
+		static Dynamic lime_curl_get_error_message;
+		static Dynamic &lime_curl_get_error_message_dyn() { return lime_curl_get_error_message;}
+		static Dynamic lime_curl_get_data;
+		static Dynamic &lime_curl_get_data_dyn() { return lime_curl_get_data;}
+		static Dynamic lime_curl_get_cookies;
+		static Dynamic &lime_curl_get_cookies_dyn() { return lime_curl_get_cookies;}
+		static Dynamic lime_curl_get_headers;
+		static Dynamic &lime_curl_get_headers_dyn() { return lime_curl_get_headers;}
+		static Dynamic lime_curl_initialize;
+		static Dynamic &lime_curl_initialize_dyn() { return lime_curl_initialize;}
 		::cpp::vm::Thread managersThread;
 		::List activeLoaders;
 		cpp::ArrayBase loadsQueue;
@@ -91,28 +113,6 @@ class HXCPP_CLASS_ATTRIBUTES  URLLoadersManager_obj : public hx::Object{
 		virtual Array< ::String > getCookies( Dynamic handle);
 		Dynamic getCookies_dyn();
 
-		static ::openfl::_legacy::net::_URLLoader::URLLoadersManager instance;
-		static ::openfl::_legacy::net::_URLLoader::URLLoadersManager getInstance( );
-		static Dynamic getInstance_dyn();
-
-		static Dynamic lime_curl_create;
-		static Dynamic &lime_curl_create_dyn() { return lime_curl_create;}
-		static Dynamic lime_curl_process_loaders;
-		static Dynamic &lime_curl_process_loaders_dyn() { return lime_curl_process_loaders;}
-		static Dynamic lime_curl_update_loader;
-		static Dynamic &lime_curl_update_loader_dyn() { return lime_curl_update_loader;}
-		static Dynamic lime_curl_get_code;
-		static Dynamic &lime_curl_get_code_dyn() { return lime_curl_get_code;}
-		static Dynamic lime_curl_get_error_message;
-		static Dynamic &lime_curl_get_error_message_dyn() { return lime_curl_get_error_message;}
-		static Dynamic lime_curl_get_data;
-		static Dynamic &lime_curl_get_data_dyn() { return lime_curl_get_data;}
-		static Dynamic lime_curl_get_cookies;
-		static Dynamic &lime_curl_get_cookies_dyn() { return lime_curl_get_cookies;}
-		static Dynamic lime_curl_get_headers;
-		static Dynamic &lime_curl_get_headers_dyn() { return lime_curl_get_headers;}
-		static Dynamic lime_curl_initialize;
-		static Dynamic &lime_curl_initialize_dyn() { return lime_curl_initialize;}
 };
 
 } // end namespace openfl

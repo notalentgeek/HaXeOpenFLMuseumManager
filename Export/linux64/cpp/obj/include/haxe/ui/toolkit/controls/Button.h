@@ -71,6 +71,14 @@ class HXCPP_CLASS_ATTRIBUTES  Button_obj : public ::haxe::ui::toolkit::core::Sta
 		::String __ToString() const { return HX_HCSTRING("Button","\x12","\xd6","\x74","\x0e"); }
 
 		static void __boot();
+		static ::String STATE_NORMAL;
+		static ::String STATE_OVER;
+		static ::String STATE_DOWN;
+		static ::String STATE_DISABLED;
+		static ::haxe::ds::StringMap _groups;
+		static bool optionInGroup( ::String value,::haxe::ui::toolkit::controls::Button option);
+		static Dynamic optionInGroup_dyn();
+
 		bool _allowFocus;
 		bool _remainPressed;
 		::haxe::ui::toolkit::controls::Text _label;
@@ -190,14 +198,6 @@ class HXCPP_CLASS_ATTRIBUTES  Button_obj : public ::haxe::ui::toolkit::core::Sta
 		virtual ::haxe::ui::toolkit::core::DisplayObject clone( );
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );
-
-		static ::String STATE_NORMAL;
-		static ::String STATE_OVER;
-		static ::String STATE_DOWN;
-		static ::String STATE_DISABLED;
-		static ::haxe::ds::StringMap _groups;
-		static bool optionInGroup( ::String value,::haxe::ui::toolkit::controls::Button option);
-		static Dynamic optionInGroup_dyn();
 
 };
 

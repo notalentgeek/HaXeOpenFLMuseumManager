@@ -70,6 +70,12 @@ class HXCPP_CLASS_ATTRIBUTES  Context3D_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Context3D","\x40","\x3c","\xcf","\xb8"); }
 
 		static void __boot();
+		static int TEXTURE_MAX_ANISOTROPY_EXT;
+		static int MAX_SAMPLERS;
+		static int MAX_TEXTURE_MAX_ANISOTROPY_EXT;
+		static bool anisotropySupportTested;
+		static bool supportsAnisotropy;
+		static int maxSupportedAnisotropy;
 		::String driverInfo;
 		bool enableErrorChecking;
 		int blendDestinationFactor;
@@ -218,12 +224,6 @@ class HXCPP_CLASS_ATTRIBUTES  Context3D_obj : public hx::Object{
 		virtual Void __updateBlendStatus( );
 		Dynamic __updateBlendStatus_dyn();
 
-		static int TEXTURE_MAX_ANISOTROPY_EXT;
-		static int MAX_SAMPLERS;
-		static int MAX_TEXTURE_MAX_ANISOTROPY_EXT;
-		static bool anisotropySupportTested;
-		static bool supportsAnisotropy;
-		static int maxSupportedAnisotropy;
 };
 
 } // end namespace openfl

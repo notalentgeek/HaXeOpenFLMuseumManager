@@ -47,6 +47,10 @@ class HXCPP_CLASS_ATTRIBUTES  Bitmap_obj : public ::openfl::_legacy::display::Di
 		::String __ToString() const { return HX_HCSTRING("Bitmap","\x0f","\x84","\xa0","\x25"); }
 
 		static void __boot();
+		static Dynamic lime_display_object_get_pixel_snapping;
+		static Dynamic &lime_display_object_get_pixel_snapping_dyn() { return lime_display_object_get_pixel_snapping;}
+		static Dynamic lime_display_object_set_pixel_snapping;
+		static Dynamic &lime_display_object_set_pixel_snapping_dyn() { return lime_display_object_set_pixel_snapping;}
 		::openfl::_legacy::display::BitmapData bitmapData;
 		bool smoothing;
 		virtual Void __rebuild( );
@@ -64,10 +68,6 @@ class HXCPP_CLASS_ATTRIBUTES  Bitmap_obj : public ::openfl::_legacy::display::Di
 		virtual bool set_smoothing( bool value);
 		Dynamic set_smoothing_dyn();
 
-		static Dynamic lime_display_object_get_pixel_snapping;
-		static Dynamic &lime_display_object_get_pixel_snapping_dyn() { return lime_display_object_get_pixel_snapping;}
-		static Dynamic lime_display_object_set_pixel_snapping;
-		static Dynamic &lime_display_object_set_pixel_snapping_dyn() { return lime_display_object_set_pixel_snapping;}
 };
 
 } // end namespace openfl

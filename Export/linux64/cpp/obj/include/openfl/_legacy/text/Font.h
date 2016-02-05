@@ -45,19 +45,6 @@ class HXCPP_CLASS_ATTRIBUTES  Font_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Font","\xef","\x89","\x99","\x2e"); }
 
 		static void __boot();
-		::String fontName;
-		::openfl::_legacy::text::FontStyle fontStyle;
-		::openfl::_legacy::text::FontType fontType;
-		::String __fontPath;
-		virtual ::String toString( );
-		Dynamic toString_dyn();
-
-		virtual Void __fromBytes( ::openfl::_legacy::utils::ByteArray bytes);
-		Dynamic __fromBytes_dyn();
-
-		virtual Void __fromFile( ::String path);
-		Dynamic __fromFile_dyn();
-
 		static Array< ::Dynamic > __registeredFonts;
 		static Array< ::Dynamic > __deviceFonts;
 		static Array< ::Dynamic > enumerateFonts( hx::Null< bool >  enumerateDeviceFonts);
@@ -84,6 +71,19 @@ class HXCPP_CLASS_ATTRIBUTES  Font_obj : public hx::Object{
 		static Dynamic &lime_font_register_font_dyn() { return lime_font_register_font;}
 		static Dynamic lime_font_iterate_device_fonts;
 		static Dynamic &lime_font_iterate_device_fonts_dyn() { return lime_font_iterate_device_fonts;}
+		::String fontName;
+		::openfl::_legacy::text::FontStyle fontStyle;
+		::openfl::_legacy::text::FontType fontType;
+		::String __fontPath;
+		virtual ::String toString( );
+		Dynamic toString_dyn();
+
+		virtual Void __fromBytes( ::openfl::_legacy::utils::ByteArray bytes);
+		Dynamic __fromBytes_dyn();
+
+		virtual Void __fromFile( ::String path);
+		Dynamic __fromFile_dyn();
+
 };
 
 } // end namespace openfl

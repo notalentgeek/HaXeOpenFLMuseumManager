@@ -29,12 +29,20 @@ class HXCPP_CLASS_ATTRIBUTES  Bytes_obj : public hx::Object{
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Bytes","\x4b","\x78","\xc5","\x50"); }
+
+		static ::haxe::io::Bytes alloc( int length);
+		static Dynamic alloc_dyn();
+
+		static ::haxe::io::Bytes ofString( ::String s);
+		static Dynamic ofString_dyn();
+
+		static ::haxe::io::Bytes ofData( Array< unsigned char > b);
+		static Dynamic ofData_dyn();
 
 		int length;
 		Array< unsigned char > b;
@@ -49,15 +57,6 @@ class HXCPP_CLASS_ATTRIBUTES  Bytes_obj : public hx::Object{
 
 		virtual ::String toString( );
 		Dynamic toString_dyn();
-
-		static ::haxe::io::Bytes alloc( int length);
-		static Dynamic alloc_dyn();
-
-		static ::haxe::io::Bytes ofString( ::String s);
-		static Dynamic ofString_dyn();
-
-		static ::haxe::io::Bytes ofData( Array< unsigned char > b);
-		static Dynamic ofData_dyn();
 
 };
 

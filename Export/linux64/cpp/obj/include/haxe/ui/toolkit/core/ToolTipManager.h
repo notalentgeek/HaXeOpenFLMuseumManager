@@ -55,6 +55,11 @@ class HXCPP_CLASS_ATTRIBUTES  ToolTipManager_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("ToolTipManager","\xea","\x9b","\xc3","\x83"); }
 
+		static ::haxe::ui::toolkit::core::ToolTipManager _instance;
+		static ::haxe::ui::toolkit::core::ToolTipManager instance;
+		static ::haxe::ui::toolkit::core::ToolTipManager get_instance( );
+		static Dynamic get_instance_dyn();
+
 		Dynamic defaults;
 		::haxe::ui::toolkit::controls::ToolTip _currentToolTip;
 		virtual Void showToolTip( ::haxe::ui::toolkit::core::Component c,Dynamic options,::haxe::ui::toolkit::events::UIEvent event);
@@ -71,11 +76,6 @@ class HXCPP_CLASS_ATTRIBUTES  ToolTipManager_obj : public hx::Object{
 
 		virtual bool toolTipVisible( ::haxe::ui::toolkit::core::Component c);
 		Dynamic toolTipVisible_dyn();
-
-		static ::haxe::ui::toolkit::core::ToolTipManager _instance;
-		static ::haxe::ui::toolkit::core::ToolTipManager instance;
-		static ::haxe::ui::toolkit::core::ToolTipManager get_instance( );
-		static Dynamic get_instance_dyn();
 
 };
 

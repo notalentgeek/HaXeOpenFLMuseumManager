@@ -29,7 +29,7 @@ namespace net{
 
 Void Socket_obj::__construct()
 {
-HX_STACK_FRAME("sys.net.Socket","new",0x202a8cf7,"sys.net.Socket.new","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",127,0x52423539)
+HX_STACK_FRAME("sys.net.Socket","new",0x202a8cf7,"sys.net.Socket.new","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",127,0xb72d4153)
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(128)
@@ -68,7 +68,7 @@ Dynamic Socket_obj::__Create(hx::DynamicArray inArgs)
 
 Void Socket_obj::close( ){
 {
-		HX_STACK_FRAME("sys.net.Socket","close",0x18d3680f,"sys.net.Socket.close","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",133,0x52423539)
+		HX_STACK_FRAME("sys.net.Socket","close",0x18d3680f,"sys.net.Socket.close","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",133,0xb72d4153)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(134)
 		Dynamic tmp = this->__s;		HX_STACK_VAR(tmp,"tmp");
@@ -106,14 +106,14 @@ HX_DEFINE_DYNAMIC_FUNC0(Socket_obj,close,(void))
 
 Void Socket_obj::write( ::String content){
 {
-		HX_STACK_FRAME("sys.net.Socket","write",0xa0c9bd36,"sys.net.Socket.write","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",151,0x52423539)
+		HX_STACK_FRAME("sys.net.Socket","write",0xa0c9bd36,"sys.net.Socket.write","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",151,0xb72d4153)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(content,"content")
 		HX_STACK_LINE(152)
 		Dynamic tmp = this->__s;		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_1_1{
 			inline static Array< unsigned char > Block( ::String &content){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",152,0x52423539)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",152,0xb72d4153)
 				{
 					HX_STACK_LINE(152)
 					::String tmp1 = content;		HX_STACK_VAR(tmp1,"tmp1");
@@ -138,7 +138,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Socket_obj,write,(void))
 
 Void Socket_obj::connect( ::sys::net::Host host,int port){
 {
-		HX_STACK_FRAME("sys.net.Socket","connect",0x1ee69001,"sys.net.Socket.connect","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",156,0x52423539)
+		HX_STACK_FRAME("sys.net.Socket","connect",0x1ee69001,"sys.net.Socket.connect","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",156,0xb72d4153)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(host,"host")
 		HX_STACK_ARG(port,"port")
@@ -199,7 +199,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Socket_obj,connect,(void))
 
 Void Socket_obj::shutdown( bool read,bool write){
 {
-		HX_STACK_FRAME("sys.net.Socket","shutdown",0x9b2f3c9f,"sys.net.Socket.shutdown","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",170,0x52423539)
+		HX_STACK_FRAME("sys.net.Socket","shutdown",0x9b2f3c9f,"sys.net.Socket.shutdown","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",170,0xb72d4153)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(read,"read")
 		HX_STACK_ARG(write,"write")
@@ -220,7 +220,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Socket_obj,shutdown,(void))
 
 Void Socket_obj::setTimeout( Float timeout){
 {
-		HX_STACK_FRAME("sys.net.Socket","setTimeout",0x1b505368,"sys.net.Socket.setTimeout","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",201,0x52423539)
+		HX_STACK_FRAME("sys.net.Socket","setTimeout",0x1b505368,"sys.net.Socket.setTimeout","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",201,0xb72d4153)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(timeout,"timeout")
 		HX_STACK_LINE(202)

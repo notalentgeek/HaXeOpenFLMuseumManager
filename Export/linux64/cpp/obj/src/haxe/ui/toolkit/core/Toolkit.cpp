@@ -437,11 +437,11 @@ Void Toolkit_obj::init( ){
 			HX_STACK_LINE(93)
 			::haxe::ui::toolkit::core::ClassManager tmp10 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp10,"tmp10");
 			HX_STACK_LINE(93)
-			tmp10->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.ItemRenderer","\xa1","\x20","\x3a","\x86"),HX_HCSTRING("itemrenderer","\x56","\x55","\x53","\xbd"));
-			HX_STACK_LINE(97)
+			tmp10->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.ComponentItemRenderer","\x48","\x29","\x63","\x3f"),HX_HCSTRING("componentitemrenderer","\x93","\xed","\xeb","\xf1"));
+			HX_STACK_LINE(98)
 			::haxe::ui::toolkit::core::ClassManager tmp11 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(97)
-			tmp11->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.ComponentItemRenderer","\x48","\x29","\x63","\x3f"),HX_HCSTRING("componentitemrenderer","\x93","\xed","\xeb","\xf1"));
+			HX_STACK_LINE(98)
+			tmp11->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.ItemRenderer","\xa1","\x20","\x3a","\x86"),HX_HCSTRING("itemrenderer","\x56","\x55","\x53","\xbd"));
 			HX_STACK_LINE(101)
 			::haxe::ui::toolkit::core::ClassManager tmp12 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(101)
@@ -521,11 +521,11 @@ Void Toolkit_obj::init( ){
 			HX_STACK_LINE(164)
 			::haxe::ui::toolkit::core::ClassManager tmp31 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp31,"tmp31");
 			HX_STACK_LINE(164)
-			tmp31->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.ToolTip","\x8d","\x81","\xa1","\x0b"),HX_HCSTRING("tooltip","\x03","\xad","\x8c","\x6a"));
+			tmp31->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Slider","\xb7","\x6c","\xe9","\xd6"),HX_HCSTRING("slider","\x21","\xc6","\x04","\x70"));
 			HX_STACK_LINE(170)
 			::haxe::ui::toolkit::core::ClassManager tmp32 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp32,"tmp32");
 			HX_STACK_LINE(170)
-			tmp32->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Slider","\xb7","\x6c","\xe9","\xd6"),HX_HCSTRING("slider","\x21","\xc6","\x04","\x70"));
+			tmp32->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.ToolTip","\x8d","\x81","\xa1","\x0b"),HX_HCSTRING("tooltip","\x03","\xad","\x8c","\x6a"));
 			HX_STACK_LINE(173)
 			::haxe::ui::toolkit::core::ClassManager tmp33 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp33,"tmp33");
 			HX_STACK_LINE(173)
@@ -645,11 +645,11 @@ Void Toolkit_obj::init( ){
 			HX_STACK_LINE(289)
 			::haxe::ui::toolkit::core::ClassManager tmp62 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp62,"tmp62");
 			HX_STACK_LINE(289)
-			tmp62->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.AccordionButton","\x60","\x77","\xfa","\xab"),HX_HCSTRING("accordionbutton","\x7a","\x62","\xef","\xc1"));
+			tmp62->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.HSplitterGripper","\xb6","\x4d","\xd8","\xf0"),HX_HCSTRING("hsplittergripper","\x7c","\x11","\xa5","\xb0"));
 			HX_STACK_LINE(291)
 			::haxe::ui::toolkit::core::ClassManager tmp63 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp63,"tmp63");
 			HX_STACK_LINE(291)
-			tmp63->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.HSplitterGripper","\xb6","\x4d","\xd8","\xf0"),HX_HCSTRING("hsplittergripper","\x7c","\x11","\xa5","\xb0"));
+			tmp63->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.AccordionButton","\x60","\x77","\xfa","\xab"),HX_HCSTRING("accordionbutton","\x7a","\x62","\xef","\xc1"));
 			HX_STACK_LINE(297)
 			::haxe::ui::toolkit::core::ClassManager tmp64 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp64,"tmp64");
 			HX_STACK_LINE(297)
@@ -673,11 +673,11 @@ Void Toolkit_obj::init( ){
 			HX_STACK_LINE(314)
 			::haxe::ui::toolkit::core::ClassManager tmp69 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp69,"tmp69");
 			HX_STACK_LINE(314)
-			tmp69->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Button","\x88","\x08","\xc5","\x40"),HX_HCSTRING("button","\xf2","\x61","\xe0","\xd9"));
+			tmp69->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Scroll","\xa3","\x7e","\x49","\xae"),HX_HCSTRING("scroll","\x0d","\xd8","\x64","\x47"));
 			HX_STACK_LINE(317)
 			::haxe::ui::toolkit::core::ClassManager tmp70 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp70,"tmp70");
 			HX_STACK_LINE(317)
-			tmp70->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Scroll","\xa3","\x7e","\x49","\xae"),HX_HCSTRING("scroll","\x0d","\xd8","\x64","\x47"));
+			tmp70->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Button","\x88","\x08","\xc5","\x40"),HX_HCSTRING("button","\xf2","\x61","\xe0","\xd9"));
 			HX_STACK_LINE(321)
 			::haxe::ui::toolkit::core::ClassManager tmp71 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp71,"tmp71");
 			HX_STACK_LINE(321)
@@ -2252,6 +2252,54 @@ bool Toolkit_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Pro
 	return false;
 }
 
+bool Toolkit_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 5:
+		if (HX_FIELD_EQ(inName,"theme") ) { theme=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"instance") ) { instance=ioValue.Cast< ::haxe::ui::toolkit::core::Toolkit >(); return true; }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"_instance") ) { _instance=ioValue.Cast< ::haxe::ui::toolkit::core::Toolkit >(); return true; }
+		if (HX_FIELD_EQ(inName,"autoScale") ) { autoScale=ioValue.Cast< bool >(); return true; }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"versionInfo") ) { versionInfo=ioValue.Cast< ::haxe::ds::StringMap >(); return true; }
+		if (HX_FIELD_EQ(inName,"scaleFactor") ) { if (inCallProp == hx::paccAlways)  ioValue = set_scaleFactor(ioValue); }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"_versionInfo") ) { _versionInfo=ioValue.Cast< ::haxe::ds::StringMap >(); return true; }
+		if (HX_FIELD_EQ(inName,"_scaleFactor") ) { _scaleFactor=ioValue.Cast< Float >(); return true; }
+		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"versionString") ) { versionString=ioValue.Cast< ::String >(); return true; }
+		break;
+	case 15:
+		if (HX_FIELD_EQ(inName,"useDefaultTheme") ) { useDefaultTheme=ioValue.Cast< bool >(); return true; }
+		break;
+	case 17:
+		if (HX_FIELD_EQ(inName,"defaultTransition") ) { if (inCallProp == hx::paccAlways)  ioValue = set_defaultTransition(ioValue); }
+		break;
+	case 18:
+		if (HX_FIELD_EQ(inName,"_defaultTransition") ) { _defaultTransition=ioValue.Cast< ::String >(); return true; }
+		break;
+	case 19:
+		if (HX_FIELD_EQ(inName,"_transitionRegister") ) { _transitionRegister=ioValue.Cast< ::haxe::ds::StringMap >(); return true; }
+		break;
+	case 21:
+		if (HX_FIELD_EQ(inName,"_registeredProcessors") ) { _registeredProcessors=ioValue.Cast< ::haxe::ds::StringMap >(); return true; }
+		break;
+	case 22:
+		if (HX_FIELD_EQ(inName,"_defaultTransitionTime") ) { _defaultTransitionTime=ioValue.Cast< Float >(); return true; }
+		break;
+	case 23:
+		if (HX_FIELD_EQ(inName,"_transitionTimeRegister") ) { _transitionTimeRegister=ioValue.Cast< ::haxe::ds::StringMap >(); return true; }
+	}
+	return false;
+}
+
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
@@ -2371,7 +2419,7 @@ void Toolkit_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &Toolkit_obj::__GetStatic;
-	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &Toolkit_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

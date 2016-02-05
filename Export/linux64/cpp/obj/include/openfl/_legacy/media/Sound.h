@@ -54,6 +54,20 @@ class HXCPP_CLASS_ATTRIBUTES  Sound_obj : public ::openfl::_legacy::events::Even
 		::String __ToString() const { return HX_HCSTRING("Sound","\xaf","\xfc","\xf9","\x13"); }
 
 		static void __boot();
+		static Dynamic lime_sound_from_file;
+		static Dynamic &lime_sound_from_file_dyn() { return lime_sound_from_file;}
+		static Dynamic lime_sound_from_data;
+		static Dynamic &lime_sound_from_data_dyn() { return lime_sound_from_data;}
+		static Dynamic lime_sound_get_id3;
+		static Dynamic &lime_sound_get_id3_dyn() { return lime_sound_get_id3;}
+		static Dynamic lime_sound_get_length;
+		static Dynamic &lime_sound_get_length_dyn() { return lime_sound_get_length;}
+		static Dynamic lime_sound_close;
+		static Dynamic &lime_sound_close_dyn() { return lime_sound_close;}
+		static Dynamic lime_sound_get_status;
+		static Dynamic &lime_sound_get_status_dyn() { return lime_sound_get_status;}
+		static Dynamic lime_sound_channel_create_dynamic;
+		static Dynamic &lime_sound_channel_create_dynamic_dyn() { return lime_sound_channel_create_dynamic;}
 		int bytesLoaded;
 		int bytesTotal;
 		::openfl::media::ID3Info id3;
@@ -96,20 +110,6 @@ class HXCPP_CLASS_ATTRIBUTES  Sound_obj : public ::openfl::_legacy::events::Even
 		virtual Float get_length( );
 		Dynamic get_length_dyn();
 
-		static Dynamic lime_sound_from_file;
-		static Dynamic &lime_sound_from_file_dyn() { return lime_sound_from_file;}
-		static Dynamic lime_sound_from_data;
-		static Dynamic &lime_sound_from_data_dyn() { return lime_sound_from_data;}
-		static Dynamic lime_sound_get_id3;
-		static Dynamic &lime_sound_get_id3_dyn() { return lime_sound_get_id3;}
-		static Dynamic lime_sound_get_length;
-		static Dynamic &lime_sound_get_length_dyn() { return lime_sound_get_length;}
-		static Dynamic lime_sound_close;
-		static Dynamic &lime_sound_close_dyn() { return lime_sound_close;}
-		static Dynamic lime_sound_get_status;
-		static Dynamic &lime_sound_get_status_dyn() { return lime_sound_get_status;}
-		static Dynamic lime_sound_channel_create_dynamic;
-		static Dynamic &lime_sound_channel_create_dynamic_dyn() { return lime_sound_channel_create_dynamic;}
 };
 
 } // end namespace openfl

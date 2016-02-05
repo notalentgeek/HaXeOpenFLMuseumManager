@@ -48,6 +48,20 @@ class HXCPP_CLASS_ATTRIBUTES  DisplayObjectContainer_obj : public ::openfl::_leg
 		::String __ToString() const { return HX_HCSTRING("DisplayObjectContainer","\x80","\xf2","\x98","\xea"); }
 
 		static void __boot();
+		static Dynamic lime_create_display_object_container;
+		static Dynamic &lime_create_display_object_container_dyn() { return lime_create_display_object_container;}
+		static Dynamic lime_doc_add_child;
+		static Dynamic &lime_doc_add_child_dyn() { return lime_doc_add_child;}
+		static Dynamic lime_doc_remove_child;
+		static Dynamic &lime_doc_remove_child_dyn() { return lime_doc_remove_child;}
+		static Dynamic lime_doc_set_child_index;
+		static Dynamic &lime_doc_set_child_index_dyn() { return lime_doc_set_child_index;}
+		static Dynamic lime_doc_get_mouse_children;
+		static Dynamic &lime_doc_get_mouse_children_dyn() { return lime_doc_get_mouse_children;}
+		static Dynamic lime_doc_set_mouse_children;
+		static Dynamic &lime_doc_set_mouse_children_dyn() { return lime_doc_set_mouse_children;}
+		static Dynamic lime_doc_swap_children;
+		static Dynamic &lime_doc_swap_children_dyn() { return lime_doc_swap_children;}
 		int numChildren;
 		Array< ::Dynamic > __children;
 		virtual ::openfl::_legacy::display::DisplayObject addChild( ::openfl::_legacy::display::DisplayObject child);
@@ -134,20 +148,6 @@ class HXCPP_CLASS_ATTRIBUTES  DisplayObjectContainer_obj : public ::openfl::_leg
 		virtual bool set_tabChildren( bool value);
 		Dynamic set_tabChildren_dyn();
 
-		static Dynamic lime_create_display_object_container;
-		static Dynamic &lime_create_display_object_container_dyn() { return lime_create_display_object_container;}
-		static Dynamic lime_doc_add_child;
-		static Dynamic &lime_doc_add_child_dyn() { return lime_doc_add_child;}
-		static Dynamic lime_doc_remove_child;
-		static Dynamic &lime_doc_remove_child_dyn() { return lime_doc_remove_child;}
-		static Dynamic lime_doc_set_child_index;
-		static Dynamic &lime_doc_set_child_index_dyn() { return lime_doc_set_child_index;}
-		static Dynamic lime_doc_get_mouse_children;
-		static Dynamic &lime_doc_get_mouse_children_dyn() { return lime_doc_get_mouse_children;}
-		static Dynamic lime_doc_set_mouse_children;
-		static Dynamic &lime_doc_set_mouse_children_dyn() { return lime_doc_set_mouse_children;}
-		static Dynamic lime_doc_swap_children;
-		static Dynamic &lime_doc_swap_children_dyn() { return lime_doc_swap_children;}
 };
 
 } // end namespace openfl

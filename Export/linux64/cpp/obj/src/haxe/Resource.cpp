@@ -27,7 +27,7 @@ Dynamic Resource_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::String Resource_obj::getString( ::String name){
-	HX_STACK_FRAME("haxe.Resource","getString",0x974269cf,"haxe.Resource.getString","/usr/lib/haxe/std/cpp/_std/haxe/Resource.hx",30,0xdd7fc685)
+	HX_STACK_FRAME("haxe.Resource","getString",0x974269cf,"haxe.Resource.getString","/usr/share/haxe/std/cpp/_std/haxe/Resource.hx",30,0x309b3bab)
 	HX_STACK_ARG(name,"name")
 	HX_STACK_LINE(31)
 	::String tmp = ::__hxcpp_resource_string(name);		HX_STACK_VAR(tmp,"tmp");
@@ -39,7 +39,7 @@ Dynamic Resource_obj::__Create(hx::DynamicArray inArgs)
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Resource_obj,getString,return )
 
 ::haxe::io::Bytes Resource_obj::getBytes( ::String name){
-	HX_STACK_FRAME("haxe.Resource","getBytes",0x9bc1712d,"haxe.Resource.getBytes","/usr/lib/haxe/std/cpp/_std/haxe/Resource.hx",33,0xdd7fc685)
+	HX_STACK_FRAME("haxe.Resource","getBytes",0x9bc1712d,"haxe.Resource.getBytes","/usr/share/haxe/std/cpp/_std/haxe/Resource.hx",33,0x309b3bab)
 	HX_STACK_ARG(name,"name")
 	HX_STACK_LINE(34)
 	Array< unsigned char > array = ::__hxcpp_resource_bytes(name);		HX_STACK_VAR(array,"array");

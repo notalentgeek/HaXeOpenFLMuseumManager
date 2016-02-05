@@ -42,7 +42,6 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -56,9 +55,6 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 		int indexGlobalVisitorInt;
 		int museumUIOffsetInt;
 		Array< ::Dynamic > roomObjectArray;
-		::ObjectMuseum selectedMuseumObject;
-		::ObjectTag selectedTagObject;
-		::ObjectVisitor selectedVisitorObject;
 		Array< ::Dynamic > tagGeneralObjectArray;
 		Array< ::Dynamic > tagObjectArray;
 		::haxe::ui::toolkit::core::interfaces::IDisplayObject uiMainObject;
@@ -90,15 +86,6 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 
 		virtual Array< ::Dynamic > GetRoomObjectArray( );
 		Dynamic GetRoomObjectArray_dyn();
-
-		virtual ::ObjectMuseum GetSelectedMuseumObject( );
-		Dynamic GetSelectedMuseumObject_dyn();
-
-		virtual ::ObjectTag GetSelectedTagObject( );
-		Dynamic GetSelectedTagObject_dyn();
-
-		virtual ::ObjectVisitor GetSelectedVisitorObject( );
-		Dynamic GetSelectedVisitorObject_dyn();
 
 		virtual Array< ::Dynamic > GetTagGeneralObjectArray( );
 		Dynamic GetTagGeneralObjectArray_dyn();
@@ -132,15 +119,6 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionGlobal_obj : public hx::Object{
 
 		virtual Void SetRoomObjectArrayVoid( Array< ::Dynamic > _roomObjectArray);
 		Dynamic SetRoomObjectArrayVoid_dyn();
-
-		virtual Void SetSelectedMuseumObjectVoid( ::ObjectMuseum _selectedMuseumObject);
-		Dynamic SetSelectedMuseumObjectVoid_dyn();
-
-		virtual Void SetSelectedTagObjectVoid( ::ObjectTag _selectedTagObject);
-		Dynamic SetSelectedTagObjectVoid_dyn();
-
-		virtual Void SetSelectedVisitorObjectVoid( ::ObjectVisitor _selectedVisitorObject);
-		Dynamic SetSelectedVisitorObjectVoid_dyn();
 
 		virtual Void SetTagObjectArrayVoid( Array< ::Dynamic > _tagObjectArray);
 		Dynamic SetTagObjectArrayVoid_dyn();

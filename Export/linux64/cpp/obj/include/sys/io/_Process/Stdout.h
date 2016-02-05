@@ -43,6 +43,10 @@ class HXCPP_CLASS_ATTRIBUTES  Stdout_obj : public ::haxe::io::Input_obj{
 		::String __ToString() const { return HX_HCSTRING("Stdout","\xeb","\x33","\x88","\x3c"); }
 
 		static void __boot();
+		static Dynamic _stdout_read;
+		static Dynamic &_stdout_read_dyn() { return _stdout_read;}
+		static Dynamic _stderr_read;
+		static Dynamic &_stderr_read_dyn() { return _stderr_read;}
 		Dynamic p;
 		bool out;
 		::haxe::io::Bytes buf;
@@ -50,10 +54,6 @@ class HXCPP_CLASS_ATTRIBUTES  Stdout_obj : public ::haxe::io::Input_obj{
 
 		virtual int readBytes( ::haxe::io::Bytes str,int pos,int len);
 
-		static Dynamic _stdout_read;
-		static Dynamic &_stdout_read_dyn() { return _stdout_read;}
-		static Dynamic _stderr_read;
-		static Dynamic &_stderr_read_dyn() { return _stderr_read;}
 };
 
 } // end namespace sys

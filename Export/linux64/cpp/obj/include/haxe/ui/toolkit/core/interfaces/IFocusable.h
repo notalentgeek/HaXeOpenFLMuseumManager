@@ -19,16 +19,11 @@ class HXCPP_CLASS_ATTRIBUTES  IFocusable_obj : public hx::Interface{
 		typedef IFocusable_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
 		virtual bool get_allowFocus( )=0;
-		virtual Dynamic get_allowFocus_dyn()=0;
+virtual Dynamic get_allowFocus_dyn()=0;
 		virtual bool set_allowFocus( bool value)=0;
-		virtual Dynamic set_allowFocus_dyn()=0;
+virtual Dynamic set_allowFocus_dyn()=0;
 };
 
-#define DELEGATE_haxe_ui_toolkit_core_interfaces_IFocusable \
-virtual bool get_allowFocus( ) { return mDelegate->get_allowFocus();}  \
-virtual Dynamic get_allowFocus_dyn() { return mDelegate->get_allowFocus_dyn();}  \
-virtual bool set_allowFocus( bool value) { return mDelegate->set_allowFocus(value);}  \
-virtual Dynamic set_allowFocus_dyn() { return mDelegate->set_allowFocus_dyn();}  \
 
 
 template<typename IMPL>
@@ -40,7 +35,10 @@ class IFocusable_delegate_ : public IFocusable_obj
 		IFocusable_delegate_(IMPL *inDelegate) : mDelegate(inDelegate) {}
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
-		DELEGATE_haxe_ui_toolkit_core_interfaces_IFocusable
+		bool get_allowFocus( ) { return mDelegate->get_allowFocus();}
+		Dynamic get_allowFocus_dyn() { return mDelegate->get_allowFocus_dyn();}
+		bool set_allowFocus( bool value) { return mDelegate->set_allowFocus(value);}
+		Dynamic set_allowFocus_dyn() { return mDelegate->set_allowFocus_dyn();}
 };
 
 } // end namespace haxe

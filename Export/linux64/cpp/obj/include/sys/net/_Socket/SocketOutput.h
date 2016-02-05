@@ -43,6 +43,12 @@ class HXCPP_CLASS_ATTRIBUTES  SocketOutput_obj : public ::haxe::io::Output_obj{
 		::String __ToString() const { return HX_HCSTRING("SocketOutput","\x34","\xa3","\xea","\x62"); }
 
 		static void __boot();
+		static Dynamic socket_close;
+		static Dynamic &socket_close_dyn() { return socket_close;}
+		static Dynamic socket_send_char;
+		static Dynamic &socket_send_char_dyn() { return socket_send_char;}
+		static Dynamic socket_send;
+		static Dynamic &socket_send_dyn() { return socket_send;}
 		Dynamic __s;
 		virtual Void writeByte( int c);
 
@@ -50,12 +56,6 @@ class HXCPP_CLASS_ATTRIBUTES  SocketOutput_obj : public ::haxe::io::Output_obj{
 
 		virtual Void close( );
 
-		static Dynamic socket_close;
-		static Dynamic &socket_close_dyn() { return socket_close;}
-		static Dynamic socket_send_char;
-		static Dynamic &socket_send_char_dyn() { return socket_send_char;}
-		static Dynamic socket_send;
-		static Dynamic &socket_send_dyn() { return socket_send;}
 };
 
 } // end namespace sys

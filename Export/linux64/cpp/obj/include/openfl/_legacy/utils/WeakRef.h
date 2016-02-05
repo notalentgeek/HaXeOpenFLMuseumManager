@@ -38,6 +38,8 @@ class HXCPP_CLASS_ATTRIBUTES  WeakRef_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("WeakRef","\x9b","\x77","\xad","\xa4"); }
 
 		static void __boot();
+		static Dynamic lime_weak_ref_create;
+		static Dynamic lime_weak_ref_get;
 		Dynamic hardRef;
 		int weakRef;
 		virtual Dynamic get( );
@@ -46,8 +48,6 @@ class HXCPP_CLASS_ATTRIBUTES  WeakRef_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static Dynamic lime_weak_ref_create;
-		static Dynamic lime_weak_ref_get;
 };
 
 } // end namespace openfl

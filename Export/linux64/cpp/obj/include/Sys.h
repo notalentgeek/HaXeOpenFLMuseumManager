@@ -26,6 +26,7 @@ class HXCPP_CLASS_ATTRIBUTES  Sys_obj : public hx::Object{
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Sys","\xed","\x64","\x3f","\x00"); }
 

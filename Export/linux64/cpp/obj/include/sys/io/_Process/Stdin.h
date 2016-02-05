@@ -43,6 +43,10 @@ class HXCPP_CLASS_ATTRIBUTES  Stdin_obj : public ::haxe::io::Output_obj{
 		::String __ToString() const { return HX_HCSTRING("Stdin","\x28","\x23","\x3b","\x17"); }
 
 		static void __boot();
+		static Dynamic _stdin_write;
+		static Dynamic &_stdin_write_dyn() { return _stdin_write;}
+		static Dynamic _stdin_close;
+		static Dynamic &_stdin_close_dyn() { return _stdin_close;}
 		Dynamic p;
 		::haxe::io::Bytes buf;
 		virtual Void close( );
@@ -51,10 +55,6 @@ class HXCPP_CLASS_ATTRIBUTES  Stdin_obj : public ::haxe::io::Output_obj{
 
 		virtual int writeBytes( ::haxe::io::Bytes buf,int pos,int len);
 
-		static Dynamic _stdin_write;
-		static Dynamic &_stdin_write_dyn() { return _stdin_write;}
-		static Dynamic _stdin_close;
-		static Dynamic &_stdin_close_dyn() { return _stdin_close;}
 };
 
 } // end namespace sys

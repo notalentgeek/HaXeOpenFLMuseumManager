@@ -6975,11 +6975,6 @@ Dynamic Matrix3D_obj::__SetField(const ::String &inName,const Dynamic &inValue,h
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool Matrix3D_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void Matrix3D_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("determinant","\x95","\x5d","\x15","\x32"));
@@ -7061,7 +7056,7 @@ void Matrix3D_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &Matrix3D_obj::__GetStatic;
-	__mClass->mSetStaticField = &Matrix3D_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

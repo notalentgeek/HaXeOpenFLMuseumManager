@@ -50,6 +50,11 @@ class HXCPP_CLASS_ATTRIBUTES  RootManager_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("RootManager","\x4b","\x4c","\x23","\xea"); }
 
+		static ::haxe::ui::toolkit::core::RootManager _instance;
+		static ::haxe::ui::toolkit::core::RootManager instance;
+		static ::haxe::ui::toolkit::core::RootManager get_instance( );
+		static Dynamic get_instance_dyn();
+
 		Array< ::Dynamic > _roots;
 		virtual ::haxe::ui::toolkit::core::Root createRoot( Dynamic options,Dynamic fn);
 		Dynamic createRoot_dyn();
@@ -67,11 +72,6 @@ class HXCPP_CLASS_ATTRIBUTES  RootManager_obj : public hx::Object{
 		::haxe::ui::toolkit::core::Root currentRoot;
 		virtual ::haxe::ui::toolkit::core::Root get_currentRoot( );
 		Dynamic get_currentRoot_dyn();
-
-		static ::haxe::ui::toolkit::core::RootManager _instance;
-		static ::haxe::ui::toolkit::core::RootManager instance;
-		static ::haxe::ui::toolkit::core::RootManager get_instance( );
-		static Dynamic get_instance_dyn();
 
 };
 

@@ -37,7 +37,6 @@ class HXCPP_CLASS_ATTRIBUTES  SampleDataEvent_obj : public ::openfl::_legacy::ev
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -45,13 +44,13 @@ class HXCPP_CLASS_ATTRIBUTES  SampleDataEvent_obj : public ::openfl::_legacy::ev
 		::String __ToString() const { return HX_HCSTRING("SampleDataEvent","\xe6","\x7b","\xb4","\x20"); }
 
 		static void __boot();
+		static ::String SAMPLE_DATA;
 		::openfl::_legacy::utils::ByteArray data;
 		Float position;
 		virtual ::openfl::_legacy::events::Event clone( );
 
 		virtual ::String toString( );
 
-		static ::String SAMPLE_DATA;
 };
 
 } // end namespace openfl

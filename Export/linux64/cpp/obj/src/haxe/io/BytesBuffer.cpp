@@ -11,7 +11,7 @@ namespace io{
 
 Void BytesBuffer_obj::__construct()
 {
-HX_STACK_FRAME("haxe.io.BytesBuffer","new",0x022790dd,"haxe.io.BytesBuffer.new","/usr/lib/haxe/std/haxe/io/BytesBuffer.hx",54,0x63ceceb4)
+HX_STACK_FRAME("haxe.io.BytesBuffer","new",0x022790dd,"haxe.io.BytesBuffer.new","/usr/share/haxe/std/haxe/io/BytesBuffer.hx",54,0x054745ce)
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(54)
@@ -35,7 +35,7 @@ Dynamic BytesBuffer_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::haxe::io::Bytes BytesBuffer_obj::getBytes( ){
-	HX_STACK_FRAME("haxe.io.BytesBuffer","getBytes",0x1e9f7258,"haxe.io.BytesBuffer.getBytes","/usr/lib/haxe/std/haxe/io/BytesBuffer.hx",191,0x63ceceb4)
+	HX_STACK_FRAME("haxe.io.BytesBuffer","getBytes",0x1e9f7258,"haxe.io.BytesBuffer.getBytes","/usr/share/haxe/std/haxe/io/BytesBuffer.hx",191,0x054745ce)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(212)
 	int tmp = this->b->length;		HX_STACK_VAR(tmp,"tmp");
@@ -92,11 +92,6 @@ Dynamic BytesBuffer_obj::__SetField(const ::String &inName,const Dynamic &inValu
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool BytesBuffer_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void BytesBuffer_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("b","\x62","\x00","\x00","\x00"));
@@ -138,7 +133,7 @@ void BytesBuffer_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &BytesBuffer_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

@@ -49,6 +49,12 @@ class HXCPP_CLASS_ATTRIBUTES  SimpleActuator_obj : public ::motion::actuators::G
 		::String __ToString() const { return HX_HCSTRING("SimpleActuator","\xab","\xd3","\xf8","\x0c"); }
 
 		static void __boot();
+		static Array< ::Dynamic > actuators;
+		static int actuatorsLength;
+		static bool addedEvent;
+		static Void stage_onEnterFrame( ::openfl::_legacy::events::Event event);
+		static Dynamic stage_onEnterFrame_dyn();
+
 		virtual Void setField_openfl__legacy_geom_Transform( ::openfl::_legacy::geom::Transform target,::String propertyName,Dynamic value);
 		Dynamic setField_openfl__legacy_geom_Transform_dyn();
 
@@ -101,12 +107,6 @@ class HXCPP_CLASS_ATTRIBUTES  SimpleActuator_obj : public ::motion::actuators::G
 
 		virtual Void update( Float currentTime);
 		Dynamic update_dyn();
-
-		static Array< ::Dynamic > actuators;
-		static int actuatorsLength;
-		static bool addedEvent;
-		static Void stage_onEnterFrame( ::openfl::_legacy::events::Event event);
-		static Dynamic stage_onEnterFrame_dyn();
 
 };
 

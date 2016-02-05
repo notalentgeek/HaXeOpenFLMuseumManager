@@ -8,7 +8,7 @@ namespace io{
 
 Void Path_obj::__construct(::String path)
 {
-HX_STACK_FRAME("haxe.io.Path","new",0x1b96d677,"haxe.io.Path.new","/usr/lib/haxe/std/haxe/io/Path.hx",76,0xf85ee938)
+HX_STACK_FRAME("haxe.io.Path","new",0x1b96d677,"haxe.io.Path.new","/usr/share/haxe/std/haxe/io/Path.hx",76,0x457392de)
 HX_STACK_THIS(this)
 HX_STACK_ARG(path,"path")
 {
@@ -120,7 +120,7 @@ Dynamic Path_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::String Path_obj::directory( ::String path){
-	HX_STACK_FRAME("haxe.io.Path","directory",0xbcfe23c4,"haxe.io.Path.directory","/usr/lib/haxe/std/haxe/io/Path.hx",147,0xf85ee938)
+	HX_STACK_FRAME("haxe.io.Path","directory",0xbcfe23c4,"haxe.io.Path.directory","/usr/share/haxe/std/haxe/io/Path.hx",147,0x457392de)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(148)
 	::haxe::io::Path tmp = ::haxe::io::Path_obj::__new(path);		HX_STACK_VAR(tmp,"tmp");
@@ -143,7 +143,7 @@ Dynamic Path_obj::__Create(hx::DynamicArray inArgs)
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Path_obj,directory,return )
 
 ::String Path_obj::removeTrailingSlashes( ::String path){
-	HX_STACK_FRAME("haxe.io.Path","removeTrailingSlashes",0x2dc73462,"haxe.io.Path.removeTrailingSlashes","/usr/lib/haxe/std/haxe/io/Path.hx",290,0xf85ee938)
+	HX_STACK_FRAME("haxe.io.Path","removeTrailingSlashes",0x2dc73462,"haxe.io.Path.removeTrailingSlashes","/usr/share/haxe/std/haxe/io/Path.hx",290,0x457392de)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(291)
 	while((true)){
@@ -255,11 +255,6 @@ Dynamic Path_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::P
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool Path_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void Path_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("dir","\x4d","\x3d","\x4c","\x00"));
@@ -313,7 +308,7 @@ void Path_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &Path_obj::__GetStatic;
-	__mClass->mSetStaticField = &Path_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

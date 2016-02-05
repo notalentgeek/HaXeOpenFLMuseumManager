@@ -42,6 +42,12 @@ class HXCPP_CLASS_ATTRIBUTES  FileOutput_obj : public ::haxe::io::Output_obj{
 		::String __ToString() const { return HX_HCSTRING("FileOutput","\xbd","\x5a","\xb6","\xe3"); }
 
 		static void __boot();
+		static Dynamic file_close;
+		static Dynamic &file_close_dyn() { return file_close;}
+		static Dynamic file_write;
+		static Dynamic &file_write_dyn() { return file_write;}
+		static Dynamic file_write_char;
+		static Dynamic &file_write_char_dyn() { return file_write_char;}
 		Dynamic __f;
 		virtual Void writeByte( int c);
 
@@ -49,12 +55,6 @@ class HXCPP_CLASS_ATTRIBUTES  FileOutput_obj : public ::haxe::io::Output_obj{
 
 		virtual Void close( );
 
-		static Dynamic file_close;
-		static Dynamic &file_close_dyn() { return file_close;}
-		static Dynamic file_write;
-		static Dynamic &file_write_dyn() { return file_write;}
-		static Dynamic file_write_char;
-		static Dynamic &file_write_char_dyn() { return file_write_char;}
 };
 
 } // end namespace sys

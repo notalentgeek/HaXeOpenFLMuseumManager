@@ -47,13 +47,6 @@ class HXCPP_CLASS_ATTRIBUTES  TouchEvent_obj : public ::openfl::_legacy::events:
 		::String __ToString() const { return HX_HCSTRING("TouchEvent","\xfb","\xaf","\x06","\x66"); }
 
 		static void __boot();
-		bool isPrimaryTouchPoint;
-		Float pressure;
-		Float sizeX;
-		Float sizeY;
-		int touchPointID;
-		virtual ::openfl::_legacy::events::MouseEvent __createSimilar( ::String type,::openfl::_legacy::display::InteractiveObject related,::openfl::_legacy::display::InteractiveObject target);
-
 		static ::String TOUCH_BEGIN;
 		static ::String TOUCH_END;
 		static ::String TOUCH_MOVE;
@@ -64,6 +57,13 @@ class HXCPP_CLASS_ATTRIBUTES  TouchEvent_obj : public ::openfl::_legacy::events:
 		static ::String TOUCH_TAP;
 		static ::openfl::_legacy::events::TouchEvent __create( ::String type,Dynamic event,::openfl::_legacy::geom::Point local,::openfl::_legacy::display::InteractiveObject target,Float sizeX,Float sizeY);
 		static Dynamic __create_dyn();
+
+		bool isPrimaryTouchPoint;
+		Float pressure;
+		Float sizeX;
+		Float sizeY;
+		int touchPointID;
+		virtual ::openfl::_legacy::events::MouseEvent __createSimilar( ::String type,::openfl::_legacy::display::InteractiveObject related,::openfl::_legacy::display::InteractiveObject target);
 
 };
 

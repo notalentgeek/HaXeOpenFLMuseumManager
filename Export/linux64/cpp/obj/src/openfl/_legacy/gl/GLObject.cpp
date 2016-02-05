@@ -232,11 +232,6 @@ Dynamic GLObject_obj::__SetField(const ::String &inName,const Dynamic &inValue,h
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool GLObject_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void GLObject_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("id","\xdb","\x5b","\x00","\x00"));
@@ -292,7 +287,7 @@ void GLObject_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &GLObject_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

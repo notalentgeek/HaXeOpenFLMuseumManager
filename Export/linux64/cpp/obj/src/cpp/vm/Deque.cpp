@@ -8,7 +8,7 @@ namespace vm{
 
 Void Deque_obj::__construct()
 {
-HX_STACK_FRAME("cpp.vm.Deque","new",0xa6685326,"cpp.vm.Deque.new","/usr/lib/haxe/std/cpp/vm/Deque.hx",27,0x7f3dd0a9)
+HX_STACK_FRAME("cpp.vm.Deque","new",0xa6685326,"cpp.vm.Deque.new","/usr/share/haxe/std/cpp/vm/Deque.hx",27,0xcc527a4f)
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(28)
@@ -35,7 +35,7 @@ Dynamic Deque_obj::__Create(hx::DynamicArray inArgs)
 
 Void Deque_obj::add( Dynamic i){
 {
-		HX_STACK_FRAME("cpp.vm.Deque","add",0xa65e74e7,"cpp.vm.Deque.add","/usr/lib/haxe/std/cpp/vm/Deque.hx",31,0x7f3dd0a9)
+		HX_STACK_FRAME("cpp.vm.Deque","add",0xa65e74e7,"cpp.vm.Deque.add","/usr/share/haxe/std/cpp/vm/Deque.hx",31,0xcc527a4f)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(i,"i")
 		HX_STACK_LINE(31)
@@ -48,7 +48,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Deque_obj,add,(void))
 
 Dynamic Deque_obj::pop( bool block){
-	HX_STACK_FRAME("cpp.vm.Deque","pop",0xa669e057,"cpp.vm.Deque.pop","/usr/lib/haxe/std/cpp/vm/Deque.hx",36,0x7f3dd0a9)
+	HX_STACK_FRAME("cpp.vm.Deque","pop",0xa669e057,"cpp.vm.Deque.pop","/usr/share/haxe/std/cpp/vm/Deque.hx",36,0xcc527a4f)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(block,"block")
 	HX_STACK_LINE(37)
@@ -99,11 +99,6 @@ Dynamic Deque_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool Deque_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void Deque_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("q","\x71","\x00","\x00","\x00"));
@@ -145,7 +140,7 @@ void Deque_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &Deque_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

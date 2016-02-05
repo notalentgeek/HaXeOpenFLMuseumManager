@@ -38,14 +38,14 @@ class HXCPP_CLASS_ATTRIBUTES  Host_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Host","\x88","\xfb","\xeb","\x2f"); }
 
 		static void __boot();
-		int ip;
-		virtual ::String toString( );
-		Dynamic toString_dyn();
-
 		static Dynamic host_resolve;
 		static Dynamic &host_resolve_dyn() { return host_resolve;}
 		static Dynamic host_to_string;
 		static Dynamic &host_to_string_dyn() { return host_to_string;}
+		int ip;
+		virtual ::String toString( );
+		Dynamic toString_dyn();
+
 };
 
 } // end namespace sys

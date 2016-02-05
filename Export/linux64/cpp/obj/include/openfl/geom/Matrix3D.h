@@ -30,12 +30,26 @@ class HXCPP_CLASS_ATTRIBUTES  Matrix3D_obj : public hx::Object{
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Matrix3D","\x52","\xf1","\xa4","\x40"); }
+
+		static ::openfl::geom::Matrix3D create2D( Float x,Float y,hx::Null< Float >  scale,hx::Null< Float >  rotation);
+		static Dynamic create2D_dyn();
+
+		static ::openfl::geom::Matrix3D createABCD( Float a,Float b,Float c,Float d,Float tx,Float ty);
+		static Dynamic createABCD_dyn();
+
+		static ::openfl::geom::Matrix3D createOrtho( Float x0,Float x1,Float y0,Float y1,Float zNear,Float zFar);
+		static Dynamic createOrtho_dyn();
+
+		static ::openfl::geom::Matrix3D interpolate( ::openfl::geom::Matrix3D thisMat,::openfl::geom::Matrix3D toMat,Float percent);
+		static Dynamic interpolate_dyn();
+
+		static ::openfl::geom::Matrix3D __getAxisRotation( Float x,Float y,Float z,Float degrees);
+		static Dynamic __getAxisRotation_dyn();
 
 		Float determinant;
 		Array< Float > rawData;
@@ -128,21 +142,6 @@ class HXCPP_CLASS_ATTRIBUTES  Matrix3D_obj : public hx::Object{
 
 		virtual ::openfl::geom::Vector3D set_position( ::openfl::geom::Vector3D val);
 		Dynamic set_position_dyn();
-
-		static ::openfl::geom::Matrix3D create2D( Float x,Float y,hx::Null< Float >  scale,hx::Null< Float >  rotation);
-		static Dynamic create2D_dyn();
-
-		static ::openfl::geom::Matrix3D createABCD( Float a,Float b,Float c,Float d,Float tx,Float ty);
-		static Dynamic createABCD_dyn();
-
-		static ::openfl::geom::Matrix3D createOrtho( Float x0,Float x1,Float y0,Float y1,Float zNear,Float zFar);
-		static Dynamic createOrtho_dyn();
-
-		static ::openfl::geom::Matrix3D interpolate( ::openfl::geom::Matrix3D thisMat,::openfl::geom::Matrix3D toMat,Float percent);
-		static Dynamic interpolate_dyn();
-
-		static ::openfl::geom::Matrix3D __getAxisRotation( Float x,Float y,Float z,Float degrees);
-		static Dynamic __getAxisRotation_dyn();
 
 };
 

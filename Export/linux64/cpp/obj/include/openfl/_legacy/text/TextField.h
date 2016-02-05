@@ -49,6 +49,102 @@ class HXCPP_CLASS_ATTRIBUTES  TextField_obj : public ::openfl::_legacy::display:
 		::String __ToString() const { return HX_HCSTRING("TextField","\xad","\x04","\x54","\x3b"); }
 
 		static void __boot();
+		static Dynamic lime_text_field_create;
+		static Dynamic &lime_text_field_create_dyn() { return lime_text_field_create;}
+		static Dynamic lime_text_field_get_text;
+		static Dynamic &lime_text_field_get_text_dyn() { return lime_text_field_get_text;}
+		static Dynamic lime_text_field_set_text;
+		static Dynamic &lime_text_field_set_text_dyn() { return lime_text_field_set_text;}
+		static Dynamic lime_text_field_get_html_text;
+		static Dynamic &lime_text_field_get_html_text_dyn() { return lime_text_field_get_html_text;}
+		static Dynamic lime_text_field_set_html_text;
+		static Dynamic &lime_text_field_set_html_text_dyn() { return lime_text_field_set_html_text;}
+		static Dynamic lime_text_field_get_text_color;
+		static Dynamic &lime_text_field_get_text_color_dyn() { return lime_text_field_get_text_color;}
+		static Dynamic lime_text_field_set_text_color;
+		static Dynamic &lime_text_field_set_text_color_dyn() { return lime_text_field_set_text_color;}
+		static Dynamic lime_text_field_get_selectable;
+		static Dynamic &lime_text_field_get_selectable_dyn() { return lime_text_field_get_selectable;}
+		static Dynamic lime_text_field_set_selectable;
+		static Dynamic &lime_text_field_set_selectable_dyn() { return lime_text_field_set_selectable;}
+		static Dynamic lime_text_field_get_display_as_password;
+		static Dynamic &lime_text_field_get_display_as_password_dyn() { return lime_text_field_get_display_as_password;}
+		static Dynamic lime_text_field_set_display_as_password;
+		static Dynamic &lime_text_field_set_display_as_password_dyn() { return lime_text_field_set_display_as_password;}
+		static Dynamic lime_text_field_get_embed_fonts;
+		static Dynamic &lime_text_field_get_embed_fonts_dyn() { return lime_text_field_get_embed_fonts;}
+		static Dynamic lime_text_field_set_embed_fonts;
+		static Dynamic &lime_text_field_set_embed_fonts_dyn() { return lime_text_field_set_embed_fonts;}
+		static Dynamic lime_text_field_get_def_text_format;
+		static Dynamic &lime_text_field_get_def_text_format_dyn() { return lime_text_field_get_def_text_format;}
+		static Dynamic lime_text_field_set_def_text_format;
+		static Dynamic &lime_text_field_set_def_text_format_dyn() { return lime_text_field_set_def_text_format;}
+		static Dynamic lime_text_field_get_auto_size;
+		static Dynamic &lime_text_field_get_auto_size_dyn() { return lime_text_field_get_auto_size;}
+		static Dynamic lime_text_field_set_auto_size;
+		static Dynamic &lime_text_field_set_auto_size_dyn() { return lime_text_field_set_auto_size;}
+		static Dynamic lime_text_field_get_type;
+		static Dynamic &lime_text_field_get_type_dyn() { return lime_text_field_get_type;}
+		static Dynamic lime_text_field_set_type;
+		static Dynamic &lime_text_field_set_type_dyn() { return lime_text_field_set_type;}
+		static Dynamic lime_text_field_get_multiline;
+		static Dynamic &lime_text_field_get_multiline_dyn() { return lime_text_field_get_multiline;}
+		static Dynamic lime_text_field_set_multiline;
+		static Dynamic &lime_text_field_set_multiline_dyn() { return lime_text_field_set_multiline;}
+		static Dynamic lime_text_field_get_word_wrap;
+		static Dynamic &lime_text_field_get_word_wrap_dyn() { return lime_text_field_get_word_wrap;}
+		static Dynamic lime_text_field_set_word_wrap;
+		static Dynamic &lime_text_field_set_word_wrap_dyn() { return lime_text_field_set_word_wrap;}
+		static Dynamic lime_text_field_get_border;
+		static Dynamic &lime_text_field_get_border_dyn() { return lime_text_field_get_border;}
+		static Dynamic lime_text_field_set_border;
+		static Dynamic &lime_text_field_set_border_dyn() { return lime_text_field_set_border;}
+		static Dynamic lime_text_field_get_border_color;
+		static Dynamic &lime_text_field_get_border_color_dyn() { return lime_text_field_get_border_color;}
+		static Dynamic lime_text_field_set_border_color;
+		static Dynamic &lime_text_field_set_border_color_dyn() { return lime_text_field_set_border_color;}
+		static Dynamic lime_text_field_get_background;
+		static Dynamic &lime_text_field_get_background_dyn() { return lime_text_field_get_background;}
+		static Dynamic lime_text_field_set_background;
+		static Dynamic &lime_text_field_set_background_dyn() { return lime_text_field_set_background;}
+		static Dynamic lime_text_field_get_background_color;
+		static Dynamic &lime_text_field_get_background_color_dyn() { return lime_text_field_get_background_color;}
+		static Dynamic lime_text_field_set_background_color;
+		static Dynamic &lime_text_field_set_background_color_dyn() { return lime_text_field_set_background_color;}
+		static Dynamic lime_text_field_get_text_width;
+		static Dynamic &lime_text_field_get_text_width_dyn() { return lime_text_field_get_text_width;}
+		static Dynamic lime_text_field_get_text_height;
+		static Dynamic &lime_text_field_get_text_height_dyn() { return lime_text_field_get_text_height;}
+		static Dynamic lime_text_field_get_text_format;
+		static Dynamic &lime_text_field_get_text_format_dyn() { return lime_text_field_get_text_format;}
+		static Dynamic lime_text_field_set_text_format;
+		static Dynamic &lime_text_field_set_text_format_dyn() { return lime_text_field_set_text_format;}
+		static Dynamic lime_text_field_get_max_scroll_v;
+		static Dynamic &lime_text_field_get_max_scroll_v_dyn() { return lime_text_field_get_max_scroll_v;}
+		static Dynamic lime_text_field_get_max_scroll_h;
+		static Dynamic &lime_text_field_get_max_scroll_h_dyn() { return lime_text_field_get_max_scroll_h;}
+		static Dynamic lime_text_field_get_bottom_scroll_v;
+		static Dynamic &lime_text_field_get_bottom_scroll_v_dyn() { return lime_text_field_get_bottom_scroll_v;}
+		static Dynamic lime_text_field_get_scroll_h;
+		static Dynamic &lime_text_field_get_scroll_h_dyn() { return lime_text_field_get_scroll_h;}
+		static Dynamic lime_text_field_set_scroll_h;
+		static Dynamic &lime_text_field_set_scroll_h_dyn() { return lime_text_field_set_scroll_h;}
+		static Dynamic lime_text_field_get_scroll_v;
+		static Dynamic &lime_text_field_get_scroll_v_dyn() { return lime_text_field_get_scroll_v;}
+		static Dynamic lime_text_field_set_scroll_v;
+		static Dynamic &lime_text_field_set_scroll_v_dyn() { return lime_text_field_set_scroll_v;}
+		static Dynamic lime_text_field_get_num_lines;
+		static Dynamic &lime_text_field_get_num_lines_dyn() { return lime_text_field_get_num_lines;}
+		static Dynamic lime_text_field_get_max_chars;
+		static Dynamic &lime_text_field_get_max_chars_dyn() { return lime_text_field_get_max_chars;}
+		static Dynamic lime_text_field_set_max_chars;
+		static Dynamic &lime_text_field_set_max_chars_dyn() { return lime_text_field_set_max_chars;}
+		static Dynamic lime_text_field_get_line_text;
+		static Dynamic &lime_text_field_get_line_text_dyn() { return lime_text_field_get_line_text;}
+		static Dynamic lime_text_field_get_line_metrics;
+		static Dynamic &lime_text_field_get_line_metrics_dyn() { return lime_text_field_get_line_metrics;}
+		static Dynamic lime_text_field_get_line_offset;
+		static Dynamic &lime_text_field_get_line_offset_dyn() { return lime_text_field_get_line_offset;}
 		Dynamic antiAliasType;
 		int bottomScrollV;
 		Dynamic gridFitType;
@@ -209,102 +305,6 @@ class HXCPP_CLASS_ATTRIBUTES  TextField_obj : public ::openfl::_legacy::display:
 		virtual bool set_wordWrap( bool value);
 		Dynamic set_wordWrap_dyn();
 
-		static Dynamic lime_text_field_create;
-		static Dynamic &lime_text_field_create_dyn() { return lime_text_field_create;}
-		static Dynamic lime_text_field_get_text;
-		static Dynamic &lime_text_field_get_text_dyn() { return lime_text_field_get_text;}
-		static Dynamic lime_text_field_set_text;
-		static Dynamic &lime_text_field_set_text_dyn() { return lime_text_field_set_text;}
-		static Dynamic lime_text_field_get_html_text;
-		static Dynamic &lime_text_field_get_html_text_dyn() { return lime_text_field_get_html_text;}
-		static Dynamic lime_text_field_set_html_text;
-		static Dynamic &lime_text_field_set_html_text_dyn() { return lime_text_field_set_html_text;}
-		static Dynamic lime_text_field_get_text_color;
-		static Dynamic &lime_text_field_get_text_color_dyn() { return lime_text_field_get_text_color;}
-		static Dynamic lime_text_field_set_text_color;
-		static Dynamic &lime_text_field_set_text_color_dyn() { return lime_text_field_set_text_color;}
-		static Dynamic lime_text_field_get_selectable;
-		static Dynamic &lime_text_field_get_selectable_dyn() { return lime_text_field_get_selectable;}
-		static Dynamic lime_text_field_set_selectable;
-		static Dynamic &lime_text_field_set_selectable_dyn() { return lime_text_field_set_selectable;}
-		static Dynamic lime_text_field_get_display_as_password;
-		static Dynamic &lime_text_field_get_display_as_password_dyn() { return lime_text_field_get_display_as_password;}
-		static Dynamic lime_text_field_set_display_as_password;
-		static Dynamic &lime_text_field_set_display_as_password_dyn() { return lime_text_field_set_display_as_password;}
-		static Dynamic lime_text_field_get_embed_fonts;
-		static Dynamic &lime_text_field_get_embed_fonts_dyn() { return lime_text_field_get_embed_fonts;}
-		static Dynamic lime_text_field_set_embed_fonts;
-		static Dynamic &lime_text_field_set_embed_fonts_dyn() { return lime_text_field_set_embed_fonts;}
-		static Dynamic lime_text_field_get_def_text_format;
-		static Dynamic &lime_text_field_get_def_text_format_dyn() { return lime_text_field_get_def_text_format;}
-		static Dynamic lime_text_field_set_def_text_format;
-		static Dynamic &lime_text_field_set_def_text_format_dyn() { return lime_text_field_set_def_text_format;}
-		static Dynamic lime_text_field_get_auto_size;
-		static Dynamic &lime_text_field_get_auto_size_dyn() { return lime_text_field_get_auto_size;}
-		static Dynamic lime_text_field_set_auto_size;
-		static Dynamic &lime_text_field_set_auto_size_dyn() { return lime_text_field_set_auto_size;}
-		static Dynamic lime_text_field_get_type;
-		static Dynamic &lime_text_field_get_type_dyn() { return lime_text_field_get_type;}
-		static Dynamic lime_text_field_set_type;
-		static Dynamic &lime_text_field_set_type_dyn() { return lime_text_field_set_type;}
-		static Dynamic lime_text_field_get_multiline;
-		static Dynamic &lime_text_field_get_multiline_dyn() { return lime_text_field_get_multiline;}
-		static Dynamic lime_text_field_set_multiline;
-		static Dynamic &lime_text_field_set_multiline_dyn() { return lime_text_field_set_multiline;}
-		static Dynamic lime_text_field_get_word_wrap;
-		static Dynamic &lime_text_field_get_word_wrap_dyn() { return lime_text_field_get_word_wrap;}
-		static Dynamic lime_text_field_set_word_wrap;
-		static Dynamic &lime_text_field_set_word_wrap_dyn() { return lime_text_field_set_word_wrap;}
-		static Dynamic lime_text_field_get_border;
-		static Dynamic &lime_text_field_get_border_dyn() { return lime_text_field_get_border;}
-		static Dynamic lime_text_field_set_border;
-		static Dynamic &lime_text_field_set_border_dyn() { return lime_text_field_set_border;}
-		static Dynamic lime_text_field_get_border_color;
-		static Dynamic &lime_text_field_get_border_color_dyn() { return lime_text_field_get_border_color;}
-		static Dynamic lime_text_field_set_border_color;
-		static Dynamic &lime_text_field_set_border_color_dyn() { return lime_text_field_set_border_color;}
-		static Dynamic lime_text_field_get_background;
-		static Dynamic &lime_text_field_get_background_dyn() { return lime_text_field_get_background;}
-		static Dynamic lime_text_field_set_background;
-		static Dynamic &lime_text_field_set_background_dyn() { return lime_text_field_set_background;}
-		static Dynamic lime_text_field_get_background_color;
-		static Dynamic &lime_text_field_get_background_color_dyn() { return lime_text_field_get_background_color;}
-		static Dynamic lime_text_field_set_background_color;
-		static Dynamic &lime_text_field_set_background_color_dyn() { return lime_text_field_set_background_color;}
-		static Dynamic lime_text_field_get_text_width;
-		static Dynamic &lime_text_field_get_text_width_dyn() { return lime_text_field_get_text_width;}
-		static Dynamic lime_text_field_get_text_height;
-		static Dynamic &lime_text_field_get_text_height_dyn() { return lime_text_field_get_text_height;}
-		static Dynamic lime_text_field_get_text_format;
-		static Dynamic &lime_text_field_get_text_format_dyn() { return lime_text_field_get_text_format;}
-		static Dynamic lime_text_field_set_text_format;
-		static Dynamic &lime_text_field_set_text_format_dyn() { return lime_text_field_set_text_format;}
-		static Dynamic lime_text_field_get_max_scroll_v;
-		static Dynamic &lime_text_field_get_max_scroll_v_dyn() { return lime_text_field_get_max_scroll_v;}
-		static Dynamic lime_text_field_get_max_scroll_h;
-		static Dynamic &lime_text_field_get_max_scroll_h_dyn() { return lime_text_field_get_max_scroll_h;}
-		static Dynamic lime_text_field_get_bottom_scroll_v;
-		static Dynamic &lime_text_field_get_bottom_scroll_v_dyn() { return lime_text_field_get_bottom_scroll_v;}
-		static Dynamic lime_text_field_get_scroll_h;
-		static Dynamic &lime_text_field_get_scroll_h_dyn() { return lime_text_field_get_scroll_h;}
-		static Dynamic lime_text_field_set_scroll_h;
-		static Dynamic &lime_text_field_set_scroll_h_dyn() { return lime_text_field_set_scroll_h;}
-		static Dynamic lime_text_field_get_scroll_v;
-		static Dynamic &lime_text_field_get_scroll_v_dyn() { return lime_text_field_get_scroll_v;}
-		static Dynamic lime_text_field_set_scroll_v;
-		static Dynamic &lime_text_field_set_scroll_v_dyn() { return lime_text_field_set_scroll_v;}
-		static Dynamic lime_text_field_get_num_lines;
-		static Dynamic &lime_text_field_get_num_lines_dyn() { return lime_text_field_get_num_lines;}
-		static Dynamic lime_text_field_get_max_chars;
-		static Dynamic &lime_text_field_get_max_chars_dyn() { return lime_text_field_get_max_chars;}
-		static Dynamic lime_text_field_set_max_chars;
-		static Dynamic &lime_text_field_set_max_chars_dyn() { return lime_text_field_set_max_chars;}
-		static Dynamic lime_text_field_get_line_text;
-		static Dynamic &lime_text_field_get_line_text_dyn() { return lime_text_field_get_line_text;}
-		static Dynamic lime_text_field_get_line_metrics;
-		static Dynamic &lime_text_field_get_line_metrics_dyn() { return lime_text_field_get_line_metrics;}
-		static Dynamic lime_text_field_get_line_offset;
-		static Dynamic &lime_text_field_get_line_offset_dyn() { return lime_text_field_get_line_offset;}
 };
 
 } // end namespace openfl

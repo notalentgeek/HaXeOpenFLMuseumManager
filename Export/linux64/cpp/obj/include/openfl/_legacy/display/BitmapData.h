@@ -55,6 +55,126 @@ class HXCPP_CLASS_ATTRIBUTES  BitmapData_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("BitmapData","\xd9","\xb9","\x71","\x2a"); }
 
 		static void __boot();
+		static int CLEAR;
+		static int BLACK;
+		static int WHITE;
+		static int RED;
+		static int GREEN;
+		static int BLUE;
+		static ::String PNG;
+		static ::String JPG;
+		static int TRANSPARENT;
+		static int HARDWARE;
+		static int FORMAT_8888;
+		static int FORMAT_4444;
+		static int FORMAT_565;
+		static int createColor( int rgb,hx::Null< int >  alpha);
+		static Dynamic createColor_dyn();
+
+		static int extractAlpha( int argb);
+		static Dynamic extractAlpha_dyn();
+
+		static int extractColor( int argb);
+		static Dynamic extractColor_dyn();
+
+		static ::openfl::_legacy::utils::ByteArray getRGBAPixels( ::openfl::_legacy::display::BitmapData bitmapData);
+		static Dynamic getRGBAPixels_dyn();
+
+		static ::openfl::_legacy::display::BitmapData load( ::String filename,hx::Null< int >  format);
+		static Dynamic load_dyn();
+
+		static ::openfl::_legacy::display::BitmapData loadFromBytes( ::openfl::_legacy::utils::ByteArray bytes,::openfl::_legacy::utils::ByteArray rawAlpha);
+		static Dynamic loadFromBytes_dyn();
+
+		static ::openfl::_legacy::display::BitmapData loadFromHaxeBytes( ::haxe::io::Bytes bytes,::haxe::io::Bytes rawAlpha);
+		static Dynamic loadFromHaxeBytes_dyn();
+
+		static bool sameValue( int a,int b);
+		static Dynamic sameValue_dyn();
+
+		static int __flipPixel( int pixel);
+		static Dynamic __flipPixel_dyn();
+
+		static int __ucompare( int n1,int n2);
+		static Dynamic __ucompare_dyn();
+
+		static Dynamic lime_bitmap_data_create;
+		static Dynamic &lime_bitmap_data_create_dyn() { return lime_bitmap_data_create;}
+		static Dynamic lime_bitmap_data_load;
+		static Dynamic &lime_bitmap_data_load_dyn() { return lime_bitmap_data_load;}
+		static Dynamic lime_bitmap_data_from_bytes;
+		static Dynamic &lime_bitmap_data_from_bytes_dyn() { return lime_bitmap_data_from_bytes;}
+		static Dynamic lime_bitmap_data_clear;
+		static Dynamic &lime_bitmap_data_clear_dyn() { return lime_bitmap_data_clear;}
+		static Dynamic lime_bitmap_data_clone;
+		static Dynamic &lime_bitmap_data_clone_dyn() { return lime_bitmap_data_clone;}
+		static Dynamic lime_bitmap_data_apply_filter;
+		static Dynamic &lime_bitmap_data_apply_filter_dyn() { return lime_bitmap_data_apply_filter;}
+		static Dynamic lime_bitmap_data_color_transform;
+		static Dynamic &lime_bitmap_data_color_transform_dyn() { return lime_bitmap_data_color_transform;}
+		static Dynamic lime_bitmap_data_copy;
+		static Dynamic &lime_bitmap_data_copy_dyn() { return lime_bitmap_data_copy;}
+		static Dynamic lime_bitmap_data_copy_channel;
+		static Dynamic &lime_bitmap_data_copy_channel_dyn() { return lime_bitmap_data_copy_channel;}
+		static Dynamic lime_bitmap_data_fill;
+		static Dynamic &lime_bitmap_data_fill_dyn() { return lime_bitmap_data_fill;}
+		static Dynamic lime_bitmap_data_get_pixels;
+		static Dynamic &lime_bitmap_data_get_pixels_dyn() { return lime_bitmap_data_get_pixels;}
+		static Dynamic lime_bitmap_data_get_pixel;
+		static Dynamic &lime_bitmap_data_get_pixel_dyn() { return lime_bitmap_data_get_pixel;}
+		static Dynamic lime_bitmap_data_get_pixel32;
+		static Dynamic &lime_bitmap_data_get_pixel32_dyn() { return lime_bitmap_data_get_pixel32;}
+		static Dynamic lime_bitmap_data_get_pixel_rgba;
+		static Dynamic lime_bitmap_data_get_array;
+		static Dynamic &lime_bitmap_data_get_array_dyn() { return lime_bitmap_data_get_array;}
+		static Dynamic lime_bitmap_data_get_color_bounds_rect;
+		static Dynamic &lime_bitmap_data_get_color_bounds_rect_dyn() { return lime_bitmap_data_get_color_bounds_rect;}
+		static Dynamic lime_bitmap_data_scroll;
+		static Dynamic &lime_bitmap_data_scroll_dyn() { return lime_bitmap_data_scroll;}
+		static Dynamic lime_bitmap_data_set_pixel;
+		static Dynamic &lime_bitmap_data_set_pixel_dyn() { return lime_bitmap_data_set_pixel;}
+		static Dynamic lime_bitmap_data_set_pixel32;
+		static Dynamic &lime_bitmap_data_set_pixel32_dyn() { return lime_bitmap_data_set_pixel32;}
+		static Dynamic lime_bitmap_data_set_pixel_rgba;
+		static Dynamic lime_bitmap_data_set_bytes;
+		static Dynamic &lime_bitmap_data_set_bytes_dyn() { return lime_bitmap_data_set_bytes;}
+		static Dynamic lime_bitmap_data_set_format;
+		static Dynamic &lime_bitmap_data_set_format_dyn() { return lime_bitmap_data_set_format;}
+		static Dynamic lime_bitmap_data_set_array;
+		static Dynamic &lime_bitmap_data_set_array_dyn() { return lime_bitmap_data_set_array;}
+		static Dynamic lime_bitmap_data_create_hardware_surface;
+		static Dynamic &lime_bitmap_data_create_hardware_surface_dyn() { return lime_bitmap_data_create_hardware_surface;}
+		static Dynamic lime_bitmap_data_destroy_hardware_surface;
+		static Dynamic &lime_bitmap_data_destroy_hardware_surface_dyn() { return lime_bitmap_data_destroy_hardware_surface;}
+		static Dynamic lime_bitmap_data_dispose;
+		static Dynamic &lime_bitmap_data_dispose_dyn() { return lime_bitmap_data_dispose;}
+		static Dynamic lime_bitmap_data_generate_filter_rect;
+		static Dynamic &lime_bitmap_data_generate_filter_rect_dyn() { return lime_bitmap_data_generate_filter_rect;}
+		static Dynamic lime_render_surface_to_surface;
+		static Dynamic &lime_render_surface_to_surface_dyn() { return lime_render_surface_to_surface;}
+		static Dynamic lime_bitmap_data_height;
+		static Dynamic &lime_bitmap_data_height_dyn() { return lime_bitmap_data_height;}
+		static Dynamic lime_bitmap_data_width;
+		static Dynamic &lime_bitmap_data_width_dyn() { return lime_bitmap_data_width;}
+		static Dynamic lime_bitmap_data_get_transparent;
+		static Dynamic lime_bitmap_data_set_flags;
+		static Dynamic &lime_bitmap_data_set_flags_dyn() { return lime_bitmap_data_set_flags;}
+		static Dynamic lime_bitmap_data_encode;
+		static Dynamic &lime_bitmap_data_encode_dyn() { return lime_bitmap_data_encode;}
+		static Dynamic lime_bitmap_data_dump_bits;
+		static Dynamic &lime_bitmap_data_dump_bits_dyn() { return lime_bitmap_data_dump_bits;}
+		static Dynamic lime_bitmap_data_flood_fill;
+		static Dynamic &lime_bitmap_data_flood_fill_dyn() { return lime_bitmap_data_flood_fill;}
+		static Dynamic lime_bitmap_data_noise;
+		static Dynamic &lime_bitmap_data_noise_dyn() { return lime_bitmap_data_noise;}
+		static Dynamic lime_bitmap_data_unmultiply_alpha;
+		static Dynamic &lime_bitmap_data_unmultiply_alpha_dyn() { return lime_bitmap_data_unmultiply_alpha;}
+		static Dynamic lime_bitmap_data_multiply_alpha;
+		static Dynamic &lime_bitmap_data_multiply_alpha_dyn() { return lime_bitmap_data_multiply_alpha;}
+		static Dynamic lime_bitmap_data_get_prem_alpha;
+		static Dynamic &lime_bitmap_data_get_prem_alpha_dyn() { return lime_bitmap_data_get_prem_alpha;}
+		static Dynamic lime_bitmap_data_set_prem_alpha;
+		static Dynamic &lime_bitmap_data_set_prem_alpha_dyn() { return lime_bitmap_data_set_prem_alpha;}
 		int height;
 		::openfl::_legacy::geom::Rectangle rect;
 		bool transparent;
@@ -196,126 +316,6 @@ class HXCPP_CLASS_ATTRIBUTES  BitmapData_obj : public hx::Object{
 		virtual bool get_transparent( );
 		Dynamic get_transparent_dyn();
 
-		static int CLEAR;
-		static int BLACK;
-		static int WHITE;
-		static int RED;
-		static int GREEN;
-		static int BLUE;
-		static ::String PNG;
-		static ::String JPG;
-		static int TRANSPARENT;
-		static int HARDWARE;
-		static int FORMAT_8888;
-		static int FORMAT_4444;
-		static int FORMAT_565;
-		static int createColor( int rgb,hx::Null< int >  alpha);
-		static Dynamic createColor_dyn();
-
-		static int extractAlpha( int argb);
-		static Dynamic extractAlpha_dyn();
-
-		static int extractColor( int argb);
-		static Dynamic extractColor_dyn();
-
-		static ::openfl::_legacy::utils::ByteArray getRGBAPixels( ::openfl::_legacy::display::BitmapData bitmapData);
-		static Dynamic getRGBAPixels_dyn();
-
-		static ::openfl::_legacy::display::BitmapData load( ::String filename,hx::Null< int >  format);
-		static Dynamic load_dyn();
-
-		static ::openfl::_legacy::display::BitmapData loadFromBytes( ::openfl::_legacy::utils::ByteArray bytes,::openfl::_legacy::utils::ByteArray rawAlpha);
-		static Dynamic loadFromBytes_dyn();
-
-		static ::openfl::_legacy::display::BitmapData loadFromHaxeBytes( ::haxe::io::Bytes bytes,::haxe::io::Bytes rawAlpha);
-		static Dynamic loadFromHaxeBytes_dyn();
-
-		static bool sameValue( int a,int b);
-		static Dynamic sameValue_dyn();
-
-		static int __flipPixel( int pixel);
-		static Dynamic __flipPixel_dyn();
-
-		static int __ucompare( int n1,int n2);
-		static Dynamic __ucompare_dyn();
-
-		static Dynamic lime_bitmap_data_create;
-		static Dynamic &lime_bitmap_data_create_dyn() { return lime_bitmap_data_create;}
-		static Dynamic lime_bitmap_data_load;
-		static Dynamic &lime_bitmap_data_load_dyn() { return lime_bitmap_data_load;}
-		static Dynamic lime_bitmap_data_from_bytes;
-		static Dynamic &lime_bitmap_data_from_bytes_dyn() { return lime_bitmap_data_from_bytes;}
-		static Dynamic lime_bitmap_data_clear;
-		static Dynamic &lime_bitmap_data_clear_dyn() { return lime_bitmap_data_clear;}
-		static Dynamic lime_bitmap_data_clone;
-		static Dynamic &lime_bitmap_data_clone_dyn() { return lime_bitmap_data_clone;}
-		static Dynamic lime_bitmap_data_apply_filter;
-		static Dynamic &lime_bitmap_data_apply_filter_dyn() { return lime_bitmap_data_apply_filter;}
-		static Dynamic lime_bitmap_data_color_transform;
-		static Dynamic &lime_bitmap_data_color_transform_dyn() { return lime_bitmap_data_color_transform;}
-		static Dynamic lime_bitmap_data_copy;
-		static Dynamic &lime_bitmap_data_copy_dyn() { return lime_bitmap_data_copy;}
-		static Dynamic lime_bitmap_data_copy_channel;
-		static Dynamic &lime_bitmap_data_copy_channel_dyn() { return lime_bitmap_data_copy_channel;}
-		static Dynamic lime_bitmap_data_fill;
-		static Dynamic &lime_bitmap_data_fill_dyn() { return lime_bitmap_data_fill;}
-		static Dynamic lime_bitmap_data_get_pixels;
-		static Dynamic &lime_bitmap_data_get_pixels_dyn() { return lime_bitmap_data_get_pixels;}
-		static Dynamic lime_bitmap_data_get_pixel;
-		static Dynamic &lime_bitmap_data_get_pixel_dyn() { return lime_bitmap_data_get_pixel;}
-		static Dynamic lime_bitmap_data_get_pixel32;
-		static Dynamic &lime_bitmap_data_get_pixel32_dyn() { return lime_bitmap_data_get_pixel32;}
-		static Dynamic lime_bitmap_data_get_pixel_rgba;
-		static Dynamic lime_bitmap_data_get_array;
-		static Dynamic &lime_bitmap_data_get_array_dyn() { return lime_bitmap_data_get_array;}
-		static Dynamic lime_bitmap_data_get_color_bounds_rect;
-		static Dynamic &lime_bitmap_data_get_color_bounds_rect_dyn() { return lime_bitmap_data_get_color_bounds_rect;}
-		static Dynamic lime_bitmap_data_scroll;
-		static Dynamic &lime_bitmap_data_scroll_dyn() { return lime_bitmap_data_scroll;}
-		static Dynamic lime_bitmap_data_set_pixel;
-		static Dynamic &lime_bitmap_data_set_pixel_dyn() { return lime_bitmap_data_set_pixel;}
-		static Dynamic lime_bitmap_data_set_pixel32;
-		static Dynamic &lime_bitmap_data_set_pixel32_dyn() { return lime_bitmap_data_set_pixel32;}
-		static Dynamic lime_bitmap_data_set_pixel_rgba;
-		static Dynamic lime_bitmap_data_set_bytes;
-		static Dynamic &lime_bitmap_data_set_bytes_dyn() { return lime_bitmap_data_set_bytes;}
-		static Dynamic lime_bitmap_data_set_format;
-		static Dynamic &lime_bitmap_data_set_format_dyn() { return lime_bitmap_data_set_format;}
-		static Dynamic lime_bitmap_data_set_array;
-		static Dynamic &lime_bitmap_data_set_array_dyn() { return lime_bitmap_data_set_array;}
-		static Dynamic lime_bitmap_data_create_hardware_surface;
-		static Dynamic &lime_bitmap_data_create_hardware_surface_dyn() { return lime_bitmap_data_create_hardware_surface;}
-		static Dynamic lime_bitmap_data_destroy_hardware_surface;
-		static Dynamic &lime_bitmap_data_destroy_hardware_surface_dyn() { return lime_bitmap_data_destroy_hardware_surface;}
-		static Dynamic lime_bitmap_data_dispose;
-		static Dynamic &lime_bitmap_data_dispose_dyn() { return lime_bitmap_data_dispose;}
-		static Dynamic lime_bitmap_data_generate_filter_rect;
-		static Dynamic &lime_bitmap_data_generate_filter_rect_dyn() { return lime_bitmap_data_generate_filter_rect;}
-		static Dynamic lime_render_surface_to_surface;
-		static Dynamic &lime_render_surface_to_surface_dyn() { return lime_render_surface_to_surface;}
-		static Dynamic lime_bitmap_data_height;
-		static Dynamic &lime_bitmap_data_height_dyn() { return lime_bitmap_data_height;}
-		static Dynamic lime_bitmap_data_width;
-		static Dynamic &lime_bitmap_data_width_dyn() { return lime_bitmap_data_width;}
-		static Dynamic lime_bitmap_data_get_transparent;
-		static Dynamic lime_bitmap_data_set_flags;
-		static Dynamic &lime_bitmap_data_set_flags_dyn() { return lime_bitmap_data_set_flags;}
-		static Dynamic lime_bitmap_data_encode;
-		static Dynamic &lime_bitmap_data_encode_dyn() { return lime_bitmap_data_encode;}
-		static Dynamic lime_bitmap_data_dump_bits;
-		static Dynamic &lime_bitmap_data_dump_bits_dyn() { return lime_bitmap_data_dump_bits;}
-		static Dynamic lime_bitmap_data_flood_fill;
-		static Dynamic &lime_bitmap_data_flood_fill_dyn() { return lime_bitmap_data_flood_fill;}
-		static Dynamic lime_bitmap_data_noise;
-		static Dynamic &lime_bitmap_data_noise_dyn() { return lime_bitmap_data_noise;}
-		static Dynamic lime_bitmap_data_unmultiply_alpha;
-		static Dynamic &lime_bitmap_data_unmultiply_alpha_dyn() { return lime_bitmap_data_unmultiply_alpha;}
-		static Dynamic lime_bitmap_data_multiply_alpha;
-		static Dynamic &lime_bitmap_data_multiply_alpha_dyn() { return lime_bitmap_data_multiply_alpha;}
-		static Dynamic lime_bitmap_data_get_prem_alpha;
-		static Dynamic &lime_bitmap_data_get_prem_alpha_dyn() { return lime_bitmap_data_get_prem_alpha;}
-		static Dynamic lime_bitmap_data_set_prem_alpha;
-		static Dynamic &lime_bitmap_data_set_prem_alpha_dyn() { return lime_bitmap_data_set_prem_alpha;}
 };
 
 } // end namespace openfl

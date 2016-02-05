@@ -36,7 +36,7 @@ Dynamic FileSystem_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 bool FileSystem_obj::exists( ::String path){
-	HX_STACK_FRAME("sys.FileSystem","exists",0xf55bed9e,"sys.FileSystem.exists","/usr/lib/haxe/std/cpp/_std/sys/FileSystem.hx",33,0x65d3e0d3)
+	HX_STACK_FRAME("sys.FileSystem","exists",0xf55bed9e,"sys.FileSystem.exists","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",33,0xcabeeced)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(34)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -52,7 +52,7 @@ bool FileSystem_obj::exists( ::String path){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,exists,return )
 
 Dynamic FileSystem_obj::stat( ::String path){
-	HX_STACK_FRAME("sys.FileSystem","stat",0xa630df16,"sys.FileSystem.stat","/usr/lib/haxe/std/cpp/_std/sys/FileSystem.hx",42,0x65d3e0d3)
+	HX_STACK_FRAME("sys.FileSystem","stat",0xa630df16,"sys.FileSystem.stat","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",42,0xcabeeced)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(43)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -72,7 +72,7 @@ Dynamic FileSystem_obj::stat( ::String path){
 		::Date tmp5 = ::Date_obj::fromTime((int)0);		HX_STACK_VAR(tmp5,"tmp5");
 		struct _Function_2_1{
 			inline static Dynamic Block( ::Date &tmp5,::Date &tmp4,::Date &tmp3){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/lib/haxe/std/cpp/_std/sys/FileSystem.hx",45,0x65d3e0d3)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",45,0xcabeeced)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("gid","\x02","\x84","\x4e","\x00") , (int)0,false);
@@ -124,7 +124,7 @@ Dynamic FileSystem_obj::stat( ::String path){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,stat,return )
 
 ::String FileSystem_obj::fullPath( ::String relPath){
-	HX_STACK_FRAME("sys.FileSystem","fullPath",0xc6463316,"sys.FileSystem.fullPath","/usr/lib/haxe/std/cpp/_std/sys/FileSystem.hx",52,0x65d3e0d3)
+	HX_STACK_FRAME("sys.FileSystem","fullPath",0xc6463316,"sys.FileSystem.fullPath","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",52,0xcabeeced)
 	HX_STACK_ARG(relPath,"relPath")
 	HX_STACK_LINE(53)
 	::String tmp = relPath;		HX_STACK_VAR(tmp,"tmp");
@@ -140,7 +140,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,stat,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,fullPath,return )
 
 ::sys::_FileSystem::FileKind FileSystem_obj::kind( ::String path){
-	HX_STACK_FRAME("sys.FileSystem","kind",0xa0dedc96,"sys.FileSystem.kind","/usr/lib/haxe/std/cpp/_std/sys/FileSystem.hx",61,0x65d3e0d3)
+	HX_STACK_FRAME("sys.FileSystem","kind",0xa0dedc96,"sys.FileSystem.kind","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",61,0xcabeeced)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(62)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -180,7 +180,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,fullPath,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,kind,return )
 
 bool FileSystem_obj::isDirectory( ::String path){
-	HX_STACK_FRAME("sys.FileSystem","isDirectory",0x6c577a21,"sys.FileSystem.isDirectory","/usr/lib/haxe/std/cpp/_std/sys/FileSystem.hx",70,0x65d3e0d3)
+	HX_STACK_FRAME("sys.FileSystem","isDirectory",0x6c577a21,"sys.FileSystem.isDirectory","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",70,0xcabeeced)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(71)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -196,7 +196,7 @@ bool FileSystem_obj::isDirectory( ::String path){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,isDirectory,return )
 
 Array< ::String > FileSystem_obj::readDirectory( ::String path){
-	HX_STACK_FRAME("sys.FileSystem","readDirectory",0x0619f8b5,"sys.FileSystem.readDirectory","/usr/lib/haxe/std/cpp/_std/sys/FileSystem.hx",98,0x65d3e0d3)
+	HX_STACK_FRAME("sys.FileSystem","readDirectory",0x0619f8b5,"sys.FileSystem.readDirectory","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",98,0xcabeeced)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(99)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -251,6 +251,27 @@ bool FileSystem_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"file_full_path") ) { outValue = file_full_path; return true;  }
+	}
+	return false;
+}
+
+bool FileSystem_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 8:
+		if (HX_FIELD_EQ(inName,"sys_stat") ) { sys_stat=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"sys_exists") ) { sys_exists=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"sys_read_dir") ) { sys_read_dir=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"sys_file_type") ) { sys_file_type=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 14:
+		if (HX_FIELD_EQ(inName,"file_full_path") ) { file_full_path=ioValue.Cast< Dynamic >(); return true; }
 	}
 	return false;
 }
@@ -312,7 +333,7 @@ void FileSystem_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &FileSystem_obj::__GetStatic;
-	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &FileSystem_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);

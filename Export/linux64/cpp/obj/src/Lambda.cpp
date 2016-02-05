@@ -23,7 +23,7 @@ Dynamic Lambda_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 bool Lambda_obj::has( Dynamic it,Dynamic elt){
-	HX_STACK_FRAME("Lambda","has",0x3d8bd693,"Lambda.has","/usr/lib/haxe/std/Lambda.hx",98,0xc6d51bb6)
+	HX_STACK_FRAME("Lambda","has",0x3d8bd693,"Lambda.has","/usr/share/haxe/std/Lambda.hx",98,0x92dd64dc)
 	HX_STACK_ARG(it,"it")
 	HX_STACK_ARG(elt,"elt")
 	HX_STACK_LINE(99)
@@ -50,7 +50,7 @@ bool Lambda_obj::has( Dynamic it,Dynamic elt){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(Lambda_obj,has,return )
 
 bool Lambda_obj::exists( Dynamic it,Dynamic f){
-	HX_STACK_FRAME("Lambda","exists",0x65091043,"Lambda.exists","/usr/lib/haxe/std/Lambda.hx",115,0xc6d51bb6)
+	HX_STACK_FRAME("Lambda","exists",0x65091043,"Lambda.exists","/usr/share/haxe/std/Lambda.hx",115,0x92dd64dc)
 	HX_STACK_ARG(it,"it")
 	HX_STACK_ARG(f,"f")
 	HX_STACK_LINE(116)
@@ -79,7 +79,7 @@ bool Lambda_obj::exists( Dynamic it,Dynamic f){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(Lambda_obj,exists,return )
 
 int Lambda_obj::indexOf( Dynamic it,Dynamic v){
-	HX_STACK_FRAME("Lambda","indexOf",0xbf6a7082,"Lambda.indexOf","/usr/lib/haxe/std/Lambda.hx",217,0xc6d51bb6)
+	HX_STACK_FRAME("Lambda","indexOf",0xbf6a7082,"Lambda.indexOf","/usr/share/haxe/std/Lambda.hx",217,0x92dd64dc)
 	HX_STACK_ARG(it,"it")
 	HX_STACK_ARG(v,"v")
 	HX_STACK_LINE(218)

@@ -54,7 +54,6 @@ class HXCPP_CLASS_ATTRIBUTES  TableViewRow_obj : public ::haxe::ui::toolkit::con
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -69,6 +68,9 @@ class HXCPP_CLASS_ATTRIBUTES  TableViewRow_obj : public ::haxe::ui::toolkit::con
 		::String __ToString() const { return HX_HCSTRING("TableViewRow","\x67","\x2e","\x66","\xfc"); }
 
 		static void __boot();
+		static ::String STATE_NORMAL;
+		static ::String STATE_OVER;
+		static ::String STATE_SELECTED;
 		::String _state;
 		Array< ::String > _states;
 		::haxe::ui::toolkit::containers::TableView _parentTable;
@@ -116,9 +118,6 @@ class HXCPP_CLASS_ATTRIBUTES  TableViewRow_obj : public ::haxe::ui::toolkit::con
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );
 
-		static ::String STATE_NORMAL;
-		static ::String STATE_OVER;
-		static ::String STATE_SELECTED;
 };
 
 } // end namespace haxe

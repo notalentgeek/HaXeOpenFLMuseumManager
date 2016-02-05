@@ -37,7 +37,7 @@ Dynamic Input_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 int Input_obj::readByte( ){
-	HX_STACK_FRAME("haxe.io.Input","readByte",0x4de8a3c2,"haxe.io.Input.readByte","/usr/lib/haxe/std/haxe/io/Input.hx",48,0xf7c40915)
+	HX_STACK_FRAME("haxe.io.Input","readByte",0x4de8a3c2,"haxe.io.Input.readByte","/usr/share/haxe/std/haxe/io/Input.hx",48,0x1cc3d0af)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(48)
 	HX_STACK_DO_THROW(HX_HCSTRING("Not implemented","\x15","\x1e","\x32","\x34"));
@@ -49,7 +49,7 @@ int Input_obj::readByte( ){
 HX_DEFINE_DYNAMIC_FUNC0(Input_obj,readByte,return )
 
 int Input_obj::readBytes( ::haxe::io::Bytes s,int pos,int len){
-	HX_STACK_FRAME("haxe.io.Input","readBytes",0xdda6a671,"haxe.io.Input.readBytes","/usr/lib/haxe/std/haxe/io/Input.hx",61,0xf7c40915)
+	HX_STACK_FRAME("haxe.io.Input","readBytes",0xdda6a671,"haxe.io.Input.readBytes","/usr/share/haxe/std/haxe/io/Input.hx",61,0x1cc3d0af)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(pos,"pos")
@@ -130,7 +130,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Input_obj,readBytes,return )
 
 Void Input_obj::close( ){
 {
-		HX_STACK_FRAME("haxe.io.Input","close",0xfc421af4,"haxe.io.Input.close","/usr/lib/haxe/std/haxe/io/Input.hx",87,0xf7c40915)
+		HX_STACK_FRAME("haxe.io.Input","close",0xfc421af4,"haxe.io.Input.close","/usr/share/haxe/std/haxe/io/Input.hx",87,0x1cc3d0af)
 		HX_STACK_THIS(this)
 	}
 return null();
@@ -141,7 +141,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Input_obj,close,(void))
 
 Void Input_obj::readFullBytes( ::haxe::io::Bytes s,int pos,int len){
 {
-		HX_STACK_FRAME("haxe.io.Input","readFullBytes",0x3db9a162,"haxe.io.Input.readFullBytes","/usr/lib/haxe/std/haxe/io/Input.hx",131,0xf7c40915)
+		HX_STACK_FRAME("haxe.io.Input","readFullBytes",0x3db9a162,"haxe.io.Input.readFullBytes","/usr/share/haxe/std/haxe/io/Input.hx",131,0x1cc3d0af)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(s,"s")
 		HX_STACK_ARG(pos,"pos")
@@ -180,7 +180,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC3(Input_obj,readFullBytes,(void))
 
 ::String Input_obj::readLine( ){
-	HX_STACK_FRAME("haxe.io.Input","readLine",0x54789cae,"haxe.io.Input.readLine","/usr/lib/haxe/std/haxe/io/Input.hx",171,0xf7c40915)
+	HX_STACK_FRAME("haxe.io.Input","readLine",0x54789cae,"haxe.io.Input.readLine","/usr/share/haxe/std/haxe/io/Input.hx",171,0x1cc3d0af)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(172)
 	::StringBuf tmp = ::StringBuf_obj::__new();		HX_STACK_VAR(tmp,"tmp");
@@ -269,7 +269,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Input_obj,readFullBytes,(void))
 HX_DEFINE_DYNAMIC_FUNC0(Input_obj,readLine,return )
 
 ::String Input_obj::readString( int len){
-	HX_STACK_FRAME("haxe.io.Input","readString",0xfdebd00b,"haxe.io.Input.readString","/usr/lib/haxe/std/haxe/io/Input.hx",294,0xf7c40915)
+	HX_STACK_FRAME("haxe.io.Input","readString",0xfdebd00b,"haxe.io.Input.readString","/usr/share/haxe/std/haxe/io/Input.hx",294,0x1cc3d0af)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(len,"len")
 	HX_STACK_LINE(295)

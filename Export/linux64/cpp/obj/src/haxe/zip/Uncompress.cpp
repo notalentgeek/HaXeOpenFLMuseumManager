@@ -23,7 +23,7 @@ namespace zip{
 
 Void Uncompress_obj::__construct(Dynamic windowBits)
 {
-HX_STACK_FRAME("haxe.zip.Uncompress","new",0x34f307c2,"haxe.zip.Uncompress.new","/usr/lib/haxe/std/cpp/_std/haxe/zip/Uncompress.hx",28,0x466e914a)
+HX_STACK_FRAME("haxe.zip.Uncompress","new",0x34f307c2,"haxe.zip.Uncompress.new","/usr/share/haxe/std/cpp/_std/haxe/zip/Uncompress.hx",28,0xdb3f66f0)
 HX_STACK_THIS(this)
 HX_STACK_ARG(windowBits,"windowBits")
 {
@@ -52,7 +52,7 @@ Dynamic Uncompress_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 Dynamic Uncompress_obj::execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos){
-	HX_STACK_FRAME("haxe.zip.Uncompress","execute",0xb3589a97,"haxe.zip.Uncompress.execute","/usr/lib/haxe/std/cpp/_std/haxe/zip/Uncompress.hx",32,0x466e914a)
+	HX_STACK_FRAME("haxe.zip.Uncompress","execute",0xb3589a97,"haxe.zip.Uncompress.execute","/usr/share/haxe/std/cpp/_std/haxe/zip/Uncompress.hx",32,0xdb3f66f0)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(src,"src")
 	HX_STACK_ARG(srcPos,"srcPos")
@@ -75,7 +75,7 @@ HX_DEFINE_DYNAMIC_FUNC4(Uncompress_obj,execute,return )
 
 Void Uncompress_obj::setFlushMode( ::haxe::zip::FlushMode f){
 {
-		HX_STACK_FRAME("haxe.zip.Uncompress","setFlushMode",0xbecba0a3,"haxe.zip.Uncompress.setFlushMode","/usr/lib/haxe/std/cpp/_std/haxe/zip/Uncompress.hx",36,0x466e914a)
+		HX_STACK_FRAME("haxe.zip.Uncompress","setFlushMode",0xbecba0a3,"haxe.zip.Uncompress.setFlushMode","/usr/share/haxe/std/cpp/_std/haxe/zip/Uncompress.hx",36,0xdb3f66f0)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(f,"f")
 		HX_STACK_LINE(37)
@@ -93,7 +93,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Uncompress_obj,setFlushMode,(void))
 
 Void Uncompress_obj::close( ){
 {
-		HX_STACK_FRAME("haxe.zip.Uncompress","close",0x4cc86b9a,"haxe.zip.Uncompress.close","/usr/lib/haxe/std/cpp/_std/haxe/zip/Uncompress.hx",40,0x466e914a)
+		HX_STACK_FRAME("haxe.zip.Uncompress","close",0x4cc86b9a,"haxe.zip.Uncompress.close","/usr/share/haxe/std/cpp/_std/haxe/zip/Uncompress.hx",40,0xdb3f66f0)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(41)
 		Dynamic tmp = this->s;		HX_STACK_VAR(tmp,"tmp");
@@ -107,7 +107,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(Uncompress_obj,close,(void))
 
 ::haxe::io::Bytes Uncompress_obj::run( ::haxe::io::Bytes src,Dynamic bufsize){
-	HX_STACK_FRAME("haxe.zip.Uncompress","run",0x34f61ead,"haxe.zip.Uncompress.run","/usr/lib/haxe/std/cpp/_std/haxe/zip/Uncompress.hx",44,0x466e914a)
+	HX_STACK_FRAME("haxe.zip.Uncompress","run",0x34f61ead,"haxe.zip.Uncompress.run","/usr/share/haxe/std/cpp/_std/haxe/zip/Uncompress.hx",44,0xdb3f66f0)
 	HX_STACK_ARG(src,"src")
 	HX_STACK_ARG(bufsize,"bufsize")
 	HX_STACK_LINE(45)

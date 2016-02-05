@@ -29,19 +29,11 @@ class HXCPP_CLASS_ATTRIBUTES  Thread_obj : public hx::Object{
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Thread","\xea","\xee","\x4d","\xc3"); }
-
-		Dynamic handle;
-		virtual Void sendMessage( Dynamic msg);
-		Dynamic sendMessage_dyn();
-
-		virtual int __compare( Dynamic t);
-		Dynamic __compare_dyn();
 
 		static ::cpp::vm::Thread current( );
 		static Dynamic current_dyn();
@@ -51,6 +43,13 @@ class HXCPP_CLASS_ATTRIBUTES  Thread_obj : public hx::Object{
 
 		static Dynamic readMessage( bool block);
 		static Dynamic readMessage_dyn();
+
+		Dynamic handle;
+		virtual Void sendMessage( Dynamic msg);
+		Dynamic sendMessage_dyn();
+
+		virtual int __compare( Dynamic t);
+		Dynamic __compare_dyn();
 
 };
 

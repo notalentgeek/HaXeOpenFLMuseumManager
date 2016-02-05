@@ -16,16 +16,11 @@ class HXCPP_CLASS_ATTRIBUTES  IEasing_obj : public hx::Interface{
 		typedef IEasing_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
 		virtual Float calculate( Float k)=0;
-		virtual Dynamic calculate_dyn()=0;
+virtual Dynamic calculate_dyn()=0;
 		virtual Float ease( Float t,Float b,Float c,Float d)=0;
-		virtual Dynamic ease_dyn()=0;
+virtual Dynamic ease_dyn()=0;
 };
 
-#define DELEGATE_motion_easing_IEasing \
-virtual Float calculate( Float k) { return mDelegate->calculate(k);}  \
-virtual Dynamic calculate_dyn() { return mDelegate->calculate_dyn();}  \
-virtual Float ease( Float t,Float b,Float c,Float d) { return mDelegate->ease(t,b,c,d);}  \
-virtual Dynamic ease_dyn() { return mDelegate->ease_dyn();}  \
 
 
 template<typename IMPL>
@@ -37,7 +32,10 @@ class IEasing_delegate_ : public IEasing_obj
 		IEasing_delegate_(IMPL *inDelegate) : mDelegate(inDelegate) {}
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
-		DELEGATE_motion_easing_IEasing
+		Float calculate( Float k) { return mDelegate->calculate(k);}
+		Dynamic calculate_dyn() { return mDelegate->calculate_dyn();}
+		Float ease( Float t,Float b,Float c,Float d) { return mDelegate->ease(t,b,c,d);}
+		Dynamic ease_dyn() { return mDelegate->ease_dyn();}
 };
 
 } // end namespace motion

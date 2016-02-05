@@ -37,36 +37,6 @@ class HXCPP_CLASS_ATTRIBUTES  Xml_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Xml","\xb7","\x25","\x43","\x00"); }
 
 		static void __boot();
-		int nodeType;
-		::String nodeName;
-		::String nodeValue;
-		::Xml parent;
-		Array< ::Dynamic > children;
-		::haxe::ds::StringMap attributeMap;
-		virtual ::String get( ::String att);
-		Dynamic get_dyn();
-
-		virtual Void set( ::String att,::String value);
-		Dynamic set_dyn();
-
-		virtual bool exists( ::String att);
-		Dynamic exists_dyn();
-
-		virtual Dynamic attributes( );
-		Dynamic attributes_dyn();
-
-		virtual Dynamic elements( );
-		Dynamic elements_dyn();
-
-		virtual ::Xml firstElement( );
-		Dynamic firstElement_dyn();
-
-		virtual Void addChild( ::Xml x);
-		Dynamic addChild_dyn();
-
-		virtual bool removeChild( ::Xml x);
-		Dynamic removeChild_dyn();
-
 		static int Element;
 		static int PCData;
 		static int CData;
@@ -97,6 +67,36 @@ class HXCPP_CLASS_ATTRIBUTES  Xml_obj : public hx::Object{
 
 		static ::Xml createDocument( );
 		static Dynamic createDocument_dyn();
+
+		int nodeType;
+		::String nodeName;
+		::String nodeValue;
+		::Xml parent;
+		Array< ::Dynamic > children;
+		::haxe::ds::StringMap attributeMap;
+		virtual ::String get( ::String att);
+		Dynamic get_dyn();
+
+		virtual Void set( ::String att,::String value);
+		Dynamic set_dyn();
+
+		virtual bool exists( ::String att);
+		Dynamic exists_dyn();
+
+		virtual Dynamic attributes( );
+		Dynamic attributes_dyn();
+
+		virtual Dynamic elements( );
+		Dynamic elements_dyn();
+
+		virtual ::Xml firstElement( );
+		Dynamic firstElement_dyn();
+
+		virtual Void addChild( ::Xml x);
+		Dynamic addChild_dyn();
+
+		virtual bool removeChild( ::Xml x);
+		Dynamic removeChild_dyn();
 
 };
 

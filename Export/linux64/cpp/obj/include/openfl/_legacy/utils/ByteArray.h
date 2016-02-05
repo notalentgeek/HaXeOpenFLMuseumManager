@@ -61,6 +61,30 @@ class HXCPP_CLASS_ATTRIBUTES  ByteArray_obj : public ::haxe::io::Bytes_obj{
 
 		static void __boot();
 		typedef int __array_access;
+		static ::openfl::_legacy::utils::ByteArray fromBytes( ::haxe::io::Bytes bytes);
+		static Dynamic fromBytes_dyn();
+
+		static ::openfl::_legacy::utils::ByteArray readFile( ::String path);
+		static Dynamic readFile_dyn();
+
+		static Dynamic _double_bytes;
+		static Dynamic &_double_bytes_dyn() { return _double_bytes;}
+		static Dynamic _double_of_bytes;
+		static Dynamic &_double_of_bytes_dyn() { return _double_of_bytes;}
+		static Dynamic _float_bytes;
+		static Dynamic &_float_bytes_dyn() { return _float_bytes;}
+		static Dynamic _float_of_bytes;
+		static Dynamic &_float_of_bytes_dyn() { return _float_of_bytes;}
+		static Dynamic lime_byte_array_overwrite_file;
+		static Dynamic &lime_byte_array_overwrite_file_dyn() { return lime_byte_array_overwrite_file;}
+		static Dynamic lime_byte_array_read_file;
+		static Dynamic &lime_byte_array_read_file_dyn() { return lime_byte_array_read_file;}
+		static Dynamic lime_byte_array_get_native_pointer;
+		static Dynamic &lime_byte_array_get_native_pointer_dyn() { return lime_byte_array_get_native_pointer;}
+		static Dynamic lime_lzma_encode;
+		static Dynamic &lime_lzma_encode_dyn() { return lime_lzma_encode;}
+		static Dynamic lime_lzma_decode;
+		static Dynamic &lime_lzma_decode_dyn() { return lime_lzma_decode;}
 		bool bigEndian;
 		int bytesAvailable;
 		int position;
@@ -221,30 +245,6 @@ class HXCPP_CLASS_ATTRIBUTES  ByteArray_obj : public ::haxe::io::Bytes_obj{
 		virtual int set___length( int value);
 		Dynamic set___length_dyn();
 
-		static ::openfl::_legacy::utils::ByteArray fromBytes( ::haxe::io::Bytes bytes);
-		static Dynamic fromBytes_dyn();
-
-		static ::openfl::_legacy::utils::ByteArray readFile( ::String path);
-		static Dynamic readFile_dyn();
-
-		static Dynamic _double_bytes;
-		static Dynamic &_double_bytes_dyn() { return _double_bytes;}
-		static Dynamic _double_of_bytes;
-		static Dynamic &_double_of_bytes_dyn() { return _double_of_bytes;}
-		static Dynamic _float_bytes;
-		static Dynamic &_float_bytes_dyn() { return _float_bytes;}
-		static Dynamic _float_of_bytes;
-		static Dynamic &_float_of_bytes_dyn() { return _float_of_bytes;}
-		static Dynamic lime_byte_array_overwrite_file;
-		static Dynamic &lime_byte_array_overwrite_file_dyn() { return lime_byte_array_overwrite_file;}
-		static Dynamic lime_byte_array_read_file;
-		static Dynamic &lime_byte_array_read_file_dyn() { return lime_byte_array_read_file;}
-		static Dynamic lime_byte_array_get_native_pointer;
-		static Dynamic &lime_byte_array_get_native_pointer_dyn() { return lime_byte_array_get_native_pointer;}
-		static Dynamic lime_lzma_encode;
-		static Dynamic &lime_lzma_encode_dyn() { return lime_lzma_encode;}
-		static Dynamic lime_lzma_decode;
-		static Dynamic &lime_lzma_decode_dyn() { return lime_lzma_decode;}
 };
 
 } // end namespace openfl

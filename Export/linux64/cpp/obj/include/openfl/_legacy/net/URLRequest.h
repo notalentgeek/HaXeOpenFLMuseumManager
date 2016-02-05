@@ -35,7 +35,6 @@ class HXCPP_CLASS_ATTRIBUTES  URLRequest_obj : public hx::Object{
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -43,6 +42,12 @@ class HXCPP_CLASS_ATTRIBUTES  URLRequest_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("URLRequest","\xc0","\x57","\xdd","\x76"); }
 
 		static void __boot();
+		static int AUTH_BASIC;
+		static int AUTH_DIGEST;
+		static int AUTH_GSSNEGOTIATE;
+		static int AUTH_NTLM;
+		static int AUTH_DIGEST_IE;
+		static int AUTH_DIGEST_ANY;
 		int authType;
 		::String contentType;
 		::String cookieString;
@@ -64,12 +69,6 @@ class HXCPP_CLASS_ATTRIBUTES  URLRequest_obj : public hx::Object{
 		virtual Void __prepare( );
 		Dynamic __prepare_dyn();
 
-		static int AUTH_BASIC;
-		static int AUTH_DIGEST;
-		static int AUTH_GSSNEGOTIATE;
-		static int AUTH_NTLM;
-		static int AUTH_DIGEST_IE;
-		static int AUTH_DIGEST_ANY;
 };
 
 } // end namespace openfl

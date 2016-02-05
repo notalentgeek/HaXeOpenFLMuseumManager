@@ -38,7 +38,6 @@ class HXCPP_CLASS_ATTRIBUTES  EventDispatcher_obj : public hx::Object{
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -46,6 +45,9 @@ class HXCPP_CLASS_ATTRIBUTES  EventDispatcher_obj : public hx::Object{
 		hx::Object *__ToInterface(const hx::type_info &inType);
 		operator ::openfl::_legacy::events::IEventDispatcher_obj *();
 		::String __ToString() const { return HX_HCSTRING("EventDispatcher","\x41","\x82","\x63","\x5e"); }
+
+		static int __sortByPriority( ::openfl::_legacy::events::_EventDispatcher::Listener l1,::openfl::_legacy::events::_EventDispatcher::Listener l2);
+		static Dynamic __sortByPriority_dyn();
 
 		::openfl::_legacy::events::IEventDispatcher __targetDispatcher;
 		::haxe::ds::StringMap __eventMap;
@@ -72,9 +74,6 @@ class HXCPP_CLASS_ATTRIBUTES  EventDispatcher_obj : public hx::Object{
 
 		virtual Void __dispatchIOErrorEvent( );
 		Dynamic __dispatchIOErrorEvent_dyn();
-
-		static int __sortByPriority( ::openfl::_legacy::events::_EventDispatcher::Listener l1,::openfl::_legacy::events::_EventDispatcher::Listener l2);
-		static Dynamic __sortByPriority_dyn();
 
 };
 

@@ -39,16 +39,6 @@ class HXCPP_CLASS_ATTRIBUTES  Compress_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Compress","\xc2","\x03","\x71","\x5d"); }
 
 		static void __boot();
-		Dynamic s;
-		virtual Dynamic execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos);
-		Dynamic execute_dyn();
-
-		virtual Void setFlushMode( ::haxe::zip::FlushMode f);
-		Dynamic setFlushMode_dyn();
-
-		virtual Void close( );
-		Dynamic close_dyn();
-
 		static ::haxe::io::Bytes run( ::haxe::io::Bytes s,int level);
 		static Dynamic run_dyn();
 
@@ -62,6 +52,16 @@ class HXCPP_CLASS_ATTRIBUTES  Compress_obj : public hx::Object{
 		static Dynamic &_deflate_end_dyn() { return _deflate_end;}
 		static Dynamic _set_flush_mode;
 		static Dynamic &_set_flush_mode_dyn() { return _set_flush_mode;}
+		Dynamic s;
+		virtual Dynamic execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos);
+		Dynamic execute_dyn();
+
+		virtual Void setFlushMode( ::haxe::zip::FlushMode f);
+		Dynamic setFlushMode_dyn();
+
+		virtual Void close( );
+		Dynamic close_dyn();
+
 };
 
 } // end namespace haxe

@@ -45,7 +45,6 @@ class HXCPP_CLASS_ATTRIBUTES  UIEvent_obj : public ::openfl::_legacy::events::Ev
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -53,23 +52,6 @@ class HXCPP_CLASS_ATTRIBUTES  UIEvent_obj : public ::openfl::_legacy::events::Ev
 		::String __ToString() const { return HX_HCSTRING("UIEvent","\x26","\xfd","\x9f","\x07"); }
 
 		static void __boot();
-		::haxe::ui::toolkit::core::interfaces::IDisplayObject displayObject;
-		::haxe::ui::toolkit::core::Component component;
-		Dynamic data;
-		Float stageX;
-		Float stageY;
-		virtual ::openfl::_legacy::events::Event clone( );
-
-		::haxe::ui::toolkit::core::Component _component;
-		virtual ::haxe::ui::toolkit::core::Component get_component( );
-		Dynamic get_component_dyn();
-
-		virtual Dynamic getComponentAs( ::hx::Class type);
-		Dynamic getComponentAs_dyn();
-
-		virtual Dynamic getDataAs( ::hx::Class type);
-		Dynamic getDataAs_dyn();
-
 		static ::String PREFIX;
 		static ::String INIT;
 		static ::String RESIZE;
@@ -98,6 +80,23 @@ class HXCPP_CLASS_ATTRIBUTES  UIEvent_obj : public ::openfl::_legacy::events::Ev
 		static ::String COMPONENT_EVENT;
 		static ::String MENU_SELECT;
 		static ::String MENU_OPEN;
+		::haxe::ui::toolkit::core::interfaces::IDisplayObject displayObject;
+		::haxe::ui::toolkit::core::Component component;
+		Dynamic data;
+		Float stageX;
+		Float stageY;
+		virtual ::openfl::_legacy::events::Event clone( );
+
+		::haxe::ui::toolkit::core::Component _component;
+		virtual ::haxe::ui::toolkit::core::Component get_component( );
+		Dynamic get_component_dyn();
+
+		virtual Dynamic getComponentAs( ::hx::Class type);
+		Dynamic getComponentAs_dyn();
+
+		virtual Dynamic getDataAs( ::hx::Class type);
+		Dynamic getDataAs_dyn();
+
 };
 
 } // end namespace haxe

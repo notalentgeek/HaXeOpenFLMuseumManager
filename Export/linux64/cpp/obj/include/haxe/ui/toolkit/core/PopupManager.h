@@ -59,6 +59,11 @@ class HXCPP_CLASS_ATTRIBUTES  PopupManager_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("PopupManager","\xc1","\xd9","\x50","\xdc"); }
 
+		static ::haxe::ui::toolkit::core::PopupManager _instance;
+		static ::haxe::ui::toolkit::core::PopupManager instance;
+		static ::haxe::ui::toolkit::core::PopupManager get_instance( );
+		static Dynamic get_instance_dyn();
+
 		::String defaultTitle;
 		int defaultWidth;
 		::List _modalPopups;
@@ -103,11 +108,6 @@ class HXCPP_CLASS_ATTRIBUTES  PopupManager_obj : public hx::Object{
 
 		virtual Array< ::Dynamic > buildButtonArray( Dynamic data);
 		Dynamic buildButtonArray_dyn();
-
-		static ::haxe::ui::toolkit::core::PopupManager _instance;
-		static ::haxe::ui::toolkit::core::PopupManager instance;
-		static ::haxe::ui::toolkit::core::PopupManager get_instance( );
-		static Dynamic get_instance_dyn();
 
 };
 

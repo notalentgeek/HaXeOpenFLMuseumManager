@@ -45,13 +45,11 @@ class HXCPP_CLASS_ATTRIBUTES  Toolkit_obj : public hx::Object{
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Toolkit","\x9e","\x00","\xd7","\x37"); }
 
 		static void __boot();
-		virtual Void initInstance( );
-		Dynamic initInstance_dyn();
-
 		static int DPI_THRESHOLD;
 		static ::haxe::ui::toolkit::core::Toolkit _instance;
 		static ::haxe::ui::toolkit::core::Toolkit instance;
@@ -138,6 +136,9 @@ class HXCPP_CLASS_ATTRIBUTES  Toolkit_obj : public hx::Object{
 
 		static Float set_scaleFactor( Float value);
 		static Dynamic set_scaleFactor_dyn();
+
+		virtual Void initInstance( );
+		Dynamic initInstance_dyn();
 
 };
 

@@ -41,6 +41,13 @@ class HXCPP_CLASS_ATTRIBUTES  Theme_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Theme","\xe9","\xed","\xb3","\xa2"); }
 
 		static void __boot();
+		static ::haxe::ds::StringMap assets;
+		static Void addPublicAsset( Dynamic asset);
+		static Dynamic addPublicAsset_dyn();
+
+		static Void addAsset( ::String t,Dynamic asset);
+		static Dynamic addAsset_dyn();
+
 		::String name;
 		virtual Void apply( );
 		Dynamic apply_dyn();
@@ -50,13 +57,6 @@ class HXCPP_CLASS_ATTRIBUTES  Theme_obj : public hx::Object{
 
 		virtual Void applyAsset( Dynamic asset);
 		Dynamic applyAsset_dyn();
-
-		static ::haxe::ds::StringMap assets;
-		static Void addPublicAsset( Dynamic asset);
-		static Dynamic addPublicAsset_dyn();
-
-		static Void addAsset( ::String t,Dynamic asset);
-		static Dynamic addAsset_dyn();
 
 };
 

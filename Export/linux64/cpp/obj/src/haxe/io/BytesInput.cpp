@@ -20,7 +20,7 @@ namespace io{
 
 Void BytesInput_obj::__construct(::haxe::io::Bytes b,Dynamic pos,Dynamic len)
 {
-HX_STACK_FRAME("haxe.io.BytesInput","new",0x7fa18571,"haxe.io.BytesInput.new","/usr/lib/haxe/std/haxe/io/BytesInput.hx",38,0x8dfac8be)
+HX_STACK_FRAME("haxe.io.BytesInput","new",0x7fa18571,"haxe.io.BytesInput.new","/usr/share/haxe/std/haxe/io/BytesInput.hx",38,0x845f32e4)
 HX_STACK_THIS(this)
 HX_STACK_ARG(b,"b")
 HX_STACK_ARG(pos,"pos")
@@ -110,7 +110,7 @@ Dynamic BytesInput_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 int BytesInput_obj::readByte( ){
-	HX_STACK_FRAME("haxe.io.BytesInput","readByte",0xb70e46cd,"haxe.io.BytesInput.readByte","/usr/lib/haxe/std/haxe/io/BytesInput.hx",90,0x8dfac8be)
+	HX_STACK_FRAME("haxe.io.BytesInput","readByte",0xb70e46cd,"haxe.io.BytesInput.readByte","/usr/share/haxe/std/haxe/io/BytesInput.hx",90,0x845f32e4)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(94)
 	int tmp = this->len;		HX_STACK_VAR(tmp,"tmp");
@@ -135,7 +135,7 @@ int BytesInput_obj::readByte( ){
 
 
 int BytesInput_obj::readBytes( ::haxe::io::Bytes buf,int pos,int len){
-	HX_STACK_FRAME("haxe.io.BytesInput","readBytes",0x756fad06,"haxe.io.BytesInput.readBytes","/usr/lib/haxe/std/haxe/io/BytesInput.hx",111,0x8dfac8be)
+	HX_STACK_FRAME("haxe.io.BytesInput","readBytes",0x756fad06,"haxe.io.BytesInput.readBytes","/usr/share/haxe/std/haxe/io/BytesInput.hx",111,0x845f32e4)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(buf,"buf")
 	HX_STACK_ARG(pos,"pos")
@@ -325,11 +325,6 @@ Dynamic BytesInput_obj::__SetField(const ::String &inName,const Dynamic &inValue
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool BytesInput_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void BytesInput_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("b","\x62","\x00","\x00","\x00"));
@@ -382,7 +377,7 @@ void BytesInput_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &BytesInput_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

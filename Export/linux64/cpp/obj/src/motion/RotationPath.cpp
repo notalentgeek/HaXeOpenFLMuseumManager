@@ -222,11 +222,6 @@ Dynamic RotationPath_obj::__SetField(const ::String &inName,const Dynamic &inVal
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool RotationPath_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void RotationPath_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("end","\xdb","\x03","\x4d","\x00"));
@@ -283,7 +278,7 @@ void RotationPath_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &RotationPath_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

@@ -40,6 +40,11 @@ class HXCPP_CLASS_ATTRIBUTES  ScriptManager_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("ScriptManager","\x82","\x63","\x93","\x61"); }
 
+		static ::haxe::ui::toolkit::hscript::ScriptManager _instance;
+		static ::haxe::ui::toolkit::hscript::ScriptManager instance;
+		static ::haxe::ui::toolkit::hscript::ScriptManager get_instance( );
+		static Dynamic get_instance_dyn();
+
 		::haxe::ds::StringMap _defaultClasses;
 		::haxe::ds::StringMap classes;
 		virtual ::haxe::ds::StringMap get_classes( );
@@ -50,11 +55,6 @@ class HXCPP_CLASS_ATTRIBUTES  ScriptManager_obj : public hx::Object{
 
 		virtual Dynamic executeScript( ::String script);
 		Dynamic executeScript_dyn();
-
-		static ::haxe::ui::toolkit::hscript::ScriptManager _instance;
-		static ::haxe::ui::toolkit::hscript::ScriptManager instance;
-		static ::haxe::ui::toolkit::hscript::ScriptManager get_instance( );
-		static Dynamic get_instance_dyn();
 
 };
 

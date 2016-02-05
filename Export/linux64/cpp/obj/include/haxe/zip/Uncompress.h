@@ -39,16 +39,6 @@ class HXCPP_CLASS_ATTRIBUTES  Uncompress_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Uncompress","\x1b","\x33","\x34","\x00"); }
 
 		static void __boot();
-		Dynamic s;
-		virtual Dynamic execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos);
-		Dynamic execute_dyn();
-
-		virtual Void setFlushMode( ::haxe::zip::FlushMode f);
-		Dynamic setFlushMode_dyn();
-
-		virtual Void close( );
-		Dynamic close_dyn();
-
 		static ::haxe::io::Bytes run( ::haxe::io::Bytes src,Dynamic bufsize);
 		static Dynamic run_dyn();
 
@@ -60,6 +50,16 @@ class HXCPP_CLASS_ATTRIBUTES  Uncompress_obj : public hx::Object{
 		static Dynamic &_inflate_end_dyn() { return _inflate_end;}
 		static Dynamic _set_flush_mode;
 		static Dynamic &_set_flush_mode_dyn() { return _set_flush_mode;}
+		Dynamic s;
+		virtual Dynamic execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos);
+		Dynamic execute_dyn();
+
+		virtual Void setFlushMode( ::haxe::zip::FlushMode f);
+		Dynamic setFlushMode_dyn();
+
+		virtual Void close( );
+		Dynamic close_dyn();
+
 };
 
 } // end namespace haxe

@@ -54,6 +54,7 @@ class HXCPP_CLASS_ATTRIBUTES  Texture_obj : public ::openfl::display3D::textures
 		::String __ToString() const { return HX_HCSTRING("Texture","\xbb","\xf0","\x31","\x6c"); }
 
 		static void __boot();
+		static int internalFormat;
 		bool optimizeForRenderToTexture;
 		bool mipmapsGenerated;
 		virtual Void uploadCompressedTextureFromByteArray( ::openfl::_legacy::utils::ByteArray data,int byteArrayOffset,hx::Null< bool >  async);
@@ -68,7 +69,6 @@ class HXCPP_CLASS_ATTRIBUTES  Texture_obj : public ::openfl::display3D::textures
 		virtual Void uploadFromUInt8Array( ::openfl::_legacy::utils::UInt8Array data,hx::Null< int >  miplevel);
 		Dynamic uploadFromUInt8Array_dyn();
 
-		static int internalFormat;
 };
 
 } // end namespace openfl

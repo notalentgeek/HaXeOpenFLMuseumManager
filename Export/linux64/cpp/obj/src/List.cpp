@@ -9,7 +9,7 @@
 
 Void List_obj::__construct()
 {
-HX_STACK_FRAME("List","new",0xed890070,"List.new","/usr/lib/haxe/std/List.hx",41,0xd5566cff)
+HX_STACK_FRAME("List","new",0xed890070,"List.new","/usr/share/haxe/std/List.hx",41,0xe39600a5)
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(41)
@@ -34,7 +34,7 @@ Dynamic List_obj::__Create(hx::DynamicArray inArgs)
 
 Void List_obj::add( Dynamic item){
 {
-		HX_STACK_FRAME("List","add",0xed7f2231,"List.add","/usr/lib/haxe/std/List.hx",49,0xd5566cff)
+		HX_STACK_FRAME("List","add",0xed7f2231,"List.add","/usr/share/haxe/std/List.hx",49,0xe39600a5)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(item,"item")
 		HX_STACK_LINE(50)
@@ -63,7 +63,7 @@ HX_DEFINE_DYNAMIC_FUNC1(List_obj,add,(void))
 
 Void List_obj::push( Dynamic item){
 {
-		HX_STACK_FRAME("List","push",0xebb5efca,"List.push","/usr/lib/haxe/std/List.hx",64,0xd5566cff)
+		HX_STACK_FRAME("List","push",0xebb5efca,"List.push","/usr/share/haxe/std/List.hx",64,0xe39600a5)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(item,"item")
 		HX_STACK_LINE(68)
@@ -87,7 +87,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(List_obj,push,(void))
 
 Dynamic List_obj::first( ){
-	HX_STACK_FRAME("List","first",0x898acc40,"List.first","/usr/lib/haxe/std/List.hx",81,0xd5566cff)
+	HX_STACK_FRAME("List","first",0x898acc40,"List.first","/usr/share/haxe/std/List.hx",81,0xe39600a5)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(82)
 	bool tmp = (this->h == null());		HX_STACK_VAR(tmp,"tmp");
@@ -110,7 +110,7 @@ Dynamic List_obj::first( ){
 HX_DEFINE_DYNAMIC_FUNC0(List_obj,first,return )
 
 Dynamic List_obj::pop( ){
-	HX_STACK_FRAME("List","pop",0xed8a8da1,"List.pop","/usr/lib/haxe/std/List.hx",100,0xd5566cff)
+	HX_STACK_FRAME("List","pop",0xed8a8da1,"List.pop","/usr/share/haxe/std/List.hx",100,0xe39600a5)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(101)
 	bool tmp = (this->h == null());		HX_STACK_VAR(tmp,"tmp");
@@ -146,7 +146,7 @@ Dynamic List_obj::pop( ){
 HX_DEFINE_DYNAMIC_FUNC0(List_obj,pop,return )
 
 bool List_obj::isEmpty( ){
-	HX_STACK_FRAME("List","isEmpty",0xaa565653,"List.isEmpty","/usr/lib/haxe/std/List.hx",114,0xd5566cff)
+	HX_STACK_FRAME("List","isEmpty",0xaa565653,"List.isEmpty","/usr/share/haxe/std/List.hx",114,0xe39600a5)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(115)
 	bool tmp = (this->h == null());		HX_STACK_VAR(tmp,"tmp");
@@ -158,7 +158,7 @@ bool List_obj::isEmpty( ){
 HX_DEFINE_DYNAMIC_FUNC0(List_obj,isEmpty,return )
 
 bool List_obj::remove( Dynamic v){
-	HX_STACK_FRAME("List","remove",0x4b44d634,"List.remove","/usr/lib/haxe/std/List.hx",138,0xd5566cff)
+	HX_STACK_FRAME("List","remove",0x4b44d634,"List.remove","/usr/share/haxe/std/List.hx",138,0xe39600a5)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(v,"v")
 	HX_STACK_LINE(139)
@@ -226,7 +226,7 @@ bool List_obj::remove( Dynamic v){
 HX_DEFINE_DYNAMIC_FUNC1(List_obj,remove,return )
 
 ::_List::ListIterator List_obj::iterator( ){
-	HX_STACK_FRAME("List","iterator",0x2d4cdfde,"List.iterator","/usr/lib/haxe/std/List.hx",161,0xd5566cff)
+	HX_STACK_FRAME("List","iterator",0x2d4cdfde,"List.iterator","/usr/share/haxe/std/List.hx",161,0xe39600a5)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(162)
 	::_List::ListIterator tmp = ::_List::ListIterator_obj::__new(this->h);		HX_STACK_VAR(tmp,"tmp");
@@ -301,11 +301,6 @@ Dynamic List_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::P
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool List_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void List_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("h","\x68","\x00","\x00","\x00"));
@@ -358,7 +353,7 @@ void List_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &List_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

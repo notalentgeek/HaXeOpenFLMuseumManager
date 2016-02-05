@@ -59,7 +59,6 @@ class HXCPP_CLASS_ATTRIBUTES  Component_obj : public ::haxe::ui::toolkit::core::
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -72,6 +71,9 @@ class HXCPP_CLASS_ATTRIBUTES  Component_obj : public ::haxe::ui::toolkit::core::
 		operator ::haxe::ui::toolkit::core::interfaces::IClonable_obj *();
 		operator ::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer_obj *();
 		::String __ToString() const { return HX_HCSTRING("Component","\x9d","\xd0","\x26","\xb1"); }
+
+		static Void addNamedComponentsFrom( ::haxe::ui::toolkit::core::interfaces::IComponent parent,Array< ::haxe::ui::toolkit::core::interfaces::IComponent > list);
+		static Dynamic addNamedComponentsFrom_dyn();
 
 		::String _text;
 		bool _clipContent;
@@ -193,9 +195,6 @@ class HXCPP_CLASS_ATTRIBUTES  Component_obj : public ::haxe::ui::toolkit::core::
 		virtual ::haxe::ui::toolkit::core::DisplayObject clone( );
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );
-
-		static Void addNamedComponentsFrom( ::haxe::ui::toolkit::core::interfaces::IComponent parent,Array< ::haxe::ui::toolkit::core::interfaces::IComponent > list);
-		static Dynamic addNamedComponentsFrom_dyn();
 
 };
 

@@ -61,7 +61,6 @@ class HXCPP_CLASS_ATTRIBUTES  CheckBox_obj : public ::haxe::ui::toolkit::core::S
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -71,6 +70,9 @@ class HXCPP_CLASS_ATTRIBUTES  CheckBox_obj : public ::haxe::ui::toolkit::core::S
 		::String __ToString() const { return HX_HCSTRING("CheckBox","\x43","\x46","\x8f","\x86"); }
 
 		static void __boot();
+		static ::String STATE_NORMAL;
+		static ::String STATE_OVER;
+		static ::String STATE_DOWN;
 		::haxe::ui::toolkit::controls::CheckBoxValue _value;
 		::haxe::ui::toolkit::controls::Text _label;
 		bool _selected;
@@ -135,9 +137,6 @@ class HXCPP_CLASS_ATTRIBUTES  CheckBox_obj : public ::haxe::ui::toolkit::core::S
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );
 
-		static ::String STATE_NORMAL;
-		static ::String STATE_OVER;
-		static ::String STATE_DOWN;
 };
 
 } // end namespace haxe

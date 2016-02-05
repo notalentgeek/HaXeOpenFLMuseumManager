@@ -21,12 +21,9 @@ class HXCPP_CLASS_ATTRIBUTES  IDraggable_obj : public hx::Interface{
 		typedef IDraggable_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
 		virtual bool allowDrag( ::openfl::_legacy::events::MouseEvent event)=0;
-		virtual Dynamic allowDrag_dyn()=0;
+virtual Dynamic allowDrag_dyn()=0;
 };
 
-#define DELEGATE_haxe_ui_toolkit_core_interfaces_IDraggable \
-virtual bool allowDrag( ::openfl::_legacy::events::MouseEvent event) { return mDelegate->allowDrag(event);}  \
-virtual Dynamic allowDrag_dyn() { return mDelegate->allowDrag_dyn();}  \
 
 
 template<typename IMPL>
@@ -38,7 +35,8 @@ class IDraggable_delegate_ : public IDraggable_obj
 		IDraggable_delegate_(IMPL *inDelegate) : mDelegate(inDelegate) {}
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
-		DELEGATE_haxe_ui_toolkit_core_interfaces_IDraggable
+		bool allowDrag( ::openfl::_legacy::events::MouseEvent event) { return mDelegate->allowDrag(event);}
+		Dynamic allowDrag_dyn() { return mDelegate->allowDrag_dyn();}
 };
 
 } // end namespace haxe

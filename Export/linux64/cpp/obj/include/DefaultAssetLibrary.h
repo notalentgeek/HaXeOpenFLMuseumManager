@@ -56,6 +56,17 @@ class HXCPP_CLASS_ATTRIBUTES  DefaultAssetLibrary_obj : public ::openfl::_legacy
 		::String __ToString() const { return HX_HCSTRING("DefaultAssetLibrary","\x2c","\x3d","\x78","\x3a"); }
 
 		static void __boot();
+		static int loaded;
+		static int loading;
+		static ::cpp::vm::Deque workerIncomingQueue;
+		static ::cpp::vm::Deque workerResult;
+		static ::cpp::vm::Thread workerThread;
+		static Void __doWork( );
+		static Dynamic __doWork_dyn();
+
+		static Void __poll( );
+		static Dynamic __poll_dyn();
+
 		::haxe::ds::StringMap className;
 		::haxe::ds::StringMap path;
 		::haxe::ds::StringMap type;
@@ -98,17 +109,6 @@ class HXCPP_CLASS_ATTRIBUTES  DefaultAssetLibrary_obj : public ::openfl::_legacy
 
 		virtual Void __load( Dynamic getMethod,::String id,Dynamic handler);
 		Dynamic __load_dyn();
-
-		static int loaded;
-		static int loading;
-		static ::cpp::vm::Deque workerIncomingQueue;
-		static ::cpp::vm::Deque workerResult;
-		static ::cpp::vm::Thread workerThread;
-		static Void __doWork( );
-		static Dynamic __doWork_dyn();
-
-		static Void __poll( );
-		static Dynamic __poll_dyn();
 
 };
 

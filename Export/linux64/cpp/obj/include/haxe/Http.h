@@ -42,6 +42,7 @@ class HXCPP_CLASS_ATTRIBUTES  Http_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Http","\xa8","\xc7","\xef","\x2f"); }
 
 		static void __boot();
+		static Dynamic PROXY;
 		::String url;
 		::String responseData;
 		bool noShutdown;
@@ -74,7 +75,6 @@ class HXCPP_CLASS_ATTRIBUTES  Http_obj : public hx::Object{
 		Dynamic onStatus;
 		inline Dynamic &onStatus_dyn() {return onStatus; }
 
-		static Dynamic PROXY;
 };
 
 } // end namespace haxe

@@ -61,6 +61,100 @@ class HXCPP_CLASS_ATTRIBUTES  Stage_obj : public ::openfl::_legacy::display::Dis
 		::String __ToString() const { return HX_HCSTRING("Stage","\x9e","\xda","\x38","\x17"); }
 
 		static void __boot();
+		static Float __earlyWakeup;
+		static bool __exiting;
+		static int OrientationPortrait;
+		static int OrientationPortraitUpsideDown;
+		static int OrientationLandscapeRight;
+		static int OrientationLandscapeLeft;
+		static int OrientationFaceUp;
+		static int OrientationFaceDown;
+		static int OrientationPortraitAny;
+		static int OrientationLandscapeAny;
+		static int OrientationAny;
+		static int efLeftDown;
+		static int efShiftDown;
+		static int efCtrlDown;
+		static int efAltDown;
+		static int efCommandDown;
+		static int efLocationRight;
+		static int efNoNativeClick;
+		static Array< ::String > sClickEvents;
+		static Array< ::String > sDownEvents;
+		static Array< ::String > sUpEvents;
+		static Array< ::String > __mouseChanges;
+		static Array< ::String > __touchChanges;
+		static Dynamic getOrientation;
+		static inline Dynamic &getOrientation_dyn() {return getOrientation; }
+
+		static Dynamic getNormalOrientation;
+		static inline Dynamic &getNormalOrientation_dyn() {return getNormalOrientation; }
+
+		static Void setFixedOrientation( int orientation);
+		static Dynamic setFixedOrientation_dyn();
+
+		static Dynamic shouldRotateInterface;
+		static inline Dynamic &shouldRotateInterface_dyn() {return shouldRotateInterface; }
+
+		static Dynamic lime_set_stage_handler;
+		static Dynamic &lime_set_stage_handler_dyn() { return lime_set_stage_handler;}
+		static Dynamic lime_render_stage;
+		static Dynamic &lime_render_stage_dyn() { return lime_render_stage;}
+		static Dynamic lime_stage_get_autos3d;
+		static Dynamic &lime_stage_get_autos3d_dyn() { return lime_stage_get_autos3d;}
+		static Dynamic lime_stage_set_autos3d;
+		static Dynamic &lime_stage_set_autos3d_dyn() { return lime_stage_set_autos3d;}
+		static Dynamic lime_stage_get_focus_id;
+		static Dynamic &lime_stage_get_focus_id_dyn() { return lime_stage_get_focus_id;}
+		static Dynamic lime_stage_set_focus;
+		static Dynamic &lime_stage_set_focus_dyn() { return lime_stage_set_focus;}
+		static Dynamic lime_stage_get_focus_rect;
+		static Dynamic &lime_stage_get_focus_rect_dyn() { return lime_stage_get_focus_rect;}
+		static Dynamic lime_stage_set_focus_rect;
+		static Dynamic &lime_stage_set_focus_rect_dyn() { return lime_stage_set_focus_rect;}
+		static Dynamic lime_stage_is_opengl;
+		static Dynamic &lime_stage_is_opengl_dyn() { return lime_stage_is_opengl;}
+		static Dynamic lime_stage_get_stage_width;
+		static Dynamic &lime_stage_get_stage_width_dyn() { return lime_stage_get_stage_width;}
+		static Dynamic lime_stage_get_stage_height;
+		static Dynamic &lime_stage_get_stage_height_dyn() { return lime_stage_get_stage_height;}
+		static Dynamic lime_stage_get_dpi_scale;
+		static Dynamic &lime_stage_get_dpi_scale_dyn() { return lime_stage_get_dpi_scale;}
+		static Dynamic lime_stage_get_scale_mode;
+		static Dynamic &lime_stage_get_scale_mode_dyn() { return lime_stage_get_scale_mode;}
+		static Dynamic lime_stage_set_scale_mode;
+		static Dynamic &lime_stage_set_scale_mode_dyn() { return lime_stage_set_scale_mode;}
+		static Dynamic lime_stage_get_align;
+		static Dynamic &lime_stage_get_align_dyn() { return lime_stage_get_align;}
+		static Dynamic lime_stage_set_align;
+		static Dynamic &lime_stage_set_align_dyn() { return lime_stage_set_align;}
+		static Dynamic lime_stage_get_quality;
+		static Dynamic &lime_stage_get_quality_dyn() { return lime_stage_get_quality;}
+		static Dynamic lime_stage_set_quality;
+		static Dynamic &lime_stage_set_quality_dyn() { return lime_stage_set_quality;}
+		static Dynamic lime_stage_get_display_state;
+		static Dynamic &lime_stage_get_display_state_dyn() { return lime_stage_get_display_state;}
+		static Dynamic lime_stage_set_display_state;
+		static Dynamic &lime_stage_set_display_state_dyn() { return lime_stage_set_display_state;}
+		static Dynamic lime_stage_set_next_wake;
+		static Dynamic &lime_stage_set_next_wake_dyn() { return lime_stage_set_next_wake;}
+		static Dynamic lime_stage_request_render;
+		static Dynamic lime_stage_resize_window;
+		static Dynamic &lime_stage_resize_window_dyn() { return lime_stage_resize_window;}
+		static Dynamic lime_stage_set_resolution;
+		static Dynamic &lime_stage_set_resolution_dyn() { return lime_stage_set_resolution;}
+		static Dynamic lime_stage_set_screenmode;
+		static Dynamic &lime_stage_set_screenmode_dyn() { return lime_stage_set_screenmode;}
+		static Dynamic lime_stage_set_fullscreen;
+		static Dynamic &lime_stage_set_fullscreen_dyn() { return lime_stage_set_fullscreen;}
+		static Dynamic lime_stage_show_cursor;
+		static Dynamic &lime_stage_show_cursor_dyn() { return lime_stage_show_cursor;}
+		static Dynamic lime_stage_set_fixed_orientation;
+		static Dynamic &lime_stage_set_fixed_orientation_dyn() { return lime_stage_set_fixed_orientation;}
+		static Dynamic lime_stage_get_orientation;
+		static Dynamic &lime_stage_get_orientation_dyn() { return lime_stage_get_orientation;}
+		static Dynamic lime_stage_get_normal_orientation;
+		static Dynamic &lime_stage_get_normal_orientation_dyn() { return lime_stage_get_normal_orientation;}
 		bool allowsFullScreen;
 		bool active;
 		Float dpiScale;
@@ -244,100 +338,6 @@ class HXCPP_CLASS_ATTRIBUTES  Stage_obj : public ::openfl::_legacy::display::Dis
 		virtual int get_stageWidth( );
 		Dynamic get_stageWidth_dyn();
 
-		static Float __earlyWakeup;
-		static bool __exiting;
-		static int OrientationPortrait;
-		static int OrientationPortraitUpsideDown;
-		static int OrientationLandscapeRight;
-		static int OrientationLandscapeLeft;
-		static int OrientationFaceUp;
-		static int OrientationFaceDown;
-		static int OrientationPortraitAny;
-		static int OrientationLandscapeAny;
-		static int OrientationAny;
-		static int efLeftDown;
-		static int efShiftDown;
-		static int efCtrlDown;
-		static int efAltDown;
-		static int efCommandDown;
-		static int efLocationRight;
-		static int efNoNativeClick;
-		static Array< ::String > sClickEvents;
-		static Array< ::String > sDownEvents;
-		static Array< ::String > sUpEvents;
-		static Array< ::String > __mouseChanges;
-		static Array< ::String > __touchChanges;
-		static Dynamic getOrientation;
-		static inline Dynamic &getOrientation_dyn() {return getOrientation; }
-
-		static Dynamic getNormalOrientation;
-		static inline Dynamic &getNormalOrientation_dyn() {return getNormalOrientation; }
-
-		static Void setFixedOrientation( int orientation);
-		static Dynamic setFixedOrientation_dyn();
-
-		static Dynamic shouldRotateInterface;
-		static inline Dynamic &shouldRotateInterface_dyn() {return shouldRotateInterface; }
-
-		static Dynamic lime_set_stage_handler;
-		static Dynamic &lime_set_stage_handler_dyn() { return lime_set_stage_handler;}
-		static Dynamic lime_render_stage;
-		static Dynamic &lime_render_stage_dyn() { return lime_render_stage;}
-		static Dynamic lime_stage_get_autos3d;
-		static Dynamic &lime_stage_get_autos3d_dyn() { return lime_stage_get_autos3d;}
-		static Dynamic lime_stage_set_autos3d;
-		static Dynamic &lime_stage_set_autos3d_dyn() { return lime_stage_set_autos3d;}
-		static Dynamic lime_stage_get_focus_id;
-		static Dynamic &lime_stage_get_focus_id_dyn() { return lime_stage_get_focus_id;}
-		static Dynamic lime_stage_set_focus;
-		static Dynamic &lime_stage_set_focus_dyn() { return lime_stage_set_focus;}
-		static Dynamic lime_stage_get_focus_rect;
-		static Dynamic &lime_stage_get_focus_rect_dyn() { return lime_stage_get_focus_rect;}
-		static Dynamic lime_stage_set_focus_rect;
-		static Dynamic &lime_stage_set_focus_rect_dyn() { return lime_stage_set_focus_rect;}
-		static Dynamic lime_stage_is_opengl;
-		static Dynamic &lime_stage_is_opengl_dyn() { return lime_stage_is_opengl;}
-		static Dynamic lime_stage_get_stage_width;
-		static Dynamic &lime_stage_get_stage_width_dyn() { return lime_stage_get_stage_width;}
-		static Dynamic lime_stage_get_stage_height;
-		static Dynamic &lime_stage_get_stage_height_dyn() { return lime_stage_get_stage_height;}
-		static Dynamic lime_stage_get_dpi_scale;
-		static Dynamic &lime_stage_get_dpi_scale_dyn() { return lime_stage_get_dpi_scale;}
-		static Dynamic lime_stage_get_scale_mode;
-		static Dynamic &lime_stage_get_scale_mode_dyn() { return lime_stage_get_scale_mode;}
-		static Dynamic lime_stage_set_scale_mode;
-		static Dynamic &lime_stage_set_scale_mode_dyn() { return lime_stage_set_scale_mode;}
-		static Dynamic lime_stage_get_align;
-		static Dynamic &lime_stage_get_align_dyn() { return lime_stage_get_align;}
-		static Dynamic lime_stage_set_align;
-		static Dynamic &lime_stage_set_align_dyn() { return lime_stage_set_align;}
-		static Dynamic lime_stage_get_quality;
-		static Dynamic &lime_stage_get_quality_dyn() { return lime_stage_get_quality;}
-		static Dynamic lime_stage_set_quality;
-		static Dynamic &lime_stage_set_quality_dyn() { return lime_stage_set_quality;}
-		static Dynamic lime_stage_get_display_state;
-		static Dynamic &lime_stage_get_display_state_dyn() { return lime_stage_get_display_state;}
-		static Dynamic lime_stage_set_display_state;
-		static Dynamic &lime_stage_set_display_state_dyn() { return lime_stage_set_display_state;}
-		static Dynamic lime_stage_set_next_wake;
-		static Dynamic &lime_stage_set_next_wake_dyn() { return lime_stage_set_next_wake;}
-		static Dynamic lime_stage_request_render;
-		static Dynamic lime_stage_resize_window;
-		static Dynamic &lime_stage_resize_window_dyn() { return lime_stage_resize_window;}
-		static Dynamic lime_stage_set_resolution;
-		static Dynamic &lime_stage_set_resolution_dyn() { return lime_stage_set_resolution;}
-		static Dynamic lime_stage_set_screenmode;
-		static Dynamic &lime_stage_set_screenmode_dyn() { return lime_stage_set_screenmode;}
-		static Dynamic lime_stage_set_fullscreen;
-		static Dynamic &lime_stage_set_fullscreen_dyn() { return lime_stage_set_fullscreen;}
-		static Dynamic lime_stage_show_cursor;
-		static Dynamic &lime_stage_show_cursor_dyn() { return lime_stage_show_cursor;}
-		static Dynamic lime_stage_set_fixed_orientation;
-		static Dynamic &lime_stage_set_fixed_orientation_dyn() { return lime_stage_set_fixed_orientation;}
-		static Dynamic lime_stage_get_orientation;
-		static Dynamic &lime_stage_get_orientation_dyn() { return lime_stage_get_orientation;}
-		static Dynamic lime_stage_get_normal_orientation;
-		static Dynamic &lime_stage_get_normal_orientation_dyn() { return lime_stage_get_normal_orientation;}
 };
 
 } // end namespace openfl

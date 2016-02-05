@@ -31,12 +31,14 @@ class HXCPP_CLASS_ATTRIBUTES  Printer_obj : public hx::Object{
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Printer","\xba","\xfd","\x84","\x51"); }
+
+		static ::String print( ::Xml xml,Dynamic pretty);
+		static Dynamic print_dyn();
 
 		::StringBuf output;
 		bool pretty;
@@ -45,9 +47,6 @@ class HXCPP_CLASS_ATTRIBUTES  Printer_obj : public hx::Object{
 
 		virtual bool hasChildren( ::Xml value);
 		Dynamic hasChildren_dyn();
-
-		static ::String print( ::Xml xml,Dynamic pretty);
-		static Dynamic print_dyn();
 
 };
 

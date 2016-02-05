@@ -35,6 +35,8 @@ class HXCPP_CLASS_ATTRIBUTES  TimerEvent_obj : public ::openfl::_legacy::events:
 		::String __ToString() const { return HX_HCSTRING("TimerEvent","\x35","\x32","\x87","\xfd"); }
 
 		static void __boot();
+		static ::String TIMER;
+		static ::String TIMER_COMPLETE;
 		virtual ::openfl::_legacy::events::Event clone( );
 
 		virtual ::String toString( );
@@ -42,8 +44,6 @@ class HXCPP_CLASS_ATTRIBUTES  TimerEvent_obj : public ::openfl::_legacy::events:
 		virtual Void updateAfterEvent( );
 		Dynamic updateAfterEvent_dyn();
 
-		static ::String TIMER;
-		static ::String TIMER_COMPLETE;
 };
 
 } // end namespace openfl

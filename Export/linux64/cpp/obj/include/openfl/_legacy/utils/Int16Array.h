@@ -34,13 +34,13 @@ class HXCPP_CLASS_ATTRIBUTES  Int16Array_obj : public ::openfl::_legacy::utils::
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Int16Array","\x85","\x17","\x71","\xa9"); }
 
 		static void __boot();
 		typedef int __array_access;
+		static int SBYTES_PER_ELEMENT;
 		int BYTES_PER_ELEMENT;
 		int length;
 		virtual int __get( int index);
@@ -49,7 +49,6 @@ class HXCPP_CLASS_ATTRIBUTES  Int16Array_obj : public ::openfl::_legacy::utils::
 		virtual Void __set( int index,int value);
 		Dynamic __set_dyn();
 
-		static int SBYTES_PER_ELEMENT;
 };
 
 } // end namespace openfl

@@ -20,7 +20,7 @@ namespace io{
 
 Void BytesOutput_obj::__construct()
 {
-HX_STACK_FRAME("haxe.io.BytesOutput","new",0x130b775e,"haxe.io.BytesOutput.new","/usr/lib/haxe/std/haxe/io/BytesOutput.hx",35,0x978af353)
+HX_STACK_FRAME("haxe.io.BytesOutput","new",0x130b775e,"haxe.io.BytesOutput.new","/usr/share/haxe/std/haxe/io/BytesOutput.hx",35,0x39036a6d)
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(40)
@@ -47,7 +47,7 @@ Dynamic BytesOutput_obj::__Create(hx::DynamicArray inArgs)
 
 Void BytesOutput_obj::writeByte( int c){
 {
-		HX_STACK_FRAME("haxe.io.BytesOutput","writeByte",0xed1b0d05,"haxe.io.BytesOutput.writeByte","/usr/lib/haxe/std/haxe/io/BytesOutput.hx",55,0x978af353)
+		HX_STACK_FRAME("haxe.io.BytesOutput","writeByte",0xed1b0d05,"haxe.io.BytesOutput.writeByte","/usr/share/haxe/std/haxe/io/BytesOutput.hx",55,0x39036a6d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(c,"c")
 		HX_STACK_LINE(55)
@@ -62,7 +62,7 @@ return null();
 
 
 int BytesOutput_obj::writeBytes( ::haxe::io::Bytes buf,int pos,int len){
-	HX_STACK_FRAME("haxe.io.BytesOutput","writeBytes",0x8a9057ce,"haxe.io.BytesOutput.writeBytes","/usr/lib/haxe/std/haxe/io/BytesOutput.hx",59,0x978af353)
+	HX_STACK_FRAME("haxe.io.BytesOutput","writeBytes",0x8a9057ce,"haxe.io.BytesOutput.writeBytes","/usr/share/haxe/std/haxe/io/BytesOutput.hx",59,0x39036a6d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(buf,"buf")
 	HX_STACK_ARG(pos,"pos")
@@ -156,7 +156,7 @@ int BytesOutput_obj::writeBytes( ::haxe::io::Bytes buf,int pos,int len){
 
 
 ::haxe::io::Bytes BytesOutput_obj::getBytes( ){
-	HX_STACK_FRAME("haxe.io.BytesOutput","getBytes",0x9fe35837,"haxe.io.BytesOutput.getBytes","/usr/lib/haxe/std/haxe/io/BytesOutput.hx",125,0x978af353)
+	HX_STACK_FRAME("haxe.io.BytesOutput","getBytes",0x9fe35837,"haxe.io.BytesOutput.getBytes","/usr/share/haxe/std/haxe/io/BytesOutput.hx",125,0x39036a6d)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(131)
 	::haxe::io::BytesBuffer tmp = this->b;		HX_STACK_VAR(tmp,"tmp");
@@ -213,11 +213,6 @@ Dynamic BytesOutput_obj::__SetField(const ::String &inName,const Dynamic &inValu
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool BytesOutput_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void BytesOutput_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("b","\x62","\x00","\x00","\x00"));
@@ -261,7 +256,7 @@ void BytesOutput_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &BytesOutput_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

@@ -43,6 +43,7 @@ class HXCPP_CLASS_ATTRIBUTES  HTTPStatusEvent_obj : public ::openfl::_legacy::ev
 		::String __ToString() const { return HX_HCSTRING("HTTPStatusEvent","\xe0","\x4c","\x1b","\xfe"); }
 
 		static void __boot();
+		static ::String HTTP_STATUS;
 		int status;
 		Array< ::Dynamic > responseHeaders;
 		::String responseURL;
@@ -50,7 +51,6 @@ class HXCPP_CLASS_ATTRIBUTES  HTTPStatusEvent_obj : public ::openfl::_legacy::ev
 
 		virtual ::String toString( );
 
-		static ::String HTTP_STATUS;
 };
 
 } // end namespace openfl

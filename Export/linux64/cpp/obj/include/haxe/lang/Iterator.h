@@ -16,16 +16,11 @@ class HXCPP_CLASS_ATTRIBUTES  Iterator_obj : public hx::Interface{
 		typedef Iterator_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
 		virtual bool hasNext( )=0;
-		virtual Dynamic hasNext_dyn()=0;
+virtual Dynamic hasNext_dyn()=0;
 		virtual Dynamic next( )=0;
-		virtual Dynamic next_dyn()=0;
+virtual Dynamic next_dyn()=0;
 };
 
-#define DELEGATE_haxe_lang_Iterator \
-virtual bool hasNext( ) { return mDelegate->hasNext();}  \
-virtual Dynamic hasNext_dyn() { return mDelegate->hasNext_dyn();}  \
-virtual Dynamic next( ) { return mDelegate->next();}  \
-virtual Dynamic next_dyn() { return mDelegate->next_dyn();}  \
 
 
 template<typename IMPL>
@@ -37,7 +32,10 @@ class Iterator_delegate_ : public Iterator_obj
 		Iterator_delegate_(IMPL *inDelegate) : mDelegate(inDelegate) {}
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
-		DELEGATE_haxe_lang_Iterator
+		bool hasNext( ) { return mDelegate->hasNext();}
+		Dynamic hasNext_dyn() { return mDelegate->hasNext_dyn();}
+		Dynamic next( ) { return mDelegate->next();}
+		Dynamic next_dyn() { return mDelegate->next_dyn();}
 };
 
 } // end namespace haxe

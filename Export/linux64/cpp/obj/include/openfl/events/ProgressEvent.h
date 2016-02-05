@@ -32,20 +32,19 @@ class HXCPP_CLASS_ATTRIBUTES  ProgressEvent_obj : public ::openfl::_legacy::even
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("ProgressEvent","\x0d","\x9d","\x55","\x84"); }
 
 		static void __boot();
+		static ::String PROGRESS;
+		static ::String SOCKET_DATA;
 		Float bytesLoaded;
 		Float bytesTotal;
 		virtual ::openfl::_legacy::events::Event clone( );
 
 		virtual ::String toString( );
 
-		static ::String PROGRESS;
-		static ::String SOCKET_DATA;
 };
 
 } // end namespace openfl

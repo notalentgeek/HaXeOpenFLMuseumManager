@@ -21,7 +21,7 @@ namespace _Process{
 
 Void Stdin_obj::__construct(Dynamic p)
 {
-HX_STACK_FRAME("sys.io._Process.Stdin","new",0xd3131563,"sys.io._Process.Stdin.new","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",29,0xc8ab0a78)
+HX_STACK_FRAME("sys.io._Process.Stdin","new",0xd3131563,"sys.io._Process.Stdin.new","/usr/share/haxe/std/cpp/_std/sys/io/Process.hx",29,0x2d961692)
 HX_STACK_THIS(this)
 HX_STACK_ARG(p,"p")
 {
@@ -51,7 +51,7 @@ Dynamic Stdin_obj::__Create(hx::DynamicArray inArgs)
 
 Void Stdin_obj::close( ){
 {
-		HX_STACK_FRAME("sys.io._Process.Stdin","close",0xbd3fe37b,"sys.io._Process.Stdin.close","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",34,0xc8ab0a78)
+		HX_STACK_FRAME("sys.io._Process.Stdin","close",0xbd3fe37b,"sys.io._Process.Stdin.close","/usr/share/haxe/std/cpp/_std/sys/io/Process.hx",34,0x2d961692)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(35)
 		this->super::close();
@@ -66,7 +66,7 @@ return null();
 
 Void Stdin_obj::writeByte( int c){
 {
-		HX_STACK_FRAME("sys.io._Process.Stdin","writeByte",0xfb987cca,"sys.io._Process.Stdin.writeByte","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",39,0xc8ab0a78)
+		HX_STACK_FRAME("sys.io._Process.Stdin","writeByte",0xfb987cca,"sys.io._Process.Stdin.writeByte","/usr/share/haxe/std/cpp/_std/sys/io/Process.hx",39,0x2d961692)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(c,"c")
 		HX_STACK_LINE(40)
@@ -88,7 +88,7 @@ return null();
 
 
 int Stdin_obj::writeBytes( ::haxe::io::Bytes buf,int pos,int len){
-	HX_STACK_FRAME("sys.io._Process.Stdin","writeBytes",0x29d4b469,"sys.io._Process.Stdin.writeBytes","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",44,0xc8ab0a78)
+	HX_STACK_FRAME("sys.io._Process.Stdin","writeBytes",0x29d4b469,"sys.io._Process.Stdin.writeBytes","/usr/share/haxe/std/cpp/_std/sys/io/Process.hx",44,0x2d961692)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(buf,"buf")
 	HX_STACK_ARG(pos,"pos")

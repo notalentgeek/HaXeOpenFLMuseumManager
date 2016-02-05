@@ -36,13 +36,16 @@ class HXCPP_CLASS_ATTRIBUTES  Float32Array_obj : public ::openfl::_legacy::utils
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Float32Array","\x7e","\x42","\x27","\x90"); }
 
 		static void __boot();
 		typedef Float __array_access;
+		static int SBYTES_PER_ELEMENT;
+		static ::openfl::_legacy::utils::Float32Array fromMatrix( ::openfl::geom::Matrix3D matrix);
+		static Dynamic fromMatrix_dyn();
+
 		int BYTES_PER_ELEMENT;
 		int length;
 		virtual Void __setLength( int nbFloat);
@@ -53,10 +56,6 @@ class HXCPP_CLASS_ATTRIBUTES  Float32Array_obj : public ::openfl::_legacy::utils
 
 		virtual Void __set( int index,Float value);
 		Dynamic __set_dyn();
-
-		static int SBYTES_PER_ELEMENT;
-		static ::openfl::_legacy::utils::Float32Array fromMatrix( ::openfl::geom::Matrix3D matrix);
-		static Dynamic fromMatrix_dyn();
 
 };
 

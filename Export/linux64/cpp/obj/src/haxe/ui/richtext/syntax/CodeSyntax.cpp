@@ -402,11 +402,6 @@ Dynamic CodeSyntax_obj::__SetField(const ::String &inName,const Dynamic &inValue
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool CodeSyntax_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void CodeSyntax_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("_rules","\x38","\xab","\x3d","\xed"));
@@ -479,7 +474,7 @@ void CodeSyntax_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &CodeSyntax_obj::__GetStatic;
-	__mClass->mSetStaticField = &CodeSyntax_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

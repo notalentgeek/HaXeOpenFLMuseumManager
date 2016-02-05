@@ -29,23 +29,22 @@ class HXCPP_CLASS_ATTRIBUTES  Path_obj : public hx::Object{
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Path","\xc5","\x11","\x2b","\x35"); }
 
-		::String dir;
-		::String file;
-		::String ext;
-		bool backslash;
 		static ::String directory( ::String path);
 		static Dynamic directory_dyn();
 
 		static ::String removeTrailingSlashes( ::String path);
 		static Dynamic removeTrailingSlashes_dyn();
 
+		::String dir;
+		::String file;
+		::String ext;
+		bool backslash;
 };
 
 } // end namespace haxe

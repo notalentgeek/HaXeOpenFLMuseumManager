@@ -41,6 +41,11 @@ class HXCPP_CLASS_ATTRIBUTES  DataManager_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("DataManager","\x43","\x75","\xdf","\x39"); }
 
+		static ::haxe::ui::toolkit::data::DataManager _instance;
+		static ::haxe::ui::toolkit::data::DataManager instance;
+		static ::haxe::ui::toolkit::data::DataManager get_instance( );
+		static Dynamic get_instance_dyn();
+
 		::haxe::ds::StringMap _dataSourceMap;
 		Array< ::haxe::ui::toolkit::data::IDataSource > dataSources;
 		virtual Void registerDataSource( ::haxe::ui::toolkit::data::IDataSource dataSource);
@@ -51,11 +56,6 @@ class HXCPP_CLASS_ATTRIBUTES  DataManager_obj : public hx::Object{
 
 		virtual Array< ::haxe::ui::toolkit::data::IDataSource > get_dataSources( );
 		Dynamic get_dataSources_dyn();
-
-		static ::haxe::ui::toolkit::data::DataManager _instance;
-		static ::haxe::ui::toolkit::data::DataManager instance;
-		static ::haxe::ui::toolkit::data::DataManager get_instance( );
-		static Dynamic get_instance_dyn();
 
 };
 

@@ -20,16 +20,11 @@ class HXCPP_CLASS_ATTRIBUTES  IDrawable_obj : public hx::Interface{
 		typedef IDrawable_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
 		virtual ::openfl::_legacy::display::Graphics get_graphics( )=0;
-		virtual Dynamic get_graphics_dyn()=0;
+virtual Dynamic get_graphics_dyn()=0;
 		virtual Void paint( )=0;
-		virtual Dynamic paint_dyn()=0;
+virtual Dynamic paint_dyn()=0;
 };
 
-#define DELEGATE_haxe_ui_toolkit_core_interfaces_IDrawable \
-virtual ::openfl::_legacy::display::Graphics get_graphics( ) { return mDelegate->get_graphics();}  \
-virtual Dynamic get_graphics_dyn() { return mDelegate->get_graphics_dyn();}  \
-virtual Void paint( ) { return mDelegate->paint();}  \
-virtual Dynamic paint_dyn() { return mDelegate->paint_dyn();}  \
 
 
 template<typename IMPL>
@@ -41,7 +36,10 @@ class IDrawable_delegate_ : public IDrawable_obj
 		IDrawable_delegate_(IMPL *inDelegate) : mDelegate(inDelegate) {}
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
-		DELEGATE_haxe_ui_toolkit_core_interfaces_IDrawable
+		::openfl::_legacy::display::Graphics get_graphics( ) { return mDelegate->get_graphics();}
+		Dynamic get_graphics_dyn() { return mDelegate->get_graphics_dyn();}
+		Void paint( ) { return mDelegate->paint();}
+		Dynamic paint_dyn() { return mDelegate->paint_dyn();}
 };
 
 } // end namespace haxe

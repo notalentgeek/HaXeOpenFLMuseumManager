@@ -4261,6 +4261,199 @@ bool GL_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Property
 	return false;
 }
 
+bool GL_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 7:
+		if (HX_FIELD_EQ(inName,"version") ) { version=ioValue.Cast< int >(); return true; }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"lime_gl_hint") ) { lime_gl_hint=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"lime_gl_clear") ) { lime_gl_clear=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_flush") ) { lime_gl_flush=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 14:
+		if (HX_FIELD_EQ(inName,"lime_gl_enable") ) { lime_gl_enable=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_finish") ) { lime_gl_finish=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 15:
+		if (HX_FIELD_EQ(inName,"lime_gl_disable") ) { lime_gl_disable=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_scissor") ) { lime_gl_scissor=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_version") ) { lime_gl_version=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 16:
+		if (HX_FIELD_EQ(inName,"lime_gl_viewport") ) { lime_gl_viewport=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 17:
+		if (HX_FIELD_EQ(inName,"lime_gl_cull_face") ) { lime_gl_cull_face=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_error") ) { lime_gl_get_error=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_is_buffer") ) { lime_gl_is_buffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_is_shader") ) { lime_gl_is_shader=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform1f") ) { lime_gl_uniform1f=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform1i") ) { lime_gl_uniform1i=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform2f") ) { lime_gl_uniform2f=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform2i") ) { lime_gl_uniform2i=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform3f") ) { lime_gl_uniform3f=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform3i") ) { lime_gl_uniform3i=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform4f") ) { lime_gl_uniform4f=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform4i") ) { lime_gl_uniform4i=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 18:
+		if (HX_FIELD_EQ(inName,"drawingBufferWidth") ) { drawingBufferWidth=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"defaultFramebuffer") ) { defaultFramebuffer=ioValue.Cast< ::openfl::_legacy::gl::GLFramebuffer >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_blend_func") ) { lime_gl_blend_func=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_color_mask") ) { lime_gl_color_mask=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_depth_func") ) { lime_gl_depth_func=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_depth_mask") ) { lime_gl_depth_mask=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_front_face") ) { lime_gl_front_face=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_is_enabled") ) { lime_gl_is_enabled=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_is_program") ) { lime_gl_is_program=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_is_texture") ) { lime_gl_is_texture=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_line_width") ) { lime_gl_line_width=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_stencil_op") ) { lime_gl_stencil_op=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform1fv") ) { lime_gl_uniform1fv=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform1iv") ) { lime_gl_uniform1iv=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform2fv") ) { lime_gl_uniform2fv=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform2iv") ) { lime_gl_uniform2iv=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform3fv") ) { lime_gl_uniform3fv=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform3iv") ) { lime_gl_uniform3iv=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform4fv") ) { lime_gl_uniform4fv=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform4iv") ) { lime_gl_uniform4iv=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 19:
+		if (HX_FIELD_EQ(inName,"drawingBufferHeight") ) { drawingBufferHeight=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_bind_buffer") ) { lime_gl_bind_buffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_blend_color") ) { lime_gl_blend_color=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_buffer_data") ) { lime_gl_buffer_data=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_clear_color") ) { lime_gl_clear_color=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_clear_depth") ) { lime_gl_clear_depth=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_depth_range") ) { lime_gl_depth_range=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_draw_arrays") ) { lime_gl_draw_arrays=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_uniform") ) { lime_gl_get_uniform=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_read_pixels") ) { lime_gl_read_pixels=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_use_program") ) { lime_gl_use_program=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 20:
+		if (HX_FIELD_EQ(inName,"lime_gl_bind_texture") ) { lime_gl_bind_texture=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_link_program") ) { lime_gl_link_program=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_pixel_storei") ) { lime_gl_pixel_storei=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_stencil_func") ) { lime_gl_stencil_func=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_stencil_mask") ) { lime_gl_stencil_mask=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_tex_image_2d") ) { lime_gl_tex_image_2d=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 21:
+		if (HX_FIELD_EQ(inName,"lime_gl_attach_shader") ) { lime_gl_attach_shader=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_clear_stencil") ) { lime_gl_clear_stencil=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_create_buffer") ) { lime_gl_create_buffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_create_shader") ) { lime_gl_create_shader=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_delete_buffer") ) { lime_gl_delete_buffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_delete_shader") ) { lime_gl_delete_shader=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_detach_shader") ) { lime_gl_detach_shader=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_draw_elements") ) { lime_gl_draw_elements=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_parameter") ) { lime_gl_get_parameter=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_shader_source") ) { lime_gl_shader_source=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 22:
+		if (HX_FIELD_EQ(inName,"lime_gl_active_texture") ) { lime_gl_active_texture=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_blend_equation") ) { lime_gl_blend_equation=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_compile_shader") ) { lime_gl_compile_shader=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_create_program") ) { lime_gl_create_program=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_create_texture") ) { lime_gl_create_texture=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_delete_program") ) { lime_gl_delete_program=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_delete_texture") ) { lime_gl_delete_texture=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_is_framebuffer") ) { lime_gl_is_framebuffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_polygon_offset") ) { lime_gl_polygon_offset=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_tex_parameterf") ) { lime_gl_tex_parameterf=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_tex_parameteri") ) { lime_gl_tex_parameteri=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_uniform_matrix") ) { lime_gl_uniform_matrix=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 23:
+		if (HX_FIELD_EQ(inName,"lime_gl_buffer_sub_data") ) { lime_gl_buffer_sub_data=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_generate_mipmap") ) { lime_gl_generate_mipmap=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_is_renderbuffer") ) { lime_gl_is_renderbuffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_sample_coverage") ) { lime_gl_sample_coverage=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_vertex_attrib1f") ) { lime_gl_vertex_attrib1f=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_vertex_attrib2f") ) { lime_gl_vertex_attrib2f=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_vertex_attrib3f") ) { lime_gl_vertex_attrib3f=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_vertex_attrib4f") ) { lime_gl_vertex_attrib4f=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 24:
+		if (HX_FIELD_EQ(inName,"lime_gl_bind_framebuffer") ) { lime_gl_bind_framebuffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_tex_sub_image_2d") ) { lime_gl_tex_sub_image_2d=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_validate_program") ) { lime_gl_validate_program=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_vertex_attrib1fv") ) { lime_gl_vertex_attrib1fv=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_vertex_attrib2fv") ) { lime_gl_vertex_attrib2fv=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_vertex_attrib3fv") ) { lime_gl_vertex_attrib3fv=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_vertex_attrib4fv") ) { lime_gl_vertex_attrib4fv=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 25:
+		if (HX_FIELD_EQ(inName,"lime_gl_bind_renderbuffer") ) { lime_gl_bind_renderbuffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_copy_tex_image_2d") ) { lime_gl_copy_tex_image_2d=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_active_attrib") ) { lime_gl_get_active_attrib=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_shader_source") ) { lime_gl_get_shader_source=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_tex_parameter") ) { lime_gl_get_tex_parameter=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_vertex_attrib") ) { lime_gl_get_vertex_attrib=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 26:
+		if (HX_FIELD_EQ(inName,"lime_gl_create_framebuffer") ) { lime_gl_create_framebuffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_delete_framebuffer") ) { lime_gl_delete_framebuffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_active_uniform") ) { lime_gl_get_active_uniform=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 27:
+		if (HX_FIELD_EQ(inName,"lime_gl_blend_func_separate") ) { lime_gl_blend_func_separate=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_attrib_location") ) { lime_gl_get_attrib_location=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_shader_info_log") ) { lime_gl_get_shader_info_log=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_stencil_op_separate") ) { lime_gl_stencil_op_separate=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 28:
+		if (HX_FIELD_EQ(inName,"lime_gl_bind_attrib_location") ) { lime_gl_bind_attrib_location=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_create_render_buffer") ) { lime_gl_create_render_buffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_delete_render_buffer") ) { lime_gl_delete_render_buffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_program_info_log") ) { lime_gl_get_program_info_log=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_shader_parameter") ) { lime_gl_get_shader_parameter=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_uniform_location") ) { lime_gl_get_uniform_location=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_renderbuffer_storage") ) { lime_gl_renderbuffer_storage=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 29:
+		if (HX_FIELD_EQ(inName,"lime_gl_copy_tex_sub_image_2d") ) { lime_gl_copy_tex_sub_image_2d=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_framebuffer_texture2D") ) { lime_gl_framebuffer_texture2D=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_buffer_paramerter") ) { lime_gl_get_buffer_paramerter=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_program_parameter") ) { lime_gl_get_program_parameter=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_stencil_func_separate") ) { lime_gl_stencil_func_separate=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_stencil_mask_separate") ) { lime_gl_stencil_mask_separate=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_vertex_attrib_pointer") ) { lime_gl_vertex_attrib_pointer=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 30:
+		if (HX_FIELD_EQ(inName,"lime_gl_get_context_attributes") ) { lime_gl_get_context_attributes=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 31:
+		if (HX_FIELD_EQ(inName,"lime_gl_blend_equation_separate") ) { lime_gl_blend_equation_separate=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_compressed_tex_image_2d") ) { lime_gl_compressed_tex_image_2d=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 32:
+		if (HX_FIELD_EQ(inName,"lime_gl_bind_bitmap_data_texture") ) { lime_gl_bind_bitmap_data_texture=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_check_framebuffer_status") ) { lime_gl_check_framebuffer_status=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_framebuffer_renderbuffer") ) { lime_gl_framebuffer_renderbuffer=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_supported_extensions") ) { lime_gl_get_supported_extensions=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_vertex_attrib_offset") ) { lime_gl_get_vertex_attrib_offset=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 34:
+		if (HX_FIELD_EQ(inName,"lime_gl_enable_vertex_attrib_array") ) { lime_gl_enable_vertex_attrib_array=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 35:
+		if (HX_FIELD_EQ(inName,"lime_gl_compressed_tex_sub_image_2d") ) { lime_gl_compressed_tex_sub_image_2d=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_disable_vertex_attrib_array") ) { lime_gl_disable_vertex_attrib_array=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_render_buffer_parameter") ) { lime_gl_get_render_buffer_parameter=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_gl_get_shader_precision_format") ) { lime_gl_get_shader_precision_format=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 44:
+		if (HX_FIELD_EQ(inName,"lime_gl_get_framebuffer_attachment_parameter") ) { lime_gl_get_framebuffer_attachment_parameter=ioValue.Cast< Dynamic >(); return true; }
+	}
+	return false;
+}
+
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
@@ -6169,7 +6362,7 @@ void GL_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &GL_obj::__GetStatic;
-	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &GL_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);

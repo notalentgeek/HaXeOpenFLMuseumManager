@@ -23,7 +23,7 @@ namespace io{
 
 Void Process_obj::__construct(::String cmd,Array< ::String > args)
 {
-HX_STACK_FRAME("sys.io.Process","new",0x849b4c7a,"sys.io.Process.new","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",100,0xc8ab0a78)
+HX_STACK_FRAME("sys.io.Process","new",0x849b4c7a,"sys.io.Process.new","/usr/share/haxe/std/cpp/_std/sys/io/Process.hx",100,0x2d961692)
 HX_STACK_THIS(this)
 HX_STACK_ARG(cmd,"cmd")
 HX_STACK_ARG(args,"args")
@@ -92,7 +92,7 @@ Dynamic Process_obj::__Create(hx::DynamicArray inArgs)
 
 Void Process_obj::close( ){
 {
-		HX_STACK_FRAME("sys.io.Process","close",0x0a954e52,"sys.io.Process.close","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",115,0xc8ab0a78)
+		HX_STACK_FRAME("sys.io.Process","close",0x0a954e52,"sys.io.Process.close","/usr/share/haxe/std/cpp/_std/sys/io/Process.hx",115,0x2d961692)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(116)
 		Dynamic tmp = this->p;		HX_STACK_VAR(tmp,"tmp");

@@ -246,11 +246,6 @@ Dynamic JoystickEvent_obj::__SetField(const ::String &inName,const Dynamic &inVa
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool JoystickEvent_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void JoystickEvent_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("axis","\xa1","\x1c","\x79","\x40"));
@@ -340,7 +335,7 @@ void JoystickEvent_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &JoystickEvent_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

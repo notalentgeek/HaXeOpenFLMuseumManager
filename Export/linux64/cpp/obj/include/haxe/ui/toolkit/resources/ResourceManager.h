@@ -47,6 +47,11 @@ class HXCPP_CLASS_ATTRIBUTES  ResourceManager_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("ResourceManager","\x1f","\xbb","\x99","\xea"); }
 
+		static ::haxe::ui::toolkit::resources::ResourceManager _instance;
+		static ::haxe::ui::toolkit::resources::ResourceManager instance;
+		static ::haxe::ui::toolkit::resources::ResourceManager get_instance( );
+		static Dynamic get_instance_dyn();
+
 		::haxe::ui::toolkit::resources::IResourceHook resourceHook;
 		virtual bool hasAsset( ::String resouceId);
 		Dynamic hasAsset_dyn();
@@ -65,11 +70,6 @@ class HXCPP_CLASS_ATTRIBUTES  ResourceManager_obj : public hx::Object{
 
 		virtual Void reset( );
 		Dynamic reset_dyn();
-
-		static ::haxe::ui::toolkit::resources::ResourceManager _instance;
-		static ::haxe::ui::toolkit::resources::ResourceManager instance;
-		static ::haxe::ui::toolkit::resources::ResourceManager get_instance( );
-		static Dynamic get_instance_dyn();
 
 };
 

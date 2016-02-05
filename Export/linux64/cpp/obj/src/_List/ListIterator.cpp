@@ -7,7 +7,7 @@ namespace _List{
 
 Void ListIterator_obj::__construct(cpp::ArrayBase head)
 {
-HX_STACK_FRAME("_List.ListIterator","new",0x1ee472af,"_List.ListIterator.new","/usr/lib/haxe/std/List.hx",244,0xd5566cff)
+HX_STACK_FRAME("_List.ListIterator","new",0x1ee472af,"_List.ListIterator.new","/usr/share/haxe/std/List.hx",244,0xe39600a5)
 HX_STACK_THIS(this)
 HX_STACK_ARG(head,"head")
 {
@@ -34,7 +34,7 @@ Dynamic ListIterator_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 bool ListIterator_obj::hasNext( ){
-	HX_STACK_FRAME("_List.ListIterator","hasNext",0x25781b3c,"_List.ListIterator.hasNext","/usr/lib/haxe/std/List.hx",249,0xd5566cff)
+	HX_STACK_FRAME("_List.ListIterator","hasNext",0x25781b3c,"_List.ListIterator.hasNext","/usr/share/haxe/std/List.hx",249,0xe39600a5)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(250)
 	bool tmp = (this->head != null());		HX_STACK_VAR(tmp,"tmp");
@@ -46,7 +46,7 @@ bool ListIterator_obj::hasNext( ){
 HX_DEFINE_DYNAMIC_FUNC0(ListIterator_obj,hasNext,return )
 
 Dynamic ListIterator_obj::next( ){
-	HX_STACK_FRAME("_List.ListIterator","next",0xe8ffe7c4,"_List.ListIterator.next","/usr/lib/haxe/std/List.hx",253,0xd5566cff)
+	HX_STACK_FRAME("_List.ListIterator","next",0xe8ffe7c4,"_List.ListIterator.next","/usr/share/haxe/std/List.hx",253,0xe39600a5)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(254)
 	Dynamic tmp = this->head->__GetItem((int)0);		HX_STACK_VAR(tmp,"tmp");
@@ -112,11 +112,6 @@ Dynamic ListIterator_obj::__SetField(const ::String &inName,const Dynamic &inVal
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool ListIterator_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void ListIterator_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("head","\x20","\x29","\x0b","\x45"));
@@ -161,7 +156,7 @@ void ListIterator_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &ListIterator_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

@@ -129,11 +129,6 @@ Dynamic ErrorEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool ErrorEvent_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void ErrorEvent_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("errorID","\xa3","\x8d","\x0a","\xea"));
@@ -184,7 +179,7 @@ void ErrorEvent_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &ErrorEvent_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

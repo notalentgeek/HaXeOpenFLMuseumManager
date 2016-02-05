@@ -40,6 +40,18 @@ class HXCPP_CLASS_ATTRIBUTES  Socket_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Socket","\xd3","\xff","\xda","\x5a"); }
 
 		static void __boot();
+		static Dynamic socket_new;
+		static Dynamic &socket_new_dyn() { return socket_new;}
+		static Dynamic socket_close;
+		static Dynamic &socket_close_dyn() { return socket_close;}
+		static Dynamic socket_write;
+		static Dynamic &socket_write_dyn() { return socket_write;}
+		static Dynamic socket_connect;
+		static Dynamic &socket_connect_dyn() { return socket_connect;}
+		static Dynamic socket_set_timeout;
+		static Dynamic &socket_set_timeout_dyn() { return socket_set_timeout;}
+		static Dynamic socket_shutdown;
+		static Dynamic &socket_shutdown_dyn() { return socket_shutdown;}
 		Dynamic __s;
 		::haxe::io::Input input;
 		::haxe::io::Output output;
@@ -58,18 +70,6 @@ class HXCPP_CLASS_ATTRIBUTES  Socket_obj : public hx::Object{
 		virtual Void setTimeout( Float timeout);
 		Dynamic setTimeout_dyn();
 
-		static Dynamic socket_new;
-		static Dynamic &socket_new_dyn() { return socket_new;}
-		static Dynamic socket_close;
-		static Dynamic &socket_close_dyn() { return socket_close;}
-		static Dynamic socket_write;
-		static Dynamic &socket_write_dyn() { return socket_write;}
-		static Dynamic socket_connect;
-		static Dynamic &socket_connect_dyn() { return socket_connect;}
-		static Dynamic socket_set_timeout;
-		static Dynamic &socket_set_timeout_dyn() { return socket_set_timeout;}
-		static Dynamic socket_shutdown;
-		static Dynamic &socket_shutdown_dyn() { return socket_shutdown;}
 };
 
 } // end namespace sys

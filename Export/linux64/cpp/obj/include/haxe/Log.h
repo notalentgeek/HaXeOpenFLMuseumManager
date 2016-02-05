@@ -26,6 +26,7 @@ class HXCPP_CLASS_ATTRIBUTES  Log_obj : public hx::Object{
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Log","\x64","\x0c","\x3a","\x00"); }
 

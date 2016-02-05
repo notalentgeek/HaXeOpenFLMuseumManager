@@ -62,10 +62,10 @@ class HXCPP_CLASS_ATTRIBUTES  MenuEvent_obj : public ::openfl::_legacy::events::
 		::String __ToString() const { return HX_HCSTRING("MenuEvent","\xdb","\x11","\x70","\xb2"); }
 
 		static void __boot();
-		::haxe::ui::toolkit::controls::MenuItem menuItem;
-		::haxe::ui::toolkit::controls::Menu menu;
 		static ::String SELECT;
 		static ::String OPEN;
+		::haxe::ui::toolkit::controls::MenuItem menuItem;
+		::haxe::ui::toolkit::controls::Menu menu;
 };
 
 } // end namespace haxe

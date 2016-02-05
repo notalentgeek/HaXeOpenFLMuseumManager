@@ -24,7 +24,7 @@ namespace _Socket{
 
 Void SocketInput_obj::__construct(Dynamic s)
 {
-HX_STACK_FRAME("sys.net._Socket.SocketInput","new",0x5fe92abb,"sys.net._Socket.SocketInput.new","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",31,0x52423539)
+HX_STACK_FRAME("sys.net._Socket.SocketInput","new",0x5fe92abb,"sys.net._Socket.SocketInput.new","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",31,0xb72d4153)
 HX_STACK_THIS(this)
 HX_STACK_ARG(s,"s")
 {
@@ -49,7 +49,7 @@ Dynamic SocketInput_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 int SocketInput_obj::readByte( ){
-	HX_STACK_FRAME("sys.net._Socket.SocketInput","readByte",0xee593543,"sys.net._Socket.SocketInput.readByte","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",34,0x52423539)
+	HX_STACK_FRAME("sys.net._Socket.SocketInput","readByte",0xee593543,"sys.net._Socket.SocketInput.readByte","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",34,0xb72d4153)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(35)
 	int tmp;		HX_STACK_VAR(tmp,"tmp");
@@ -105,7 +105,7 @@ int SocketInput_obj::readByte( ){
 
 
 int SocketInput_obj::readBytes( ::haxe::io::Bytes buf,int pos,int len){
-	HX_STACK_FRAME("sys.net._Socket.SocketInput","readBytes",0x9fb565d0,"sys.net._Socket.SocketInput.readBytes","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",47,0x52423539)
+	HX_STACK_FRAME("sys.net._Socket.SocketInput","readBytes",0x9fb565d0,"sys.net._Socket.SocketInput.readBytes","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",47,0xb72d4153)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(buf,"buf")
 	HX_STACK_ARG(pos,"pos")
@@ -178,7 +178,7 @@ int SocketInput_obj::readBytes( ::haxe::io::Bytes buf,int pos,int len){
 
 Void SocketInput_obj::close( ){
 {
-		HX_STACK_FRAME("sys.net._Socket.SocketInput","close",0xbbc7fed3,"sys.net._Socket.SocketInput.close","/usr/lib/haxe/std/cpp/_std/sys/net/Socket.hx",64,0x52423539)
+		HX_STACK_FRAME("sys.net._Socket.SocketInput","close",0xbbc7fed3,"sys.net._Socket.SocketInput.close","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",64,0xb72d4153)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(65)
 		this->super::close();

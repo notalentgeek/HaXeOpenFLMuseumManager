@@ -42,10 +42,10 @@ class HXCPP_CLASS_ATTRIBUTES  UIProcessor_obj : public ::haxe::ui::toolkit::core
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("UIProcessor","\x5e","\x68","\xf4","\x13"); }
 
-		virtual Dynamic process( ::Xml node);
-
 		static ::haxe::ui::toolkit::core::interfaces::IDisplayObject createComponent( ::String className,::Xml config);
 		static Dynamic createComponent_dyn();
+
+		virtual Dynamic process( ::Xml node);
 
 };
 

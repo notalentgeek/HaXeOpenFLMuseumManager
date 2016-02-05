@@ -32,7 +32,7 @@ Dynamic Output_obj::__Create(hx::DynamicArray inArgs)
 
 Void Output_obj::writeByte( int c){
 {
-		HX_STACK_FRAME("haxe.io.Output","writeByte",0xb4fe513a,"haxe.io.Output.writeByte","/usr/lib/haxe/std/haxe/io/Output.hx",47,0xbdd9ff1c)
+		HX_STACK_FRAME("haxe.io.Output","writeByte",0xb4fe513a,"haxe.io.Output.writeByte","/usr/share/haxe/std/haxe/io/Output.hx",47,0xf8a8de42)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(c,"c")
 		HX_STACK_LINE(47)
@@ -45,7 +45,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Output_obj,writeByte,(void))
 
 int Output_obj::writeBytes( ::haxe::io::Bytes s,int pos,int len){
-	HX_STACK_FRAME("haxe.io.Output","writeBytes",0xa988c1f9,"haxe.io.Output.writeBytes","/usr/lib/haxe/std/haxe/io/Output.hx",57,0xbdd9ff1c)
+	HX_STACK_FRAME("haxe.io.Output","writeBytes",0xa988c1f9,"haxe.io.Output.writeBytes","/usr/share/haxe/std/haxe/io/Output.hx",57,0xf8a8de42)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(pos,"pos")
@@ -126,7 +126,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Output_obj,writeBytes,return )
 
 Void Output_obj::close( ){
 {
-		HX_STACK_FRAME("haxe.io.Output","close",0xe726bfeb,"haxe.io.Output.close","/usr/lib/haxe/std/haxe/io/Output.hx",91,0xbdd9ff1c)
+		HX_STACK_FRAME("haxe.io.Output","close",0xe726bfeb,"haxe.io.Output.close","/usr/share/haxe/std/haxe/io/Output.hx",91,0xf8a8de42)
 		HX_STACK_THIS(this)
 	}
 return null();
@@ -137,7 +137,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Output_obj,close,(void))
 
 Void Output_obj::write( ::haxe::io::Bytes s){
 {
-		HX_STACK_FRAME("haxe.io.Output","write",0x6f1d1512,"haxe.io.Output.write","/usr/lib/haxe/std/haxe/io/Output.hx",104,0xbdd9ff1c)
+		HX_STACK_FRAME("haxe.io.Output","write",0x6f1d1512,"haxe.io.Output.write","/usr/share/haxe/std/haxe/io/Output.hx",104,0xf8a8de42)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(s,"s")
 		HX_STACK_LINE(105)
@@ -186,7 +186,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Output_obj,write,(void))
 
 Void Output_obj::writeFullBytes( ::haxe::io::Bytes s,int pos,int len){
 {
-		HX_STACK_FRAME("haxe.io.Output","writeFullBytes",0xc2c420ea,"haxe.io.Output.writeFullBytes","/usr/lib/haxe/std/haxe/io/Output.hx",121,0xbdd9ff1c)
+		HX_STACK_FRAME("haxe.io.Output","writeFullBytes",0xc2c420ea,"haxe.io.Output.writeFullBytes","/usr/share/haxe/std/haxe/io/Output.hx",121,0xf8a8de42)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(s,"s")
 		HX_STACK_ARG(pos,"pos")
@@ -226,7 +226,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Output_obj,writeFullBytes,(void))
 
 Void Output_obj::prepare( int nbytes){
 {
-		HX_STACK_FRAME("haxe.io.Output","prepare",0xcd01ec7a,"haxe.io.Output.prepare","/usr/lib/haxe/std/haxe/io/Output.hx",242,0xbdd9ff1c)
+		HX_STACK_FRAME("haxe.io.Output","prepare",0xcd01ec7a,"haxe.io.Output.prepare","/usr/share/haxe/std/haxe/io/Output.hx",242,0xf8a8de42)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(nbytes,"nbytes")
 	}

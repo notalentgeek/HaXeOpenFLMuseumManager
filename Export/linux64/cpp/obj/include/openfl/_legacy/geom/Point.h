@@ -30,10 +30,18 @@ class HXCPP_CLASS_ATTRIBUTES  Point_obj : public hx::Object{
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Point","\x30","\x24","\xbd","\x59"); }
+
+		static Float distance( ::openfl::_legacy::geom::Point pt1,::openfl::_legacy::geom::Point pt2);
+		static Dynamic distance_dyn();
+
+		static ::openfl::_legacy::geom::Point interpolate( ::openfl::_legacy::geom::Point pt1,::openfl::_legacy::geom::Point pt2,Float f);
+		static Dynamic interpolate_dyn();
+
+		static ::openfl::_legacy::geom::Point polar( Float len,Float angle);
+		static Dynamic polar_dyn();
 
 		Float length;
 		Float x;
@@ -67,15 +75,6 @@ class HXCPP_CLASS_ATTRIBUTES  Point_obj : public hx::Object{
 
 		virtual Float get_length( );
 		Dynamic get_length_dyn();
-
-		static Float distance( ::openfl::_legacy::geom::Point pt1,::openfl::_legacy::geom::Point pt2);
-		static Dynamic distance_dyn();
-
-		static ::openfl::_legacy::geom::Point interpolate( ::openfl::_legacy::geom::Point pt1,::openfl::_legacy::geom::Point pt2,Float f);
-		static Dynamic interpolate_dyn();
-
-		static ::openfl::_legacy::geom::Point polar( Float len,Float angle);
-		static Dynamic polar_dyn();
 
 };
 

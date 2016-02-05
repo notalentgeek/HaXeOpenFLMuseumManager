@@ -9,7 +9,7 @@
 
 Void StringBuf_obj::__construct()
 {
-HX_STACK_FRAME("StringBuf","new",0xaaa8f4b4,"StringBuf.new","/usr/lib/haxe/std/cpp/_std/StringBuf.hx",30,0x629ed4da)
+HX_STACK_FRAME("StringBuf","new",0xaaa8f4b4,"StringBuf.new","/usr/share/haxe/std/cpp/_std/StringBuf.hx",30,0x59033f00)
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(30)
@@ -34,7 +34,7 @@ Dynamic StringBuf_obj::__Create(hx::DynamicArray inArgs)
 
 Void StringBuf_obj::add( Dynamic x){
 {
-		HX_STACK_FRAME("StringBuf","add",0xaa9f1675,"StringBuf.add","/usr/lib/haxe/std/cpp/_std/StringBuf.hx",40,0x629ed4da)
+		HX_STACK_FRAME("StringBuf","add",0xaa9f1675,"StringBuf.add","/usr/share/haxe/std/cpp/_std/StringBuf.hx",40,0x59033f00)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(x,"x")
 		HX_STACK_LINE(41)
@@ -88,11 +88,6 @@ Dynamic StringBuf_obj::__SetField(const ::String &inName,const Dynamic &inValue,
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool StringBuf_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void StringBuf_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("b","\x62","\x00","\x00","\x00"));
@@ -134,7 +129,7 @@ void StringBuf_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &StringBuf_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

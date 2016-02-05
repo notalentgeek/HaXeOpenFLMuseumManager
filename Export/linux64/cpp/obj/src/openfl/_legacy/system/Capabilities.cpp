@@ -607,6 +607,94 @@ bool Capabilities_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx
 	return false;
 }
 
+bool Capabilities_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 2:
+		if (HX_FIELD_EQ(inName,"os") ) { os=ioValue.Cast< ::String >(); return true; }
+		break;
+	case 6:
+		if (HX_FIELD_EQ(inName,"hasIME") ) { hasIME=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"hasMP3") ) { hasMP3=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"hasTLS") ) { hasTLS=ioValue.Cast< bool >(); return true; }
+		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"version") ) { version=ioValue.Cast< ::String >(); return true; }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"hasAudio") ) { hasAudio=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"language") ) { language=ioValue.Cast< ::String >(); return true; }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"screenDPI") ) { screenDPI=ioValue.Cast< Float >(); return true; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"isDebugger") ) { isDebugger=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"playerType") ) { playerType=ioValue.Cast< ::String >(); return true; }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"hasPrinting") ) { hasPrinting=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"maxLevelIDC") ) { maxLevelIDC=ioValue.Cast< int >(); return true; }
+		if (HX_FIELD_EQ(inName,"screenColor") ) { screenColor=ioValue.Cast< ::String >(); return true; }
+		if (HX_FIELD_EQ(inName,"screenModes") ) { screenModes=ioValue.Cast< Array< ::Dynamic > >(); return true; }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"manufacturer") ) { manufacturer=ioValue.Cast< ::String >(); return true; }
+		if (HX_FIELD_EQ(inName,"serverString") ) { serverString=ioValue.Cast< ::String >(); return true; }
+		break;
+	case 15:
+		if (HX_FIELD_EQ(inName,"cpuArchitecture") ) { cpuArchitecture=ioValue.Cast< ::String >(); return true; }
+		if (HX_FIELD_EQ(inName,"hasAudioEncoder") ) { hasAudioEncoder=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"hasVideoEncoder") ) { hasVideoEncoder=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"touchscreenType") ) { touchscreenType=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 16:
+		if (HX_FIELD_EQ(inName,"hasAccessibility") ) { hasAccessibility=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"hasEmbeddedVideo") ) { hasEmbeddedVideo=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"pixelAspectRatio") ) { pixelAspectRatio=ioValue.Cast< Float >(); return true; }
+		break;
+	case 17:
+		if (HX_FIELD_EQ(inName,"avHardwareDisable") ) { avHardwareDisable=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"hasScreenPlayback") ) { hasScreenPlayback=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"hasStreamingAudio") ) { hasStreamingAudio=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"hasStreamingVideo") ) { hasStreamingVideo=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"screenResolutionX") ) { screenResolutionX=ioValue.Cast< Float >(); return true; }
+		if (HX_FIELD_EQ(inName,"screenResolutionY") ) { screenResolutionY=ioValue.Cast< Float >(); return true; }
+		if (HX_FIELD_EQ(inName,"screenResolutions") ) { screenResolutions=ioValue.Cast< Array< ::Dynamic > >(); return true; }
+		break;
+	case 18:
+		if (HX_FIELD_EQ(inName,"hasScreenBroadcast") ) { hasScreenBroadcast=ioValue.Cast< bool >(); return true; }
+		break;
+	case 19:
+		if (HX_FIELD_EQ(inName,"isEmbeddedInAcrobat") ) { isEmbeddedInAcrobat=ioValue.Cast< bool >(); return true; }
+		break;
+	case 20:
+		if (HX_FIELD_EQ(inName,"localFileReadDisable") ) { localFileReadDisable=ioValue.Cast< bool >(); return true; }
+		break;
+	case 22:
+		if (HX_FIELD_EQ(inName,"supports32BitProcesses") ) { supports32BitProcesses=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"supports64BitProcesses") ) { supports64BitProcesses=ioValue.Cast< bool >(); return true; }
+		break;
+	case 30:
+		if (HX_FIELD_EQ(inName,"lime_capabilities_get_language") ) { lime_capabilities_get_language=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 32:
+		if (HX_FIELD_EQ(inName,"lime_capabilities_get_screen_dpi") ) { lime_capabilities_get_screen_dpi=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 34:
+		if (HX_FIELD_EQ(inName,"lime_capabilities_get_screen_modes") ) { lime_capabilities_get_screen_modes=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 40:
+		if (HX_FIELD_EQ(inName,"lime_capabilities_get_pixel_aspect_ratio") ) { lime_capabilities_get_pixel_aspect_ratio=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_capabilities_get_screen_resolutions") ) { lime_capabilities_get_screen_resolutions=ioValue.Cast< Dynamic >(); return true; }
+		break;
+	case 41:
+		if (HX_FIELD_EQ(inName,"lime_capabilities_get_screen_resolution_x") ) { lime_capabilities_get_screen_resolution_x=ioValue.Cast< Dynamic >(); return true; }
+		if (HX_FIELD_EQ(inName,"lime_capabilities_get_screen_resolution_y") ) { lime_capabilities_get_screen_resolution_y=ioValue.Cast< Dynamic >(); return true; }
+	}
+	return false;
+}
+
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
@@ -816,7 +904,7 @@ void Capabilities_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &Capabilities_obj::__GetStatic;
-	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &Capabilities_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);

@@ -46,7 +46,6 @@ class HXCPP_CLASS_ATTRIBUTES  RTF_obj : public ::haxe::ui::toolkit::controls::Te
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("RTF","\x44","\x82","\x3e","\x00"); }

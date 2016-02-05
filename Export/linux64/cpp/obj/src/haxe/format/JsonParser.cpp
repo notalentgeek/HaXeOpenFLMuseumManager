@@ -17,7 +17,7 @@ namespace format{
 
 Void JsonParser_obj::__construct(::String str)
 {
-HX_STACK_FRAME("haxe.format.JsonParser","new",0xa017eec8,"haxe.format.JsonParser.new","/usr/lib/haxe/std/haxe/format/JsonParser.hx",49,0x2ab73747)
+HX_STACK_FRAME("haxe.format.JsonParser","new",0xa017eec8,"haxe.format.JsonParser.new","/usr/share/haxe/std/haxe/format/JsonParser.hx",49,0x7dd2ac6d)
 HX_STACK_THIS(this)
 HX_STACK_ARG(str,"str")
 {
@@ -44,7 +44,7 @@ Dynamic JsonParser_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 Dynamic JsonParser_obj::parseRec( ){
-	HX_STACK_FRAME("haxe.format.JsonParser","parseRec",0xda258b75,"haxe.format.JsonParser.parseRec","/usr/lib/haxe/std/haxe/format/JsonParser.hx",55,0x2ab73747)
+	HX_STACK_FRAME("haxe.format.JsonParser","parseRec",0xda258b75,"haxe.format.JsonParser.parseRec","/usr/share/haxe/std/haxe/format/JsonParser.hx",55,0x7dd2ac6d)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(55)
 	while((true)){
@@ -75,7 +75,7 @@ Dynamic JsonParser_obj::parseRec( ){
 			case (int)123: {
 				struct _Function_3_1{
 					inline static Dynamic Block( ){
-						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/lib/haxe/std/haxe/format/JsonParser.hx",61,0x2ab73747)
+						HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/haxe/format/JsonParser.hx",61,0x7dd2ac6d)
 						{
 							hx::Anon __result = hx::Anon_obj::Create();
 							return __result;
@@ -996,7 +996,7 @@ Dynamic JsonParser_obj::parseRec( ){
 HX_DEFINE_DYNAMIC_FUNC0(JsonParser_obj,parseRec,return )
 
 ::String JsonParser_obj::parseString( ){
-	HX_STACK_FRAME("haxe.format.JsonParser","parseString",0x8c919bcc,"haxe.format.JsonParser.parseString","/usr/lib/haxe/std/haxe/format/JsonParser.hx",136,0x2ab73747)
+	HX_STACK_FRAME("haxe.format.JsonParser","parseString",0x8c919bcc,"haxe.format.JsonParser.parseString","/usr/share/haxe/std/haxe/format/JsonParser.hx",136,0x7dd2ac6d)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(137)
 	int tmp = this->pos;		HX_STACK_VAR(tmp,"tmp");
@@ -1410,7 +1410,7 @@ HX_DEFINE_DYNAMIC_FUNC0(JsonParser_obj,parseString,return )
 
 Void JsonParser_obj::invalidChar( ){
 {
-		HX_STACK_FRAME("haxe.format.JsonParser","invalidChar",0xa9f373d5,"haxe.format.JsonParser.invalidChar","/usr/lib/haxe/std/haxe/format/JsonParser.hx",247,0x2ab73747)
+		HX_STACK_FRAME("haxe.format.JsonParser","invalidChar",0xa9f373d5,"haxe.format.JsonParser.invalidChar","/usr/share/haxe/std/haxe/format/JsonParser.hx",247,0x7dd2ac6d)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(248)
 		(this->pos)--;
@@ -1439,7 +1439,7 @@ HX_DEFINE_DYNAMIC_FUNC0(JsonParser_obj,invalidChar,(void))
 
 Void JsonParser_obj::invalidNumber( int start){
 {
-		HX_STACK_FRAME("haxe.format.JsonParser","invalidNumber",0x8e9d1988,"haxe.format.JsonParser.invalidNumber","/usr/lib/haxe/std/haxe/format/JsonParser.hx",252,0x2ab73747)
+		HX_STACK_FRAME("haxe.format.JsonParser","invalidNumber",0x8e9d1988,"haxe.format.JsonParser.invalidNumber","/usr/share/haxe/std/haxe/format/JsonParser.hx",252,0x7dd2ac6d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(start,"start")
 		HX_STACK_LINE(253)
@@ -1518,11 +1518,6 @@ Dynamic JsonParser_obj::__SetField(const ::String &inName,const Dynamic &inValue
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool JsonParser_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void JsonParser_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("str","\xb1","\xa8","\x57","\x00"));
@@ -1569,7 +1564,7 @@ void JsonParser_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &JsonParser_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

@@ -11,7 +11,7 @@ namespace ds{
 
 Void GenericCell_hscript_Token_obj::__construct(::hscript::Token elt,::haxe::ds::GenericCell_hscript_Token next)
 {
-HX_STACK_FRAME("haxe.ds.GenericCell_hscript_Token","new",0x1c0e2ea2,"haxe.ds.GenericCell_hscript_Token.new","/usr/lib/haxe/std/haxe/ds/GenericStack.hx",30,0x9a82a155)
+HX_STACK_FRAME("haxe.ds.GenericCell_hscript_Token","new",0x1c0e2ea2,"haxe.ds.GenericCell_hscript_Token.new","/usr/share/haxe/std/haxe/ds/GenericStack.hx",30,0x427260fb)
 HX_STACK_THIS(this)
 HX_STACK_ARG(elt,"elt")
 HX_STACK_ARG(next,"next")
@@ -81,11 +81,6 @@ Dynamic GenericCell_hscript_Token_obj::__SetField(const ::String &inName,const D
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool GenericCell_hscript_Token_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void GenericCell_hscript_Token_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("elt","\x2d","\x02","\x4d","\x00"));
@@ -128,7 +123,7 @@ void GenericCell_hscript_Token_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &GenericCell_hscript_Token_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

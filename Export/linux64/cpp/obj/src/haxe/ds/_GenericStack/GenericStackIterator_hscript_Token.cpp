@@ -15,7 +15,7 @@ namespace _GenericStack{
 
 Void GenericStackIterator_hscript_Token_obj::__construct(::haxe::ds::GenericCell_hscript_Token head)
 {
-HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","new",0xbf5d5a94,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.new","/usr/lib/haxe/std/haxe/ds/GenericStack.hx",40,0x9a82a155)
+HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","new",0xbf5d5a94,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.new","/usr/share/haxe/std/haxe/ds/GenericStack.hx",40,0x427260fb)
 HX_STACK_THIS(this)
 HX_STACK_ARG(head,"head")
 {
@@ -40,7 +40,7 @@ Dynamic GenericStackIterator_hscript_Token_obj::__Create(hx::DynamicArray inArgs
 	return _result_;}
 
 bool GenericStackIterator_hscript_Token_obj::hasNext( ){
-	HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","hasNext",0xccb359a1,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.hasNext","/usr/lib/haxe/std/haxe/ds/GenericStack.hx",37,0x9a82a155)
+	HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","hasNext",0xccb359a1,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.hasNext","/usr/share/haxe/std/haxe/ds/GenericStack.hx",37,0x427260fb)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(37)
 	::haxe::ds::GenericCell_hscript_Token tmp = this->current;		HX_STACK_VAR(tmp,"tmp");
@@ -54,7 +54,7 @@ bool GenericStackIterator_hscript_Token_obj::hasNext( ){
 HX_DEFINE_DYNAMIC_FUNC0(GenericStackIterator_hscript_Token_obj,hasNext,return )
 
 ::hscript::Token GenericStackIterator_hscript_Token_obj::next( ){
-	HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","next",0xb251e83f,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.next","/usr/lib/haxe/std/haxe/ds/GenericStack.hx",38,0x9a82a155)
+	HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","next",0xb251e83f,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.next","/usr/share/haxe/std/haxe/ds/GenericStack.hx",38,0x427260fb)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(38)
 	::haxe::ds::GenericCell_hscript_Token tmp = this->current;		HX_STACK_VAR(tmp,"tmp");
@@ -114,11 +114,6 @@ Dynamic GenericStackIterator_hscript_Token_obj::__SetField(const ::String &inNam
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool GenericStackIterator_hscript_Token_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void GenericStackIterator_hscript_Token_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("current","\x39","\x9c","\xe3","\xcb"));
@@ -160,7 +155,7 @@ void GenericStackIterator_hscript_Token_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &GenericStackIterator_hscript_Token_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

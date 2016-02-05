@@ -37,6 +37,7 @@ class HXCPP_CLASS_ATTRIBUTES  Actuate_obj : public hx::Object{
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Actuate","\xef","\x20","\x63","\x3c"); }
 

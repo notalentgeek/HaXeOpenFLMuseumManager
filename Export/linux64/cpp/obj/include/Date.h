@@ -27,10 +27,18 @@ class HXCPP_CLASS_ATTRIBUTES  Date_obj : public hx::Object{
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Date","\x4e","\x82","\x3c","\x2d"); }
+
+		static ::Date now( );
+		static Dynamic now_dyn();
+
+		static ::Date fromTime( Float t);
+		static Dynamic fromTime_dyn();
+
+		static ::Date fromString( ::String s);
+		static Dynamic fromString_dyn();
 
 		Float mSeconds;
 		virtual Float getTime( );
@@ -56,15 +64,6 @@ class HXCPP_CLASS_ATTRIBUTES  Date_obj : public hx::Object{
 
 		virtual int getDay( );
 		Dynamic getDay_dyn();
-
-		static ::Date now( );
-		static Dynamic now_dyn();
-
-		static ::Date fromTime( Float t);
-		static Dynamic fromTime_dyn();
-
-		static ::Date fromString( ::String s);
-		static Dynamic fromString_dyn();
 
 };
 

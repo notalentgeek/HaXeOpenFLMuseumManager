@@ -20,12 +20,9 @@ class HXCPP_CLASS_ATTRIBUTES  IXMLProcessor_obj : public hx::Interface{
 		typedef IXMLProcessor_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
 		virtual Dynamic process( ::Xml node)=0;
-		virtual Dynamic process_dyn()=0;
+virtual Dynamic process_dyn()=0;
 };
 
-#define DELEGATE_haxe_ui_toolkit_core_xml_IXMLProcessor \
-virtual Dynamic process( ::Xml node) { return mDelegate->process(node);}  \
-virtual Dynamic process_dyn() { return mDelegate->process_dyn();}  \
 
 
 template<typename IMPL>
@@ -37,7 +34,8 @@ class IXMLProcessor_delegate_ : public IXMLProcessor_obj
 		IXMLProcessor_delegate_(IMPL *inDelegate) : mDelegate(inDelegate) {}
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
-		DELEGATE_haxe_ui_toolkit_core_xml_IXMLProcessor
+		Dynamic process( ::Xml node) { return mDelegate->process(node);}
+		Dynamic process_dyn() { return mDelegate->process_dyn();}
 };
 
 } // end namespace haxe

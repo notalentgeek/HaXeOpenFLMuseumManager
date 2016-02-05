@@ -45,6 +45,27 @@ class HXCPP_CLASS_ATTRIBUTES  URLLoader_obj : public ::openfl::_legacy::events::
 		::String __ToString() const { return HX_HCSTRING("URLLoader","\xc2","\x68","\xb3","\x41"); }
 
 		static void __boot();
+		static int urlInvalid;
+		static int urlInit;
+		static int urlLoading;
+		static int urlComplete;
+		static int urlError;
+		static cpp::ArrayBase eventsQueue;
+		static bool hasActive( );
+		static Dynamic hasActive_dyn();
+
+		static Void initialize( ::String caCertFilePath);
+		static Dynamic initialize_dyn();
+
+		static bool __loadPending( );
+		static Dynamic __loadPending_dyn();
+
+		static Void enqueueEvent( ::openfl::_legacy::net::URLLoader loader,::openfl::_legacy::events::Event event);
+		static Dynamic enqueueEvent_dyn();
+
+		static Void __pollData( );
+		static Dynamic __pollData_dyn();
+
 		int bytesLoaded;
 		int bytesTotal;
 		Dynamic data;
@@ -76,27 +97,6 @@ class HXCPP_CLASS_ATTRIBUTES  URLLoader_obj : public ::openfl::_legacy::events::
 
 		virtual Void __dataComplete( );
 		Dynamic __dataComplete_dyn();
-
-		static int urlInvalid;
-		static int urlInit;
-		static int urlLoading;
-		static int urlComplete;
-		static int urlError;
-		static cpp::ArrayBase eventsQueue;
-		static bool hasActive( );
-		static Dynamic hasActive_dyn();
-
-		static Void initialize( ::String caCertFilePath);
-		static Dynamic initialize_dyn();
-
-		static bool __loadPending( );
-		static Dynamic __loadPending_dyn();
-
-		static Void enqueueEvent( ::openfl::_legacy::net::URLLoader loader,::openfl::_legacy::events::Event event);
-		static Dynamic enqueueEvent_dyn();
-
-		static Void __pollData( );
-		static Dynamic __pollData_dyn();
 
 };
 

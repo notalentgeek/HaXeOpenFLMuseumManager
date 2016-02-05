@@ -39,6 +39,10 @@ class HXCPP_CLASS_ATTRIBUTES  Process_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Process","\x4f","\xca","\x9b","\xbe"); }
 
 		static void __boot();
+		static Dynamic _run;
+		static Dynamic &_run_dyn() { return _run;}
+		static Dynamic _close;
+		static Dynamic &_close_dyn() { return _close;}
 		Dynamic p;
 		::haxe::io::Input _stdout;
 		::haxe::io::Input _stderr;
@@ -46,10 +50,6 @@ class HXCPP_CLASS_ATTRIBUTES  Process_obj : public hx::Object{
 		virtual Void close( );
 		Dynamic close_dyn();
 
-		static Dynamic _run;
-		static Dynamic &_run_dyn() { return _run;}
-		static Dynamic _close;
-		static Dynamic &_close_dyn() { return _close;}
 };
 
 } // end namespace sys

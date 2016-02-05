@@ -56,6 +56,8 @@ class HXCPP_CLASS_ATTRIBUTES  DataSource_obj : public ::openfl::_legacy::events:
 		::String __ToString() const { return HX_HCSTRING("DataSource","\xc5","\x7a","\x84","\x14"); }
 
 		static void __boot();
+		static int SAFE_NUM;
+		static int clsId;
 		::Xml config;
 		::Xml _config;
 		::String _id;
@@ -154,8 +156,6 @@ class HXCPP_CLASS_ATTRIBUTES  DataSource_obj : public ::openfl::_legacy::events:
 		virtual int getObjectId( Dynamic obj);
 		Dynamic getObjectId_dyn();
 
-		static int SAFE_NUM;
-		static int clsId;
 };
 
 } // end namespace haxe

@@ -20,16 +20,11 @@ class HXCPP_CLASS_ATTRIBUTES  IDataComponent_obj : public hx::Interface{
 		typedef IDataComponent_obj OBJ_;
 		HX_DO_INTERFACE_RTTI;
 		virtual ::haxe::ui::toolkit::data::IDataSource get_dataSource( )=0;
-		virtual Dynamic get_dataSource_dyn()=0;
+virtual Dynamic get_dataSource_dyn()=0;
 		virtual ::haxe::ui::toolkit::data::IDataSource set_dataSource( ::haxe::ui::toolkit::data::IDataSource value)=0;
-		virtual Dynamic set_dataSource_dyn()=0;
+virtual Dynamic set_dataSource_dyn()=0;
 };
 
-#define DELEGATE_haxe_ui_toolkit_core_interfaces_IDataComponent \
-virtual ::haxe::ui::toolkit::data::IDataSource get_dataSource( ) { return mDelegate->get_dataSource();}  \
-virtual Dynamic get_dataSource_dyn() { return mDelegate->get_dataSource_dyn();}  \
-virtual ::haxe::ui::toolkit::data::IDataSource set_dataSource( ::haxe::ui::toolkit::data::IDataSource value) { return mDelegate->set_dataSource(value);}  \
-virtual Dynamic set_dataSource_dyn() { return mDelegate->set_dataSource_dyn();}  \
 
 
 template<typename IMPL>
@@ -41,7 +36,10 @@ class IDataComponent_delegate_ : public IDataComponent_obj
 		IDataComponent_delegate_(IMPL *inDelegate) : mDelegate(inDelegate) {}
 		hx::Object *__GetRealObject() { return mDelegate; }
 		void __Visit(HX_VISIT_PARAMS) { HX_VISIT_OBJECT(mDelegate); }
-		DELEGATE_haxe_ui_toolkit_core_interfaces_IDataComponent
+		::haxe::ui::toolkit::data::IDataSource get_dataSource( ) { return mDelegate->get_dataSource();}
+		Dynamic get_dataSource_dyn() { return mDelegate->get_dataSource_dyn();}
+		::haxe::ui::toolkit::data::IDataSource set_dataSource( ::haxe::ui::toolkit::data::IDataSource value) { return mDelegate->set_dataSource(value);}
+		Dynamic set_dataSource_dyn() { return mDelegate->set_dataSource_dyn();}
 };
 
 } // end namespace haxe

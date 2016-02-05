@@ -11,7 +11,7 @@ namespace ds{
 
 Void StringMap_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ds.StringMap","new",0x0f13f0c6,"haxe.ds.StringMap.new","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",51,0x5168f5a8)
+HX_STACK_FRAME("haxe.ds.StringMap","new",0x0f13f0c6,"haxe.ds.StringMap.new","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",51,0x911cf5ce)
 HX_STACK_THIS(this)
 {
 }
@@ -41,7 +41,7 @@ StringMap_obj::operator ::haxe::IMap_obj *()
 	{ return new ::haxe::IMap_delegate_< StringMap_obj >(this); }
 Void StringMap_obj::set( ::String key,Dynamic value){
 {
-		HX_STACK_FRAME("haxe.ds.StringMap","set",0x0f17bc08,"haxe.ds.StringMap.set","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",54,0x5168f5a8)
+		HX_STACK_FRAME("haxe.ds.StringMap","set",0x0f17bc08,"haxe.ds.StringMap.set","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",54,0x911cf5ce)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(key,"key")
 		HX_STACK_ARG(value,"value")
@@ -55,7 +55,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC2(StringMap_obj,set,(void))
 
 Dynamic StringMap_obj::get( ::String key){
-	HX_STACK_FRAME("haxe.ds.StringMap","get",0x0f0ea0fc,"haxe.ds.StringMap.get","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",57,0x5168f5a8)
+	HX_STACK_FRAME("haxe.ds.StringMap","get",0x0f0ea0fc,"haxe.ds.StringMap.get","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",57,0x911cf5ce)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(key,"key")
 	HX_STACK_LINE(58)
@@ -68,7 +68,7 @@ Dynamic StringMap_obj::get( ::String key){
 HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,get,return )
 
 bool StringMap_obj::exists( ::String key){
-	HX_STACK_FRAME("haxe.ds.StringMap","exists",0xd35fc136,"haxe.ds.StringMap.exists","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",61,0x5168f5a8)
+	HX_STACK_FRAME("haxe.ds.StringMap","exists",0xd35fc136,"haxe.ds.StringMap.exists","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",61,0x911cf5ce)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(key,"key")
 	HX_STACK_LINE(62)
@@ -81,7 +81,7 @@ bool StringMap_obj::exists( ::String key){
 HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,exists,return )
 
 bool StringMap_obj::remove( ::String key){
-	HX_STACK_FRAME("haxe.ds.StringMap","remove",0x18083f9e,"haxe.ds.StringMap.remove","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",65,0x5168f5a8)
+	HX_STACK_FRAME("haxe.ds.StringMap","remove",0x18083f9e,"haxe.ds.StringMap.remove","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",65,0x911cf5ce)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(key,"key")
 	HX_STACK_LINE(66)
@@ -94,7 +94,7 @@ bool StringMap_obj::remove( ::String key){
 HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,remove,return )
 
 Dynamic StringMap_obj::keys( ){
-	HX_STACK_FRAME("haxe.ds.StringMap","keys",0x20631ace,"haxe.ds.StringMap.keys","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",69,0x5168f5a8)
+	HX_STACK_FRAME("haxe.ds.StringMap","keys",0x20631ace,"haxe.ds.StringMap.keys","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",69,0x911cf5ce)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(70)
 	Array< ::String > a = ::__string_hash_keys(this->h);		HX_STACK_VAR(a,"a");
@@ -108,7 +108,7 @@ Dynamic StringMap_obj::keys( ){
 HX_DEFINE_DYNAMIC_FUNC0(StringMap_obj,keys,return )
 
 Dynamic StringMap_obj::iterator( ){
-	HX_STACK_FRAME("haxe.ds.StringMap","iterator",0x40ccf7c8,"haxe.ds.StringMap.iterator","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",74,0x5168f5a8)
+	HX_STACK_FRAME("haxe.ds.StringMap","iterator",0x40ccf7c8,"haxe.ds.StringMap.iterator","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",74,0x911cf5ce)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(75)
 	cpp::ArrayBase a = ::__string_hash_values(this->h);		HX_STACK_VAR(a,"a");
@@ -170,11 +170,6 @@ Dynamic StringMap_obj::__SetField(const ::String &inName,const Dynamic &inValue,
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool StringMap_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void StringMap_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("h","\x68","\x00","\x00","\x00"));
@@ -220,7 +215,7 @@ void StringMap_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &StringMap_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

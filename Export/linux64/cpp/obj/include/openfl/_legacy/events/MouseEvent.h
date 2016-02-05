@@ -48,28 +48,6 @@ class HXCPP_CLASS_ATTRIBUTES  MouseEvent_obj : public ::openfl::_legacy::events:
 		::String __ToString() const { return HX_HCSTRING("MouseEvent","\xd5","\xbf","\x42","\x8a"); }
 
 		static void __boot();
-		bool altKey;
-		bool buttonDown;
-		int clickCount;
-		bool commandKey;
-		bool ctrlKey;
-		int delta;
-		Float localX;
-		Float localY;
-		::openfl::_legacy::display::InteractiveObject relatedObject;
-		bool shiftKey;
-		Float stageX;
-		Float stageY;
-		virtual ::openfl::_legacy::events::Event clone( );
-
-		virtual ::String toString( );
-
-		virtual Void updateAfterEvent( );
-		Dynamic updateAfterEvent_dyn();
-
-		virtual ::openfl::_legacy::events::MouseEvent __createSimilar( ::String type,::openfl::_legacy::display::InteractiveObject related,::openfl::_legacy::display::InteractiveObject target);
-		Dynamic __createSimilar_dyn();
-
 		static ::String DOUBLE_CLICK;
 		static ::String CLICK;
 		static ::String MIDDLE_CLICK;
@@ -93,6 +71,28 @@ class HXCPP_CLASS_ATTRIBUTES  MouseEvent_obj : public ::openfl::_legacy::events:
 		static int efCommandDown;
 		static ::openfl::_legacy::events::MouseEvent __create( ::String type,Dynamic event,::openfl::_legacy::geom::Point local,::openfl::_legacy::display::InteractiveObject target);
 		static Dynamic __create_dyn();
+
+		bool altKey;
+		bool buttonDown;
+		int clickCount;
+		bool commandKey;
+		bool ctrlKey;
+		int delta;
+		Float localX;
+		Float localY;
+		::openfl::_legacy::display::InteractiveObject relatedObject;
+		bool shiftKey;
+		Float stageX;
+		Float stageY;
+		virtual ::openfl::_legacy::events::Event clone( );
+
+		virtual ::String toString( );
+
+		virtual Void updateAfterEvent( );
+		Dynamic updateAfterEvent_dyn();
+
+		virtual ::openfl::_legacy::events::MouseEvent __createSimilar( ::String type,::openfl::_legacy::display::InteractiveObject related,::openfl::_legacy::display::InteractiveObject target);
+		Dynamic __createSimilar_dyn();
 
 };
 

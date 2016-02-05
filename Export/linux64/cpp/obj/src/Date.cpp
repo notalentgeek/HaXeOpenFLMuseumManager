@@ -9,7 +9,7 @@
 
 Void Date_obj::__construct(int year,int month,int day,int hour,int min,int sec)
 {
-HX_STACK_FRAME("Date","new",0x9aa26240,"Date.new","/usr/lib/haxe/std/cpp/_std/Date.hx",26,0x8e401252)
+HX_STACK_FRAME("Date","new",0x9aa26240,"Date.new","/usr/share/haxe/std/cpp/_std/Date.hx",26,0xb33fd9ec)
 HX_STACK_THIS(this)
 HX_STACK_ARG(year,"year")
 HX_STACK_ARG(month,"month")
@@ -41,7 +41,7 @@ Dynamic Date_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 Float Date_obj::getTime( ){
-	HX_STACK_FRAME("Date","getTime",0x0cac7da3,"Date.getTime","/usr/lib/haxe/std/cpp/_std/Date.hx",30,0x8e401252)
+	HX_STACK_FRAME("Date","getTime",0x0cac7da3,"Date.getTime","/usr/share/haxe/std/cpp/_std/Date.hx",30,0xb33fd9ec)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(31)
 	Float tmp = this->mSeconds;		HX_STACK_VAR(tmp,"tmp");
@@ -55,7 +55,7 @@ Float Date_obj::getTime( ){
 HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getTime,return )
 
 int Date_obj::getHours( ){
-	HX_STACK_FRAME("Date","getHours",0x256fe079,"Date.getHours","/usr/lib/haxe/std/cpp/_std/Date.hx",34,0x8e401252)
+	HX_STACK_FRAME("Date","getHours",0x256fe079,"Date.getHours","/usr/share/haxe/std/cpp/_std/Date.hx",34,0xb33fd9ec)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(34)
 	int tmp = ::__hxcpp_get_hours(this->mSeconds);		HX_STACK_VAR(tmp,"tmp");
@@ -67,7 +67,7 @@ int Date_obj::getHours( ){
 HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getHours,return )
 
 int Date_obj::getMinutes( ){
-	HX_STACK_FRAME("Date","getMinutes",0xad798749,"Date.getMinutes","/usr/lib/haxe/std/cpp/_std/Date.hx",36,0x8e401252)
+	HX_STACK_FRAME("Date","getMinutes",0xad798749,"Date.getMinutes","/usr/share/haxe/std/cpp/_std/Date.hx",36,0xb33fd9ec)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(36)
 	int tmp = ::__hxcpp_get_minutes(this->mSeconds);		HX_STACK_VAR(tmp,"tmp");
@@ -79,7 +79,7 @@ int Date_obj::getMinutes( ){
 HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getMinutes,return )
 
 int Date_obj::getSeconds( ){
-	HX_STACK_FRAME("Date","getSeconds",0xb428a6a9,"Date.getSeconds","/usr/lib/haxe/std/cpp/_std/Date.hx",38,0x8e401252)
+	HX_STACK_FRAME("Date","getSeconds",0xb428a6a9,"Date.getSeconds","/usr/share/haxe/std/cpp/_std/Date.hx",38,0xb33fd9ec)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(38)
 	int tmp = ::__hxcpp_get_seconds(this->mSeconds);		HX_STACK_VAR(tmp,"tmp");
@@ -91,7 +91,7 @@ int Date_obj::getSeconds( ){
 HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getSeconds,return )
 
 int Date_obj::getFullYear( ){
-	HX_STACK_FRAME("Date","getFullYear",0x72528782,"Date.getFullYear","/usr/lib/haxe/std/cpp/_std/Date.hx",40,0x8e401252)
+	HX_STACK_FRAME("Date","getFullYear",0x72528782,"Date.getFullYear","/usr/share/haxe/std/cpp/_std/Date.hx",40,0xb33fd9ec)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(40)
 	int tmp = ::__hxcpp_get_year(this->mSeconds);		HX_STACK_VAR(tmp,"tmp");
@@ -103,7 +103,7 @@ int Date_obj::getFullYear( ){
 HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getFullYear,return )
 
 int Date_obj::getMonth( ){
-	HX_STACK_FRAME("Date","getMonth",0x066b78ea,"Date.getMonth","/usr/lib/haxe/std/cpp/_std/Date.hx",42,0x8e401252)
+	HX_STACK_FRAME("Date","getMonth",0x066b78ea,"Date.getMonth","/usr/share/haxe/std/cpp/_std/Date.hx",42,0xb33fd9ec)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(42)
 	int tmp = ::__hxcpp_get_month(this->mSeconds);		HX_STACK_VAR(tmp,"tmp");
@@ -115,7 +115,7 @@ int Date_obj::getMonth( ){
 HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getMonth,return )
 
 int Date_obj::getDate( ){
-	HX_STACK_FRAME("Date","getDate",0x021307c4,"Date.getDate","/usr/lib/haxe/std/cpp/_std/Date.hx",44,0x8e401252)
+	HX_STACK_FRAME("Date","getDate",0x021307c4,"Date.getDate","/usr/share/haxe/std/cpp/_std/Date.hx",44,0xb33fd9ec)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(44)
 	int tmp = ::__hxcpp_get_date(this->mSeconds);		HX_STACK_VAR(tmp,"tmp");
@@ -127,7 +127,7 @@ int Date_obj::getDate( ){
 HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getDate,return )
 
 int Date_obj::getDay( ){
-	HX_STACK_FRAME("Date","getDay",0x598d4986,"Date.getDay","/usr/lib/haxe/std/cpp/_std/Date.hx",46,0x8e401252)
+	HX_STACK_FRAME("Date","getDay",0x598d4986,"Date.getDay","/usr/share/haxe/std/cpp/_std/Date.hx",46,0xb33fd9ec)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(46)
 	int tmp = ::__hxcpp_get_day(this->mSeconds);		HX_STACK_VAR(tmp,"tmp");
@@ -139,7 +139,7 @@ int Date_obj::getDay( ){
 HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getDay,return )
 
 ::Date Date_obj::now( ){
-	HX_STACK_FRAME("Date","now",0x9aa26af6,"Date.now","/usr/lib/haxe/std/cpp/_std/Date.hx",50,0x8e401252)
+	HX_STACK_FRAME("Date","now",0x9aa26af6,"Date.now","/usr/share/haxe/std/cpp/_std/Date.hx",50,0xb33fd9ec)
 	HX_STACK_LINE(51)
 	int tmp = ::__hxcpp_date_now();		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(51)
@@ -154,7 +154,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getDay,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Date_obj,now,return )
 
 ::Date Date_obj::fromTime( Float t){
-	HX_STACK_FRAME("Date","fromTime",0x44fd3cb7,"Date.fromTime","/usr/lib/haxe/std/cpp/_std/Date.hx",57,0x8e401252)
+	HX_STACK_FRAME("Date","fromTime",0x44fd3cb7,"Date.fromTime","/usr/share/haxe/std/cpp/_std/Date.hx",57,0xb33fd9ec)
 	HX_STACK_ARG(t,"t")
 	HX_STACK_LINE(58)
 	::Date tmp = ::Date_obj::__new((int)0,(int)0,(int)0,(int)0,(int)0,(int)0);		HX_STACK_VAR(tmp,"tmp");
@@ -174,7 +174,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Date_obj,now,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Date_obj,fromTime,return )
 
 ::Date Date_obj::fromString( ::String s){
-	HX_STACK_FRAME("Date","fromString",0x5ead97fb,"Date.fromString","/usr/lib/haxe/std/cpp/_std/Date.hx",64,0x8e401252)
+	HX_STACK_FRAME("Date","fromString",0x5ead97fb,"Date.fromString","/usr/share/haxe/std/cpp/_std/Date.hx",64,0xb33fd9ec)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_LINE(64)
 	int _g = s.length;		HX_STACK_VAR(_g,"_g");
@@ -341,11 +341,6 @@ Dynamic Date_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx::P
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool Date_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void Date_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("mSeconds","\x92","\x75","\x59","\x82"));
@@ -399,7 +394,7 @@ void Date_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &Date_obj::__GetStatic;
-	__mClass->mSetStaticField = &Date_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

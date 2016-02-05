@@ -47,27 +47,6 @@ class HXCPP_CLASS_ATTRIBUTES  ManagedStage_obj : public ::openfl::_legacy::displ
 		::String __ToString() const { return HX_HCSTRING("ManagedStage","\xff","\x9b","\x7f","\xa6"); }
 
 		static void __boot();
-		Dynamic beginRender;
-		inline Dynamic &beginRender_dyn() {return beginRender; }
-
-		Dynamic endRender;
-		inline Dynamic &endRender_dyn() {return endRender; }
-
-		virtual Void pumpEvent( Dynamic event);
-		Dynamic pumpEvent_dyn();
-
-		virtual Void resize( int width,int height);
-
-		virtual Void sendQuit( );
-		Dynamic sendQuit_dyn();
-
-		Dynamic setNextWake;
-		inline Dynamic &setNextWake_dyn() {return setNextWake; }
-
-		virtual Float __doProcessStageEvent( Dynamic event);
-
-		virtual Void __render( bool sendEnterFrame);
-
 		static int efLeftDown;
 		static int efShiftDown;
 		static int efCtrlDown;
@@ -115,6 +94,27 @@ class HXCPP_CLASS_ATTRIBUTES  ManagedStage_obj : public ::openfl::_legacy::displ
 		static Dynamic &lime_managed_stage_create_dyn() { return lime_managed_stage_create;}
 		static Dynamic lime_managed_stage_pump_event;
 		static Dynamic &lime_managed_stage_pump_event_dyn() { return lime_managed_stage_pump_event;}
+		Dynamic beginRender;
+		inline Dynamic &beginRender_dyn() {return beginRender; }
+
+		Dynamic endRender;
+		inline Dynamic &endRender_dyn() {return endRender; }
+
+		virtual Void pumpEvent( Dynamic event);
+		Dynamic pumpEvent_dyn();
+
+		virtual Void resize( int width,int height);
+
+		virtual Void sendQuit( );
+		Dynamic sendQuit_dyn();
+
+		Dynamic setNextWake;
+		inline Dynamic &setNextWake_dyn() {return setNextWake; }
+
+		virtual Float __doProcessStageEvent( Dynamic event);
+
+		virtual Void __render( bool sendEnterFrame);
+
 };
 
 } // end namespace openfl

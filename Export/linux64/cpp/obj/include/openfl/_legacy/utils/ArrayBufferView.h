@@ -48,6 +48,7 @@ class HXCPP_CLASS_ATTRIBUTES  ArrayBufferView_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("ArrayBufferView","\x5e","\x6e","\x84","\xfd"); }
 
 		static void __boot();
+		static ::String invalidDataIndex;
 		::openfl::_legacy::utils::ByteArray buffer;
 		int byteOffset;
 		int byteLength;
@@ -88,7 +89,6 @@ class HXCPP_CLASS_ATTRIBUTES  ArrayBufferView_obj : public hx::Object{
 		virtual Void setUInt8( int position,int value);
 		Dynamic setUInt8_dyn();
 
-		static ::String invalidDataIndex;
 };
 
 } // end namespace openfl

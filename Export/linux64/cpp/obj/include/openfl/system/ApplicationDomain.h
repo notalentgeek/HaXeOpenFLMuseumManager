@@ -37,6 +37,7 @@ class HXCPP_CLASS_ATTRIBUTES  ApplicationDomain_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("ApplicationDomain","\x94","\xec","\x60","\x45"); }
 
 		static void __boot();
+		static ::openfl::_system::ApplicationDomain currentDomain;
 		::openfl::_system::ApplicationDomain parentDomain;
 		virtual ::hx::Class getDefinition( ::String name);
 		Dynamic getDefinition_dyn();
@@ -44,7 +45,6 @@ class HXCPP_CLASS_ATTRIBUTES  ApplicationDomain_obj : public hx::Object{
 		virtual bool hasDefinition( ::String name);
 		Dynamic hasDefinition_dyn();
 
-		static ::openfl::_system::ApplicationDomain currentDomain;
 };
 
 } // end namespace openfl

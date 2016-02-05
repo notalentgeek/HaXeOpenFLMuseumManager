@@ -181,11 +181,6 @@ Dynamic MenuSeparator_obj::__SetField(const ::String &inName,const Dynamic &inVa
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
-bool MenuSeparator_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
-{
-	return false;
-}
-
 void MenuSeparator_obj::__GetFields(Array< ::String> &outFields)
 {
 	outFields->push(HX_HCSTRING("_line","\xd3","\x33","\xc4","\xfa"));
@@ -228,7 +223,7 @@ void MenuSeparator_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &MenuSeparator_obj::__SetStatic;
+	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(0 /* sStaticFields */);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(sMemberFields);

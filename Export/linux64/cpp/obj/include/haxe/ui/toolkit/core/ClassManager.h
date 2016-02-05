@@ -40,6 +40,11 @@ class HXCPP_CLASS_ATTRIBUTES  ClassManager_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("ClassManager","\x35","\x85","\x54","\xc4"); }
 
+		static ::haxe::ui::toolkit::core::ClassManager _instance;
+		static ::haxe::ui::toolkit::core::ClassManager instance;
+		static ::haxe::ui::toolkit::core::ClassManager get_instance( );
+		static Dynamic get_instance_dyn();
+
 		virtual Void registerDefaults( );
 		Dynamic registerDefaults_dyn();
 
@@ -65,11 +70,6 @@ class HXCPP_CLASS_ATTRIBUTES  ClassManager_obj : public hx::Object{
 
 		virtual Void registerDataSourceClassName( ::String className,::String simpleName);
 		Dynamic registerDataSourceClassName_dyn();
-
-		static ::haxe::ui::toolkit::core::ClassManager _instance;
-		static ::haxe::ui::toolkit::core::ClassManager instance;
-		static ::haxe::ui::toolkit::core::ClassManager get_instance( );
-		static Dynamic get_instance_dyn();
 
 };
 

@@ -871,6 +871,15 @@ bool CollectionTagGeneral_obj::__GetStatic(const ::String &inName, Dynamic &outV
 	return false;
 }
 
+bool CollectionTagGeneral_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 9:
+		if (HX_FIELD_EQ(inName,"tagObject") ) { tagObject=ioValue.Cast< ::ObjectTag >(); return true; }
+	}
+	return false;
+}
+
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
@@ -923,7 +932,7 @@ void CollectionTagGeneral_obj::__register()
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
 	__mClass->mGetStaticField = &CollectionTagGeneral_obj::__GetStatic;
-	__mClass->mSetStaticField = &hx::Class_obj::SetNoStaticField;
+	__mClass->mSetStaticField = &CollectionTagGeneral_obj::__SetStatic;
 	__mClass->mMarkFunc = sMarkStatics;
 	__mClass->mStatics = hx::Class_obj::dupFunctions(sStaticFields);
 	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);

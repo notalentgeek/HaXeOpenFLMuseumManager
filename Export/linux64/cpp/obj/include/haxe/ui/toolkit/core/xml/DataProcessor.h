@@ -41,10 +41,10 @@ class HXCPP_CLASS_ATTRIBUTES  DataProcessor_obj : public ::haxe::ui::toolkit::co
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("DataProcessor","\xa8","\x81","\x88","\x26"); }
 
-		virtual Dynamic process( ::Xml node);
-
 		static ::haxe::ui::toolkit::data::IDataSource createDataSource( ::String className,::Xml config);
 		static Dynamic createDataSource_dyn();
+
+		virtual Dynamic process( ::Xml node);
 
 };
 

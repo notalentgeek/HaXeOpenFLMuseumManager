@@ -1,5 +1,18 @@
 import CollectionEnum;
+
+
+
+
+/*This class is just a collection of tag that is not general tag.
+Which means that these tags is supposed to be specific to certain museum and exhibitio.
+PENDING: Please make JSON tag generator to generate everything premade within this program.*/
 class CollectionPremadeTag{
+
+
+
+
+
+    /*==================================================*/
     public function new(){}
     public static function PremadeTagStructVoid(_collectionGlobalObject:CollectionGlobal){
         PremadeTagStructAdjVoid(_collectionGlobalObject);
@@ -123,4 +136,10 @@ class CollectionPremadeTag{
         new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Kill", VERB_TRANSITIVE).SetVerb1StringObject("kill").SetVerb2StringObject("killed").SetVerb3StringObject("killed").SetVerbIngStringObject("killing").SetVerbSStringObject("kills");
         new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Love", VERB_TRANSITIVE).SetVerb1StringObject("love").SetVerb2StringObject("loved").SetVerb3StringObject("loved").SetVerbIngStringObject("loving").SetVerbSStringObject("loves");
     }
+    /*==================================================*/
+
+
+
+
+
 }

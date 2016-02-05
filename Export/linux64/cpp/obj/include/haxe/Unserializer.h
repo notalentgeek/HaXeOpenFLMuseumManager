@@ -36,6 +36,15 @@ class HXCPP_CLASS_ATTRIBUTES  Unserializer_obj : public hx::Object{
 		::String __ToString() const { return HX_HCSTRING("Unserializer","\x4b","\x42","\x41","\x93"); }
 
 		static void __boot();
+		static Dynamic DEFAULT_RESOLVER;
+		static ::String BASE64;
+		static Array< int > CODES;
+		static Array< int > initCodes( );
+		static Dynamic initCodes_dyn();
+
+		static Dynamic run( ::String v);
+		static Dynamic run_dyn();
+
 		::String buf;
 		int pos;
 		int length;
@@ -59,15 +68,6 @@ class HXCPP_CLASS_ATTRIBUTES  Unserializer_obj : public hx::Object{
 
 		virtual Dynamic unserialize( );
 		Dynamic unserialize_dyn();
-
-		static Dynamic DEFAULT_RESOLVER;
-		static ::String BASE64;
-		static Array< int > CODES;
-		static Array< int > initCodes( );
-		static Dynamic initCodes_dyn();
-
-		static Dynamic run( ::String v);
-		static Dynamic run_dyn();
 
 };
 

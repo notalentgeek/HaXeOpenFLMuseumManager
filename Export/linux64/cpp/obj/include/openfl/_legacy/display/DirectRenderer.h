@@ -46,6 +46,10 @@ class HXCPP_CLASS_ATTRIBUTES  DirectRenderer_obj : public ::openfl::_legacy::dis
 		::String __ToString() const { return HX_HCSTRING("DirectRenderer","\xac","\x31","\xba","\xef"); }
 
 		static void __boot();
+		static Dynamic lime_direct_renderer_create;
+		static Dynamic &lime_direct_renderer_create_dyn() { return lime_direct_renderer_create;}
+		static Dynamic lime_direct_renderer_set;
+		static Dynamic &lime_direct_renderer_set_dyn() { return lime_direct_renderer_set;}
 		virtual Void dispose( );
 		Dynamic dispose_dyn();
 
@@ -61,10 +65,6 @@ class HXCPP_CLASS_ATTRIBUTES  DirectRenderer_obj : public ::openfl::_legacy::dis
 		virtual Void __stage_onRemovedFromStage( ::openfl::_legacy::events::Event event);
 		Dynamic __stage_onRemovedFromStage_dyn();
 
-		static Dynamic lime_direct_renderer_create;
-		static Dynamic &lime_direct_renderer_create_dyn() { return lime_direct_renderer_create;}
-		static Dynamic lime_direct_renderer_set;
-		static Dynamic &lime_direct_renderer_set_dyn() { return lime_direct_renderer_set;}
 };
 
 } // end namespace openfl

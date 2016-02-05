@@ -31,6 +31,7 @@ class HXCPP_CLASS_ATTRIBUTES  Identifier_obj : public hx::Object{
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Identifier","\x89","\xcc","\xdd","\xc4"); }
 

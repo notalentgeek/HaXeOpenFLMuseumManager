@@ -43,6 +43,20 @@ class HXCPP_CLASS_ATTRIBUTES  InteractiveObject_obj : public ::openfl::_legacy::
 		::String __ToString() const { return HX_HCSTRING("InteractiveObject","\x21","\x86","\xb1","\xc3"); }
 
 		static void __boot();
+		static Dynamic lime_display_object_set_mouse_enabled;
+		static Dynamic &lime_display_object_set_mouse_enabled_dyn() { return lime_display_object_set_mouse_enabled;}
+		static Dynamic lime_display_object_set_needs_soft_keyboard;
+		static Dynamic &lime_display_object_set_needs_soft_keyboard_dyn() { return lime_display_object_set_needs_soft_keyboard;}
+		static Dynamic lime_display_object_get_needs_soft_keyboard;
+		static Dynamic &lime_display_object_get_needs_soft_keyboard_dyn() { return lime_display_object_get_needs_soft_keyboard;}
+		static Dynamic lime_display_object_set_moves_for_soft_keyboard;
+		static Dynamic &lime_display_object_set_moves_for_soft_keyboard_dyn() { return lime_display_object_set_moves_for_soft_keyboard;}
+		static Dynamic lime_display_object_get_moves_for_soft_keyboard;
+		static Dynamic &lime_display_object_get_moves_for_soft_keyboard_dyn() { return lime_display_object_get_moves_for_soft_keyboard;}
+		static Dynamic lime_display_object_dismiss_soft_keyboard;
+		static Dynamic &lime_display_object_dismiss_soft_keyboard_dyn() { return lime_display_object_dismiss_soft_keyboard;}
+		static Dynamic lime_display_object_request_soft_keyboard;
+		static Dynamic &lime_display_object_request_soft_keyboard_dyn() { return lime_display_object_request_soft_keyboard;}
 		bool doubleClickEnabled;
 		bool __mouseEnabled;
 		virtual bool __dismissSoftKeyboard( );
@@ -71,20 +85,6 @@ class HXCPP_CLASS_ATTRIBUTES  InteractiveObject_obj : public ::openfl::_legacy::
 		virtual bool get_needsSoftKeyboard( );
 		Dynamic get_needsSoftKeyboard_dyn();
 
-		static Dynamic lime_display_object_set_mouse_enabled;
-		static Dynamic &lime_display_object_set_mouse_enabled_dyn() { return lime_display_object_set_mouse_enabled;}
-		static Dynamic lime_display_object_set_needs_soft_keyboard;
-		static Dynamic &lime_display_object_set_needs_soft_keyboard_dyn() { return lime_display_object_set_needs_soft_keyboard;}
-		static Dynamic lime_display_object_get_needs_soft_keyboard;
-		static Dynamic &lime_display_object_get_needs_soft_keyboard_dyn() { return lime_display_object_get_needs_soft_keyboard;}
-		static Dynamic lime_display_object_set_moves_for_soft_keyboard;
-		static Dynamic &lime_display_object_set_moves_for_soft_keyboard_dyn() { return lime_display_object_set_moves_for_soft_keyboard;}
-		static Dynamic lime_display_object_get_moves_for_soft_keyboard;
-		static Dynamic &lime_display_object_get_moves_for_soft_keyboard_dyn() { return lime_display_object_get_moves_for_soft_keyboard;}
-		static Dynamic lime_display_object_dismiss_soft_keyboard;
-		static Dynamic &lime_display_object_dismiss_soft_keyboard_dyn() { return lime_display_object_dismiss_soft_keyboard;}
-		static Dynamic lime_display_object_request_soft_keyboard;
-		static Dynamic &lime_display_object_request_soft_keyboard_dyn() { return lime_display_object_request_soft_keyboard;}
 };
 
 } // end namespace openfl

@@ -56,7 +56,6 @@ class HXCPP_CLASS_ATTRIBUTES  ItemRenderer_obj : public ::haxe::ui::toolkit::cor
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
-		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -73,6 +72,10 @@ class HXCPP_CLASS_ATTRIBUTES  ItemRenderer_obj : public ::haxe::ui::toolkit::cor
 		::String __ToString() const { return HX_HCSTRING("ItemRenderer","\x96","\x5d","\x17","\x5f"); }
 
 		static void __boot();
+		static ::String STATE_NORMAL;
+		static ::String STATE_OVER;
+		static ::String STATE_SELECTED;
+		static ::String STATE_DISABLED;
 		::String hash;
 		::haxe::ui::toolkit::core::interfaces::IEventDispatcher eventDispatcher;
 		virtual Void initialize( );
@@ -125,10 +128,6 @@ class HXCPP_CLASS_ATTRIBUTES  ItemRenderer_obj : public ::haxe::ui::toolkit::cor
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );
 
-		static ::String STATE_NORMAL;
-		static ::String STATE_OVER;
-		static ::String STATE_SELECTED;
-		static ::String STATE_DISABLED;
 };
 
 } // end namespace haxe

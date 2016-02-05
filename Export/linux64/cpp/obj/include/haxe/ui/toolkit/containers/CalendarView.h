@@ -64,6 +64,7 @@ class HXCPP_CLASS_ATTRIBUTES  CalendarView_obj : public ::haxe::ui::toolkit::con
 		::String __ToString() const { return HX_HCSTRING("CalendarView","\x63","\x40","\x8d","\xd9"); }
 
 		static void __boot();
+		static Array< ::String > MONTH_NAMES;
 		::haxe::ui::toolkit::controls::Calendar _calendar;
 		::haxe::ui::toolkit::controls::Button _prevMonthButton;
 		::haxe::ui::toolkit::controls::Button _nextMonthButton;
@@ -98,7 +99,6 @@ class HXCPP_CLASS_ATTRIBUTES  CalendarView_obj : public ::haxe::ui::toolkit::con
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );
 
-		static Array< ::String > MONTH_NAMES;
 };
 
 } // end namespace haxe
