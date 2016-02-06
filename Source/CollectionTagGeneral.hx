@@ -1,7 +1,18 @@
-package;
 import CollectionEnum;
+
+
+
+
+
+/*Collection of object Tag for common words.
+PENDING: Change this into JSON/XML file extractor.*/
 class CollectionTagGeneral{
-    private static var tagObject:ObjectTag = null;
+
+
+
+
+
+    /*==================================================*/
     public function new(){}
     public static function TagGeneralStructVoid(_collectionGlobalObject:CollectionGlobal){
         TagGeneralStructAdjVoid(_collectionGlobalObject);
@@ -125,4 +136,10 @@ class CollectionTagGeneral{
         new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Kill", VERB_TRANSITIVE).SetVerb1StringObject("kill").SetVerb2StringObject("killed").SetVerb3StringObject("killed").SetVerbIngStringObject("killing").SetVerbSStringObject("kills");
         new ObjectTag(_collectionGlobalObject, POSITIVE, true, "Love", VERB_TRANSITIVE).SetVerb1StringObject("love").SetVerb2StringObject("loved").SetVerb3StringObject("loved").SetVerbIngStringObject("loving").SetVerbSStringObject("loves");
     }
+    /*==================================================*/
+
+
+
+
+
 }
