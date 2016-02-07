@@ -1,35 +1,33 @@
-package;
-
-
-
 import CollectionEnum;
 import CollectionStruct;
-import flash.display.Sprite;
-import flash.events.Event;
-import haxe.ui.toolkit.containers.Absolute;
-import haxe.ui.toolkit.containers.Accordion;
-import haxe.ui.toolkit.containers.Grid;
-import haxe.ui.toolkit.containers.HBox;
-import haxe.ui.toolkit.controls.Button;
-import haxe.ui.toolkit.controls.popups.CustomPopupContent;
-import haxe.ui.toolkit.controls.popups.Popup;
-import haxe.ui.toolkit.controls.selection.ListSelector;
-import haxe.ui.toolkit.controls.Text;
-import haxe.ui.toolkit.core.interfaces.IDisplayObject;
-import haxe.ui.toolkit.core.PopupManager;
-import haxe.ui.toolkit.core.Root;
-import haxe.ui.toolkit.core.Toolkit;
-import haxe.ui.toolkit.data.DataSource;
-import haxe.ui.toolkit.events.UIEvent;
+import flash.display.*;
+import flash.events.*;
+import haxe.ui.toolkit.containers.*;
+import haxe.ui.toolkit.controls.*;
+import haxe.ui.toolkit.controls.popups.*;
+import haxe.ui.toolkit.controls.selection.*;
+import haxe.ui.toolkit.core.*;
+import haxe.ui.toolkit.core.interfaces.*;
+import haxe.ui.toolkit.data.*;
+import haxe.ui.toolkit.events.*;
 
 
 
+
+/*Main loop class with the main thread.
+The extension to Sprite class is necessary to addEventListener.
+And then from this addEventListener I assign a function a main loop.*/
 class Main extends Sprite{
+
+
 
 
 
     /*Global variable database for the whole application.*/
     var collectionGlobalObject          :CollectionGlobal               = new CollectionGlobal();
+    /*Main loop counter.
+    We need it to be placed as a class local variable because it need to be accessed everytime,
+        but the value is not necessailry to be initiated over time.*/
     var loopCounterMainInt              :Int                            = 0;
     /*Popup objects.*/
     var uiPopupAddMuseumObject          :UIPopupAddObjectMuseum         = null;
@@ -44,20 +42,36 @@ class Main extends Sprite{
 
 
 
+
+
+    /*==================================================
+    Constructor.*/
     private function new(){
 
+        /*super() to extends the functionality of Sprite object.*/
         super();
 
+        /*Initiate Toolkit static object to prepare HaXeUI to run.*/
         Toolkit.init();
+
+        /*Set all animation controller in HaXeUI to show no animation.
+        The animation is currently bugged in HaXeUI version number 1.8.6.*/
         Toolkit.setTransitionForClass(Accordion, "none");
         Toolkit.setTransitionForClass(Popup, "none");
+
+        /*Toolkit.openFullScreen is used to initiate all HaXeUI objects.*/
         Toolkit.openFullscreen(function(_root:Root){
 
             /*Init GUI object here.*/
             var uiMainObject:IDisplayObject = Toolkit.processXmlResource("layout/UIMain.xml");
+            /*Set back this object in to the CollectionGlobal class so that
+                we can refer this GUI in another class easily.*/
             collectionGlobalObject.SetUIMainObjectVoid(uiMainObject);
+            /*Add the main GUI to _root, otherwise it will not be displayed.*/
             _root.addChild(uiMainObject);
 
+            /*Initiate all possible pop up object that can be
+                displayed using main menu buttons.*/
             uiPopupAddMuseumObject      = new UIPopupAddObjectMuseum        (collectionGlobalObject, _root);
             uiPopupAddTagObject         = new UIPopupAddObjectTag           (collectionGlobalObject, _root);
             uiPopupAddVisitorObject     = new UIPopupAddObjectVisitor       (collectionGlobalObject, _root);
@@ -68,26 +82,43 @@ class Main extends Sprite{
             uiPopupRemoveTagObject      = new UIPopupRemoveObjectTag        (collectionGlobalObject, _root);
             uiPopupRemoveVisitorObject  = new UIPopupRemoveObjectVisitor    (collectionGlobalObject, _root);
 
+            /*Initiate the absolute layout object for the display of museum object
+                button user interface.*/
             var uiMuseumAbsoluteObject:Absolute = _root.findChild("UIMuseumAbsolute", Absolute, true);
+            /*Refer it back to the CollectionGlobal so that I can acces this
+                absolute layout later on.*/
             collectionGlobalObject.SetUIMuseumAbsoluteObjectVoid(uiMuseumAbsoluteObject);
 
         });
+        /*By here I have done initiating all user interface object.*/
 
-        /*Create all the necessary object.*/
+        /*Create all the necessary premade object.*/
         CollectionTagGeneral    .TagGeneralStructVoid           (collectionGlobalObject);
         CollectionPremadeTag    .PremadeTagStructVoid           (collectionGlobalObject);
         CollectionPremade       .PremadeFloorObjectVoid         (collectionGlobalObject);
         CollectionPremade       .PremadeRoomObjectVoid          (collectionGlobalObject);
         CollectionPremade       .PremadeExhibitionObjectVoid    (collectionGlobalObject);
-        CollectionPremade       .PremadeVisitorObjectVoid       (10, collectionGlobalObject); /*Change the number to change the initial visitor when the application starts.*/
+        /*Change the number (first parameter) to change the initial visitor when the application starts.*/
+        CollectionPremade       .PremadeVisitorObjectVoid       (10, collectionGlobalObject);
         
-        addEventListener(Event.ENTER_FRAME, Update);
+        /*Refer UpdateVoid function as main loop function.*/
+        addEventListener(Event.ENTER_FRAME, UpdateVoid);
 
     }
+    /*==================================================*/
 
 
 
-    private function Update(event:Event){
+
+
+    /*==================================================
+    Update function that is executed per frame tick.
+    Please to make sure a difference within this function and the constructor function.
+    The constructor initiate the HaXeUI objects first then the other object.
+    While, in the UpdateVoid() function I need to update the other object first
+        before updating the user interface object.
+    This is to prevent null pointer exception.*/
+    private function UpdateVoid(event:Event){
 
         UpdateSlowVoid();
         uiPopupAddMuseumObject          .UpdateVoid();
@@ -101,10 +132,14 @@ class Main extends Sprite{
         uiPopupRemoveVisitorObject      .UpdateVoid();
         
     }
+    /*==================================================*/
 
 
 
-    /*These are set of functionc to update the whole object within the application.
+
+
+    /*==================================================
+    These are set of functionc to update the whole object within the application.
     The slow speed means that the objects will updated using least common multiplier, which also means that object array that is smallest will get update more often.
     The normal speed means that the objects will updated using least common multiplier but not the visitor object. This means that the visitor object will get their own loop to iterate its array.
     The fast speed is to update all the object's array in each different loop.
@@ -129,9 +164,6 @@ class Main extends Sprite{
         loopCounterMainInt ++;
 
     }
-
-
-
     private function UpdateNormalVoid(){
 
         /*Loop through all objects.*/
@@ -150,9 +182,6 @@ class Main extends Sprite{
         }
 
     }
-
-
-
     private function UpdateFastVoid(){
 
         var loopCounter1Int:Int = 0;
@@ -165,6 +194,9 @@ class Main extends Sprite{
         while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){ collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].UpdateVoid(); loopCounter1Int ++; }
 
     }
+    /*==================================================*/
+
+
 
 
 

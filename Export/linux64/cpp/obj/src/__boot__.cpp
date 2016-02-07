@@ -474,9 +474,6 @@
 #ifndef INCLUDED_DefaultAssetLibrary
 #include <DefaultAssetLibrary.h>
 #endif
-#ifndef INCLUDED_CollectionTagGeneral
-#include <CollectionTagGeneral.h>
-#endif
 #ifndef INCLUDED_openfl__legacy_display_DisplayObjectContainer
 #include <openfl/_legacy/display/DisplayObjectContainer.h>
 #endif
@@ -1419,6 +1416,9 @@
 #ifndef INCLUDED_Date
 #include <Date.h>
 #endif
+#ifndef INCLUDED_CollectionTagGeneral
+#include <CollectionTagGeneral.h>
+#endif
 #ifndef INCLUDED_CollectionPremadeTag
 #include <CollectionPremadeTag.h>
 #endif
@@ -1632,7 +1632,6 @@ hx::RegisterResources( hx::GetResources() );
 ::EReg_obj::__register();
 ::openfl::_legacy::text::Font_obj::__register();
 ::DefaultAssetLibrary_obj::__register();
-::CollectionTagGeneral_obj::__register();
 ::openfl::_legacy::display::DisplayObjectContainer_obj::__register();
 ::openfl::_legacy::display::InteractiveObject_obj::__register();
 ::openfl::_legacy::display::DisplayObject_obj::__register();
@@ -1947,6 +1946,7 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_legacy::AssetLibrary_obj::__register();
 ::DateTools_obj::__register();
 ::Date_obj::__register();
+::CollectionTagGeneral_obj::__register();
 ::CollectionPremadeTag_obj::__register();
 ::CollectionPremade_obj::__register();
 ::CollectionGlobal_obj::__register();
@@ -2027,7 +2027,6 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_legacy::display::DisplayObject_obj::__boot();
 ::openfl::_legacy::display::InteractiveObject_obj::__boot();
 ::openfl::_legacy::display::DisplayObjectContainer_obj::__boot();
-::CollectionTagGeneral_obj::__boot();
 ::DefaultAssetLibrary_obj::__boot();
 ::openfl::_legacy::text::Font_obj::__boot();
 ::Xml_obj::__boot();

@@ -6126,7 +6126,6 @@
    <depend name="include/EReg.h"/>
    <depend name="include/openfl/_legacy/text/Font.h"/>
    <depend name="include/DefaultAssetLibrary.h"/>
-   <depend name="include/CollectionTagGeneral.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>
    <depend name="include/openfl/_legacy/display/InteractiveObject.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
