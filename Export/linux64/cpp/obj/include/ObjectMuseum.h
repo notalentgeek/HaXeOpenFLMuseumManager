@@ -105,6 +105,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		virtual bool GetFullBool( );
 		Dynamic GetFullBool_dyn();
 
+		virtual int GetIndexGlobalInt( );
+		Dynamic GetIndexGlobalInt_dyn();
+
 		virtual int GetIndexLocalInt( );
 		Dynamic GetIndexLocalInt_dyn();
 

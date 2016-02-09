@@ -229,6 +229,7 @@ class ObjectMuseum{
     public function GetChildStruct(){ return childStruct; }
     public function GetExplanationStringArray(){ return explanationStringArray; }
     public function GetFullBool(){ return fullBool; }
+    public function GetIndexGlobalInt(){ return indexGlobalInt; }
     public function GetIndexLocalInt(){ return indexLocalInt; }
     public function GetMuseumUIObject(){ return museumUIObject; }
     public function GetMuseumModeEnum(){ return museumModeEnum; }

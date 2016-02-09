@@ -13,6 +13,7 @@
     <haxelib name="actuate" />
     <haxelib name="haxeui" />
     <haxelib name="haxeui-rich-text" />
+    <haxelib name="hxSerial" />
     <haxelib name="openfl" />
     
     <assets path="Assets" rename="assets" />

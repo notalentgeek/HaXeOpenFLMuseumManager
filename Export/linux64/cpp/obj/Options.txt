@@ -7,6 +7,7 @@ haxeui=1.8.6
 haxeui-rich-text=0.1.2
 haxeui_rich_text=0.1.2
 hscript=2.0.5
+hxSerial=0.1.2
 hxcpp=3.2.205
 hxcpp_api_level=321
 lime=2.9.0

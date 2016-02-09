@@ -49,6 +49,8 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		::ObjectMuseum exhibitionCurrentObject;
 		Array< ::Dynamic > exhibitionTargetObjectArray;
 		Array< ::Dynamic > exhibitionVisitedObjectArray;
+		int explanationCurrentIndexInt;
+		::String explanationCurrentString;
 		Array< ::String > explanationStringArray;
 		bool finishedBool;
 		::ObjectMuseum floorCurrentObject;
@@ -95,6 +97,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 
 		virtual Array< ::Dynamic > GetExhibitionTargetObjectArray( );
 		Dynamic GetExhibitionTargetObjectArray_dyn();
+
+		virtual int GetExplanationCurrentIndexInt( );
+		Dynamic GetExplanationCurrentIndexInt_dyn();
+
+		virtual ::String GetExplanationCurrentString( );
+		Dynamic GetExplanationCurrentString_dyn();
 
 		virtual Array< ::String > GetExplanationStringArray( );
 		Dynamic GetExplanationStringArray_dyn();

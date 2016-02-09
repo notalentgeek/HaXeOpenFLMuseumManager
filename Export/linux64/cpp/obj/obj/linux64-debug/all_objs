@@ -187,6 +187,7 @@
 "obj/linux64-debug/c8c2458a_SimpleActuator.o"
 "obj/linux64-debug/c8c2458a_GenericActuator.o"
 "obj/linux64-debug/c8c2458a_IGenericActuator.o"
+"obj/linux64-debug/e48a0939_Serial.o"
 "obj/linux64-debug/a2747afe_Parser.o"
 "obj/linux64-debug/a2747afe_Token.o"
 "obj/linux64-debug/3be0a454_Stop.o"

@@ -19,6 +19,7 @@ HX_DECLARE_CLASS0(UIPopupEditObjectVisitor)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectMuseum)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectTag)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectVisitor)
+HX_DECLARE_CLASS1(hxSerial,Serial)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObject)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObjectContainer)
 HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
@@ -64,6 +65,16 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::openfl::_legacy::display::Spri
 		::UIPopupRemoveObjectMuseum uiPopupRemoveMuseumObject;
 		::UIPopupRemoveObjectTag uiPopupRemoveTagObject;
 		::UIPopupRemoveObjectVisitor uiPopupRemoveVisitorObject;
+		::hxSerial::Serial serialObject;
+		int serialIndexInt;
+		int serialCounterInt;
+		bool serialEstablishedBool;
+		int serialLength;
+		Array< ::String > sendInstructionToArduinoStringArray;
+		bool soundProgressBool;
+		virtual Void SearchForSerialConnectionVoid( );
+		Dynamic SearchForSerialConnectionVoid_dyn();
+
 		virtual Void UpdateVoid( ::openfl::_legacy::events::Event event);
 		Dynamic UpdateVoid_dyn();
 

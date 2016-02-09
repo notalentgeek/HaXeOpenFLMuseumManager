@@ -354,6 +354,9 @@
 #ifndef INCLUDED_motion_actuators_SimpleActuator
 #include <motion/actuators/SimpleActuator.h>
 #endif
+#ifndef INCLUDED_hxSerial_Serial
+#include <hxSerial/Serial.h>
+#endif
 #ifndef INCLUDED_hscript_Parser
 #include <hscript/Parser.h>
 #endif
@@ -1592,6 +1595,7 @@ hx::RegisterResources( hx::GetResources() );
 ::motion::actuators::Timer_obj::__register();
 ::motion::Actuate_obj::__register();
 ::motion::actuators::SimpleActuator_obj::__register();
+::hxSerial::Serial_obj::__register();
 ::hscript::Parser_obj::__register();
 ::haxe::zip::Uncompress_obj::__register();
 ::haxe::zip::Compress_obj::__register();
@@ -2065,6 +2069,7 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::zip::Compress_obj::__boot();
 ::haxe::zip::Uncompress_obj::__boot();
 ::hscript::Parser_obj::__boot();
+::hxSerial::Serial_obj::__boot();
 ::motion::actuators::SimpleActuator_obj::__boot();
 ::motion::Actuate_obj::__boot();
 ::motion::actuators::Timer_obj::__boot();

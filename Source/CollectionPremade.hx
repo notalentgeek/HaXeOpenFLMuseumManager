@@ -30,10 +30,6 @@ class CollectionPremade{
         new ObjectMuseum(_collectionGlobalObject, "EXH_006", "Sixth Exhibition", "ROM_003", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
         new ObjectMuseum(_collectionGlobalObject, "EXH_007", "Seventh Exhibition", "ROM_004", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
         new ObjectMuseum(_collectionGlobalObject, "EXH_008", "Eighth Exhibition", "ROM_004", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
-        new ObjectMuseum(_collectionGlobalObject, "EXH_009", "Ninth Exhibition", "ROM_005", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
-        new ObjectMuseum(_collectionGlobalObject, "EXH_010", "Tenth Exhibition", "ROM_005", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
-        new ObjectMuseum(_collectionGlobalObject, "EXH_011", "Eleventh Exhibition", "ROM_006", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
-        new ObjectMuseum(_collectionGlobalObject, "EXH_012", "Twelveth Exhibition", "ROM_006", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), EXH);
     }
     /*==================================================*/
 
@@ -46,7 +42,6 @@ class CollectionPremade{
     public static function PremadeFloorObjectVoid(_collectionGlobalObject:CollectionGlobal){
         new ObjectMuseum(_collectionGlobalObject, "FLR_001", "First Floor", "XXX_XXX", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), FLR);
         new ObjectMuseum(_collectionGlobalObject, "FLR_002", "Second Floor", "XXX_XXX", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), FLR);
-        new ObjectMuseum(_collectionGlobalObject, "FLR_003", "Third Floor", "XXX_XXX", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), FLR);
     }
     /*==================================================*/
 
@@ -61,8 +56,6 @@ class CollectionPremade{
         new ObjectMuseum(_collectionGlobalObject, "ROM_002", "Second Room", "FLR_001", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
         new ObjectMuseum(_collectionGlobalObject, "ROM_003", "Third Room", "FLR_002", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
         new ObjectMuseum(_collectionGlobalObject, "ROM_004", "Fourth Room", "FLR_002", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
-        new ObjectMuseum(_collectionGlobalObject, "ROM_005", "Fifth Room", "FLR_003", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
-        new ObjectMuseum(_collectionGlobalObject, "ROM_006", "Sixth Room", "FLR_003", CollectionFunction.PickRandomTagObjectArray(_collectionGlobalObject), ROM);
     }
     /*==================================================*/
 

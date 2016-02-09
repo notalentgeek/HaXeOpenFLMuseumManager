@@ -6,6 +6,8 @@ class ObjectVisitor{
     private var exhibitionCurrentObject:ObjectMuseum = null;
     private var exhibitionTargetObjectArray:Array<ObjectMuseum> = new Array<ObjectMuseum>();
     private var exhibitionVisitedObjectArray:Array<ObjectMuseum> = new Array<ObjectMuseum>();
+    private var explanationCurrentIndexInt:Int = -1;
+    private var explanationCurrentString:String = "";
     private var explanationStringArray:Array<String> = new Array<String>();
     private var finishedBool:Bool = false;
     private var floorCurrentObject:ObjectMuseum = null;
@@ -122,18 +124,20 @@ class ObjectVisitor{
             }
             var indexRandomInt:Int = indexIntArray[Math.round(Math.random()*(indexIntArray.length - 1))];
             indexIntArray.remove (indexRandomInt);
-            var explanationString:String = exhibitionCurrentObject.GetExplanationStringArray()[indexRandomInt];
+            explanationCurrentString = exhibitionCurrentObject.GetExplanationStringArray()[indexRandomInt];
+            explanationCurrentIndexInt = indexRandomInt;
             loopCounter1Int = 0;
             while(
-                (CollectionFunction.IsExistInArrayBool(explanationStringArray, explanationString) == true)&&
+                (CollectionFunction.IsExistInArrayBool(explanationStringArray, explanationCurrentString) == true)&&
                 (loopCounter1Int < exhibitionCurrentObject.GetExplanationStringArray().length)
             ){
                 indexRandomInt = indexIntArray[Math.round(Math.random()*(indexIntArray.length - 1))];
                 indexIntArray.remove(indexRandomInt);
-                explanationString = exhibitionCurrentObject.GetExplanationStringArray()[indexRandomInt];
+                explanationCurrentString = exhibitionCurrentObject.GetExplanationStringArray()[indexRandomInt];
+                explanationCurrentIndexInt = indexRandomInt;
                 loopCounter1Int ++;
             }
-            explanationStringArray.push(explanationString);
+            explanationStringArray.push(explanationCurrentString);
             visitedCorrectExhibitionBool = false;
             loopCounter1Int = 0;
             while(loopCounter1Int < exhibitionTargetObjectArray.length){
@@ -278,6 +282,8 @@ class ObjectVisitor{
     }
     public function GetExhibitionCurrentObject(){ return exhibitionCurrentObject; }
     public function GetExhibitionTargetObjectArray(){ return exhibitionTargetObjectArray; }
+    public function GetExplanationCurrentIndexInt(){ return explanationCurrentIndexInt; }
+    public function GetExplanationCurrentString(){ return explanationCurrentString; }
     public function GetExplanationStringArray(){ return explanationStringArray; }
     public function GetFinishedBool(){ return finishedBool; }
     public function GetIndexGlobalInt(){ return indexGlobalInt; }

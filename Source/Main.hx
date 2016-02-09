@@ -10,6 +10,7 @@ import haxe.ui.toolkit.core.*;
 import haxe.ui.toolkit.core.interfaces.*;
 import haxe.ui.toolkit.data.*;
 import haxe.ui.toolkit.events.*;
+import hxSerial.Serial;
 
 
 
@@ -28,17 +29,25 @@ class Main extends Sprite{
     /*Main loop counter.
     We need it to be placed as a class local variable because it need to be accessed everytime,
         but the value is not necessailry to be initiated over time.*/
-    var loopCounterMainInt              :Int                            = 0;
+    var loopCounterMainInt                      :Int                            = 0;
     /*Popup objects.*/
-    var uiPopupAddMuseumObject          :UIPopupAddObjectMuseum         = null;
-    var uiPopupAddTagObject             :UIPopupAddObjectTag            = null;
-    var uiPopupAddVisitorObject         :UIPopupAddObjectVisitor        = null;
-    var uiPopupEditMuseumObject         :UIPopupEditObjectMuseum        = null;
-    var uiPopupEditTagObject            :UIPopupEditObjectTag           = null;
-    var uiPopupEditVisitorObject        :UIPopupEditObjectVisitor       = null;
-    var uiPopupRemoveMuseumObject       :UIPopupRemoveObjectMuseum      = null;
-    var uiPopupRemoveTagObject          :UIPopupRemoveObjectTag         = null;
-    var uiPopupRemoveVisitorObject      :UIPopupRemoveObjectVisitor     = null;
+    var uiPopupAddMuseumObject                  :UIPopupAddObjectMuseum         = null;
+    var uiPopupAddTagObject                     :UIPopupAddObjectTag            = null;
+    var uiPopupAddVisitorObject                 :UIPopupAddObjectVisitor        = null;
+    var uiPopupEditMuseumObject                 :UIPopupEditObjectMuseum        = null;
+    var uiPopupEditTagObject                    :UIPopupEditObjectTag           = null;
+    var uiPopupEditVisitorObject                :UIPopupEditObjectVisitor       = null;
+    var uiPopupRemoveMuseumObject               :UIPopupRemoveObjectMuseum      = null;
+    var uiPopupRemoveTagObject                  :UIPopupRemoveObjectTag         = null;
+    var uiPopupRemoveVisitorObject              :UIPopupRemoveObjectVisitor     = null;
+
+    var serialObject                            :Serial                         = null;
+    var serialIndexInt                          :Int                            = 0;
+    var serialCounterInt                        :Int                            = 0;
+    var serialEstablishedBool                   :Bool                           = false;
+    var serialLength                            :Int                            = 0;
+    var sendInstructionToArduinoStringArray     :Array<String>                  = new Array<String>();
+    var soundProgressBool                       :Bool                           = false;
 
 
 
@@ -50,6 +59,8 @@ class Main extends Sprite{
 
         /*super() to extends the functionality of Sprite object.*/
         super();
+
+        serialLength = hxSerial.Serial.getDeviceList().length;
 
         /*Initiate Toolkit static object to prepare HaXeUI to run.*/
         Toolkit.init();
@@ -111,6 +122,39 @@ class Main extends Sprite{
 
 
 
+    /*========================================
+    Function to loop through all available Serial port and to find which Serial port is an
+        Arduino's Serial port.*/
+    private function SearchForSerialConnectionVoid(){
+
+        if(serialIndexInt >= serialLength){ return; }
+        if(serialEstablishedBool == false){
+            if(serialObject == null){
+                serialObject = new hxSerial.Serial(hxSerial.Serial.getDeviceList()[serialIndexInt], 9600, true);
+            }
+            else if(serialObject != null){
+                if(serialObject.available() > 0){
+                    if(serialObject.readBytes(9) == "HANDSHAKE"){
+                        serialEstablishedBool = true;
+                        return;
+                    }
+                }
+            }
+            serialCounterInt ++;
+            if(serialCounterInt >= 300){
+                serialObject = null;
+                serialIndexInt ++;
+                serialCounterInt = 0;
+            }
+        }
+
+    }
+    /*========================================*/
+
+
+
+
+
     /*==================================================
     Update function that is executed per frame tick.
     Please to make sure a difference within this function and the constructor function.
@@ -119,6 +163,49 @@ class Main extends Sprite{
         before updating the user interface object.
     This is to prevent null pointer exception.*/
     private function UpdateVoid(event:Event){
+
+        SearchForSerialConnectionVoid();
+        if(serialEstablishedBool == true && soundProgressBool == false){
+            if(serialObject.available() > 0){
+                var string:String = serialObject.readBytes(7);
+                if(string.substring(0, 3) == "EXH"){ 
+
+                    if(collectionGlobalObject.GetVisitorObjectArray()[0].GetVisitorModeEnum() == HARDWARE_MANUAL){
+                        collectionGlobalObject.GetVisitorObjectArray()[0].ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, string));
+                        serialObject.writeBytes("I");
+                        sendInstructionToArduinoStringArray.push("Y");
+                        sendInstructionToArduinoStringArray.push("Q");
+                        sendInstructionToArduinoStringArray.push("W");
+                        sendInstructionToArduinoStringArray.push("E");
+                        sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExplanationCurrentIndexInt() + 1));
+                        sendInstructionToArduinoStringArray.push("T");
+                        sendInstructionToArduinoStringArray.push("Q");
+                        sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[0].GetIndexGlobalInt() + 1));
+                        sendInstructionToArduinoStringArray.push("R");
+                        sendInstructionToArduinoStringArray.push("Q");
+                        sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[1].GetIndexGlobalInt() + 1));
+                        sendInstructionToArduinoStringArray.push("R");
+                        sendInstructionToArduinoStringArray.push("Q");
+                        sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[2].GetIndexGlobalInt() + 1));
+                        sendInstructionToArduinoStringArray.push("U");
+                        soundProgressBool = true;
+                    }
+                    trace(string);
+
+                }
+            }
+        }
+        if(soundProgressBool == true){
+            if(serialObject.available() > 0){
+                var string:String = serialObject.readBytes(1);
+                if(string == "O"){
+                    trace(sendInstructionToArduinoStringArray[0]);
+                    serialObject.writeBytes(sendInstructionToArduinoStringArray[0]);
+                    sendInstructionToArduinoStringArray.remove(sendInstructionToArduinoStringArray[0]);
+                    if(sendInstructionToArduinoStringArray.length == 0){ soundProgressBool = false; }
+                }
+            }
+        }
 
         UpdateSlowVoid();
         uiPopupAddMuseumObject          .UpdateVoid();

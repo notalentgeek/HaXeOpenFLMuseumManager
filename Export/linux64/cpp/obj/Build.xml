@@ -1369,6 +1369,11 @@
    <depend name="include/motion/actuators/IGenericActuator.h"/>
    <depend name="include/motion/easing/IEasing.h"/>
   </file>
+  <file name="src/hxSerial/Serial.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/hxSerial/Serial.h"/>
+  </file>
   <file name="src/hscript/Parser.cpp">
    <depend name="include/Std.h"/>
    <depend name="include/Type.h"/>
@@ -5729,9 +5734,12 @@
    <depend name="include/CollectionPremade.h"/>
    <depend name="include/CollectionPremadeTag.h"/>
    <depend name="include/CollectionTagGeneral.h"/>
+   <depend name="include/EnumMuseumType.h"/>
+   <depend name="include/EnumVisitorMode.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectVisitor.h"/>
+   <depend name="include/Std.h"/>
    <depend name="include/UIPopupAddObjectMuseum.h"/>
    <depend name="include/UIPopupAddObjectTag.h"/>
    <depend name="include/UIPopupAddObjectVisitor.h"/>
@@ -5741,6 +5749,7 @@
    <depend name="include/UIPopupRemoveObjectMuseum.h"/>
    <depend name="include/UIPopupRemoveObjectTag.h"/>
    <depend name="include/UIPopupRemoveObjectVisitor.h"/>
+   <depend name="include/haxe/Log.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Absolute.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Accordion.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Container.h"/>
@@ -5760,6 +5769,7 @@
    <depend name="include/haxe/ui/toolkit/core/interfaces/IDrawable.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IEventDispatcher.h"/>
    <depend name="include/haxe/ui/toolkit/core/interfaces/IStyleableDisplayObject.h"/>
+   <depend name="include/hxSerial/Serial.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
@@ -6086,6 +6096,7 @@
    <depend name="include/motion/actuators/Timer.h"/>
    <depend name="include/motion/Actuate.h"/>
    <depend name="include/motion/actuators/SimpleActuator.h"/>
+   <depend name="include/hxSerial/Serial.h"/>
    <depend name="include/hscript/Parser.h"/>
    <depend name="include/haxe/zip/Uncompress.h"/>
    <depend name="include/haxe/zip/Compress.h"/>
