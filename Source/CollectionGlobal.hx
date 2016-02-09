@@ -22,10 +22,15 @@ class CollectionGlobal{
     Private variables.
     PENDING: Change all of these into static "global" variables.
     Archive exhibition is a reserve exhibition to put every player that has removed.
-    PENDING: Make so that a visitor that has finished to visit the museum to change current exhibition
-        exhibition archive.
-    PENDING: Make archive object for floor and room to contain all deleted exhibitions, rooms, and
-        floors.*/
+    PENDING (OBSELETE): Make archive object for floor and room to contain all deleted
+        exhibitions, rooms, and floors.
+    PENDING: Change the name this variable from archiveExhibitionObject into
+        archiveVisitorObject.
+    PENDING: Create object array for each deleted exhibitions, floors, and rooms. Let say
+        name it archiveExhibitionObjectArrray, archiveFloorObjectArray, and
+        archiveRoomObjectArray.
+    PENDING: Make so that a visitor that has finished to visit the museum to change current
+        exhibition archive visitor object.*/
     private var archiveExhibitionObject             :ObjectMuseum                           = null;
     /*Amount of visitor necessary so that a museum object can be defined as full capacity.*/
     private var exhibitionFullThresholdInt          :Int                                    = 0;

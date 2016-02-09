@@ -618,7 +618,7 @@ HX_STACK_ARG(_root,"_root")
 					HX_END_LOCAL_FUNC1((void))
 
 					HX_STACK_LINE(158)
-					::haxe::ui::toolkit::controls::popups::Popup tmp48 = tmp46->showList(_g->selectedVisitorObject->GetExplanationStringArray(),null(),HX_HCSTRING("Display Explanation","\x3b","\xa2","\x4c","\xd6"),tmp47, Dynamic(new _Function_3_1()));		HX_STACK_VAR(tmp48,"tmp48");
+					::haxe::ui::toolkit::controls::popups::Popup tmp48 = tmp46->showList(_g->selectedVisitorObject->GetExplanationStringArray(),(int)-1,HX_HCSTRING("Display Explanation","\x3b","\xa2","\x4c","\xd6"),tmp47, Dynamic(new _Function_3_1()));		HX_STACK_VAR(tmp48,"tmp48");
 					HX_STACK_LINE(158)
 					_g->displayExplanationPopupObject = tmp48;
 					HX_STACK_LINE(159)
@@ -708,7 +708,7 @@ HX_STACK_ARG(_root,"_root")
 					HX_END_LOCAL_FUNC1((void))
 
 					HX_STACK_LINE(180)
-					::haxe::ui::toolkit::controls::popups::Popup tmp48 = tmp46->showList(displayStringArray,null(),HX_HCSTRING("Display Popular Tag","\x95","\x68","\x05","\xc9"),tmp47, Dynamic(new _Function_3_1()));		HX_STACK_VAR(tmp48,"tmp48");
+					::haxe::ui::toolkit::controls::popups::Popup tmp48 = tmp46->showList(displayStringArray,(int)-1,HX_HCSTRING("Display Popular Tag","\x95","\x68","\x05","\xc9"),tmp47, Dynamic(new _Function_3_1()));		HX_STACK_VAR(tmp48,"tmp48");
 					HX_STACK_LINE(180)
 					_g->displayPopularTagPopupObject = tmp48;
 					HX_STACK_LINE(181)
@@ -758,7 +758,7 @@ HX_STACK_ARG(_root,"_root")
 					HX_END_LOCAL_FUNC1((void))
 
 					HX_STACK_LINE(190)
-					::haxe::ui::toolkit::controls::popups::Popup tmp48 = tmp46->showList(_g->selectedVisitorObject->GetSentenceStringArray(),null(),HX_HCSTRING("Display Sentence","\x81","\xaa","\xa1","\xca"),tmp47, Dynamic(new _Function_3_1()));		HX_STACK_VAR(tmp48,"tmp48");
+					::haxe::ui::toolkit::controls::popups::Popup tmp48 = tmp46->showList(_g->selectedVisitorObject->GetSentenceStringArray(),(int)-1,HX_HCSTRING("Display Sentence","\x81","\xaa","\xa1","\xca"),tmp47, Dynamic(new _Function_3_1()));		HX_STACK_VAR(tmp48,"tmp48");
 					HX_STACK_LINE(190)
 					_g->displaySentencePopupObject = tmp48;
 					HX_STACK_LINE(191)

@@ -155,7 +155,7 @@ class UIPopupEditObjectVisitor{
                 var buttonControlInt:Int = 0;
                 buttonControlInt |= PopupButton.OK;
 
-                displayExplanationPopupObject = PopupManager.instance.showList(selectedVisitorObject.GetExplanationStringArray(), "Display Explanation", buttonControlInt, function(_button){});
+                displayExplanationPopupObject = PopupManager.instance.showList(selectedVisitorObject.GetExplanationStringArray(), -1, "Display Explanation", buttonControlInt, function(_button){});
                 Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
                 displayExplanationPopupObject.y = popupObject.y;
 
@@ -177,7 +177,7 @@ class UIPopupEditObjectVisitor{
 
                 }
 
-                displayPopularTagPopupObject = PopupManager.instance.showList(displayStringArray, "Display Popular Tag", buttonControlInt, function(_button){});
+                displayPopularTagPopupObject = PopupManager.instance.showList(displayStringArray, -1, "Display Popular Tag", buttonControlInt, function(_button){});
                 Std.instance(displayPopularTagPopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
                 displayPopularTagPopupObject.y = popupObject.y;
 
@@ -187,7 +187,7 @@ class UIPopupEditObjectVisitor{
                 var buttonControlInt:Int = 0;
                 buttonControlInt |= PopupButton.OK;
 
-                displaySentencePopupObject = PopupManager.instance.showList(selectedVisitorObject.GetSentenceStringArray(), "Display Sentence", buttonControlInt, function(_button){});
+                displaySentencePopupObject = PopupManager.instance.showList(selectedVisitorObject.GetSentenceStringArray(), -1, "Display Sentence", buttonControlInt, function(_button){});
                 Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
                 displaySentencePopupObject.y = popupObject.y;
 
