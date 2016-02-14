@@ -69,6 +69,9 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupAddObjectMuseum_obj : public hx::Object{
 		::haxe::ui::toolkit::controls::TextInput nameAltTextInputObject;
 		::haxe::ui::toolkit::controls::TextInput nameFullTextInputObject;
 		::haxe::ui::toolkit::controls::popups::Popup popupObject;
+		cpp::ArrayBase textInputExplanationStructArray;
+		::haxe::ui::toolkit::controls::TextInput textInputExplanationObject;
+		int textInputExplanationLastIndexInt;
 		virtual Void UpdateVoid( );
 		Dynamic UpdateVoid_dyn();
 

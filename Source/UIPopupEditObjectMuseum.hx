@@ -28,7 +28,7 @@ class UIPopupEditObjectMuseum{
     private var displayVisitorCurrentTextObject         :Text                           = null;
     private var displayVisitorTotalTextObject           :Text                           = null;
     private var gridObject                              :Grid                           = null;                                 /*Grid layout.*/
-    private var listSelectorTagStructArray              :Array<StructListSelectorTag>   = new Array<StructListSelectorTag>();   /*Array of list selector to choose multiple tags.*/
+    private var listSelectorTagStructArray              :Array<StructListSelector>      = new Array<StructListSelector>();   /*Array of list selector to choose multiple tags.*/
     private var museumButtonObjectArray                 :Array<Button>                  = new Array<Button>();
     private var nameAltTextInputObject                  :TextInput                      = null;
     private var nameFullTextInputObject                 :TextInput                      = null;
@@ -181,7 +181,7 @@ class UIPopupEditObjectMuseum{
             CollectionFunction.ClearArray(listSelectorTagStructArray);
             var textObject:Text = new Text();
             var listSelectorObject:ListSelector = new ListSelector();
-            var listSelectorTagStruct:StructListSelectorTag = {
+            var listSelectorTagStruct:StructListSelector = {
                 listSelectorObject  :listSelectorObject,
                 textObject          :textObject
             };

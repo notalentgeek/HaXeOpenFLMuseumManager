@@ -39,6 +39,7 @@ class ObjectMuseum{
 
     public function new(
         _collectionGlobalObject:CollectionGlobal,
+        //_explanationStringArray:Array<String>,
         _nameAltString:String,
         _nameFullString:String,
         _parentNameString:String,
@@ -46,6 +47,7 @@ class ObjectMuseum{
         _typeEnum:EnumMuseumType
     ){
         collectionGlobalObject = _collectionGlobalObject;
+        //explanationStringArray = _explanationStringArray;
         nameStruct.nameAltString = _nameAltString;
         nameStruct.nameFullString = _nameFullString;
         typeEnum = _typeEnum;

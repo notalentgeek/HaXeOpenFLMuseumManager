@@ -59,7 +59,7 @@ class UIPopupAddObjectTag{
     private var selectTagTypeListSelectorObject     :ListSelector               = null;
     private var selectTagTypeListSelectorPrevString :String                     = "";
     private var selectTagTypeListSelectorString     :String                     = "";
-    private var textInputStructArray                :Array<StructTextInputTag>  = new Array<StructTextInputTag>();
+    private var textInputStructArray                :Array<StructTextInput>     = new Array<StructTextInput>();
 
     public function new(_collectionGlobalObject:CollectionGlobal, _root:Root){
 
@@ -220,7 +220,7 @@ class UIPopupAddObjectTag{
                 CreateGUIObjectVoid();
 
                 if(selectTagTypeListSelectorObject.text == "ADJ"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputAdjTextObject,
                         textInputObject :inputAdjTextInputObject
                     }
@@ -229,7 +229,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputAdjTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "ADV"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputAdvTextObject,
                         textInputObject :inputAdvTextInputObject
                     }
@@ -238,22 +238,22 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputAdvTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_ABSTRACT"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounPosTextObject,
                         textInputObject :inputNounPosTextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounSTextObject,
                         textInputObject :inputNounSTextInputObject,
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounSPosTextObject,
                         textInputObject :inputNounSPosTextInputObject
                     }
@@ -268,12 +268,12 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSPosTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_CONCRETE"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounPosTextObject,
                         textInputObject :inputNounPosTextInputObject
                     }
@@ -284,12 +284,12 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounPosTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_ABSTRACT"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounSTextObject,
                         textInputObject :inputNounSTextInputObject
                     }
@@ -300,12 +300,12 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_CONCRETE"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounSTextObject,
                         textInputObject :inputNounSTextInputObject
                     }
@@ -316,12 +316,12 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_ABSTRACT"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounSTextObject,
                         textInputObject :inputNounSTextInputObject
                     }
@@ -332,7 +332,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
@@ -341,12 +341,12 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_OWNER"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounSTextObject,
                         textInputObject :inputNounSTextInputObject
                     }
@@ -357,7 +357,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_ABSTRACT"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
@@ -366,7 +366,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_CONCRETE"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
@@ -375,12 +375,12 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_TITLE"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject,
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounSTextObject,
                         textInputObject :inputNounSTextInputObject
                     }
@@ -391,7 +391,7 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_ABSTRACT"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
@@ -400,12 +400,12 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_CONCRETE"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounTextObject,
                         textInputObject :inputNounTextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputNounSTextObject,
                         textInputObject :inputNounSTextInputObject
                     }
@@ -416,27 +416,27 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputNounSTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "VERB_INTRANSITIVE"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputVerb1TextObject,
                         textInputObject :inputVerb1TextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputVerb2TextObject,
                         textInputObject :inputVerb2TextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputVerb3TextObject,
                         textInputObject :inputVerb3TextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputVerbIngTextObject,
                         textInputObject :inputVerbIngTextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputVerbSTextObject,
                         textInputObject :inputVerbSTextInputObject
                     }
@@ -453,27 +453,27 @@ class UIPopupAddObjectTag{
                     gridObject.addChild(inputVerbSTextInputObject);
                 }
                 else if(selectTagTypeListSelectorObject.text == "VERB_TRANSITIVE"){
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputVerb1TextObject,
                         textInputObject :inputVerb1TextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputVerb2TextObject,
                         textInputObject :inputVerb2TextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputVerb3TextObject,
                         textInputObject :inputVerb3TextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputVerbIngTextObject,
                         textInputObject :inputVerbIngTextInputObject
                     }
                     textInputStructArray.push(textInputStruct);
-                    var textInputStruct:StructTextInputTag = {
+                    var textInputStruct:StructTextInput = {
                         textObject      :inputVerbSTextObject,
                         textInputObject :inputVerbSTextInputObject
                     }

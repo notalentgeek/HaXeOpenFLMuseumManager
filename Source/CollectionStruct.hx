@@ -33,7 +33,7 @@ typedef StructChild = {
 
 /*==================================================
 This struct is for combination of ListSelector object and its Text object descriptor/title.*/
-typedef StructListSelectorTag = {
+typedef StructListSelector = {
     listSelectorObject  :ListSelector,
     textObject          :Text
 };
@@ -82,7 +82,7 @@ typedef StructVisitorVisitExhibition = {
 
 /*==================================================
 Struct for holding a combination of TextInput object and its Text object descriptor/title.*/
-typedef StructTextInputTag = {
+typedef StructTextInput = {
     textInputObject                 :TextInput,
     textObject                      :Text
 };

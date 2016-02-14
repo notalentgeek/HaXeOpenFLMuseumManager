@@ -1,24 +1,17 @@
 import CollectionEnum;
 import CollectionFunction;
 import CollectionStruct;
-import flash.display.Sprite;
-import flash.events.Event;
-import haxe.ui.toolkit.containers.Absolute;
-import haxe.ui.toolkit.containers.Accordion;
-import haxe.ui.toolkit.containers.Grid;
-import haxe.ui.toolkit.containers.HBox;
-import haxe.ui.toolkit.controls.Button;
-import haxe.ui.toolkit.controls.popups.CustomPopupContent;
-import haxe.ui.toolkit.controls.popups.Popup;
-import haxe.ui.toolkit.controls.selection.ListSelector;
-import haxe.ui.toolkit.controls.Text;
-import haxe.ui.toolkit.controls.TextInput;
-import haxe.ui.toolkit.core.interfaces.IDisplayObject;
+import flash.display.*;
+import flash.events.*;
 import haxe.ui.toolkit.core.PopupManager;
-import haxe.ui.toolkit.core.Root;
-import haxe.ui.toolkit.core.Toolkit;
-import haxe.ui.toolkit.data.DataSource;
-import haxe.ui.toolkit.events.UIEvent;
+import haxe.ui.toolkit.containers.*;
+import haxe.ui.toolkit.controls.*;
+import haxe.ui.toolkit.controls.popups.*;
+import haxe.ui.toolkit.controls.selection.*;
+import haxe.ui.toolkit.core.*;
+import haxe.ui.toolkit.core.interfaces.*;
+import haxe.ui.toolkit.data.*;
+import haxe.ui.toolkit.events.*;
 
 
 
@@ -26,20 +19,24 @@ class UIPopupAddObjectMuseum{
 
 
 
-    private var buttonObject                :Button                         = null;                                 /*The main button to activate this popup.*/
-    private var collectionGlobalObject      :CollectionGlobal               = null;                                 /*Referece variable to collecrionGlobalObject that stores most of global variables.*/
-    private var gridObject                  :Grid                           = null;                                 /*Grid layout.*/
-    private var listSelectorParentObject    :ListSelector                   = null;                                 /*List selector for parent object.*/
-    private var listSelectorTagStructArray  :Array<StructListSelectorTag>   = new Array<StructListSelectorTag>();   /*Array of list selector to choose multiple tags.*/
-    private var listSelectorTagObject       :ListSelector                   = null;
+    private var buttonObject                        :Button                         = null;                                 /*The main button to activate this popup.*/
+    private var collectionGlobalObject              :CollectionGlobal               = null;                                 /*Referece variable to collecrionGlobalObject that stores most of global variables.*/
+    private var gridObject                          :Grid                           = null;                                 /*Grid layout.*/
+    private var listSelectorParentObject            :ListSelector                   = null;                                 /*List selector for parent object.*/
+    private var listSelectorTagStructArray          :Array<StructListSelector>      = new Array<StructListSelector>();      /*Array of list selector to choose multiple tags.*/
+    private var listSelectorTagObject               :ListSelector                   = null;
     /*An index to determine which set of parent object can be choose.
     PENDING: Instead of using int I can use listSelectorObject.text instead and then compare the String.*/
-    private var listSelectorTypeInt         :Int                            = -1;
-    private var listSelectorTypeObject      :ListSelector                   = null;                                 /*List selector to select museum type.*/
-    private var listSelectorTypePrevInt     :Int                            = -1;                                   /*Another int to detect change in type value from list selector of museum type.*/
-    private var nameAltTextInputObject      :TextInput                      = null;
-    private var nameFullTextInputObject     :TextInput                      = null;
-    private var popupObject                 :Popup                          = null;                                 /*Main popup object.*/
+    private var listSelectorTypeInt                 :Int                            = -1;
+    private var listSelectorTypeObject              :ListSelector                   = null;                                 /*List selector to select museum type.*/
+    private var listSelectorTypePrevInt             :Int                            = -1;                                   /*Another int to detect change in type value from list selector of museum type.*/
+    private var nameAltTextInputObject              :TextInput                      = null;
+    private var nameFullTextInputObject             :TextInput                      = null;
+    private var popupObject                         :Popup                          = null;                                 /*Main popup object.*/
+
+    private var textInputExplanationStructArray     :Array<StructTextInput>         = new Array<StructTextInput>();
+    private var textInputExplanationObject          :TextInput                      = null;
+    private var textInputExplanationLastIndexInt    :Int                            = -1;
 
 
 
@@ -112,23 +109,35 @@ class UIPopupAddObjectMuseum{
             listSelectorTypeObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectType", ListSelector, true);
             listSelectorTypeObject.method = "default";
 
+            /*Adding dynamic tag list selector.*/
             CollectionFunction.ClearArray(listSelectorTagStructArray);
             listSelectorTagObject = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTag_1", ListSelector, true);
             listSelectorTagObject.method = "default";
             var listSelectorTagTextObject:Text = popupObject.content.findChild("UIPopupAddObjectMuseum_SelectTagText_1", Text, true);
-            var listSelectorTagStruct = {
-                listSelectorObject  :listSelectorTagObject,
-                textObject          :listSelectorTagTextObject
+            var listSelectorTagStruct   :StructListSelector = {
+                listSelectorObject      :listSelectorTagObject,
+                textObject              :listSelectorTagTextObject
             };
             listSelectorTagStructArray.push(listSelectorTagStruct);
 
             listSelectorTagObject.dataSource.createFromString("Remove");
-            var loopCounter1Int:Int = 0;
 
+            var loopCounter1Int:Int = 0;
             while(loopCounter1Int < collectionGlobalObject.GetTagObjectArray().length){
                 listSelectorTagObject.dataSource.createFromString(collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString());
                 loopCounter1Int ++;
             }
+
+            /*Adding dynamic explanation text input.*/
+            CollectionFunction.ClearArray(textInputExplanationStructArray);
+            textInputExplanationObject = popupObject.content.findChild("UIPopupAddObjectMuseum_InputExplanation_1", TextInput, true);
+            var textInputExplanationTextObject:Text = popupObject.content.findChild("UIPopupAddObjectMuseum_InputExplanationText_1", Text, true);
+            var textInputExplanationStruct  :StructTextInput = {
+                textInputObject             :textInputExplanationObject,
+                textObject                  :textInputExplanationTextObject
+            }
+            textInputExplanationStructArray.push(textInputExplanationStruct);
+            textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject) + 1;
 
         }
 
@@ -145,11 +154,13 @@ class UIPopupAddObjectMuseum{
                 listSelectorTagObject.disabled = true;
                 nameAltTextInputObject.disabled = true;
                 nameFullTextInputObject.disabled = true;
+                textInputExplanationObject.disabled = true;
             }
             else{
                 listSelectorTagObject.disabled = false;
                 nameAltTextInputObject.disabled = false;
                 nameFullTextInputObject.disabled = false;
+                textInputExplanationObject.disabled = false;
             }
             if(listSelectorTypeObject.text != "Floor"){
                 listSelectorParentObject.disabled = false;
@@ -225,8 +236,6 @@ class UIPopupAddObjectMuseum{
                 };
                 listSelectorTagStructArray.push(listSelectorTagStruct);
 
-
-                listSelectorTagTextObject = new Text();
                 listSelectorTagTextObject.text = "Tags";
                 listSelectorTagTextObject.id = "UIPopupAddObjectMuseum_SelectTagText_" + listSelectorTagStructArray.length;
                 gridObject.addChild(listSelectorTagTextObject);
@@ -259,7 +268,82 @@ class UIPopupAddObjectMuseum{
 
                 }
 
-                listSelectorTagObject.method = "default"; /*For some reason you need this to be configured after the object is initialized in the screen.*/
+                /*For some reason you need this to be configured after the object is initialized in
+                    the screen.*/
+                listSelectorTagObject.method = "default";
+
+            }
+
+        }
+
+        if(popupObject != null && textInputExplanationStructArray.length > 0){
+            
+            var loopCounter1Int:Int = 0;
+            while(loopCounter1Int < textInputExplanationStructArray.length){
+
+                if(
+                    (
+                        textInputExplanationStructArray[loopCounter1Int].textInputObject.text == "" ||
+                        textInputExplanationStructArray[loopCounter1Int].textInputObject.text == " "
+                    ) &&
+                    textInputExplanationStructArray.length > 1
+                ){
+
+                    /*PENDING: Might need some checking here due to it it quite different than the original
+                        codes.*/
+                    if(loopCounter1Int != textInputExplanationStructArray.length - 1){
+
+                        gridObject.removeChild(textInputExplanationStructArray[loopCounter1Int].textInputObject);
+                        gridObject.removeChild(textInputExplanationStructArray[loopCounter1Int].textObject);
+                        textInputExplanationStructArray.remove(textInputExplanationStructArray[loopCounter1Int]);
+
+                        var loopCounter2Int:Int = 1;
+                        while(loopCounter2Int <= textInputExplanationStructArray.length){
+
+                            textInputExplanationStructArray[loopCounter2Int - 1].textInputObject.id = "UIPopupEditObjectMuseum_SelectTag_" + loopCounter2Int;
+                            textInputExplanationStructArray[loopCounter2Int - 1].textObject.id = "UIPopupEditObjectMuseum_SelectTagText_" + loopCounter2Int;
+                            loopCounter2Int ++;
+                        
+                        }
+                        textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject) + 1;
+
+                    }
+
+                }
+                loopCounter1Int ++;
+
+            }
+
+            if(
+                textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject.text != "" &&
+                textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject.text != " "
+            ){
+
+                var textInputExplanationTextObject:Text = new Text();
+                var textInputExplanationObject:TextInput = new TextInput();
+                var textInputExplanationStruct = {
+                    textInputObject     : textInputExplanationObject,
+                    textObject          : textInputExplanationTextObject
+                };
+                textInputExplanationStructArray.push(textInputExplanationStruct);
+
+                textInputExplanationTextObject.text = "Explanation";
+                trace("TEST1.");
+                textInputExplanationTextObject.id = "UIPopupEditObjectMuseum_SelectTagText_" + textInputExplanationStructArray.length;
+                trace(textInputExplanationLastIndexInt);
+                gridObject.addChildAt(textInputExplanationTextObject, textInputExplanationLastIndexInt);
+                trace("TEST3.");
+                textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationTextObject) + 1;
+                trace("TEST4.");
+
+                textInputExplanationObject.id = "UIPopupEditObjectMuseum_SelectTag_" + textInputExplanationStructArray.length;
+                trace("TEST5.");
+                textInputExplanationObject.percentWidth = 100;
+                trace(textInputExplanationLastIndexInt);
+                gridObject.addChildAt(textInputExplanationObject, textInputExplanationLastIndexInt);
+                trace("TEST7.");
+                textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationObject) + 1;
+                trace("TEST8.");
 
             }
 
