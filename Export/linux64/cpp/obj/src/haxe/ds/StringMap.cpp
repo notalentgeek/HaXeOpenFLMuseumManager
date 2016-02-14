@@ -11,7 +11,7 @@ namespace ds{
 
 Void StringMap_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ds.StringMap","new",0x0f13f0c6,"haxe.ds.StringMap.new","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",51,0x911cf5ce)
+HX_STACK_FRAME("haxe.ds.StringMap","new",0x0f13f0c6,"haxe.ds.StringMap.new","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",52,0x911cf5ce)
 HX_STACK_THIS(this)
 {
 }
@@ -41,11 +41,11 @@ StringMap_obj::operator ::haxe::IMap_obj *()
 	{ return new ::haxe::IMap_delegate_< StringMap_obj >(this); }
 Void StringMap_obj::set( ::String key,Dynamic value){
 {
-		HX_STACK_FRAME("haxe.ds.StringMap","set",0x0f17bc08,"haxe.ds.StringMap.set","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",54,0x911cf5ce)
+		HX_STACK_FRAME("haxe.ds.StringMap","set",0x0f17bc08,"haxe.ds.StringMap.set","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",55,0x911cf5ce)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(key,"key")
 		HX_STACK_ARG(value,"value")
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(55)
 		::__string_hash_set(this->h,key,value);
 	}
 return null();
@@ -55,12 +55,12 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC2(StringMap_obj,set,(void))
 
 Dynamic StringMap_obj::get( ::String key){
-	HX_STACK_FRAME("haxe.ds.StringMap","get",0x0f0ea0fc,"haxe.ds.StringMap.get","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",57,0x911cf5ce)
+	HX_STACK_FRAME("haxe.ds.StringMap","get",0x0f0ea0fc,"haxe.ds.StringMap.get","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",58,0x911cf5ce)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(key,"key")
-	HX_STACK_LINE(58)
+	HX_STACK_LINE(59)
 	Dynamic tmp = ::__string_hash_get(this->h,key);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(58)
+	HX_STACK_LINE(59)
 	return tmp;
 }
 
@@ -68,12 +68,12 @@ Dynamic StringMap_obj::get( ::String key){
 HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,get,return )
 
 bool StringMap_obj::exists( ::String key){
-	HX_STACK_FRAME("haxe.ds.StringMap","exists",0xd35fc136,"haxe.ds.StringMap.exists","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",61,0x911cf5ce)
+	HX_STACK_FRAME("haxe.ds.StringMap","exists",0xd35fc136,"haxe.ds.StringMap.exists","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",62,0x911cf5ce)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(key,"key")
-	HX_STACK_LINE(62)
+	HX_STACK_LINE(63)
 	bool tmp = ::__string_hash_exists(this->h,key);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(62)
+	HX_STACK_LINE(63)
 	return tmp;
 }
 
@@ -81,12 +81,12 @@ bool StringMap_obj::exists( ::String key){
 HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,exists,return )
 
 bool StringMap_obj::remove( ::String key){
-	HX_STACK_FRAME("haxe.ds.StringMap","remove",0x18083f9e,"haxe.ds.StringMap.remove","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",65,0x911cf5ce)
+	HX_STACK_FRAME("haxe.ds.StringMap","remove",0x18083f9e,"haxe.ds.StringMap.remove","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",66,0x911cf5ce)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(key,"key")
-	HX_STACK_LINE(66)
+	HX_STACK_LINE(67)
 	bool tmp = ::__string_hash_remove(this->h,key);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(66)
+	HX_STACK_LINE(67)
 	return tmp;
 }
 
@@ -94,13 +94,13 @@ bool StringMap_obj::remove( ::String key){
 HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,remove,return )
 
 Dynamic StringMap_obj::keys( ){
-	HX_STACK_FRAME("haxe.ds.StringMap","keys",0x20631ace,"haxe.ds.StringMap.keys","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",69,0x911cf5ce)
+	HX_STACK_FRAME("haxe.ds.StringMap","keys",0x20631ace,"haxe.ds.StringMap.keys","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",70,0x911cf5ce)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(71)
 	Array< ::String > a = ::__string_hash_keys(this->h);		HX_STACK_VAR(a,"a");
-	HX_STACK_LINE(71)
+	HX_STACK_LINE(72)
 	Dynamic tmp = a->iterator();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(71)
+	HX_STACK_LINE(72)
 	return tmp;
 }
 
@@ -108,13 +108,13 @@ Dynamic StringMap_obj::keys( ){
 HX_DEFINE_DYNAMIC_FUNC0(StringMap_obj,keys,return )
 
 Dynamic StringMap_obj::iterator( ){
-	HX_STACK_FRAME("haxe.ds.StringMap","iterator",0x40ccf7c8,"haxe.ds.StringMap.iterator","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",74,0x911cf5ce)
+	HX_STACK_FRAME("haxe.ds.StringMap","iterator",0x40ccf7c8,"haxe.ds.StringMap.iterator","/usr/share/haxe/std/cpp/_std/haxe/ds/StringMap.hx",75,0x911cf5ce)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(75)
+	HX_STACK_LINE(76)
 	cpp::ArrayBase a = ::__string_hash_values(this->h);		HX_STACK_VAR(a,"a");
-	HX_STACK_LINE(76)
+	HX_STACK_LINE(77)
 	Dynamic tmp = a->__Field(HX_HCSTRING("iterator","\xee","\x49","\x9a","\x93"), hx::paccDynamic )();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(76)
+	HX_STACK_LINE(77)
 	return tmp;
 }
 

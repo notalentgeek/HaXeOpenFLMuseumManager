@@ -10,7 +10,9 @@ import haxe.ui.toolkit.core.*;
 import haxe.ui.toolkit.core.interfaces.*;
 import haxe.ui.toolkit.data.*;
 import haxe.ui.toolkit.events.*;
-import hxSerial.Serial;
+#if (cpp)
+    import hxSerial.Serial;
+#end
 
 
 
@@ -31,6 +33,12 @@ class Main extends Sprite{
         but the value is not necessailry to be initiated over time.*/
     var loopCounterMainInt                      :Int                            = 0;
     /*Popup objects.*/
+    var sendInstructionToArduinoStringArray     :Array<String>                  = new Array<String>();
+    var serialCounterInt                        :Int                            = 0;
+    var serialEstablishedBool                   :Bool                           = false;
+    var serialIndexInt                          :Int                            = 0;
+    var serialLength                            :Int                            = 0;
+    var soundProgressBool                       :Bool                           = false;
     var uiPopupAddMuseumObject                  :UIPopupAddObjectMuseum         = null;
     var uiPopupAddTagObject                     :UIPopupAddObjectTag            = null;
     var uiPopupAddVisitorObject                 :UIPopupAddObjectVisitor        = null;
@@ -40,14 +48,9 @@ class Main extends Sprite{
     var uiPopupRemoveMuseumObject               :UIPopupRemoveObjectMuseum      = null;
     var uiPopupRemoveTagObject                  :UIPopupRemoveObjectTag         = null;
     var uiPopupRemoveVisitorObject              :UIPopupRemoveObjectVisitor     = null;
-
-    var serialObject                            :Serial                         = null;
-    var serialIndexInt                          :Int                            = 0;
-    var serialCounterInt                        :Int                            = 0;
-    var serialEstablishedBool                   :Bool                           = false;
-    var serialLength                            :Int                            = 0;
-    var sendInstructionToArduinoStringArray     :Array<String>                  = new Array<String>();
-    var soundProgressBool                       :Bool                           = false;
+    #if (cpp)
+        var serialObject                            :Serial                         = null;
+    #end
 
 
 
@@ -60,7 +63,9 @@ class Main extends Sprite{
         /*super() to extends the functionality of Sprite object.*/
         super();
 
-        serialLength = hxSerial.Serial.getDeviceList().length;
+        #if (cpp)
+            serialLength = hxSerial.Serial.getDeviceList().length;
+        #end
 
         /*Initiate Toolkit static object to prepare HaXeUI to run.*/
         Toolkit.init();
@@ -127,26 +132,28 @@ class Main extends Sprite{
         Arduino's Serial port.*/
     private function SearchForSerialConnectionVoid(){
 
-        if(serialIndexInt >= serialLength){ return; }
-        if(serialEstablishedBool == false){
-            if(serialObject == null){
-                serialObject = new hxSerial.Serial(hxSerial.Serial.getDeviceList()[serialIndexInt], 9600, true);
-            }
-            else if(serialObject != null){
-                if(serialObject.available() > 0){
-                    if(serialObject.readBytes(9) == "HANDSHAKE"){
-                        serialEstablishedBool = true;
-                        return;
+        #if (cpp)
+            if(serialIndexInt >= serialLength){ return; }
+            if(serialEstablishedBool == false){
+                if(serialObject == null){
+                    serialObject = new hxSerial.Serial(hxSerial.Serial.getDeviceList()[serialIndexInt], 9600, true);
+                }
+                else if(serialObject != null){
+                    if(serialObject.available() > 0){
+                        if(serialObject.readBytes(9) == "HANDSHAKE"){
+                            serialEstablishedBool = true;
+                            return;
+                        }
                     }
                 }
+                serialCounterInt ++;
+                if(serialCounterInt >= 300){
+                    serialObject = null;
+                    serialIndexInt ++;
+                    serialCounterInt = 0;
+                }
             }
-            serialCounterInt ++;
-            if(serialCounterInt >= 300){
-                serialObject = null;
-                serialIndexInt ++;
-                serialCounterInt = 0;
-            }
-        }
+        #end
 
     }
     /*========================================*/
@@ -164,48 +171,50 @@ class Main extends Sprite{
     This is to prevent null pointer exception.*/
     private function UpdateVoid(event:Event){
 
-        SearchForSerialConnectionVoid();
-        if(serialEstablishedBool == true && soundProgressBool == false){
-            if(serialObject.available() > 0){
-                var string:String = serialObject.readBytes(7);
-                if(string.substring(0, 3) == "EXH"){ 
+        #if (cpp)
+            SearchForSerialConnectionVoid();
+            if(serialEstablishedBool == true && soundProgressBool == false){
+                if(serialObject.available() > 0){
+                    var string:String = serialObject.readBytes(7);
+                    if(string.substring(0, 3) == "EXH"){ 
 
-                    if(collectionGlobalObject.GetVisitorObjectArray()[0].GetVisitorModeEnum() == HARDWARE_MANUAL){
-                        collectionGlobalObject.GetVisitorObjectArray()[0].ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, string));
-                        serialObject.writeBytes("I");
-                        sendInstructionToArduinoStringArray.push("Y");
-                        sendInstructionToArduinoStringArray.push("Q");
-                        sendInstructionToArduinoStringArray.push("W");
-                        sendInstructionToArduinoStringArray.push("E");
-                        sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExplanationCurrentIndexInt() + 1));
-                        sendInstructionToArduinoStringArray.push("T");
-                        sendInstructionToArduinoStringArray.push("Q");
-                        sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[0].GetIndexGlobalInt() + 1));
-                        sendInstructionToArduinoStringArray.push("R");
-                        sendInstructionToArduinoStringArray.push("Q");
-                        sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[1].GetIndexGlobalInt() + 1));
-                        sendInstructionToArduinoStringArray.push("R");
-                        sendInstructionToArduinoStringArray.push("Q");
-                        sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[2].GetIndexGlobalInt() + 1));
-                        sendInstructionToArduinoStringArray.push("U");
-                        soundProgressBool = true;
+                        if(collectionGlobalObject.GetVisitorObjectArray()[0].GetVisitorModeEnum() == HARDWARE_MANUAL){
+                            collectionGlobalObject.GetVisitorObjectArray()[0].ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, string));
+                            serialObject.writeBytes("I");
+                            sendInstructionToArduinoStringArray.push("Y");
+                            sendInstructionToArduinoStringArray.push("Q");
+                            sendInstructionToArduinoStringArray.push("W");
+                            sendInstructionToArduinoStringArray.push("E");
+                            sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExplanationCurrentIndexInt() + 1));
+                            sendInstructionToArduinoStringArray.push("T");
+                            sendInstructionToArduinoStringArray.push("Q");
+                            sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[0].GetIndexGlobalInt() + 1));
+                            sendInstructionToArduinoStringArray.push("R");
+                            sendInstructionToArduinoStringArray.push("Q");
+                            sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[1].GetIndexGlobalInt() + 1));
+                            sendInstructionToArduinoStringArray.push("R");
+                            sendInstructionToArduinoStringArray.push("Q");
+                            sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[2].GetIndexGlobalInt() + 1));
+                            sendInstructionToArduinoStringArray.push("U");
+                            soundProgressBool = true;
+                        }
+                        trace(string);
+
                     }
-                    trace(string);
-
                 }
             }
-        }
-        if(soundProgressBool == true){
-            if(serialObject.available() > 0){
-                var string:String = serialObject.readBytes(1);
-                if(string == "O"){
-                    trace(sendInstructionToArduinoStringArray[0]);
-                    serialObject.writeBytes(sendInstructionToArduinoStringArray[0]);
-                    sendInstructionToArduinoStringArray.remove(sendInstructionToArduinoStringArray[0]);
-                    if(sendInstructionToArduinoStringArray.length == 0){ soundProgressBool = false; }
+            if(soundProgressBool == true){
+                if(serialObject.available() > 0){
+                    var string:String = serialObject.readBytes(1);
+                    if(string == "O"){
+                        trace(sendInstructionToArduinoStringArray[0]);
+                        serialObject.writeBytes(sendInstructionToArduinoStringArray[0]);
+                        sendInstructionToArduinoStringArray.remove(sendInstructionToArduinoStringArray[0]);
+                        if(sendInstructionToArduinoStringArray.length == 0){ soundProgressBool = false; }
+                    }
                 }
             }
-        }
+        #end
 
         UpdateSlowVoid();
         uiPopupAddMuseumObject          .UpdateVoid();

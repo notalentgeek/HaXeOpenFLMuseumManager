@@ -56,6 +56,12 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::openfl::_legacy::display::Spri
 
 		::CollectionGlobal collectionGlobalObject;
 		int loopCounterMainInt;
+		Array< ::String > sendInstructionToArduinoStringArray;
+		int serialCounterInt;
+		bool serialEstablishedBool;
+		int serialIndexInt;
+		int serialLength;
+		bool soundProgressBool;
 		::UIPopupAddObjectMuseum uiPopupAddMuseumObject;
 		::UIPopupAddObjectTag uiPopupAddTagObject;
 		::UIPopupAddObjectVisitor uiPopupAddVisitorObject;
@@ -66,12 +72,6 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::openfl::_legacy::display::Spri
 		::UIPopupRemoveObjectTag uiPopupRemoveTagObject;
 		::UIPopupRemoveObjectVisitor uiPopupRemoveVisitorObject;
 		::hxSerial::Serial serialObject;
-		int serialIndexInt;
-		int serialCounterInt;
-		bool serialEstablishedBool;
-		int serialLength;
-		Array< ::String > sendInstructionToArduinoStringArray;
-		bool soundProgressBool;
 		virtual Void SearchForSerialConnectionVoid( );
 		Dynamic SearchForSerialConnectionVoid_dyn();
 
