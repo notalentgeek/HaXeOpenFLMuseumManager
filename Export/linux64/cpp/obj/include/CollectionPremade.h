@@ -32,14 +32,24 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionPremade_obj : public hx::Object{
 
 		static void __boot();
 		static Array< ::String > explanationGenericStringArray;
+		static Array< ::String > explanationGenericNewStringArray;
 		static Void PremadeExhibitionObjectVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeExhibitionObjectVoid_dyn();
+
+		static Void PremadeExhibitionNewObjectVoid( ::CollectionGlobal _collectionGlobalObject);
+		static Dynamic PremadeExhibitionNewObjectVoid_dyn();
 
 		static Void PremadeFloorObjectVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeFloorObjectVoid_dyn();
 
+		static Void PremadeFloorNewObjectVoid( ::CollectionGlobal _collectionGlobalObject);
+		static Dynamic PremadeFloorNewObjectVoid_dyn();
+
 		static Void PremadeRoomObjectVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeRoomObjectVoid_dyn();
+
+		static Void PremadeRoomNewObjectVoid( ::CollectionGlobal _collectionGlobalObject);
+		static Dynamic PremadeRoomNewObjectVoid_dyn();
 
 		static Void PremadeVisitorObjectVoid( int _amountInt,::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeVisitorObjectVoid_dyn();

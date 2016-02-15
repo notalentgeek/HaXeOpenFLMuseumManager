@@ -111,9 +111,14 @@ class Main extends Sprite{
         /*Create all the necessary premade object.*/
         CollectionTagGeneral    .TagGeneralStructVoid           (collectionGlobalObject);
         CollectionPremadeTag    .PremadeTagStructVoid           (collectionGlobalObject);
+        CollectionPremade       .PremadeFloorNewObjectVoid      (collectionGlobalObject);
+        CollectionPremade       .PremadeRoomNewObjectVoid       (collectionGlobalObject);
+        CollectionPremade       .PremadeExhibitionNewObjectVoid (collectionGlobalObject);
+        /*
         CollectionPremade       .PremadeFloorObjectVoid         (collectionGlobalObject);
         CollectionPremade       .PremadeRoomObjectVoid          (collectionGlobalObject);
         CollectionPremade       .PremadeExhibitionObjectVoid    (collectionGlobalObject);
+        */
         /*Change the number (first parameter) to change the initial visitor when the application starts.*/
         CollectionPremade       .PremadeVisitorObjectVoid       (10, collectionGlobalObject);
         
