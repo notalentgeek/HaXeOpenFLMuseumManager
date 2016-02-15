@@ -40,7 +40,9 @@ class UIPopupEditObjectMuseum{
     private var selectTypeListSelectorObject            :ListSelector                   = null;
     private var selectTypeListSelectorPrevString        :String                         = "";
     private var selectTypeListSelectorString            :String                         = "";
-    private var tagAmountInt                            :Int                            = -1;
+
+    private var textInputExplanationStructArray         :Array<StructTextInput>         = new Array<StructTextInput>();
+    private var textInputExplanationLastIndexInt        :Int                            = -1;
 
     public function new(
         _collectionGlobalObject     :CollectionGlobal,
@@ -69,15 +71,26 @@ class UIPopupEditObjectMuseum{
                     var nameAltString:String = nameAltTextInputObject.text;
                     var nameFullString:String = nameFullTextInputObject.text;
                     var parentNameAltString:String = selectParentNameFullListSelectorObject.text;
+                    var explanationStringArray:Array<String> = new Array<String>();
                     var tagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
                     var typeEnum:EnumMuseumType = null;
-                    if(selectTypeListSelectorObject.text == "Exhibition"){ typeEnum = EXH; }
-                    else if(selectTypeListSelectorObject.text == "Floor"){ typeEnum = FLR; }
-                    else if(selectTypeListSelectorObject.text == "Room"){ typeEnum = ROM; }
+                    if(selectParentNameFullListSelectorObject.text == "Exhibition"){ typeEnum = EXH; }
+                    else if(selectParentNameFullListSelectorObject.text == "Floor"){ typeEnum = FLR; }
+                    else if(selectParentNameFullListSelectorObject.text == "Room"){ typeEnum = ROM; }
 
                     if(typeEnum == FLR){ parentNameAltString = "XXX_XXX"; }
 
                     var loopCounter1Int:Int = 0;
+                    while(loopCounter1Int < textInputExplanationStructArray.length){
+                        if(
+                            textInputExplanationStructArray[loopCounter1Int].textInputObject.text != "" &&
+                            textInputExplanationStructArray[loopCounter1Int].textInputObject.text != " "
+                        ){
+                            explanationStringArray.push(textInputExplanationStructArray[loopCounter1Int].textInputObject.text);
+                        }
+                        loopCounter1Int ++;
+                    }
+                    loopCounter1Int = 0;
                     while(loopCounter1Int < listSelectorTagStructArray.length){
                         var tagNameString:String = listSelectorTagStructArray[loopCounter1Int].listSelectorObject.text;
                         var tagObject:ObjectTag = CollectionFunction.FindTagObject(collectionGlobalObject, false, tagNameString);
@@ -88,15 +101,16 @@ class UIPopupEditObjectMuseum{
 
                     /*PENDING: Adding notification if user is not properly input new museum object information.*/
                     if(
-                        nameAltString           != "" || nameAltString          != " " || nameAltString         != null ||
-                        nameFullString          != "" || nameFullString         != " " || nameFullString        != null ||
-                        parentNameAltString     != "" || parentNameAltString    != " " || parentNameAltString   != null ||
-                        tagObjectArray.length   != 0
+                        nameAltString                   != "" || nameAltString          != " " || nameAltString         != null ||
+                        nameFullString                  != "" || nameFullString         != " " || nameFullString        != null ||
+                        parentNameAltString             != "" || parentNameAltString    != " " || parentNameAltString   != null ||
+                        explanationStringArray.length   != 0  || tagObjectArray.length  != 0
                     ){
 
                         selectedMuseumObject.SetNameAltStringVoid(nameAltString);
                         selectedMuseumObject.SetNameFullStringVoid(nameFullString);
                         selectedMuseumObject.ChangeParentObject(parentNameAltString);
+                        selectedMuseumObject.SetExplanationStringArrayVoid(explanationStringArray);
                         selectedMuseumObject.SetTagObjectArrayVoid(tagObjectArray);
 
                     }
@@ -178,12 +192,30 @@ class UIPopupEditObjectMuseum{
                 }
             }
 
+            /*Adding the first explanation box.*/
+            CollectionFunction.ClearArray(textInputExplanationStructArray);
+            var textObject:Text = new Text();
+            var textInputObject:TextInput = new TextInput();
+            var textInputExplanationStruct  :StructTextInput = {
+                textInputObject             :textInputObject,
+                textObject                  :textObject
+            };
+            textInputExplanationStructArray.push(textInputExplanationStruct);
+            textObject.id = "UIPopupEditObjectMuseum_InputExplanationText_" + textInputExplanationStructArray.length;
+            textObject.text = "Explanation";
+            textInputObject.disabled = true;
+            textInputObject.id = "UIPopupEditObjectMuseum_InputExplanation_" + textInputExplanationStructArray.length;
+            textInputObject.percentWidth = 100;
+            gridObject.addChild(textInputObject);
+            textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject) + 1;
+
+            /*Adding the first tag selection box.*/
             CollectionFunction.ClearArray(listSelectorTagStructArray);
             var textObject:Text = new Text();
             var listSelectorObject:ListSelector = new ListSelector();
-            var listSelectorTagStruct:StructListSelector = {
-                listSelectorObject  :listSelectorObject,
-                textObject          :textObject
+            var listSelectorTagStruct   :StructListSelector = {
+                listSelectorObject      :listSelectorObject,
+                textObject              :textObject
             };
             listSelectorTagStructArray.push(listSelectorTagStruct);
             textObject.id = "UIPopupEditObjectMuseum_SelectTagText_" + listSelectorTagStructArray.length;
@@ -358,6 +390,18 @@ class UIPopupEditObjectMuseum{
                     }
                     CollectionFunction.ClearArray(listSelectorTagStructArray);
 
+                    loopCounter1Int = 1;
+                    while(loopCounter1Int <= textInputExplanationStructArray.length){
+
+                        var textObject:Text = popupObject.content.findChild("UIPopupEditObjectMuseum_InputExplanationText_" + loopCounter1Int, Text, true);
+                        var textInputObject:TextInput = popupObject.content.findChild("UIPopupEditObjectMuseum_InputExplanation_" + loopCounter1Int, TextInput, true);
+                        gridObject.removeChild(textObject);
+                        gridObject.removeChild(textInputObject);
+                        loopCounter1Int ++;
+
+                    }
+                    CollectionFunction.ClearArray(textInputExplanationStructArray);
+
                     var fullString:String = "";
                     if(selectedMuseumObject.GetFullBool() == true){ fullString = "True"; }
                     else if(selectedMuseumObject.GetFullBool() == false){ fullString = "False"; }
@@ -365,12 +409,42 @@ class UIPopupEditObjectMuseum{
                     displayVisitorCurrentTextObject.text = "" + selectedMuseumObject.GetVisitorCurrentInt();
                     displayVisitorTotalTextObject.text = "" + selectedMuseumObject.GetVisitorTotalInt();
                     nameAltTextInputObject.disabled = false;
-                    nameAltTextInputObject.text = " ";
+                    nameAltTextInputObject.text = "";
                     nameFullTextInputObject.disabled = false;
-                    nameFullTextInputObject.text = " ";
+                    nameFullTextInputObject.text = "";
                     selectParentNameFullListSelectorObject.disabled = false;
                     selectParentNameFullListSelectorObject.selectedIndex = -1;
 
+                    var explanationAmountInt:Int = 0;
+                    explanationAmountInt = selectedMuseumObject.GetExplanationStringArray().length;
+                    textInputExplanationLastIndexInt = gridObject.indexOfChild(displayVisitorTotalTextObject) + 1;
+                    loopCounter1Int = 0;
+                    while(loopCounter1Int < explanationAmountInt){
+
+                        var textObject:Text = new Text();
+                        var textInputObject:TextInput = new TextInput();
+                        var textInputExplanationStruct:StructTextInput = {
+
+                            textInputObject     :textInputObject,
+                            textObject          :textObject
+
+                        };
+                        textInputExplanationStructArray.push(textInputExplanationStruct);
+                        textObject.id = "UIPopupEditObjectMuseum_InputExplanationText_" + textInputExplanationStructArray.length;
+                        textObject.text = "Explanation";
+                        gridObject.addChildAt(textObject, textInputExplanationLastIndexInt);
+                        textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textObject) + 1;
+
+                        textInputObject.disabled = false;
+                        textInputObject.id = "UIPopupEditObjectMuseum_InputExplanation_" + textInputExplanationStructArray.length;
+                        textInputObject.percentWidth = 100;
+                        textInputObject.text = selectedMuseumObject.GetExplanationStringArray()[loopCounter1Int];
+                        gridObject.addChildAt(textInputObject, textInputExplanationLastIndexInt);
+                        textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject) + 1;
+
+                        loopCounter1Int ++;
+
+                    }
                     /*Set the GUI here.
                     So everytime the selected object change we reset the GUI so that it matched with information
                         received from the selectObjectMuseumListSelectorObject.*/
@@ -546,5 +620,71 @@ class UIPopupEditObjectMuseum{
 
         }
 
+        if(popupObject != null && textInputExplanationStructArray.length > 0){
+
+            var loopCounter1Int:Int = 0;
+            while(loopCounter1Int < textInputExplanationStructArray.length){
+
+                if(
+                    (
+                        textInputExplanationStructArray[loopCounter1Int].textInputObject.text == "" ||
+                        textInputExplanationStructArray[loopCounter1Int].textInputObject.text == " "
+                    ) &&
+                    textInputExplanationStructArray.length > 1
+                ){
+
+                    /*PENDING: Might need some checking here due to it it quite different than the original
+                        codes.*/
+                    if(loopCounter1Int != textInputExplanationStructArray.length - 1){
+
+                        gridObject.removeChild(textInputExplanationStructArray[loopCounter1Int].textInputObject);
+                        gridObject.removeChild(textInputExplanationStructArray[loopCounter1Int].textObject);
+                        textInputExplanationStructArray.remove(textInputExplanationStructArray[loopCounter1Int]);
+
+                        var loopCounter2Int:Int = 1;
+                        while(loopCounter2Int <= textInputExplanationStructArray.length){
+
+                            textInputExplanationStructArray[loopCounter2Int - 1].textInputObject.id = "UIPopupEditObjectMuseum_InputExplanation_" + loopCounter2Int;
+                            textInputExplanationStructArray[loopCounter2Int - 1].textObject.id = "UIPopupEditObjectMuseum_InputExplanationText_" + loopCounter2Int;
+                            loopCounter2Int ++;
+                        
+                        }
+                        textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject) + 1;
+
+                    }
+
+                }
+                loopCounter1Int ++;
+
+            }
+
+            if(
+                textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject.text != "" &&
+                textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject.text != " "
+            ){
+
+                var textInputExplanationTextObject:Text = new Text();
+                var textInputExplanationObject:TextInput = new TextInput();
+                var textInputExplanationStruct = {
+                    textInputObject     : textInputExplanationObject,
+                    textObject          : textInputExplanationTextObject
+                };
+                textInputExplanationStructArray.push(textInputExplanationStruct);
+
+                textInputExplanationTextObject.text = "Explanation";
+                textInputExplanationTextObject.id = "UIPopupEditObjectMuseum_InputExplanationText_" + textInputExplanationStructArray.length;
+                gridObject.addChildAt(textInputExplanationTextObject, textInputExplanationLastIndexInt);
+                textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationTextObject) + 1;
+
+                textInputExplanationObject.id = "UIPopupEditObjectMuseum_InputExplanation_" + textInputExplanationStructArray.length;
+                textInputExplanationObject.percentWidth = 100;
+                gridObject.addChildAt(textInputExplanationObject, textInputExplanationLastIndexInt);
+                textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationObject) + 1;
+
+            }
+
+        }
+
     }
+
 }

@@ -16,12 +16,12 @@
         <!--##################################################-->
 
         <text text="Alternative Name" />
-        <textinput disabled="true" id="UIPopupAddObjectMuseum_InputAltName" text=" " width="100%" />
+        <textinput disabled="true" id="UIPopupAddObjectMuseum_InputAltName" text="" width="100%" />
 
         <!--##################################################-->
 
         <text text="Full Name" />
-        <textinput disabled="true" id="UIPopupAddObjectMuseum_InputFullName" text=" " width="100%" />
+        <textinput disabled="true" id="UIPopupAddObjectMuseum_InputFullName" text="" width="100%" />
 
         <!--##################################################-->
 

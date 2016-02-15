@@ -86,7 +86,7 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(34)
 	this->archiveExhibitionObject = null();
 	HX_STACK_LINE(70)
-	::ObjectMuseum tmp = ::ObjectMuseum_obj::__new(hx::ObjectPtr<OBJ_>(this),HX_HCSTRING("EXH_ARC","\x28","\x66","\x87","\x18"),HX_HCSTRING("Exhibition Archive","\xf1","\x72","\xf3","\xb9"),HX_HCSTRING("XXX_XXX","\xb1","\xf7","\x19","\x65"),Array_obj< ::Dynamic >::__new(),::EnumMuseumType_obj::EXH);		HX_STACK_VAR(tmp,"tmp");
+	::ObjectMuseum tmp = ::ObjectMuseum_obj::__new(hx::ObjectPtr<OBJ_>(this),Array_obj< ::String >::__new().Add(HX_HCSTRING("No explanation.","\xd4","\x57","\x42","\x60")),HX_HCSTRING("EXH_ARC","\x28","\x66","\x87","\x18"),HX_HCSTRING("Exhibition Archive","\xf1","\x72","\xf3","\xb9"),HX_HCSTRING("XXX_XXX","\xb1","\xf7","\x19","\x65"),Array_obj< ::Dynamic >::__new(),::EnumMuseumType_obj::EXH);		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(70)
 	this->archiveExhibitionObject = tmp;
 }

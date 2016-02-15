@@ -39,7 +39,7 @@ class ObjectMuseum{
 
     public function new(
         _collectionGlobalObject:CollectionGlobal,
-        //_explanationStringArray:Array<String>,
+        _explanationStringArray:Array<String>,
         _nameAltString:String,
         _nameFullString:String,
         _parentNameString:String,
@@ -47,7 +47,7 @@ class ObjectMuseum{
         _typeEnum:EnumMuseumType
     ){
         collectionGlobalObject = _collectionGlobalObject;
-        //explanationStringArray = _explanationStringArray;
+        explanationStringArray = _explanationStringArray;
         nameStruct.nameAltString = _nameAltString;
         nameStruct.nameFullString = _nameFullString;
         typeEnum = _typeEnum;
@@ -61,11 +61,6 @@ class ObjectMuseum{
         ChangeParentObject(_parentNameString);
         collectionGlobalObject.DetermineExhibitionFullThresholdVoid();
 
-        /*Dummy explanation.*/
-        explanationStringArray.push("Explanation 1.");
-        explanationStringArray.push("Explanation 2.");
-        explanationStringArray.push("Explanation 3.");
-        explanationStringArray.push("Explanation 4.");
     }
     private function AddChildVisitorVoid(_visitorObject:ObjectVisitor){ childStruct.childVisitorObjectArray.push(_visitorObject); }
     private function AddTagVoid(_tagObject:ObjectTag){ tagObjectArray.push(_tagObject); }
@@ -247,6 +242,10 @@ class ObjectMuseum{
             museumModeEnum = null;
             visitorCurrentInt = 0;
             visitorTotalInt = 0;
+    }
+    public function SetExplanationStringArrayVoid(_explanationStringArray:Array<String>){
+        CollectionFunction.ClearArray(explanationStringArray);
+        explanationStringArray = _explanationStringArray;
     }
     public function SetNameAltStringVoid(_nameAltString:String){ nameStruct.nameAltString = _nameAltString; }
     public function SetNameFullStringVoid(_nameFullString:String){ nameStruct.nameFullString = _nameFullString; }

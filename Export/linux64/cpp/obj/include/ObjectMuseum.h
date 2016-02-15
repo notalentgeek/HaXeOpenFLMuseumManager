@@ -26,12 +26,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 		typedef hx::Object super;
 		typedef ObjectMuseum_obj OBJ_;
 		ObjectMuseum_obj();
-		Void __construct(::CollectionGlobal _collectionGlobalObject,::String _nameAltString,::String _nameFullString,::String _parentNameString,Array< ::Dynamic > _tagObjectArray,::EnumMuseumType _typeEnum);
+		Void __construct(::CollectionGlobal _collectionGlobalObject,Array< ::String > _explanationStringArray,::String _nameAltString,::String _nameFullString,::String _parentNameString,Array< ::Dynamic > _tagObjectArray,::EnumMuseumType _typeEnum);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectMuseum")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectMuseum_obj > __new(::CollectionGlobal _collectionGlobalObject,::String _nameAltString,::String _nameFullString,::String _parentNameString,Array< ::Dynamic > _tagObjectArray,::EnumMuseumType _typeEnum);
+		static hx::ObjectPtr< ObjectMuseum_obj > __new(::CollectionGlobal _collectionGlobalObject,Array< ::String > _explanationStringArray,::String _nameAltString,::String _nameFullString,::String _parentNameString,Array< ::Dynamic > _tagObjectArray,::EnumMuseumType _typeEnum);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectMuseum_obj();
@@ -140,6 +140,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectMuseum_obj : public hx::Object{
 
 		virtual Void Reset( );
 		Dynamic Reset_dyn();
+
+		virtual Void SetExplanationStringArrayVoid( Array< ::String > _explanationStringArray);
+		Dynamic SetExplanationStringArrayVoid_dyn();
 
 		virtual Void SetNameAltStringVoid( ::String _nameAltString);
 		Dynamic SetNameAltStringVoid_dyn();

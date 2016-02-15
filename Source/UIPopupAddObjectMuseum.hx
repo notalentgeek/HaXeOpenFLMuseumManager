@@ -33,10 +33,9 @@ class UIPopupAddObjectMuseum{
     private var nameAltTextInputObject              :TextInput                      = null;
     private var nameFullTextInputObject             :TextInput                      = null;
     private var popupObject                         :Popup                          = null;                                 /*Main popup object.*/
-
-    private var textInputExplanationStructArray     :Array<StructTextInput>         = new Array<StructTextInput>();
-    private var textInputExplanationObject          :TextInput                      = null;
     private var textInputExplanationLastIndexInt    :Int                            = -1;
+    private var textInputExplanationObject          :TextInput                      = null;
+    private var textInputExplanationStructArray     :Array<StructTextInput>         = new Array<StructTextInput>();
 
 
 
@@ -63,9 +62,10 @@ class UIPopupAddObjectMuseum{
                     /*If button OK is pressed then add a museum object according to the inputted value.
                     PENDING: Check whethe the data inputted valid.
                     PENDING: Check how to make disable OK button of this popup.*/
-                    var nameAltString:String = nameFullTextInputObject.text;
-                    var nameFullString:String = nameAltTextInputObject.text;
+                    var nameAltString:String = nameAltTextInputObject.text;
+                    var nameFullString:String = nameFullTextInputObject.text;
                     var parentNameAltString:String = listSelectorParentObject.text;
+                    var explanationStringArray:Array<String> = new Array<String>();
                     var tagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
                     var typeEnum:EnumMuseumType = null;
                     if(listSelectorTypeObject.text == "Exhibition"){ typeEnum = EXH; }
@@ -75,6 +75,16 @@ class UIPopupAddObjectMuseum{
                     if(typeEnum == FLR){ parentNameAltString = "XXX_XXX"; }
 
                     var loopCounter1Int:Int = 0;
+                    while(loopCounter1Int < textInputExplanationStructArray.length){
+                        if(
+                            textInputExplanationStructArray[loopCounter1Int].textInputObject.text != "" &&
+                            textInputExplanationStructArray[loopCounter1Int].textInputObject.text != " "
+                        ){
+                            explanationStringArray.push(textInputExplanationStructArray[loopCounter1Int].textInputObject.text);
+                        }
+                        loopCounter1Int ++;
+                    }
+                    loopCounter1Int = 0;
                     while(loopCounter1Int < listSelectorTagStructArray.length){
                         var tagNameString:String = listSelectorTagStructArray[loopCounter1Int].listSelectorObject.text;
                         var tagObject:ObjectTag = CollectionFunction.FindTagObject(collectionGlobalObject, false, tagNameString);
@@ -85,14 +95,14 @@ class UIPopupAddObjectMuseum{
 
                     /*PENDING: Adding notification if user is not properly input new museum object information.*/
                     if(
-                        nameAltString           != "" || nameAltString          != " " || nameAltString         != null ||
-                        nameFullString          != "" || nameFullString         != " " || nameFullString        != null ||
-                        parentNameAltString     != "" || parentNameAltString    != " " || parentNameAltString   != null ||
-                        tagObjectArray.length   != 0
+                        nameAltString                   != "" || nameAltString          != " " || nameAltString         != null ||
+                        nameFullString                  != "" || nameFullString         != " " || nameFullString        != null ||
+                        parentNameAltString             != "" || parentNameAltString    != " " || parentNameAltString   != null ||
+                        explanationStringArray.length   != 0  || tagObjectArray.length  != 0
                     ){
 
                         /*Adding the museum object here.*/
-                        var museumObject:ObjectMuseum = new ObjectMuseum(collectionGlobalObject, nameAltString, nameFullString, parentNameAltString, tagObjectArray, typeEnum);
+                        var museumObject:ObjectMuseum = new ObjectMuseum(collectionGlobalObject, explanationStringArray, nameAltString, nameFullString, parentNameAltString, tagObjectArray, typeEnum);
 
                     }
 
@@ -300,8 +310,8 @@ class UIPopupAddObjectMuseum{
                         var loopCounter2Int:Int = 1;
                         while(loopCounter2Int <= textInputExplanationStructArray.length){
 
-                            textInputExplanationStructArray[loopCounter2Int - 1].textInputObject.id = "UIPopupEditObjectMuseum_SelectTag_" + loopCounter2Int;
-                            textInputExplanationStructArray[loopCounter2Int - 1].textObject.id = "UIPopupEditObjectMuseum_SelectTagText_" + loopCounter2Int;
+                            textInputExplanationStructArray[loopCounter2Int - 1].textInputObject.id = "UIPopupAddObjectMuseum_InputExplanation_" + loopCounter2Int;
+                            textInputExplanationStructArray[loopCounter2Int - 1].textObject.id = "UIPopupAddObjectMuseum_InputExplanationText_" + loopCounter2Int;
                             loopCounter2Int ++;
                         
                         }
@@ -328,22 +338,14 @@ class UIPopupAddObjectMuseum{
                 textInputExplanationStructArray.push(textInputExplanationStruct);
 
                 textInputExplanationTextObject.text = "Explanation";
-                trace("TEST1.");
-                textInputExplanationTextObject.id = "UIPopupEditObjectMuseum_SelectTagText_" + textInputExplanationStructArray.length;
-                trace(textInputExplanationLastIndexInt);
+                textInputExplanationTextObject.id = "UIPopupAddObjectMuseum_InputExplanationText_" + textInputExplanationStructArray.length;
                 gridObject.addChildAt(textInputExplanationTextObject, textInputExplanationLastIndexInt);
-                trace("TEST3.");
                 textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationTextObject) + 1;
-                trace("TEST4.");
 
-                textInputExplanationObject.id = "UIPopupEditObjectMuseum_SelectTag_" + textInputExplanationStructArray.length;
-                trace("TEST5.");
+                textInputExplanationObject.id = "UIPopupAddObjectMuseum_InputExplanation_" + textInputExplanationStructArray.length;
                 textInputExplanationObject.percentWidth = 100;
-                trace(textInputExplanationLastIndexInt);
                 gridObject.addChildAt(textInputExplanationObject, textInputExplanationLastIndexInt);
-                trace("TEST7.");
                 textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationObject) + 1;
-                trace("TEST8.");
 
             }
 

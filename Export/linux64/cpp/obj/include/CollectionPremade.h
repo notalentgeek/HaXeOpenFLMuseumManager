@@ -26,9 +26,12 @@ class HXCPP_CLASS_ATTRIBUTES  CollectionPremade_obj : public hx::Object{
 
 		HX_DO_RTTI_ALL;
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("CollectionPremade","\x9a","\xa2","\xd1","\xe1"); }
 
+		static void __boot();
+		static Array< ::String > explanationGenericStringArray;
 		static Void PremadeExhibitionObjectVoid( ::CollectionGlobal _collectionGlobalObject);
 		static Dynamic PremadeExhibitionObjectVoid_dyn();
 

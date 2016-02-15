@@ -77,7 +77,8 @@ class HXCPP_CLASS_ATTRIBUTES  UIPopupEditObjectMuseum_obj : public hx::Object{
 		::haxe::ui::toolkit::controls::selection::ListSelector selectTypeListSelectorObject;
 		::String selectTypeListSelectorPrevString;
 		::String selectTypeListSelectorString;
-		int tagAmountInt;
+		cpp::ArrayBase textInputExplanationStructArray;
+		int textInputExplanationLastIndexInt;
 		virtual Void UpdateVoid( );
 		Dynamic UpdateVoid_dyn();
 

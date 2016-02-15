@@ -67,7 +67,7 @@ class CollectionGlobal{
     public function new(){
         /*In this constructor I only put on to initialize the archive exhibition object.
         PENDING: Please add archive for floor and room object museum.*/
-        archiveExhibitionObject = new ObjectMuseum(this, "EXH_ARC", "Exhibition Archive", "XXX_XXX", new Array<ObjectTag>(), EXH);
+        archiveExhibitionObject = new ObjectMuseum(this, ["No explanation."], "EXH_ARC", "Exhibition Archive", "XXX_XXX", new Array<ObjectTag>(), EXH);
     }
     /*==================================================*/
 
