@@ -27,7 +27,7 @@ class Main extends Sprite{
 
 
     /*Global variable database for the whole application.*/
-    var collectionGlobalObject          :CollectionGlobal               = new CollectionGlobal();
+    var collectionGlobalObject                  :CollectionGlobal               = new CollectionGlobal();
     /*Main loop counter.
     We need it to be placed as a class local variable because it need to be accessed everytime,
         but the value is not necessailry to be initiated over time.*/
@@ -49,7 +49,7 @@ class Main extends Sprite{
     var uiPopupRemoveTagObject                  :UIPopupRemoveObjectTag         = null;
     var uiPopupRemoveVisitorObject              :UIPopupRemoveObjectVisitor     = null;
     #if (cpp)
-        var serialObject                            :Serial                         = null;
+        var serialObject                        :Serial                         = null;
     #end
 
 
