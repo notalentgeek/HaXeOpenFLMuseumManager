@@ -188,6 +188,7 @@ class UIPopupEditObjectVisitor{
                 buttonControlInt |= PopupButton.OK;
 
                 displaySentencePopupObject = PopupManager.instance.showList(selectedVisitorObject.GetSentenceStringArray(), -1, "Display Sentence", buttonControlInt, function(_button){});
+                displaySentencePopupObject.width = 600;
                 Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
                 displaySentencePopupObject.y = popupObject.y;
 
@@ -399,11 +400,11 @@ class UIPopupEditObjectVisitor{
             if(updateExplanationBool == true){
                 CollectionFunction.ClearArray(selectedVisitorExplanationStringArray);
                 Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
-                var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < selectedVisitorObject.GetExplanationStringArray().length){
-                    selectedVisitorExplanationStringArray.push(selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int]);
-                    Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int]);
-                    loopCounter1Int ++;
+                var loopCounter2Int:Int = 0;
+                while(loopCounter2Int < selectedVisitorObject.GetExplanationStringArray().length){
+                    selectedVisitorExplanationStringArray.push(selectedVisitorObject.GetExplanationStringArray()[loopCounter2Int]);
+                    Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selectedVisitorObject.GetExplanationStringArray()[loopCounter2Int]);
+                    loopCounter2Int ++;
                 }
             }
         }
@@ -429,18 +430,18 @@ class UIPopupEditObjectVisitor{
                 CollectionFunction.ClearArray(selectedVisitorPopularTagCountIntArray);
                 CollectionFunction.ClearArray(selectedVisitorPopularTagObjectStringArray);
                 Std.instance(displayPopularTagPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
-                var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < selectedVisitorObject.GetTagCounterStructArray().length){
+                var loopCounter2Int:Int = 0;
+                while(loopCounter2Int < selectedVisitorObject.GetTagCounterStructArray().length){
 
-                    selectedVisitorPopularTagCountIntArray.push(selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt);
-                    selectedVisitorPopularTagObjectStringArray.push(selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString());
+                    selectedVisitorPopularTagCountIntArray.push(selectedVisitorObject.GetTagCounterStructArray()[loopCounter2Int].tagCounterInt);
+                    selectedVisitorPopularTagObjectStringArray.push(selectedVisitorObject.GetTagCounterStructArray()[loopCounter2Int].tagObject.GetNameString());
 
                     Std.instance(displayPopularTagPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(
-                        selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt +
+                        selectedVisitorObject.GetTagCounterStructArray()[loopCounter2Int].tagCounterInt +
                         " " +
-                        selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString()
+                        selectedVisitorObject.GetTagCounterStructArray()[loopCounter2Int].tagObject.GetNameString()
                     );
-                    loopCounter1Int ++;
+                    loopCounter2Int ++;
                 }
             }
         }
@@ -464,11 +465,12 @@ class UIPopupEditObjectVisitor{
             if(updateSentenceBool == true){
                 CollectionFunction.ClearArray(selectedVisitorSentenceStringArray);
                 Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
-                var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
-                    selectedVisitorSentenceStringArray.push(selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]);
-                    Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]);
-                    loopCounter1Int ++;
+                var loopCounter2Int:Int = 0;
+                while(loopCounter2Int < selectedVisitorObject.GetSentenceStringArray().length){
+                    selectedVisitorSentenceStringArray.push(selectedVisitorObject.GetSentenceStringArray()[loopCounter2Int]);
+                    Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selectedVisitorSentenceStringArray[selectedVisitorSentenceStringArray.length - 1]);
+                    
+                    loopCounter2Int ++;
                 }
             }
         }
@@ -523,8 +525,17 @@ class UIPopupEditObjectVisitor{
                         loopCounter1Int ++;
                     }
                 }
-                if(selectCurrentExhibitionListSelectorObject.text != selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameAltString){
-                    selectedVisitorObject.ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, selectCurrentExhibitionListSelectorObject.text));
+                if(selectedVisitorObject.GetExhibitionCurrentObject() != null){
+                    if(selectCurrentExhibitionListSelectorObject.text != selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString){
+                        if(selectCurrentExhibitionListSelectorObject.text != "Please change to Software Manual."){
+                            selectedVisitorObject.ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, selectCurrentExhibitionListSelectorObject.text));
+                        }
+                    }
+                }
+                else{
+                    if(selectCurrentExhibitionListSelectorObject.selectedIndex != -1){
+                       selectedVisitorObject.ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, selectCurrentExhibitionListSelectorObject.text));
+                    } 
                 }
             }
         }

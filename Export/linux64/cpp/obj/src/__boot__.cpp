@@ -1404,11 +1404,11 @@
 #ifndef INCLUDED_IntIterator
 #include <IntIterator.h>
 #endif
-#ifndef INCLUDED___ASSET__fonts_oxygen_bold_ttf
-#include <__ASSET__fonts_oxygen_bold_ttf.h>
-#endif
 #ifndef INCLUDED___ASSET__fonts_oxygen_ttf
 #include <__ASSET__fonts_oxygen_ttf.h>
+#endif
+#ifndef INCLUDED___ASSET__fonts_oxygen_bold_ttf
+#include <__ASSET__fonts_oxygen_bold_ttf.h>
 #endif
 #ifndef INCLUDED_cpp_vm_Deque
 #include <cpp/vm/Deque.h>
@@ -1945,8 +1945,8 @@ hx::RegisterResources( hx::GetResources() );
 ::List_obj::__register();
 ::Lambda_obj::__register();
 ::IntIterator_obj::__register();
-::__ASSET__fonts_oxygen_bold_ttf_obj::__register();
 ::__ASSET__fonts_oxygen_ttf_obj::__register();
+::__ASSET__fonts_oxygen_bold_ttf_obj::__register();
 ::cpp::vm::Deque_obj::__register();
 ::openfl::_legacy::AssetLibrary_obj::__register();
 ::DateTools_obj::__register();

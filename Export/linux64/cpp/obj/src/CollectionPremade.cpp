@@ -101,31 +101,31 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(52)
 		::CollectionGlobal tmp = _collectionGlobalObject;		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(52)
-		::ObjectTag tmp1 = ::CollectionFunction_obj::FindTagObject(tmp,false,HX_HCSTRING("chain_NOUN_INANIMATE_HOLD_CONCRETE","\x9b","\x4e","\xa7","\x42"));		HX_STACK_VAR(tmp1,"tmp1");
+		::ObjectTag tmp1 = ::CollectionFunction_obj::FindTagObject(tmp,false,HX_HCSTRING("Chain_NOUN_INANIMATE_HOLD_CONCRETE","\xbb","\xb2","\x2b","\x42"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(53)
 		::CollectionGlobal tmp2 = _collectionGlobalObject;		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(53)
-		::ObjectTag tmp3 = ::CollectionFunction_obj::FindTagObject(tmp2,false,HX_HCSTRING("cista_NOUN_INANIMATE_HOLD_CONCRETE","\x42","\xa4","\x6c","\x96"));		HX_STACK_VAR(tmp3,"tmp3");
+		::ObjectTag tmp3 = ::CollectionFunction_obj::FindTagObject(tmp2,false,HX_HCSTRING("Cista_NOUN_INANIMATE_HOLD_CONCRETE","\x62","\x08","\xf1","\x95"));		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(54)
 		::CollectionGlobal tmp4 = _collectionGlobalObject;		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(54)
-		::ObjectTag tmp5 = ::CollectionFunction_obj::FindTagObject(tmp4,false,HX_HCSTRING("cosmetic_NOUN_INANIMATE_HOLD_CONCRETE","\x8d","\x47","\x44","\x72"));		HX_STACK_VAR(tmp5,"tmp5");
+		::ObjectTag tmp5 = ::CollectionFunction_obj::FindTagObject(tmp4,false,HX_HCSTRING("Cosmetic_NOUN_INANIMATE_HOLD_CONCRETE","\x6d","\x37","\xbd","\x2b"));		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(55)
 		::CollectionGlobal tmp6 = _collectionGlobalObject;		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(55)
-		::ObjectTag tmp7 = ::CollectionFunction_obj::FindTagObject(tmp6,false,HX_HCSTRING("crouch_VERB_INTRANSITIVE","\x65","\x89","\x70","\x44"));		HX_STACK_VAR(tmp7,"tmp7");
+		::ObjectTag tmp7 = ::CollectionFunction_obj::FindTagObject(tmp6,false,HX_HCSTRING("Crouch_VERB_INTRANSITIVE","\x85","\x85","\xd4","\xbc"));		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(56)
 		::CollectionGlobal tmp8 = _collectionGlobalObject;		HX_STACK_VAR(tmp8,"tmp8");
 		HX_STACK_LINE(56)
-		::ObjectTag tmp9 = ::CollectionFunction_obj::FindTagObject(tmp8,false,HX_HCSTRING("item_NOUN_INANIMATE_HOLD_CONCRETE","\x49","\xb7","\xbd","\xc7"));		HX_STACK_VAR(tmp9,"tmp9");
+		::ObjectTag tmp9 = ::CollectionFunction_obj::FindTagObject(tmp8,false,HX_HCSTRING("Item_NOUN_INANIMATE_HOLD_CONCRETE","\x29","\x37","\x49","\x02"));		HX_STACK_VAR(tmp9,"tmp9");
 		HX_STACK_LINE(57)
 		::CollectionGlobal tmp10 = _collectionGlobalObject;		HX_STACK_VAR(tmp10,"tmp10");
 		HX_STACK_LINE(57)
-		::ObjectTag tmp11 = ::CollectionFunction_obj::FindTagObject(tmp10,false,HX_HCSTRING("lion_NOUN_ALIVE_ABSTRACT","\xd6","\x01","\x6b","\x2a"));		HX_STACK_VAR(tmp11,"tmp11");
+		::ObjectTag tmp11 = ::CollectionFunction_obj::FindTagObject(tmp10,false,HX_HCSTRING("Lion_NOUN_ALIVE_ABSTRACT","\xf6","\xfd","\xce","\xa2"));		HX_STACK_VAR(tmp11,"tmp11");
 		HX_STACK_LINE(58)
 		::CollectionGlobal tmp12 = _collectionGlobalObject;		HX_STACK_VAR(tmp12,"tmp12");
 		HX_STACK_LINE(58)
-		::ObjectTag tmp13 = ::CollectionFunction_obj::FindTagObject(tmp12,false,HX_HCSTRING("vessel_NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x10","\x11","\x1e","\xff"));		HX_STACK_VAR(tmp13,"tmp13");
+		::ObjectTag tmp13 = ::CollectionFunction_obj::FindTagObject(tmp12,false,HX_HCSTRING("Vessel_NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x30","\x95","\xd3","\xcd"));		HX_STACK_VAR(tmp13,"tmp13");
 		HX_STACK_LINE(51)
 		Array< ::Dynamic > exhibition001TagObjectArray = Array_obj< ::Dynamic >::__new().Add(tmp1).Add(tmp3).Add(tmp5).Add(tmp7).Add(tmp9).Add(tmp11).Add(tmp13);		HX_STACK_VAR(exhibition001TagObjectArray,"exhibition001TagObjectArray");
 		HX_STACK_LINE(60)
@@ -133,15 +133,15 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(68)
 		::CollectionGlobal tmp14 = _collectionGlobalObject;		HX_STACK_VAR(tmp14,"tmp14");
 		HX_STACK_LINE(68)
-		::ObjectTag tmp15 = ::CollectionFunction_obj::FindTagObject(tmp14,false,HX_HCSTRING("belt_NOUN_INANIMATE_WEAR_CONCRETE","\x11","\xcb","\xfc","\x8a"));		HX_STACK_VAR(tmp15,"tmp15");
+		::ObjectTag tmp15 = ::CollectionFunction_obj::FindTagObject(tmp14,false,HX_HCSTRING("Belt_NOUN_INANIMATE_WEAR_CONCRETE","\xf1","\x4a","\x88","\xc5"));		HX_STACK_VAR(tmp15,"tmp15");
 		HX_STACK_LINE(69)
 		::CollectionGlobal tmp16 = _collectionGlobalObject;		HX_STACK_VAR(tmp16,"tmp16");
 		HX_STACK_LINE(69)
-		::ObjectTag tmp17 = ::CollectionFunction_obj::FindTagObject(tmp16,false,HX_HCSTRING("club_NOUN_INANIMATE_HOLD_CONCRETE","\x46","\x73","\xf5","\xd2"));		HX_STACK_VAR(tmp17,"tmp17");
+		::ObjectTag tmp17 = ::CollectionFunction_obj::FindTagObject(tmp16,false,HX_HCSTRING("Club_NOUN_INANIMATE_HOLD_CONCRETE","\x26","\xf3","\x80","\x0d"));		HX_STACK_VAR(tmp17,"tmp17");
 		HX_STACK_LINE(70)
 		::CollectionGlobal tmp18 = _collectionGlobalObject;		HX_STACK_VAR(tmp18,"tmp18");
 		HX_STACK_LINE(70)
-		::ObjectTag tmp19 = ::CollectionFunction_obj::FindTagObject(tmp18,false,HX_HCSTRING("jade_NOUN_INANIMATE_HOLD_CONCRETE","\x44","\x27","\x29","\xcc"));		HX_STACK_VAR(tmp19,"tmp19");
+		::ObjectTag tmp19 = ::CollectionFunction_obj::FindTagObject(tmp18,false,HX_HCSTRING("Jade_NOUN_INANIMATE_HOLD_CONCRETE","\x24","\xa7","\xb4","\x06"));		HX_STACK_VAR(tmp19,"tmp19");
 		HX_STACK_LINE(71)
 		::CollectionGlobal tmp20 = _collectionGlobalObject;		HX_STACK_VAR(tmp20,"tmp20");
 		HX_STACK_LINE(71)
@@ -149,59 +149,59 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(72)
 		::CollectionGlobal tmp22 = _collectionGlobalObject;		HX_STACK_VAR(tmp22,"tmp22");
 		HX_STACK_LINE(72)
-		::ObjectTag tmp23 = ::CollectionFunction_obj::FindTagObject(tmp22,false,HX_HCSTRING("spear_NOUN_INANIMATE_HOLD_CONCRETE","\x83","\x10","\xc6","\x18"));		HX_STACK_VAR(tmp23,"tmp23");
+		::ObjectTag tmp23 = ::CollectionFunction_obj::FindTagObject(tmp22,false,HX_HCSTRING("Spear_NOUN_INANIMATE_HOLD_CONCRETE","\xa3","\x74","\x4a","\x18"));		HX_STACK_VAR(tmp23,"tmp23");
 		HX_STACK_LINE(73)
 		::CollectionGlobal tmp24 = _collectionGlobalObject;		HX_STACK_VAR(tmp24,"tmp24");
 		HX_STACK_LINE(73)
-		::ObjectTag tmp25 = ::CollectionFunction_obj::FindTagObject(tmp24,false,HX_HCSTRING("stone_NOUN_INANIMATE_HOLD_CONCRETE","\xb7","\x7c","\xbf","\x54"));		HX_STACK_VAR(tmp25,"tmp25");
+		::ObjectTag tmp25 = ::CollectionFunction_obj::FindTagObject(tmp24,false,HX_HCSTRING("Stone_NOUN_INANIMATE_HOLD_CONCRETE","\xd7","\xe0","\x43","\x54"));		HX_STACK_VAR(tmp25,"tmp25");
 		HX_STACK_LINE(74)
 		::CollectionGlobal tmp26 = _collectionGlobalObject;		HX_STACK_VAR(tmp26,"tmp26");
 		HX_STACK_LINE(74)
-		::ObjectTag tmp27 = ::CollectionFunction_obj::FindTagObject(tmp26,false,HX_HCSTRING("warrior_NOUN_ALIVE_ABSTRACT","\xbc","\xb5","\x1c","\xae"));		HX_STACK_VAR(tmp27,"tmp27");
+		::ObjectTag tmp27 = ::CollectionFunction_obj::FindTagObject(tmp26,false,HX_HCSTRING("Warrior_NOUN_ALIVE_ABSTRACT","\x9c","\x0d","\x85","\xfc"));		HX_STACK_VAR(tmp27,"tmp27");
 		HX_STACK_LINE(75)
 		::CollectionGlobal tmp28 = _collectionGlobalObject;		HX_STACK_VAR(tmp28,"tmp28");
 		HX_STACK_LINE(75)
-		::ObjectTag tmp29 = ::CollectionFunction_obj::FindTagObject(tmp28,false,HX_HCSTRING("weapon_NOUN_INANIMATE_HOLD_CONCRETE","\xe0","\x99","\x7a","\x57"));		HX_STACK_VAR(tmp29,"tmp29");
+		::ObjectTag tmp29 = ::CollectionFunction_obj::FindTagObject(tmp28,false,HX_HCSTRING("Weapon_NOUN_INANIMATE_HOLD_CONCRETE","\xc0","\xd1","\xcd","\xeb"));		HX_STACK_VAR(tmp29,"tmp29");
 		HX_STACK_LINE(76)
 		::CollectionGlobal tmp30 = _collectionGlobalObject;		HX_STACK_VAR(tmp30,"tmp30");
 		HX_STACK_LINE(76)
-		::ObjectTag tmp31 = ::CollectionFunction_obj::FindTagObject(tmp30,false,HX_HCSTRING("wood_NOUN_INANIMATE_HOLD_CONCRETE","\xef","\xe0","\x82","\x27"));		HX_STACK_VAR(tmp31,"tmp31");
+		::ObjectTag tmp31 = ::CollectionFunction_obj::FindTagObject(tmp30,false,HX_HCSTRING("Wood_NOUN_INANIMATE_HOLD_CONCRETE","\xcf","\x60","\x0e","\x62"));		HX_STACK_VAR(tmp31,"tmp31");
 		HX_STACK_LINE(67)
 		Array< ::Dynamic > exhibition002TagObjectArray = Array_obj< ::Dynamic >::__new().Add(tmp15).Add(tmp17).Add(tmp19).Add(tmp21).Add(tmp23).Add(tmp25).Add(tmp27).Add(tmp29).Add(tmp31);		HX_STACK_VAR(exhibition002TagObjectArray,"exhibition002TagObjectArray");
 		HX_STACK_LINE(78)
-		Array< ::String > exhibition003ExplanationStringArray = Array_obj< ::String >::__new().Add(HX_HCSTRING("The Holy Thorn Reliquary was probably created in the 1390s in Paris for John, Duke of Berry, to house a relic of the Crown of Thorns.","\xed","\xd1","\xc1","\x79")).Add(HX_HCSTRING("The reliquary was bequeathed to the British Museum in 1898 by Ferdinand de Rothschild as part of the Waddesdon Bequest.","\xc2","\x7c","\xec","\x82")).Add(HX_HCSTRING("It is one of a small number of major goldsmiths' works or joyaux that survive from the extravagant world of the courts of the Valois royal family around 1400.","\x61","\xb4","\x99","\xe1")).Add(HX_HCSTRING("It is made of gold, lavishly decorated with jewels and pearls, and uses the technique of enamelling en ronde bosse, or in the round, which had been recently developed when the reliquary was made, to create a total of 28 three-dimensional figures, mostly in white enamel.","\xec","\x83","\xee","\x08"));		HX_STACK_VAR(exhibition003ExplanationStringArray,"exhibition003ExplanationStringArray");
+		Array< ::String > exhibition003ExplanationStringArray = Array_obj< ::String >::__new().Add(HX_HCSTRING("The Holy Thorn Reliquary was probably created in the 1390s in Paris for John, Duke of Berry, to house a relic of the Crown of Thorns.","\xed","\xd1","\xc1","\x79")).Add(HX_HCSTRING("The reliquary was bequeathed to the British Museum in 1898 by Ferdinand De Rothschild as part of the Waddesdon Bequest.","\xa2","\x04","\x24","\x2b")).Add(HX_HCSTRING("It is one of a small number of major goldsmiths' works or joyaux that survive from the extravagant world of the courts of the Valois royal family around 1400.","\x61","\xb4","\x99","\xe1")).Add(HX_HCSTRING("It is made of gold, lavishly decorated with jewels and pearls, and uses the technique of enamelling en ronde bosse, or in the round, which had been recently developed when the reliquary was made, to create a total of 28 three-dimensional figures, mostly in white enamel.","\xec","\x83","\xee","\x08"));		HX_STACK_VAR(exhibition003ExplanationStringArray,"exhibition003ExplanationStringArray");
 		HX_STACK_LINE(85)
 		::CollectionGlobal tmp32 = _collectionGlobalObject;		HX_STACK_VAR(tmp32,"tmp32");
 		HX_STACK_LINE(85)
-		::ObjectTag tmp33 = ::CollectionFunction_obj::FindTagObject(tmp32,false,HX_HCSTRING("Crown of Thorn_NOUN_INANIMATE_WEAR_CONCRETE","\x25","\xaf","\xec","\xc6"));		HX_STACK_VAR(tmp33,"tmp33");
+		::ObjectTag tmp33 = ::CollectionFunction_obj::FindTagObject(tmp32,false,HX_HCSTRING("Crown Of Thorn_NOUN_INANIMATE_WEAR_CONCRETE","\x05","\x9f","\x65","\x80"));		HX_STACK_VAR(tmp33,"tmp33");
 		HX_STACK_LINE(86)
 		::CollectionGlobal tmp34 = _collectionGlobalObject;		HX_STACK_VAR(tmp34,"tmp34");
 		HX_STACK_LINE(86)
-		::ObjectTag tmp35 = ::CollectionFunction_obj::FindTagObject(tmp34,false,HX_HCSTRING("extravagant_ADJ","\xa3","\x30","\xb7","\x18"));		HX_STACK_VAR(tmp35,"tmp35");
+		::ObjectTag tmp35 = ::CollectionFunction_obj::FindTagObject(tmp34,false,HX_HCSTRING("Extravagant_ADJ","\x83","\x38","\x43","\x79"));		HX_STACK_VAR(tmp35,"tmp35");
 		HX_STACK_LINE(87)
 		::CollectionGlobal tmp36 = _collectionGlobalObject;		HX_STACK_VAR(tmp36,"tmp36");
 		HX_STACK_LINE(87)
-		::ObjectTag tmp37 = ::CollectionFunction_obj::FindTagObject(tmp36,false,HX_HCSTRING("extravagantly_ADV","\x7c","\x36","\x45","\x9c"));		HX_STACK_VAR(tmp37,"tmp37");
+		::ObjectTag tmp37 = ::CollectionFunction_obj::FindTagObject(tmp36,false,HX_HCSTRING("Extravagantly_ADV","\x5c","\xf6","\xca","\x3d"));		HX_STACK_VAR(tmp37,"tmp37");
 		HX_STACK_LINE(88)
 		::CollectionGlobal tmp38 = _collectionGlobalObject;		HX_STACK_VAR(tmp38,"tmp38");
 		HX_STACK_LINE(88)
-		::ObjectTag tmp39 = ::CollectionFunction_obj::FindTagObject(tmp38,false,HX_HCSTRING("Ferdinand de Rothschild_NOUN_ALIVE_CONCRETE","\x77","\x00","\x5b","\x47"));		HX_STACK_VAR(tmp39,"tmp39");
+		::ObjectTag tmp39 = ::CollectionFunction_obj::FindTagObject(tmp38,false,HX_HCSTRING("Ferdinand De Rothschild_NOUN_ALIVE_CONCRETE","\x57","\x80","\xe6","\x81"));		HX_STACK_VAR(tmp39,"tmp39");
 		HX_STACK_LINE(89)
 		::CollectionGlobal tmp40 = _collectionGlobalObject;		HX_STACK_VAR(tmp40,"tmp40");
 		HX_STACK_LINE(89)
-		::ObjectTag tmp41 = ::CollectionFunction_obj::FindTagObject(tmp40,false,HX_HCSTRING("gold_NOUN_INANIMATE_HOLD_CONCRETE","\x9c","\xcb","\x17","\x58"));		HX_STACK_VAR(tmp41,"tmp41");
+		::ObjectTag tmp41 = ::CollectionFunction_obj::FindTagObject(tmp40,false,HX_HCSTRING("Gold_NOUN_INANIMATE_HOLD_CONCRETE","\x7c","\x4b","\xa3","\x92"));		HX_STACK_VAR(tmp41,"tmp41");
 		HX_STACK_LINE(90)
 		::CollectionGlobal tmp42 = _collectionGlobalObject;		HX_STACK_VAR(tmp42,"tmp42");
 		HX_STACK_LINE(90)
-		::ObjectTag tmp43 = ::CollectionFunction_obj::FindTagObject(tmp42,false,HX_HCSTRING("goldsmith_NOUN_ALIVE_ABSTRACT","\x9d","\x49","\xba","\xf6"));		HX_STACK_VAR(tmp43,"tmp43");
+		::ObjectTag tmp43 = ::CollectionFunction_obj::FindTagObject(tmp42,false,HX_HCSTRING("Goldsmith_NOUN_ALIVE_ABSTRACT","\x7d","\x59","\xd0","\xf1"));		HX_STACK_VAR(tmp43,"tmp43");
 		HX_STACK_LINE(91)
 		::CollectionGlobal tmp44 = _collectionGlobalObject;		HX_STACK_VAR(tmp44,"tmp44");
 		HX_STACK_LINE(91)
-		::ObjectTag tmp45 = ::CollectionFunction_obj::FindTagObject(tmp44,false,HX_HCSTRING("jewel_NOUN_INANIMATE_WEAR_CONCRETE","\x59","\x24","\xc5","\xfb"));		HX_STACK_VAR(tmp45,"tmp45");
+		::ObjectTag tmp45 = ::CollectionFunction_obj::FindTagObject(tmp44,false,HX_HCSTRING("Jewel_NOUN_INANIMATE_WEAR_CONCRETE","\x79","\x88","\x49","\xfb"));		HX_STACK_VAR(tmp45,"tmp45");
 		HX_STACK_LINE(92)
 		::CollectionGlobal tmp46 = _collectionGlobalObject;		HX_STACK_VAR(tmp46,"tmp46");
 		HX_STACK_LINE(92)
-		::ObjectTag tmp47 = ::CollectionFunction_obj::FindTagObject(tmp46,false,HX_HCSTRING("John, Duke of Berry_NOUN_ALIVE_CONCRETE","\x40","\xdc","\x99","\x91"));		HX_STACK_VAR(tmp47,"tmp47");
+		::ObjectTag tmp47 = ::CollectionFunction_obj::FindTagObject(tmp46,false,HX_HCSTRING("John, Duke Of Berry_NOUN_ALIVE_CONCRETE","\x60","\x68","\x7e","\xde"));		HX_STACK_VAR(tmp47,"tmp47");
 		HX_STACK_LINE(93)
 		::CollectionGlobal tmp48 = _collectionGlobalObject;		HX_STACK_VAR(tmp48,"tmp48");
 		HX_STACK_LINE(93)
@@ -209,11 +209,11 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(94)
 		::CollectionGlobal tmp50 = _collectionGlobalObject;		HX_STACK_VAR(tmp50,"tmp50");
 		HX_STACK_LINE(94)
-		::ObjectTag tmp51 = ::CollectionFunction_obj::FindTagObject(tmp50,false,HX_HCSTRING("pearl_NOUN_INANIMATE_HOLD_CONCRETE","\xf6","\x96","\xec","\xb1"));		HX_STACK_VAR(tmp51,"tmp51");
+		::ObjectTag tmp51 = ::CollectionFunction_obj::FindTagObject(tmp50,false,HX_HCSTRING("Pearl_NOUN_INANIMATE_HOLD_CONCRETE","\x16","\xfb","\x70","\xb1"));		HX_STACK_VAR(tmp51,"tmp51");
 		HX_STACK_LINE(95)
 		::CollectionGlobal tmp52 = _collectionGlobalObject;		HX_STACK_VAR(tmp52,"tmp52");
 		HX_STACK_LINE(95)
-		::ObjectTag tmp53 = ::CollectionFunction_obj::FindTagObject(tmp52,false,HX_HCSTRING("reliquary_NOUN_INANIMATE_HOLD_CONCRETE","\xa8","\x36","\x58","\xd6"));		HX_STACK_VAR(tmp53,"tmp53");
+		::ObjectTag tmp53 = ::CollectionFunction_obj::FindTagObject(tmp52,false,HX_HCSTRING("Reliquary_NOUN_INANIMATE_HOLD_CONCRETE","\xc8","\x2a","\xb1","\x66"));		HX_STACK_VAR(tmp53,"tmp53");
 		HX_STACK_LINE(96)
 		::CollectionGlobal tmp54 = _collectionGlobalObject;		HX_STACK_VAR(tmp54,"tmp54");
 		HX_STACK_LINE(96)
@@ -233,7 +233,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(108)
 		::CollectionGlobal tmp60 = _collectionGlobalObject;		HX_STACK_VAR(tmp60,"tmp60");
 		HX_STACK_LINE(108)
-		::ObjectTag tmp61 = ::CollectionFunction_obj::FindTagObject(tmp60,false,HX_HCSTRING("gold_NOUN_INANIMATE_HOLD_CONCRETE","\x9c","\xcb","\x17","\x58"));		HX_STACK_VAR(tmp61,"tmp61");
+		::ObjectTag tmp61 = ::CollectionFunction_obj::FindTagObject(tmp60,false,HX_HCSTRING("Gold_NOUN_INANIMATE_HOLD_CONCRETE","\x7c","\x4b","\xa3","\x92"));		HX_STACK_VAR(tmp61,"tmp61");
 		HX_STACK_LINE(109)
 		::CollectionGlobal tmp62 = _collectionGlobalObject;		HX_STACK_VAR(tmp62,"tmp62");
 		HX_STACK_LINE(109)
@@ -241,31 +241,31 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(110)
 		::CollectionGlobal tmp64 = _collectionGlobalObject;		HX_STACK_VAR(tmp64,"tmp64");
 		HX_STACK_LINE(110)
-		::ObjectTag tmp65 = ::CollectionFunction_obj::FindTagObject(tmp64,false,HX_HCSTRING("jewel_NOUN_INANIMATE_WEAR_CONCRETE","\x59","\x24","\xc5","\xfb"));		HX_STACK_VAR(tmp65,"tmp65");
+		::ObjectTag tmp65 = ::CollectionFunction_obj::FindTagObject(tmp64,false,HX_HCSTRING("Jewel_NOUN_INANIMATE_WEAR_CONCRETE","\x79","\x88","\x49","\xfb"));		HX_STACK_VAR(tmp65,"tmp65");
 		HX_STACK_LINE(111)
 		::CollectionGlobal tmp66 = _collectionGlobalObject;		HX_STACK_VAR(tmp66,"tmp66");
 		HX_STACK_LINE(111)
-		::ObjectTag tmp67 = ::CollectionFunction_obj::FindTagObject(tmp66,false,HX_HCSTRING("oval_ADJ","\xda","\xb1","\xa5","\x2e"));		HX_STACK_VAR(tmp67,"tmp67");
+		::ObjectTag tmp67 = ::CollectionFunction_obj::FindTagObject(tmp66,false,HX_HCSTRING("Oval_ADJ","\xfa","\x6d","\x57","\x08"));		HX_STACK_VAR(tmp67,"tmp67");
 		HX_STACK_LINE(112)
 		::CollectionGlobal tmp68 = _collectionGlobalObject;		HX_STACK_VAR(tmp68,"tmp68");
 		HX_STACK_LINE(112)
-		::ObjectTag tmp69 = ::CollectionFunction_obj::FindTagObject(tmp68,false,HX_HCSTRING("pendant_NOUN_INANIMATE_WEAR_CONCRETE","\x20","\xff","\x31","\xb8"));		HX_STACK_VAR(tmp69,"tmp69");
+		::ObjectTag tmp69 = ::CollectionFunction_obj::FindTagObject(tmp68,false,HX_HCSTRING("Pendant_NOUN_INANIMATE_WEAR_CONCRETE","\x40","\xab","\xaf","\xec"));		HX_STACK_VAR(tmp69,"tmp69");
 		HX_STACK_LINE(113)
 		::CollectionGlobal tmp70 = _collectionGlobalObject;		HX_STACK_VAR(tmp70,"tmp70");
 		HX_STACK_LINE(113)
-		::ObjectTag tmp71 = ::CollectionFunction_obj::FindTagObject(tmp70,false,HX_HCSTRING("rose_NOUN_INANIMATE_HOLD_CONCRETE","\x4d","\xb5","\xd2","\x33"));		HX_STACK_VAR(tmp71,"tmp71");
+		::ObjectTag tmp71 = ::CollectionFunction_obj::FindTagObject(tmp70,false,HX_HCSTRING("Rose_NOUN_INANIMATE_HOLD_CONCRETE","\x2d","\x35","\x5e","\x6e"));		HX_STACK_VAR(tmp71,"tmp71");
 		HX_STACK_LINE(114)
 		::CollectionGlobal tmp72 = _collectionGlobalObject;		HX_STACK_VAR(tmp72,"tmp72");
 		HX_STACK_LINE(114)
-		::ObjectTag tmp73 = ::CollectionFunction_obj::FindTagObject(tmp72,false,HX_HCSTRING("sapphire_NOUN_INANIMATE_HOLD_CONCRETE","\xfa","\x9e","\xb5","\x9e"));		HX_STACK_VAR(tmp73,"tmp73");
+		::ObjectTag tmp73 = ::CollectionFunction_obj::FindTagObject(tmp72,false,HX_HCSTRING("Sapphire_NOUN_INANIMATE_HOLD_CONCRETE","\xda","\x8e","\x2e","\x58"));		HX_STACK_VAR(tmp73,"tmp73");
 		HX_STACK_LINE(115)
 		::CollectionGlobal tmp74 = _collectionGlobalObject;		HX_STACK_VAR(tmp74,"tmp74");
 		HX_STACK_LINE(115)
-		::ObjectTag tmp75 = ::CollectionFunction_obj::FindTagObject(tmp74,false,HX_HCSTRING("slender_ADJ","\x57","\x00","\x59","\x53"));		HX_STACK_VAR(tmp75,"tmp75");
+		::ObjectTag tmp75 = ::CollectionFunction_obj::FindTagObject(tmp74,false,HX_HCSTRING("Slender_ADJ","\x37","\x98","\x8b","\x37"));		HX_STACK_VAR(tmp75,"tmp75");
 		HX_STACK_LINE(116)
 		::CollectionGlobal tmp76 = _collectionGlobalObject;		HX_STACK_VAR(tmp76,"tmp76");
 		HX_STACK_LINE(116)
-		::ObjectTag tmp77 = ::CollectionFunction_obj::FindTagObject(tmp76,false,HX_HCSTRING("table_NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x68","\xe5","\x78","\x42"));		HX_STACK_VAR(tmp77,"tmp77");
+		::ObjectTag tmp77 = ::CollectionFunction_obj::FindTagObject(tmp76,false,HX_HCSTRING("Table_NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x48","\x45","\x57","\xd6"));		HX_STACK_VAR(tmp77,"tmp77");
 		HX_STACK_LINE(117)
 		::CollectionGlobal tmp78 = _collectionGlobalObject;		HX_STACK_VAR(tmp78,"tmp78");
 		HX_STACK_LINE(117)
@@ -273,7 +273,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(118)
 		::CollectionGlobal tmp80 = _collectionGlobalObject;		HX_STACK_VAR(tmp80,"tmp80");
 		HX_STACK_LINE(118)
-		::ObjectTag tmp81 = ::CollectionFunction_obj::FindTagObject(tmp80,false,HX_HCSTRING("young man_NOUN_ALIVE_ABSTRACT","\x4c","\x5a","\xc6","\x0e"));		HX_STACK_VAR(tmp81,"tmp81");
+		::ObjectTag tmp81 = ::CollectionFunction_obj::FindTagObject(tmp80,false,HX_HCSTRING("Young Man_NOUN_ALIVE_ABSTRACT","\x0c","\x52","\x83","\x03"));		HX_STACK_VAR(tmp81,"tmp81");
 		HX_STACK_LINE(107)
 		Array< ::Dynamic > exhibition004TagObjectArray = Array_obj< ::Dynamic >::__new().Add(tmp61).Add(tmp63).Add(tmp65).Add(tmp67).Add(tmp69).Add(tmp71).Add(tmp73).Add(tmp75).Add(tmp77).Add(tmp79).Add(tmp81);		HX_STACK_VAR(exhibition004TagObjectArray,"exhibition004TagObjectArray");
 		HX_STACK_LINE(120)
@@ -285,7 +285,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(133)
 		::CollectionGlobal tmp84 = _collectionGlobalObject;		HX_STACK_VAR(tmp84,"tmp84");
 		HX_STACK_LINE(133)
-		::ObjectTag tmp85 = ::CollectionFunction_obj::FindTagObject(tmp84,false,HX_HCSTRING("crest_NOUN_INANIMATE_WEAR_CONCRETE","\xa5","\x11","\xd2","\x04"));		HX_STACK_VAR(tmp85,"tmp85");
+		::ObjectTag tmp85 = ::CollectionFunction_obj::FindTagObject(tmp84,false,HX_HCSTRING("Crest_NOUN_INANIMATE_WEAR_CONCRETE","\xc5","\x75","\x56","\x04"));		HX_STACK_VAR(tmp85,"tmp85");
 		HX_STACK_LINE(134)
 		::CollectionGlobal tmp86 = _collectionGlobalObject;		HX_STACK_VAR(tmp86,"tmp86");
 		HX_STACK_LINE(134)
@@ -293,7 +293,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(135)
 		::CollectionGlobal tmp88 = _collectionGlobalObject;		HX_STACK_VAR(tmp88,"tmp88");
 		HX_STACK_LINE(135)
-		::ObjectTag tmp89 = ::CollectionFunction_obj::FindTagObject(tmp88,false,HX_HCSTRING("helmet_NOUN_INANIMATE_WEAR_CONCRETE","\x2f","\xfe","\x50","\x7d"));		HX_STACK_VAR(tmp89,"tmp89");
+		::ObjectTag tmp89 = ::CollectionFunction_obj::FindTagObject(tmp88,false,HX_HCSTRING("Helmet_NOUN_INANIMATE_WEAR_CONCRETE","\x0f","\x36","\xa4","\x11"));		HX_STACK_VAR(tmp89,"tmp89");
 		HX_STACK_LINE(136)
 		::CollectionGlobal tmp90 = _collectionGlobalObject;		HX_STACK_VAR(tmp90,"tmp90");
 		HX_STACK_LINE(136)
@@ -301,11 +301,11 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(137)
 		::CollectionGlobal tmp92 = _collectionGlobalObject;		HX_STACK_VAR(tmp92,"tmp92");
 		HX_STACK_LINE(137)
-		::ObjectTag tmp93 = ::CollectionFunction_obj::FindTagObject(tmp92,false,HX_HCSTRING("mask_NOUN_INANIMATE_WEAR_CONCRETE","\x90","\xca","\xe6","\xf2"));		HX_STACK_VAR(tmp93,"tmp93");
+		::ObjectTag tmp93 = ::CollectionFunction_obj::FindTagObject(tmp92,false,HX_HCSTRING("Mask_NOUN_INANIMATE_WEAR_CONCRETE","\x70","\x4a","\x72","\x2d"));		HX_STACK_VAR(tmp93,"tmp93");
 		HX_STACK_LINE(138)
 		::CollectionGlobal tmp94 = _collectionGlobalObject;		HX_STACK_VAR(tmp94,"tmp94");
 		HX_STACK_LINE(138)
-		::ObjectTag tmp95 = ::CollectionFunction_obj::FindTagObject(tmp94,false,HX_HCSTRING("masked_ADJ","\xd3","\x00","\x6a","\x15"));		HX_STACK_VAR(tmp95,"tmp95");
+		::ObjectTag tmp95 = ::CollectionFunction_obj::FindTagObject(tmp94,false,HX_HCSTRING("Masked_ADJ","\xf3","\x04","\x1b","\x0c"));		HX_STACK_VAR(tmp95,"tmp95");
 		HX_STACK_LINE(139)
 		::CollectionGlobal tmp96 = _collectionGlobalObject;		HX_STACK_VAR(tmp96,"tmp96");
 		HX_STACK_LINE(139)
@@ -333,27 +333,27 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(152)
 		::CollectionGlobal tmp106 = _collectionGlobalObject;		HX_STACK_VAR(tmp106,"tmp106");
 		HX_STACK_LINE(152)
-		::ObjectTag tmp107 = ::CollectionFunction_obj::FindTagObject(tmp106,false,HX_HCSTRING("bowl_NOUN_INANIMATE_HOLD_CONCRETE","\xda","\x05","\xb8","\x21"));		HX_STACK_VAR(tmp107,"tmp107");
+		::ObjectTag tmp107 = ::CollectionFunction_obj::FindTagObject(tmp106,false,HX_HCSTRING("Bowl_NOUN_INANIMATE_HOLD_CONCRETE","\xba","\x85","\x43","\x5c"));		HX_STACK_VAR(tmp107,"tmp107");
 		HX_STACK_LINE(153)
 		::CollectionGlobal tmp108 = _collectionGlobalObject;		HX_STACK_VAR(tmp108,"tmp108");
 		HX_STACK_LINE(153)
-		::ObjectTag tmp109 = ::CollectionFunction_obj::FindTagObject(tmp108,false,HX_HCSTRING("bronze_ADJ","\x62","\x97","\x1a","\x65"));		HX_STACK_VAR(tmp109,"tmp109");
+		::ObjectTag tmp109 = ::CollectionFunction_obj::FindTagObject(tmp108,false,HX_HCSTRING("Bronze_ADJ","\x82","\x9b","\xcb","\x5b"));		HX_STACK_VAR(tmp109,"tmp109");
 		HX_STACK_LINE(154)
 		::CollectionGlobal tmp110 = _collectionGlobalObject;		HX_STACK_VAR(tmp110,"tmp110");
 		HX_STACK_LINE(154)
-		::ObjectTag tmp111 = ::CollectionFunction_obj::FindTagObject(tmp110,false,HX_HCSTRING("burial_NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x8f","\x18","\x1f","\x8c"));		HX_STACK_VAR(tmp111,"tmp111");
+		::ObjectTag tmp111 = ::CollectionFunction_obj::FindTagObject(tmp110,false,HX_HCSTRING("Burial_NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\xaf","\x9c","\xd4","\x5a"));		HX_STACK_VAR(tmp111,"tmp111");
 		HX_STACK_LINE(155)
 		::CollectionGlobal tmp112 = _collectionGlobalObject;		HX_STACK_VAR(tmp112,"tmp112");
 		HX_STACK_LINE(155)
-		::ObjectTag tmp113 = ::CollectionFunction_obj::FindTagObject(tmp112,false,HX_HCSTRING("garnet_NOUN_INANIMATE_HOLD_CONCRETE","\xd7","\x8e","\xf1","\x26"));		HX_STACK_VAR(tmp113,"tmp113");
+		::ObjectTag tmp113 = ::CollectionFunction_obj::FindTagObject(tmp112,false,HX_HCSTRING("Garnet_NOUN_INANIMATE_HOLD_CONCRETE","\xb7","\xc6","\x44","\xbb"));		HX_STACK_VAR(tmp113,"tmp113");
 		HX_STACK_LINE(156)
 		::CollectionGlobal tmp114 = _collectionGlobalObject;		HX_STACK_VAR(tmp114,"tmp114");
 		HX_STACK_LINE(156)
-		::ObjectTag tmp115 = ::CollectionFunction_obj::FindTagObject(tmp114,false,HX_HCSTRING("ship_NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x16","\xe4","\xf9","\x03"));		HX_STACK_VAR(tmp115,"tmp115");
+		::ObjectTag tmp115 = ::CollectionFunction_obj::FindTagObject(tmp114,false,HX_HCSTRING("Ship_NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x36","\x20","\x90","\x13"));		HX_STACK_VAR(tmp115,"tmp115");
 		HX_STACK_LINE(157)
 		::CollectionGlobal tmp116 = _collectionGlobalObject;		HX_STACK_VAR(tmp116,"tmp116");
 		HX_STACK_LINE(157)
-		::ObjectTag tmp117 = ::CollectionFunction_obj::FindTagObject(tmp116,false,HX_HCSTRING("spear_NOUN_INANIMATE_HOLD_CONCRETE","\x83","\x10","\xc6","\x18"));		HX_STACK_VAR(tmp117,"tmp117");
+		::ObjectTag tmp117 = ::CollectionFunction_obj::FindTagObject(tmp116,false,HX_HCSTRING("Spear_NOUN_INANIMATE_HOLD_CONCRETE","\xa3","\x74","\x4a","\x18"));		HX_STACK_VAR(tmp117,"tmp117");
 		HX_STACK_LINE(158)
 		::CollectionGlobal tmp118 = _collectionGlobalObject;		HX_STACK_VAR(tmp118,"tmp118");
 		HX_STACK_LINE(158)
@@ -361,7 +361,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(159)
 		::CollectionGlobal tmp120 = _collectionGlobalObject;		HX_STACK_VAR(tmp120,"tmp120");
 		HX_STACK_LINE(159)
-		::ObjectTag tmp121 = ::CollectionFunction_obj::FindTagObject(tmp120,false,HX_HCSTRING("wolf_NOUN_ALIVE_ABSTRACT","\x8c","\x44","\xf3","\x37"));		HX_STACK_VAR(tmp121,"tmp121");
+		::ObjectTag tmp121 = ::CollectionFunction_obj::FindTagObject(tmp120,false,HX_HCSTRING("Wolf_NOUN_ALIVE_ABSTRACT","\xac","\x40","\x57","\xb0"));		HX_STACK_VAR(tmp121,"tmp121");
 		HX_STACK_LINE(151)
 		Array< ::Dynamic > exhibition006TagObjectArray = Array_obj< ::Dynamic >::__new().Add(tmp107).Add(tmp109).Add(tmp111).Add(tmp113).Add(tmp115).Add(tmp117).Add(tmp119).Add(tmp121);		HX_STACK_VAR(exhibition006TagObjectArray,"exhibition006TagObjectArray");
 		HX_STACK_LINE(161)
@@ -369,15 +369,15 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(171)
 		::CollectionGlobal tmp122 = _collectionGlobalObject;		HX_STACK_VAR(tmp122,"tmp122");
 		HX_STACK_LINE(171)
-		::ObjectTag tmp123 = ::CollectionFunction_obj::FindTagObject(tmp122,false,HX_HCSTRING("aged_ADJ","\x4d","\x4c","\x5a","\x9c"));		HX_STACK_VAR(tmp123,"tmp123");
+		::ObjectTag tmp123 = ::CollectionFunction_obj::FindTagObject(tmp122,false,HX_HCSTRING("Aged_ADJ","\x6d","\x08","\x0c","\x76"));		HX_STACK_VAR(tmp123,"tmp123");
 		HX_STACK_LINE(172)
 		::CollectionGlobal tmp124 = _collectionGlobalObject;		HX_STACK_VAR(tmp124,"tmp124");
 		HX_STACK_LINE(172)
-		::ObjectTag tmp125 = ::CollectionFunction_obj::FindTagObject(tmp124,false,HX_HCSTRING("animal_NOUN_ALIVE_ABSTRACT","\x36","\x9a","\xee","\xc1"));		HX_STACK_VAR(tmp125,"tmp125");
+		::ObjectTag tmp125 = ::CollectionFunction_obj::FindTagObject(tmp124,false,HX_HCSTRING("Animal_NOUN_ALIVE_ABSTRACT","\x56","\xde","\x61","\x18"));		HX_STACK_VAR(tmp125,"tmp125");
 		HX_STACK_LINE(173)
 		::CollectionGlobal tmp126 = _collectionGlobalObject;		HX_STACK_VAR(tmp126,"tmp126");
 		HX_STACK_LINE(173)
-		::ObjectTag tmp127 = ::CollectionFunction_obj::FindTagObject(tmp126,false,HX_HCSTRING("archaeologist_NOUN_ALIVE_ABSTRACT","\x75","\x12","\x22","\xcb"));		HX_STACK_VAR(tmp127,"tmp127");
+		::ObjectTag tmp127 = ::CollectionFunction_obj::FindTagObject(tmp126,false,HX_HCSTRING("Archaeologist_NOUN_ALIVE_ABSTRACT","\x55","\x92","\xad","\x05"));		HX_STACK_VAR(tmp127,"tmp127");
 		HX_STACK_LINE(174)
 		::CollectionGlobal tmp128 = _collectionGlobalObject;		HX_STACK_VAR(tmp128,"tmp128");
 		HX_STACK_LINE(174)
@@ -385,7 +385,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(175)
 		::CollectionGlobal tmp130 = _collectionGlobalObject;		HX_STACK_VAR(tmp130,"tmp130");
 		HX_STACK_LINE(175)
-		::ObjectTag tmp131 = ::CollectionFunction_obj::FindTagObject(tmp130,false,HX_HCSTRING("bronze_ADJ","\x62","\x97","\x1a","\x65"));		HX_STACK_VAR(tmp131,"tmp131");
+		::ObjectTag tmp131 = ::CollectionFunction_obj::FindTagObject(tmp130,false,HX_HCSTRING("Bronze_ADJ","\x82","\x9b","\xcb","\x5b"));		HX_STACK_VAR(tmp131,"tmp131");
 		HX_STACK_LINE(176)
 		::CollectionGlobal tmp132 = _collectionGlobalObject;		HX_STACK_VAR(tmp132,"tmp132");
 		HX_STACK_LINE(176)
@@ -397,7 +397,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(178)
 		::CollectionGlobal tmp136 = _collectionGlobalObject;		HX_STACK_VAR(tmp136,"tmp136");
 		HX_STACK_LINE(178)
-		::ObjectTag tmp137 = ::CollectionFunction_obj::FindTagObject(tmp136,false,HX_HCSTRING("copper_ADJ","\xa1","\x2a","\xa5","\x4f"));		HX_STACK_VAR(tmp137,"tmp137");
+		::ObjectTag tmp137 = ::CollectionFunction_obj::FindTagObject(tmp136,false,HX_HCSTRING("Copper_ADJ","\xc1","\x2e","\x56","\x46"));		HX_STACK_VAR(tmp137,"tmp137");
 		HX_STACK_LINE(179)
 		::CollectionGlobal tmp138 = _collectionGlobalObject;		HX_STACK_VAR(tmp138,"tmp138");
 		HX_STACK_LINE(179)
@@ -421,7 +421,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(184)
 		::CollectionGlobal tmp148 = _collectionGlobalObject;		HX_STACK_VAR(tmp148,"tmp148");
 		HX_STACK_LINE(184)
-		::ObjectTag tmp149 = ::CollectionFunction_obj::FindTagObject(tmp148,false,HX_HCSTRING("ingot_NOUN_INANIMATE_HOLD_CONCRETE","\x55","\x11","\xaf","\xca"));		HX_STACK_VAR(tmp149,"tmp149");
+		::ObjectTag tmp149 = ::CollectionFunction_obj::FindTagObject(tmp148,false,HX_HCSTRING("Ingot_NOUN_INANIMATE_HOLD_CONCRETE","\x75","\x75","\x33","\xca"));		HX_STACK_VAR(tmp149,"tmp149");
 		HX_STACK_LINE(185)
 		::CollectionGlobal tmp150 = _collectionGlobalObject;		HX_STACK_VAR(tmp150,"tmp150");
 		HX_STACK_LINE(185)
@@ -429,11 +429,11 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(186)
 		::CollectionGlobal tmp152 = _collectionGlobalObject;		HX_STACK_VAR(tmp152,"tmp152");
 		HX_STACK_LINE(186)
-		::ObjectTag tmp153 = ::CollectionFunction_obj::FindTagObject(tmp152,false,HX_HCSTRING("metal_ADJ","\x8f","\x04","\x4c","\x70"));		HX_STACK_VAR(tmp153,"tmp153");
+		::ObjectTag tmp153 = ::CollectionFunction_obj::FindTagObject(tmp152,false,HX_HCSTRING("Metal_ADJ","\x6f","\xe4","\x1e","\x12"));		HX_STACK_VAR(tmp153,"tmp153");
 		HX_STACK_LINE(187)
 		::CollectionGlobal tmp154 = _collectionGlobalObject;		HX_STACK_VAR(tmp154,"tmp154");
 		HX_STACK_LINE(187)
-		::ObjectTag tmp155 = ::CollectionFunction_obj::FindTagObject(tmp154,false,HX_HCSTRING("oxhide_NOUN_INANIMATE_WEAR_CONCRETE","\xb1","\x7b","\x36","\xc9"));		HX_STACK_VAR(tmp155,"tmp155");
+		::ObjectTag tmp155 = ::CollectionFunction_obj::FindTagObject(tmp154,false,HX_HCSTRING("Oxhide_NOUN_INANIMATE_WEAR_CONCRETE","\x91","\xb3","\x89","\x5d"));		HX_STACK_VAR(tmp155,"tmp155");
 		HX_STACK_LINE(188)
 		::CollectionGlobal tmp156 = _collectionGlobalObject;		HX_STACK_VAR(tmp156,"tmp156");
 		HX_STACK_LINE(188)
@@ -461,7 +461,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(205)
 		::CollectionGlobal tmp166 = _collectionGlobalObject;		HX_STACK_VAR(tmp166,"tmp166");
 		HX_STACK_LINE(205)
-		::ObjectTag tmp167 = ::CollectionFunction_obj::FindTagObject(tmp166,false,HX_HCSTRING("cradleboard_NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x55","\x86","\xeb","\x1e"));		HX_STACK_VAR(tmp167,"tmp167");
+		::ObjectTag tmp167 = ::CollectionFunction_obj::FindTagObject(tmp166,false,HX_HCSTRING("Cradleboard_NOUN_INANIMATE_PLACE_CONCRETE_OWNER","\x35","\x0e","\x23","\xc7"));		HX_STACK_VAR(tmp167,"tmp167");
 		HX_STACK_LINE(206)
 		::CollectionGlobal tmp168 = _collectionGlobalObject;		HX_STACK_VAR(tmp168,"tmp168");
 		HX_STACK_LINE(206)
@@ -473,15 +473,15 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(208)
 		::CollectionGlobal tmp172 = _collectionGlobalObject;		HX_STACK_VAR(tmp172,"tmp172");
 		HX_STACK_LINE(208)
-		::ObjectTag tmp173 = ::CollectionFunction_obj::FindTagObject(tmp172,false,HX_HCSTRING("female_NOUN_ALIVE_ABSTRACT","\x86","\x00","\x6b","\x05"));		HX_STACK_VAR(tmp173,"tmp173");
+		::ObjectTag tmp173 = ::CollectionFunction_obj::FindTagObject(tmp172,false,HX_HCSTRING("Female_NOUN_ALIVE_ABSTRACT","\xa6","\x44","\xde","\x5b"));		HX_STACK_VAR(tmp173,"tmp173");
 		HX_STACK_LINE(209)
 		::CollectionGlobal tmp174 = _collectionGlobalObject;		HX_STACK_VAR(tmp174,"tmp174");
 		HX_STACK_LINE(209)
-		::ObjectTag tmp175 = ::CollectionFunction_obj::FindTagObject(tmp174,false,HX_HCSTRING("figurine_NOUN_INANIMATE_HOLD_CONCRETE","\x7d","\xae","\x82","\xeb"));		HX_STACK_VAR(tmp175,"tmp175");
+		::ObjectTag tmp175 = ::CollectionFunction_obj::FindTagObject(tmp174,false,HX_HCSTRING("Figurine_NOUN_INANIMATE_HOLD_CONCRETE","\x5d","\x9e","\xfb","\xa4"));		HX_STACK_VAR(tmp175,"tmp175");
 		HX_STACK_LINE(210)
 		::CollectionGlobal tmp176 = _collectionGlobalObject;		HX_STACK_VAR(tmp176,"tmp176");
 		HX_STACK_LINE(210)
-		::ObjectTag tmp177 = ::CollectionFunction_obj::FindTagObject(tmp176,false,HX_HCSTRING("infant_NOUN_ALIVE_ABSTRACT","\xa0","\xba","\x8e","\xaa"));		HX_STACK_VAR(tmp177,"tmp177");
+		::ObjectTag tmp177 = ::CollectionFunction_obj::FindTagObject(tmp176,false,HX_HCSTRING("Infant_NOUN_ALIVE_ABSTRACT","\xc0","\xfe","\x01","\x01"));		HX_STACK_VAR(tmp177,"tmp177");
 		HX_STACK_LINE(211)
 		::CollectionGlobal tmp178 = _collectionGlobalObject;		HX_STACK_VAR(tmp178,"tmp178");
 		HX_STACK_LINE(211)
@@ -489,11 +489,11 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(212)
 		::CollectionGlobal tmp180 = _collectionGlobalObject;		HX_STACK_VAR(tmp180,"tmp180");
 		HX_STACK_LINE(212)
-		::ObjectTag tmp181 = ::CollectionFunction_obj::FindTagObject(tmp180,false,HX_HCSTRING("statue_NOUN_INANIMATE_HOLD_CONCRETE","\x98","\xac","\xd2","\x14"));		HX_STACK_VAR(tmp181,"tmp181");
+		::ObjectTag tmp181 = ::CollectionFunction_obj::FindTagObject(tmp180,false,HX_HCSTRING("Statue_NOUN_INANIMATE_HOLD_CONCRETE","\x78","\xe4","\x25","\xa9"));		HX_STACK_VAR(tmp181,"tmp181");
 		HX_STACK_LINE(213)
 		::CollectionGlobal tmp182 = _collectionGlobalObject;		HX_STACK_VAR(tmp182,"tmp182");
 		HX_STACK_LINE(213)
-		::ObjectTag tmp183 = ::CollectionFunction_obj::FindTagObject(tmp182,false,HX_HCSTRING("woman_NOUN_ALIVE_ABSTRACT","\x7c","\x21","\x01","\xa6"));		HX_STACK_VAR(tmp183,"tmp183");
+		::ObjectTag tmp183 = ::CollectionFunction_obj::FindTagObject(tmp182,false,HX_HCSTRING("Woman_NOUN_ALIVE_ABSTRACT","\x5c","\xc1","\x19","\x85"));		HX_STACK_VAR(tmp183,"tmp183");
 		HX_STACK_LINE(204)
 		Array< ::Dynamic > exhibition008TagObjectArray = Array_obj< ::Dynamic >::__new().Add(tmp167).Add(tmp169).Add(tmp171).Add(tmp173).Add(tmp175).Add(tmp177).Add(tmp179).Add(tmp181).Add(tmp183);		HX_STACK_VAR(exhibition008TagObjectArray,"exhibition008TagObjectArray");
 		HX_STACK_LINE(216)

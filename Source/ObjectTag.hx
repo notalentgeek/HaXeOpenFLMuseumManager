@@ -57,8 +57,8 @@ class ObjectTag{
     public function GetVerbSString(){ return verbSString; }
     public function RemoveFromArray(){
 
-        if     (generalTagBool == true ){ trace("LOL");collectionGlobalObject.GetTagGeneralObjectArray()     .remove(this); }
-        else if(generalTagBool == false){ trace("LOL1");collectionGlobalObject.GetTagObjectArray()            .remove(this); }
+        if     (generalTagBool == true ){ collectionGlobalObject.GetTagGeneralObjectArray()     .remove(this); }
+        else if(generalTagBool == false){ collectionGlobalObject.GetTagObjectArray()            .remove(this); }
 
         
     }

@@ -18,38 +18,43 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectGeneratorSentence_obj : public hx::Object{
 		typedef hx::Object super;
 		typedef ObjectGeneratorSentence_obj OBJ_;
 		ObjectGeneratorSentence_obj();
-		Void __construct();
+		Void __construct(::ObjectVisitor _visitorObject);
 
 	public:
-		inline void *operator new( size_t inSize, bool inContainer=false,const char *inName="ObjectGeneratorSentence")
+		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectGeneratorSentence")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectGeneratorSentence_obj > __new();
+		static hx::ObjectPtr< ObjectGeneratorSentence_obj > __new(::ObjectVisitor _visitorObject);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectGeneratorSentence_obj();
 
 		HX_DO_RTTI_ALL;
-		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
+		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
+		void __GetFields(Array< ::String> &outFields);
 		static void __register();
+		void __Mark(HX_MARK_PARAMS);
+		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("ObjectGeneratorSentence","\x37","\xd6","\xc2","\x59"); }
 
-		static ::String AddWordString( ::CollectionGlobal _collectionGlobalObject,::EnumTagType _tagTypeEnum,::EnumTagTypeSub _tagTypeSubEnum,::ObjectVisitor _visitorObject);
-		static Dynamic AddWordString_dyn();
+		::ObjectVisitor visitorObject;
+		virtual ::String AddWordString( ::CollectionGlobal _collectionGlobalObject,::EnumTagType _tagTypeEnum,::EnumTagTypeSub _tagTypeSubEnum);
+		Dynamic AddWordString_dyn();
 
-		static Dynamic DetermineProperCallbackFunction( ::EnumTagTypeSub _tagTypeSubEnum,::ObjectTag _tagObject);
-		static Dynamic DetermineProperCallbackFunction_dyn();
+		virtual Dynamic DetermineProperCallbackFunction( ::EnumTagTypeSub _tagTypeSubEnum,::ObjectTag _tagObject);
+		Dynamic DetermineProperCallbackFunction_dyn();
 
-		static ::String GenerateSentenceString( ::CollectionGlobal _collectionGlobalObject,::String _patternString,::ObjectVisitor _visitorObject);
-		static Dynamic GenerateSentenceString_dyn();
+		virtual ::String GenerateSentenceString( ::CollectionGlobal _collectionGlobalObject,::String _patternString);
+		Dynamic GenerateSentenceString_dyn();
 
-		static int RandomNumberGeneratorInt( int _randomNumberInt);
-		static Dynamic RandomNumberGeneratorInt_dyn();
+		virtual int RandomNumberGeneratorInt( int _randomNumberInt);
+		Dynamic RandomNumberGeneratorInt_dyn();
 
-		static ::String WordFixString( ::String _fixString);
-		static Dynamic WordFixString_dyn();
+		virtual ::String WordFixString( ::String _fixString);
+		Dynamic WordFixString_dyn();
 
-		static ::String GenerateSentence3String( ::CollectionGlobal _collectionGlobalObject,::ObjectVisitor _visitorObject);
-		static Dynamic GenerateSentence3String_dyn();
+		virtual ::String GenerateSentence3String( ::CollectionGlobal _collectionGlobalObject);
+		Dynamic GenerateSentence3String_dyn();
 
 };
 

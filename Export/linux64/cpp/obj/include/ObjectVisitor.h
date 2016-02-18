@@ -7,6 +7,7 @@
 
 HX_DECLARE_CLASS0(CollectionGlobal)
 HX_DECLARE_CLASS0(EnumVisitorMode)
+HX_DECLARE_CLASS0(ObjectGeneratorSentence)
 HX_DECLARE_CLASS0(ObjectMuseum)
 HX_DECLARE_CLASS0(ObjectTag)
 HX_DECLARE_CLASS0(ObjectVisitor)
@@ -54,6 +55,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		Array< ::String > explanationStringArray;
 		bool finishedBool;
 		::ObjectMuseum floorCurrentObject;
+		::ObjectGeneratorSentence generatorSentenceObject;
 		int indexGlobalInt;
 		int indexLocalInt;
 		::String nameString;

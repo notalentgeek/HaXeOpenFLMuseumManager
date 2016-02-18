@@ -1,6 +1,7 @@
 import CollectionEnum;
 import CollectionFunction;
 import CollectionStruct;
+
 class ObjectVisitor{
     private var collectionGlobalObject:CollectionGlobal = null;
     private var exhibitionCurrentObject:ObjectMuseum = null;
@@ -11,6 +12,7 @@ class ObjectVisitor{
     private var explanationStringArray:Array<String> = new Array<String>();
     private var finishedBool:Bool = false;
     private var floorCurrentObject:ObjectMuseum = null;
+    private var generatorSentenceObject:ObjectGeneratorSentence = null;
     private var indexGlobalInt:Int = -1;
     private var indexLocalInt:Int = -1;
     private var nameString:String = "";
@@ -28,12 +30,14 @@ class ObjectVisitor{
     private var visitMuseumStructArray:Array<StructVisitorVisitMuseum> = new Array<StructVisitorVisitMuseum>(); /*PENDING:*/
     private var visitorModeEnum:EnumVisitorMode = null;
     private var visitorUIObject:ObjectVisitorUI = null;
+
     public function new(
         _collectionGlobalObject:CollectionGlobal,
         _indexGlobalInt:Int,
         _nameString:String
     ){
         collectionGlobalObject = _collectionGlobalObject;
+        generatorSentenceObject = new ObjectGeneratorSentence(this);
         indexGlobalInt = _indexGlobalInt;
         nameString = _nameString;
         collectionGlobalObject.GetVisitorObjectArray().push(this);
@@ -153,8 +157,7 @@ class ObjectVisitor{
             roomCurrentObject.SetVisitorCurrentIntVoid(floorCurrentObject.GetVisitorCurrentInt() + 1);
             roomCurrentObject.SetVisitorTotalIntVoid(floorCurrentObject.GetVisitorTotalInt() + 1);
 
-            var threeSentenceString:String = ObjectGeneratorSentence.GenerateSentence3String(collectionGlobalObject, this);
-            sentenceStringArray.push(threeSentenceString);
+            var threeSentenceString:String = generatorSentenceObject.GenerateSentence3String(collectionGlobalObject);
 
             UpdateHeavyVoid();
 
@@ -358,9 +361,9 @@ class ObjectVisitor{
     }
     public function UpdateVoid(){
 
-        if(visitorModeEnum == HARDWARE_MANUAL){ /*PENDING:*/ }
-        else if(visitorModeEnum == SOFTWARE_AUTO){ AIAutoExhibitionChangeVoid(); }
-        else if(visitorModeEnum == SOFTWARE_MANUAL){ /*PENDING:*/ }
+        if(finishedBool == false && visitorModeEnum == SOFTWARE_AUTO){
+            AIAutoExhibitionChangeVoid();
+        }
 
     }
 }

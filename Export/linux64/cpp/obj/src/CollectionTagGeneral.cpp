@@ -121,23 +121,23 @@ Void CollectionTagGeneral_obj::TagGeneralStructAdjVoid( ::CollectionGlobal _coll
 		HX_STACK_LINE(36)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEGATIVE,true,HX_HCSTRING("Awful","\xe7","\xe4","\x01","\xbc"),::EnumTagType_obj::ADJ);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(36)
-		tmp->SetAdjectiveStringObject(HX_HCSTRING("awful","\x07","\x75","\xd4","\x28"));
+		tmp->SetAdjectiveStringObject(HX_HCSTRING("Awful","\xe7","\xe4","\x01","\xbc"));
 		HX_STACK_LINE(37)
 		::ObjectTag tmp1 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEGATIVE,true,HX_HCSTRING("Bad","\xa5","\x69","\x32","\x00"),::EnumTagType_obj::ADJ);		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(37)
-		tmp1->SetAdjectiveStringObject(HX_HCSTRING("bad","\xc5","\xb1","\x4a","\x00"));
+		tmp1->SetAdjectiveStringObject(HX_HCSTRING("Bad","\xa5","\x69","\x32","\x00"));
 		HX_STACK_LINE(38)
 		::ObjectTag tmp2 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::POSITIVE,true,HX_HCSTRING("Excellent","\x56","\xdf","\x85","\x98"),::EnumTagType_obj::ADJ);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(38)
-		tmp2->SetAdjectiveStringObject(HX_HCSTRING("excellent","\x76","\xff","\xb2","\xf6"));
+		tmp2->SetAdjectiveStringObject(HX_HCSTRING("Excellent","\x56","\xdf","\x85","\x98"));
 		HX_STACK_LINE(39)
 		::ObjectTag tmp3 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::POSITIVE,true,HX_HCSTRING("Good","\x5d","\xc1","\x42","\x2f"),::EnumTagType_obj::ADJ);		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(39)
-		tmp3->SetAdjectiveStringObject(HX_HCSTRING("good","\x3d","\x95","\x69","\x44"));
+		tmp3->SetAdjectiveStringObject(HX_HCSTRING("Good","\x5d","\xc1","\x42","\x2f"));
 		HX_STACK_LINE(40)
 		::ObjectTag tmp4 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Soft","\x0a","\x49","\x31","\x37"),::EnumTagType_obj::ADJ);		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(40)
-		tmp4->SetAdjectiveStringObject(HX_HCSTRING("soft","\xea","\x1c","\x58","\x4c"));
+		tmp4->SetAdjectiveStringObject(HX_HCSTRING("Soft","\x0a","\x49","\x31","\x37"));
 	}
 return null();
 }
@@ -152,19 +152,19 @@ Void CollectionTagGeneral_obj::TagGeneralStructAdvVoid( ::CollectionGlobal _coll
 		HX_STACK_LINE(43)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEGATIVE,true,HX_HCSTRING("Desperate","\x87","\x96","\x40","\x82"),::EnumTagType_obj::ADV);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(43)
-		tmp->SetAdverbStringObject(HX_HCSTRING("desperately","\xf4","\x4c","\x46","\x20"));
+		tmp->SetAdverbStringObject(HX_HCSTRING("Desperately","\xd4","\xe4","\x78","\x04"));
 		HX_STACK_LINE(44)
 		::ObjectTag tmp1 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEGATIVE,true,HX_HCSTRING("Slow","\x21","\x0a","\x2f","\x37"),::EnumTagType_obj::ADV);		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(44)
-		tmp1->SetAdverbStringObject(HX_HCSTRING("bad","\xc5","\xb1","\x4a","\x00"));
+		tmp1->SetAdverbStringObject(HX_HCSTRING("Bad","\xa5","\x69","\x32","\x00"));
 		HX_STACK_LINE(45)
 		::ObjectTag tmp2 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::POSITIVE,true,HX_HCSTRING("Perfect","\xed","\x6c","\x27","\x48"),::EnumTagType_obj::ADV);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(45)
-		tmp2->SetAdverbStringObject(HX_HCSTRING("excellent","\x76","\xff","\xb2","\xf6"));
+		tmp2->SetAdverbStringObject(HX_HCSTRING("Excellent","\x56","\xdf","\x85","\x98"));
 		HX_STACK_LINE(46)
 		::ObjectTag tmp3 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::POSITIVE,true,HX_HCSTRING("Quick","\xcd","\xf6","\x1a","\xf1"),::EnumTagType_obj::ADV);		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(46)
-		tmp3->SetAdverbStringObject(HX_HCSTRING("good","\x3d","\x95","\x69","\x44"));
+		tmp3->SetAdverbStringObject(HX_HCSTRING("Good","\x5d","\xc1","\x42","\x2f"));
 	}
 return null();
 }
@@ -179,83 +179,83 @@ Void CollectionTagGeneral_obj::TagGeneralStructNounAliveAbstractVoid( ::Collecti
 		HX_STACK_LINE(49)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEGATIVE,true,HX_HCSTRING("Assasin","\xf8","\xac","\x87","\x01"),::EnumTagType_obj::NOUN_ALIVE_ABSTRACT);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(49)
-		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("assasin","\x18","\x85","\x36","\x34"));		HX_STACK_VAR(tmp1,"tmp1");
+		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("Assasin","\xf8","\xac","\x87","\x01"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(49)
-		::ObjectTag tmp2 = tmp1->SetNounPosStringObject(HX_HCSTRING("assasin's","\x84","\x1d","\xb4","\x92"));		HX_STACK_VAR(tmp2,"tmp2");
+		::ObjectTag tmp2 = tmp1->SetNounPosStringObject(HX_HCSTRING("Assasin's","\x64","\xfd","\x86","\x34"));		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(49)
-		::ObjectTag tmp3 = tmp2->SetNounSStringObject(HX_HCSTRING("assasins","\x5b","\xf0","\x7d","\x7b"));		HX_STACK_VAR(tmp3,"tmp3");
+		::ObjectTag tmp3 = tmp2->SetNounSStringObject(HX_HCSTRING("Assasins","\x7b","\xac","\x2f","\x55"));		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(49)
-		tmp3->SetNounSPosStringObject(HX_HCSTRING("assasins'","\x6c","\x5f","\xb4","\x92"));
+		tmp3->SetNounSPosStringObject(HX_HCSTRING("Assasins'","\x4c","\x3f","\x87","\x34"));
 		HX_STACK_LINE(50)
 		::ObjectTag tmp4 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEGATIVE,true,HX_HCSTRING("Boy","\xec","\x75","\x32","\x00"),::EnumTagType_obj::NOUN_ALIVE_ABSTRACT);		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(50)
-		::ObjectTag tmp5 = tmp4->SetNounStringObject(HX_HCSTRING("boy","\x0c","\xbe","\x4a","\x00"));		HX_STACK_VAR(tmp5,"tmp5");
+		::ObjectTag tmp5 = tmp4->SetNounStringObject(HX_HCSTRING("Boy","\xec","\x75","\x32","\x00"));		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(50)
-		::ObjectTag tmp6 = tmp5->SetNounPosStringObject(HX_HCSTRING("boy's","\x78","\x7b","\xff","\xb6"));		HX_STACK_VAR(tmp6,"tmp6");
+		::ObjectTag tmp6 = tmp5->SetNounPosStringObject(HX_HCSTRING("Boy's","\x58","\xeb","\x2c","\x4a"));		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(50)
-		::ObjectTag tmp7 = tmp6->SetNounSStringObject(HX_HCSTRING("boys","\xe7","\x8c","\x1b","\x41"));		HX_STACK_VAR(tmp7,"tmp7");
+		::ObjectTag tmp7 = tmp6->SetNounSStringObject(HX_HCSTRING("Boys","\x07","\xb9","\xf4","\x2b"));		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(50)
-		tmp7->SetNounSPosStringObject(HX_HCSTRING("boys'","\x60","\xbd","\xff","\xb6"));
+		tmp7->SetNounSPosStringObject(HX_HCSTRING("Boys'","\x40","\x2d","\x2d","\x4a"));
 		HX_STACK_LINE(51)
 		::ObjectTag tmp8 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Dragon","\x33","\xe6","\x5e","\x14"),::EnumTagType_obj::NOUN_ALIVE_ABSTRACT);		HX_STACK_VAR(tmp8,"tmp8");
 		HX_STACK_LINE(51)
-		::ObjectTag tmp9 = tmp8->SetNounStringObject(HX_HCSTRING("dragon","\x13","\x72","\xca","\xdf"));		HX_STACK_VAR(tmp9,"tmp9");
+		::ObjectTag tmp9 = tmp8->SetNounStringObject(HX_HCSTRING("Dragon","\x33","\xe6","\x5e","\x14"));		HX_STACK_VAR(tmp9,"tmp9");
 		HX_STACK_LINE(51)
-		::ObjectTag tmp10 = tmp9->SetNounPosStringObject(HX_HCSTRING("dragon's","\x3f","\x7f","\xd9","\x3c"));		HX_STACK_VAR(tmp10,"tmp10");
+		::ObjectTag tmp10 = tmp9->SetNounPosStringObject(HX_HCSTRING("Dragon's","\x5f","\x3b","\x8b","\x16"));		HX_STACK_VAR(tmp10,"tmp10");
 		HX_STACK_LINE(51)
-		::ObjectTag tmp11 = tmp10->SetNounSStringObject(HX_HCSTRING("dragons","\x00","\x5f","\x59","\xf1"));		HX_STACK_VAR(tmp11,"tmp11");
+		::ObjectTag tmp11 = tmp10->SetNounSStringObject(HX_HCSTRING("Dragons","\xe0","\x86","\xaa","\xbe"));		HX_STACK_VAR(tmp11,"tmp11");
 		HX_STACK_LINE(51)
-		tmp11->SetNounSPosStringObject(HX_HCSTRING("dragons'","\x27","\xc1","\xd9","\x3c"));
+		tmp11->SetNounSPosStringObject(HX_HCSTRING("Dragons'","\x47","\x7d","\x8b","\x16"));
 		HX_STACK_LINE(52)
 		::ObjectTag tmp12 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Iraqi","\x10","\xa9","\xe4","\x53"),::EnumTagType_obj::NOUN_ALIVE_ABSTRACT);		HX_STACK_VAR(tmp12,"tmp12");
 		HX_STACK_LINE(52)
-		::ObjectTag tmp13 = tmp12->SetNounStringObject(HX_HCSTRING("iraqi","\x30","\x39","\xb7","\xc0"));		HX_STACK_VAR(tmp13,"tmp13");
+		::ObjectTag tmp13 = tmp12->SetNounStringObject(HX_HCSTRING("Iraqi","\x10","\xa9","\xe4","\x53"));		HX_STACK_VAR(tmp13,"tmp13");
 		HX_STACK_LINE(52)
-		::ObjectTag tmp14 = tmp13->SetNounPosStringObject(HX_HCSTRING("iraqi's","\x9c","\x07","\xdc","\xc7"));		HX_STACK_VAR(tmp14,"tmp14");
+		::ObjectTag tmp14 = tmp13->SetNounPosStringObject(HX_HCSTRING("Iraqi's","\x7c","\x2f","\x2d","\x95"));		HX_STACK_VAR(tmp14,"tmp14");
 		HX_STACK_LINE(52)
-		::ObjectTag tmp15 = tmp14->SetNounSStringObject(HX_HCSTRING("iraqis","\x43","\xd1","\x9a","\xdf"));		HX_STACK_VAR(tmp15,"tmp15");
+		::ObjectTag tmp15 = tmp14->SetNounSStringObject(HX_HCSTRING("Iraqis","\x63","\x45","\x2f","\x14"));		HX_STACK_VAR(tmp15,"tmp15");
 		HX_STACK_LINE(52)
-		tmp15->SetNounSPosStringObject(HX_HCSTRING("iraqis'","\x84","\x49","\xdc","\xc7"));
+		tmp15->SetNounSPosStringObject(HX_HCSTRING("Iraqis'","\x64","\x71","\x2d","\x95"));
 		HX_STACK_LINE(53)
 		::ObjectTag tmp16 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Italian","\xa0","\x09","\x96","\x5e"),::EnumTagType_obj::NOUN_ALIVE_ABSTRACT);		HX_STACK_VAR(tmp16,"tmp16");
 		HX_STACK_LINE(53)
-		::ObjectTag tmp17 = tmp16->SetNounStringObject(HX_HCSTRING("italian","\xc0","\xe1","\x44","\x91"));		HX_STACK_VAR(tmp17,"tmp17");
+		::ObjectTag tmp17 = tmp16->SetNounStringObject(HX_HCSTRING("Italian","\xa0","\x09","\x96","\x5e"));		HX_STACK_VAR(tmp17,"tmp17");
 		HX_STACK_LINE(53)
-		::ObjectTag tmp18 = tmp17->SetNounPosStringObject(HX_HCSTRING("italian's","\x2c","\xf4","\x90","\x15"));		HX_STACK_VAR(tmp18,"tmp18");
+		::ObjectTag tmp18 = tmp17->SetNounPosStringObject(HX_HCSTRING("Italian's","\x0c","\xd4","\x63","\xb7"));		HX_STACK_VAR(tmp18,"tmp18");
 		HX_STACK_LINE(53)
-		::ObjectTag tmp19 = tmp18->SetNounSStringObject(HX_HCSTRING("italians","\xb3","\xa6","\x00","\x8b"));		HX_STACK_VAR(tmp19,"tmp19");
+		::ObjectTag tmp19 = tmp18->SetNounSStringObject(HX_HCSTRING("Italians","\xd3","\x62","\xb2","\x64"));		HX_STACK_VAR(tmp19,"tmp19");
 		HX_STACK_LINE(53)
-		tmp19->SetNounSPosStringObject(HX_HCSTRING("italians'","\x14","\x36","\x91","\x15"));
+		tmp19->SetNounSPosStringObject(HX_HCSTRING("Italians'","\xf4","\x15","\x64","\xb7"));
 		HX_STACK_LINE(54)
 		::ObjectTag tmp20 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Painter","\x6b","\xdb","\x73","\x85"),::EnumTagType_obj::NOUN_ALIVE_ABSTRACT);		HX_STACK_VAR(tmp20,"tmp20");
 		HX_STACK_LINE(54)
-		::ObjectTag tmp21 = tmp20->SetNounStringObject(HX_HCSTRING("painter","\x8b","\xb3","\x22","\xb8"));		HX_STACK_VAR(tmp21,"tmp21");
+		::ObjectTag tmp21 = tmp20->SetNounStringObject(HX_HCSTRING("Painter","\x6b","\xdb","\x73","\x85"));		HX_STACK_VAR(tmp21,"tmp21");
 		HX_STACK_LINE(54)
-		::ObjectTag tmp22 = tmp21->SetNounPosStringObject(HX_HCSTRING("painter's","\xb7","\x0e","\xdf","\x0c"));		HX_STACK_VAR(tmp22,"tmp22");
+		::ObjectTag tmp22 = tmp21->SetNounPosStringObject(HX_HCSTRING("Painter's","\x97","\xee","\xb1","\xae"));		HX_STACK_VAR(tmp22,"tmp22");
 		HX_STACK_LINE(54)
-		::ObjectTag tmp23 = tmp22->SetNounSStringObject(HX_HCSTRING("painters","\x88","\x66","\x3a","\x66"));		HX_STACK_VAR(tmp23,"tmp23");
+		::ObjectTag tmp23 = tmp22->SetNounSStringObject(HX_HCSTRING("Painters","\xa8","\x22","\xec","\x3f"));		HX_STACK_VAR(tmp23,"tmp23");
 		HX_STACK_LINE(54)
-		tmp23->SetNounSPosStringObject(HX_HCSTRING("painters'","\x9f","\x50","\xdf","\x0c"));
+		tmp23->SetNounSPosStringObject(HX_HCSTRING("Painters'","\x7f","\x30","\xb2","\xae"));
 		HX_STACK_LINE(55)
 		::ObjectTag tmp24 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Romanian","\xd9","\x1e","\xc1","\x11"),::EnumTagType_obj::NOUN_ALIVE_ABSTRACT);		HX_STACK_VAR(tmp24,"tmp24");
 		HX_STACK_LINE(55)
-		::ObjectTag tmp25 = tmp24->SetNounStringObject(HX_HCSTRING("romanian","\xb9","\x62","\x0f","\x38"));		HX_STACK_VAR(tmp25,"tmp25");
+		::ObjectTag tmp25 = tmp24->SetNounStringObject(HX_HCSTRING("Romanian","\xd9","\x1e","\xc1","\x11"));		HX_STACK_VAR(tmp25,"tmp25");
 		HX_STACK_LINE(55)
-		::ObjectTag tmp26 = tmp25->SetNounPosStringObject(HX_HCSTRING("romanian's","\x65","\x65","\xb8","\xe4"));		HX_STACK_VAR(tmp26,"tmp26");
+		::ObjectTag tmp26 = tmp25->SetNounPosStringObject(HX_HCSTRING("Romanian's","\x85","\x69","\x69","\xdb"));		HX_STACK_VAR(tmp26,"tmp26");
 		HX_STACK_LINE(55)
-		::ObjectTag tmp27 = tmp26->SetNounSStringObject(HX_HCSTRING("romanians","\x9a","\xff","\x66","\xd5"));		HX_STACK_VAR(tmp27,"tmp27");
+		::ObjectTag tmp27 = tmp26->SetNounSStringObject(HX_HCSTRING("Romanians","\x7a","\xdf","\x39","\x77"));		HX_STACK_VAR(tmp27,"tmp27");
 		HX_STACK_LINE(55)
-		tmp27->SetNounSPosStringObject(HX_HCSTRING("romanians'","\x4d","\xa7","\xb8","\xe4"));
+		tmp27->SetNounSPosStringObject(HX_HCSTRING("Romanians'","\x6d","\xab","\x69","\xdb"));
 		HX_STACK_LINE(56)
 		::ObjectTag tmp28 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Russian","\x33","\x82","\x09","\x9d"),::EnumTagType_obj::NOUN_ALIVE_ABSTRACT);		HX_STACK_VAR(tmp28,"tmp28");
 		HX_STACK_LINE(56)
-		::ObjectTag tmp29 = tmp28->SetNounStringObject(HX_HCSTRING("russian","\x53","\x5a","\xb8","\xcf"));		HX_STACK_VAR(tmp29,"tmp29");
+		::ObjectTag tmp29 = tmp28->SetNounStringObject(HX_HCSTRING("Russian","\x33","\x82","\x09","\x9d"));		HX_STACK_VAR(tmp29,"tmp29");
 		HX_STACK_LINE(56)
-		::ObjectTag tmp30 = tmp29->SetNounPosStringObject(HX_HCSTRING("russian's","\x7f","\xf7","\x41","\x72"));		HX_STACK_VAR(tmp30,"tmp30");
+		::ObjectTag tmp30 = tmp29->SetNounPosStringObject(HX_HCSTRING("Russian's","\x5f","\xd7","\x14","\x14"));		HX_STACK_VAR(tmp30,"tmp30");
 		HX_STACK_LINE(56)
-		::ObjectTag tmp31 = tmp30->SetNounSStringObject(HX_HCSTRING("russians","\xc0","\xae","\x96","\xf1"));		HX_STACK_VAR(tmp31,"tmp31");
+		::ObjectTag tmp31 = tmp30->SetNounSStringObject(HX_HCSTRING("Russians","\xe0","\x6a","\x48","\xcb"));		HX_STACK_VAR(tmp31,"tmp31");
 		HX_STACK_LINE(56)
-		tmp31->SetNounSPosStringObject(HX_HCSTRING("russians'","\x67","\x39","\x42","\x72"));
+		tmp31->SetNounSPosStringObject(HX_HCSTRING("Russians'","\x47","\x19","\x15","\x14"));
 	}
 return null();
 }
@@ -353,9 +353,9 @@ Void CollectionTagGeneral_obj::TagGeneralStructNounInanimateHoldAbstractVoid( ::
 		HX_STACK_LINE(73)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEGATIVE,true,HX_HCSTRING("Grudge","\xf8","\xf1","\xa6","\x54"),::EnumTagType_obj::NOUN_INANIMATE_HOLD_ABSTRACT);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(73)
-		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("grudge","\xd8","\x7d","\x12","\x20"));		HX_STACK_VAR(tmp1,"tmp1");
+		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("Grudge","\xf8","\xf1","\xa6","\x54"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(73)
-		tmp1->SetNounSStringObject(HX_HCSTRING("grudges","\x9b","\x9f","\x1b","\xf0"));
+		tmp1->SetNounSStringObject(HX_HCSTRING("Grudges","\x7b","\xc7","\x6c","\xbd"));
 	}
 return null();
 }
@@ -370,33 +370,33 @@ Void CollectionTagGeneral_obj::TagGeneralStructNounInanimateHoldConcreteVoid( ::
 		HX_STACK_LINE(76)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Bat","\xb5","\x69","\x32","\x00"),::EnumTagType_obj::NOUN_INANIMATE_HOLD_CONCRETE);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(76)
-		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("bat","\xd5","\xb1","\x4a","\x00"));		HX_STACK_VAR(tmp1,"tmp1");
+		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("Bat","\xb5","\x69","\x32","\x00"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(76)
-		tmp1->SetNounSStringObject(HX_HCSTRING("bats","\xfe","\xe8","\x10","\x41"));
+		tmp1->SetNounSStringObject(HX_HCSTRING("Bats","\x1e","\x15","\xea","\x2b"));
 		HX_STACK_LINE(77)
 		::ObjectTag tmp2 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Gun","\x60","\x46","\x36","\x00"),::EnumTagType_obj::NOUN_INANIMATE_HOLD_CONCRETE);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(77)
-		::ObjectTag tmp3 = tmp2->SetNounStringObject(HX_HCSTRING("gun","\x80","\x8e","\x4e","\x00"));		HX_STACK_VAR(tmp3,"tmp3");
+		::ObjectTag tmp3 = tmp2->SetNounStringObject(HX_HCSTRING("Gun","\x60","\x46","\x36","\x00"));		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(77)
-		tmp3->SetNounSStringObject(HX_HCSTRING("guns","\xf3","\x21","\x6e","\x44"));
+		tmp3->SetNounSStringObject(HX_HCSTRING("Guns","\x13","\x4e","\x47","\x2f"));
 		HX_STACK_LINE(78)
 		::ObjectTag tmp4 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Hand","\x8f","\x57","\xe1","\x2f"),::EnumTagType_obj::NOUN_INANIMATE_HOLD_CONCRETE);		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(78)
-		::ObjectTag tmp5 = tmp4->SetNounStringObject(HX_HCSTRING("hand","\x6f","\x2b","\x08","\x45"));		HX_STACK_VAR(tmp5,"tmp5");
+		::ObjectTag tmp5 = tmp4->SetNounStringObject(HX_HCSTRING("Hand","\x8f","\x57","\xe1","\x2f"));		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(78)
-		tmp5->SetNounSStringObject(HX_HCSTRING("hands","\x24","\xd6","\x1d","\x22"));
+		tmp5->SetNounSStringObject(HX_HCSTRING("Hands","\x04","\x46","\x4b","\xb5"));
 		HX_STACK_LINE(79)
 		::ObjectTag tmp6 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Pencil","\xed","\x67","\x06","\x6d"),::EnumTagType_obj::NOUN_INANIMATE_HOLD_CONCRETE);		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(79)
-		::ObjectTag tmp7 = tmp6->SetNounStringObject(HX_HCSTRING("pencil","\xcd","\xf3","\x71","\x38"));		HX_STACK_VAR(tmp7,"tmp7");
+		::ObjectTag tmp7 = tmp6->SetNounStringObject(HX_HCSTRING("Pencil","\xed","\x67","\x06","\x6d"));		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(79)
-		tmp7->SetNounSStringObject(HX_HCSTRING("pencils","\x06","\x60","\x43","\x2b"));
+		tmp7->SetNounSStringObject(HX_HCSTRING("Pencils","\xe6","\x87","\x94","\xf8"));
 		HX_STACK_LINE(80)
 		::ObjectTag tmp8 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Sword","\x9d","\x27","\x3f","\x19"),::EnumTagType_obj::NOUN_INANIMATE_HOLD_CONCRETE);		HX_STACK_VAR(tmp8,"tmp8");
 		HX_STACK_LINE(80)
-		::ObjectTag tmp9 = tmp8->SetNounStringObject(HX_HCSTRING("sword","\xbd","\xb7","\x11","\x86"));		HX_STACK_VAR(tmp9,"tmp9");
+		::ObjectTag tmp9 = tmp8->SetNounStringObject(HX_HCSTRING("Sword","\x9d","\x27","\x3f","\x19"));		HX_STACK_VAR(tmp9,"tmp9");
 		HX_STACK_LINE(80)
-		tmp9->SetNounSStringObject(HX_HCSTRING("swords","\x16","\x0e","\x6f","\xc9"));
+		tmp9->SetNounSStringObject(HX_HCSTRING("Swords","\x36","\x82","\x03","\xfe"));
 	}
 return null();
 }
@@ -411,15 +411,15 @@ Void CollectionTagGeneral_obj::TagGeneralStructNounInanimatePlaceAbstractVoid( :
 		HX_STACK_LINE(83)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Mind","\xb2","\x7a","\x35","\x33"),::EnumTagType_obj::NOUN_INANIMATE_PLACE_ABSTRACT);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(83)
-		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("mind","\x92","\x4e","\x5c","\x48"));		HX_STACK_VAR(tmp1,"tmp1");
+		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("Mind","\xb2","\x7a","\x35","\x33"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(83)
-		tmp1->SetNounSStringObject(HX_HCSTRING("minds","\xa1","\x71","\x68","\x08"));
+		tmp1->SetNounSStringObject(HX_HCSTRING("Minds","\x81","\xe1","\x95","\x9b"));
 		HX_STACK_LINE(84)
 		::ObjectTag tmp2 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Intuition","\x37","\xb8","\x0e","\x1c"),::EnumTagType_obj::NOUN_INANIMATE_PLACE_ABSTRACT);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(84)
-		::ObjectTag tmp3 = tmp2->SetNounStringObject(HX_HCSTRING("intuition","\x57","\xd8","\x3b","\x7a"));		HX_STACK_VAR(tmp3,"tmp3");
+		::ObjectTag tmp3 = tmp2->SetNounStringObject(HX_HCSTRING("Intuition","\x37","\xb8","\x0e","\x1c"));		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(84)
-		tmp3->SetNounSStringObject(HX_HCSTRING("intuitions","\x3c","\x74","\x21","\x7a"));
+		tmp3->SetNounSStringObject(HX_HCSTRING("Intuitions","\x5c","\x78","\xd2","\x70"));
 	}
 return null();
 }
@@ -461,27 +461,27 @@ Void CollectionTagGeneral_obj::TagGeneralStructNounInanimatePlaceConcreteOwnerVo
 		HX_STACK_LINE(93)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Country","\x36","\xe2","\xaa","\xea"),::EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_OWNER);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(93)
-		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("country","\x56","\xba","\x59","\x1d"));		HX_STACK_VAR(tmp1,"tmp1");
+		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("Country","\x36","\xe2","\xaa","\xea"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(93)
-		tmp1->SetNounSStringObject(HX_HCSTRING("countries","\x34","\xb0","\xf1","\x72"));
+		tmp1->SetNounSStringObject(HX_HCSTRING("Countries","\x14","\x90","\xc4","\x14"));
 		HX_STACK_LINE(94)
 		::ObjectTag tmp2 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Harbor","\x6c","\x50","\x35","\xef"),::EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_OWNER);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(94)
-		::ObjectTag tmp3 = tmp2->SetNounStringObject(HX_HCSTRING("harbor","\x4c","\xdc","\xa0","\xba"));		HX_STACK_VAR(tmp3,"tmp3");
+		::ObjectTag tmp3 = tmp2->SetNounStringObject(HX_HCSTRING("Harbor","\x6c","\x50","\x35","\xef"));		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(94)
-		tmp3->SetNounSStringObject(HX_HCSTRING("harbors","\xa7","\xe6","\x1f","\x92"));
+		tmp3->SetNounSStringObject(HX_HCSTRING("Harbors","\x87","\x0e","\x71","\x5f"));
 		HX_STACK_LINE(95)
 		::ObjectTag tmp4 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("House","\x80","\x9f","\x91","\xbe"),::EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_OWNER);		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(95)
-		::ObjectTag tmp5 = tmp4->SetNounStringObject(HX_HCSTRING("house","\xa0","\x2f","\x64","\x2b"));		HX_STACK_VAR(tmp5,"tmp5");
+		::ObjectTag tmp5 = tmp4->SetNounStringObject(HX_HCSTRING("House","\x80","\x9f","\x91","\xbe"));		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(95)
-		tmp5->SetNounSStringObject(HX_HCSTRING("houses","\xd3","\x7c","\x45","\xcc"));
+		tmp5->SetNounSStringObject(HX_HCSTRING("Houses","\xf3","\xf0","\xd9","\x00"));
 		HX_STACK_LINE(96)
 		::ObjectTag tmp6 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("School","\x94","\x2c","\x5d","\x75"),::EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_OWNER);		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(96)
-		::ObjectTag tmp7 = tmp6->SetNounStringObject(HX_HCSTRING("school","\x74","\xb8","\xc8","\x40"));		HX_STACK_VAR(tmp7,"tmp7");
+		::ObjectTag tmp7 = tmp6->SetNounStringObject(HX_HCSTRING("School","\x94","\x2c","\x5d","\x75"));		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(96)
-		tmp7->SetNounSStringObject(HX_HCSTRING("schools","\x7f","\xad","\xd8","\x6e"));
+		tmp7->SetNounSStringObject(HX_HCSTRING("Schools","\x5f","\xd5","\x29","\x3c"));
 	}
 return null();
 }
@@ -496,7 +496,7 @@ Void CollectionTagGeneral_obj::TagGeneralStructNounInanimateSeeAbstractVoid( ::C
 		HX_STACK_LINE(99)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Vision","\x08","\x88","\x17","\x24"),::EnumTagType_obj::NOUN_INANIMATE_SEE_ABSTRACT);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(99)
-		tmp->SetNounStringObject(HX_HCSTRING("vision","\xe8","\x13","\x83","\xef"));
+		tmp->SetNounStringObject(HX_HCSTRING("Vision","\x08","\x88","\x17","\x24"));
 	}
 return null();
 }
@@ -511,15 +511,15 @@ Void CollectionTagGeneral_obj::TagGeneralStructNounInanimateSeeConcreteVoid( ::C
 		HX_STACK_LINE(102)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Lightning","\xea","\x18","\x1d","\x79"),::EnumTagType_obj::NOUN_INANIMATE_SEE_CONCRETE);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(102)
-		tmp->SetNounStringObject(HX_HCSTRING("lightning","\x0a","\x39","\x4a","\xd7"));
+		tmp->SetNounStringObject(HX_HCSTRING("Lightning","\xea","\x18","\x1d","\x79"));
 		HX_STACK_LINE(103)
 		::ObjectTag tmp1 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Moonlight","\x15","\xd0","\x88","\xb7"),::EnumTagType_obj::NOUN_INANIMATE_SEE_CONCRETE);		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(103)
-		tmp1->SetNounStringObject(HX_HCSTRING("moonlight","\x35","\xf0","\xb5","\x15"));
+		tmp1->SetNounStringObject(HX_HCSTRING("Moonlight","\x15","\xd0","\x88","\xb7"));
 		HX_STACK_LINE(104)
 		::ObjectTag tmp2 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Rainbow","\x16","\x29","\x91","\xd8"),::EnumTagType_obj::NOUN_INANIMATE_SEE_CONCRETE);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(104)
-		tmp2->SetNounStringObject(HX_HCSTRING("rainbow","\x36","\x01","\x40","\x0b"));
+		tmp2->SetNounStringObject(HX_HCSTRING("Rainbow","\x16","\x29","\x91","\xd8"));
 	}
 return null();
 }
@@ -534,15 +534,15 @@ Void CollectionTagGeneral_obj::TagGeneralStructNounInanimateTitleAbstractVoid( :
 		HX_STACK_LINE(107)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Commendation","\x26","\x26","\xb4","\x57"),::EnumTagType_obj::NOUN_INANIMATE_TITLE);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(107)
-		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("commendation","\x06","\xda","\xa1","\x8f"));		HX_STACK_VAR(tmp1,"tmp1");
+		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("Commendation","\x26","\x26","\xb4","\x57"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(107)
-		tmp1->SetNounSStringObject(HX_HCSTRING("commendations","\xad","\xeb","\xfc","\x1d"));
+		tmp1->SetNounSStringObject(HX_HCSTRING("Commendations","\x8d","\x3b","\xed","\x65"));
 		HX_STACK_LINE(108)
 		::ObjectTag tmp2 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Job","\xdd","\x87","\x38","\x00"),::EnumTagType_obj::NOUN_INANIMATE_TITLE);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(108)
-		::ObjectTag tmp3 = tmp2->SetNounStringObject(HX_HCSTRING("job","\xfd","\xcf","\x50","\x00"));		HX_STACK_VAR(tmp3,"tmp3");
+		::ObjectTag tmp3 = tmp2->SetNounStringObject(HX_HCSTRING("Job","\xdd","\x87","\x38","\x00"));		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(108)
-		tmp3->SetNounSStringObject(HX_HCSTRING("jobs","\xd6","\x2d","\x65","\x46"));
+		tmp3->SetNounSStringObject(HX_HCSTRING("Jobs","\xf6","\x59","\x3e","\x31"));
 	}
 return null();
 }
@@ -557,11 +557,11 @@ Void CollectionTagGeneral_obj::TagGeneralStructNounInanimateWearAbstractVoid( ::
 		HX_STACK_LINE(111)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::POSITIVE,true,HX_HCSTRING("Pride","\x48","\xbf","\xb8","\x5b"),::EnumTagType_obj::NOUN_INANIMATE_WEAR_ABSTRACT);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(111)
-		tmp->SetNounStringObject(HX_HCSTRING("pride","\x68","\x4f","\x8b","\xc8"));
+		tmp->SetNounStringObject(HX_HCSTRING("Pride","\x48","\xbf","\xb8","\x5b"));
 		HX_STACK_LINE(112)
 		::ObjectTag tmp1 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEGATIVE,true,HX_HCSTRING("Shame","\x64","\x50","\x4a","\x0f"),::EnumTagType_obj::NOUN_INANIMATE_WEAR_ABSTRACT);		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(112)
-		tmp1->SetNounStringObject(HX_HCSTRING("shame","\x84","\xe0","\x1c","\x7c"));
+		tmp1->SetNounStringObject(HX_HCSTRING("Shame","\x64","\x50","\x4a","\x0f"));
 	}
 return null();
 }
@@ -576,15 +576,15 @@ Void CollectionTagGeneral_obj::TagGeneralStructNounInanimateWearConcreteVoid( ::
 		HX_STACK_LINE(115)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Crown","\xd7","\xd2","\x87","\xdf"),::EnumTagType_obj::NOUN_INANIMATE_WEAR_CONCRETE);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(115)
-		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("crown","\xf7","\x62","\x5a","\x4c"));		HX_STACK_VAR(tmp1,"tmp1");
+		::ObjectTag tmp1 = tmp->SetNounStringObject(HX_HCSTRING("Crown","\xd7","\xd2","\x87","\xdf"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(115)
-		tmp1->SetNounSStringObject(HX_HCSTRING("crowns","\x9c","\x35","\xbc","\x82"));
+		tmp1->SetNounSStringObject(HX_HCSTRING("Crowns","\xbc","\xa9","\x50","\xb7"));
 		HX_STACK_LINE(116)
 		::ObjectTag tmp2 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Shirt","\xd6","\x66","\x50","\x0f"),::EnumTagType_obj::NOUN_INANIMATE_WEAR_CONCRETE);		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(116)
-		::ObjectTag tmp3 = tmp2->SetNounStringObject(HX_HCSTRING("shirt","\xf6","\xf6","\x22","\x7c"));		HX_STACK_VAR(tmp3,"tmp3");
+		::ObjectTag tmp3 = tmp2->SetNounStringObject(HX_HCSTRING("Shirt","\xd6","\x66","\x50","\x0f"));		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(116)
-		tmp3->SetNounSStringObject(HX_HCSTRING("shirts","\xbd","\x20","\x75","\x22"));
+		tmp3->SetNounSStringObject(HX_HCSTRING("Shirts","\xdd","\x94","\x09","\x57"));
 	}
 return null();
 }
@@ -599,75 +599,75 @@ Void CollectionTagGeneral_obj::TagGeneralStructVerbVoidIntransitiveVoid( ::Colle
 		HX_STACK_LINE(119)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEGATIVE,true,HX_HCSTRING("Die","\x20","\xf5","\x33","\x00"),::EnumTagType_obj::VERB_INTRANSITIVE);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(119)
-		::ObjectTag tmp1 = tmp->SetVerb1StringObject(HX_HCSTRING("die","\x40","\x3d","\x4c","\x00"));		HX_STACK_VAR(tmp1,"tmp1");
+		::ObjectTag tmp1 = tmp->SetVerb1StringObject(HX_HCSTRING("Die","\x20","\xf5","\x33","\x00"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(119)
-		::ObjectTag tmp2 = tmp1->SetVerb2StringObject(HX_HCSTRING("died","\x24","\x5b","\x69","\x42"));		HX_STACK_VAR(tmp2,"tmp2");
+		::ObjectTag tmp2 = tmp1->SetVerb2StringObject(HX_HCSTRING("Died","\x44","\x87","\x42","\x2d"));		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(119)
-		::ObjectTag tmp3 = tmp2->SetVerb3StringObject(HX_HCSTRING("died","\x24","\x5b","\x69","\x42"));		HX_STACK_VAR(tmp3,"tmp3");
+		::ObjectTag tmp3 = tmp2->SetVerb3StringObject(HX_HCSTRING("Died","\x44","\x87","\x42","\x2d"));		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(119)
-		::ObjectTag tmp4 = tmp3->SetVerbIngStringObject(HX_HCSTRING("dying","\x6d","\xe0","\x5c","\xe4"));		HX_STACK_VAR(tmp4,"tmp4");
+		::ObjectTag tmp4 = tmp3->SetVerbIngStringObject(HX_HCSTRING("Dying","\x4d","\x50","\x8a","\x77"));		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(119)
-		tmp4->SetVerbSStringObject(HX_HCSTRING("dies","\x33","\x5b","\x69","\x42"));
+		tmp4->SetVerbSStringObject(HX_HCSTRING("Dies","\x53","\x87","\x42","\x2d"));
 		HX_STACK_LINE(120)
 		::ObjectTag tmp5 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Jump","\x0e","\xf1","\x42","\x31"),::EnumTagType_obj::VERB_INTRANSITIVE);		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(120)
-		::ObjectTag tmp6 = tmp5->SetVerb1StringObject(HX_HCSTRING("jump","\xee","\xc4","\x69","\x46"));		HX_STACK_VAR(tmp6,"tmp6");
+		::ObjectTag tmp6 = tmp5->SetVerb1StringObject(HX_HCSTRING("Jump","\x0e","\xf1","\x42","\x31"));		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(120)
-		::ObjectTag tmp7 = tmp6->SetVerb2StringObject(HX_HCSTRING("jumped","\xcd","\xb4","\x17","\x08"));		HX_STACK_VAR(tmp7,"tmp7");
+		::ObjectTag tmp7 = tmp6->SetVerb2StringObject(HX_HCSTRING("Jumped","\xed","\x28","\xac","\x3c"));		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(120)
-		::ObjectTag tmp8 = tmp7->SetVerb3StringObject(HX_HCSTRING("jumped","\xcd","\xb4","\x17","\x08"));		HX_STACK_VAR(tmp8,"tmp8");
+		::ObjectTag tmp8 = tmp7->SetVerb3StringObject(HX_HCSTRING("Jumped","\xed","\x28","\xac","\x3c"));		HX_STACK_VAR(tmp8,"tmp8");
 		HX_STACK_LINE(120)
-		::ObjectTag tmp9 = tmp8->SetVerbIngStringObject(HX_HCSTRING("jumping","\xb4","\x90","\xa9","\x0c"));		HX_STACK_VAR(tmp9,"tmp9");
+		::ObjectTag tmp9 = tmp8->SetVerbIngStringObject(HX_HCSTRING("Jumping","\x94","\xb8","\xfa","\xd9"));		HX_STACK_VAR(tmp9,"tmp9");
 		HX_STACK_LINE(120)
-		tmp9->SetVerbSStringObject(HX_HCSTRING("jumps","\xc5","\x8b","\x22","\x56"));
+		tmp9->SetVerbSStringObject(HX_HCSTRING("Jumps","\xa5","\xfb","\x4f","\xe9"));
 		HX_STACK_LINE(121)
 		::ObjectTag tmp10 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Run","\x2b","\x9f","\x3e","\x00"),::EnumTagType_obj::VERB_INTRANSITIVE);		HX_STACK_VAR(tmp10,"tmp10");
 		HX_STACK_LINE(121)
-		::ObjectTag tmp11 = tmp10->SetVerb1StringObject(HX_HCSTRING("run","\x4b","\xe7","\x56","\x00"));		HX_STACK_VAR(tmp11,"tmp11");
+		::ObjectTag tmp11 = tmp10->SetVerb1StringObject(HX_HCSTRING("Run","\x2b","\x9f","\x3e","\x00"));		HX_STACK_VAR(tmp11,"tmp11");
 		HX_STACK_LINE(121)
-		::ObjectTag tmp12 = tmp11->SetVerb2StringObject(HX_HCSTRING("ran","\xdf","\xd5","\x56","\x00"));		HX_STACK_VAR(tmp12,"tmp12");
+		::ObjectTag tmp12 = tmp11->SetVerb2StringObject(HX_HCSTRING("Ran","\xbf","\x8d","\x3e","\x00"));		HX_STACK_VAR(tmp12,"tmp12");
 		HX_STACK_LINE(121)
-		::ObjectTag tmp13 = tmp12->SetVerb3StringObject(HX_HCSTRING("ran","\xdf","\xd5","\x56","\x00"));		HX_STACK_VAR(tmp13,"tmp13");
+		::ObjectTag tmp13 = tmp12->SetVerb3StringObject(HX_HCSTRING("Ran","\xbf","\x8d","\x3e","\x00"));		HX_STACK_VAR(tmp13,"tmp13");
 		HX_STACK_LINE(121)
-		::ObjectTag tmp14 = tmp13->SetVerbIngStringObject(HX_HCSTRING("running","\xff","\x6d","\x69","\xeb"));		HX_STACK_VAR(tmp14,"tmp14");
+		::ObjectTag tmp14 = tmp13->SetVerbIngStringObject(HX_HCSTRING("Running","\xdf","\x95","\xba","\xb8"));		HX_STACK_VAR(tmp14,"tmp14");
 		HX_STACK_LINE(121)
-		tmp14->SetVerbSStringObject(HX_HCSTRING("runs","\xc8","\x7a","\xb3","\x4b"));
+		tmp14->SetVerbSStringObject(HX_HCSTRING("Runs","\xe8","\xa6","\x8c","\x36"));
 		HX_STACK_LINE(122)
 		::ObjectTag tmp15 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Sing","\x6f","\xc2","\x2c","\x37"),::EnumTagType_obj::VERB_INTRANSITIVE);		HX_STACK_VAR(tmp15,"tmp15");
 		HX_STACK_LINE(122)
-		::ObjectTag tmp16 = tmp15->SetVerb1StringObject(HX_HCSTRING("sing","\x4f","\x96","\x53","\x4c"));		HX_STACK_VAR(tmp16,"tmp16");
+		::ObjectTag tmp16 = tmp15->SetVerb1StringObject(HX_HCSTRING("Sing","\x6f","\xc2","\x2c","\x37"));		HX_STACK_VAR(tmp16,"tmp16");
 		HX_STACK_LINE(122)
-		::ObjectTag tmp17 = tmp16->SetVerb2StringObject(HX_HCSTRING("sang","\x47","\x84","\x4d","\x4c"));		HX_STACK_VAR(tmp17,"tmp17");
+		::ObjectTag tmp17 = tmp16->SetVerb2StringObject(HX_HCSTRING("Sang","\x67","\xb0","\x26","\x37"));		HX_STACK_VAR(tmp17,"tmp17");
 		HX_STACK_LINE(122)
-		::ObjectTag tmp18 = tmp17->SetVerb3StringObject(HX_HCSTRING("sung","\x5b","\xb1","\x5c","\x4c"));		HX_STACK_VAR(tmp18,"tmp18");
+		::ObjectTag tmp18 = tmp17->SetVerb3StringObject(HX_HCSTRING("Sung","\x7b","\xdd","\x35","\x37"));		HX_STACK_VAR(tmp18,"tmp18");
 		HX_STACK_LINE(122)
-		::ObjectTag tmp19 = tmp18->SetVerbIngStringObject(HX_HCSTRING("singing","\xf3","\x11","\x16","\x44"));		HX_STACK_VAR(tmp19,"tmp19");
+		::ObjectTag tmp19 = tmp18->SetVerbIngStringObject(HX_HCSTRING("Singing","\xd3","\x39","\x67","\x11"));		HX_STACK_VAR(tmp19,"tmp19");
 		HX_STACK_LINE(122)
-		tmp19->SetVerbSStringObject(HX_HCSTRING("sings","\x44","\xef","\xcf","\x7c"));
+		tmp19->SetVerbSStringObject(HX_HCSTRING("Sings","\x24","\x5f","\xfd","\x0f"));
 		HX_STACK_LINE(123)
 		::ObjectTag tmp20 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Sleep","\xf7","\x2c","\xf2","\x11"),::EnumTagType_obj::VERB_INTRANSITIVE);		HX_STACK_VAR(tmp20,"tmp20");
 		HX_STACK_LINE(123)
-		::ObjectTag tmp21 = tmp20->SetVerb1StringObject(HX_HCSTRING("sleep","\x17","\xbd","\xc4","\x7e"));		HX_STACK_VAR(tmp21,"tmp21");
+		::ObjectTag tmp21 = tmp20->SetVerb1StringObject(HX_HCSTRING("Sleep","\xf7","\x2c","\xf2","\x11"));		HX_STACK_VAR(tmp21,"tmp21");
 		HX_STACK_LINE(123)
-		::ObjectTag tmp22 = tmp21->SetVerb2StringObject(HX_HCSTRING("slept","\xb0","\xc6","\xc4","\x7e"));		HX_STACK_VAR(tmp22,"tmp22");
+		::ObjectTag tmp22 = tmp21->SetVerb2StringObject(HX_HCSTRING("Slept","\x90","\x36","\xf2","\x11"));		HX_STACK_VAR(tmp22,"tmp22");
 		HX_STACK_LINE(123)
-		::ObjectTag tmp23 = tmp22->SetVerb3StringObject(HX_HCSTRING("slept","\xb0","\xc6","\xc4","\x7e"));		HX_STACK_VAR(tmp23,"tmp23");
+		::ObjectTag tmp23 = tmp22->SetVerb3StringObject(HX_HCSTRING("Slept","\x90","\x36","\xf2","\x11"));		HX_STACK_VAR(tmp23,"tmp23");
 		HX_STACK_LINE(123)
-		::ObjectTag tmp24 = tmp23->SetVerbIngStringObject(HX_HCSTRING("sleeping","\x2b","\x58","\x93","\x10"));		HX_STACK_VAR(tmp24,"tmp24");
+		::ObjectTag tmp24 = tmp23->SetVerbIngStringObject(HX_HCSTRING("Sleeping","\x4b","\x14","\x45","\xea"));		HX_STACK_VAR(tmp24,"tmp24");
 		HX_STACK_LINE(123)
-		tmp24->SetVerbSStringObject(HX_HCSTRING("sleeps","\x7c","\xb7","\x60","\x6d"));
+		tmp24->SetVerbSStringObject(HX_HCSTRING("Sleeps","\x9c","\x2b","\xf5","\xa1"));
 		HX_STACK_LINE(124)
 		::ObjectTag tmp25 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Work","\xf1","\x2d","\xd6","\x39"),::EnumTagType_obj::VERB_INTRANSITIVE);		HX_STACK_VAR(tmp25,"tmp25");
 		HX_STACK_LINE(124)
-		::ObjectTag tmp26 = tmp25->SetVerb1StringObject(HX_HCSTRING("work","\xd1","\x01","\xfd","\x4e"));		HX_STACK_VAR(tmp26,"tmp26");
+		::ObjectTag tmp26 = tmp25->SetVerb1StringObject(HX_HCSTRING("Work","\xf1","\x2d","\xd6","\x39"));		HX_STACK_VAR(tmp26,"tmp26");
 		HX_STACK_LINE(124)
-		::ObjectTag tmp27 = tmp26->SetVerb2StringObject(HX_HCSTRING("worked","\x70","\x30","\x9e","\xc9"));		HX_STACK_VAR(tmp27,"tmp27");
+		::ObjectTag tmp27 = tmp26->SetVerb2StringObject(HX_HCSTRING("Worked","\x90","\xa4","\x32","\xfe"));		HX_STACK_VAR(tmp27,"tmp27");
 		HX_STACK_LINE(124)
-		::ObjectTag tmp28 = tmp27->SetVerb3StringObject(HX_HCSTRING("worked","\x70","\x30","\x9e","\xc9"));		HX_STACK_VAR(tmp28,"tmp28");
+		::ObjectTag tmp28 = tmp27->SetVerb3StringObject(HX_HCSTRING("Worked","\x90","\xa4","\x32","\xfe"));		HX_STACK_VAR(tmp28,"tmp28");
 		HX_STACK_LINE(124)
-		::ObjectTag tmp29 = tmp28->SetVerbIngStringObject(HX_HCSTRING("working","\xb1","\x43","\xcf","\xa0"));		HX_STACK_VAR(tmp29,"tmp29");
+		::ObjectTag tmp29 = tmp28->SetVerbIngStringObject(HX_HCSTRING("Working","\x91","\x6b","\x20","\x6e"));		HX_STACK_VAR(tmp29,"tmp29");
 		HX_STACK_LINE(124)
-		tmp29->SetVerbSStringObject(HX_HCSTRING("works","\x82","\x95","\x64","\xce"));
+		tmp29->SetVerbSStringObject(HX_HCSTRING("Works","\x62","\x05","\x92","\x61"));
 	}
 return null();
 }
@@ -682,135 +682,135 @@ Void CollectionTagGeneral_obj::TagGeneralStructVerbVoidTransitiveVoid( ::Collect
 		HX_STACK_LINE(127)
 		::ObjectTag tmp = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Buy","\x26","\x7b","\x32","\x00"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(127)
-		::ObjectTag tmp1 = tmp->SetVerb1StringObject(HX_HCSTRING("buy","\x46","\xc3","\x4a","\x00"));		HX_STACK_VAR(tmp1,"tmp1");
+		::ObjectTag tmp1 = tmp->SetVerb1StringObject(HX_HCSTRING("Buy","\x26","\x7b","\x32","\x00"));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(127)
-		::ObjectTag tmp2 = tmp1->SetVerb2StringObject(HX_HCSTRING("bought","\x2b","\x3a","\x18","\x66"));		HX_STACK_VAR(tmp2,"tmp2");
+		::ObjectTag tmp2 = tmp1->SetVerb2StringObject(HX_HCSTRING("Bought","\x4b","\xae","\xac","\x9a"));		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(127)
-		::ObjectTag tmp3 = tmp2->SetVerb3StringObject(HX_HCSTRING("bought","\x2b","\x3a","\x18","\x66"));		HX_STACK_VAR(tmp3,"tmp3");
+		::ObjectTag tmp3 = tmp2->SetVerb3StringObject(HX_HCSTRING("Bought","\x4b","\xae","\xac","\x9a"));		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(127)
-		::ObjectTag tmp4 = tmp3->SetVerbIngStringObject(HX_HCSTRING("buying","\x5c","\x19","\x26","\xdd"));		HX_STACK_VAR(tmp4,"tmp4");
+		::ObjectTag tmp4 = tmp3->SetVerbIngStringObject(HX_HCSTRING("Buying","\x7c","\x8d","\xba","\x11"));		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(127)
-		tmp4->SetVerbSStringObject(HX_HCSTRING("buys","\x6d","\x1a","\x20","\x41"));
+		tmp4->SetVerbSStringObject(HX_HCSTRING("Buys","\x8d","\x46","\xf9","\x2b"));
 		HX_STACK_LINE(128)
 		::ObjectTag tmp5 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Call","\xbe","\x44","\x93","\x2c"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(128)
-		::ObjectTag tmp6 = tmp5->SetVerb1StringObject(HX_HCSTRING("call","\x9e","\x18","\xba","\x41"));		HX_STACK_VAR(tmp6,"tmp6");
+		::ObjectTag tmp6 = tmp5->SetVerb1StringObject(HX_HCSTRING("Call","\xbe","\x44","\x93","\x2c"));		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(128)
-		::ObjectTag tmp7 = tmp6->SetVerb2StringObject(HX_HCSTRING("called","\x7d","\x54","\xe8","\xb6"));		HX_STACK_VAR(tmp7,"tmp7");
+		::ObjectTag tmp7 = tmp6->SetVerb2StringObject(HX_HCSTRING("Called","\x9d","\xc8","\x7c","\xeb"));		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(128)
-		::ObjectTag tmp8 = tmp7->SetVerb3StringObject(HX_HCSTRING("called","\x7d","\x54","\xe8","\xb6"));		HX_STACK_VAR(tmp8,"tmp8");
+		::ObjectTag tmp8 = tmp7->SetVerb3StringObject(HX_HCSTRING("Called","\x9d","\xc8","\x7c","\xeb"));		HX_STACK_VAR(tmp8,"tmp8");
 		HX_STACK_LINE(128)
-		::ObjectTag tmp9 = tmp8->SetVerbIngStringObject(HX_HCSTRING("calling","\x04","\xab","\x64","\x54"));		HX_STACK_VAR(tmp9,"tmp9");
+		::ObjectTag tmp9 = tmp8->SetVerbIngStringObject(HX_HCSTRING("Calling","\xe4","\xd2","\xb5","\x21"));		HX_STACK_VAR(tmp9,"tmp9");
 		HX_STACK_LINE(128)
-		tmp9->SetVerbSStringObject(HX_HCSTRING("calls","\x15","\x72","\x1b","\x41"));
+		tmp9->SetVerbSStringObject(HX_HCSTRING("Calls","\xf5","\xe1","\x48","\xd4"));
 		HX_STACK_LINE(129)
 		::ObjectTag tmp10 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Desire","\xea","\xb9","\x10","\xa4"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp10,"tmp10");
 		HX_STACK_LINE(129)
-		::ObjectTag tmp11 = tmp10->SetVerb1StringObject(HX_HCSTRING("desire","\xca","\x45","\x7c","\x6f"));		HX_STACK_VAR(tmp11,"tmp11");
+		::ObjectTag tmp11 = tmp10->SetVerb1StringObject(HX_HCSTRING("Desire","\xea","\xb9","\x10","\xa4"));		HX_STACK_VAR(tmp11,"tmp11");
 		HX_STACK_LINE(129)
-		::ObjectTag tmp12 = tmp11->SetVerb2StringObject(HX_HCSTRING("desired","\x5a","\xcb","\x40","\x1d"));		HX_STACK_VAR(tmp12,"tmp12");
+		::ObjectTag tmp12 = tmp11->SetVerb2StringObject(HX_HCSTRING("Desired","\x3a","\xf3","\x91","\xea"));		HX_STACK_VAR(tmp12,"tmp12");
 		HX_STACK_LINE(129)
-		::ObjectTag tmp13 = tmp12->SetVerb3StringObject(HX_HCSTRING("desired","\x5a","\xcb","\x40","\x1d"));		HX_STACK_VAR(tmp13,"tmp13");
+		::ObjectTag tmp13 = tmp12->SetVerb3StringObject(HX_HCSTRING("Desired","\x3a","\xf3","\x91","\xea"));		HX_STACK_VAR(tmp13,"tmp13");
 		HX_STACK_LINE(129)
-		::ObjectTag tmp14 = tmp13->SetVerbIngStringObject(HX_HCSTRING("desiring","\x87","\x35","\x74","\x7b"));		HX_STACK_VAR(tmp14,"tmp14");
+		::ObjectTag tmp14 = tmp13->SetVerbIngStringObject(HX_HCSTRING("Desiring","\xa7","\xf1","\x25","\x55"));		HX_STACK_VAR(tmp14,"tmp14");
 		HX_STACK_LINE(129)
-		tmp14->SetVerbSStringObject(HX_HCSTRING("desires","\x69","\xcb","\x40","\x1d"));
+		tmp14->SetVerbSStringObject(HX_HCSTRING("Desires","\x49","\xf3","\x91","\xea"));
 		HX_STACK_LINE(130)
 		::ObjectTag tmp15 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Drink","\xf8","\xd1","\xe9","\x72"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp15,"tmp15");
 		HX_STACK_LINE(130)
-		::ObjectTag tmp16 = tmp15->SetVerb1StringObject(HX_HCSTRING("drink","\x18","\x62","\xbc","\xdf"));		HX_STACK_VAR(tmp16,"tmp16");
+		::ObjectTag tmp16 = tmp15->SetVerb1StringObject(HX_HCSTRING("Drink","\xf8","\xd1","\xe9","\x72"));		HX_STACK_VAR(tmp16,"tmp16");
 		HX_STACK_LINE(130)
-		::ObjectTag tmp17 = tmp16->SetVerb2StringObject(HX_HCSTRING("drunk","\x24","\x7d","\xc5","\xdf"));		HX_STACK_VAR(tmp17,"tmp17");
+		::ObjectTag tmp17 = tmp16->SetVerb2StringObject(HX_HCSTRING("Drunk","\x04","\xed","\xf2","\x72"));		HX_STACK_VAR(tmp17,"tmp17");
 		HX_STACK_LINE(130)
-		::ObjectTag tmp18 = tmp17->SetVerb3StringObject(HX_HCSTRING("drank","\x10","\x50","\xb6","\xdf"));		HX_STACK_VAR(tmp18,"tmp18");
+		::ObjectTag tmp18 = tmp17->SetVerb3StringObject(HX_HCSTRING("Drank","\xf0","\xbf","\xe3","\x72"));		HX_STACK_VAR(tmp18,"tmp18");
 		HX_STACK_LINE(130)
-		::ObjectTag tmp19 = tmp18->SetVerbIngStringObject(HX_HCSTRING("drinking","\xca","\x09","\xda","\x74"));		HX_STACK_VAR(tmp19,"tmp19");
+		::ObjectTag tmp19 = tmp18->SetVerbIngStringObject(HX_HCSTRING("Drinking","\xea","\xc5","\x8b","\x4e"));		HX_STACK_VAR(tmp19,"tmp19");
 		HX_STACK_LINE(130)
-		tmp19->SetVerbSStringObject(HX_HCSTRING("drinks","\x5b","\x73","\x19","\xe5"));
+		tmp19->SetVerbSStringObject(HX_HCSTRING("Drinks","\x7b","\xe7","\xad","\x19"));
 		HX_STACK_LINE(131)
 		::ObjectTag tmp20 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Drive","\xea","\xd8","\xe9","\x72"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp20,"tmp20");
 		HX_STACK_LINE(131)
-		::ObjectTag tmp21 = tmp20->SetVerb1StringObject(HX_HCSTRING("drive","\x0a","\x69","\xbc","\xdf"));		HX_STACK_VAR(tmp21,"tmp21");
+		::ObjectTag tmp21 = tmp20->SetVerb1StringObject(HX_HCSTRING("Drive","\xea","\xd8","\xe9","\x72"));		HX_STACK_VAR(tmp21,"tmp21");
 		HX_STACK_LINE(131)
-		::ObjectTag tmp22 = tmp21->SetVerb2StringObject(HX_HCSTRING("drove","\x90","\xf6","\xc0","\xdf"));		HX_STACK_VAR(tmp22,"tmp22");
+		::ObjectTag tmp22 = tmp21->SetVerb2StringObject(HX_HCSTRING("Drove","\x70","\x66","\xee","\x72"));		HX_STACK_VAR(tmp22,"tmp22");
 		HX_STACK_LINE(131)
-		::ObjectTag tmp23 = tmp22->SetVerb3StringObject(HX_HCSTRING("driven","\x24","\x80","\x1f","\xe5"));		HX_STACK_VAR(tmp23,"tmp23");
+		::ObjectTag tmp23 = tmp22->SetVerb3StringObject(HX_HCSTRING("Driven","\x44","\xf4","\xb3","\x19"));		HX_STACK_VAR(tmp23,"tmp23");
 		HX_STACK_LINE(131)
-		::ObjectTag tmp24 = tmp23->SetVerbIngStringObject(HX_HCSTRING("driving","\xc7","\xa8","\x73","\x96"));		HX_STACK_VAR(tmp24,"tmp24");
+		::ObjectTag tmp24 = tmp23->SetVerbIngStringObject(HX_HCSTRING("Driving","\xa7","\xd0","\xc4","\x63"));		HX_STACK_VAR(tmp24,"tmp24");
 		HX_STACK_LINE(131)
-		tmp24->SetVerbSStringObject(HX_HCSTRING("drives","\x29","\x80","\x1f","\xe5"));
+		tmp24->SetVerbSStringObject(HX_HCSTRING("Drives","\x49","\xf4","\xb3","\x19"));
 		HX_STACK_LINE(132)
 		::ObjectTag tmp25 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Eat","\x78","\xb0","\x34","\x00"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp25,"tmp25");
 		HX_STACK_LINE(132)
-		::ObjectTag tmp26 = tmp25->SetVerb1StringObject(HX_HCSTRING("eat","\x98","\xf8","\x4c","\x00"));		HX_STACK_VAR(tmp26,"tmp26");
+		::ObjectTag tmp26 = tmp25->SetVerb1StringObject(HX_HCSTRING("Eat","\x78","\xb0","\x34","\x00"));		HX_STACK_VAR(tmp26,"tmp26");
 		HX_STACK_LINE(132)
-		::ObjectTag tmp27 = tmp26->SetVerb2StringObject(HX_HCSTRING("ate","\x12","\x00","\x4a","\x00"));		HX_STACK_VAR(tmp27,"tmp27");
+		::ObjectTag tmp27 = tmp26->SetVerb2StringObject(HX_HCSTRING("Ate","\xf2","\xb7","\x31","\x00"));		HX_STACK_VAR(tmp27,"tmp27");
 		HX_STACK_LINE(132)
-		::ObjectTag tmp28 = tmp27->SetVerb3StringObject(HX_HCSTRING("eaten","\x01","\xa7","\xee","\x67"));		HX_STACK_VAR(tmp28,"tmp28");
+		::ObjectTag tmp28 = tmp27->SetVerb3StringObject(HX_HCSTRING("Eaten","\xe1","\x16","\x1c","\xfb"));		HX_STACK_VAR(tmp28,"tmp28");
 		HX_STACK_LINE(132)
-		::ObjectTag tmp29 = tmp28->SetVerbIngStringObject(HX_HCSTRING("eating","\x4a","\x83","\xe6","\x88"));		HX_STACK_VAR(tmp29,"tmp29");
+		::ObjectTag tmp29 = tmp28->SetVerbIngStringObject(HX_HCSTRING("Eating","\x6a","\xf7","\x7a","\xbd"));		HX_STACK_VAR(tmp29,"tmp29");
 		HX_STACK_LINE(132)
-		tmp29->SetVerbSStringObject(HX_HCSTRING("eats","\xdb","\x8c","\x0c","\x43"));
+		tmp29->SetVerbSStringObject(HX_HCSTRING("Eats","\xfb","\xb8","\xe5","\x2d"));
 		HX_STACK_LINE(133)
 		::ObjectTag tmp30 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Fight","\xb0","\x85","\xc2","\x93"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp30,"tmp30");
 		HX_STACK_LINE(133)
-		::ObjectTag tmp31 = tmp30->SetVerb1StringObject(HX_HCSTRING("fight","\xd0","\x15","\x95","\x00"));		HX_STACK_VAR(tmp31,"tmp31");
+		::ObjectTag tmp31 = tmp30->SetVerb1StringObject(HX_HCSTRING("Fight","\xb0","\x85","\xc2","\x93"));		HX_STACK_VAR(tmp31,"tmp31");
 		HX_STACK_LINE(133)
-		::ObjectTag tmp32 = tmp31->SetVerb2StringObject(HX_HCSTRING("fought","\xa7","\xab","\x85","\xff"));		HX_STACK_VAR(tmp32,"tmp32");
+		::ObjectTag tmp32 = tmp31->SetVerb2StringObject(HX_HCSTRING("Fought","\xc7","\x1f","\x1a","\x34"));		HX_STACK_VAR(tmp32,"tmp32");
 		HX_STACK_LINE(133)
-		::ObjectTag tmp33 = tmp32->SetVerb3StringObject(HX_HCSTRING("fought","\xa7","\xab","\x85","\xff"));		HX_STACK_VAR(tmp33,"tmp33");
+		::ObjectTag tmp33 = tmp32->SetVerb3StringObject(HX_HCSTRING("Fought","\xc7","\x1f","\x1a","\x34"));		HX_STACK_VAR(tmp33,"tmp33");
 		HX_STACK_LINE(133)
-		::ObjectTag tmp34 = tmp33->SetVerbIngStringObject(HX_HCSTRING("fighting","\x12","\x79","\xd2","\x35"));		HX_STACK_VAR(tmp34,"tmp34");
+		::ObjectTag tmp34 = tmp33->SetVerbIngStringObject(HX_HCSTRING("Fighting","\x32","\x35","\x84","\x0f"));		HX_STACK_VAR(tmp34,"tmp34");
 		HX_STACK_LINE(133)
-		tmp34->SetVerbSStringObject(HX_HCSTRING("fights","\xa3","\x00","\xde","\x81"));
+		tmp34->SetVerbSStringObject(HX_HCSTRING("Fights","\xc3","\x74","\x72","\xb6"));
 		HX_STACK_LINE(134)
 		::ObjectTag tmp35 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Get","\x76","\x38","\x36","\x00"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp35,"tmp35");
 		HX_STACK_LINE(134)
-		::ObjectTag tmp36 = tmp35->SetVerb1StringObject(HX_HCSTRING("get","\x96","\x80","\x4e","\x00"));		HX_STACK_VAR(tmp36,"tmp36");
+		::ObjectTag tmp36 = tmp35->SetVerb1StringObject(HX_HCSTRING("Get","\x76","\x38","\x36","\x00"));		HX_STACK_VAR(tmp36,"tmp36");
 		HX_STACK_LINE(134)
-		::ObjectTag tmp37 = tmp36->SetVerb2StringObject(HX_HCSTRING("got","\x4c","\x89","\x4e","\x00"));		HX_STACK_VAR(tmp37,"tmp37");
+		::ObjectTag tmp37 = tmp36->SetVerb2StringObject(HX_HCSTRING("Got","\x2c","\x41","\x36","\x00"));		HX_STACK_VAR(tmp37,"tmp37");
 		HX_STACK_LINE(134)
-		::ObjectTag tmp38 = tmp37->SetVerb3StringObject(HX_HCSTRING("gotten","\x11","\xac","\x41","\x65"));		HX_STACK_VAR(tmp38,"tmp38");
+		::ObjectTag tmp38 = tmp37->SetVerb3StringObject(HX_HCSTRING("Gotten","\x31","\x20","\xd6","\x99"));		HX_STACK_VAR(tmp38,"tmp38");
 		HX_STACK_LINE(134)
-		::ObjectTag tmp39 = tmp38->SetVerbIngStringObject(HX_HCSTRING("getting","\x84","\x50","\xa6","\x34"));		HX_STACK_VAR(tmp39,"tmp39");
+		::ObjectTag tmp39 = tmp38->SetVerbIngStringObject(HX_HCSTRING("Getting","\x64","\x78","\xf7","\x01"));		HX_STACK_VAR(tmp39,"tmp39");
 		HX_STACK_LINE(134)
-		tmp39->SetVerbSStringObject(HX_HCSTRING("gets","\x1d","\x03","\x62","\x44"));
+		tmp39->SetVerbSStringObject(HX_HCSTRING("Gets","\x3d","\x2f","\x3b","\x2f"));
 		HX_STACK_LINE(135)
 		::ObjectTag tmp40 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,true,HX_HCSTRING("Grab","\xec","\xfb","\x44","\x2f"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp40,"tmp40");
 		HX_STACK_LINE(135)
-		::ObjectTag tmp41 = tmp40->SetVerb1StringObject(HX_HCSTRING("grab","\xcc","\xcf","\x6b","\x44"));		HX_STACK_VAR(tmp41,"tmp41");
+		::ObjectTag tmp41 = tmp40->SetVerb1StringObject(HX_HCSTRING("Grab","\xec","\xfb","\x44","\x2f"));		HX_STACK_VAR(tmp41,"tmp41");
 		HX_STACK_LINE(135)
-		::ObjectTag tmp42 = tmp41->SetVerb2StringObject(HX_HCSTRING("grabed","\x2b","\xb3","\xd8","\x12"));		HX_STACK_VAR(tmp42,"tmp42");
+		::ObjectTag tmp42 = tmp41->SetVerb2StringObject(HX_HCSTRING("Grabed","\x4b","\x27","\x6d","\x47"));		HX_STACK_VAR(tmp42,"tmp42");
 		HX_STACK_LINE(135)
-		::ObjectTag tmp43 = tmp42->SetVerb3StringObject(HX_HCSTRING("grabed","\x2b","\xb3","\xd8","\x12"));		HX_STACK_VAR(tmp43,"tmp43");
+		::ObjectTag tmp43 = tmp42->SetVerb3StringObject(HX_HCSTRING("Grabed","\x4b","\x27","\x6d","\x47"));		HX_STACK_VAR(tmp43,"tmp43");
 		HX_STACK_LINE(135)
-		::ObjectTag tmp44 = tmp43->SetVerbIngStringObject(HX_HCSTRING("grabbing","\x8c","\x9b","\xd4","\xfe"));		HX_STACK_VAR(tmp44,"tmp44");
+		::ObjectTag tmp44 = tmp43->SetVerbIngStringObject(HX_HCSTRING("Grabbing","\xac","\x57","\x86","\xd8"));		HX_STACK_VAR(tmp44,"tmp44");
 		HX_STACK_LINE(135)
-		tmp44->SetVerbSStringObject(HX_HCSTRING("grabs","\x27","\x03","\xea","\x99"));
+		tmp44->SetVerbSStringObject(HX_HCSTRING("Grabs","\x07","\x73","\x17","\x2d"));
 		HX_STACK_LINE(136)
 		::ObjectTag tmp45 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEGATIVE,true,HX_HCSTRING("Kill","\xbe","\x0b","\xe3","\x31"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp45,"tmp45");
 		HX_STACK_LINE(136)
-		::ObjectTag tmp46 = tmp45->SetVerb1StringObject(HX_HCSTRING("kill","\x9e","\xdf","\x09","\x47"));		HX_STACK_VAR(tmp46,"tmp46");
+		::ObjectTag tmp46 = tmp45->SetVerb1StringObject(HX_HCSTRING("Kill","\xbe","\x0b","\xe3","\x31"));		HX_STACK_VAR(tmp46,"tmp46");
 		HX_STACK_LINE(136)
-		::ObjectTag tmp47 = tmp46->SetVerb2StringObject(HX_HCSTRING("killed","\x7d","\xdb","\xf7","\x84"));		HX_STACK_VAR(tmp47,"tmp47");
+		::ObjectTag tmp47 = tmp46->SetVerb2StringObject(HX_HCSTRING("Killed","\x9d","\x4f","\x8c","\xb9"));		HX_STACK_VAR(tmp47,"tmp47");
 		HX_STACK_LINE(136)
-		::ObjectTag tmp48 = tmp47->SetVerb3StringObject(HX_HCSTRING("killed","\x7d","\xdb","\xf7","\x84"));		HX_STACK_VAR(tmp48,"tmp48");
+		::ObjectTag tmp48 = tmp47->SetVerb3StringObject(HX_HCSTRING("Killed","\x9d","\x4f","\x8c","\xb9"));		HX_STACK_VAR(tmp48,"tmp48");
 		HX_STACK_LINE(136)
-		::ObjectTag tmp49 = tmp48->SetVerbIngStringObject(HX_HCSTRING("killing","\x04","\x44","\xeb","\xd3"));		HX_STACK_VAR(tmp49,"tmp49");
+		::ObjectTag tmp49 = tmp48->SetVerbIngStringObject(HX_HCSTRING("Killing","\xe4","\x6b","\x3c","\xa1"));		HX_STACK_VAR(tmp49,"tmp49");
 		HX_STACK_LINE(136)
-		tmp49->SetVerbSStringObject(HX_HCSTRING("kills","\x15","\xcb","\x99","\xe1"));
+		tmp49->SetVerbSStringObject(HX_HCSTRING("Kills","\xf5","\x3a","\xc7","\x74"));
 		HX_STACK_LINE(137)
 		::ObjectTag tmp50 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::POSITIVE,true,HX_HCSTRING("Love","\x92","\xd8","\x90","\x32"),::EnumTagType_obj::VERB_TRANSITIVE);		HX_STACK_VAR(tmp50,"tmp50");
 		HX_STACK_LINE(137)
-		::ObjectTag tmp51 = tmp50->SetVerb1StringObject(HX_HCSTRING("love","\x72","\xac","\xb7","\x47"));		HX_STACK_VAR(tmp51,"tmp51");
+		::ObjectTag tmp51 = tmp50->SetVerb1StringObject(HX_HCSTRING("Love","\x92","\xd8","\x90","\x32"));		HX_STACK_VAR(tmp51,"tmp51");
 		HX_STACK_LINE(137)
-		::ObjectTag tmp52 = tmp51->SetVerb2StringObject(HX_HCSTRING("loved","\xb2","\x37","\xff","\x78"));		HX_STACK_VAR(tmp52,"tmp52");
+		::ObjectTag tmp52 = tmp51->SetVerb2StringObject(HX_HCSTRING("Loved","\x92","\xa7","\x2c","\x0c"));		HX_STACK_VAR(tmp52,"tmp52");
 		HX_STACK_LINE(137)
-		::ObjectTag tmp53 = tmp52->SetVerb3StringObject(HX_HCSTRING("loved","\xb2","\x37","\xff","\x78"));		HX_STACK_VAR(tmp53,"tmp53");
+		::ObjectTag tmp53 = tmp52->SetVerb3StringObject(HX_HCSTRING("Loved","\x92","\xa7","\x2c","\x0c"));		HX_STACK_VAR(tmp53,"tmp53");
 		HX_STACK_LINE(137)
-		::ObjectTag tmp54 = tmp53->SetVerbIngStringObject(HX_HCSTRING("loving","\x2f","\x96","\x54","\x66"));		HX_STACK_VAR(tmp54,"tmp54");
+		::ObjectTag tmp54 = tmp53->SetVerbIngStringObject(HX_HCSTRING("Loving","\x4f","\x0a","\xe9","\x9a"));		HX_STACK_VAR(tmp54,"tmp54");
 		HX_STACK_LINE(137)
-		tmp54->SetVerbSStringObject(HX_HCSTRING("loves","\xc1","\x37","\xff","\x78"));
+		tmp54->SetVerbSStringObject(HX_HCSTRING("Loves","\xa1","\xa7","\x2c","\x0c"));
 	}
 return null();
 }

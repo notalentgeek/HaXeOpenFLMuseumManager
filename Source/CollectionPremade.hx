@@ -49,13 +49,13 @@ class CollectionPremade{
             "The scenes engraved around the vessel have not been identified with certainty."
         ];
         var exhibition001TagObjectArray:Array<ObjectTag> = [
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "chain_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "cista_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "cosmetic_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "crouch_VERB_INTRANSITIVE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "item_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "lion_NOUN_ALIVE_ABSTRACT"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "vessel_NOUN_INANIMATE_PLACE_CONCRETE_OWNER")
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Chain_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Cista_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Cosmetic_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Crouch_VERB_INTRANSITIVE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Item_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Lion_NOUN_ALIVE_ABSTRACT"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Vessel_NOUN_INANIMATE_PLACE_CONCRETE_OWNER")
         ];
         var exhibition002ExplanationStringArray:Array<String> = [
             "Clubs came in different forms and were used by a warrior in combination with a long-handled weapon, such as a spear.",
@@ -65,34 +65,34 @@ class CollectionPremade{
             "Warriors carried them in their belts, ready at hand, with a wrist-strap attached through the hole at the end."
         ];
         var exhibition002TagObjectArray:Array<ObjectTag> = [
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "belt_NOUN_INANIMATE_WEAR_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "club_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "jade_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Belt_NOUN_INANIMATE_WEAR_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Club_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Jade_NOUN_INANIMATE_HOLD_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Mauri_NOUN_ALIVE_ABSTRACT"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "spear_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "stone_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "warrior_NOUN_ALIVE_ABSTRACT"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "weapon_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "wood_NOUN_INANIMATE_HOLD_CONCRETE")
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Spear_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Stone_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Warrior_NOUN_ALIVE_ABSTRACT"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Weapon_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Wood_NOUN_INANIMATE_HOLD_CONCRETE")
         ];
         var exhibition003ExplanationStringArray:Array<String> = [
             "The Holy Thorn Reliquary was probably created in the 1390s in Paris for John, Duke of Berry, to house a relic of the Crown of Thorns.",
-            "The reliquary was bequeathed to the British Museum in 1898 by Ferdinand de Rothschild as part of the Waddesdon Bequest.",
+            "The reliquary was bequeathed to the British Museum in 1898 by Ferdinand De Rothschild as part of the Waddesdon Bequest.",
             "It is one of a small number of major goldsmiths' works or joyaux that survive from the extravagant world of the courts of the Valois royal family around 1400.",
             "It is made of gold, lavishly decorated with jewels and pearls, and uses the technique of enamelling en ronde bosse, or in the round, which had been recently developed when the reliquary was made, to create a total of 28 three-dimensional figures, mostly in white enamel."
         ];
         var exhibition003TagObjectArray:Array<ObjectTag> = [
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Crown of Thorn_NOUN_INANIMATE_WEAR_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "extravagant_ADJ"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "extravagantly_ADV"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Ferdinand de Rothschild_NOUN_ALIVE_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "gold_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "goldsmith_NOUN_ALIVE_ABSTRACT"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "jewel_NOUN_INANIMATE_WEAR_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "John, Duke of Berry_NOUN_ALIVE_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Crown Of Thorn_NOUN_INANIMATE_WEAR_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Extravagant_ADJ"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Extravagantly_ADV"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Ferdinand De Rothschild_NOUN_ALIVE_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Gold_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Goldsmith_NOUN_ALIVE_ABSTRACT"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Jewel_NOUN_INANIMATE_WEAR_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "John, Duke Of Berry_NOUN_ALIVE_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Paris_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "pearl_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "reliquary_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Pearl_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Reliquary_NOUN_INANIMATE_HOLD_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "The Holy Thorn Reliquary_NOUN_INANIMATE_HOLD_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Valois_NOUN_INANIMATE_WEAR_ABSTRACT"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Waddesdon Bequest_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER")
@@ -105,17 +105,17 @@ class CollectionPremade{
             "Edge enamelled alternately ruby and sapphire blue."
         ];
         var exhibition004TagObjectArray:Array<ObjectTag> = [
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "gold_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Gold_NOUN_INANIMATE_HOLD_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "James_NOUN_ALIVE_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "jewel_NOUN_INANIMATE_WEAR_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "oval_ADJ"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "pendant_NOUN_INANIMATE_WEAR_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "rose_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "sapphire_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "slender_ADJ"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "table_NOUN_INANIMATE_PLACE_CONCRETE_OWNER"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Jewel_NOUN_INANIMATE_WEAR_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Oval_ADJ"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Pendant_NOUN_INANIMATE_WEAR_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Rose_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Sapphire_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Slender_ADJ"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Table_NOUN_INANIMATE_PLACE_CONCRETE_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "The Lyte Jewel_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "young man_NOUN_ALIVE_ABSTRACT")
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Young Man_NOUN_ALIVE_ABSTRACT")
         ];
         var exhibition005ExplanationStringArray:Array<String> = [
             "On the head's left side was placed a crested and masked helmet wrapped in cloths.",
@@ -130,12 +130,12 @@ class CollectionPremade{
         ];
         var exhibition005TagObjectArray:Array<ObjectTag> = [
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Caenby_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "crest_NOUN_INANIMATE_WEAR_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Crest_NOUN_INANIMATE_WEAR_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "England_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "helmet_NOUN_INANIMATE_WEAR_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Helmet_NOUN_INANIMATE_WEAR_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Lincolnshire_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "mask_NOUN_INANIMATE_WEAR_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "masked_ADJ"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Mask_NOUN_INANIMATE_WEAR_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Masked_ADJ"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Staffordshire_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Sweden_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "The Sutton Hoo_NOUN_ALIVE_CONCRETE"),
@@ -149,14 +149,14 @@ class CollectionPremade{
             "Attached to this and lying toward the body was the sword harness and belt, fitted with a suite of gold mounts and strap-distributors of extremely intricate garnet cellwork ornament."
         ];
         var exhibition006TagObjectArray:Array<ObjectTag> = [
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "bowl_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "bronze_ADJ"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "burial_NOUN_INANIMATE_PLACE_CONCRETE_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "garnet_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "ship_NOUN_INANIMATE_PLACE_CONCRETE_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "spear_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Bowl_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Bronze_ADJ"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Burial_NOUN_INANIMATE_PLACE_CONCRETE_OWNER"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Garnet_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Ship_NOUN_INANIMATE_PLACE_CONCRETE_OWNER"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Spear_NOUN_INANIMATE_HOLD_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "The Sutton Hoo_NOUN_ALIVE_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "wolf_NOUN_ALIVE_ABSTRACT")
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Wolf_NOUN_ALIVE_ABSTRACT")
         ];
         var exhibition007ExplanationStringArray:Array<String> = [
             "Oxhide ingots are metal slabs, usually of copper but sometimes of tin, produced and widely distributed during the Mediterranean Late Bronze Age (LBA).",
@@ -168,23 +168,23 @@ class CollectionPremade{
             "Archaeologists have recovered many oxhide ingots from two shipwrecks off the coast of Turkey (one off Uluburun and one in Cape Gelidonya)."
         ];
         var exhibition007TagObjectArray:Array<ObjectTag> = [
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "aged_ADJ"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "animal_NOUN_ALIVE_ABSTRACT"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "archaeologist_NOUN_ALIVE_ABSTRACT"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Aged_ADJ"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Animal_NOUN_ALIVE_ABSTRACT"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Archaeologist_NOUN_ALIVE_ABSTRACT"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Boğazköy_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "bronze_ADJ"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Bronze_ADJ"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Cannatello_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Cape Gelidonya_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "copper_ADJ"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Copper_ADJ"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Crete_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Cyprus_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Egypt_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Hattusa_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Hittite_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "ingot_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Ingot_NOUN_INANIMATE_HOLD_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Mediterranean_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "metal_ADJ"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "oxhide_NOUN_INANIMATE_WEAR_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Metal_ADJ"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Oxhide_NOUN_INANIMATE_WEAR_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Peloponnese_NOUN_ALIVE_ABSTRACT"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Qantir-Piramesse_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Sicily_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
@@ -202,15 +202,15 @@ class CollectionPremade{
             "Both seem intended as representations of maternity."
         ];
         var exhibition008TagObjectArray:Array<ObjectTag> = [
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "cradleboard_NOUN_INANIMATE_PLACE_CONCRETE_OWNER"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Cradleboard_NOUN_INANIMATE_PLACE_CONCRETE_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Cypriot_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Cyprus_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "female_NOUN_ALIVE_ABSTRACT"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "figurine_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "infant_NOUN_ALIVE_ABSTRACT"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Female_NOUN_ALIVE_ABSTRACT"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Figurine_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Infant_NOUN_ALIVE_ABSTRACT"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Louvre_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "statue_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "woman_NOUN_ALIVE_ABSTRACT")
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Statue_NOUN_INANIMATE_HOLD_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Woman_NOUN_ALIVE_ABSTRACT")
         ];
 
         new ObjectMuseum(_collectionGlobalObject, exhibition001ExplanationStringArray, "EXH_001", "Cista Cosmetic Container", "ROM_001", exhibition001TagObjectArray, EXH);

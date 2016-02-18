@@ -2,22 +2,23 @@
 import CollectionEnum;
 import CollectionStruct;
 class ObjectGeneratorSentence{
-    public function new(){}
-    private static function AddWordString(
+    private var visitorObject:ObjectVisitor = null;
+
+    public function new(_visitorObject:ObjectVisitor){ visitorObject = _visitorObject; }
+    private function AddWordString(
         _collectionGlobalObject:CollectionGlobal,
         _tagTypeEnum:EnumTagType,
-        _tagTypeSubEnum:EnumTagTypeSub,
-        _visitorObject:ObjectVisitor
+        _tagTypeSubEnum:EnumTagTypeSub
     ){
         var getNegativeBool:Bool = false;
         var getNeutralBool:Bool = false;
         var getPositiveBool:Bool = false;
-        if(_visitorObject.GetVisitCorrectExhibitionBool() == true && _visitorObject.GetScoreInt() >= 0){
+        if(visitorObject.GetVisitCorrectExhibitionBool() == true && visitorObject.GetScoreInt() >= 0){
             getNegativeBool = false;
             getNeutralBool = true;
             getPositiveBool = true;
         }
-        else if(_visitorObject.GetVisitCorrectExhibitionBool() == false || _visitorObject.GetScoreInt() < 0){
+        else if(visitorObject.GetVisitCorrectExhibitionBool() == false || visitorObject.GetScoreInt() < 0){
             getNegativeBool = true;
             getNeutralBool = true;
             getPositiveBool = false;
@@ -31,16 +32,16 @@ class ObjectGeneratorSentence{
         var randomIndexInt:Int = -1;
         var loopCounterPrivate1Int:Int = 0;
         /*First we need to search over the private tag collection (tag object within the visitor object).*/
-        while(loopCounterPrivate1Int < _visitorObject.GetTagObjectArray().length){
-            if(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetTypeEnum() == _tagTypeEnum){
-                if(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == NEGATIVE && getNegativeBool == true){
-                    tagStringArray.push(Reflect.callMethod(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, _visitorObject.GetTagObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
+        while(loopCounterPrivate1Int < visitorObject.GetTagObjectArray().length){
+            if(visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetTypeEnum() == _tagTypeEnum){
+                if(visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == NEGATIVE && getNegativeBool == true){
+                    tagStringArray.push(Reflect.callMethod(visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, visitorObject.GetTagObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
                 }
-                if(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == NEUTRAL && getNeutralBool == true){
-                    tagStringArray.push(Reflect.callMethod(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, _visitorObject.GetTagObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
+                if(visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == NEUTRAL && getNeutralBool == true){
+                    tagStringArray.push(Reflect.callMethod(visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, visitorObject.GetTagObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
                 }
-                if(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == POSITIVE && getPositiveBool == true){
-                    tagStringArray.push(Reflect.callMethod(_visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, _visitorObject.GetTagObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
+                if(visitorObject.GetTagObjectArray()[loopCounterPrivate1Int].GetFeelEnum() == POSITIVE && getPositiveBool == true){
+                    tagStringArray.push(Reflect.callMethod(visitorObject.GetTagObjectArray()[loopCounterPrivate1Int], DetermineProperCallbackFunction(_tagTypeSubEnum, visitorObject.GetTagObjectArray()[loopCounterPrivate1Int]), new Array<Dynamic>()));
                 }
             }
             loopCounterPrivate1Int ++;
@@ -67,7 +68,7 @@ class ObjectGeneratorSentence{
         var returnString:String = tagStringArray[randomIndexInt];
         return returnString;
     }
-    private static function DetermineProperCallbackFunction(_tagTypeSubEnum:EnumTagTypeSub, _tagObject:ObjectTag){
+    private function DetermineProperCallbackFunction(_tagTypeSubEnum:EnumTagTypeSub, _tagObject:ObjectTag){
         if(_tagTypeSubEnum == ADJ){ return _tagObject.GetAdjectiveString; }
         else if(_tagTypeSubEnum == ADV){ return _tagObject.GetAdverbString; }
         else if(_tagTypeSubEnum == NOUN){ return _tagObject.GetNounString; }
@@ -81,7 +82,7 @@ class ObjectGeneratorSentence{
         else if(_tagTypeSubEnum == VERB_S){ return _tagObject.GetVerbSString; }
         return null;
     }
-    private static function GenerateSentenceString(_collectionGlobalObject:CollectionGlobal, _patternString:String, _visitorObject:ObjectVisitor){
+    private function GenerateSentenceString(_collectionGlobalObject:CollectionGlobal, _patternString:String){
         var loopCounter1Int:Int = 0;
         var patternString:String = _patternString;
         var sentenceString:String = "";
@@ -132,18 +133,18 @@ class ObjectGeneratorSentence{
             */
 
             if(codeString == "11"){
-                wordString = AddWordString(_collectionGlobalObject, ADJ, ADJ, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, ADJ, ADJ);
             }
             else if(codeString == "22"){
-                wordString = AddWordString(_collectionGlobalObject, ADV, ADV, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, ADV, ADV);
             }
             else if(codeString == "43"){
                 var _43TagStringArray:Array<String> = new Array<String>();
                 var loopCounter2Int:Int = 0;
                 var randomIndexInt:Int = 0;
-                while(loopCounter2Int < _visitorObject.GetTagObjectArray().length){
-                    if(_visitorObject.GetTagObjectArray()[loopCounter2Int].GetTypeEnum() == NOUN_ALIVE_CONCRETE){
-                        _43TagStringArray.push(_visitorObject.GetTagObjectArray()[loopCounter2Int].GetNounString());
+                while(loopCounter2Int < visitorObject.GetTagObjectArray().length){
+                    if(visitorObject.GetTagObjectArray()[loopCounter2Int].GetTypeEnum() == NOUN_ALIVE_CONCRETE){
+                        _43TagStringArray.push(visitorObject.GetTagObjectArray()[loopCounter2Int].GetNounString());
                     }
                     loopCounter2Int ++;
                 }
@@ -157,33 +158,33 @@ class ObjectGeneratorSentence{
                     }
                 }
                 randomIndexInt = RandomNumberGeneratorInt(_43TagStringArray.length);
-                if(_visitorObject.GetNameString() == ""){
+                if(visitorObject.GetNameString() == ""){
                     wordString = _43TagStringArray[randomIndexInt];
                 }
-                else if(_visitorObject.GetNameString() != ""){
+                else if(visitorObject.GetNameString() != ""){
                     if(Math.random() > 0.5){
-                        wordString = _visitorObject.GetNameString();
+                        wordString = visitorObject.GetNameString();
                     }
                     else{ wordString = _43TagStringArray[randomIndexInt]; }
                 }
             }
             else if(codeString == "65"){
-                wordString = AddWordString(_collectionGlobalObject, NOUN_INANIMATE_HOLD_CONCRETE, NOUN_S, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, NOUN_INANIMATE_HOLD_CONCRETE, NOUN_S);
             }
             else if(codeString == "93"){
-                wordString = AddWordString(_collectionGlobalObject, NOUN_INANIMATE_PLACE_CONCRETE_OWNER, NOUN, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, NOUN_INANIMATE_PLACE_CONCRETE_OWNER, NOUN);
             }
             else if(codeString == "A3"){
-                wordString = AddWordString(_collectionGlobalObject, NOUN_INANIMATE_SEE_CONCRETE, NOUN, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, NOUN_INANIMATE_SEE_CONCRETE, NOUN);
             }
             else if(codeString == "E7"){
-                wordString = AddWordString(_collectionGlobalObject, VERB_INTRANSITIVE, VERB_1, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, VERB_INTRANSITIVE, VERB_1);
             }
             else if(codeString == "E8"){
-                wordString = AddWordString(_collectionGlobalObject, VERB_INTRANSITIVE, VERB_2, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, VERB_INTRANSITIVE, VERB_2);
             }
             else if(codeString == "EA"){
-                wordString = AddWordString(_collectionGlobalObject, VERB_INTRANSITIVE, VERB_S, _visitorObject);
+                wordString = AddWordString(_collectionGlobalObject, VERB_INTRANSITIVE, VERB_S);
             }
             else{
                 wordString = scan1String;
@@ -192,9 +193,14 @@ class ObjectGeneratorSentence{
         }
         return sentenceString;
     }
-    private static function RandomNumberGeneratorInt(_randomNumberInt:Int){ return Math.round(Math.random()*(_randomNumberInt - 1)); }
-    private static function WordFixString(_fixString:String){ return _fixString.substring(0, 1).toUpperCase() + _fixString.substring(1, _fixString.length); }
-    public static function GenerateSentence3String(_collectionGlobalObject:CollectionGlobal, _visitorObject:ObjectVisitor){
+    private function RandomNumberGeneratorInt(_randomNumberInt:Int){ return Math.round(Math.random()*(_randomNumberInt - 1)); }
+    private function WordFixString(_fixString:String){
+        var fix1String:String = _fixString.substring(0, 1).toUpperCase();
+        var fix2String:String = _fixString.substring(1, _fixString.length);
+        var fix3String:String = fix1String + fix2String;
+        return fix3String;
+    }
+    public function GenerateSentence3String(_collectionGlobalObject:CollectionGlobal){
         var patternStringArray2D:Array<Array<String>> = new Array<Array<String>>();
         patternStringArray2D = [
 
@@ -206,8 +212,8 @@ class ObjectGeneratorSentence{
                 splash! Silence again.
                 */
                 "11 93...",
-                "43 EA on the 93.",
-                "E7 again."
+                "43 EA On The 93.",
+                "E7 Again."
 
             ],
             [
@@ -219,7 +225,7 @@ class ObjectGeneratorSentence{
                 */
                 "11 A3.",
                 "43 EA 22.",
-                "Into the 93."
+                "Into The 93."
 
             ],
             [
@@ -230,8 +236,8 @@ class ObjectGeneratorSentence{
                 are plumes of pampas grass.
                 */
                 "A3 EA.",
-                "What I E8 were A3...",
-                "Are 65 of 93."
+                "What I E8 Were A3...",
+                "Are 65 Of 93."
 
             ]
 
@@ -241,14 +247,11 @@ class ObjectGeneratorSentence{
         var threeSentenceString:String = "";
         var loopCounter1Int:Int = 0;
         while(loopCounter1Int < 3){
-            /*
-            if(loopCounter1Int == 0){ threeSentenceString = WordFixString(GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int], _visitorObject)); }
-            else{ threeSentenceString = threeSentenceString + "\n" + WordFixString(GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int], _visitorObject)); }
-            */
-            threeSentenceString = threeSentenceString + WordFixString(GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int], _visitorObject)) + "\n";
+            //var sentenceString:String = WordFixString(GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int]));
+            var sentenceString:String = GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int]);
+            threeSentenceString = Std.string(threeSentenceString + sentenceString + " ");
             loopCounter1Int ++;
         }
-        threeSentenceString = threeSentenceString + "\n";
         return threeSentenceString;
     }
 }

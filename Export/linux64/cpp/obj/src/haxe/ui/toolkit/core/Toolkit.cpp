@@ -452,11 +452,11 @@ Void Toolkit_obj::init( ){
 			HX_STACK_LINE(93)
 			::haxe::ui::toolkit::core::ClassManager tmp10 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp10,"tmp10");
 			HX_STACK_LINE(93)
-			tmp10->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.ComponentItemRenderer","\x48","\x29","\x63","\x3f"),HX_HCSTRING("componentitemrenderer","\x93","\xed","\xeb","\xf1"));
-			HX_STACK_LINE(98)
+			tmp10->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.ItemRenderer","\xa1","\x20","\x3a","\x86"),HX_HCSTRING("itemrenderer","\x56","\x55","\x53","\xbd"));
+			HX_STACK_LINE(97)
 			::haxe::ui::toolkit::core::ClassManager tmp11 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(98)
-			tmp11->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.ItemRenderer","\xa1","\x20","\x3a","\x86"),HX_HCSTRING("itemrenderer","\x56","\x55","\x53","\xbd"));
+			HX_STACK_LINE(97)
+			tmp11->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.ComponentItemRenderer","\x48","\x29","\x63","\x3f"),HX_HCSTRING("componentitemrenderer","\x93","\xed","\xeb","\xf1"));
 			HX_STACK_LINE(101)
 			::haxe::ui::toolkit::core::ClassManager tmp12 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp12,"tmp12");
 			HX_STACK_LINE(101)
@@ -508,11 +508,11 @@ Void Toolkit_obj::init( ){
 			HX_STACK_LINE(133)
 			::haxe::ui::toolkit::core::ClassManager tmp24 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp24,"tmp24");
 			HX_STACK_LINE(133)
-			tmp24->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.HScroll","\x3f","\xa7","\xde","\x01"),HX_HCSTRING("hscroll","\x75","\x16","\x1d","\x2c"));
+			tmp24->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.CheckBoxValue","\x78","\xbe","\x5c","\xcc"),HX_HCSTRING("checkboxvalue","\x4e","\x9a","\x52","\x28"));
 			HX_STACK_LINE(137)
 			::haxe::ui::toolkit::core::ClassManager tmp25 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp25,"tmp25");
 			HX_STACK_LINE(137)
-			tmp25->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.CheckBoxValue","\x78","\xbe","\x5c","\xcc"),HX_HCSTRING("checkboxvalue","\x4e","\x9a","\x52","\x28"));
+			tmp25->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.HScroll","\x3f","\xa7","\xde","\x01"),HX_HCSTRING("hscroll","\x75","\x16","\x1d","\x2c"));
 			HX_STACK_LINE(143)
 			::haxe::ui::toolkit::core::ClassManager tmp26 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp26,"tmp26");
 			HX_STACK_LINE(143)
@@ -556,11 +556,11 @@ Void Toolkit_obj::init( ){
 			HX_STACK_LINE(185)
 			::haxe::ui::toolkit::core::ClassManager tmp36 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp36,"tmp36");
 			HX_STACK_LINE(185)
-			tmp36->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.CalendarView","\xbd","\xbb","\xfe","\x29"),HX_HCSTRING("calendarview","\x23","\xc8","\xa1","\x26"));
+			tmp36->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.ExpandableButton","\x80","\xa2","\x86","\xe3"),HX_HCSTRING("expandablebutton","\xe6","\x21","\x9c","\x9c"));
 			HX_STACK_LINE(189)
 			::haxe::ui::toolkit::core::ClassManager tmp37 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp37,"tmp37");
 			HX_STACK_LINE(189)
-			tmp37->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.ExpandableButton","\x80","\xa2","\x86","\xe3"),HX_HCSTRING("expandablebutton","\xe6","\x21","\x9c","\x9c"));
+			tmp37->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.CalendarView","\xbd","\xbb","\xfe","\x29"),HX_HCSTRING("calendarview","\x23","\xc8","\xa1","\x26"));
 			HX_STACK_LINE(195)
 			::haxe::ui::toolkit::core::ClassManager tmp38 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp38,"tmp38");
 			HX_STACK_LINE(195)
@@ -576,11 +576,11 @@ Void Toolkit_obj::init( ){
 			HX_STACK_LINE(204)
 			::haxe::ui::toolkit::core::ClassManager tmp41 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp41,"tmp41");
 			HX_STACK_LINE(204)
-			tmp41->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.VProgress","\x6d","\x35","\x50","\xb7"),HX_HCSTRING("vprogress","\x23","\x5e","\x71","\xc1"));
+			tmp41->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.CalendarDay","\xe8","\x93","\x59","\x96"),HX_HCSTRING("calendarday","\x5e","\x22","\x68","\x40"));
 			HX_STACK_LINE(209)
 			::haxe::ui::toolkit::core::ClassManager tmp42 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp42,"tmp42");
 			HX_STACK_LINE(209)
-			tmp42->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.CalendarDay","\xe8","\x93","\x59","\x96"),HX_HCSTRING("calendarday","\x5e","\x22","\x68","\x40"));
+			tmp42->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.VProgress","\x6d","\x35","\x50","\xb7"),HX_HCSTRING("vprogress","\x23","\x5e","\x71","\xc1"));
 			HX_STACK_LINE(216)
 			::haxe::ui::toolkit::core::ClassManager tmp43 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp43,"tmp43");
 			HX_STACK_LINE(216)
@@ -688,11 +688,11 @@ Void Toolkit_obj::init( ){
 			HX_STACK_LINE(314)
 			::haxe::ui::toolkit::core::ClassManager tmp69 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp69,"tmp69");
 			HX_STACK_LINE(314)
-			tmp69->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Scroll","\xa3","\x7e","\x49","\xae"),HX_HCSTRING("scroll","\x0d","\xd8","\x64","\x47"));
+			tmp69->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Button","\x88","\x08","\xc5","\x40"),HX_HCSTRING("button","\xf2","\x61","\xe0","\xd9"));
 			HX_STACK_LINE(317)
 			::haxe::ui::toolkit::core::ClassManager tmp70 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp70,"tmp70");
 			HX_STACK_LINE(317)
-			tmp70->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Button","\x88","\x08","\xc5","\x40"),HX_HCSTRING("button","\xf2","\x61","\xe0","\xd9"));
+			tmp70->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Scroll","\xa3","\x7e","\x49","\xae"),HX_HCSTRING("scroll","\x0d","\xd8","\x64","\x47"));
 			HX_STACK_LINE(321)
 			::haxe::ui::toolkit::core::ClassManager tmp71 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp71,"tmp71");
 			HX_STACK_LINE(321)

@@ -15,9 +15,6 @@
 #ifndef INCLUDED_Std
 #include <Std.h>
 #endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
-#endif
 
 Void ObjectTag_obj::__construct(::CollectionGlobal _collectionGlobalObject,::EnumTagFeelType _feelEnum,bool _generalTagBool,::String _nameString,::EnumTagType _typeEnum)
 {
@@ -333,13 +330,9 @@ Void ObjectTag_obj::RemoveFromArray( ){
 		HX_STACK_LINE(60)
 		if ((tmp1)){
 			HX_STACK_LINE(60)
-			Dynamic tmp2 = hx::SourceInfo(HX_HCSTRING("ObjectTag.hx","\xe3","\xb4","\x98","\x21"),60,HX_HCSTRING("ObjectTag","\xbb","\xf4","\x55","\xe5"),HX_HCSTRING("RemoveFromArray","\xcb","\xfa","\xc2","\x7b"));		HX_STACK_VAR(tmp2,"tmp2");
+			::CollectionGlobal tmp2 = this->collectionGlobalObject;		HX_STACK_VAR(tmp2,"tmp2");
 			HX_STACK_LINE(60)
-			::haxe::Log_obj::trace(HX_HCSTRING("LOL","\x69","\xf0","\x39","\x00"),tmp2);
-			HX_STACK_LINE(60)
-			::CollectionGlobal tmp3 = this->collectionGlobalObject;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(60)
-			tmp3->GetTagGeneralObjectArray()->remove(hx::ObjectPtr<OBJ_>(this));
+			tmp2->GetTagGeneralObjectArray()->remove(hx::ObjectPtr<OBJ_>(this));
 		}
 		else{
 			HX_STACK_LINE(61)
@@ -349,13 +342,9 @@ Void ObjectTag_obj::RemoveFromArray( ){
 			HX_STACK_LINE(61)
 			if ((tmp3)){
 				HX_STACK_LINE(61)
-				Dynamic tmp4 = hx::SourceInfo(HX_HCSTRING("ObjectTag.hx","\xe3","\xb4","\x98","\x21"),61,HX_HCSTRING("ObjectTag","\xbb","\xf4","\x55","\xe5"),HX_HCSTRING("RemoveFromArray","\xcb","\xfa","\xc2","\x7b"));		HX_STACK_VAR(tmp4,"tmp4");
+				::CollectionGlobal tmp4 = this->collectionGlobalObject;		HX_STACK_VAR(tmp4,"tmp4");
 				HX_STACK_LINE(61)
-				::haxe::Log_obj::trace(HX_HCSTRING("LOL1","\xa8","\x6b","\x78","\x32"),tmp4);
-				HX_STACK_LINE(61)
-				::CollectionGlobal tmp5 = this->collectionGlobalObject;		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(61)
-				tmp5->GetTagObjectArray()->remove(hx::ObjectPtr<OBJ_>(this));
+				tmp4->GetTagObjectArray()->remove(hx::ObjectPtr<OBJ_>(this));
 			}
 		}
 	}

@@ -203,6 +203,7 @@ class Main extends Sprite{
                             sendInstructionToArduinoStringArray.push("U");
                             soundProgressBool = true;
                         }
+
                         trace(string);
 
                     }

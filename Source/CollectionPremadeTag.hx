@@ -3,7 +3,7 @@ import CollectionEnum;
 
 
 
-/*This class is just a collection of tag that is not general tag.
+/*This class is just a collection Of tag that is not general tag.
 Which means that these tags is supposed to be specific to certain museum and exhibitio.
 PENDING: Please make JSON tag generator to generate everything premade within this program.*/
 class CollectionPremadeTag{
@@ -16,96 +16,96 @@ class CollectionPremadeTag{
     public function new(){}
     public static function PremadeTagStructVoid(_collectionGlobalObject:CollectionGlobal){
 
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "aged", ADJ).SetAdjectiveStringObject("aged");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "animal", NOUN_ALIVE_ABSTRACT).SetNounStringObject("animal").SetNounPosStringObject("animal's").SetNounSStringObject("animals").SetNounSPosStringObject("animals'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "archaeologist", NOUN_ALIVE_ABSTRACT).SetNounStringObject("archaeologist").SetNounPosStringObject("archaeologist's").SetNounSStringObject("archaeologists").SetNounSPosStringObject("archaeologists'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "belt", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("belt").SetNounSStringObject("belts");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "bowl", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("bowl").SetNounSStringObject("bowls");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Aged", ADJ).SetAdjectiveStringObject("Aged");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Animal", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Animal").SetNounPosStringObject("Animal's").SetNounSStringObject("Animals").SetNounSPosStringObject("Animals'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Archaeologist", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Archaeologist").SetNounPosStringObject("Archaeologist's").SetNounSStringObject("Archaeologists").SetNounSPosStringObject("Archaeologists'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Belt", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Belt").SetNounSStringObject("Belts");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Bowl", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Bowl").SetNounSStringObject("Bowls");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Boğazköy", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Boğazköy");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "bronze", ADJ).SetAdjectiveStringObject("bronze");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "burial", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("burial").SetNounSStringObject("burials");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Bronze", ADJ).SetAdjectiveStringObject("Bronze");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Burial", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("Burial").SetNounSStringObject("Burials");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Caenby", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Caenby");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Cannatello", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Cannatello");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Cape Gelidonya", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Cape Gelidonya");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "chain", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("chain").SetNounSStringObject("chains");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "cista", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("cista").SetNounSStringObject("cistas");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "club", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("club").SetNounSStringObject("clubs");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "copper", ADJ).SetAdjectiveStringObject("copper");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "cosmetic", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("cosmetic").SetNounSStringObject("cosmetics");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "cradleboard", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("cradleboard").SetNounSStringObject("cradleboards");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "crest", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("crest").SetNounSStringObject("crests");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Chain", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Chain").SetNounSStringObject("Chains");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Cista", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Cista").SetNounSStringObject("Cistas");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Club", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Club").SetNounSStringObject("Clubs");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Copper", ADJ).SetAdjectiveStringObject("Copper");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Cosmetic", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Cosmetic").SetNounSStringObject("Cosmetics");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Cradleboard", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("Cradleboard").SetNounSStringObject("Cradleboards");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Crest", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Crest").SetNounSStringObject("Crests");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Crete", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Crete");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "crouch", VERB_INTRANSITIVE).SetVerb1StringObject("crouch").SetVerb2StringObject("crouched").SetVerb3StringObject("crouched").SetVerbIngStringObject("crouching").SetVerbSStringObject("crouchs");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Crown of Thorn", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Crown of Thorn").SetNounSStringObject("Crown of Thorns");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Crouch", VERB_INTRANSITIVE).SetVerb1StringObject("Crouch").SetVerb2StringObject("Crouched").SetVerb3StringObject("Crouched").SetVerbIngStringObject("Crouching").SetVerbSStringObject("Crouchs");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Crown Of Thorn", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Crown Of Thorn").SetNounSStringObject("Crown Of Thorns");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Cypriot", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Cypriot");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Cyprus", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Cyprus");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Cyprus", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Cyprus");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Egypt", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Egypt");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "England", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("England");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "female", NOUN_ALIVE_ABSTRACT).SetNounStringObject("female").SetNounPosStringObject("female's").SetNounSStringObject("females").SetNounSPosStringObject("females'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Ferdinand de Rothschild", NOUN_ALIVE_CONCRETE).SetNounStringObject("Ferdinand de Rothschild").SetNounPosStringObject("Ferdinand de Rothschild's");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "figurine", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("figurine").SetNounSStringObject("figurines");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "garnet", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("garnet").SetNounSStringObject("garnets");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "gold", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("club").SetNounSStringObject("clubs");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "gold", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("gold").SetNounSStringObject("golds");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "goldsmith", NOUN_ALIVE_ABSTRACT).SetNounStringObject("goldsmith").SetNounPosStringObject("goldsmith's").SetNounSStringObject("goldsmiths").SetNounSPosStringObject("goldsmiths'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Female", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Female").SetNounPosStringObject("Female's").SetNounSStringObject("Females").SetNounSPosStringObject("Females'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Ferdinand De Rothschild", NOUN_ALIVE_CONCRETE).SetNounStringObject("Ferdinand De Rothschild").SetNounPosStringObject("Ferdinand De Rothschild's");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Figurine", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Figurine").SetNounSStringObject("Figurines");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Garnet", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Garnet").SetNounSStringObject("Garnets");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Gold", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Club").SetNounSStringObject("Clubs");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Gold", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Gold").SetNounSStringObject("Golds");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Goldsmith", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Goldsmith").SetNounPosStringObject("Goldsmith's").SetNounSStringObject("Goldsmiths").SetNounSPosStringObject("Goldsmiths'");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Hattusa", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Hattusa");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "helmet", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("helmet").SetNounSStringObject("helmets");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Helmet", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Helmet").SetNounSStringObject("Helmets");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Hittite", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Hittite");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "infant", NOUN_ALIVE_ABSTRACT).SetNounStringObject("infant").SetNounPosStringObject("infant's").SetNounSStringObject("infants").SetNounSPosStringObject("infants'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "ingot", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("ingot").SetNounSStringObject("ingots");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "item", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("item").SetNounSStringObject("items");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "jade", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("jade").SetNounSStringObject("jades");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Infant", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Infant").SetNounPosStringObject("Infant's").SetNounSStringObject("Infants").SetNounSPosStringObject("Infants'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Ingot", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Ingot").SetNounSStringObject("Ingots");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Item", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Item").SetNounSStringObject("Items");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Jade", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Jade").SetNounSStringObject("Jades");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "James", NOUN_ALIVE_CONCRETE).SetNounStringObject("James").SetNounPosStringObject("James'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Crown of Thorn", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Crown of Thorn").SetNounSStringObject("Crown of Thorns");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "jewel", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("jewel").SetNounSStringObject("jewels");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "John, Duke of Berry", NOUN_ALIVE_CONCRETE).SetNounStringObject("John, Duke of Berry").SetNounPosStringObject("John, Duke of Berry's");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Crown Of Thorn", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Crown Of Thorn").SetNounSStringObject("Crown Of Thorns");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Jewel", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Jewel").SetNounSStringObject("Jewels");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "John, Duke Of Berry", NOUN_ALIVE_CONCRETE).SetNounStringObject("John, Duke Of Berry").SetNounPosStringObject("John, Duke Of Berry's");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Lincolnshire", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Lincolnshire");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "lion", NOUN_ALIVE_ABSTRACT).SetNounStringObject("lion").SetNounPosStringObject("lion's").SetNounSStringObject("lions").SetNounSPosStringObject("lions'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Lion", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Lion").SetNounPosStringObject("Lion's").SetNounSStringObject("Lions").SetNounSPosStringObject("Lions'");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Louvre", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Louvre");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "mask", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("mask").SetNounSStringObject("mask");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "masked", ADJ).SetAdjectiveStringObject("masked");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Mask", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Mask").SetNounSStringObject("Mask");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Masked", ADJ).SetAdjectiveStringObject("Masked");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Mauri", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Mauri").SetNounPosStringObject("Mauri's").SetNounSStringObject("Mauris").SetNounSPosStringObject("Mauris'");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Mediterranean", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Mediterranean");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "metal", ADJ).SetAdjectiveStringObject("metal");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "oval", ADJ).SetAdjectiveStringObject("oval");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "oxhide", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("oxhide").SetNounSStringObject("oxhides");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Metal", ADJ).SetAdjectiveStringObject("Metal");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Oval", ADJ).SetAdjectiveStringObject("Oval");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Oxhide", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Oxhide").SetNounSStringObject("Oxhides");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Paris", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Paris");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "pearl", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("pearl").SetNounSStringObject("pearls");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Pearl", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Pearl").SetNounSStringObject("Pearls");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Peloponnese", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Peloponnese").SetNounPosStringObject("Peloponnese's").SetNounSStringObject("Peloponneses").SetNounSPosStringObject("Peloponneses'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "pendant", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Crown of Thorn").SetNounSStringObject("Crown of Thorns");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Pendant", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Crown Of Thorn").SetNounSStringObject("Crown Of Thorns");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Qantir-Piramesse", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Qantir-Piramesse");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "reliquary", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("reliquary").SetNounSStringObject("reliquaries");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "rose", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("club").SetNounSStringObject("clubs");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "sapphire", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("club").SetNounSStringObject("clubs");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "ship", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("ship").SetNounSStringObject("ships");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Reliquary", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Reliquary").SetNounSStringObject("Reliquaries");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Rose", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Club").SetNounSStringObject("Clubs");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Sapphire", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Club").SetNounSStringObject("Clubs");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Ship", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("Ship").SetNounSStringObject("Ships");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Sicily", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Sicily");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "slender", ADJ).SetAdjectiveStringObject("slender");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "spear", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("spear").SetNounSStringObject("spears");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "spear", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("spear").SetNounSStringObject("spears");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Slender", ADJ).SetAdjectiveStringObject("Slender");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Spear", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Spear").SetNounSStringObject("Spears");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Spear", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Spear").SetNounSStringObject("Spears");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Staffordshire", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Staffordshire");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "statue", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("statue").SetNounSStringObject("statues");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "stone", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("stone").SetNounSStringObject("stones");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Statue", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Statue").SetNounSStringObject("Statues");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Stone", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Stone").SetNounSStringObject("Stones");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Sweden", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Sweden");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "table", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("table").SetNounSStringObject("tables");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Table", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("Table").SetNounSStringObject("Tables");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "The Holy Thorn Reliquary", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("The Holy Thorn Reliquary").SetNounSStringObject("The Holy Thorn Reliquaries");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "The Lyte Jewel", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("club").SetNounSStringObject("clubs");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "The Sutton Hoo", NOUN_ALIVE_CONCRETE).SetNounStringObject("John, Duke of Berry").SetNounPosStringObject("John, Duke of Berry's");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "The Lyte Jewel", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Club").SetNounSStringObject("Clubs");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "The Sutton Hoo", NOUN_ALIVE_CONCRETE).SetNounStringObject("John, Duke Of Berry").SetNounPosStringObject("John, Duke Of Berry's");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Turkey", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Turkey");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Uluburun", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Uluburun");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Valois", NOUN_INANIMATE_WEAR_ABSTRACT).SetNounStringObject("Valois");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Valsgärde", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Valsgärde");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Vendel", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Vendel");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "vessel", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("vessel").SetNounSStringObject("vessels");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Vessel", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("Vessel").SetNounSStringObject("Vessels");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Waddesdon Bequest", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Waddesdon Bequest");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "warrior", NOUN_ALIVE_ABSTRACT).SetNounStringObject("warrior").SetNounPosStringObject("warrior's").SetNounSStringObject("warriors").SetNounSPosStringObject("warriors'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "weapon", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("weapon").SetNounSStringObject("weapons");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "wolf", NOUN_ALIVE_ABSTRACT).SetNounStringObject("wolf").SetNounPosStringObject("wolf's").SetNounSStringObject("wolfs").SetNounSPosStringObject("wolfs'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "woman", NOUN_ALIVE_ABSTRACT).SetNounStringObject("woman").SetNounPosStringObject("woman's").SetNounSStringObject("women").SetNounSPosStringObject("women's");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "wood", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("wood").SetNounSStringObject("woods");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "young man", NOUN_ALIVE_ABSTRACT).SetNounStringObject("young man").SetNounPosStringObject("young man's").SetNounSStringObject("young men").SetNounSPosStringObject("young men's");
-        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "extravagant", ADJ).SetAdjectiveStringObject("extravagant");
-        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "extravagantly", ADV).SetAdverbStringObject("extravagantly");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Warrior", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Warrior").SetNounPosStringObject("Warrior's").SetNounSStringObject("Warriors").SetNounSPosStringObject("Warriors'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Weapon", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Weapon").SetNounSStringObject("Weapons");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Wolf", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Wolf").SetNounPosStringObject("Wolf's").SetNounSStringObject("Wolfs").SetNounSPosStringObject("Wolfs'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Woman", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Woman").SetNounPosStringObject("Woman's").SetNounSStringObject("Women").SetNounSPosStringObject("Women's");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Wood", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Wood").SetNounSStringObject("Woods");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Young Man", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Young Man").SetNounPosStringObject("Young Man's").SetNounSStringObject("Young men").SetNounSPosStringObject("Young men's");
+        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Extravagant", ADJ).SetAdjectiveStringObject("Extravagant");
+        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Extravagantly", ADV).SetAdverbStringObject("Extravagantly");
         /*
         PremadeTagStructAdjVoid(_collectionGlobalObject);
         PremadeTagStructAdvVoid(_collectionGlobalObject);
@@ -126,27 +126,27 @@ class CollectionPremadeTag{
         */
     }
     public static function PremadeTagStructAdjVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Awful", ADJ).SetAdjectiveStringObject("awful");
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Bad", ADJ).SetAdjectiveStringObject("bad");
-        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Excellent", ADJ).SetAdjectiveStringObject("excellent");
-        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Good", ADJ).SetAdjectiveStringObject("good");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Soft", ADJ).SetAdjectiveStringObject("soft");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Awful", ADJ).SetAdjectiveStringObject("Awful");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Bad", ADJ).SetAdjectiveStringObject("Bad");
+        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Excellent", ADJ).SetAdjectiveStringObject("Excellent");
+        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Good", ADJ).SetAdjectiveStringObject("Good");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "SOft", ADJ).SetAdjectiveStringObject("SOft");
     }
     public static function PremadeTagStructAdvVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Desperate", ADV).SetAdverbStringObject("desperately");
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Slow", ADV).SetAdverbStringObject("bad");
-        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Perfect", ADV).SetAdverbStringObject("excellent");
-        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Quick", ADV).SetAdverbStringObject("good");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "desperate", ADV).SetAdverbStringObject("desperately");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Slow", ADV).SetAdverbStringObject("Bad");
+        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Perfect", ADV).SetAdverbStringObject("Excellent");
+        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Quick", ADV).SetAdverbStringObject("Good");
     }
     public static function PremadeTagStructNounAliveAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Assasin", NOUN_ALIVE_ABSTRACT).SetNounStringObject("assasin").SetNounPosStringObject("assasin's").SetNounSStringObject("assasins").SetNounSPosStringObject("assasins'");
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Boy", NOUN_ALIVE_ABSTRACT).SetNounStringObject("boy").SetNounPosStringObject("boy's").SetNounSStringObject("boys").SetNounSPosStringObject("boys'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Dragon", NOUN_ALIVE_ABSTRACT).SetNounStringObject("dragon").SetNounPosStringObject("dragon's").SetNounSStringObject("dragons").SetNounSPosStringObject("dragons'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Iraqi", NOUN_ALIVE_ABSTRACT).SetNounStringObject("iraqi").SetNounPosStringObject("iraqi's").SetNounSStringObject("iraqis").SetNounSPosStringObject("iraqis'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Italian", NOUN_ALIVE_ABSTRACT).SetNounStringObject("italian").SetNounPosStringObject("italian's").SetNounSStringObject("italians").SetNounSPosStringObject("italians'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Painter", NOUN_ALIVE_ABSTRACT).SetNounStringObject("painter").SetNounPosStringObject("painter's").SetNounSStringObject("painters").SetNounSPosStringObject("painters'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Romanian", NOUN_ALIVE_ABSTRACT).SetNounStringObject("romanian").SetNounPosStringObject("romanian's").SetNounSStringObject("romanians").SetNounSPosStringObject("romanians'");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Russian", NOUN_ALIVE_ABSTRACT).SetNounStringObject("russian").SetNounPosStringObject("russian's").SetNounSStringObject("russians").SetNounSPosStringObject("russians'");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Assasin", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Assasin").SetNounPosStringObject("Assasin's").SetNounSStringObject("Assasins").SetNounSPosStringObject("Assasins'");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Boy", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Boy").SetNounPosStringObject("Boy's").SetNounSStringObject("Boys").SetNounSPosStringObject("Boys'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Dragon", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Dragon").SetNounPosStringObject("Dragon's").SetNounSStringObject("Dragons").SetNounSPosStringObject("Dragons'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Iraqi", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Iraqi").SetNounPosStringObject("Iraqi's").SetNounSStringObject("Iraqis").SetNounSPosStringObject("Iraqis'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Italian", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Italian").SetNounPosStringObject("Italian's").SetNounSStringObject("Italians").SetNounSPosStringObject("Italians'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Painter", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Painter").SetNounPosStringObject("Painter's").SetNounSStringObject("Painters").SetNounSPosStringObject("Painters'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Romanian", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Romanian").SetNounPosStringObject("Romanian's").SetNounSStringObject("Romanians").SetNounSPosStringObject("Romanians'");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Russian", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Russian").SetNounPosStringObject("Russian's").SetNounSStringObject("Russians").SetNounSPosStringObject("Russians'");
     }
     public static function PremadeTagStructNounAliveConcreteVoid(_collectionGlobalObject:CollectionGlobal){
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Andy", NOUN_ALIVE_CONCRETE).SetNounStringObject("Andy").SetNounPosStringObject("Andy's");
@@ -163,18 +163,18 @@ class CollectionPremadeTag{
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Washington", NOUN_ALIVE_CONCRETE).SetNounStringObject("Washington").SetNounPosStringObject("Washington's");
     }
     public static function PremadeTagStructNounInanimateHoldAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Grudge", NOUN_INANIMATE_HOLD_ABSTRACT).SetNounStringObject("grudge").SetNounSStringObject("grudges");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Grudge", NOUN_INANIMATE_HOLD_ABSTRACT).SetNounStringObject("Grudge").SetNounSStringObject("Grudges");
     }
     public static function PremadeTagStructNounInanimateHoldConcreteVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Bat", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("bat").SetNounSStringObject("bats");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Gun", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("gun").SetNounSStringObject("guns");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Hand", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("hand").SetNounSStringObject("hands");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Pencil", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("pencil").SetNounSStringObject("pencils");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Sword", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("sword").SetNounSStringObject("swords");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Bat", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Bat").SetNounSStringObject("Bats");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Gun", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Gun").SetNounSStringObject("Guns");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Hand", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Hand").SetNounSStringObject("Hands");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Pencil", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Pencil").SetNounSStringObject("Pencils");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Sword", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Sword").SetNounSStringObject("Swords");
     }
     public static function PremadeTagStructNounInanimatePlaceAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Mind", NOUN_INANIMATE_PLACE_ABSTRACT).SetNounStringObject("mind").SetNounSStringObject("minds");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Intuition", NOUN_INANIMATE_PLACE_ABSTRACT).SetNounStringObject("intuition").SetNounSStringObject("intuitions");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Mind", NOUN_INANIMATE_PLACE_ABSTRACT).SetNounStringObject("Mind").SetNounSStringObject("Minds");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Intuition", NOUN_INANIMATE_PLACE_ABSTRACT).SetNounStringObject("Intuition").SetNounSStringObject("Intuitions");
     }
     public static function PremadeTagStructNounInanimatePlaceConcreteNoOwnerVoid(_collectionGlobalObject:CollectionGlobal){
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "India", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("India");
@@ -183,51 +183,51 @@ class CollectionPremadeTag{
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "RussiaRussia", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Russia");
     }
     public static function PremadeTagStructNounInanimatePlaceConcreteOwnerVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Country", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("country").SetNounSStringObject("countries");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Harbor", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("harbor").SetNounSStringObject("harbors");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "House", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("house").SetNounSStringObject("houses");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "School", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("school").SetNounSStringObject("schools");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Country", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("Country").SetNounSStringObject("Countries");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Harbor", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("Harbor").SetNounSStringObject("Harbors");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "House", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("House").SetNounSStringObject("Houses");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "School", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("School").SetNounSStringObject("Schools");
     }
     public static function PremadeTagStructNounInanimateSeeAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Vision", NOUN_INANIMATE_SEE_ABSTRACT).SetNounStringObject("vision");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Vision", NOUN_INANIMATE_SEE_ABSTRACT).SetNounStringObject("Vision");
     }
     public static function PremadeTagStructNounInanimateSeeConcreteVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Lightning", NOUN_INANIMATE_SEE_CONCRETE).SetNounStringObject("lightning");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Moonlight", NOUN_INANIMATE_SEE_CONCRETE).SetNounStringObject("moonlight");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Rainbow", NOUN_INANIMATE_SEE_CONCRETE).SetNounStringObject("rainbow");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Lightning", NOUN_INANIMATE_SEE_CONCRETE).SetNounStringObject("Lightning");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Moonlight", NOUN_INANIMATE_SEE_CONCRETE).SetNounStringObject("Moonlight");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Rainbow", NOUN_INANIMATE_SEE_CONCRETE).SetNounStringObject("Rainbow");
     }
     public static function PremadeTagStructNounInanimateTitleAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Commendation", NOUN_INANIMATE_TITLE).SetNounStringObject("commendation").SetNounSStringObject("commendations");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Job", NOUN_INANIMATE_TITLE).SetNounStringObject("job").SetNounSStringObject("jobs");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Commendation", NOUN_INANIMATE_TITLE).SetNounStringObject("Commendation").SetNounSStringObject("Commendations");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Job", NOUN_INANIMATE_TITLE).SetNounStringObject("Job").SetNounSStringObject("Jobs");
     }
     public static function PremadeTagStructNounInanimateWearAbstractVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Pride", NOUN_INANIMATE_WEAR_ABSTRACT).SetNounStringObject("pride");
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Shame", NOUN_INANIMATE_WEAR_ABSTRACT).SetNounStringObject("shame");
+        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Pride", NOUN_INANIMATE_WEAR_ABSTRACT).SetNounStringObject("Pride");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Shame", NOUN_INANIMATE_WEAR_ABSTRACT).SetNounStringObject("Shame");
     }
     public static function PremadeTagStructNounInanimateWearConcreteVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Crown", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("crown").SetNounSStringObject("crowns");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Shirt", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("shirt").SetNounSStringObject("shirts");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Crown", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Crown").SetNounSStringObject("Crowns");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Shirt", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Shirt").SetNounSStringObject("Shirts");
     }
     public static function PremadeTagStructVerbVoidIntransitiveVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Die", VERB_INTRANSITIVE).SetVerb1StringObject("die").SetVerb2StringObject("died").SetVerb3StringObject("died").SetVerbIngStringObject("dying").SetVerbSStringObject("dies");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Jump", VERB_INTRANSITIVE).SetVerb1StringObject("jump").SetVerb2StringObject("jumped").SetVerb3StringObject("jumped").SetVerbIngStringObject("jumping").SetVerbSStringObject("jumps");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Run", VERB_INTRANSITIVE).SetVerb1StringObject("run").SetVerb2StringObject("ran").SetVerb3StringObject("ran").SetVerbIngStringObject("running").SetVerbSStringObject("runs");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Sing", VERB_INTRANSITIVE).SetVerb1StringObject("sing").SetVerb2StringObject("sang").SetVerb3StringObject("sung").SetVerbIngStringObject("singing").SetVerbSStringObject("sings");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Sleep", VERB_INTRANSITIVE).SetVerb1StringObject("sleep").SetVerb2StringObject("slept").SetVerb3StringObject("slept").SetVerbIngStringObject("sleeping").SetVerbSStringObject("sleeps");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Work", VERB_INTRANSITIVE).SetVerb1StringObject("work").SetVerb2StringObject("worked").SetVerb3StringObject("worked").SetVerbIngStringObject("working").SetVerbSStringObject("works");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Die", VERB_INTRANSITIVE).SetVerb1StringObject("Die").SetVerb2StringObject("Died").SetVerb3StringObject("Died").SetVerbIngStringObject("Dying").SetVerbSStringObject("Dies");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Jump", VERB_INTRANSITIVE).SetVerb1StringObject("Jump").SetVerb2StringObject("Jumped").SetVerb3StringObject("Jumped").SetVerbIngStringObject("Jumping").SetVerbSStringObject("Jumps");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Run", VERB_INTRANSITIVE).SetVerb1StringObject("Run").SetVerb2StringObject("Ran").SetVerb3StringObject("Ran").SetVerbIngStringObject("Running").SetVerbSStringObject("Runs");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Sing", VERB_INTRANSITIVE).SetVerb1StringObject("Sing").SetVerb2StringObject("Sang").SetVerb3StringObject("Sung").SetVerbIngStringObject("Singing").SetVerbSStringObject("Sings");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Sleep", VERB_INTRANSITIVE).SetVerb1StringObject("Sleep").SetVerb2StringObject("Slept").SetVerb3StringObject("Slept").SetVerbIngStringObject("Sleeping").SetVerbSStringObject("Sleeps");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Work", VERB_INTRANSITIVE).SetVerb1StringObject("Work").SetVerb2StringObject("Worked").SetVerb3StringObject("Worked").SetVerbIngStringObject("Working").SetVerbSStringObject("Works");
     }
     public static function PremadeTagStructVerbVoidTransitiveVoid(_collectionGlobalObject:CollectionGlobal){
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Buy", VERB_TRANSITIVE).SetVerb1StringObject("buy").SetVerb2StringObject("bought").SetVerb3StringObject("bought").SetVerbIngStringObject("buying").SetVerbSStringObject("buys");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Call", VERB_TRANSITIVE).SetVerb1StringObject("call").SetVerb2StringObject("called").SetVerb3StringObject("called").SetVerbIngStringObject("calling").SetVerbSStringObject("calls");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Desire", VERB_TRANSITIVE).SetVerb1StringObject("desire").SetVerb2StringObject("desired").SetVerb3StringObject("desired").SetVerbIngStringObject("desiring").SetVerbSStringObject("desires");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Drink", VERB_TRANSITIVE).SetVerb1StringObject("drink").SetVerb2StringObject("drunk").SetVerb3StringObject("drank").SetVerbIngStringObject("drinking").SetVerbSStringObject("drinks");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Drive", VERB_TRANSITIVE).SetVerb1StringObject("drive").SetVerb2StringObject("drove").SetVerb3StringObject("driven").SetVerbIngStringObject("driving").SetVerbSStringObject("drives");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Eat", VERB_TRANSITIVE).SetVerb1StringObject("eat").SetVerb2StringObject("ate").SetVerb3StringObject("eaten").SetVerbIngStringObject("eating").SetVerbSStringObject("eats");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Fight", VERB_TRANSITIVE).SetVerb1StringObject("fight").SetVerb2StringObject("fought").SetVerb3StringObject("fought").SetVerbIngStringObject("fighting").SetVerbSStringObject("fights");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Get", VERB_TRANSITIVE).SetVerb1StringObject("get").SetVerb2StringObject("got").SetVerb3StringObject("gotten").SetVerbIngStringObject("getting").SetVerbSStringObject("gets");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Grab", VERB_TRANSITIVE).SetVerb1StringObject("grab").SetVerb2StringObject("grabed").SetVerb3StringObject("grabed").SetVerbIngStringObject("grabbing").SetVerbSStringObject("grabs");
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Kill", VERB_TRANSITIVE).SetVerb1StringObject("kill").SetVerb2StringObject("killed").SetVerb3StringObject("killed").SetVerbIngStringObject("killing").SetVerbSStringObject("kills");
-        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Love", VERB_TRANSITIVE).SetVerb1StringObject("love").SetVerb2StringObject("loved").SetVerb3StringObject("loved").SetVerbIngStringObject("loving").SetVerbSStringObject("loves");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Buy", VERB_TRANSITIVE).SetVerb1StringObject("Buy").SetVerb2StringObject("Bought").SetVerb3StringObject("Bought").SetVerbIngStringObject("Buying").SetVerbSStringObject("Buys");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Call", VERB_TRANSITIVE).SetVerb1StringObject("Call").SetVerb2StringObject("Called").SetVerb3StringObject("Called").SetVerbIngStringObject("Calling").SetVerbSStringObject("Calls");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "desire", VERB_TRANSITIVE).SetVerb1StringObject("desire").SetVerb2StringObject("desired").SetVerb3StringObject("desired").SetVerbIngStringObject("desiring").SetVerbSStringObject("desires");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Drink", VERB_TRANSITIVE).SetVerb1StringObject("Drink").SetVerb2StringObject("Drunk").SetVerb3StringObject("Drank").SetVerbIngStringObject("Drinking").SetVerbSStringObject("Drinks");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Drive", VERB_TRANSITIVE).SetVerb1StringObject("Drive").SetVerb2StringObject("Drove").SetVerb3StringObject("Driven").SetVerbIngStringObject("Driving").SetVerbSStringObject("Drives");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Eat", VERB_TRANSITIVE).SetVerb1StringObject("Eat").SetVerb2StringObject("Ate").SetVerb3StringObject("Eaten").SetVerbIngStringObject("Eating").SetVerbSStringObject("Eats");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Fight", VERB_TRANSITIVE).SetVerb1StringObject("Fight").SetVerb2StringObject("Fought").SetVerb3StringObject("Fought").SetVerbIngStringObject("Fighting").SetVerbSStringObject("Fights");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Get", VERB_TRANSITIVE).SetVerb1StringObject("Get").SetVerb2StringObject("Got").SetVerb3StringObject("Gotten").SetVerbIngStringObject("Getting").SetVerbSStringObject("Gets");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Grab", VERB_TRANSITIVE).SetVerb1StringObject("Grab").SetVerb2StringObject("Grabed").SetVerb3StringObject("Grabed").SetVerbIngStringObject("Grabbing").SetVerbSStringObject("Grabs");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, false, "Kill", VERB_TRANSITIVE).SetVerb1StringObject("Kill").SetVerb2StringObject("Killed").SetVerb3StringObject("Killed").SetVerbIngStringObject("Killing").SetVerbSStringObject("Kills");
+        new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Love", VERB_TRANSITIVE).SetVerb1StringObject("Love").SetVerb2StringObject("Loved").SetVerb3StringObject("Loved").SetVerbIngStringObject("Loving").SetVerbSStringObject("Loves");
     }
     /*==================================================*/
 
