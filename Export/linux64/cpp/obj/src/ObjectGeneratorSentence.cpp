@@ -1011,7 +1011,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectGeneratorSentence_obj,WordFixString,return )
 		HX_STACK_LINE(252)
 		::String tmp7 = (threeSentenceString + sentenceString);		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(252)
-		::String tmp8 = (tmp7 + HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));		HX_STACK_VAR(tmp8,"tmp8");
+		::String tmp8 = (tmp7 + HX_HCSTRING("\n","\x0a","\x00","\x00","\x00"));		HX_STACK_VAR(tmp8,"tmp8");
 		HX_STACK_LINE(252)
 		::String tmp9 = ::Std_obj::string(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
 		HX_STACK_LINE(252)

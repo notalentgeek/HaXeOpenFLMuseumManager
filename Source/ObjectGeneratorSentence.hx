@@ -249,7 +249,7 @@ class ObjectGeneratorSentence{
         while(loopCounter1Int < 3){
             //var sentenceString:String = WordFixString(GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int]));
             var sentenceString:String = GenerateSentenceString(_collectionGlobalObject, stringPatternIndexString[loopCounter1Int]);
-            threeSentenceString = Std.string(threeSentenceString + sentenceString + " ");
+            threeSentenceString = Std.string(threeSentenceString + sentenceString + "\n");
             loopCounter1Int ++;
         }
         return threeSentenceString;

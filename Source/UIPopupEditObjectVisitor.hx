@@ -188,7 +188,6 @@ class UIPopupEditObjectVisitor{
                 buttonControlInt |= PopupButton.OK;
 
                 displaySentencePopupObject = PopupManager.instance.showList(selectedVisitorObject.GetSentenceStringArray(), -1, "Display Sentence", buttonControlInt, function(_button){});
-                displaySentencePopupObject.width = 600;
                 Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
                 displaySentencePopupObject.y = popupObject.y;
 
