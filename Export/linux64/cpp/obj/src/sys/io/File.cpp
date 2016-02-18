@@ -6,8 +6,14 @@
 #ifndef INCLUDED_haxe_io_Bytes
 #include <haxe/io/Bytes.h>
 #endif
+#ifndef INCLUDED_haxe_io_Input
+#include <haxe/io/Input.h>
+#endif
 #ifndef INCLUDED_sys_io_File
 #include <sys/io/File.h>
+#endif
+#ifndef INCLUDED_sys_io_FileInput
+#include <sys/io/FileInput.h>
 #endif
 namespace sys{
 namespace io{
@@ -64,7 +70,42 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(File_obj,getContent,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(File_obj,getBytes,return )
 
+::sys::io::FileInput File_obj::read( ::String path,hx::Null< bool >  __o_binary){
+bool binary = __o_binary.Default(true);
+	HX_STACK_FRAME("sys.io.File","read",0x203d07e1,"sys.io.File.read","/usr/share/haxe/std/cpp/_std/sys/io/File.hx",49,0xa9f746ff)
+	HX_STACK_ARG(path,"path")
+	HX_STACK_ARG(binary,"binary")
+{
+		HX_STACK_LINE(50)
+		::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(50)
+		bool tmp1 = binary;		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(50)
+		::String tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(50)
+		if ((tmp1)){
+			HX_STACK_LINE(50)
+			tmp2 = HX_HCSTRING("rb","\xb0","\x63","\x00","\x00");
+		}
+		else{
+			HX_STACK_LINE(50)
+			tmp2 = HX_HCSTRING("r","\x72","\x00","\x00","\x00");
+		}
+		HX_STACK_LINE(50)
+		Dynamic tmp3 = ::sys::io::File_obj::file_open(tmp,tmp2);		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(50)
+		::sys::io::FileInput tmp4 = ::sys::io::FileInput_obj::__new(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(50)
+		return tmp4;
+	}
+}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(File_obj,read,return )
+
 Dynamic File_obj::file_contents;
+
+Dynamic File_obj::file_open;
 
 
 File_obj::File_obj()
@@ -74,8 +115,14 @@ File_obj::File_obj()
 bool File_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
+	case 4:
+		if (HX_FIELD_EQ(inName,"read") ) { outValue = read_dyn(); return true;  }
+		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"getBytes") ) { outValue = getBytes_dyn(); return true;  }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"file_open") ) { outValue = file_open; return true;  }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"getContent") ) { outValue = getContent_dyn(); return true;  }
@@ -89,6 +136,9 @@ bool File_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Proper
 bool File_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
+	case 9:
+		if (HX_FIELD_EQ(inName,"file_open") ) { file_open=ioValue.Cast< Dynamic >(); return true; }
+		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"file_contents") ) { file_contents=ioValue.Cast< Dynamic >(); return true; }
 	}
@@ -99,6 +149,7 @@ bool File_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyA
 static hx::StorageInfo *sMemberStorageInfo = 0;
 static hx::StaticInfo sStaticStorageInfo[] = {
 	{hx::fsObject /*Dynamic*/ ,(void *) &File_obj::file_contents,HX_HCSTRING("file_contents","\x7d","\x7e","\x26","\x74")},
+	{hx::fsObject /*Dynamic*/ ,(void *) &File_obj::file_open,HX_HCSTRING("file_open","\xad","\x4f","\xbf","\x6b")},
 	{ hx::fsUnknown, 0, null()}
 };
 #endif
@@ -106,12 +157,14 @@ static hx::StaticInfo sStaticStorageInfo[] = {
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(File_obj::__mClass,"__mClass");
 	HX_MARK_MEMBER_NAME(File_obj::file_contents,"file_contents");
+	HX_MARK_MEMBER_NAME(File_obj::file_open,"file_open");
 };
 
 #ifdef HXCPP_VISIT_ALLOCS
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(File_obj::__mClass,"__mClass");
 	HX_VISIT_MEMBER_NAME(File_obj::file_contents,"file_contents");
+	HX_VISIT_MEMBER_NAME(File_obj::file_open,"file_open");
 };
 
 #endif
@@ -121,7 +174,9 @@ hx::Class File_obj::__mClass;
 static ::String sStaticFields[] = {
 	HX_HCSTRING("getContent","\x43","\x13","\xd9","\x68"),
 	HX_HCSTRING("getBytes","\xf5","\x17","\x6f","\x1d"),
+	HX_HCSTRING("read","\x56","\x4b","\xa7","\x4b"),
 	HX_HCSTRING("file_contents","\x7d","\x7e","\x26","\x74"),
+	HX_HCSTRING("file_open","\xad","\x4f","\xbf","\x6b"),
 	::String(null()) };
 
 void File_obj::__register()
@@ -152,6 +207,7 @@ void File_obj::__register()
 void File_obj::__boot()
 {
 	file_contents= ::cpp::Lib_obj::load(HX_HCSTRING("std","\xa3","\xa8","\x57","\x00"),HX_HCSTRING("file_contents","\x7d","\x7e","\x26","\x74"),(int)1);
+	file_open= ::cpp::Lib_obj::load(HX_HCSTRING("std","\xa3","\xa8","\x57","\x00"),HX_HCSTRING("file_open","\xad","\x4f","\xbf","\x6b"),(int)2);
 }
 
 } // end namespace sys

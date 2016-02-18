@@ -171,6 +171,9 @@
 #ifndef INCLUDED_sys_io_FileOutput
 #include <sys/io/FileOutput.h>
 #endif
+#ifndef INCLUDED_sys_io_FileInput
+#include <sys/io/FileInput.h>
+#endif
 #ifndef INCLUDED_sys_io_File
 #include <sys/io/File.h>
 #endif
@@ -1534,6 +1537,7 @@ hx::RegisterResources( hx::GetResources() );
 ::sys::net::_Socket::SocketInput_obj::__register();
 ::sys::net::Host_obj::__register();
 ::sys::io::FileOutput_obj::__register();
+::sys::io::FileInput_obj::__register();
 ::sys::io::File_obj::__register();
 ::sys::FileSystem_obj::__register();
 ::openfl::utils::_Endian::Endian_Impl__obj::__register();
@@ -2132,6 +2136,7 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::utils::_Endian::Endian_Impl__obj::__boot();
 ::sys::FileSystem_obj::__boot();
 ::sys::io::File_obj::__boot();
+::sys::io::FileInput_obj::__boot();
 ::sys::io::FileOutput_obj::__boot();
 ::sys::net::Host_obj::__boot();
 ::sys::net::_Socket::SocketInput_obj::__boot();

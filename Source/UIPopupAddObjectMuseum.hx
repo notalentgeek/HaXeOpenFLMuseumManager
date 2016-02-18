@@ -48,6 +48,17 @@ class UIPopupAddObjectMuseum{
         /*Adding a callback function of when the button is pressed.*/
         buttonObject.onClick = function(_e){
 
+            Sys.command("python3 WordnikGetPhrase.py 'cable' > Phrase.txt");
+            var fileTXTObject:sys.io.FileInput = sys.io.File.read("./Phrase.txt", false);
+            try{
+                while(true){
+                    var string:String = fileTXTObject.readLine();
+                    trace(string);
+                }
+            }
+            catch(_exception:haxe.io.Eof){}
+            fileTXTObject.close();
+
             /*Adding OK and CANCEL button for the popup.*/
             var buttonControlInt:Int = 0;
             buttonControlInt |= PopupButton.OK;
@@ -55,10 +66,11 @@ class UIPopupAddObjectMuseum{
 
             var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupAddObjectMuseum.xml");
             popupObject = PopupManager.instance.showCustom(iDisplayObject, "Add Museum Object", buttonControlInt, function(_button){
-                
+
                 /*You can actually have this done with checking the component of a Popup controller.
                 If a popup controller/component returns null then the popup is not active.*/
                 if(_button == PopupButton.OK){
+
                     /*If button OK is pressed then add a museum object according to the inputted value.
                     PENDING: Check whethe the data inputted valid.
                     PENDING: Check how to make disable OK button of this popup.*/
@@ -287,7 +299,7 @@ class UIPopupAddObjectMuseum{
         }
 
         if(popupObject != null && textInputExplanationStructArray.length > 0){
-            
+
             var loopCounter1Int:Int = 0;
             while(loopCounter1Int < textInputExplanationStructArray.length){
 
@@ -313,7 +325,7 @@ class UIPopupAddObjectMuseum{
                             textInputExplanationStructArray[loopCounter2Int - 1].textInputObject.id = "UIPopupAddObjectMuseum_InputExplanation_" + loopCounter2Int;
                             textInputExplanationStructArray[loopCounter2Int - 1].textObject.id = "UIPopupAddObjectMuseum_InputExplanationText_" + loopCounter2Int;
                             loopCounter2Int ++;
-                        
+
                         }
                         textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject) + 1;
 
@@ -352,5 +364,5 @@ class UIPopupAddObjectMuseum{
         }
 
     }
-    
+
 }

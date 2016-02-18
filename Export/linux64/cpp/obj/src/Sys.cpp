@@ -137,6 +137,158 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,setCwd,(void))
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Sys_obj,systemName,return )
 
+::String Sys_obj::escapeArgument( ::String arg){
+	HX_STACK_FRAME("Sys","escapeArgument",0xb9d4397f,"Sys.escapeArgument","/usr/share/haxe/std/cpp/_std/Sys.hx",84,0x4e14a6b5)
+	HX_STACK_ARG(arg,"arg")
+	HX_STACK_LINE(85)
+	bool ok = true;		HX_STACK_VAR(ok,"ok");
+	HX_STACK_LINE(86)
+	{
+		HX_STACK_LINE(86)
+		int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
+		HX_STACK_LINE(86)
+		int _g = arg.length;		HX_STACK_VAR(_g,"_g");
+		HX_STACK_LINE(86)
+		while((true)){
+			HX_STACK_LINE(86)
+			bool tmp = (_g1 < _g);		HX_STACK_VAR(tmp,"tmp");
+			HX_STACK_LINE(86)
+			bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+			HX_STACK_LINE(86)
+			if ((tmp1)){
+				HX_STACK_LINE(86)
+				break;
+			}
+			HX_STACK_LINE(86)
+			int tmp2 = (_g1)++;		HX_STACK_VAR(tmp2,"tmp2");
+			HX_STACK_LINE(86)
+			int i = tmp2;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(87)
+			int tmp3 = i;		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(87)
+			Dynamic tmp4 = arg.charCodeAt(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(87)
+			Dynamic _g2 = tmp4;		HX_STACK_VAR(_g2,"_g2");
+			HX_STACK_LINE(87)
+			bool tmp5 = (_g2 != null());		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(87)
+			if ((tmp5)){
+				HX_STACK_LINE(87)
+				Dynamic tmp6 = _g2;		HX_STACK_VAR(tmp6,"tmp6");
+				HX_STACK_LINE(87)
+				switch( (int)(tmp6)){
+					case (int)32: case (int)9: case (int)34: case (int)38: case (int)124: case (int)60: case (int)62: case (int)35: case (int)59: case (int)42: case (int)63: case (int)40: case (int)41: case (int)123: case (int)125: case (int)36: {
+						HX_STACK_LINE(89)
+						ok = false;
+					}
+					;break;
+					case (int)0: case (int)13: case (int)10: {
+						HX_STACK_LINE(91)
+						int tmp7 = i;		HX_STACK_VAR(tmp7,"tmp7");
+						HX_STACK_LINE(91)
+						::String tmp8 = arg.substr((int)0,tmp7);		HX_STACK_VAR(tmp8,"tmp8");
+						HX_STACK_LINE(91)
+						arg = tmp8;
+					}
+					;break;
+				}
+			}
+		}
+	}
+	HX_STACK_LINE(93)
+	bool tmp = ok;		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(93)
+	if ((tmp)){
+		HX_STACK_LINE(94)
+		::String tmp1 = arg;		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(94)
+		return tmp1;
+	}
+	HX_STACK_LINE(95)
+	::String tmp1 = arg.split(HX_HCSTRING("\\","\x5c","\x00","\x00","\x00"))->join(HX_HCSTRING("\\\\","\x80","\x50","\x00","\x00"));		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(95)
+	::String tmp2 = tmp1.split(HX_HCSTRING("\"","\x22","\x00","\x00","\x00"))->join(HX_HCSTRING("\\\"","\x46","\x50","\x00","\x00"));		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(95)
+	::String tmp3 = (HX_HCSTRING("\"","\x22","\x00","\x00","\x00") + tmp2);		HX_STACK_VAR(tmp3,"tmp3");
+	HX_STACK_LINE(95)
+	::String tmp4 = (tmp3 + HX_HCSTRING("\"","\x22","\x00","\x00","\x00"));		HX_STACK_VAR(tmp4,"tmp4");
+	HX_STACK_LINE(95)
+	return tmp4;
+}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,escapeArgument,return )
+
+int Sys_obj::command( ::String cmd,Array< ::String > args){
+	HX_STACK_FRAME("Sys","command",0x363f8cca,"Sys.command","/usr/share/haxe/std/cpp/_std/Sys.hx",98,0x4e14a6b5)
+	HX_STACK_ARG(cmd,"cmd")
+	HX_STACK_ARG(args,"args")
+	HX_STACK_LINE(99)
+	bool tmp = (args != null());		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(99)
+	if ((tmp)){
+		HX_STACK_LINE(100)
+		::String tmp1 = cmd;		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(100)
+		::String tmp2 = ::Sys_obj::escapeArgument(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(100)
+		cmd = tmp2;
+		HX_STACK_LINE(101)
+		{
+			HX_STACK_LINE(101)
+			int _g = (int)0;		HX_STACK_VAR(_g,"_g");
+			HX_STACK_LINE(101)
+			while((true)){
+				HX_STACK_LINE(101)
+				bool tmp3 = (_g < args->length);		HX_STACK_VAR(tmp3,"tmp3");
+				HX_STACK_LINE(101)
+				bool tmp4 = !(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
+				HX_STACK_LINE(101)
+				if ((tmp4)){
+					HX_STACK_LINE(101)
+					break;
+				}
+				HX_STACK_LINE(101)
+				::String tmp5 = args->__get(_g);		HX_STACK_VAR(tmp5,"tmp5");
+				HX_STACK_LINE(101)
+				::String a = tmp5;		HX_STACK_VAR(a,"a");
+				HX_STACK_LINE(101)
+				++(_g);
+				HX_STACK_LINE(102)
+				::String tmp6 = a;		HX_STACK_VAR(tmp6,"tmp6");
+				HX_STACK_LINE(102)
+				::String tmp7 = ::Sys_obj::escapeArgument(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
+				HX_STACK_LINE(102)
+				::String tmp8 = (HX_HCSTRING(" ","\x20","\x00","\x00","\x00") + tmp7);		HX_STACK_VAR(tmp8,"tmp8");
+				HX_STACK_LINE(102)
+				hx::AddEq(cmd,tmp8);
+			}
+		}
+	}
+	HX_STACK_LINE(104)
+	::String tmp1 = ::Sys_obj::systemName();		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(104)
+	bool tmp2 = (tmp1 == HX_HCSTRING("Windows","\x63","\x06","\xc6","\xb5"));		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(104)
+	if ((tmp2)){
+		HX_STACK_LINE(104)
+		::String tmp3 = (HX_HCSTRING("\"","\x22","\x00","\x00","\x00") + cmd);		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(104)
+		::String tmp4 = (tmp3 + HX_HCSTRING("\"","\x22","\x00","\x00","\x00"));		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(104)
+		cmd = tmp4;
+	}
+	HX_STACK_LINE(105)
+	::String tmp3 = cmd;		HX_STACK_VAR(tmp3,"tmp3");
+	HX_STACK_LINE(105)
+	int tmp4 = ::Sys_obj::sys_command(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
+	HX_STACK_LINE(105)
+	return tmp4;
+}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(Sys_obj,command,return )
+
 Void Sys_obj::exit( int code){
 {
 		HX_STACK_FRAME("Sys","exit",0xed97463f,"Sys.exit","/usr/share/haxe/std/cpp/_std/Sys.hx",109,0x4e14a6b5)
@@ -171,6 +323,8 @@ Dynamic Sys_obj::set_cwd;
 
 Dynamic Sys_obj::sys_string;
 
+Dynamic Sys_obj::sys_command;
+
 Dynamic Sys_obj::sys_exe_path;
 
 Dynamic Sys_obj::file_stderr;
@@ -199,6 +353,7 @@ bool Sys_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Propert
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"println") ) { outValue = println_dyn(); return true;  }
+		if (HX_FIELD_EQ(inName,"command") ) { outValue = command_dyn(); return true;  }
 		if (HX_FIELD_EQ(inName,"get_cwd") ) { outValue = get_cwd; return true;  }
 		if (HX_FIELD_EQ(inName,"set_cwd") ) { outValue = set_cwd; return true;  }
 		break;
@@ -207,12 +362,14 @@ bool Sys_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Propert
 		if (HX_FIELD_EQ(inName,"sys_string") ) { outValue = sys_string; return true;  }
 		break;
 	case 11:
+		if (HX_FIELD_EQ(inName,"sys_command") ) { outValue = sys_command; return true;  }
 		if (HX_FIELD_EQ(inName,"file_stderr") ) { outValue = file_stderr; return true;  }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"sys_exe_path") ) { outValue = sys_exe_path; return true;  }
 		break;
 	case 14:
+		if (HX_FIELD_EQ(inName,"escapeArgument") ) { outValue = escapeArgument_dyn(); return true;  }
 		if (HX_FIELD_EQ(inName,"executablePath") ) { outValue = executablePath_dyn(); return true;  }
 	}
 	return false;
@@ -232,6 +389,7 @@ bool Sys_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::PropertyAc
 		if (HX_FIELD_EQ(inName,"sys_string") ) { sys_string=ioValue.Cast< Dynamic >(); return true; }
 		break;
 	case 11:
+		if (HX_FIELD_EQ(inName,"sys_command") ) { sys_command=ioValue.Cast< Dynamic >(); return true; }
 		if (HX_FIELD_EQ(inName,"file_stderr") ) { file_stderr=ioValue.Cast< Dynamic >(); return true; }
 		break;
 	case 12:
@@ -247,6 +405,7 @@ static hx::StaticInfo sStaticStorageInfo[] = {
 	{hx::fsObject /*Dynamic*/ ,(void *) &Sys_obj::get_cwd,HX_HCSTRING("get_cwd","\xc7","\x4f","\xc0","\x26")},
 	{hx::fsObject /*Dynamic*/ ,(void *) &Sys_obj::set_cwd,HX_HCSTRING("set_cwd","\xd3","\xe0","\xc1","\x19")},
 	{hx::fsObject /*Dynamic*/ ,(void *) &Sys_obj::sys_string,HX_HCSTRING("sys_string","\x03","\xf9","\xde","\x46")},
+	{hx::fsObject /*Dynamic*/ ,(void *) &Sys_obj::sys_command,HX_HCSTRING("sys_command","\xd9","\xcc","\xb4","\x44")},
 	{hx::fsObject /*Dynamic*/ ,(void *) &Sys_obj::sys_exe_path,HX_HCSTRING("sys_exe_path","\x64","\xe4","\x8d","\x89")},
 	{hx::fsObject /*Dynamic*/ ,(void *) &Sys_obj::file_stderr,HX_HCSTRING("file_stderr","\x45","\x71","\x4c","\x3c")},
 	{ hx::fsUnknown, 0, null()}
@@ -259,6 +418,7 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(Sys_obj::get_cwd,"get_cwd");
 	HX_MARK_MEMBER_NAME(Sys_obj::set_cwd,"set_cwd");
 	HX_MARK_MEMBER_NAME(Sys_obj::sys_string,"sys_string");
+	HX_MARK_MEMBER_NAME(Sys_obj::sys_command,"sys_command");
 	HX_MARK_MEMBER_NAME(Sys_obj::sys_exe_path,"sys_exe_path");
 	HX_MARK_MEMBER_NAME(Sys_obj::file_stderr,"file_stderr");
 };
@@ -270,6 +430,7 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(Sys_obj::get_cwd,"get_cwd");
 	HX_VISIT_MEMBER_NAME(Sys_obj::set_cwd,"set_cwd");
 	HX_VISIT_MEMBER_NAME(Sys_obj::sys_string,"sys_string");
+	HX_VISIT_MEMBER_NAME(Sys_obj::sys_command,"sys_command");
 	HX_VISIT_MEMBER_NAME(Sys_obj::sys_exe_path,"sys_exe_path");
 	HX_VISIT_MEMBER_NAME(Sys_obj::file_stderr,"file_stderr");
 };
@@ -287,12 +448,15 @@ static ::String sStaticFields[] = {
 	HX_HCSTRING("getCwd","\x3a","\xc0","\x1a","\xa3"),
 	HX_HCSTRING("setCwd","\xae","\x14","\x63","\x6f"),
 	HX_HCSTRING("systemName","\xda","\xd8","\x82","\xf7"),
+	HX_HCSTRING("escapeArgument","\x1e","\x57","\x56","\x9e"),
+	HX_HCSTRING("command","\x4b","\x71","\x6d","\x81"),
 	HX_HCSTRING("exit","\x1e","\xf7","\x1d","\x43"),
 	HX_HCSTRING("executablePath","\x8f","\x24","\x16","\xe1"),
 	HX_HCSTRING("_sleep","\x58","\x04","\xac","\x7a"),
 	HX_HCSTRING("get_cwd","\xc7","\x4f","\xc0","\x26"),
 	HX_HCSTRING("set_cwd","\xd3","\xe0","\xc1","\x19"),
 	HX_HCSTRING("sys_string","\x03","\xf9","\xde","\x46"),
+	HX_HCSTRING("sys_command","\xd9","\xcc","\xb4","\x44"),
 	HX_HCSTRING("sys_exe_path","\x64","\xe4","\x8d","\x89"),
 	HX_HCSTRING("file_stderr","\x45","\x71","\x4c","\x3c"),
 	::String(null()) };
@@ -328,6 +492,7 @@ void Sys_obj::__boot()
 	get_cwd= ::cpp::Lib_obj::load(HX_HCSTRING("std","\xa3","\xa8","\x57","\x00"),HX_HCSTRING("get_cwd","\xc7","\x4f","\xc0","\x26"),(int)0);
 	set_cwd= ::cpp::Lib_obj::load(HX_HCSTRING("std","\xa3","\xa8","\x57","\x00"),HX_HCSTRING("set_cwd","\xd3","\xe0","\xc1","\x19"),(int)1);
 	sys_string= ::cpp::Lib_obj::load(HX_HCSTRING("std","\xa3","\xa8","\x57","\x00"),HX_HCSTRING("sys_string","\x03","\xf9","\xde","\x46"),(int)0);
+	sys_command= ::cpp::Lib_obj::load(HX_HCSTRING("std","\xa3","\xa8","\x57","\x00"),HX_HCSTRING("sys_command","\xd9","\xcc","\xb4","\x44"),(int)1);
 	sys_exe_path= ::cpp::Lib_obj::load(HX_HCSTRING("std","\xa3","\xa8","\x57","\x00"),HX_HCSTRING("sys_exe_path","\x64","\xe4","\x8d","\x89"),(int)0);
 	file_stderr= ::cpp::Lib_obj::load(HX_HCSTRING("std","\xa3","\xa8","\x57","\x00"),HX_HCSTRING("file_stderr","\x45","\x71","\x4c","\x3c"),(int)0);
 }

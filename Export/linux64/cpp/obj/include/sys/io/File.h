@@ -6,7 +6,9 @@
 #endif
 
 HX_DECLARE_CLASS2(haxe,io,Bytes)
+HX_DECLARE_CLASS2(haxe,io,Input)
 HX_DECLARE_CLASS2(sys,io,File)
+HX_DECLARE_CLASS2(sys,io,FileInput)
 namespace sys{
 namespace io{
 
@@ -39,8 +41,13 @@ class HXCPP_CLASS_ATTRIBUTES  File_obj : public hx::Object{
 		static ::haxe::io::Bytes getBytes( ::String path);
 		static Dynamic getBytes_dyn();
 
+		static ::sys::io::FileInput read( ::String path,hx::Null< bool >  binary);
+		static Dynamic read_dyn();
+
 		static Dynamic file_contents;
 		static Dynamic &file_contents_dyn() { return file_contents;}
+		static Dynamic file_open;
+		static Dynamic &file_open_dyn() { return file_open;}
 };
 
 } // end namespace sys

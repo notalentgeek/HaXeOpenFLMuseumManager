@@ -55,6 +55,12 @@ class HXCPP_CLASS_ATTRIBUTES  Sys_obj : public hx::Object{
 		static ::String systemName( );
 		static Dynamic systemName_dyn();
 
+		static ::String escapeArgument( ::String arg);
+		static Dynamic escapeArgument_dyn();
+
+		static int command( ::String cmd,Array< ::String > args);
+		static Dynamic command_dyn();
+
 		static Void exit( int code);
 		static Dynamic exit_dyn();
 
@@ -69,6 +75,8 @@ class HXCPP_CLASS_ATTRIBUTES  Sys_obj : public hx::Object{
 		static Dynamic &set_cwd_dyn() { return set_cwd;}
 		static Dynamic sys_string;
 		static Dynamic &sys_string_dyn() { return sys_string;}
+		static Dynamic sys_command;
+		static Dynamic &sys_command_dyn() { return sys_command;}
 		static Dynamic sys_exe_path;
 		static Dynamic &sys_exe_path_dyn() { return sys_exe_path;}
 		static Dynamic file_stderr;
