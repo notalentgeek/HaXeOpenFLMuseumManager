@@ -5761,6 +5761,7 @@
    <depend name="include/EnumVisitorMode.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/ObjectMuseum.h"/>
+   <depend name="include/ObjectTag.h"/>
    <depend name="include/ObjectVisitor.h"/>
    <depend name="include/Std.h"/>
    <depend name="include/UIPopupAddObjectMuseum.h"/>
@@ -5778,9 +5779,12 @@
    <depend name="include/haxe/ui/toolkit/containers/Container.h"/>
    <depend name="include/haxe/ui/toolkit/containers/VBox.h"/>
    <depend name="include/haxe/ui/toolkit/controls/popups/Popup.h"/>
+   <depend name="include/haxe/ui/toolkit/controls/popups/PopupContent.h"/>
+   <depend name="include/haxe/ui/toolkit/controls/popups/SimplePopupContent.h"/>
    <depend name="include/haxe/ui/toolkit/core/Component.h"/>
    <depend name="include/haxe/ui/toolkit/core/DisplayObject.h"/>
    <depend name="include/haxe/ui/toolkit/core/DisplayObjectContainer.h"/>
+   <depend name="include/haxe/ui/toolkit/core/PopupManager.h"/>
    <depend name="include/haxe/ui/toolkit/core/Root.h"/>
    <depend name="include/haxe/ui/toolkit/core/StyleableDisplayObject.h"/>
    <depend name="include/haxe/ui/toolkit/core/Toolkit.h"/>

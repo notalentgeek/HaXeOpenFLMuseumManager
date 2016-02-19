@@ -60,6 +60,9 @@ class HXCPP_CLASS_ATTRIBUTES  SimplePopupContent_obj : public ::haxe::ui::toolki
 		::haxe::ui::toolkit::controls::Text _textControl;
 		virtual Void initialize( );
 
+		virtual Void SetTextControlStringVoid( ::String _string);
+		Dynamic SetTextControlStringVoid_dyn();
+
 		virtual ::haxe::ui::toolkit::core::DisplayObject clone( );
 
 		virtual ::haxe::ui::toolkit::core::DisplayObject self( );

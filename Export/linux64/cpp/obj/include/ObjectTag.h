@@ -54,6 +54,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectTag_obj : public hx::Object{
 		::String verb3String;
 		::String verbIngString;
 		::String verbSString;
+		virtual Void GenerateCompanyWordVoid( );
+		Dynamic GenerateCompanyWordVoid_dyn();
+
 		virtual Void AddToArrayVoid( );
 		Dynamic AddToArrayVoid_dyn();
 
@@ -71,6 +74,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectTag_obj : public hx::Object{
 
 		virtual bool GetGeneralTagBool( );
 		Dynamic GetGeneralTagBool_dyn();
+
+		virtual ::String GetNameOriginalString( );
+		Dynamic GetNameOriginalString_dyn();
 
 		virtual ::String GetNameString( );
 		Dynamic GetNameString_dyn();

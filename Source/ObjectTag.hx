@@ -51,47 +51,51 @@ class ObjectTag{
         nameString                  = nameOriginalString + "_" + Std.string(typeEnum); /*The most basic word from this tag plus additional suffix from typeEnum.*/
         AddToArrayVoid();
 
-        /*PENDING: Change this into a function.*/
-        if(
-            typeEnum != ADJ &&
-            typeEnum != ADV &&
-            typeEnum != NOUN_ALIVE_CONCRETE &&
-            typeEnum != NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER
-        ){
-
-            var part1String:String      = "python3 WordnikGetPhrase.py '";
-            var part2String:String      = nameOriginalString;
-            var part3String:String      = "' > Phrase.txt";
-            var partAllString:String    = part1String + part2String + part3String;
-
-            Sys.command(partAllString);
-            var fileTXTObject:sys.io.FileInput = sys.io.File.read("./Phrase.txt", false);
-            try{
-                while(true){
-
-                    var receivedString              :String                     = fileTXTObject.readLine();
-                    var receivedStringArray         :Array<String>              = receivedString.split("_");
-                    var companyWordPositionEnum     :EnumCompanyWordPosition    = Type.createEnum(EnumCompanyWordPosition, receivedStringArray[0]);
-                    var stringString                :String                     = receivedStringArray[1];
-                    var companyWordStruct           :StructCompanyWord          = {
-                        companyWordPositionEnum     :companyWordPositionEnum,
-                        mainWordString              :nameOriginalString,
-                        stringString                :stringString,
-                        tagFeelTypeEnum             :NEUTRAL
-                    }
-                    companyWordStructArray.push(companyWordStruct);
-
-                }
-            }
-            catch(_exception:haxe.io.Eof){}
-            fileTXTObject.close();
-
-        }
-
     }
 
 
+    public function GenerateCompanyWordVoid(){
 
+        #if (cpp || neko || php)
+            /*PENDING: Change this into a function.*/
+            if(
+                typeEnum != ADJ &&
+                typeEnum != ADV &&
+                typeEnum != NOUN_ALIVE_CONCRETE &&
+                typeEnum != NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER
+            ){
+
+                var part1String:String      = "python3 WordnikGetPhrase.py '";
+                var part2String:String      = nameOriginalString;
+                var part3String:String      = "' > Phrase.txt";
+                var partAllString:String    = part1String + part2String + part3String;
+
+                Sys.command(partAllString);
+                var fileTXTObject:sys.io.FileInput = sys.io.File.read("./Phrase.txt", false);
+                try{
+                    while(true){
+
+                        var receivedString              :String                     = fileTXTObject.readLine();
+                        var receivedStringArray         :Array<String>              = receivedString.split("_");
+                        var companyWordPositionEnum     :EnumCompanyWordPosition    = Type.createEnum(EnumCompanyWordPosition, receivedStringArray[0]);
+                        var stringString                :String                     = receivedStringArray[1];
+                        var companyWordStruct           :StructCompanyWord          = {
+                            companyWordPositionEnum     :companyWordPositionEnum,
+                            mainWordString              :nameOriginalString,
+                            stringString                :stringString,
+                            tagFeelTypeEnum             :NEUTRAL
+                        }
+                        companyWordStructArray.push(companyWordStruct);
+
+                    }
+                }
+                catch(_exception:haxe.io.Eof){}
+                fileTXTObject.close();
+
+            }
+        #end
+
+    }
 
 
     private function AddToArrayVoid(){
@@ -109,6 +113,7 @@ class ObjectTag{
     public function GetCompanyWordStructArray(){ return companyWordStructArray; }
     public function GetFeelEnum(){ return feelEnum; }
     public function GetGeneralTagBool(){ return generalTagBool; }
+    public function GetNameOriginalString(){ return nameOriginalString; }
     public function GetNameString(){ return nameString; }
     public function GetNounPosString(){ return nounPosString; }
     public function GetNounSPosString(){ return nounSPosString; }

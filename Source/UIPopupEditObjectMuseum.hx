@@ -162,7 +162,7 @@ class UIPopupEditObjectMuseum{
                     nameAltTextInputObject.disabled = false;
                     nameAltTextInputObject.text = selectedMuseumObject.GetNameStruct().nameAltString;
                     nameFullTextInputObject.disabled = false;
-                    nameFullTextInputObject.text = selectedMuseumObject.GetNameStruct().nameFullString;                    
+                    nameFullTextInputObject.text = selectedMuseumObject.GetNameStruct().nameFullString;
                     selectTypeListSelectorObject.disabled = false;
                     var nameFullEnumString:String = "";
                     if(enumString == "EXH"){ nameFullEnumString = "Exhibition" ;}
@@ -647,7 +647,7 @@ class UIPopupEditObjectMuseum{
                             textInputExplanationStructArray[loopCounter2Int - 1].textInputObject.id = "UIPopupEditObjectMuseum_InputExplanation_" + loopCounter2Int;
                             textInputExplanationStructArray[loopCounter2Int - 1].textObject.id = "UIPopupEditObjectMuseum_InputExplanationText_" + loopCounter2Int;
                             loopCounter2Int ++;
-                        
+
                         }
                         textInputExplanationLastIndexInt = gridObject.indexOfChild(textInputExplanationStructArray[textInputExplanationStructArray.length - 1].textInputObject) + 1;
 

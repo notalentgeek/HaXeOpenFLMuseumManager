@@ -130,6 +130,24 @@ return null();
 }
 
 
+Void SimplePopupContent_obj::SetTextControlStringVoid( ::String _string){
+{
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.SimplePopupContent","SetTextControlStringVoid",0x038fd9f1,"haxe.ui.toolkit.controls.popups.SimplePopupContent.SetTextControlStringVoid","haxe/ui/toolkit/controls/popups/SimplePopupContent.hx",31,0x6b04b1ed)
+		HX_STACK_THIS(this)
+		HX_STACK_ARG(_string,"_string")
+		HX_STACK_LINE(31)
+		::haxe::ui::toolkit::controls::Text tmp = this->_textControl;		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(31)
+		::String tmp1 = _string;		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(31)
+		tmp->set_text(tmp1);
+	}
+return null();
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(SimplePopupContent_obj,SetTextControlStringVoid,(void))
+
 ::haxe::ui::toolkit::core::DisplayObject SimplePopupContent_obj::clone( ){
 	HX_STACK_FRAME("haxe.ui.toolkit.controls.popups.SimplePopupContent","clone",0x2c54cedf,"haxe.ui.toolkit.controls.popups.SimplePopupContent.clone","src/haxe/ui/toolkit/controls/popups/SimplePopupContent.hx",1,0xdbe4bf42)
 	HX_STACK_THIS(this)
@@ -187,6 +205,9 @@ Dynamic SimplePopupContent_obj::__Field(const ::String &inName,hx::PropertyAcces
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"_textControl") ) { return _textControl; }
+		break;
+	case 24:
+		if (HX_FIELD_EQ(inName,"SetTextControlStringVoid") ) { return SetTextControlStringVoid_dyn(); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -217,6 +238,7 @@ static hx::StaticInfo *sStaticStorageInfo = 0;
 static ::String sMemberFields[] = {
 	HX_HCSTRING("_textControl","\x31","\x14","\x0b","\x5b"),
 	HX_HCSTRING("initialize","\x50","\x31","\xbb","\xec"),
+	HX_HCSTRING("SetTextControlStringVoid","\x33","\x1c","\x85","\x89"),
 	HX_HCSTRING("clone","\x5d","\x13","\x63","\x48"),
 	HX_HCSTRING("self","\x8c","\x8b","\x50","\x4c"),
 	::String(null()) };

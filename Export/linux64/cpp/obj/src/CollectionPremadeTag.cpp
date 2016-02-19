@@ -904,7 +904,7 @@ Void CollectionPremadeTag_obj::PremadeTagStructNounInanimatePlaceConcreteNoOwner
 		HX_STACK_LINE(182)
 		tmp2->SetNounStringObject(HX_HCSTRING("Netherlands","\x70","\x0e","\x67","\x5f"));
 		HX_STACK_LINE(183)
-		::ObjectTag tmp3 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,false,HX_HCSTRING("RussiaRussia","\xf6","\x91","\xb1","\xc3"),::EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER);		HX_STACK_VAR(tmp3,"tmp3");
+		::ObjectTag tmp3 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,false,HX_HCSTRING("Russia","\xdb","\x9d","\x80","\x73"),::EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER);		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(183)
 		tmp3->SetNounStringObject(HX_HCSTRING("Russia","\xdb","\x9d","\x80","\x73"));
 	}

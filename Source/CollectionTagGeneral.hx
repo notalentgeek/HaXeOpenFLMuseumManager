@@ -88,7 +88,6 @@ class CollectionTagGeneral{
         new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "India", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("India");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Italia", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Italia");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Netherlands", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Netherlands");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "RussiaRussia", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Russia");
     }
     public static function TagGeneralStructNounInanimatePlaceConcreteOwnerVoid(_collectionGlobalObject:CollectionGlobal){
         new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Country", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("Country").SetNounSStringObject("Countries");

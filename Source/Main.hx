@@ -8,6 +8,7 @@ import haxe.ui.toolkit.controls.popups.*;
 import haxe.ui.toolkit.controls.selection.*;
 import haxe.ui.toolkit.core.*;
 import haxe.ui.toolkit.core.interfaces.*;
+import haxe.ui.toolkit.core.PopupManager;
 import haxe.ui.toolkit.data.*;
 import haxe.ui.toolkit.events.*;
 #if (cpp)
@@ -32,6 +33,7 @@ class Main extends Sprite{
     We need it to be placed as a class local variable because it need to be accessed everytime,
         but the value is not necessailry to be initiated over time.*/
     var loopCounterMainInt                      :Int                            = 0;
+    var loopCounterCompanyWordInt               :Int                            = 0;
     /*Popup objects.*/
     var sendInstructionToArduinoStringArray     :Array<String>                  = new Array<String>();
     var serialCounterInt                        :Int                            = 0;
@@ -39,15 +41,18 @@ class Main extends Sprite{
     var serialIndexInt                          :Int                            = 0;
     var serialLength                            :Int                            = 0;
     var soundProgressBool                       :Bool                           = false;
+    var tagAmountInt                            :Int                            = -1;
     var uiPopupAddMuseumObject                  :UIPopupAddObjectMuseum         = null;
     var uiPopupAddTagObject                     :UIPopupAddObjectTag            = null;
     var uiPopupAddVisitorObject                 :UIPopupAddObjectVisitor        = null;
     var uiPopupEditMuseumObject                 :UIPopupEditObjectMuseum        = null;
     var uiPopupEditTagObject                    :UIPopupEditObjectTag           = null;
     var uiPopupEditVisitorObject                :UIPopupEditObjectVisitor       = null;
+    var uiPopupLoadingWordObject                :Popup                          = null;
     var uiPopupRemoveMuseumObject               :UIPopupRemoveObjectMuseum      = null;
     var uiPopupRemoveTagObject                  :UIPopupRemoveObjectTag         = null;
     var uiPopupRemoveVisitorObject              :UIPopupRemoveObjectVisitor     = null;
+    var updateAfterBool                         :Bool                           = false;
     #if (cpp)
         var serialObject                        :Serial                         = null;
     #end
@@ -125,6 +130,10 @@ class Main extends Sprite{
         /*Refer UpdateVoid function as main loop function.*/
         addEventListener(Event.ENTER_FRAME, UpdateVoid);
 
+        tagAmountInt = collectionGlobalObject.GetTagGeneralObjectArray().length + collectionGlobalObject.GetTagObjectArray().length;
+        uiPopupLoadingWordObject = PopupManager.instance.showBusy("Cooking words!!!");
+        PopupManager.instance.showPopup(uiPopupLoadingWordObject);
+
     }
     /*==================================================*/
 
@@ -175,6 +184,20 @@ class Main extends Sprite{
         before updating the user interface object.
     This is to prevent null pointer exception.*/
     private function UpdateVoid(event:Event){
+
+        if(updateAfterBool == true){ UpdateAfterCompanyWordVoid(); }
+        else if(updateAfterBool == false){ UpdateBeforeCompanyWordVoid(); }
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    private function UpdateAfterCompanyWordVoid(){
+
+        PopupManager.instance.hidePopup(uiPopupLoadingWordObject);
 
         #if (cpp)
             SearchForSerialConnectionVoid();
@@ -234,7 +257,28 @@ class Main extends Sprite{
         uiPopupRemoveVisitorObject      .UpdateVoid();
 
     }
-    /*==================================================*/
+    private function UpdateBeforeCompanyWordVoid(){
+
+        var tagString:String = "";
+        if(collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterCompanyWordInt] != null){
+            collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterCompanyWordInt].GenerateCompanyWordVoid();
+            tagString = collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterCompanyWordInt].GetNameOriginalString();
+        }
+        else if(collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterCompanyWordInt] == null){
+            if(collectionGlobalObject.GetTagObjectArray()[loopCounterCompanyWordInt - collectionGlobalObject.GetTagGeneralObjectArray().length] != null){
+                collectionGlobalObject.GetTagObjectArray()[loopCounterCompanyWordInt - collectionGlobalObject.GetTagGeneralObjectArray().length].GenerateCompanyWordVoid();
+                tagString = collectionGlobalObject.GetTagObjectArray()[loopCounterCompanyWordInt - collectionGlobalObject.GetTagGeneralObjectArray().length].GetNameOriginalString();
+            }
+            else if(collectionGlobalObject.GetTagObjectArray()[loopCounterCompanyWordInt - collectionGlobalObject.GetTagGeneralObjectArray().length] == null){ updateAfterBool = true; }
+        }
+        #if (!cpp && !neko && !php)
+            Std.instance(uiPopupLoadingWordObject.content, SimplePopupContent).SetTextControlStringVoid("Wordnik API only works on CPP, Neko, and PHP target.\nCooking words!!! " + tagString + " " + loopCounterCompanyWordInt + "/" + tagAmountInt);
+        #else
+            Std.instance(uiPopupLoadingWordObject.content, SimplePopupContent).SetTextControlStringVoid("Cooking words!!! " + tagString + " " + loopCounterCompanyWordInt + "/" + tagAmountInt);
+        #end
+        loopCounterCompanyWordInt ++;
+
+    }
 
 
 

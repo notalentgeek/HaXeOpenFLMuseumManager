@@ -19,6 +19,21 @@ HX_DECLARE_CLASS0(UIPopupEditObjectVisitor)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectMuseum)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectTag)
 HX_DECLARE_CLASS0(UIPopupRemoveObjectVisitor)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,Container)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,containers,VBox)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,controls,popups,Popup)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,core,Component)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,core,DisplayObject)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,core,DisplayObjectContainer)
+HX_DECLARE_CLASS4(haxe,ui,toolkit,core,StyleableDisplayObject)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IClonable)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IComponent)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDisplayObject)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDisplayObjectContainer)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDraggable)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IDrawable)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IEventDispatcher)
+HX_DECLARE_CLASS5(haxe,ui,toolkit,core,interfaces,IStyleableDisplayObject)
 HX_DECLARE_CLASS1(hxSerial,Serial)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObject)
 HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObjectContainer)
@@ -56,27 +71,37 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::openfl::_legacy::display::Spri
 
 		::CollectionGlobal collectionGlobalObject;
 		int loopCounterMainInt;
+		int loopCounterCompanyWordInt;
 		Array< ::String > sendInstructionToArduinoStringArray;
 		int serialCounterInt;
 		bool serialEstablishedBool;
 		int serialIndexInt;
 		int serialLength;
 		bool soundProgressBool;
+		int tagAmountInt;
 		::UIPopupAddObjectMuseum uiPopupAddMuseumObject;
 		::UIPopupAddObjectTag uiPopupAddTagObject;
 		::UIPopupAddObjectVisitor uiPopupAddVisitorObject;
 		::UIPopupEditObjectMuseum uiPopupEditMuseumObject;
 		::UIPopupEditObjectTag uiPopupEditTagObject;
 		::UIPopupEditObjectVisitor uiPopupEditVisitorObject;
+		::haxe::ui::toolkit::controls::popups::Popup uiPopupLoadingWordObject;
 		::UIPopupRemoveObjectMuseum uiPopupRemoveMuseumObject;
 		::UIPopupRemoveObjectTag uiPopupRemoveTagObject;
 		::UIPopupRemoveObjectVisitor uiPopupRemoveVisitorObject;
+		bool updateAfterBool;
 		::hxSerial::Serial serialObject;
 		virtual Void SearchForSerialConnectionVoid( );
 		Dynamic SearchForSerialConnectionVoid_dyn();
 
 		virtual Void UpdateVoid( ::openfl::_legacy::events::Event event);
 		Dynamic UpdateVoid_dyn();
+
+		virtual Void UpdateAfterCompanyWordVoid( );
+		Dynamic UpdateAfterCompanyWordVoid_dyn();
+
+		virtual Void UpdateBeforeCompanyWordVoid( );
+		Dynamic UpdateBeforeCompanyWordVoid_dyn();
 
 		virtual Void UpdateSlowVoid( );
 		Dynamic UpdateSlowVoid_dyn();
