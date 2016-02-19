@@ -5338,11 +5338,7 @@
    <depend name="include/EnumMuseumType.h"/>
    <depend name="include/ObjectMuseum.h"/>
    <depend name="include/ObjectTag.h"/>
-   <depend name="include/Sys.h"/>
    <depend name="include/UIPopupAddObjectMuseum.h"/>
-   <depend name="include/haxe/Log.h"/>
-   <depend name="include/haxe/io/Eof.h"/>
-   <depend name="include/haxe/io/Input.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Container.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Grid.h"/>
    <depend name="include/haxe/ui/toolkit/containers/VBox.h"/>
@@ -5374,8 +5370,6 @@
    <depend name="include/haxe/ui/toolkit/data/IDataSource.h"/>
    <depend name="include/haxe/ui/toolkit/events/UIEvent.h"/>
    <depend name="include/openfl/_legacy/events/Event.h"/>
-   <depend name="include/sys/io/File.h"/>
-   <depend name="include/sys/io/FileInput.h"/>
   </file>
   <file name="src/Type.cpp">
    <depend name="include/Reflect.h"/>
@@ -5460,10 +5454,17 @@
   </file>
   <file name="src/ObjectTag.cpp">
    <depend name="include/CollectionGlobal.h"/>
+   <depend name="include/EnumCompanyWordPosition.h"/>
    <depend name="include/EnumTagFeelType.h"/>
    <depend name="include/EnumTagType.h"/>
    <depend name="include/ObjectTag.h"/>
    <depend name="include/Std.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/sys/io/File.h"/>
+   <depend name="include/sys/io/FileInput.h"/>
   </file>
   <file name="src/ObjectMuseumUI.cpp">
    <depend name="include/CollectionGlobal.h"/>
@@ -5537,7 +5538,9 @@
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
   </file>
   <file name="src/ObjectGeneratorSentence.cpp">
+   <depend name="include/CollectionFunction.h"/>
    <depend name="include/CollectionGlobal.h"/>
+   <depend name="include/EnumCompanyWordPosition.h"/>
    <depend name="include/EnumTagFeelType.h"/>
    <depend name="include/EnumTagType.h"/>
    <depend name="include/EnumTagTypeSub.h"/>
@@ -5729,6 +5732,9 @@
   </file>
   <file name="src/EnumMuseumType.cpp">
    <depend name="include/EnumMuseumType.h"/>
+  </file>
+  <file name="src/EnumCompanyWordPosition.cpp">
+   <depend name="include/EnumCompanyWordPosition.h"/>
   </file>
   <file name="src/DocumentClass.cpp">
    <depend name="include/DocumentClass.h"/>
@@ -6046,6 +6052,7 @@
    <depend name="include/EnumVisitorMode.h"/>
    <depend name="include/EnumMuseumMode.h"/>
    <depend name="include/EnumMuseumType.h"/>
+   <depend name="include/EnumCompanyWordPosition.h"/>
    <depend name="include/sys/net/Socket.h"/>
    <depend name="include/sys/net/_Socket/SocketOutput.h"/>
    <depend name="include/sys/net/_Socket/SocketInput.h"/>

@@ -48,17 +48,6 @@ class UIPopupAddObjectMuseum{
         /*Adding a callback function of when the button is pressed.*/
         buttonObject.onClick = function(_e){
 
-            Sys.command("python3 WordnikGetPhrase.py 'cable' > Phrase.txt");
-            var fileTXTObject:sys.io.FileInput = sys.io.File.read("./Phrase.txt", false);
-            try{
-                while(true){
-                    var string:String = fileTXTObject.readLine();
-                    trace(string);
-                }
-            }
-            catch(_exception:haxe.io.Eof){}
-            fileTXTObject.close();
-
             /*Adding OK and CANCEL button for the popup.*/
             var buttonControlInt:Int = 0;
             buttonControlInt |= PopupButton.OK;

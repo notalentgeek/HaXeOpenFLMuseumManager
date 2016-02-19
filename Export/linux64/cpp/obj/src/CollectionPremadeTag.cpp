@@ -550,11 +550,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVoid( ::CollectionGlobal _collect
 		HX_STACK_LINE(105)
 		tmp165->SetNounSStringObject(HX_HCSTRING("Woods","\x86","\xb8","\x8f","\x61"));
 		HX_STACK_LINE(106)
-		::ObjectTag tmp166 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,false,HX_HCSTRING("Young Man","\x12","\x4a","\x05","\x83"),::EnumTagType_obj::NOUN_ALIVE_ABSTRACT);		HX_STACK_VAR(tmp166,"tmp166");
+		::ObjectTag tmp166 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,false,HX_HCSTRING("Man","\x7a","\xc2","\x3a","\x00"),::EnumTagType_obj::NOUN_ALIVE_ABSTRACT);		HX_STACK_VAR(tmp166,"tmp166");
 		HX_STACK_LINE(106)
-		::ObjectTag tmp167 = tmp166->SetNounStringObject(HX_HCSTRING("Young Man","\x12","\x4a","\x05","\x83"));		HX_STACK_VAR(tmp167,"tmp167");
+		::ObjectTag tmp167 = tmp166->SetNounStringObject(HX_HCSTRING("Man","\x7a","\xc2","\x3a","\x00"));		HX_STACK_VAR(tmp167,"tmp167");
 		HX_STACK_LINE(106)
-		::ObjectTag tmp168 = tmp167->SetNounPosStringObject(HX_HCSTRING("Young Man's","\xfe","\x94","\x79","\x46"));		HX_STACK_VAR(tmp168,"tmp168");
+		::ObjectTag tmp168 = tmp167->SetNounPosStringObject(HX_HCSTRING("Man's","\x66","\xf7","\x4b","\x96"));		HX_STACK_VAR(tmp168,"tmp168");
 		HX_STACK_LINE(106)
 		::ObjectTag tmp169 = tmp168->SetNounSStringObject(HX_HCSTRING("Young men","\xae","\x95","\x1d","\x83"));		HX_STACK_VAR(tmp169,"tmp169");
 		HX_STACK_LINE(106)

@@ -40,8 +40,9 @@ class CollectionTagGeneral{
         new ObjectTag(_collectionGlobalObject, NEUTRAL, true, "Soft", ADJ).SetAdjectiveStringObject("Soft");
     }
     public static function TagGeneralStructAdvVoid(_collectionGlobalObject:CollectionGlobal){
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Bad", ADV).SetAdverbStringObject("Badly");
         new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Desperate", ADV).SetAdverbStringObject("Desperately");
-        new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Slow", ADV).SetAdverbStringObject("Bad");
+        new ObjectTag(_collectionGlobalObject, NEGATIVE, true, "Slow", ADV).SetAdverbStringObject("Slowly");
         new ObjectTag(_collectionGlobalObject, POSITIVE, true, "Perfect", ADV).SetAdverbStringObject("Excellent");
         new ObjectTag(_collectionGlobalObject, POSITIVE, true, "Quick", ADV).SetAdverbStringObject("Good");
     }

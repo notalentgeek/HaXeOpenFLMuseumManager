@@ -169,31 +169,33 @@ HX_STACK_ARG(_nameString,"_nameString")
 	HX_STACK_LINE(39)
 	this->collectionGlobalObject = _collectionGlobalObject;
 	HX_STACK_LINE(40)
-	::ObjectGeneratorSentence tmp = ::ObjectGeneratorSentence_obj::__new(hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(tmp,"tmp");
+	::CollectionGlobal tmp = this->collectionGlobalObject;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(40)
-	this->generatorSentenceObject = tmp;
+	::ObjectGeneratorSentence tmp1 = ::ObjectGeneratorSentence_obj::__new(tmp,hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(40)
+	this->generatorSentenceObject = tmp1;
 	HX_STACK_LINE(41)
 	this->indexGlobalInt = _indexGlobalInt;
 	HX_STACK_LINE(42)
 	this->nameString = _nameString;
 	HX_STACK_LINE(43)
-	::CollectionGlobal tmp1 = this->collectionGlobalObject;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(43)
-	tmp1->GetVisitorObjectArray()->push(hx::ObjectPtr<OBJ_>(this));
-	HX_STACK_LINE(44)
 	::CollectionGlobal tmp2 = this->collectionGlobalObject;		HX_STACK_VAR(tmp2,"tmp2");
+	HX_STACK_LINE(43)
+	tmp2->GetVisitorObjectArray()->push(hx::ObjectPtr<OBJ_>(this));
 	HX_STACK_LINE(44)
-	::ObjectVisitorUI tmp3 = ::ObjectVisitorUI_obj::__new(tmp2,hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(tmp3,"tmp3");
+	::CollectionGlobal tmp3 = this->collectionGlobalObject;		HX_STACK_VAR(tmp3,"tmp3");
 	HX_STACK_LINE(44)
-	this->visitorUIObject = tmp3;
+	::ObjectVisitorUI tmp4 = ::ObjectVisitorUI_obj::__new(tmp3,hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(tmp4,"tmp4");
+	HX_STACK_LINE(44)
+	this->visitorUIObject = tmp4;
 	HX_STACK_LINE(45)
-	::CollectionGlobal tmp4 = this->collectionGlobalObject;		HX_STACK_VAR(tmp4,"tmp4");
+	::CollectionGlobal tmp5 = this->collectionGlobalObject;		HX_STACK_VAR(tmp5,"tmp5");
 	HX_STACK_LINE(45)
-	tmp4->DetermineExhibitionFullThresholdVoid();
+	tmp5->DetermineExhibitionFullThresholdVoid();
 	HX_STACK_LINE(46)
-	int tmp5 = this->targetInt;		HX_STACK_VAR(tmp5,"tmp5");
+	int tmp6 = this->targetInt;		HX_STACK_VAR(tmp6,"tmp6");
 	HX_STACK_LINE(46)
-	this->GenerateExhibitionTargetVoid(tmp5);
+	this->GenerateExhibitionTargetVoid(tmp6);
 	HX_STACK_LINE(47)
 	this->visitorModeEnum = ::EnumVisitorMode_obj::SOFTWARE_AUTO;
 }

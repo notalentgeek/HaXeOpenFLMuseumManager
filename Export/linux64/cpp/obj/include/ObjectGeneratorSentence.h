@@ -18,12 +18,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectGeneratorSentence_obj : public hx::Object{
 		typedef hx::Object super;
 		typedef ObjectGeneratorSentence_obj OBJ_;
 		ObjectGeneratorSentence_obj();
-		Void __construct(::ObjectVisitor _visitorObject);
+		Void __construct(::CollectionGlobal _collectionGlobalObject,::ObjectVisitor _visitorObject);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectGeneratorSentence")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectGeneratorSentence_obj > __new(::ObjectVisitor _visitorObject);
+		static hx::ObjectPtr< ObjectGeneratorSentence_obj > __new(::CollectionGlobal _collectionGlobalObject,::ObjectVisitor _visitorObject);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectGeneratorSentence_obj();
@@ -37,14 +37,15 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectGeneratorSentence_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("ObjectGeneratorSentence","\x37","\xd6","\xc2","\x59"); }
 
+		::CollectionGlobal collectionGlobalObject;
 		::ObjectVisitor visitorObject;
-		virtual ::String AddWordString( ::CollectionGlobal _collectionGlobalObject,::EnumTagType _tagTypeEnum,::EnumTagTypeSub _tagTypeSubEnum);
+		virtual ::String AddWordString( ::EnumTagType _tagTypeEnum,::EnumTagTypeSub _tagTypeSubEnum);
 		Dynamic AddWordString_dyn();
 
 		virtual Dynamic DetermineProperCallbackFunction( ::EnumTagTypeSub _tagTypeSubEnum,::ObjectTag _tagObject);
 		Dynamic DetermineProperCallbackFunction_dyn();
 
-		virtual ::String GenerateSentenceString( ::CollectionGlobal _collectionGlobalObject,::String _patternString);
+		virtual ::String GenerateSentenceString( ::String _patternString);
 		Dynamic GenerateSentenceString_dyn();
 
 		virtual int RandomNumberGeneratorInt( int _randomNumberInt);
@@ -53,7 +54,7 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectGeneratorSentence_obj : public hx::Object{
 		virtual ::String WordFixString( ::String _fixString);
 		Dynamic WordFixString_dyn();
 
-		virtual ::String GenerateSentence3String( ::CollectionGlobal _collectionGlobalObject);
+		virtual ::String GenerateSentence3String( ::CollectionGlobal collectionGlobalObject);
 		Dynamic GenerateSentence3String_dyn();
 
 };

@@ -16,12 +16,12 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectTag_obj : public hx::Object{
 		typedef hx::Object super;
 		typedef ObjectTag_obj OBJ_;
 		ObjectTag_obj();
-		Void __construct(::CollectionGlobal _collectionGlobalObject,::EnumTagFeelType _feelEnum,bool _generalTagBool,::String _nameString,::EnumTagType _typeEnum);
+		Void __construct(::CollectionGlobal _collectionGlobalObject,::EnumTagFeelType _feelEnum,bool _generalTagBool,::String _nameOriginalString,::EnumTagType _typeEnum);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="ObjectTag")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< ObjectTag_obj > __new(::CollectionGlobal _collectionGlobalObject,::EnumTagFeelType _feelEnum,bool _generalTagBool,::String _nameString,::EnumTagType _typeEnum);
+		static hx::ObjectPtr< ObjectTag_obj > __new(::CollectionGlobal _collectionGlobalObject,::EnumTagFeelType _feelEnum,bool _generalTagBool,::String _nameOriginalString,::EnumTagType _typeEnum);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~ObjectTag_obj();
@@ -35,11 +35,14 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectTag_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("ObjectTag","\xbb","\xf4","\x55","\xe5"); }
 
-		::CollectionGlobal collectionGlobalObject;
 		::String adjectiveString;
 		::String adverbString;
+		::CollectionGlobal collectionGlobalObject;
+		Array< ::String > companyWordStringArray;
+		cpp::ArrayBase companyWordStructArray;
 		::EnumTagFeelType feelEnum;
 		bool generalTagBool;
+		::String nameOriginalString;
 		::String nameString;
 		::String nounPosString;
 		::String nounSPosString;
@@ -59,6 +62,9 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectTag_obj : public hx::Object{
 
 		virtual ::String GetAdverbString( );
 		Dynamic GetAdverbString_dyn();
+
+		virtual cpp::ArrayBase GetCompanyWordStructArray( );
+		Dynamic GetCompanyWordStructArray_dyn();
 
 		virtual ::EnumTagFeelType GetFeelEnum( );
 		Dynamic GetFeelEnum_dyn();

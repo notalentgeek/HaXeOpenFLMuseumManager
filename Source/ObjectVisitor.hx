@@ -37,7 +37,7 @@ class ObjectVisitor{
         _nameString:String
     ){
         collectionGlobalObject = _collectionGlobalObject;
-        generatorSentenceObject = new ObjectGeneratorSentence(this);
+        generatorSentenceObject = new ObjectGeneratorSentence(collectionGlobalObject, this);
         indexGlobalInt = _indexGlobalInt;
         nameString = _nameString;
         collectionGlobalObject.GetVisitorObjectArray().push(this);

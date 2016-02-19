@@ -1,35 +1,99 @@
 import CollectionEnum;
+import CollectionStruct;
+
+
+
+
+
 class ObjectTag{
-    private var collectionGlobalObject:CollectionGlobal = null;
-    private var adjectiveString:String = "";
-    private var adverbString:String = "";
-    private var feelEnum:EnumTagFeelType = null;
-    private var generalTagBool:Bool = true;
-    private var nameString:String = "";
-    private var nounPosString:String = "";
-    private var nounSPosString:String = "";
-    private var nounSString:String = "";
-    private var nounString:String = "";
-    private var typeEnum:EnumTagType = null;
-    private var verb1String:String = "";
-    private var verb2String:String = "";
-    private var verb3String:String = "";
-    private var verbIngString:String = "";
-    private var verbSString:String = "";
+
+
+
+
+
+    private var adjectiveString         :String                     = "";
+    private var adverbString            :String                     = "";
+    private var collectionGlobalObject  :CollectionGlobal           = null;
+    private var companyWordStringArray  :Array<String>              = new Array<String>();
+    private var companyWordStructArray  :Array<StructCompanyWord>   = new Array<StructCompanyWord>();
+    private var feelEnum                :EnumTagFeelType            = null;
+    private var generalTagBool          :Bool                       = true;
+    private var nameOriginalString      :String                     = "";
+    private var nameString              :String                     = "";
+    private var nounPosString           :String                     = "";
+    private var nounSPosString          :String                     = "";
+    private var nounSString             :String                     = "";
+    private var nounString              :String                     = "";
+    private var typeEnum                :EnumTagType                = null;
+    private var verb1String             :String                     = "";
+    private var verb2String             :String                     = "";
+    private var verb3String             :String                     = "";
+    private var verbIngString           :String                     = "";
+    private var verbSString             :String                     = "";
+
+
+
+
+
     public function new(
-        _collectionGlobalObject:CollectionGlobal,
-        _feelEnum:EnumTagFeelType,
-        _generalTagBool:Bool,
-        _nameString:String,
-        _typeEnum:EnumTagType
+        _collectionGlobalObject     :CollectionGlobal,
+        _feelEnum                   :EnumTagFeelType,
+        _generalTagBool             :Bool,
+        _nameOriginalString         :String,
+        _typeEnum                   :EnumTagType
     ){
-        collectionGlobalObject = _collectionGlobalObject;
-        feelEnum = _feelEnum;
-        generalTagBool = _generalTagBool;
-        typeEnum = _typeEnum;
-        nameString = _nameString + "_" + Std.string(typeEnum); /*The most basic word from this tag plus additional suffix from typeEnum.*/
+
+        collectionGlobalObject      = _collectionGlobalObject;
+        feelEnum                    = _feelEnum;
+        generalTagBool              = _generalTagBool;
+        typeEnum                    = _typeEnum;
+        nameOriginalString          = _nameOriginalString;
+        nameString                  = nameOriginalString + "_" + Std.string(typeEnum); /*The most basic word from this tag plus additional suffix from typeEnum.*/
         AddToArrayVoid();
+
+        /*PENDING: Change this into a function.*/
+        if(
+            typeEnum != ADJ &&
+            typeEnum != ADV &&
+            typeEnum != NOUN_ALIVE_CONCRETE &&
+            typeEnum != NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER
+        ){
+
+            var part1String:String      = "python3 WordnikGetPhrase.py '";
+            var part2String:String      = nameOriginalString;
+            var part3String:String      = "' > Phrase.txt";
+            var partAllString:String    = part1String + part2String + part3String;
+
+            Sys.command(partAllString);
+            var fileTXTObject:sys.io.FileInput = sys.io.File.read("./Phrase.txt", false);
+            try{
+                while(true){
+
+                    var receivedString              :String                     = fileTXTObject.readLine();
+                    var receivedStringArray         :Array<String>              = receivedString.split("_");
+                    var companyWordPositionEnum     :EnumCompanyWordPosition    = Type.createEnum(EnumCompanyWordPosition, receivedStringArray[0]);
+                    var stringString                :String                     = receivedStringArray[1];
+                    var companyWordStruct           :StructCompanyWord          = {
+                        companyWordPositionEnum     :companyWordPositionEnum,
+                        mainWordString              :nameOriginalString,
+                        stringString                :stringString,
+                        tagFeelTypeEnum             :NEUTRAL
+                    }
+                    companyWordStructArray.push(companyWordStruct);
+
+                }
+            }
+            catch(_exception:haxe.io.Eof){}
+            fileTXTObject.close();
+
+        }
+
     }
+
+
+
+
+
     private function AddToArrayVoid(){
         if(generalTagBool == true){
             collectionGlobalObject.GetTagGeneralObjectArray().push(this);
@@ -42,6 +106,7 @@ class ObjectTag{
     }
     public function GetAdjectiveString(){ return adjectiveString; }
     public function GetAdverbString(){ return adverbString; }
+    public function GetCompanyWordStructArray(){ return companyWordStructArray; }
     public function GetFeelEnum(){ return feelEnum; }
     public function GetGeneralTagBool(){ return generalTagBool; }
     public function GetNameString(){ return nameString; }
@@ -60,7 +125,7 @@ class ObjectTag{
         if     (generalTagBool == true ){ collectionGlobalObject.GetTagGeneralObjectArray()     .remove(this); }
         else if(generalTagBool == false){ collectionGlobalObject.GetTagObjectArray()            .remove(this); }
 
-        
+
     }
     public function SetAdjectiveStringObject(_adjectiveString:String){ adjectiveString = _adjectiveString; return this; }
     public function SetAdverbStringObject(_adverbString:String){ adverbString = _adverbString; return this; }

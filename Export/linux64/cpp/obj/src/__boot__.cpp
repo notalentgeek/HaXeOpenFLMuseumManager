@@ -156,6 +156,9 @@
 #ifndef INCLUDED_EnumMuseumType
 #include <EnumMuseumType.h>
 #endif
+#ifndef INCLUDED_EnumCompanyWordPosition
+#include <EnumCompanyWordPosition.h>
+#endif
 #ifndef INCLUDED_sys_net_Socket
 #include <sys/net/Socket.h>
 #endif
@@ -1532,6 +1535,7 @@ hx::RegisterResources( hx::GetResources() );
 ::EnumVisitorMode_obj::__register();
 ::EnumMuseumMode_obj::__register();
 ::EnumMuseumType_obj::__register();
+::EnumCompanyWordPosition_obj::__register();
 ::sys::net::Socket_obj::__register();
 ::sys::net::_Socket::SocketOutput_obj::__register();
 ::sys::net::_Socket::SocketInput_obj::__register();
@@ -2023,6 +2027,7 @@ hx::RegisterResources( hx::GetResources() );
 ::EnumVisitorMode_obj::__boot();
 ::EnumMuseumMode_obj::__boot();
 ::EnumMuseumType_obj::__boot();
+::EnumCompanyWordPosition_obj::__boot();
 ::openfl::_legacy::utils::ByteArray_obj::__init__();
 ::sys::net::Host_obj::__init__();
 ::EReg_obj::__boot();

@@ -103,7 +103,7 @@ class CollectionPremadeTag{
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Wolf", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Wolf").SetNounPosStringObject("Wolf's").SetNounSStringObject("Wolfs").SetNounSPosStringObject("Wolfs'");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Woman", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Woman").SetNounPosStringObject("Woman's").SetNounSStringObject("Women").SetNounSPosStringObject("Women's");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Wood", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Wood").SetNounSStringObject("Woods");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Young Man", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Young Man").SetNounPosStringObject("Young Man's").SetNounSStringObject("Young men").SetNounSPosStringObject("Young men's");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Man", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Man").SetNounPosStringObject("Man's").SetNounSStringObject("Young men").SetNounSPosStringObject("Young men's");
         new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Extravagant", ADJ).SetAdjectiveStringObject("Extravagant");
         new ObjectTag(_collectionGlobalObject, POSITIVE, false, "Extravagantly", ADV).SetAdverbStringObject("Extravagantly");
         /*

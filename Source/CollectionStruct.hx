@@ -31,6 +31,17 @@ typedef StructChild = {
 
 
 
+typedef StructCompanyWord = {
+    companyWordPositionEnum     :EnumCompanyWordPosition,
+    mainWordString              :String,
+    stringString                :String,
+    tagFeelTypeEnum             :EnumTagFeelType
+};
+
+
+
+
+
 /*==================================================
 This struct is for combination of ListSelector object and its Text object descriptor/title.*/
 typedef StructListSelector = {
@@ -47,7 +58,7 @@ typedef StructListSelector = {
 This struct is for any museum object.
 The name alt string is made to make easier String parsing.
 The name full string is made to make easier to user to understand the program.*/
-typedef StructName = { 
+typedef StructName = {
     nameAltString                   :String,
     nameFullString                  :String
 };
@@ -59,7 +70,7 @@ typedef StructName = {
 
 /*==================================================
 Struct for count how many times a visitor received the same tag object.*/
-typedef StructTagCounter = { 
+typedef StructTagCounter = {
     tagObject                       :ObjectTag,
     tagCounterInt                   :Int
 };
@@ -70,7 +81,7 @@ typedef StructTagCounter = {
 
 
 /*==================================================*/
-typedef StructVisitorVisitExhibition = { 
+typedef StructVisitorVisitExhibition = {
     currentExhibitionTimeInt        :Int,
     exhibitionNameAltString         :String
 };

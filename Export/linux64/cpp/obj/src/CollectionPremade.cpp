@@ -273,7 +273,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(118)
 		::CollectionGlobal tmp80 = _collectionGlobalObject;		HX_STACK_VAR(tmp80,"tmp80");
 		HX_STACK_LINE(118)
-		::ObjectTag tmp81 = ::CollectionFunction_obj::FindTagObject(tmp80,false,HX_HCSTRING("Young Man_NOUN_ALIVE_ABSTRACT","\x0c","\x52","\x83","\x03"));		HX_STACK_VAR(tmp81,"tmp81");
+		::ObjectTag tmp81 = ::CollectionFunction_obj::FindTagObject(tmp80,false,HX_HCSTRING("Man_NOUN_ALIVE_ABSTRACT","\x74","\x6e","\xe6","\xbe"));		HX_STACK_VAR(tmp81,"tmp81");
 		HX_STACK_LINE(107)
 		Array< ::Dynamic > exhibition004TagObjectArray = Array_obj< ::Dynamic >::__new().Add(tmp61).Add(tmp63).Add(tmp65).Add(tmp67).Add(tmp69).Add(tmp71).Add(tmp73).Add(tmp75).Add(tmp77).Add(tmp79).Add(tmp81);		HX_STACK_VAR(exhibition004TagObjectArray,"exhibition004TagObjectArray");
 		HX_STACK_LINE(120)

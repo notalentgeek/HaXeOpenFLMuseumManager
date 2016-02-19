@@ -115,7 +115,7 @@ class CollectionPremade{
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Slender_ADJ"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Table_NOUN_INANIMATE_PLACE_CONCRETE_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "The Lyte Jewel_NOUN_INANIMATE_HOLD_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Young Man_NOUN_ALIVE_ABSTRACT")
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Man_NOUN_ALIVE_ABSTRACT")
         ];
         var exhibition005ExplanationStringArray:Array<String> = [
             "On the head's left side was placed a crested and masked helmet wrapped in cloths.",
@@ -221,7 +221,7 @@ class CollectionPremade{
         new ObjectMuseum(_collectionGlobalObject, exhibition006ExplanationStringArray, "EXH_006", "Gold Belt Buckle From The Ship Burial At Sutton Hoo", "ROM_003", exhibition006TagObjectArray, EXH);
         new ObjectMuseum(_collectionGlobalObject, exhibition007ExplanationStringArray, "EXH_007", "Copper Ingot In The Shape Of An Oxhide", "ROM_004", exhibition007TagObjectArray, EXH);
         new ObjectMuseum(_collectionGlobalObject, exhibition008ExplanationStringArray, "EXH_008", "Red Polished Ware Figurine Cradling A Child", "ROM_004", exhibition008TagObjectArray, EXH);
-    
+
     }
     /*==================================================*/
 

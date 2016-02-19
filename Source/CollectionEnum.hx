@@ -1,3 +1,12 @@
+enum EnumCompanyWordPosition{
+    PRE;
+    SUF;
+}
+
+
+
+
+
 /*==================================================
 An enum that controls museum type.
 EXH is for any museum object that is exhibition.
@@ -14,7 +23,7 @@ enum EnumMuseumType{
 
 /*==================================================
 This is an enum for controlling object museum update mode before deletion.
-REQ_CH_PARENT is for any museum object that is still has children objects 
+REQ_CH_PARENT is for any museum object that is still has children objects
     attached to it.
 So the user need to remove any children of the museum object with REQ_CH_PARENT
     to a new parent.

@@ -469,6 +469,7 @@
 "obj/linux64-debug/2af284d7_EnumVisitorMode.o"
 "obj/linux64-debug/2af284d7_EnumMuseumMode.o"
 "obj/linux64-debug/2af284d7_EnumMuseumType.o"
+"obj/linux64-debug/2af284d7_EnumCompanyWordPosition.o"
 "obj/linux64-debug/2af284d7_DocumentClass.o"
 "obj/linux64-debug/2af284d7_Main.o"
 "obj/linux64-debug/78945791_Sprite.o"

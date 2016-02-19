@@ -9,9 +9,9 @@ def WordnikGetPhrase(_searchString):
     exampleObjectArray = wordAPIObject.getPhrases(searchString, limit = 10, wlmi = 0, useCanonical = False)
     for indexInt in range(0, len(exampleObjectArray)):
         if exampleObjectArray[indexInt].gram1 == searchString:
-            print(searchString + " " + exampleObjectArray[indexInt].gram2)
+            print("PRE_" + exampleObjectArray[indexInt].gram2)
         elif exampleObjectArray[indexInt].gram2 == searchString:
-            print(exampleObjectArray[indexInt].gram1 + " " + searchString)
+            print("SUF_" + exampleObjectArray[indexInt].gram1)
 
 if __name__ == '__main__':
     _searchString = str(sys.argv[1])
