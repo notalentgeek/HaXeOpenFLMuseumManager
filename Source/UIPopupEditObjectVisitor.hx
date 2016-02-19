@@ -347,7 +347,7 @@ class UIPopupEditObjectVisitor{
             else{
                 selectCurrentExhibitionListSelectorObject.text = "In Lobby";
             }
-            
+
         }
     }
     private function ResetSelectModeListSelectorObjectVoid(){
@@ -466,9 +466,10 @@ class UIPopupEditObjectVisitor{
                 Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
                 var loopCounter2Int:Int = 0;
                 while(loopCounter2Int < selectedVisitorObject.GetSentenceStringArray().length){
+                    if(selectedVisitorObject.GetNameString() == "Visitor 1"){ trace(selectedVisitorObject.GetSentenceStringArray()[loopCounter2Int]); }
                     selectedVisitorSentenceStringArray.push(selectedVisitorObject.GetSentenceStringArray()[loopCounter2Int]);
                     Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selectedVisitorSentenceStringArray[selectedVisitorSentenceStringArray.length - 1]);
-                    
+
                     loopCounter2Int ++;
                 }
             }
@@ -497,7 +498,7 @@ class UIPopupEditObjectVisitor{
     }
 
     private function UpdateDisplayVisitorIndexLocalTextObjectVoid(){
-        if(selectedVisitorObject != null){ displayVisitorIndexLocalTextObject.text = "" + selectedVisitorObject.GetIndexLocalInt(); } 
+        if(selectedVisitorObject != null){ displayVisitorIndexLocalTextObject.text = "" + selectedVisitorObject.GetIndexLocalInt(); }
     }
 
     private function UpdateSelectCurrentExhibitionListSelectorObjectVoid(){
@@ -534,7 +535,7 @@ class UIPopupEditObjectVisitor{
                 else{
                     if(selectCurrentExhibitionListSelectorObject.selectedIndex != -1){
                        selectedVisitorObject.ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, selectCurrentExhibitionListSelectorObject.text));
-                    } 
+                    }
                 }
             }
         }

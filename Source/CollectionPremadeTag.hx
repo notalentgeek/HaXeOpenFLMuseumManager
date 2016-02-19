@@ -59,7 +59,7 @@ class CollectionPremadeTag{
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "James", NOUN_ALIVE_CONCRETE).SetNounStringObject("James").SetNounPosStringObject("James'");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Crown Of Thorn", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Crown Of Thorn").SetNounSStringObject("Crown Of Thorns");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Jewel", NOUN_INANIMATE_WEAR_CONCRETE).SetNounStringObject("Jewel").SetNounSStringObject("Jewels");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "John, Duke Of Berry", NOUN_ALIVE_CONCRETE).SetNounStringObject("John, Duke Of Berry").SetNounPosStringObject("John, Duke Of Berry's");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "John Duke Of Berry", NOUN_ALIVE_CONCRETE).SetNounStringObject("John Duke Of Berry").SetNounPosStringObject("John Duke Of Berry's");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Lincolnshire", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Lincolnshire");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Lion", NOUN_ALIVE_ABSTRACT).SetNounStringObject("Lion").SetNounPosStringObject("Lion's").SetNounSStringObject("Lions").SetNounSPosStringObject("Lions'");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Louvre", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Louvre");
@@ -90,7 +90,7 @@ class CollectionPremadeTag{
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Table", NOUN_INANIMATE_PLACE_CONCRETE_OWNER).SetNounStringObject("Table").SetNounSStringObject("Tables");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "The Holy Thorn Reliquary", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("The Holy Thorn Reliquary").SetNounSStringObject("The Holy Thorn Reliquaries");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "The Lyte Jewel", NOUN_INANIMATE_HOLD_CONCRETE).SetNounStringObject("Club").SetNounSStringObject("Clubs");
-        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "The Sutton Hoo", NOUN_ALIVE_CONCRETE).SetNounStringObject("John, Duke Of Berry").SetNounPosStringObject("John, Duke Of Berry's");
+        new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "The Sutton Hoo", NOUN_ALIVE_CONCRETE).SetNounStringObject("The Sutton Hoo").SetNounPosStringObject("The Sutton Hoo's");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Turkey", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Turkey");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Uluburun", NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER).SetNounStringObject("Uluburun");
         new ObjectTag(_collectionGlobalObject, NEUTRAL, false, "Valois", NOUN_INANIMATE_WEAR_ABSTRACT).SetNounStringObject("Valois");

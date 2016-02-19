@@ -76,7 +76,7 @@ class CollectionPremade{
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Wood_NOUN_INANIMATE_HOLD_CONCRETE")
         ];
         var exhibition003ExplanationStringArray:Array<String> = [
-            "The Holy Thorn Reliquary was probably created in the 1390s in Paris for John, Duke of Berry, to house a relic of the Crown of Thorns.",
+            "The Holy Thorn Reliquary was probably created in the 1390s in Paris for John Duke of Berry, to house a relic of the Crown of Thorns.",
             "The reliquary was bequeathed to the British Museum in 1898 by Ferdinand De Rothschild as part of the Waddesdon Bequest.",
             "It is one of a small number of major goldsmiths' works or joyaux that survive from the extravagant world of the courts of the Valois royal family around 1400.",
             "It is made of gold, lavishly decorated with jewels and pearls, and uses the technique of enamelling en ronde bosse, or in the round, which had been recently developed when the reliquary was made, to create a total of 28 three-dimensional figures, mostly in white enamel."
@@ -89,7 +89,7 @@ class CollectionPremade{
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Gold_NOUN_INANIMATE_HOLD_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Goldsmith_NOUN_ALIVE_ABSTRACT"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Jewel_NOUN_INANIMATE_WEAR_CONCRETE"),
-            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "John, Duke Of Berry_NOUN_ALIVE_CONCRETE"),
+            CollectionFunction.FindTagObject(_collectionGlobalObject, false, "John Duke Of Berry_NOUN_ALIVE_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Paris_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Pearl_NOUN_INANIMATE_HOLD_CONCRETE"),
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Reliquary_NOUN_INANIMATE_HOLD_CONCRETE"),

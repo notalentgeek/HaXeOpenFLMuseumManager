@@ -298,11 +298,11 @@ Void CollectionPremadeTag_obj::PremadeTagStructVoid( ::CollectionGlobal _collect
 		HX_STACK_LINE(61)
 		tmp83->SetNounSStringObject(HX_HCSTRING("Jewels","\x70","\xb0","\xd6","\x0c"));
 		HX_STACK_LINE(62)
-		::ObjectTag tmp84 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,false,HX_HCSTRING("John, Duke Of Berry","\x83","\xc8","\xfe","\x1c"),::EnumTagType_obj::NOUN_ALIVE_CONCRETE);		HX_STACK_VAR(tmp84,"tmp84");
+		::ObjectTag tmp84 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,false,HX_HCSTRING("John Duke Of Berry","\x8d","\x5e","\x2e","\x51"),::EnumTagType_obj::NOUN_ALIVE_CONCRETE);		HX_STACK_VAR(tmp84,"tmp84");
 		HX_STACK_LINE(62)
-		::ObjectTag tmp85 = tmp84->SetNounStringObject(HX_HCSTRING("John, Duke Of Berry","\x83","\xc8","\xfe","\x1c"));		HX_STACK_VAR(tmp85,"tmp85");
+		::ObjectTag tmp85 = tmp84->SetNounStringObject(HX_HCSTRING("John Duke Of Berry","\x8d","\x5e","\x2e","\x51"));		HX_STACK_VAR(tmp85,"tmp85");
 		HX_STACK_LINE(62)
-		tmp85->SetNounPosStringObject(HX_HCSTRING("John, Duke Of Berry's","\xaf","\x51","\xa4","\x70"));
+		tmp85->SetNounPosStringObject(HX_HCSTRING("John Duke Of Berry's","\x39","\xfe","\x6c","\xc0"));
 		HX_STACK_LINE(63)
 		::ObjectTag tmp86 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,false,HX_HCSTRING("Lincolnshire","\xa8","\xe2","\xbb","\x62"),::EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER);		HX_STACK_VAR(tmp86,"tmp86");
 		HX_STACK_LINE(63)
@@ -474,9 +474,9 @@ Void CollectionPremadeTag_obj::PremadeTagStructVoid( ::CollectionGlobal _collect
 		HX_STACK_LINE(93)
 		::ObjectTag tmp140 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,false,HX_HCSTRING("The Sutton Hoo","\x98","\x13","\x84","\x93"),::EnumTagType_obj::NOUN_ALIVE_CONCRETE);		HX_STACK_VAR(tmp140,"tmp140");
 		HX_STACK_LINE(93)
-		::ObjectTag tmp141 = tmp140->SetNounStringObject(HX_HCSTRING("John, Duke Of Berry","\x83","\xc8","\xfe","\x1c"));		HX_STACK_VAR(tmp141,"tmp141");
+		::ObjectTag tmp141 = tmp140->SetNounStringObject(HX_HCSTRING("The Sutton Hoo","\x98","\x13","\x84","\x93"));		HX_STACK_VAR(tmp141,"tmp141");
 		HX_STACK_LINE(93)
-		tmp141->SetNounPosStringObject(HX_HCSTRING("John, Duke Of Berry's","\xaf","\x51","\xa4","\x70"));
+		tmp141->SetNounPosStringObject(HX_HCSTRING("The Sutton Hoo's","\x04","\x4c","\x62","\x8b"));
 		HX_STACK_LINE(94)
 		::ObjectTag tmp142 = ::ObjectTag_obj::__new(_collectionGlobalObject,::EnumTagFeelType_obj::NEUTRAL,false,HX_HCSTRING("Turkey","\x8e","\x0a","\x88","\x3f"),::EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER);		HX_STACK_VAR(tmp142,"tmp142");
 		HX_STACK_LINE(94)

@@ -121,7 +121,7 @@ class Main extends Sprite{
         */
         /*Change the number (first parameter) to change the initial visitor when the application starts.*/
         CollectionPremade       .PremadeVisitorObjectVoid       (10, collectionGlobalObject);
-        
+
         /*Refer UpdateVoid function as main loop function.*/
         addEventListener(Event.ENTER_FRAME, UpdateVoid);
 
@@ -181,7 +181,7 @@ class Main extends Sprite{
             if(serialEstablishedBool == true && soundProgressBool == false){
                 if(serialObject.available() > 0){
                     var string:String = serialObject.readBytes(7);
-                    if(string.substring(0, 3) == "EXH"){ 
+                    if(string.substring(0, 3) == "EXH"){
 
                         if(collectionGlobalObject.GetVisitorObjectArray()[0].GetVisitorModeEnum() == HARDWARE_MANUAL){
                             collectionGlobalObject.GetVisitorObjectArray()[0].ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, string));
@@ -232,7 +232,7 @@ class Main extends Sprite{
         uiPopupRemoveMuseumObject       .UpdateVoid();
         uiPopupRemoveTagObject          .UpdateVoid();
         uiPopupRemoveVisitorObject      .UpdateVoid();
-        
+
     }
     /*==================================================*/
 

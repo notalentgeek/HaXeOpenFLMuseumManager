@@ -169,7 +169,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(67)
 		Array< ::Dynamic > exhibition002TagObjectArray = Array_obj< ::Dynamic >::__new().Add(tmp15).Add(tmp17).Add(tmp19).Add(tmp21).Add(tmp23).Add(tmp25).Add(tmp27).Add(tmp29).Add(tmp31);		HX_STACK_VAR(exhibition002TagObjectArray,"exhibition002TagObjectArray");
 		HX_STACK_LINE(78)
-		Array< ::String > exhibition003ExplanationStringArray = Array_obj< ::String >::__new().Add(HX_HCSTRING("The Holy Thorn Reliquary was probably created in the 1390s in Paris for John, Duke of Berry, to house a relic of the Crown of Thorns.","\xed","\xd1","\xc1","\x79")).Add(HX_HCSTRING("The reliquary was bequeathed to the British Museum in 1898 by Ferdinand De Rothschild as part of the Waddesdon Bequest.","\xa2","\x04","\x24","\x2b")).Add(HX_HCSTRING("It is one of a small number of major goldsmiths' works or joyaux that survive from the extravagant world of the courts of the Valois royal family around 1400.","\x61","\xb4","\x99","\xe1")).Add(HX_HCSTRING("It is made of gold, lavishly decorated with jewels and pearls, and uses the technique of enamelling en ronde bosse, or in the round, which had been recently developed when the reliquary was made, to create a total of 28 three-dimensional figures, mostly in white enamel.","\xec","\x83","\xee","\x08"));		HX_STACK_VAR(exhibition003ExplanationStringArray,"exhibition003ExplanationStringArray");
+		Array< ::String > exhibition003ExplanationStringArray = Array_obj< ::String >::__new().Add(HX_HCSTRING("The Holy Thorn Reliquary was probably created in the 1390s in Paris for John Duke of Berry, to house a relic of the Crown of Thorns.","\xdd","\x0a","\x70","\xca")).Add(HX_HCSTRING("The reliquary was bequeathed to the British Museum in 1898 by Ferdinand De Rothschild as part of the Waddesdon Bequest.","\xa2","\x04","\x24","\x2b")).Add(HX_HCSTRING("It is one of a small number of major goldsmiths' works or joyaux that survive from the extravagant world of the courts of the Valois royal family around 1400.","\x61","\xb4","\x99","\xe1")).Add(HX_HCSTRING("It is made of gold, lavishly decorated with jewels and pearls, and uses the technique of enamelling en ronde bosse, or in the round, which had been recently developed when the reliquary was made, to create a total of 28 three-dimensional figures, mostly in white enamel.","\xec","\x83","\xee","\x08"));		HX_STACK_VAR(exhibition003ExplanationStringArray,"exhibition003ExplanationStringArray");
 		HX_STACK_LINE(85)
 		::CollectionGlobal tmp32 = _collectionGlobalObject;		HX_STACK_VAR(tmp32,"tmp32");
 		HX_STACK_LINE(85)
@@ -201,7 +201,7 @@ Void CollectionPremade_obj::PremadeExhibitionNewObjectVoid( ::CollectionGlobal _
 		HX_STACK_LINE(92)
 		::CollectionGlobal tmp46 = _collectionGlobalObject;		HX_STACK_VAR(tmp46,"tmp46");
 		HX_STACK_LINE(92)
-		::ObjectTag tmp47 = ::CollectionFunction_obj::FindTagObject(tmp46,false,HX_HCSTRING("John, Duke Of Berry_NOUN_ALIVE_CONCRETE","\x60","\x68","\x7e","\xde"));		HX_STACK_VAR(tmp47,"tmp47");
+		::ObjectTag tmp47 = ::CollectionFunction_obj::FindTagObject(tmp46,false,HX_HCSTRING("John Duke Of Berry_NOUN_ALIVE_CONCRETE","\x6a","\xff","\xee","\x42"));		HX_STACK_VAR(tmp47,"tmp47");
 		HX_STACK_LINE(93)
 		::CollectionGlobal tmp48 = _collectionGlobalObject;		HX_STACK_VAR(tmp48,"tmp48");
 		HX_STACK_LINE(93)

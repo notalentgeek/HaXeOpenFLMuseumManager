@@ -5127,6 +5127,7 @@
    <depend name="include/ObjectVisitorUI.h"/>
    <depend name="include/Std.h"/>
    <depend name="include/UIPopupEditObjectVisitor.h"/>
+   <depend name="include/haxe/Log.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Container.h"/>
    <depend name="include/haxe/ui/toolkit/containers/Grid.h"/>
    <depend name="include/haxe/ui/toolkit/containers/ListView.h"/>
