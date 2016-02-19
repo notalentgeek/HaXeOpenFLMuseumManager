@@ -5,26 +5,26 @@
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Name" />
-        <textInput id="UIPopupAddObjectTag_InputName" text=" " width="100%" />
-        
+        <textInput id="UIPopupAddObjectTag_InputName" text="" width="100%" />
+
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Feel" />
-        <listSelector id="UIPopupAddObjectTag_SelectFeel" text=" " width="100%" >
+        <listSelector id="UIPopupAddObjectTag_SelectFeel" text="" width="100%" >
             <array>POSITIVE, NEUTRAL, NEGATIVE</array>
         </listSelector>
-        
+
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="General" />
-        <listSelector id="UIPopupAddObjectTag_SelectGeneral" text=" " width="100%" >
+        <listSelector id="UIPopupAddObjectTag_SelectGeneral" text="" width="100%" >
             <array>Yes, No</array>
         </listSelector>
-        
+
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Tag Type" />
-        <listSelector id="UIPopupAddObjectTag_SelectTagType" text=" " width="100%" >
+        <listSelector id="UIPopupAddObjectTag_SelectTagType" text="" width="100%" >
             <array>
                 ADJ,
                 ADV,

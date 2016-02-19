@@ -317,37 +317,37 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(128)
 	::CollectionGlobal tmp6 = this->collectionGlobalObject;		HX_STACK_VAR(tmp6,"tmp6");
 	HX_STACK_LINE(128)
-	::CollectionPremade_obj::PremadeVisitorObjectVoid((int)10,tmp6);
-	HX_STACK_LINE(131)
-	::String tmp7 = ::openfl::_legacy::events::Event_obj::ENTER_FRAME;		HX_STACK_VAR(tmp7,"tmp7");
-	HX_STACK_LINE(131)
-	Dynamic tmp8 = this->UpdateVoid_dyn();		HX_STACK_VAR(tmp8,"tmp8");
-	HX_STACK_LINE(131)
-	this->addEventListener(tmp7,tmp8,null(),null(),null());
-	HX_STACK_LINE(133)
+	::CollectionPremade_obj::PremadeVisitorObjectVoid((int)30,tmp6);
+	HX_STACK_LINE(130)
+	::CollectionGlobal tmp7 = this->collectionGlobalObject;		HX_STACK_VAR(tmp7,"tmp7");
+	HX_STACK_LINE(130)
+	int tmp8 = tmp7->GetTagGeneralObjectArray()->length;		HX_STACK_VAR(tmp8,"tmp8");
+	HX_STACK_LINE(130)
 	::CollectionGlobal tmp9 = this->collectionGlobalObject;		HX_STACK_VAR(tmp9,"tmp9");
-	HX_STACK_LINE(133)
-	int tmp10 = tmp9->GetTagGeneralObjectArray()->length;		HX_STACK_VAR(tmp10,"tmp10");
-	HX_STACK_LINE(133)
-	::CollectionGlobal tmp11 = this->collectionGlobalObject;		HX_STACK_VAR(tmp11,"tmp11");
-	HX_STACK_LINE(133)
-	int tmp12 = tmp11->GetTagObjectArray()->length;		HX_STACK_VAR(tmp12,"tmp12");
-	HX_STACK_LINE(133)
-	int tmp13 = (tmp10 + tmp12);		HX_STACK_VAR(tmp13,"tmp13");
-	HX_STACK_LINE(133)
-	this->tagAmountInt = tmp13;
-	HX_STACK_LINE(134)
+	HX_STACK_LINE(130)
+	int tmp10 = tmp9->GetTagObjectArray()->length;		HX_STACK_VAR(tmp10,"tmp10");
+	HX_STACK_LINE(130)
+	int tmp11 = (tmp8 + tmp10);		HX_STACK_VAR(tmp11,"tmp11");
+	HX_STACK_LINE(130)
+	this->tagAmountInt = tmp11;
+	HX_STACK_LINE(131)
+	::haxe::ui::toolkit::core::PopupManager tmp12 = ::haxe::ui::toolkit::core::PopupManager_obj::get_instance();		HX_STACK_VAR(tmp12,"tmp12");
+	HX_STACK_LINE(131)
+	::haxe::ui::toolkit::controls::popups::Popup tmp13 = tmp12->showBusy(HX_HCSTRING("Cooking words!!!","\x5e","\x69","\xa9","\x71"),null(),null(),null(),null());		HX_STACK_VAR(tmp13,"tmp13");
+	HX_STACK_LINE(131)
+	this->uiPopupLoadingWordObject = tmp13;
+	HX_STACK_LINE(132)
 	::haxe::ui::toolkit::core::PopupManager tmp14 = ::haxe::ui::toolkit::core::PopupManager_obj::get_instance();		HX_STACK_VAR(tmp14,"tmp14");
-	HX_STACK_LINE(134)
-	::haxe::ui::toolkit::controls::popups::Popup tmp15 = tmp14->showBusy(HX_HCSTRING("Cooking words!!!","\x5e","\x69","\xa9","\x71"),null(),null(),null(),null());		HX_STACK_VAR(tmp15,"tmp15");
-	HX_STACK_LINE(134)
-	this->uiPopupLoadingWordObject = tmp15;
+	HX_STACK_LINE(132)
+	::haxe::ui::toolkit::controls::popups::Popup tmp15 = this->uiPopupLoadingWordObject;		HX_STACK_VAR(tmp15,"tmp15");
+	HX_STACK_LINE(132)
+	tmp14->showPopup(tmp15);
 	HX_STACK_LINE(135)
-	::haxe::ui::toolkit::core::PopupManager tmp16 = ::haxe::ui::toolkit::core::PopupManager_obj::get_instance();		HX_STACK_VAR(tmp16,"tmp16");
+	::String tmp16 = ::openfl::_legacy::events::Event_obj::ENTER_FRAME;		HX_STACK_VAR(tmp16,"tmp16");
 	HX_STACK_LINE(135)
-	::haxe::ui::toolkit::controls::popups::Popup tmp17 = this->uiPopupLoadingWordObject;		HX_STACK_VAR(tmp17,"tmp17");
+	Dynamic tmp17 = this->UpdateVoid_dyn();		HX_STACK_VAR(tmp17,"tmp17");
 	HX_STACK_LINE(135)
-	tmp16->showPopup(tmp17);
+	this->addEventListener(tmp16,tmp17,null(),null(),null());
 }
 ;
 	return null();

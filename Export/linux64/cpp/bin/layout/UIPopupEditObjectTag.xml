@@ -7,7 +7,7 @@
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="General" />
-        <listSelector id="UIPopupEditObjectTag_SelectGeneral" text=" " width="100%" >
+        <listSelector id="UIPopupEditObjectTag_SelectGeneral" text="" width="100%" >
             <array>Yes, No</array>
         </listSelector>
 
@@ -18,7 +18,7 @@
         <!--##################################################-->
 
         <text text="Tag" />
-        <listSelector disabled="true" id="UIPopupEditObjectTag_SelectTag" text=" " width="100%" >
+        <listSelector disabled="true" id="UIPopupEditObjectTag_SelectTag" text="" width="100%" >
         </listSelector>
 
         <!--##################################################-->
@@ -28,21 +28,21 @@
         <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
         <text text="Name" />
-        <textInput disabled="true" id="UIPopupEditObjectTag_InputName" text=" " width="100%" />
+        <textInput disabled="true" id="UIPopupEditObjectTag_InputName" text="" width="100%" />
 
         <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
         <text text="Feel" />
-        <listSelector disabled="true" id="UIPopupEditObjectTag_SelectFeel" text=" " width="100%" >
+        <listSelector disabled="true" id="UIPopupEditObjectTag_SelectFeel" text="" width="100%" >
             <array>POSITIVE, NEUTRAL, NEGATIVE</array>
         </listSelector>
 
         <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
         <text text="Tag Type" />
-        <listSelector disabled="true" id="UIPopupEditObjectTag_SelectTagType" text=" " width="100%" >
+        <listSelector disabled="true" id="UIPopupEditObjectTag_SelectTagType" text="" width="100%" >
             <array>
-                
+
                 ADJ,
                 ADV,
                 NOUN_ALIVE_ABSTRACT,

@@ -5,7 +5,7 @@
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Type"/>
-        <listSelector id="UIPopupAddObjectMuseum_SelectType" text=" " width="100%" >
+        <listSelector id="UIPopupAddObjectMuseum_SelectType" text="" width="100%" >
             <array>Exhibition, Floor, Room</array>
         </listSelector>
 
@@ -26,17 +26,17 @@
         <!--##################################################-->
 
         <text text="Parent Object" />
-        <listSelector disabled="true" id="UIPopupAddObjectMuseum_SelectObjectParent" text=" " width="100%" ></listSelector>
-        
+        <listSelector disabled="true" id="UIPopupAddObjectMuseum_SelectObjectParent" text="" width="100%" ></listSelector>
+
         <!--##################################################-->
 
         <text id="UIPopupAddObjectMuseum_InputExplanationText_1" text="Explanation" />
-        <textinput disabled="true" id="UIPopupAddObjectMuseum_InputExplanation_1" text=" " width="100%" ></textinput>
+        <textinput disabled="true" id="UIPopupAddObjectMuseum_InputExplanation_1" text="" width="100%" ></textinput>
 
         <!--##################################################-->
 
         <text id="UIPopupAddObjectMuseum_SelectTagText_1" text="Tags" />
-        <listSelector disabled="true" id="UIPopupAddObjectMuseum_SelectTag_1" text=" " width="100%" ></listSelector>
+        <listSelector disabled="true" id="UIPopupAddObjectMuseum_SelectTag_1" text="" width="100%" ></listSelector>
 
         <!--##################################################-->
 

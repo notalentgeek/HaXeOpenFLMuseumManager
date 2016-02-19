@@ -98,7 +98,7 @@ class CollectionPremade{
             CollectionFunction.FindTagObject(_collectionGlobalObject, false, "Waddesdon Bequest_NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER")
         ];
         var exhibition004ExplanationStringArray:Array<String> = [
-            "Pendant jewel; gold; oval; set with twenty-five square table diamonds and four rose diamonds.",
+            "Pendant jewel, gold, oval set with twenty-five square table diamonds and four rose diamonds.",
             "Contains miniature portrait of James I as a young man.",
             "Cover in open-work with diamonds on outside and enamel within.",
             "Frame of square diamonds connected by slender enamelled band; back is white enamel plate with fine gold lines and ruby enamel.",
@@ -121,7 +121,7 @@ class CollectionPremade{
             "On the head's left side was placed a crested and masked helmet wrapped in cloths.",
             "With its panels of tinned bronze and assembled mounts, the decoration is directly comparable to that found on helmets from the Vendel and Valsgärde cemeteries of eastern Sweden.",
             "The Sutton Hoo helmet differs from the Swedish examples in having an iron skull of a single vaulted shell and has a full face mask, a solid neck guard and deep cheekpieces.",
-            "These features have suggested an English origin for the basic structure of the helmet; the deep cheekpieces have parallels in the Coppergate helmet, found in York.",
+            "These features have suggested an English origin for the basic structure of the helmet, the deep cheekpieces have parallels in the Coppergate helmet, found in York.",
             "Although outwardly very like the Swedish examples, the Sutton Hoo helmet is a product of better craftsmanship.",
             "Helmets are extremely rare finds.",
             "No other such figural plaques were known in England, apart from a fragment from a burial at Caenby, Lincolnshire, until the 2009 discovery of the Staffordshire hoard, which contained many.",

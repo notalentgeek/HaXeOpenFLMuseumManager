@@ -437,37 +437,58 @@ bool dispose = __o_dispose.Default(true);
 		HX_STACK_LINE(120)
 		bool tmp = (child == null());		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(120)
-		if ((tmp)){
+		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(120)
+		bool tmp2;		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(120)
+		if ((tmp1)){
+			HX_STACK_LINE(120)
+			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp3 = child;		HX_STACK_VAR(tmp3,"tmp3");
+			HX_STACK_LINE(120)
+			::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp4 = tmp3;		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(120)
+			bool tmp5 = this->contains(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(120)
+			bool tmp6 = tmp5;		HX_STACK_VAR(tmp6,"tmp6");
+			HX_STACK_LINE(120)
+			tmp2 = (tmp6 == false);
+		}
+		else{
+			HX_STACK_LINE(120)
+			tmp2 = true;
+		}
+		HX_STACK_LINE(120)
+		if ((tmp2)){
 			HX_STACK_LINE(121)
 			return null();
 		}
 		HX_STACK_LINE(124)
-		::openfl::_legacy::display::Sprite tmp1 = child->get_sprite();		HX_STACK_VAR(tmp1,"tmp1");
+		::openfl::_legacy::display::Sprite tmp3 = child->get_sprite();		HX_STACK_VAR(tmp3,"tmp3");
 		HX_STACK_LINE(124)
-		::openfl::_legacy::display::Sprite childSprite = tmp1;		HX_STACK_VAR(childSprite,"childSprite");
+		::openfl::_legacy::display::Sprite childSprite = tmp3;		HX_STACK_VAR(childSprite,"childSprite");
 		HX_STACK_LINE(126)
-		::openfl::_legacy::display::Sprite tmp2 = this->_sprite;		HX_STACK_VAR(tmp2,"tmp2");
+		::openfl::_legacy::display::Sprite tmp4 = this->_sprite;		HX_STACK_VAR(tmp4,"tmp4");
 		HX_STACK_LINE(126)
-		::openfl::_legacy::display::Sprite tmp3 = childSprite;		HX_STACK_VAR(tmp3,"tmp3");
+		::openfl::_legacy::display::Sprite tmp5 = childSprite;		HX_STACK_VAR(tmp5,"tmp5");
 		HX_STACK_LINE(126)
-		tmp2->removeChild(tmp3);
+		tmp4->removeChild(tmp5);
 		HX_STACK_LINE(127)
-		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp4 = child;		HX_STACK_VAR(tmp4,"tmp4");
+		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp6 = child;		HX_STACK_VAR(tmp6,"tmp6");
 		HX_STACK_LINE(127)
-		this->_children->remove(tmp4);
+		this->_children->remove(tmp6);
 		HX_STACK_LINE(128)
-		bool tmp5 = (dispose == true);		HX_STACK_VAR(tmp5,"tmp5");
+		bool tmp7 = (dispose == true);		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(128)
-		if ((tmp5)){
+		if ((tmp7)){
 			HX_STACK_LINE(129)
 			child->dispose();
 		}
 		HX_STACK_LINE(131)
 		this->invalidate((int)1,null());
 		HX_STACK_LINE(133)
-		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp6 = child;		HX_STACK_VAR(tmp6,"tmp6");
+		::haxe::ui::toolkit::core::interfaces::IDisplayObject tmp8 = child;		HX_STACK_VAR(tmp8,"tmp8");
 		HX_STACK_LINE(133)
-		return tmp6;
+		return tmp8;
 	}
 }
 

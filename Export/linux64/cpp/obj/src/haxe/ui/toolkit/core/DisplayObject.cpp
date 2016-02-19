@@ -1854,21 +1854,40 @@ bool useCapture = __o_useCapture.Default(false);
 			bool tmp7 = (list != null());		HX_STACK_VAR(tmp7,"tmp7");
 			HX_STACK_LINE(578)
 			if ((tmp7)){
-				HX_STACK_LINE(580)
-				Dynamic tmp8 = listener;		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(580)
-				list->__Field(HX_HCSTRING("remove","\x44","\x9c","\x88","\x04"), hx::paccDynamic )(tmp8);
+				HX_STACK_LINE(579)
+				while((true)){
+					HX_STACK_LINE(579)
+					bool tmp8 = (list->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic ) != (int)0);		HX_STACK_VAR(tmp8,"tmp8");
+					HX_STACK_LINE(579)
+					bool tmp9 = !(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
+					HX_STACK_LINE(579)
+					if ((tmp9)){
+						HX_STACK_LINE(579)
+						break;
+					}
+					HX_STACK_LINE(580)
+					{
+						HX_STACK_LINE(580)
+						Dynamic tmp10 = list->__Field(HX_HCSTRING("pop","\x91","\x5d","\x55","\x00"), hx::paccDynamic )();		HX_STACK_VAR(tmp10,"tmp10");
+						HX_STACK_LINE(580)
+						Dynamic fn = tmp10;		HX_STACK_VAR(fn,"fn");
+						HX_STACK_LINE(580)
+						Dynamic tmp11 = fn;		HX_STACK_VAR(tmp11,"tmp11");
+						HX_STACK_LINE(580)
+						list->__Field(HX_HCSTRING("remove","\x44","\x9c","\x88","\x04"), hx::paccDynamic )(tmp11);
+					}
+				}
 			}
 		}
-		HX_STACK_LINE(583)
+		HX_STACK_LINE(584)
 		::openfl::_legacy::display::Sprite tmp5 = this->_sprite;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(583)
+		HX_STACK_LINE(584)
 		::String tmp6 = type;		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(583)
+		HX_STACK_LINE(584)
 		Dynamic tmp7 = listener;		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(583)
+		HX_STACK_LINE(584)
 		bool tmp8 = useCapture;		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(583)
+		HX_STACK_LINE(584)
 		tmp5->removeEventListener(tmp6,tmp7,tmp8);
 	}
 return null();
@@ -1878,16 +1897,16 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC3(DisplayObject_obj,removeEventListener,(void))
 
 bool DisplayObject_obj::willTrigger( ::String type){
-	HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","willTrigger",0xedf00b4c,"haxe.ui.toolkit.core.DisplayObject.willTrigger","haxe/ui/toolkit/core/DisplayObject.hx",586,0xfab33e8a)
+	HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","willTrigger",0xedf00b4c,"haxe.ui.toolkit.core.DisplayObject.willTrigger","haxe/ui/toolkit/core/DisplayObject.hx",587,0xfab33e8a)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(type,"type")
-	HX_STACK_LINE(587)
+	HX_STACK_LINE(588)
 	::openfl::_legacy::display::Sprite tmp = this->_sprite;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(587)
+	HX_STACK_LINE(588)
 	::String tmp1 = type;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(587)
+	HX_STACK_LINE(588)
 	bool tmp2 = tmp->willTrigger(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(587)
+	HX_STACK_LINE(588)
 	return tmp2;
 }
 
@@ -1895,13 +1914,13 @@ bool DisplayObject_obj::willTrigger( ::String type){
 HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,willTrigger,return )
 
 ::openfl::_legacy::display::Graphics DisplayObject_obj::get_graphics( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","get_graphics",0xabe5bb0e,"haxe.ui.toolkit.core.DisplayObject.get_graphics","haxe/ui/toolkit/core/DisplayObject.hx",595,0xfab33e8a)
+	HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","get_graphics",0xabe5bb0e,"haxe.ui.toolkit.core.DisplayObject.get_graphics","haxe/ui/toolkit/core/DisplayObject.hx",596,0xfab33e8a)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(596)
+	HX_STACK_LINE(597)
 	::openfl::_legacy::display::Sprite tmp = this->_sprite;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(596)
+	HX_STACK_LINE(597)
 	::openfl::_legacy::display::Graphics tmp1 = tmp->get_graphics();		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(596)
+	HX_STACK_LINE(597)
 	return tmp1;
 }
 
@@ -1910,41 +1929,41 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,get_graphics,return )
 
 Void DisplayObject_obj::paint( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","paint",0x95fc2624,"haxe.ui.toolkit.core.DisplayObject.paint","haxe/ui/toolkit/core/DisplayObject.hx",599,0xfab33e8a)
+		HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","paint",0x95fc2624,"haxe.ui.toolkit.core.DisplayObject.paint","haxe/ui/toolkit/core/DisplayObject.hx",600,0xfab33e8a)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(600)
+		HX_STACK_LINE(601)
 		::openfl::_legacy::display::Sprite tmp = this->_sprite;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(600)
+		HX_STACK_LINE(601)
 		::openfl::_legacy::display::Graphics tmp1 = tmp->get_graphics();		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(600)
+		HX_STACK_LINE(601)
 		tmp1->clear();
-		HX_STACK_LINE(602)
+		HX_STACK_LINE(603)
 		::openfl::_legacy::display::Sprite tmp2 = this->_sprite;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(602)
+		HX_STACK_LINE(603)
 		::openfl::_legacy::display::Graphics tmp3 = tmp2->get_graphics();		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(602)
+		HX_STACK_LINE(603)
 		tmp3->beginFill((int)13421772,null());
-		HX_STACK_LINE(603)
+		HX_STACK_LINE(604)
 		::openfl::_legacy::display::Sprite tmp4 = this->_sprite;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(603)
+		HX_STACK_LINE(604)
 		::openfl::_legacy::display::Graphics tmp5 = tmp4->get_graphics();		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(603)
+		HX_STACK_LINE(604)
 		tmp5->lineStyle((int)1,(int)8947848,null(),null(),null(),null(),null(),null());
-		HX_STACK_LINE(604)
+		HX_STACK_LINE(605)
 		::openfl::_legacy::display::Sprite tmp6 = this->_sprite;		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(604)
+		HX_STACK_LINE(605)
 		::openfl::_legacy::display::Graphics tmp7 = tmp6->get_graphics();		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(604)
+		HX_STACK_LINE(605)
 		Float tmp8 = this->_width;		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(604)
+		HX_STACK_LINE(605)
 		Float tmp9 = this->_height;		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(604)
+		HX_STACK_LINE(605)
 		tmp7->drawRect((int)0,(int)0,tmp8,tmp9);
-		HX_STACK_LINE(605)
+		HX_STACK_LINE(606)
 		::openfl::_legacy::display::Sprite tmp10 = this->_sprite;		HX_STACK_VAR(tmp10,"tmp10");
-		HX_STACK_LINE(605)
+		HX_STACK_LINE(606)
 		::openfl::_legacy::display::Graphics tmp11 = tmp10->get_graphics();		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(605)
+		HX_STACK_LINE(606)
 		tmp11->endFill();
 	}
 return null();
@@ -1955,41 +1974,41 @@ HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,paint,(void))
 
 Void DisplayObject_obj::removeEventListenerType( ::String eventType){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","removeEventListenerType",0x1e91dbaa,"haxe.ui.toolkit.core.DisplayObject.removeEventListenerType","haxe/ui/toolkit/core/DisplayObject.hx",611,0xfab33e8a)
+		HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","removeEventListenerType",0x1e91dbaa,"haxe.ui.toolkit.core.DisplayObject.removeEventListenerType","haxe/ui/toolkit/core/DisplayObject.hx",612,0xfab33e8a)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(eventType,"eventType")
-		HX_STACK_LINE(612)
+		HX_STACK_LINE(613)
 		::haxe::ds::StringMap tmp = this->_eventListeners;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(612)
+		HX_STACK_LINE(613)
 		bool tmp1 = (tmp != null());		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(612)
+		HX_STACK_LINE(613)
 		if ((tmp1)){
-			HX_STACK_LINE(613)
+			HX_STACK_LINE(614)
 			::haxe::ds::StringMap tmp2 = this->_eventListeners;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(613)
+			HX_STACK_LINE(614)
 			::String tmp3 = eventType;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(613)
+			HX_STACK_LINE(614)
 			cpp::ArrayBase list = tmp2->get(tmp3);		HX_STACK_VAR(list,"list");
-			HX_STACK_LINE(614)
+			HX_STACK_LINE(615)
 			bool tmp4 = (list != null());		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(614)
+			HX_STACK_LINE(615)
 			if ((tmp4)){
-				HX_STACK_LINE(615)
+				HX_STACK_LINE(616)
 				while((true)){
-					HX_STACK_LINE(615)
+					HX_STACK_LINE(616)
 					bool tmp5 = (list->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic ) != (int)0);		HX_STACK_VAR(tmp5,"tmp5");
-					HX_STACK_LINE(615)
+					HX_STACK_LINE(616)
 					bool tmp6 = !(tmp5);		HX_STACK_VAR(tmp6,"tmp6");
-					HX_STACK_LINE(615)
+					HX_STACK_LINE(616)
 					if ((tmp6)){
-						HX_STACK_LINE(615)
+						HX_STACK_LINE(616)
 						break;
 					}
-					HX_STACK_LINE(616)
+					HX_STACK_LINE(617)
 					::String tmp7 = eventType;		HX_STACK_VAR(tmp7,"tmp7");
-					HX_STACK_LINE(616)
+					HX_STACK_LINE(617)
 					Dynamic tmp8 = list->__Field(HX_HCSTRING("pop","\x91","\x5d","\x55","\x00"), hx::paccDynamic )();		HX_STACK_VAR(tmp8,"tmp8");
-					HX_STACK_LINE(616)
+					HX_STACK_LINE(617)
 					this->removeEventListener(tmp7,tmp8,null());
 				}
 			}
@@ -2003,50 +2022,50 @@ HX_DEFINE_DYNAMIC_FUNC1(DisplayObject_obj,removeEventListenerType,(void))
 
 Void DisplayObject_obj::removeAllEventListeners( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","removeAllEventListeners",0xbf172e28,"haxe.ui.toolkit.core.DisplayObject.removeAllEventListeners","haxe/ui/toolkit/core/DisplayObject.hx",622,0xfab33e8a)
+		HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","removeAllEventListeners",0xbf172e28,"haxe.ui.toolkit.core.DisplayObject.removeAllEventListeners","haxe/ui/toolkit/core/DisplayObject.hx",623,0xfab33e8a)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(623)
+		HX_STACK_LINE(624)
 		::haxe::ds::StringMap tmp = this->_eventListeners;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(623)
+		HX_STACK_LINE(624)
 		bool tmp1 = (tmp != null());		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(623)
+		HX_STACK_LINE(624)
 		if ((tmp1)){
-			HX_STACK_LINE(624)
+			HX_STACK_LINE(625)
 			::haxe::ds::StringMap tmp2 = this->_eventListeners;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(624)
+			HX_STACK_LINE(625)
 			Dynamic tmp3 = tmp2->keys();		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(624)
+			HX_STACK_LINE(625)
 			for(::cpp::FastIterator_obj< ::String > *__it = ::cpp::CreateFastIterator< ::String >(tmp3);  __it->hasNext(); ){
 				::String eventType = __it->next();
 				{
-					HX_STACK_LINE(625)
-					::haxe::ds::StringMap tmp4 = this->_eventListeners;		HX_STACK_VAR(tmp4,"tmp4");
-					HX_STACK_LINE(625)
-					::String tmp5 = eventType;		HX_STACK_VAR(tmp5,"tmp5");
-					HX_STACK_LINE(625)
-					cpp::ArrayBase list = tmp4->get(tmp5);		HX_STACK_VAR(list,"list");
 					HX_STACK_LINE(626)
+					::haxe::ds::StringMap tmp4 = this->_eventListeners;		HX_STACK_VAR(tmp4,"tmp4");
+					HX_STACK_LINE(626)
+					::String tmp5 = eventType;		HX_STACK_VAR(tmp5,"tmp5");
+					HX_STACK_LINE(626)
+					cpp::ArrayBase list = tmp4->get(tmp5);		HX_STACK_VAR(list,"list");
+					HX_STACK_LINE(627)
 					while((true)){
-						HX_STACK_LINE(626)
+						HX_STACK_LINE(627)
 						bool tmp6 = (list->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic ) != (int)0);		HX_STACK_VAR(tmp6,"tmp6");
-						HX_STACK_LINE(626)
+						HX_STACK_LINE(627)
 						bool tmp7 = !(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-						HX_STACK_LINE(626)
+						HX_STACK_LINE(627)
 						if ((tmp7)){
-							HX_STACK_LINE(626)
+							HX_STACK_LINE(627)
 							break;
 						}
-						HX_STACK_LINE(627)
+						HX_STACK_LINE(628)
 						::String tmp8 = eventType;		HX_STACK_VAR(tmp8,"tmp8");
-						HX_STACK_LINE(627)
+						HX_STACK_LINE(628)
 						Dynamic tmp9 = list->__Field(HX_HCSTRING("pop","\x91","\x5d","\x55","\x00"), hx::paccDynamic )();		HX_STACK_VAR(tmp9,"tmp9");
-						HX_STACK_LINE(627)
+						HX_STACK_LINE(628)
 						this->removeEventListener(tmp8,tmp9,null());
-						HX_STACK_LINE(628)
+						HX_STACK_LINE(629)
 						::haxe::ds::StringMap tmp10 = this->_eventListeners;		HX_STACK_VAR(tmp10,"tmp10");
-						HX_STACK_LINE(628)
+						HX_STACK_LINE(629)
 						::String tmp11 = eventType;		HX_STACK_VAR(tmp11,"tmp11");
-						HX_STACK_LINE(628)
+						HX_STACK_LINE(629)
 						list = tmp10->get(tmp11);
 					}
 				}
@@ -2061,60 +2080,60 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(DisplayObject_obj,removeAllEventListeners,(void))
 
 int DisplayObject_obj::getListenerCount( ::String type,Dynamic listener){
-	HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","getListenerCount",0x6365ec7f,"haxe.ui.toolkit.core.DisplayObject.getListenerCount","haxe/ui/toolkit/core/DisplayObject.hx",634,0xfab33e8a)
+	HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","getListenerCount",0x6365ec7f,"haxe.ui.toolkit.core.DisplayObject.getListenerCount","haxe/ui/toolkit/core/DisplayObject.hx",635,0xfab33e8a)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(type,"type")
 	HX_STACK_ARG(listener,"listener")
-	HX_STACK_LINE(638)
+	HX_STACK_LINE(639)
 	int count = (int)0;		HX_STACK_VAR(count,"count");
-	HX_STACK_LINE(639)
+	HX_STACK_LINE(640)
 	::haxe::ds::StringMap tmp = this->_eventListeners;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(639)
+	HX_STACK_LINE(640)
 	::String tmp1 = type;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(639)
+	HX_STACK_LINE(640)
 	bool tmp2 = tmp->exists(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(639)
+	HX_STACK_LINE(640)
 	if ((tmp2)){
-		HX_STACK_LINE(640)
-		::haxe::ds::StringMap tmp3 = this->_eventListeners;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(640)
-		::String tmp4 = type;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(640)
-		cpp::ArrayBase list = tmp3->get(tmp4);		HX_STACK_VAR(list,"list");
 		HX_STACK_LINE(641)
+		::haxe::ds::StringMap tmp3 = this->_eventListeners;		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(641)
+		::String tmp4 = type;		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(641)
+		cpp::ArrayBase list = tmp3->get(tmp4);		HX_STACK_VAR(list,"list");
+		HX_STACK_LINE(642)
 		{
-			HX_STACK_LINE(641)
+			HX_STACK_LINE(642)
 			int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(641)
+			HX_STACK_LINE(642)
 			while((true)){
-				HX_STACK_LINE(641)
+				HX_STACK_LINE(642)
 				bool tmp5 = (_g < list->__Field(HX_HCSTRING("length","\xe6","\x94","\x07","\x9f"), hx::paccDynamic ));		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(641)
+				HX_STACK_LINE(642)
 				bool tmp6 = !(tmp5);		HX_STACK_VAR(tmp6,"tmp6");
-				HX_STACK_LINE(641)
+				HX_STACK_LINE(642)
 				if ((tmp6)){
-					HX_STACK_LINE(641)
+					HX_STACK_LINE(642)
 					break;
 				}
-				HX_STACK_LINE(641)
+				HX_STACK_LINE(642)
 				Dynamic tmp7 = list->__GetItem(_g);		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(641)
+				HX_STACK_LINE(642)
 				Dynamic l = tmp7;		HX_STACK_VAR(l,"l");
-				HX_STACK_LINE(641)
+				HX_STACK_LINE(642)
 				++(_g);
-				HX_STACK_LINE(642)
+				HX_STACK_LINE(643)
 				bool tmp8 = (l == listener);		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(642)
+				HX_STACK_LINE(643)
 				if ((tmp8)){
-					HX_STACK_LINE(643)
+					HX_STACK_LINE(644)
 					(count)++;
 				}
 			}
 		}
 	}
-	HX_STACK_LINE(647)
+	HX_STACK_LINE(648)
 	int tmp3 = count;		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(647)
+	HX_STACK_LINE(648)
 	return tmp3;
 }
 
@@ -2122,15 +2141,15 @@ int DisplayObject_obj::getListenerCount( ::String type,Dynamic listener){
 HX_DEFINE_DYNAMIC_FUNC2(DisplayObject_obj,getListenerCount,return )
 
 bool DisplayObject_obj::removeEventFunction( cpp::ArrayBase arr,Dynamic fn){
-	HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","removeEventFunction",0x195dbf74,"haxe.ui.toolkit.core.DisplayObject.removeEventFunction","haxe/ui/toolkit/core/DisplayObject.hx",651,0xfab33e8a)
+	HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","removeEventFunction",0x195dbf74,"haxe.ui.toolkit.core.DisplayObject.removeEventFunction","haxe/ui/toolkit/core/DisplayObject.hx",652,0xfab33e8a)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(arr,"arr")
 	HX_STACK_ARG(fn,"fn")
-	HX_STACK_LINE(654)
+	HX_STACK_LINE(655)
 	Dynamic tmp = fn;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(654)
+	HX_STACK_LINE(655)
 	bool tmp1 = arr->__Field(HX_HCSTRING("remove","\x44","\x9c","\x88","\x04"), hx::paccDynamic )(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(654)
+	HX_STACK_LINE(655)
 	return tmp1;
 }
 
@@ -2139,46 +2158,46 @@ HX_DEFINE_DYNAMIC_FUNC2(DisplayObject_obj,removeEventFunction,return )
 
 Void DisplayObject_obj::_handleEvent( ::haxe::ui::toolkit::events::UIEvent event){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","_handleEvent",0x727c2f8d,"haxe.ui.toolkit.core.DisplayObject._handleEvent","haxe/ui/toolkit/core/DisplayObject.hx",678,0xfab33e8a)
+		HX_STACK_FRAME("haxe.ui.toolkit.core.DisplayObject","_handleEvent",0x727c2f8d,"haxe.ui.toolkit.core.DisplayObject._handleEvent","haxe/ui/toolkit/core/DisplayObject.hx",679,0xfab33e8a)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(679)
+		HX_STACK_LINE(680)
 		::String tmp = event->get_type();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(679)
+		HX_STACK_LINE(680)
 		::String tmp1 = ::StringTools_obj::replace(tmp,HX_HCSTRING("haxeui_","\x25","\x8b","\x87","\x08"),HX_HCSTRING("","\x00","\x00","\x00","\x00"));		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(679)
+		HX_STACK_LINE(680)
 		::String tmp2 = ::haxe::ui::toolkit::util::StringUtil_obj::capitalizeFirstLetter(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(679)
+		HX_STACK_LINE(680)
 		::String tmp3 = (HX_HCSTRING("on","\x1f","\x61","\x00","\x00") + tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(679)
+		HX_STACK_LINE(680)
 		::String fnName = tmp3;		HX_STACK_VAR(fnName,"fnName");
-		HX_STACK_LINE(680)
+		HX_STACK_LINE(681)
 		::String tmp4 = fnName;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(680)
+		HX_STACK_LINE(681)
 		Dynamic tmp5 = ::Reflect_obj::field(hx::ObjectPtr<OBJ_>(this),tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(680)
+		HX_STACK_LINE(681)
 		Dynamic fn = tmp5;		HX_STACK_VAR(fn,"fn");
-		HX_STACK_LINE(681)
+		HX_STACK_LINE(682)
 		bool tmp6 = (fn != null());		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(681)
+		HX_STACK_LINE(682)
 		if ((tmp6)){
-			HX_STACK_LINE(682)
-			::String tmp7 = event->get_type();		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(682)
-			::String tmp8 = (HX_HCSTRING("haxeui_","\x25","\x8b","\x87","\x08") + tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(682)
-			::haxe::ui::toolkit::core::Component tmp9 = event->get_component();		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(682)
-			::haxe::ui::toolkit::events::UIEvent tmp10 = ::haxe::ui::toolkit::events::UIEvent_obj::__new(tmp8,tmp9,null(),null());		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(682)
-			::haxe::ui::toolkit::events::UIEvent fnEvent = tmp10;		HX_STACK_VAR(fnEvent,"fnEvent");
 			HX_STACK_LINE(683)
-			fnEvent->data = event->data;
+			::String tmp7 = event->get_type();		HX_STACK_VAR(tmp7,"tmp7");
+			HX_STACK_LINE(683)
+			::String tmp8 = (HX_HCSTRING("haxeui_","\x25","\x8b","\x87","\x08") + tmp7);		HX_STACK_VAR(tmp8,"tmp8");
+			HX_STACK_LINE(683)
+			::haxe::ui::toolkit::core::Component tmp9 = event->get_component();		HX_STACK_VAR(tmp9,"tmp9");
+			HX_STACK_LINE(683)
+			::haxe::ui::toolkit::events::UIEvent tmp10 = ::haxe::ui::toolkit::events::UIEvent_obj::__new(tmp8,tmp9,null(),null());		HX_STACK_VAR(tmp10,"tmp10");
+			HX_STACK_LINE(683)
+			::haxe::ui::toolkit::events::UIEvent fnEvent = tmp10;		HX_STACK_VAR(fnEvent,"fnEvent");
 			HX_STACK_LINE(684)
+			fnEvent->data = event->data;
+			HX_STACK_LINE(685)
 			fnEvent->displayObject = hx::ObjectPtr<OBJ_>(this);
-			HX_STACK_LINE(685)
+			HX_STACK_LINE(686)
 			::haxe::ui::toolkit::events::UIEvent tmp11 = fnEvent;		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(685)
+			HX_STACK_LINE(686)
 			fn(tmp11).Cast< Void >();
 		}
 	}
@@ -2200,7 +2219,7 @@ Dynamic DisplayObject_obj::set_onInit( Dynamic value){
 	Dynamic tmp1 = this->_handleEvent_dyn();		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(19)
 	this->addEventListener(tmp,tmp1,null(),null(),null());
-	HX_STACK_LINE(20)
+	HX_STACK_LINE(19)
 	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
 	HX_STACK_LINE(19)
 	return tmp2;
@@ -2307,7 +2326,7 @@ Dynamic DisplayObject_obj::set_onMouseUp( Dynamic value){
 	this->addEventListener(tmp,tmp1,null(),null(),null());
 	HX_STACK_LINE(20)
 	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(20)
+	HX_STACK_LINE(19)
 	return tmp2;
 }
 
@@ -2433,7 +2452,7 @@ Dynamic DisplayObject_obj::set_onRollOut( Dynamic value){
 	this->addEventListener(tmp,tmp1,null(),null(),null());
 	HX_STACK_LINE(20)
 	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(20)
+	HX_STACK_LINE(19)
 	return tmp2;
 }
 
@@ -2517,7 +2536,7 @@ Dynamic DisplayObject_obj::set_onRemoved( Dynamic value){
 	this->addEventListener(tmp,tmp1,null(),null(),null());
 	HX_STACK_LINE(20)
 	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(20)
+	HX_STACK_LINE(19)
 	return tmp2;
 }
 
@@ -2727,7 +2746,7 @@ Dynamic DisplayObject_obj::set_onRefresh( Dynamic value){
 	this->addEventListener(tmp,tmp1,null(),null(),null());
 	HX_STACK_LINE(20)
 	Dynamic tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(20)
+	HX_STACK_LINE(19)
 	return tmp2;
 }
 

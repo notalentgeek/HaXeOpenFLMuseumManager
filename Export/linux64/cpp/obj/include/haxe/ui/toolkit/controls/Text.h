@@ -75,6 +75,9 @@ class HXCPP_CLASS_ATTRIBUTES  Text_obj : public ::haxe::ui::toolkit::core::State
 
 		virtual Void applyStyle( );
 
+		virtual Float heightFix( );
+		Dynamic heightFix_dyn();
+
 		virtual bool get_multiline( );
 		Dynamic get_multiline_dyn();
 

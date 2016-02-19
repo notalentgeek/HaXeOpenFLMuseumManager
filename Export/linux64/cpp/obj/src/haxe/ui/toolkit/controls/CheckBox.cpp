@@ -339,8 +339,19 @@ Void CheckBox_obj::dispose( ){
 		HX_STACK_LINE(92)
 		::openfl::_legacy::display::Sprite tmp1 = this->_eventTarget;		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(92)
-		tmp->removeChild(tmp1);
-		HX_STACK_LINE(93)
+		bool tmp2 = tmp->contains(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(92)
+		bool tmp3 = (tmp2 == true);		HX_STACK_VAR(tmp3,"tmp3");
+		HX_STACK_LINE(92)
+		if ((tmp3)){
+			HX_STACK_LINE(93)
+			::openfl::_legacy::display::Sprite tmp4 = this->get_sprite();		HX_STACK_VAR(tmp4,"tmp4");
+			HX_STACK_LINE(93)
+			::openfl::_legacy::display::Sprite tmp5 = this->_eventTarget;		HX_STACK_VAR(tmp5,"tmp5");
+			HX_STACK_LINE(93)
+			tmp4->removeChild(tmp5);
+		}
+		HX_STACK_LINE(95)
 		this->super::dispose();
 	}
 return null();
@@ -349,24 +360,24 @@ return null();
 
 Void CheckBox_obj::_onMouseOver( ::openfl::_legacy::events::MouseEvent event){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","_onMouseOver",0xcb153650,"haxe.ui.toolkit.controls.CheckBox._onMouseOver","haxe/ui/toolkit/controls/CheckBox.hx",99,0xf2eee4e5)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","_onMouseOver",0xcb153650,"haxe.ui.toolkit.controls.CheckBox._onMouseOver","haxe/ui/toolkit/controls/CheckBox.hx",101,0xf2eee4e5)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(100)
+		HX_STACK_LINE(102)
 		bool tmp = (event->buttonDown == false);		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(100)
+		HX_STACK_LINE(102)
 		if ((tmp)){
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(103)
 			this->set_state(HX_HCSTRING("over","\x54","\x91","\xb8","\x49"));
 		}
 		else{
-			HX_STACK_LINE(102)
+			HX_STACK_LINE(104)
 			bool tmp1 = this->_down;		HX_STACK_VAR(tmp1,"tmp1");
-			HX_STACK_LINE(102)
+			HX_STACK_LINE(104)
 			bool tmp2 = (tmp1 == true);		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(102)
+			HX_STACK_LINE(104)
 			if ((tmp2)){
-				HX_STACK_LINE(103)
+				HX_STACK_LINE(105)
 				this->set_state(HX_HCSTRING("down","\x62","\xf8","\x6d","\x42"));
 			}
 		}
@@ -379,14 +390,14 @@ HX_DEFINE_DYNAMIC_FUNC1(CheckBox_obj,_onMouseOver,(void))
 
 Void CheckBox_obj::_onMouseOut( ::openfl::_legacy::events::MouseEvent event){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","_onMouseOut",0x1904af12,"haxe.ui.toolkit.controls.CheckBox._onMouseOut","haxe/ui/toolkit/controls/CheckBox.hx",107,0xf2eee4e5)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","_onMouseOut",0x1904af12,"haxe.ui.toolkit.controls.CheckBox._onMouseOut","haxe/ui/toolkit/controls/CheckBox.hx",109,0xf2eee4e5)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(108)
+		HX_STACK_LINE(110)
 		bool tmp = (event->buttonDown == false);		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(108)
+		HX_STACK_LINE(110)
 		if ((tmp)){
-			HX_STACK_LINE(109)
+			HX_STACK_LINE(111)
 			this->set_state(HX_HCSTRING("normal","\x27","\x72","\x69","\x30"));
 		}
 		else{
@@ -400,20 +411,20 @@ HX_DEFINE_DYNAMIC_FUNC1(CheckBox_obj,_onMouseOut,(void))
 
 Void CheckBox_obj::_onMouseDown( ::openfl::_legacy::events::MouseEvent event){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","_onMouseDown",0xc3ca9d5e,"haxe.ui.toolkit.controls.CheckBox._onMouseDown","haxe/ui/toolkit/controls/CheckBox.hx",115,0xf2eee4e5)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","_onMouseDown",0xc3ca9d5e,"haxe.ui.toolkit.controls.CheckBox._onMouseDown","haxe/ui/toolkit/controls/CheckBox.hx",117,0xf2eee4e5)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(116)
+		HX_STACK_LINE(118)
 		this->_down = true;
-		HX_STACK_LINE(117)
+		HX_STACK_LINE(119)
 		this->set_state(HX_HCSTRING("down","\x62","\xf8","\x6d","\x42"));
-		HX_STACK_LINE(118)
+		HX_STACK_LINE(120)
 		::haxe::ui::toolkit::core::Screen tmp = ::haxe::ui::toolkit::core::Screen_obj::get_instance();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(118)
+		HX_STACK_LINE(120)
 		::String tmp1 = ::openfl::_legacy::events::MouseEvent_obj::MOUSE_UP;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(118)
+		HX_STACK_LINE(120)
 		Dynamic tmp2 = this->_onMouseUp_dyn();		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(118)
+		HX_STACK_LINE(120)
 		tmp->addEventListener(tmp1,tmp2,null(),null(),null());
 	}
 return null();
@@ -424,33 +435,33 @@ HX_DEFINE_DYNAMIC_FUNC1(CheckBox_obj,_onMouseDown,(void))
 
 Void CheckBox_obj::_onMouseUp( ::openfl::_legacy::events::MouseEvent event){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","_onMouseUp",0x50789457,"haxe.ui.toolkit.controls.CheckBox._onMouseUp","haxe/ui/toolkit/controls/CheckBox.hx",121,0xf2eee4e5)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","_onMouseUp",0x50789457,"haxe.ui.toolkit.controls.CheckBox._onMouseUp","haxe/ui/toolkit/controls/CheckBox.hx",123,0xf2eee4e5)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(event,"event")
-		HX_STACK_LINE(122)
+		HX_STACK_LINE(124)
 		this->_down = false;
-		HX_STACK_LINE(123)
+		HX_STACK_LINE(125)
 		Float tmp = event->stageX;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(123)
+		HX_STACK_LINE(125)
 		Float tmp1 = event->stageY;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(123)
+		HX_STACK_LINE(125)
 		bool tmp2 = this->hitTest(tmp,tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(123)
+		HX_STACK_LINE(125)
 		if ((tmp2)){
-			HX_STACK_LINE(125)
+			HX_STACK_LINE(127)
 			this->set_state(HX_HCSTRING("over","\x54","\x91","\xb8","\x49"));
 		}
 		else{
-			HX_STACK_LINE(130)
+			HX_STACK_LINE(132)
 			this->set_state(HX_HCSTRING("normal","\x27","\x72","\x69","\x30"));
 		}
-		HX_STACK_LINE(133)
+		HX_STACK_LINE(135)
 		::haxe::ui::toolkit::core::Screen tmp3 = ::haxe::ui::toolkit::core::Screen_obj::get_instance();		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(133)
+		HX_STACK_LINE(135)
 		::String tmp4 = ::openfl::_legacy::events::MouseEvent_obj::MOUSE_UP;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(133)
+		HX_STACK_LINE(135)
 		Dynamic tmp5 = this->_onMouseUp_dyn();		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(133)
+		HX_STACK_LINE(135)
 		tmp3->removeEventListener(tmp4,tmp5,null());
 	}
 return null();
@@ -460,153 +471,153 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(CheckBox_obj,_onMouseUp,(void))
 
 bool CheckBox_obj::set_autoSize( bool value){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_autoSize",0x4647c2a2,"haxe.ui.toolkit.controls.CheckBox.set_autoSize","haxe/ui/toolkit/controls/CheckBox.hx",139,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_autoSize",0x4647c2a2,"haxe.ui.toolkit.controls.CheckBox.set_autoSize","haxe/ui/toolkit/controls/CheckBox.hx",141,0xf2eee4e5)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(140)
+	HX_STACK_LINE(142)
 	bool tmp = value;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(140)
+	HX_STACK_LINE(142)
 	bool tmp1 = this->super::set_autoSize(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(140)
+	HX_STACK_LINE(142)
 	value = tmp1;
-	HX_STACK_LINE(141)
+	HX_STACK_LINE(143)
 	::haxe::ui::toolkit::controls::Text tmp2 = this->_label;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(141)
+	HX_STACK_LINE(143)
 	bool tmp3 = value;		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(141)
+	HX_STACK_LINE(143)
 	Float tmp4;		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(141)
+	HX_STACK_LINE(143)
 	if ((tmp3)){
-		HX_STACK_LINE(141)
+		HX_STACK_LINE(143)
 		tmp4 = (int)-1;
 	}
 	else{
-		HX_STACK_LINE(141)
+		HX_STACK_LINE(143)
 		tmp4 = (int)100;
 	}
-	HX_STACK_LINE(141)
+	HX_STACK_LINE(143)
 	tmp2->set_percentWidth(tmp4);
-	HX_STACK_LINE(142)
+	HX_STACK_LINE(144)
 	bool tmp5 = value;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(142)
+	HX_STACK_LINE(144)
 	return tmp5;
 }
 
 
 ::String CheckBox_obj::get_text( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_text",0x1540550b,"haxe.ui.toolkit.controls.CheckBox.get_text","haxe/ui/toolkit/controls/CheckBox.hx",145,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_text",0x1540550b,"haxe.ui.toolkit.controls.CheckBox.get_text","haxe/ui/toolkit/controls/CheckBox.hx",147,0xf2eee4e5)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(146)
+	HX_STACK_LINE(148)
 	::haxe::ui::toolkit::controls::Text tmp = this->_label;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(146)
+	HX_STACK_LINE(148)
 	::String tmp1 = tmp->get_text();		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(146)
+	HX_STACK_LINE(148)
 	return tmp1;
 }
 
 
 ::String CheckBox_obj::set_text( ::String value){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_text",0xc39dae7f,"haxe.ui.toolkit.controls.CheckBox.set_text","haxe/ui/toolkit/controls/CheckBox.hx",149,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_text",0xc39dae7f,"haxe.ui.toolkit.controls.CheckBox.set_text","haxe/ui/toolkit/controls/CheckBox.hx",151,0xf2eee4e5)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(150)
+	HX_STACK_LINE(152)
 	::String tmp = value;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(150)
+	HX_STACK_LINE(152)
 	::String tmp1 = this->super::set_text(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(150)
+	HX_STACK_LINE(152)
 	value = tmp1;
-	HX_STACK_LINE(151)
+	HX_STACK_LINE(153)
 	::haxe::ui::toolkit::controls::Text tmp2 = this->_label;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(151)
+	HX_STACK_LINE(153)
 	::String tmp3 = value;		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(151)
+	HX_STACK_LINE(153)
 	tmp2->set_text(tmp3);
-	HX_STACK_LINE(152)
+	HX_STACK_LINE(154)
 	::String tmp4 = value;		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(152)
+	HX_STACK_LINE(154)
 	return tmp4;
 }
 
 
 Dynamic CheckBox_obj::get_value( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_value",0xa7294953,"haxe.ui.toolkit.controls.CheckBox.get_value","haxe/ui/toolkit/controls/CheckBox.hx",155,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_value",0xa7294953,"haxe.ui.toolkit.controls.CheckBox.get_value","haxe/ui/toolkit/controls/CheckBox.hx",157,0xf2eee4e5)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(156)
+	HX_STACK_LINE(158)
 	bool tmp = this->get_selected();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(156)
+	HX_STACK_LINE(158)
 	return tmp;
 }
 
 
 Dynamic CheckBox_obj::set_value( Dynamic newValue){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_value",0x8a7a355f,"haxe.ui.toolkit.controls.CheckBox.set_value","haxe/ui/toolkit/controls/CheckBox.hx",159,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_value",0x8a7a355f,"haxe.ui.toolkit.controls.CheckBox.set_value","haxe/ui/toolkit/controls/CheckBox.hx",161,0xf2eee4e5)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(newValue,"newValue")
-	HX_STACK_LINE(160)
+	HX_STACK_LINE(162)
 	Dynamic tmp = newValue;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(160)
+	HX_STACK_LINE(162)
 	bool tmp1 = ::Std_obj::is(tmp,hx::ClassOf< ::String >());		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(160)
+	HX_STACK_LINE(162)
 	if ((tmp1)){
-		HX_STACK_LINE(161)
+		HX_STACK_LINE(163)
 		bool tmp2 = (newValue == HX_HCSTRING("true","\x4e","\xa7","\x03","\x4d"));		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(161)
+		HX_STACK_LINE(163)
 		this->set_selected(tmp2);
 	}
 	else{
-		HX_STACK_LINE(163)
+		HX_STACK_LINE(165)
 		Dynamic tmp2 = newValue;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(163)
+		HX_STACK_LINE(165)
 		this->set_selected(tmp2);
 	}
-	HX_STACK_LINE(165)
+	HX_STACK_LINE(167)
 	Dynamic tmp2 = newValue;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(165)
+	HX_STACK_LINE(167)
 	return tmp2;
 }
 
 
 Float CheckBox_obj::get_height( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_height",0x4f8be3c5,"haxe.ui.toolkit.controls.CheckBox.get_height","haxe/ui/toolkit/controls/CheckBox.hx",168,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_height",0x4f8be3c5,"haxe.ui.toolkit.controls.CheckBox.get_height","haxe/ui/toolkit/controls/CheckBox.hx",170,0xf2eee4e5)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(169)
+	HX_STACK_LINE(171)
 	Float tmp = this->super::get_height();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(169)
+	HX_STACK_LINE(171)
 	Float height = tmp;		HX_STACK_VAR(height,"height");
-	HX_STACK_LINE(170)
+	HX_STACK_LINE(172)
 	bool tmp1 = this->get_autoSize();		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(170)
+	HX_STACK_LINE(172)
 	if ((tmp1)){
-		HX_STACK_LINE(171)
+		HX_STACK_LINE(173)
 		Float tmp2 = height;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(171)
+		HX_STACK_LINE(173)
 		return tmp2;
 	}
 	else{
-		HX_STACK_LINE(173)
+		HX_STACK_LINE(175)
 		Float tmp2 = height;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(173)
+		HX_STACK_LINE(175)
 		::haxe::ui::toolkit::controls::Text tmp3 = this->_label;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(173)
+		HX_STACK_LINE(175)
 		Float tmp4 = tmp3->get_height();		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(173)
+		HX_STACK_LINE(175)
 		Float tmp5 = ::Math_obj::max(tmp2,tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(173)
+		HX_STACK_LINE(175)
 		return tmp5;
 	}
-	HX_STACK_LINE(170)
+	HX_STACK_LINE(172)
 	return ((Float)0.);
 }
 
 
 bool CheckBox_obj::get_multiline( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_multiline",0x36aa35cf,"haxe.ui.toolkit.controls.CheckBox.get_multiline","haxe/ui/toolkit/controls/CheckBox.hx",193,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_multiline",0x36aa35cf,"haxe.ui.toolkit.controls.CheckBox.get_multiline","haxe/ui/toolkit/controls/CheckBox.hx",195,0xf2eee4e5)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(194)
+	HX_STACK_LINE(196)
 	::haxe::ui::toolkit::controls::Text tmp = this->_label;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(194)
+	HX_STACK_LINE(196)
 	bool tmp1 = tmp->get_multiline();		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(194)
+	HX_STACK_LINE(196)
 	return tmp1;
 }
 
@@ -614,16 +625,16 @@ bool CheckBox_obj::get_multiline( ){
 HX_DEFINE_DYNAMIC_FUNC0(CheckBox_obj,get_multiline,return )
 
 bool CheckBox_obj::set_multiline( bool value){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_multiline",0x7bb017db,"haxe.ui.toolkit.controls.CheckBox.set_multiline","haxe/ui/toolkit/controls/CheckBox.hx",197,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_multiline",0x7bb017db,"haxe.ui.toolkit.controls.CheckBox.set_multiline","haxe/ui/toolkit/controls/CheckBox.hx",199,0xf2eee4e5)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(198)
+	HX_STACK_LINE(200)
 	::haxe::ui::toolkit::controls::Text tmp = this->_label;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(198)
+	HX_STACK_LINE(200)
 	bool tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(198)
+	HX_STACK_LINE(200)
 	bool tmp2 = tmp->set_multiline(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(198)
+	HX_STACK_LINE(200)
 	return tmp2;
 }
 
@@ -631,13 +642,13 @@ bool CheckBox_obj::set_multiline( bool value){
 HX_DEFINE_DYNAMIC_FUNC1(CheckBox_obj,set_multiline,return )
 
 bool CheckBox_obj::get_wrapLines( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_wrapLines",0xb110bab7,"haxe.ui.toolkit.controls.CheckBox.get_wrapLines","haxe/ui/toolkit/controls/CheckBox.hx",201,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_wrapLines",0xb110bab7,"haxe.ui.toolkit.controls.CheckBox.get_wrapLines","haxe/ui/toolkit/controls/CheckBox.hx",203,0xf2eee4e5)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(202)
+	HX_STACK_LINE(204)
 	::haxe::ui::toolkit::controls::Text tmp = this->_label;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(202)
+	HX_STACK_LINE(204)
 	bool tmp1 = tmp->get_wrapLines();		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(202)
+	HX_STACK_LINE(204)
 	return tmp1;
 }
 
@@ -645,16 +656,16 @@ bool CheckBox_obj::get_wrapLines( ){
 HX_DEFINE_DYNAMIC_FUNC0(CheckBox_obj,get_wrapLines,return )
 
 bool CheckBox_obj::set_wrapLines( bool value){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_wrapLines",0xf6169cc3,"haxe.ui.toolkit.controls.CheckBox.set_wrapLines","haxe/ui/toolkit/controls/CheckBox.hx",205,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_wrapLines",0xf6169cc3,"haxe.ui.toolkit.controls.CheckBox.set_wrapLines","haxe/ui/toolkit/controls/CheckBox.hx",207,0xf2eee4e5)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(206)
+	HX_STACK_LINE(208)
 	::haxe::ui::toolkit::controls::Text tmp = this->_label;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(206)
+	HX_STACK_LINE(208)
 	bool tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(206)
+	HX_STACK_LINE(208)
 	bool tmp2 = tmp->set_wrapLines(tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(206)
+	HX_STACK_LINE(208)
 	return tmp2;
 }
 
@@ -662,11 +673,11 @@ bool CheckBox_obj::set_wrapLines( bool value){
 HX_DEFINE_DYNAMIC_FUNC1(CheckBox_obj,set_wrapLines,return )
 
 bool CheckBox_obj::get_selected( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_selected",0xb34239b9,"haxe.ui.toolkit.controls.CheckBox.get_selected","haxe/ui/toolkit/controls/CheckBox.hx",209,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_selected",0xb34239b9,"haxe.ui.toolkit.controls.CheckBox.get_selected","haxe/ui/toolkit/controls/CheckBox.hx",211,0xf2eee4e5)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(210)
+	HX_STACK_LINE(212)
 	bool tmp = this->_selected;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(210)
+	HX_STACK_LINE(212)
 	return tmp;
 }
 
@@ -674,54 +685,54 @@ bool CheckBox_obj::get_selected( ){
 HX_DEFINE_DYNAMIC_FUNC0(CheckBox_obj,get_selected,return )
 
 bool CheckBox_obj::set_selected( bool value){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_selected",0xc83b5d2d,"haxe.ui.toolkit.controls.CheckBox.set_selected","haxe/ui/toolkit/controls/CheckBox.hx",213,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","set_selected",0xc83b5d2d,"haxe.ui.toolkit.controls.CheckBox.set_selected","haxe/ui/toolkit/controls/CheckBox.hx",215,0xf2eee4e5)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
-	HX_STACK_LINE(214)
+	HX_STACK_LINE(216)
 	bool tmp = this->_selected;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(214)
+	HX_STACK_LINE(216)
 	bool tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(214)
+	HX_STACK_LINE(216)
 	bool tmp2 = (tmp == tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(214)
+	HX_STACK_LINE(216)
 	if ((tmp2)){
-		HX_STACK_LINE(215)
+		HX_STACK_LINE(217)
 		bool tmp3 = value;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(215)
+		HX_STACK_LINE(217)
 		return tmp3;
 	}
-	HX_STACK_LINE(218)
+	HX_STACK_LINE(220)
 	::haxe::ui::toolkit::controls::CheckBoxValue tmp3 = this->_value;		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(218)
+	HX_STACK_LINE(220)
 	bool tmp4 = (value == true);		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(218)
+	HX_STACK_LINE(220)
 	Dynamic tmp5;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(218)
+	HX_STACK_LINE(220)
 	if ((tmp4)){
-		HX_STACK_LINE(218)
+		HX_STACK_LINE(220)
 		tmp5 = HX_HCSTRING("selected","\x5b","\x2a","\x6d","\xb1");
 	}
 	else{
-		HX_STACK_LINE(218)
+		HX_STACK_LINE(220)
 		tmp5 = HX_HCSTRING("unselected","\xb4","\x11","\x31","\x37");
 	}
-	HX_STACK_LINE(218)
+	HX_STACK_LINE(220)
 	tmp3->set_value(tmp5);
-	HX_STACK_LINE(219)
+	HX_STACK_LINE(221)
 	this->_selected = value;
-	HX_STACK_LINE(221)
+	HX_STACK_LINE(223)
 	::String tmp6 = ::openfl::_legacy::events::Event_obj::CHANGE;		HX_STACK_VAR(tmp6,"tmp6");
-	HX_STACK_LINE(221)
+	HX_STACK_LINE(223)
 	::openfl::_legacy::events::Event tmp7 = ::openfl::_legacy::events::Event_obj::__new(tmp6,null(),null());		HX_STACK_VAR(tmp7,"tmp7");
-	HX_STACK_LINE(221)
+	HX_STACK_LINE(223)
 	::openfl::_legacy::events::Event event = tmp7;		HX_STACK_VAR(event,"event");
-	HX_STACK_LINE(222)
+	HX_STACK_LINE(224)
 	::openfl::_legacy::events::Event tmp8 = event;		HX_STACK_VAR(tmp8,"tmp8");
-	HX_STACK_LINE(222)
+	HX_STACK_LINE(224)
 	this->dispatchEvent(tmp8);
-	HX_STACK_LINE(224)
+	HX_STACK_LINE(226)
 	bool tmp9 = value;		HX_STACK_VAR(tmp9,"tmp9");
-	HX_STACK_LINE(224)
+	HX_STACK_LINE(226)
 	return tmp9;
 }
 
@@ -730,56 +741,56 @@ HX_DEFINE_DYNAMIC_FUNC1(CheckBox_obj,set_selected,return )
 
 Void CheckBox_obj::applyStyle( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","applyStyle",0x8c278cf8,"haxe.ui.toolkit.controls.CheckBox.applyStyle","haxe/ui/toolkit/controls/CheckBox.hx",230,0xf2eee4e5)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","applyStyle",0x8c278cf8,"haxe.ui.toolkit.controls.CheckBox.applyStyle","haxe/ui/toolkit/controls/CheckBox.hx",232,0xf2eee4e5)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(231)
+		HX_STACK_LINE(233)
 		this->super::applyStyle();
-		HX_STACK_LINE(234)
+		HX_STACK_LINE(236)
 		::haxe::ui::toolkit::controls::Text tmp = this->_label;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(234)
+		HX_STACK_LINE(236)
 		bool tmp1 = (tmp != null());		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(234)
+		HX_STACK_LINE(236)
 		if ((tmp1)){
-			HX_STACK_LINE(235)
+			HX_STACK_LINE(237)
 			::haxe::ui::toolkit::style::Style tmp2 = ::haxe::ui::toolkit::style::Style_obj::__new(null());		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(235)
+			HX_STACK_LINE(237)
 			::haxe::ui::toolkit::style::Style labelStyle = tmp2;		HX_STACK_VAR(labelStyle,"labelStyle");
-			HX_STACK_LINE(236)
+			HX_STACK_LINE(238)
 			::haxe::ui::toolkit::style::Style tmp3 = this->_baseStyle;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(236)
+			HX_STACK_LINE(238)
 			bool tmp4 = (tmp3 != null());		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(236)
+			HX_STACK_LINE(238)
 			if ((tmp4)){
-				HX_STACK_LINE(237)
+				HX_STACK_LINE(239)
 				::haxe::ui::toolkit::style::Style tmp5 = this->_baseStyle;		HX_STACK_VAR(tmp5,"tmp5");
-				HX_STACK_LINE(237)
+				HX_STACK_LINE(239)
 				::String tmp6 = tmp5->get_fontName();		HX_STACK_VAR(tmp6,"tmp6");
-				HX_STACK_LINE(237)
+				HX_STACK_LINE(239)
 				labelStyle->set_fontName(tmp6);
-				HX_STACK_LINE(238)
+				HX_STACK_LINE(240)
 				::haxe::ui::toolkit::style::Style tmp7 = this->_baseStyle;		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(238)
+				HX_STACK_LINE(240)
 				Float tmp8 = tmp7->get_fontSize();		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(238)
+				HX_STACK_LINE(240)
 				labelStyle->set_fontSize(tmp8);
-				HX_STACK_LINE(239)
+				HX_STACK_LINE(241)
 				::haxe::ui::toolkit::style::Style tmp9 = this->_baseStyle;		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(239)
+				HX_STACK_LINE(241)
 				bool tmp10 = tmp9->get_fontEmbedded();		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(239)
+				HX_STACK_LINE(241)
 				labelStyle->set_fontEmbedded(tmp10);
-				HX_STACK_LINE(240)
+				HX_STACK_LINE(242)
 				::haxe::ui::toolkit::style::Style tmp11 = this->_baseStyle;		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(240)
+				HX_STACK_LINE(242)
 				int tmp12 = tmp11->get_color();		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(240)
+				HX_STACK_LINE(242)
 				labelStyle->set_color(tmp12);
 			}
-			HX_STACK_LINE(242)
+			HX_STACK_LINE(244)
 			::haxe::ui::toolkit::controls::Text tmp5 = this->_label;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(242)
+			HX_STACK_LINE(244)
 			::haxe::ui::toolkit::style::Style tmp6 = labelStyle;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(242)
+			HX_STACK_LINE(244)
 			tmp5->set_baseStyle(tmp6);
 		}
 	}
@@ -788,114 +799,114 @@ return null();
 
 
 Array< ::String > CheckBox_obj::get_states( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_states",0x533bb520,"haxe.ui.toolkit.controls.CheckBox.get_states","haxe/ui/toolkit/controls/CheckBox.hx",250,0xf2eee4e5)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","get_states",0x533bb520,"haxe.ui.toolkit.controls.CheckBox.get_states","haxe/ui/toolkit/controls/CheckBox.hx",252,0xf2eee4e5)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(250)
+	HX_STACK_LINE(252)
 	return Array_obj< ::String >::__new().Add(HX_HCSTRING("normal","\x27","\x72","\x69","\x30")).Add(HX_HCSTRING("over","\x54","\x91","\xb8","\x49")).Add(HX_HCSTRING("down","\x62","\xf8","\x6d","\x42"));
 }
 
 
 Void CheckBox_obj::resizeEventTarget( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","resizeEventTarget",0xbcf30a02,"haxe.ui.toolkit.controls.CheckBox.resizeEventTarget","haxe/ui/toolkit/controls/CheckBox.hx",256,0xf2eee4e5)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.CheckBox","resizeEventTarget",0xbcf30a02,"haxe.ui.toolkit.controls.CheckBox.resizeEventTarget","haxe/ui/toolkit/controls/CheckBox.hx",258,0xf2eee4e5)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(257)
+		HX_STACK_LINE(259)
 		::haxe::ui::toolkit::core::interfaces::ILayout tmp = this->get_layout();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(257)
+		HX_STACK_LINE(259)
 		::openfl::_legacy::geom::Rectangle tmp1 = tmp->get_padding();		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(257)
+		HX_STACK_LINE(259)
 		Float tmp2 = tmp1->get_left();		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(257)
+		HX_STACK_LINE(259)
 		Float targetX = tmp2;		HX_STACK_VAR(targetX,"targetX");
-		HX_STACK_LINE(258)
+		HX_STACK_LINE(260)
 		::haxe::ui::toolkit::core::interfaces::ILayout tmp3 = this->get_layout();		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(258)
+		HX_STACK_LINE(260)
 		::openfl::_legacy::geom::Rectangle tmp4 = tmp3->get_padding();		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(258)
+		HX_STACK_LINE(260)
 		Float tmp5 = tmp4->get_top();		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(258)
+		HX_STACK_LINE(260)
 		Float targetY = tmp5;		HX_STACK_VAR(targetY,"targetY");
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(261)
 		Float tmp6 = this->get_width();		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(261)
 		::haxe::ui::toolkit::core::interfaces::ILayout tmp7 = this->get_layout();		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(261)
 		::openfl::_legacy::geom::Rectangle tmp8 = tmp7->get_padding();		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(261)
 		Float tmp9 = tmp8->get_left();		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(261)
 		::haxe::ui::toolkit::core::interfaces::ILayout tmp10 = this->get_layout();		HX_STACK_VAR(tmp10,"tmp10");
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(261)
 		::openfl::_legacy::geom::Rectangle tmp11 = tmp10->get_padding();		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(261)
 		Float tmp12 = tmp11->get_right();		HX_STACK_VAR(tmp12,"tmp12");
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(261)
 		Float tmp13 = (tmp9 + tmp12);		HX_STACK_VAR(tmp13,"tmp13");
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(261)
 		Float tmp14 = (tmp6 - tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(261)
 		Float targetCX = tmp14;		HX_STACK_VAR(targetCX,"targetCX");
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(262)
 		Float tmp15 = this->get_height();		HX_STACK_VAR(tmp15,"tmp15");
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(262)
 		::haxe::ui::toolkit::core::interfaces::ILayout tmp16 = this->get_layout();		HX_STACK_VAR(tmp16,"tmp16");
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(262)
 		::openfl::_legacy::geom::Rectangle tmp17 = tmp16->get_padding();		HX_STACK_VAR(tmp17,"tmp17");
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(262)
 		Float tmp18 = tmp17->get_top();		HX_STACK_VAR(tmp18,"tmp18");
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(262)
 		::haxe::ui::toolkit::core::interfaces::ILayout tmp19 = this->get_layout();		HX_STACK_VAR(tmp19,"tmp19");
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(262)
 		::openfl::_legacy::geom::Rectangle tmp20 = tmp19->get_padding();		HX_STACK_VAR(tmp20,"tmp20");
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(262)
 		Float tmp21 = tmp20->get_bottom();		HX_STACK_VAR(tmp21,"tmp21");
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(262)
 		Float tmp22 = (tmp18 + tmp21);		HX_STACK_VAR(tmp22,"tmp22");
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(262)
 		Float tmp23 = (tmp15 - tmp22);		HX_STACK_VAR(tmp23,"tmp23");
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(262)
 		Float targetCY = tmp23;		HX_STACK_VAR(targetCY,"targetCY");
-		HX_STACK_LINE(262)
+		HX_STACK_LINE(264)
 		::openfl::_legacy::display::Sprite tmp24 = this->_eventTarget;		HX_STACK_VAR(tmp24,"tmp24");
-		HX_STACK_LINE(262)
+		HX_STACK_LINE(264)
 		tmp24->set_alpha((int)0);
-		HX_STACK_LINE(263)
+		HX_STACK_LINE(265)
 		::openfl::_legacy::display::Sprite tmp25 = this->_eventTarget;		HX_STACK_VAR(tmp25,"tmp25");
-		HX_STACK_LINE(263)
+		HX_STACK_LINE(265)
 		::openfl::_legacy::display::Graphics tmp26 = tmp25->get_graphics();		HX_STACK_VAR(tmp26,"tmp26");
-		HX_STACK_LINE(263)
+		HX_STACK_LINE(265)
 		tmp26->clear();
-		HX_STACK_LINE(264)
+		HX_STACK_LINE(266)
 		::openfl::_legacy::display::Sprite tmp27 = this->_eventTarget;		HX_STACK_VAR(tmp27,"tmp27");
-		HX_STACK_LINE(264)
+		HX_STACK_LINE(266)
 		::openfl::_legacy::display::Graphics tmp28 = tmp27->get_graphics();		HX_STACK_VAR(tmp28,"tmp28");
-		HX_STACK_LINE(264)
+		HX_STACK_LINE(266)
 		tmp28->beginFill((int)16711935,null());
-		HX_STACK_LINE(265)
+		HX_STACK_LINE(267)
 		::openfl::_legacy::display::Sprite tmp29 = this->_eventTarget;		HX_STACK_VAR(tmp29,"tmp29");
-		HX_STACK_LINE(265)
+		HX_STACK_LINE(267)
 		::openfl::_legacy::display::Graphics tmp30 = tmp29->get_graphics();		HX_STACK_VAR(tmp30,"tmp30");
-		HX_STACK_LINE(265)
+		HX_STACK_LINE(267)
 		tmp30->lineStyle((int)0,null(),null(),null(),null(),null(),null(),null());
-		HX_STACK_LINE(266)
+		HX_STACK_LINE(268)
 		::openfl::_legacy::display::Sprite tmp31 = this->_eventTarget;		HX_STACK_VAR(tmp31,"tmp31");
-		HX_STACK_LINE(266)
+		HX_STACK_LINE(268)
 		::openfl::_legacy::display::Graphics tmp32 = tmp31->get_graphics();		HX_STACK_VAR(tmp32,"tmp32");
-		HX_STACK_LINE(266)
+		HX_STACK_LINE(268)
 		Float tmp33 = targetX;		HX_STACK_VAR(tmp33,"tmp33");
-		HX_STACK_LINE(266)
+		HX_STACK_LINE(268)
 		Float tmp34 = targetY;		HX_STACK_VAR(tmp34,"tmp34");
-		HX_STACK_LINE(266)
+		HX_STACK_LINE(268)
 		Float tmp35 = targetCX;		HX_STACK_VAR(tmp35,"tmp35");
-		HX_STACK_LINE(266)
+		HX_STACK_LINE(268)
 		Float tmp36 = targetCY;		HX_STACK_VAR(tmp36,"tmp36");
-		HX_STACK_LINE(266)
+		HX_STACK_LINE(268)
 		tmp32->drawRect(tmp33,tmp34,tmp35,tmp36);
-		HX_STACK_LINE(267)
+		HX_STACK_LINE(269)
 		::openfl::_legacy::display::Sprite tmp37 = this->_eventTarget;		HX_STACK_VAR(tmp37,"tmp37");
-		HX_STACK_LINE(267)
+		HX_STACK_LINE(269)
 		::openfl::_legacy::display::Graphics tmp38 = tmp37->get_graphics();		HX_STACK_VAR(tmp38,"tmp38");
-		HX_STACK_LINE(267)
+		HX_STACK_LINE(269)
 		tmp38->endFill();
 	}
 return null();

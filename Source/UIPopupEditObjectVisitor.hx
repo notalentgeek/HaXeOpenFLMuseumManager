@@ -105,7 +105,7 @@ class UIPopupEditObjectVisitor{
             selectVisitorListSelectorObject.method              = "default";
 
             if(_e.component.userData != null){
-                var string:String = "" + _e.component.userData;
+                var string:String = Std.string(_e.component.userData);
                 var stringArray:Array<String> = string.split("*");
                 var nameString:String = stringArray[1];
                 var visitorObject:ObjectVisitor = CollectionFunction.FindVisitorObject(collectionGlobalObject, nameString);
@@ -170,7 +170,7 @@ class UIPopupEditObjectVisitor{
                 while(loopCounter1Int < selectedVisitorObject.GetTagCounterStructArray().length){
 
                     var displayString:String = selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt +
-                        " " +
+                        "" +
                         selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString();
                     displayStringArray.push(displayString);
                     loopCounter1Int ++;
@@ -308,7 +308,7 @@ class UIPopupEditObjectVisitor{
 
     private function ResetDisplayCurrentExhibitionTextObjectVoid(){
         if(displayCurrentExhibitionTextObject != null){
-            displayCurrentExhibitionTextObject.text = " ";
+            displayCurrentExhibitionTextObject.text = "";
         }
     }
     private function ResetDisplayExplanationTextObjectVoid(){
@@ -327,13 +327,13 @@ class UIPopupEditObjectVisitor{
         }
     }
     private function ResetDisplayTargetExhibitionTextObjectVoid(){
-        if(displayTargetExhibitionTextObject != null){ displayTargetExhibitionTextObject.text = " "; }
+        if(displayTargetExhibitionTextObject != null){ displayTargetExhibitionTextObject.text = ""; }
     }
     private function ResetDisplayVisitorIndexGlobalTextObjectVoid(){
-        if(displayVisitorIndexGlobalTextObject != null){ displayVisitorIndexGlobalTextObject.text = " "; }
+        if(displayVisitorIndexGlobalTextObject != null){ displayVisitorIndexGlobalTextObject.text = ""; }
     }
     private function ResetDisplayVisitorIndexLocalTextObjectVoid(){
-        if(displayVisitorIndexLocalTextObject != null){ displayVisitorIndexLocalTextObject.text = " "; }
+        if(displayVisitorIndexLocalTextObject != null){ displayVisitorIndexLocalTextObject.text = ""; }
     }
     private function ResetInputNameTextInputObjectVoid(){
         if(inputNameTextInputObject != null && selectedVisitorObject != null){ inputNameTextInputObject.text = selectedVisitorObject.GetNameString(); }
@@ -494,11 +494,11 @@ class UIPopupEditObjectVisitor{
     }
 
     private function UpdateDisplayVisitorIndexGlobalTextObjectVoid(){
-        if(selectedVisitorObject != null){ displayVisitorIndexGlobalTextObject.text = "" + selectedVisitorObject.GetIndexGlobalInt(); }
+        if(selectedVisitorObject != null){ displayVisitorIndexGlobalTextObject.text = Std.string(selectedVisitorObject.GetIndexGlobalInt()); }
     }
 
     private function UpdateDisplayVisitorIndexLocalTextObjectVoid(){
-        if(selectedVisitorObject != null){ displayVisitorIndexLocalTextObject.text = "" + selectedVisitorObject.GetIndexLocalInt(); }
+        if(selectedVisitorObject != null){ displayVisitorIndexLocalTextObject.text = Std.string(selectedVisitorObject.GetIndexLocalInt()); }
     }
 
     private function UpdateSelectCurrentExhibitionListSelectorObjectVoid(){

@@ -570,84 +570,86 @@ Dynamic ObjectGeneratorSentence_obj::__Create(hx::DynamicArray inArgs)
 						HX_STACK_LINE(201)
 						break;
 					}
-					HX_STACK_LINE(203)
+					HX_STACK_LINE(204)
 					::String tmp28 = companyWordStringArray->__get(loopCounter1Int);		HX_STACK_VAR(tmp28,"tmp28");
-					HX_STACK_LINE(203)
+					HX_STACK_LINE(204)
 					::String tmp29 = tmp28.substring((int)0,(int)1);		HX_STACK_VAR(tmp29,"tmp29");
-					HX_STACK_LINE(203)
+					HX_STACK_LINE(204)
 					::String tmp30 = tmp29.toUpperCase();		HX_STACK_VAR(tmp30,"tmp30");
-					HX_STACK_LINE(203)
+					HX_STACK_LINE(205)
 					::String tmp31 = companyWordStringArray->__get(loopCounter1Int);		HX_STACK_VAR(tmp31,"tmp31");
-					HX_STACK_LINE(203)
+					HX_STACK_LINE(205)
 					::String tmp32 = companyWordStringArray->__get(loopCounter1Int);		HX_STACK_VAR(tmp32,"tmp32");
-					HX_STACK_LINE(203)
+					HX_STACK_LINE(205)
 					int tmp33 = tmp32.length;		HX_STACK_VAR(tmp33,"tmp33");
-					HX_STACK_LINE(203)
+					HX_STACK_LINE(205)
 					::String tmp34 = tmp31.substring((int)1,tmp33);		HX_STACK_VAR(tmp34,"tmp34");
-					HX_STACK_LINE(203)
-					::String tmp35 = (tmp30 + tmp34);		HX_STACK_VAR(tmp35,"tmp35");
-					HX_STACK_LINE(203)
-					companyWordStringArray[loopCounter1Int] = tmp35;
+					HX_STACK_LINE(205)
+					::String tmp35 = tmp34.toLowerCase();		HX_STACK_VAR(tmp35,"tmp35");
 					HX_STACK_LINE(204)
-					bool tmp36 = (loopCounter1Int == (int)0);		HX_STACK_VAR(tmp36,"tmp36");
-					HX_STACK_LINE(204)
-					if ((tmp36)){
-						HX_STACK_LINE(204)
-						::String tmp37 = companyWordString;		HX_STACK_VAR(tmp37,"tmp37");
-						HX_STACK_LINE(204)
-						::String tmp38 = companyWordStringArray->__get(loopCounter1Int);		HX_STACK_VAR(tmp38,"tmp38");
-						HX_STACK_LINE(204)
-						::String tmp39 = (tmp37 + tmp38);		HX_STACK_VAR(tmp39,"tmp39");
-						HX_STACK_LINE(204)
-						companyWordString = tmp39;
+					::String tmp36 = (tmp30 + tmp35);		HX_STACK_VAR(tmp36,"tmp36");
+					HX_STACK_LINE(203)
+					companyWordStringArray[loopCounter1Int] = tmp36;
+					HX_STACK_LINE(206)
+					bool tmp37 = (loopCounter1Int == (int)0);		HX_STACK_VAR(tmp37,"tmp37");
+					HX_STACK_LINE(206)
+					if ((tmp37)){
+						HX_STACK_LINE(206)
+						::String tmp38 = companyWordString;		HX_STACK_VAR(tmp38,"tmp38");
+						HX_STACK_LINE(206)
+						::String tmp39 = companyWordStringArray->__get(loopCounter1Int);		HX_STACK_VAR(tmp39,"tmp39");
+						HX_STACK_LINE(206)
+						::String tmp40 = (tmp38 + tmp39);		HX_STACK_VAR(tmp40,"tmp40");
+						HX_STACK_LINE(206)
+						companyWordString = tmp40;
 					}
 					else{
-						HX_STACK_LINE(205)
-						::String tmp37 = (companyWordString + HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));		HX_STACK_VAR(tmp37,"tmp37");
-						HX_STACK_LINE(205)
-						::String tmp38 = companyWordStringArray->__get(loopCounter1Int);		HX_STACK_VAR(tmp38,"tmp38");
-						HX_STACK_LINE(205)
-						::String tmp39 = (tmp37 + tmp38);		HX_STACK_VAR(tmp39,"tmp39");
-						HX_STACK_LINE(205)
-						companyWordString = tmp39;
+						HX_STACK_LINE(207)
+						::String tmp38 = (companyWordString + HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));		HX_STACK_VAR(tmp38,"tmp38");
+						HX_STACK_LINE(207)
+						::String tmp39 = companyWordStringArray->__get(loopCounter1Int);		HX_STACK_VAR(tmp39,"tmp39");
+						HX_STACK_LINE(207)
+						::String tmp40 = (tmp38 + tmp39);		HX_STACK_VAR(tmp40,"tmp40");
+						HX_STACK_LINE(207)
+						companyWordString = tmp40;
 					}
-					HX_STACK_LINE(207)
+					HX_STACK_LINE(209)
 					(loopCounter1Int)++;
 				}
-				HX_STACK_LINE(211)
+				HX_STACK_LINE(213)
 				bool tmp26 = (companyWordStruct->__Field(HX_HCSTRING("companyWordPositionEnum","\x91","\x10","\x19","\x46"), hx::paccDynamic ) == ::EnumCompanyWordPosition_obj::PRE);		HX_STACK_VAR(tmp26,"tmp26");
-				HX_STACK_LINE(211)
+				HX_STACK_LINE(213)
 				if ((tmp26)){
-					HX_STACK_LINE(211)
+					HX_STACK_LINE(213)
 					::String tmp27 = (companyWordString + HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));		HX_STACK_VAR(tmp27,"tmp27");
-					HX_STACK_LINE(211)
+					HX_STACK_LINE(213)
 					::String tmp28 = returnString;		HX_STACK_VAR(tmp28,"tmp28");
-					HX_STACK_LINE(211)
+					HX_STACK_LINE(213)
 					::String tmp29 = (tmp27 + tmp28);		HX_STACK_VAR(tmp29,"tmp29");
-					HX_STACK_LINE(211)
+					HX_STACK_LINE(213)
 					returnString = tmp29;
 				}
 				else{
-					HX_STACK_LINE(212)
+					HX_STACK_LINE(214)
 					bool tmp27 = (companyWordStruct->__Field(HX_HCSTRING("companyWordPositionEnum","\x91","\x10","\x19","\x46"), hx::paccDynamic ) == ::EnumCompanyWordPosition_obj::SUF);		HX_STACK_VAR(tmp27,"tmp27");
-					HX_STACK_LINE(212)
+					HX_STACK_LINE(214)
 					if ((tmp27)){
-						HX_STACK_LINE(212)
+						HX_STACK_LINE(214)
 						::String tmp28 = (returnString + HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));		HX_STACK_VAR(tmp28,"tmp28");
-						HX_STACK_LINE(212)
+						HX_STACK_LINE(214)
 						::String tmp29 = companyWordString;		HX_STACK_VAR(tmp29,"tmp29");
-						HX_STACK_LINE(212)
+						HX_STACK_LINE(214)
 						::String tmp30 = (tmp28 + tmp29);		HX_STACK_VAR(tmp30,"tmp30");
-						HX_STACK_LINE(212)
+						HX_STACK_LINE(214)
 						returnString = tmp30;
 					}
 				}
 			}
 		}
 	}
-	HX_STACK_LINE(219)
+	HX_STACK_LINE(221)
 	::String tmp18 = returnString;		HX_STACK_VAR(tmp18,"tmp18");
-	HX_STACK_LINE(219)
+	HX_STACK_LINE(221)
 	return tmp18;
 }
 
@@ -655,117 +657,117 @@ Dynamic ObjectGeneratorSentence_obj::__Create(hx::DynamicArray inArgs)
 HX_DEFINE_DYNAMIC_FUNC2(ObjectGeneratorSentence_obj,AddWordString,return )
 
 Dynamic ObjectGeneratorSentence_obj::DetermineProperCallbackFunction( ::EnumTagTypeSub _tagTypeSubEnum,::ObjectTag _tagObject){
-	HX_STACK_FRAME("ObjectGeneratorSentence","DetermineProperCallbackFunction",0xbc8dd089,"ObjectGeneratorSentence.DetermineProperCallbackFunction","ObjectGeneratorSentence.hx",227,0x43a4e8e7)
+	HX_STACK_FRAME("ObjectGeneratorSentence","DetermineProperCallbackFunction",0xbc8dd089,"ObjectGeneratorSentence.DetermineProperCallbackFunction","ObjectGeneratorSentence.hx",229,0x43a4e8e7)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_tagTypeSubEnum,"_tagTypeSubEnum")
 	HX_STACK_ARG(_tagObject,"_tagObject")
-	HX_STACK_LINE(228)
+	HX_STACK_LINE(230)
 	bool tmp = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::ADJ);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(228)
+	HX_STACK_LINE(230)
 	if ((tmp)){
-		HX_STACK_LINE(228)
+		HX_STACK_LINE(230)
 		Dynamic tmp1 = _tagObject->GetAdjectiveString_dyn();		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(228)
+		HX_STACK_LINE(230)
 		return tmp1;
 	}
 	else{
-		HX_STACK_LINE(229)
+		HX_STACK_LINE(231)
 		bool tmp1 = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::ADV);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(229)
+		HX_STACK_LINE(231)
 		if ((tmp1)){
-			HX_STACK_LINE(229)
+			HX_STACK_LINE(231)
 			Dynamic tmp2 = _tagObject->GetAdverbString_dyn();		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(229)
+			HX_STACK_LINE(231)
 			return tmp2;
 		}
 		else{
-			HX_STACK_LINE(230)
+			HX_STACK_LINE(232)
 			bool tmp2 = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::NOUN);		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(230)
+			HX_STACK_LINE(232)
 			if ((tmp2)){
-				HX_STACK_LINE(230)
+				HX_STACK_LINE(232)
 				Dynamic tmp3 = _tagObject->GetNounString_dyn();		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(230)
+				HX_STACK_LINE(232)
 				return tmp3;
 			}
 			else{
-				HX_STACK_LINE(231)
+				HX_STACK_LINE(233)
 				bool tmp3 = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::NOUN_POS);		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(231)
+				HX_STACK_LINE(233)
 				if ((tmp3)){
-					HX_STACK_LINE(231)
+					HX_STACK_LINE(233)
 					Dynamic tmp4 = _tagObject->GetNounPosString_dyn();		HX_STACK_VAR(tmp4,"tmp4");
-					HX_STACK_LINE(231)
+					HX_STACK_LINE(233)
 					return tmp4;
 				}
 				else{
-					HX_STACK_LINE(232)
+					HX_STACK_LINE(234)
 					bool tmp4 = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::NOUN_S);		HX_STACK_VAR(tmp4,"tmp4");
-					HX_STACK_LINE(232)
+					HX_STACK_LINE(234)
 					if ((tmp4)){
-						HX_STACK_LINE(232)
+						HX_STACK_LINE(234)
 						Dynamic tmp5 = _tagObject->GetNounSString_dyn();		HX_STACK_VAR(tmp5,"tmp5");
-						HX_STACK_LINE(232)
+						HX_STACK_LINE(234)
 						return tmp5;
 					}
 					else{
-						HX_STACK_LINE(233)
+						HX_STACK_LINE(235)
 						bool tmp5 = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::NOUN_S_POS);		HX_STACK_VAR(tmp5,"tmp5");
-						HX_STACK_LINE(233)
+						HX_STACK_LINE(235)
 						if ((tmp5)){
-							HX_STACK_LINE(233)
+							HX_STACK_LINE(235)
 							Dynamic tmp6 = _tagObject->GetNounSPosString_dyn();		HX_STACK_VAR(tmp6,"tmp6");
-							HX_STACK_LINE(233)
+							HX_STACK_LINE(235)
 							return tmp6;
 						}
 						else{
-							HX_STACK_LINE(234)
+							HX_STACK_LINE(236)
 							bool tmp6 = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::VERB_1);		HX_STACK_VAR(tmp6,"tmp6");
-							HX_STACK_LINE(234)
+							HX_STACK_LINE(236)
 							if ((tmp6)){
-								HX_STACK_LINE(234)
+								HX_STACK_LINE(236)
 								Dynamic tmp7 = _tagObject->GetVerb1String_dyn();		HX_STACK_VAR(tmp7,"tmp7");
-								HX_STACK_LINE(234)
+								HX_STACK_LINE(236)
 								return tmp7;
 							}
 							else{
-								HX_STACK_LINE(235)
+								HX_STACK_LINE(237)
 								bool tmp7 = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::VERB_2);		HX_STACK_VAR(tmp7,"tmp7");
-								HX_STACK_LINE(235)
+								HX_STACK_LINE(237)
 								if ((tmp7)){
-									HX_STACK_LINE(235)
+									HX_STACK_LINE(237)
 									Dynamic tmp8 = _tagObject->GetVerb2String_dyn();		HX_STACK_VAR(tmp8,"tmp8");
-									HX_STACK_LINE(235)
+									HX_STACK_LINE(237)
 									return tmp8;
 								}
 								else{
-									HX_STACK_LINE(236)
+									HX_STACK_LINE(238)
 									bool tmp8 = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::VERB_3);		HX_STACK_VAR(tmp8,"tmp8");
-									HX_STACK_LINE(236)
+									HX_STACK_LINE(238)
 									if ((tmp8)){
-										HX_STACK_LINE(236)
+										HX_STACK_LINE(238)
 										Dynamic tmp9 = _tagObject->GetVerb3String_dyn();		HX_STACK_VAR(tmp9,"tmp9");
-										HX_STACK_LINE(236)
+										HX_STACK_LINE(238)
 										return tmp9;
 									}
 									else{
-										HX_STACK_LINE(237)
+										HX_STACK_LINE(239)
 										bool tmp9 = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::VERB_ING);		HX_STACK_VAR(tmp9,"tmp9");
-										HX_STACK_LINE(237)
+										HX_STACK_LINE(239)
 										if ((tmp9)){
-											HX_STACK_LINE(237)
+											HX_STACK_LINE(239)
 											Dynamic tmp10 = _tagObject->GetVerbIngString_dyn();		HX_STACK_VAR(tmp10,"tmp10");
-											HX_STACK_LINE(237)
+											HX_STACK_LINE(239)
 											return tmp10;
 										}
 										else{
-											HX_STACK_LINE(238)
+											HX_STACK_LINE(240)
 											bool tmp10 = (_tagTypeSubEnum == ::EnumTagTypeSub_obj::VERB_S);		HX_STACK_VAR(tmp10,"tmp10");
-											HX_STACK_LINE(238)
+											HX_STACK_LINE(240)
 											if ((tmp10)){
-												HX_STACK_LINE(238)
+												HX_STACK_LINE(240)
 												Dynamic tmp11 = _tagObject->GetVerbSString_dyn();		HX_STACK_VAR(tmp11,"tmp11");
-												HX_STACK_LINE(238)
+												HX_STACK_LINE(240)
 												return tmp11;
 											}
 										}
@@ -778,7 +780,7 @@ Dynamic ObjectGeneratorSentence_obj::DetermineProperCallbackFunction( ::EnumTagT
 			}
 		}
 	}
-	HX_STACK_LINE(239)
+	HX_STACK_LINE(241)
 	return null();
 }
 
@@ -786,317 +788,317 @@ Dynamic ObjectGeneratorSentence_obj::DetermineProperCallbackFunction( ::EnumTagT
 HX_DEFINE_DYNAMIC_FUNC2(ObjectGeneratorSentence_obj,DetermineProperCallbackFunction,return )
 
 ::String ObjectGeneratorSentence_obj::GenerateSentenceString( ::String _patternString){
-	HX_STACK_FRAME("ObjectGeneratorSentence","GenerateSentenceString",0x814dcb60,"ObjectGeneratorSentence.GenerateSentenceString","ObjectGeneratorSentence.hx",241,0x43a4e8e7)
+	HX_STACK_FRAME("ObjectGeneratorSentence","GenerateSentenceString",0x814dcb60,"ObjectGeneratorSentence.GenerateSentenceString","ObjectGeneratorSentence.hx",243,0x43a4e8e7)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_patternString,"_patternString")
-	HX_STACK_LINE(242)
-	int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
-	HX_STACK_LINE(243)
-	::String patternString = _patternString;		HX_STACK_VAR(patternString,"patternString");
 	HX_STACK_LINE(244)
-	::String sentenceString = HX_HCSTRING("","\x00","\x00","\x00","\x00");		HX_STACK_VAR(sentenceString,"sentenceString");
+	int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
 	HX_STACK_LINE(245)
+	::String patternString = _patternString;		HX_STACK_VAR(patternString,"patternString");
+	HX_STACK_LINE(246)
+	::String sentenceString = HX_HCSTRING("","\x00","\x00","\x00","\x00");		HX_STACK_VAR(sentenceString,"sentenceString");
+	HX_STACK_LINE(247)
 	while((true)){
-		HX_STACK_LINE(245)
+		HX_STACK_LINE(247)
 		bool tmp = (loopCounter1Int < patternString.length);		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(245)
+		HX_STACK_LINE(247)
 		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(245)
+		HX_STACK_LINE(247)
 		if ((tmp1)){
-			HX_STACK_LINE(245)
+			HX_STACK_LINE(247)
 			break;
 		}
-		HX_STACK_LINE(246)
+		HX_STACK_LINE(248)
 		::String codeString = HX_HCSTRING("","\x00","\x00","\x00","\x00");		HX_STACK_VAR(codeString,"codeString");
-		HX_STACK_LINE(247)
+		HX_STACK_LINE(249)
 		Array< ::String > codeStringArray = Array_obj< ::String >::__new().Add(HX_HCSTRING("1","\x31","\x00","\x00","\x00")).Add(HX_HCSTRING("2","\x32","\x00","\x00","\x00")).Add(HX_HCSTRING("3","\x33","\x00","\x00","\x00")).Add(HX_HCSTRING("4","\x34","\x00","\x00","\x00")).Add(HX_HCSTRING("5","\x35","\x00","\x00","\x00")).Add(HX_HCSTRING("6","\x36","\x00","\x00","\x00")).Add(HX_HCSTRING("7","\x37","\x00","\x00","\x00")).Add(HX_HCSTRING("8","\x38","\x00","\x00","\x00")).Add(HX_HCSTRING("9","\x39","\x00","\x00","\x00")).Add(HX_HCSTRING("0","\x30","\x00","\x00","\x00")).Add(HX_HCSTRING("A","\x41","\x00","\x00","\x00")).Add(HX_HCSTRING("B","\x42","\x00","\x00","\x00")).Add(HX_HCSTRING("C","\x43","\x00","\x00","\x00")).Add(HX_HCSTRING("D","\x44","\x00","\x00","\x00")).Add(HX_HCSTRING("E","\x45","\x00","\x00","\x00")).Add(HX_HCSTRING("F","\x46","\x00","\x00","\x00"));		HX_STACK_VAR(codeStringArray,"codeStringArray");
-		HX_STACK_LINE(248)
+		HX_STACK_LINE(250)
 		int tmp2 = loopCounter1Int;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(248)
+		HX_STACK_LINE(250)
 		int tmp3 = (loopCounter1Int + (int)1);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(248)
+		HX_STACK_LINE(250)
 		::String tmp4 = patternString.substring(tmp2,tmp3);		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(248)
+		HX_STACK_LINE(250)
 		::String scan1String = tmp4;		HX_STACK_VAR(scan1String,"scan1String");
-		HX_STACK_LINE(249)
+		HX_STACK_LINE(251)
 		::String tmp5 = scan1String;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(249)
+		HX_STACK_LINE(251)
 		int tmp6 = codeStringArray->indexOf(tmp5,null());		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(249)
+		HX_STACK_LINE(251)
 		bool tmp7 = (tmp6 > (int)-1);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(249)
+		HX_STACK_LINE(251)
 		if ((tmp7)){
-			HX_STACK_LINE(250)
+			HX_STACK_LINE(252)
 			int tmp8 = (loopCounter1Int + (int)1);		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(250)
+			HX_STACK_LINE(252)
 			int tmp9 = (loopCounter1Int + (int)2);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(250)
+			HX_STACK_LINE(252)
 			::String tmp10 = patternString.substring(tmp8,tmp9);		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(250)
+			HX_STACK_LINE(252)
 			::String scan2String = tmp10;		HX_STACK_VAR(scan2String,"scan2String");
-			HX_STACK_LINE(251)
+			HX_STACK_LINE(253)
 			::String tmp11 = scan2String;		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(251)
+			HX_STACK_LINE(253)
 			int tmp12 = codeStringArray->indexOf(tmp11,null());		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(251)
+			HX_STACK_LINE(253)
 			bool tmp13 = (tmp12 > (int)-1);		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(251)
+			HX_STACK_LINE(253)
 			if ((tmp13)){
-				HX_STACK_LINE(252)
+				HX_STACK_LINE(254)
 				::String tmp14 = (scan1String + scan2String);		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(252)
+				HX_STACK_LINE(254)
 				codeString = tmp14;
-				HX_STACK_LINE(253)
+				HX_STACK_LINE(255)
 				hx::AddEq(loopCounter1Int,(int)2);
 			}
 			else{
-				HX_STACK_LINE(255)
+				HX_STACK_LINE(257)
 				(loopCounter1Int)++;
 			}
 		}
 		else{
-			HX_STACK_LINE(257)
+			HX_STACK_LINE(259)
 			(loopCounter1Int)++;
 		}
-		HX_STACK_LINE(258)
+		HX_STACK_LINE(260)
 		::String wordString = HX_HCSTRING("","\x00","\x00","\x00","\x00");		HX_STACK_VAR(wordString,"wordString");
-		HX_STACK_LINE(291)
+		HX_STACK_LINE(293)
 		bool tmp8 = (codeString == HX_HCSTRING("11","\xe0","\x2a","\x00","\x00"));		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(291)
+		HX_STACK_LINE(293)
 		if ((tmp8)){
-			HX_STACK_LINE(292)
+			HX_STACK_LINE(294)
 			::String tmp9 = this->AddWordString(::EnumTagType_obj::ADJ,::EnumTagTypeSub_obj::ADJ);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(292)
+			HX_STACK_LINE(294)
 			wordString = tmp9;
 		}
 		else{
-			HX_STACK_LINE(294)
+			HX_STACK_LINE(296)
 			bool tmp9 = (codeString == HX_HCSTRING("22","\xc0","\x2b","\x00","\x00"));		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(294)
+			HX_STACK_LINE(296)
 			if ((tmp9)){
-				HX_STACK_LINE(295)
+				HX_STACK_LINE(297)
 				::String tmp10 = this->AddWordString(::EnumTagType_obj::ADV,::EnumTagTypeSub_obj::ADV);		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(295)
+				HX_STACK_LINE(297)
 				wordString = tmp10;
 			}
 			else{
-				HX_STACK_LINE(297)
+				HX_STACK_LINE(299)
 				bool tmp10 = (codeString == HX_HCSTRING("33","\xa0","\x2c","\x00","\x00"));		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(297)
+				HX_STACK_LINE(299)
 				if ((tmp10)){
-					HX_STACK_LINE(298)
+					HX_STACK_LINE(300)
 					::String tmp11 = this->AddWordString(::EnumTagType_obj::NOUN_ALIVE_ABSTRACT,::EnumTagTypeSub_obj::NOUN);		HX_STACK_VAR(tmp11,"tmp11");
-					HX_STACK_LINE(298)
+					HX_STACK_LINE(300)
 					wordString = tmp11;
 				}
 				else{
-					HX_STACK_LINE(300)
+					HX_STACK_LINE(302)
 					bool tmp11 = (codeString == HX_HCSTRING("43","\x7f","\x2d","\x00","\x00"));		HX_STACK_VAR(tmp11,"tmp11");
-					HX_STACK_LINE(300)
+					HX_STACK_LINE(302)
 					if ((tmp11)){
-						HX_STACK_LINE(301)
-						Array< ::String > _43TagStringArray = Array_obj< ::String >::__new();		HX_STACK_VAR(_43TagStringArray,"_43TagStringArray");
-						HX_STACK_LINE(302)
-						int loopCounter2Int = (int)0;		HX_STACK_VAR(loopCounter2Int,"loopCounter2Int");
 						HX_STACK_LINE(303)
-						int randomIndexInt = (int)0;		HX_STACK_VAR(randomIndexInt,"randomIndexInt");
+						Array< ::String > _43TagStringArray = Array_obj< ::String >::__new();		HX_STACK_VAR(_43TagStringArray,"_43TagStringArray");
 						HX_STACK_LINE(304)
+						int loopCounter2Int = (int)0;		HX_STACK_VAR(loopCounter2Int,"loopCounter2Int");
+						HX_STACK_LINE(305)
+						int randomIndexInt = (int)0;		HX_STACK_VAR(randomIndexInt,"randomIndexInt");
+						HX_STACK_LINE(306)
 						while((true)){
-							HX_STACK_LINE(304)
+							HX_STACK_LINE(306)
 							int tmp12 = loopCounter2Int;		HX_STACK_VAR(tmp12,"tmp12");
-							HX_STACK_LINE(304)
+							HX_STACK_LINE(306)
 							::ObjectVisitor tmp13 = this->visitorObject;		HX_STACK_VAR(tmp13,"tmp13");
-							HX_STACK_LINE(304)
+							HX_STACK_LINE(306)
 							int tmp14 = tmp13->GetTagObjectArray()->length;		HX_STACK_VAR(tmp14,"tmp14");
-							HX_STACK_LINE(304)
+							HX_STACK_LINE(306)
 							bool tmp15 = (tmp12 < tmp14);		HX_STACK_VAR(tmp15,"tmp15");
-							HX_STACK_LINE(304)
+							HX_STACK_LINE(306)
 							bool tmp16 = !(tmp15);		HX_STACK_VAR(tmp16,"tmp16");
-							HX_STACK_LINE(304)
+							HX_STACK_LINE(306)
 							if ((tmp16)){
-								HX_STACK_LINE(304)
+								HX_STACK_LINE(306)
 								break;
 							}
-							HX_STACK_LINE(305)
+							HX_STACK_LINE(307)
 							::ObjectVisitor tmp17 = this->visitorObject;		HX_STACK_VAR(tmp17,"tmp17");
-							HX_STACK_LINE(305)
+							HX_STACK_LINE(307)
 							::ObjectTag tmp18 = tmp17->GetTagObjectArray()->__get(loopCounter2Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(305)
+							HX_STACK_LINE(307)
 							::EnumTagType tmp19 = tmp18->GetTypeEnum();		HX_STACK_VAR(tmp19,"tmp19");
-							HX_STACK_LINE(305)
+							HX_STACK_LINE(307)
 							bool tmp20 = (tmp19 == ::EnumTagType_obj::NOUN_ALIVE_CONCRETE);		HX_STACK_VAR(tmp20,"tmp20");
-							HX_STACK_LINE(305)
+							HX_STACK_LINE(307)
 							if ((tmp20)){
-								HX_STACK_LINE(306)
+								HX_STACK_LINE(308)
 								::ObjectVisitor tmp21 = this->visitorObject;		HX_STACK_VAR(tmp21,"tmp21");
-								HX_STACK_LINE(306)
+								HX_STACK_LINE(308)
 								::ObjectTag tmp22 = tmp21->GetTagObjectArray()->__get(loopCounter2Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp22,"tmp22");
-								HX_STACK_LINE(306)
+								HX_STACK_LINE(308)
 								::String tmp23 = tmp22->GetNounString();		HX_STACK_VAR(tmp23,"tmp23");
-								HX_STACK_LINE(306)
+								HX_STACK_LINE(308)
 								_43TagStringArray->push(tmp23);
 							}
-							HX_STACK_LINE(308)
+							HX_STACK_LINE(310)
 							(loopCounter2Int)++;
 						}
-						HX_STACK_LINE(310)
+						HX_STACK_LINE(312)
 						bool tmp12 = (_43TagStringArray->length == (int)0);		HX_STACK_VAR(tmp12,"tmp12");
-						HX_STACK_LINE(310)
+						HX_STACK_LINE(312)
 						if ((tmp12)){
-							HX_STACK_LINE(311)
+							HX_STACK_LINE(313)
 							loopCounter2Int = (int)0;
-							HX_STACK_LINE(312)
+							HX_STACK_LINE(314)
 							while((true)){
-								HX_STACK_LINE(312)
+								HX_STACK_LINE(314)
 								int tmp13 = loopCounter2Int;		HX_STACK_VAR(tmp13,"tmp13");
-								HX_STACK_LINE(312)
+								HX_STACK_LINE(314)
 								::CollectionGlobal tmp14 = this->collectionGlobalObject;		HX_STACK_VAR(tmp14,"tmp14");
-								HX_STACK_LINE(312)
+								HX_STACK_LINE(314)
 								int tmp15 = tmp14->GetTagGeneralObjectArray()->length;		HX_STACK_VAR(tmp15,"tmp15");
-								HX_STACK_LINE(312)
+								HX_STACK_LINE(314)
 								bool tmp16 = (tmp13 < tmp15);		HX_STACK_VAR(tmp16,"tmp16");
-								HX_STACK_LINE(312)
+								HX_STACK_LINE(314)
 								bool tmp17 = !(tmp16);		HX_STACK_VAR(tmp17,"tmp17");
-								HX_STACK_LINE(312)
+								HX_STACK_LINE(314)
 								if ((tmp17)){
-									HX_STACK_LINE(312)
+									HX_STACK_LINE(314)
 									break;
 								}
-								HX_STACK_LINE(313)
+								HX_STACK_LINE(315)
 								::CollectionGlobal tmp18 = this->collectionGlobalObject;		HX_STACK_VAR(tmp18,"tmp18");
-								HX_STACK_LINE(313)
+								HX_STACK_LINE(315)
 								::ObjectTag tmp19 = tmp18->GetTagGeneralObjectArray()->__get(loopCounter2Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp19,"tmp19");
-								HX_STACK_LINE(313)
+								HX_STACK_LINE(315)
 								::EnumTagType tmp20 = tmp19->GetTypeEnum();		HX_STACK_VAR(tmp20,"tmp20");
-								HX_STACK_LINE(313)
+								HX_STACK_LINE(315)
 								bool tmp21 = (tmp20 == ::EnumTagType_obj::NOUN_ALIVE_CONCRETE);		HX_STACK_VAR(tmp21,"tmp21");
-								HX_STACK_LINE(313)
+								HX_STACK_LINE(315)
 								if ((tmp21)){
-									HX_STACK_LINE(314)
+									HX_STACK_LINE(316)
 									::CollectionGlobal tmp22 = this->collectionGlobalObject;		HX_STACK_VAR(tmp22,"tmp22");
-									HX_STACK_LINE(314)
+									HX_STACK_LINE(316)
 									::ObjectTag tmp23 = tmp22->GetTagGeneralObjectArray()->__get(loopCounter2Int).StaticCast< ::ObjectTag >();		HX_STACK_VAR(tmp23,"tmp23");
-									HX_STACK_LINE(314)
+									HX_STACK_LINE(316)
 									::String tmp24 = tmp23->GetNounString();		HX_STACK_VAR(tmp24,"tmp24");
-									HX_STACK_LINE(314)
+									HX_STACK_LINE(316)
 									_43TagStringArray->push(tmp24);
 								}
-								HX_STACK_LINE(316)
+								HX_STACK_LINE(318)
 								(loopCounter2Int)++;
 							}
 						}
-						HX_STACK_LINE(319)
+						HX_STACK_LINE(321)
 						int tmp13 = _43TagStringArray->length;		HX_STACK_VAR(tmp13,"tmp13");
-						HX_STACK_LINE(319)
+						HX_STACK_LINE(321)
 						int tmp14 = this->RandomNumberGeneratorInt(tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-						HX_STACK_LINE(319)
+						HX_STACK_LINE(321)
 						randomIndexInt = tmp14;
-						HX_STACK_LINE(320)
+						HX_STACK_LINE(322)
 						::ObjectVisitor tmp15 = this->visitorObject;		HX_STACK_VAR(tmp15,"tmp15");
-						HX_STACK_LINE(320)
+						HX_STACK_LINE(322)
 						::String tmp16 = tmp15->GetNameString();		HX_STACK_VAR(tmp16,"tmp16");
-						HX_STACK_LINE(320)
+						HX_STACK_LINE(322)
 						bool tmp17 = (tmp16 == HX_HCSTRING("","\x00","\x00","\x00","\x00"));		HX_STACK_VAR(tmp17,"tmp17");
-						HX_STACK_LINE(320)
+						HX_STACK_LINE(322)
 						if ((tmp17)){
-							HX_STACK_LINE(321)
+							HX_STACK_LINE(323)
 							::String tmp18 = _43TagStringArray->__get(randomIndexInt);		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(321)
+							HX_STACK_LINE(323)
 							wordString = tmp18;
 						}
 						else{
-							HX_STACK_LINE(323)
+							HX_STACK_LINE(325)
 							::ObjectVisitor tmp18 = this->visitorObject;		HX_STACK_VAR(tmp18,"tmp18");
-							HX_STACK_LINE(323)
+							HX_STACK_LINE(325)
 							::String tmp19 = tmp18->GetNameString();		HX_STACK_VAR(tmp19,"tmp19");
-							HX_STACK_LINE(323)
+							HX_STACK_LINE(325)
 							bool tmp20 = (tmp19 != HX_HCSTRING("","\x00","\x00","\x00","\x00"));		HX_STACK_VAR(tmp20,"tmp20");
-							HX_STACK_LINE(323)
+							HX_STACK_LINE(325)
 							if ((tmp20)){
-								HX_STACK_LINE(324)
+								HX_STACK_LINE(326)
 								Float tmp21 = ::Math_obj::random();		HX_STACK_VAR(tmp21,"tmp21");
-								HX_STACK_LINE(324)
+								HX_STACK_LINE(326)
 								bool tmp22 = (tmp21 > ((Float)0.5));		HX_STACK_VAR(tmp22,"tmp22");
-								HX_STACK_LINE(324)
+								HX_STACK_LINE(326)
 								if ((tmp22)){
-									HX_STACK_LINE(325)
+									HX_STACK_LINE(327)
 									::ObjectVisitor tmp23 = this->visitorObject;		HX_STACK_VAR(tmp23,"tmp23");
-									HX_STACK_LINE(325)
+									HX_STACK_LINE(327)
 									::String tmp24 = tmp23->GetNameString();		HX_STACK_VAR(tmp24,"tmp24");
-									HX_STACK_LINE(325)
+									HX_STACK_LINE(327)
 									wordString = tmp24;
 								}
 								else{
-									HX_STACK_LINE(327)
+									HX_STACK_LINE(329)
 									::String tmp23 = _43TagStringArray->__get(randomIndexInt);		HX_STACK_VAR(tmp23,"tmp23");
-									HX_STACK_LINE(327)
+									HX_STACK_LINE(329)
 									wordString = tmp23;
 								}
 							}
 						}
 					}
 					else{
-						HX_STACK_LINE(330)
+						HX_STACK_LINE(332)
 						bool tmp12 = (codeString == HX_HCSTRING("65","\x3f","\x2f","\x00","\x00"));		HX_STACK_VAR(tmp12,"tmp12");
-						HX_STACK_LINE(330)
+						HX_STACK_LINE(332)
 						if ((tmp12)){
-							HX_STACK_LINE(331)
+							HX_STACK_LINE(333)
 							::String tmp13 = this->AddWordString(::EnumTagType_obj::NOUN_INANIMATE_HOLD_CONCRETE,::EnumTagTypeSub_obj::NOUN_S);		HX_STACK_VAR(tmp13,"tmp13");
-							HX_STACK_LINE(331)
+							HX_STACK_LINE(333)
 							wordString = tmp13;
 						}
 						else{
-							HX_STACK_LINE(333)
+							HX_STACK_LINE(335)
 							bool tmp13 = (codeString == HX_HCSTRING("93","\xda","\x31","\x00","\x00"));		HX_STACK_VAR(tmp13,"tmp13");
-							HX_STACK_LINE(333)
+							HX_STACK_LINE(335)
 							if ((tmp13)){
-								HX_STACK_LINE(334)
+								HX_STACK_LINE(336)
 								::String tmp14 = this->AddWordString(::EnumTagType_obj::NOUN_INANIMATE_PLACE_CONCRETE_OWNER,::EnumTagTypeSub_obj::NOUN);		HX_STACK_VAR(tmp14,"tmp14");
-								HX_STACK_LINE(334)
+								HX_STACK_LINE(336)
 								wordString = tmp14;
 							}
 							else{
-								HX_STACK_LINE(336)
+								HX_STACK_LINE(338)
 								bool tmp14 = (codeString == HX_HCSTRING("A3","\xd2","\x38","\x00","\x00"));		HX_STACK_VAR(tmp14,"tmp14");
-								HX_STACK_LINE(336)
+								HX_STACK_LINE(338)
 								if ((tmp14)){
-									HX_STACK_LINE(337)
+									HX_STACK_LINE(339)
 									::String tmp15 = this->AddWordString(::EnumTagType_obj::NOUN_INANIMATE_SEE_CONCRETE,::EnumTagTypeSub_obj::NOUN);		HX_STACK_VAR(tmp15,"tmp15");
-									HX_STACK_LINE(337)
+									HX_STACK_LINE(339)
 									wordString = tmp15;
 								}
 								else{
-									HX_STACK_LINE(339)
+									HX_STACK_LINE(341)
 									bool tmp15 = (codeString == HX_HCSTRING("E7","\x52","\x3c","\x00","\x00"));		HX_STACK_VAR(tmp15,"tmp15");
-									HX_STACK_LINE(339)
+									HX_STACK_LINE(341)
 									if ((tmp15)){
-										HX_STACK_LINE(340)
+										HX_STACK_LINE(342)
 										::String tmp16 = this->AddWordString(::EnumTagType_obj::VERB_INTRANSITIVE,::EnumTagTypeSub_obj::VERB_1);		HX_STACK_VAR(tmp16,"tmp16");
-										HX_STACK_LINE(340)
+										HX_STACK_LINE(342)
 										wordString = tmp16;
 									}
 									else{
-										HX_STACK_LINE(342)
+										HX_STACK_LINE(344)
 										bool tmp16 = (codeString == HX_HCSTRING("E8","\x53","\x3c","\x00","\x00"));		HX_STACK_VAR(tmp16,"tmp16");
-										HX_STACK_LINE(342)
+										HX_STACK_LINE(344)
 										if ((tmp16)){
-											HX_STACK_LINE(343)
+											HX_STACK_LINE(345)
 											::String tmp17 = this->AddWordString(::EnumTagType_obj::VERB_INTRANSITIVE,::EnumTagTypeSub_obj::VERB_2);		HX_STACK_VAR(tmp17,"tmp17");
-											HX_STACK_LINE(343)
+											HX_STACK_LINE(345)
 											wordString = tmp17;
 										}
 										else{
-											HX_STACK_LINE(345)
+											HX_STACK_LINE(347)
 											bool tmp17 = (codeString == HX_HCSTRING("EA","\x5c","\x3c","\x00","\x00"));		HX_STACK_VAR(tmp17,"tmp17");
-											HX_STACK_LINE(345)
+											HX_STACK_LINE(347)
 											if ((tmp17)){
-												HX_STACK_LINE(346)
+												HX_STACK_LINE(348)
 												::String tmp18 = this->AddWordString(::EnumTagType_obj::VERB_INTRANSITIVE,::EnumTagTypeSub_obj::VERB_S);		HX_STACK_VAR(tmp18,"tmp18");
-												HX_STACK_LINE(346)
+												HX_STACK_LINE(348)
 												wordString = tmp18;
 											}
 											else{
-												HX_STACK_LINE(349)
+												HX_STACK_LINE(351)
 												wordString = scan1String;
 											}
 										}
@@ -1108,14 +1110,14 @@ HX_DEFINE_DYNAMIC_FUNC2(ObjectGeneratorSentence_obj,DetermineProperCallbackFunct
 				}
 			}
 		}
-		HX_STACK_LINE(351)
+		HX_STACK_LINE(353)
 		::String tmp9 = (sentenceString + wordString);		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(351)
+		HX_STACK_LINE(353)
 		sentenceString = tmp9;
 	}
-	HX_STACK_LINE(353)
+	HX_STACK_LINE(355)
 	::String tmp = sentenceString;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(353)
+	HX_STACK_LINE(355)
 	return tmp;
 }
 
@@ -1123,18 +1125,18 @@ HX_DEFINE_DYNAMIC_FUNC2(ObjectGeneratorSentence_obj,DetermineProperCallbackFunct
 HX_DEFINE_DYNAMIC_FUNC1(ObjectGeneratorSentence_obj,GenerateSentenceString,return )
 
 int ObjectGeneratorSentence_obj::RandomNumberGeneratorInt( int _randomNumberInt){
-	HX_STACK_FRAME("ObjectGeneratorSentence","RandomNumberGeneratorInt",0xb4d8c4df,"ObjectGeneratorSentence.RandomNumberGeneratorInt","ObjectGeneratorSentence.hx",355,0x43a4e8e7)
+	HX_STACK_FRAME("ObjectGeneratorSentence","RandomNumberGeneratorInt",0xb4d8c4df,"ObjectGeneratorSentence.RandomNumberGeneratorInt","ObjectGeneratorSentence.hx",357,0x43a4e8e7)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_randomNumberInt,"_randomNumberInt")
-	HX_STACK_LINE(355)
+	HX_STACK_LINE(357)
 	Float tmp = ::Math_obj::random();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(355)
+	HX_STACK_LINE(357)
 	int tmp1 = (_randomNumberInt - (int)1);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(355)
+	HX_STACK_LINE(357)
 	Float tmp2 = (tmp * tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(355)
+	HX_STACK_LINE(357)
 	int tmp3 = ::Math_obj::round(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(355)
+	HX_STACK_LINE(357)
 	return tmp3;
 }
 
@@ -1142,28 +1144,28 @@ int ObjectGeneratorSentence_obj::RandomNumberGeneratorInt( int _randomNumberInt)
 HX_DEFINE_DYNAMIC_FUNC1(ObjectGeneratorSentence_obj,RandomNumberGeneratorInt,return )
 
 ::String ObjectGeneratorSentence_obj::WordFixString( ::String _fixString){
-	HX_STACK_FRAME("ObjectGeneratorSentence","WordFixString",0x1c1734c5,"ObjectGeneratorSentence.WordFixString","ObjectGeneratorSentence.hx",356,0x43a4e8e7)
+	HX_STACK_FRAME("ObjectGeneratorSentence","WordFixString",0x1c1734c5,"ObjectGeneratorSentence.WordFixString","ObjectGeneratorSentence.hx",358,0x43a4e8e7)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(_fixString,"_fixString")
-	HX_STACK_LINE(357)
+	HX_STACK_LINE(359)
 	::String tmp = _fixString.substring((int)0,(int)1);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(357)
+	HX_STACK_LINE(359)
 	::String tmp1 = tmp.toUpperCase();		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(357)
+	HX_STACK_LINE(359)
 	::String fix1String = tmp1;		HX_STACK_VAR(fix1String,"fix1String");
-	HX_STACK_LINE(358)
+	HX_STACK_LINE(360)
 	int tmp2 = _fixString.length;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(358)
+	HX_STACK_LINE(360)
 	::String tmp3 = _fixString.substring((int)1,tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(358)
+	HX_STACK_LINE(360)
 	::String fix2String = tmp3;		HX_STACK_VAR(fix2String,"fix2String");
-	HX_STACK_LINE(359)
+	HX_STACK_LINE(361)
 	::String tmp4 = (fix1String + fix2String);		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(359)
+	HX_STACK_LINE(361)
 	::String fix3String = tmp4;		HX_STACK_VAR(fix3String,"fix3String");
-	HX_STACK_LINE(360)
+	HX_STACK_LINE(362)
 	::String tmp5 = fix3String;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(360)
+	HX_STACK_LINE(362)
 	return tmp5;
 }
 
@@ -1171,56 +1173,56 @@ HX_DEFINE_DYNAMIC_FUNC1(ObjectGeneratorSentence_obj,RandomNumberGeneratorInt,ret
 HX_DEFINE_DYNAMIC_FUNC1(ObjectGeneratorSentence_obj,WordFixString,return )
 
 ::String ObjectGeneratorSentence_obj::GenerateSentence3String( ::CollectionGlobal collectionGlobalObject){
-	HX_STACK_FRAME("ObjectGeneratorSentence","GenerateSentence3String",0x6b0ab815,"ObjectGeneratorSentence.GenerateSentence3String","ObjectGeneratorSentence.hx",362,0x43a4e8e7)
+	HX_STACK_FRAME("ObjectGeneratorSentence","GenerateSentence3String",0x6b0ab815,"ObjectGeneratorSentence.GenerateSentence3String","ObjectGeneratorSentence.hx",364,0x43a4e8e7)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(collectionGlobalObject,"collectionGlobalObject")
-	HX_STACK_LINE(363)
+	HX_STACK_LINE(365)
 	Array< ::Dynamic > patternStringArray2D = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(patternStringArray2D,"patternStringArray2D");
-	HX_STACK_LINE(364)
+	HX_STACK_LINE(366)
 	patternStringArray2D = Array_obj< ::Dynamic >::__new().Add(Array_obj< ::String >::__new().Add(HX_HCSTRING("43 Owns 93...","\x82","\x7a","\x29","\xc6")).Add(HX_HCSTRING("43 EA On The 93.","\xc7","\x60","\xd5","\xab")).Add(HX_HCSTRING("The 33 EA Again.","\xe1","\x3b","\xae","\x56"))).Add(Array_obj< ::String >::__new().Add(HX_HCSTRING("A3.","\x1c","\x7f","\x31","\x00")).Add(HX_HCSTRING("43 EA 22.","\x2b","\x73","\xbd","\x89")).Add(HX_HCSTRING("Into The 93.","\x65","\xca","\xd4","\x54"))).Add(Array_obj< ::String >::__new().Add(HX_HCSTRING("A3 EA 22.","\x38","\xc8","\xff","\x3f")).Add(HX_HCSTRING("What I E8 Were 33...","\x29","\x15","\x8c","\xe7")).Add(HX_HCSTRING("Are 65 Of 93.","\x80","\x87","\x9d","\xcd")));
-	HX_STACK_LINE(404)
-	int tmp = patternStringArray2D->length;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(404)
-	int tmp1 = this->RandomNumberGeneratorInt(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(404)
-	int stringPatternIndexInt = tmp1;		HX_STACK_VAR(stringPatternIndexInt,"stringPatternIndexInt");
-	HX_STACK_LINE(405)
-	Array< ::String > stringPatternIndexString = patternStringArray2D->__get(stringPatternIndexInt).StaticCast< Array< ::String > >();		HX_STACK_VAR(stringPatternIndexString,"stringPatternIndexString");
 	HX_STACK_LINE(406)
-	::String threeSentenceString = HX_HCSTRING("","\x00","\x00","\x00","\x00");		HX_STACK_VAR(threeSentenceString,"threeSentenceString");
+	int tmp = patternStringArray2D->length;		HX_STACK_VAR(tmp,"tmp");
+	HX_STACK_LINE(406)
+	int tmp1 = this->RandomNumberGeneratorInt(tmp);		HX_STACK_VAR(tmp1,"tmp1");
+	HX_STACK_LINE(406)
+	int stringPatternIndexInt = tmp1;		HX_STACK_VAR(stringPatternIndexInt,"stringPatternIndexInt");
 	HX_STACK_LINE(407)
-	int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
+	Array< ::String > stringPatternIndexString = patternStringArray2D->__get(stringPatternIndexInt).StaticCast< Array< ::String > >();		HX_STACK_VAR(stringPatternIndexString,"stringPatternIndexString");
 	HX_STACK_LINE(408)
+	::String threeSentenceString = HX_HCSTRING("","\x00","\x00","\x00","\x00");		HX_STACK_VAR(threeSentenceString,"threeSentenceString");
+	HX_STACK_LINE(409)
+	int loopCounter1Int = (int)0;		HX_STACK_VAR(loopCounter1Int,"loopCounter1Int");
+	HX_STACK_LINE(410)
 	while((true)){
-		HX_STACK_LINE(408)
+		HX_STACK_LINE(410)
 		bool tmp2 = (loopCounter1Int < (int)3);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(408)
+		HX_STACK_LINE(410)
 		bool tmp3 = !(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(408)
+		HX_STACK_LINE(410)
 		if ((tmp3)){
-			HX_STACK_LINE(408)
+			HX_STACK_LINE(410)
 			break;
 		}
-		HX_STACK_LINE(410)
-		::String tmp4 = stringPatternIndexString->__get(loopCounter1Int);		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(410)
-		::String tmp5 = this->GenerateSentenceString(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(410)
-		::String sentenceString = tmp5;		HX_STACK_VAR(sentenceString,"sentenceString");
-		HX_STACK_LINE(411)
-		::String tmp6 = (threeSentenceString + sentenceString);		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(411)
-		::String tmp7 = (tmp6 + HX_HCSTRING("\n","\x0a","\x00","\x00","\x00"));		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(411)
-		::String tmp8 = ::Std_obj::string(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(411)
-		threeSentenceString = tmp8;
 		HX_STACK_LINE(412)
+		::String tmp4 = stringPatternIndexString->__get(loopCounter1Int);		HX_STACK_VAR(tmp4,"tmp4");
+		HX_STACK_LINE(412)
+		::String tmp5 = this->GenerateSentenceString(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
+		HX_STACK_LINE(412)
+		::String sentenceString = tmp5;		HX_STACK_VAR(sentenceString,"sentenceString");
+		HX_STACK_LINE(413)
+		::String tmp6 = (threeSentenceString + sentenceString);		HX_STACK_VAR(tmp6,"tmp6");
+		HX_STACK_LINE(413)
+		::String tmp7 = (tmp6 + HX_HCSTRING("\n","\x0a","\x00","\x00","\x00"));		HX_STACK_VAR(tmp7,"tmp7");
+		HX_STACK_LINE(413)
+		::String tmp8 = ::Std_obj::string(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
+		HX_STACK_LINE(413)
+		threeSentenceString = tmp8;
+		HX_STACK_LINE(414)
 		(loopCounter1Int)++;
 	}
-	HX_STACK_LINE(414)
+	HX_STACK_LINE(416)
 	::String tmp2 = threeSentenceString;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(414)
+	HX_STACK_LINE(416)
 	return tmp2;
 }
 

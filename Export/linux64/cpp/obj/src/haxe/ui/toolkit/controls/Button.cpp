@@ -1905,77 +1905,77 @@ Void Button_obj::applyStyle( ){
 				HX_STACK_LINE(659)
 				labelStyle->set_textAlign(tmp20);
 			}
-			HX_STACK_LINE(664)
+			HX_STACK_LINE(665)
 			::haxe::ui::toolkit::controls::Text tmp5 = this->_label;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(664)
+			HX_STACK_LINE(665)
 			::haxe::ui::toolkit::style::Style tmp6 = labelStyle;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(664)
+			HX_STACK_LINE(665)
 			tmp5->set_baseStyle(tmp6);
 		}
-		HX_STACK_LINE(667)
+		HX_STACK_LINE(668)
 		::haxe::ui::toolkit::style::Style tmp2 = this->_baseStyle;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(667)
+		HX_STACK_LINE(668)
 		bool tmp3 = (tmp2 != null());		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(667)
+		HX_STACK_LINE(668)
 		if ((tmp3)){
-			HX_STACK_LINE(668)
+			HX_STACK_LINE(669)
 			::haxe::ui::toolkit::style::Style tmp4 = this->_baseStyle;		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(668)
+			HX_STACK_LINE(669)
 			::String tmp5 = tmp4->get_icon();		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(668)
+			HX_STACK_LINE(669)
 			bool tmp6 = (tmp5 != null());		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(668)
+			HX_STACK_LINE(669)
 			if ((tmp6)){
-				HX_STACK_LINE(669)
+				HX_STACK_LINE(670)
 				::haxe::ui::toolkit::style::Style tmp7 = this->_baseStyle;		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(669)
+				HX_STACK_LINE(670)
 				::String tmp8 = tmp7->get_icon();		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(669)
+				HX_STACK_LINE(670)
 				this->set_icon(tmp8);
 			}
-			HX_STACK_LINE(672)
+			HX_STACK_LINE(673)
 			::haxe::ui::toolkit::style::Style tmp7 = this->_baseStyle;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(672)
+			HX_STACK_LINE(673)
 			::String tmp8 = tmp7->get_iconPosition();		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(672)
+			HX_STACK_LINE(673)
 			bool tmp9 = (tmp8 != null());		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(672)
+			HX_STACK_LINE(673)
 			if ((tmp9)){
-				HX_STACK_LINE(673)
+				HX_STACK_LINE(674)
 				::haxe::ui::toolkit::style::Style tmp10 = this->_baseStyle;		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(673)
+				HX_STACK_LINE(674)
 				::String tmp11 = tmp10->get_iconPosition();		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(673)
+				HX_STACK_LINE(674)
 				this->set_iconPosition(tmp11);
 			}
-			HX_STACK_LINE(676)
+			HX_STACK_LINE(677)
 			::haxe::ui::toolkit::style::Style tmp10 = this->_baseStyle;		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(676)
+			HX_STACK_LINE(677)
 			Float tmp11 = tmp10->get_iconWidth();		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(676)
+			HX_STACK_LINE(677)
 			bool tmp12 = (tmp11 != (int)-1);		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(676)
+			HX_STACK_LINE(677)
 			if ((tmp12)){
-				HX_STACK_LINE(677)
+				HX_STACK_LINE(678)
 				::haxe::ui::toolkit::style::Style tmp13 = this->_baseStyle;		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(677)
+				HX_STACK_LINE(678)
 				Float tmp14 = tmp13->get_iconWidth();		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(677)
+				HX_STACK_LINE(678)
 				this->set_iconWidth(tmp14);
 			}
-			HX_STACK_LINE(680)
+			HX_STACK_LINE(681)
 			::haxe::ui::toolkit::style::Style tmp13 = this->_baseStyle;		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(680)
+			HX_STACK_LINE(681)
 			Float tmp14 = tmp13->get_iconHeight();		HX_STACK_VAR(tmp14,"tmp14");
-			HX_STACK_LINE(680)
+			HX_STACK_LINE(681)
 			bool tmp15 = (tmp14 != (int)-1);		HX_STACK_VAR(tmp15,"tmp15");
-			HX_STACK_LINE(680)
+			HX_STACK_LINE(681)
 			if ((tmp15)){
-				HX_STACK_LINE(681)
+				HX_STACK_LINE(682)
 				::haxe::ui::toolkit::style::Style tmp16 = this->_baseStyle;		HX_STACK_VAR(tmp16,"tmp16");
-				HX_STACK_LINE(681)
+				HX_STACK_LINE(682)
 				Float tmp17 = tmp16->get_iconHeight();		HX_STACK_VAR(tmp17,"tmp17");
-				HX_STACK_LINE(681)
+				HX_STACK_LINE(682)
 				this->set_iconHeight(tmp17);
 			}
 		}
@@ -2055,54 +2055,54 @@ return null();
 ::haxe::ds::StringMap Button_obj::_groups;
 
 bool Button_obj::optionInGroup( ::String value,::haxe::ui::toolkit::controls::Button option){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.Button","optionInGroup",0x813b47bf,"haxe.ui.toolkit.controls.Button.optionInGroup","haxe/ui/toolkit/controls/Button.hx",689,0x493ac9f6)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.Button","optionInGroup",0x813b47bf,"haxe.ui.toolkit.controls.Button.optionInGroup","haxe/ui/toolkit/controls/Button.hx",690,0x493ac9f6)
 	HX_STACK_ARG(value,"value")
 	HX_STACK_ARG(option,"option")
-	HX_STACK_LINE(690)
+	HX_STACK_LINE(691)
 	bool exists = false;		HX_STACK_VAR(exists,"exists");
-	HX_STACK_LINE(691)
+	HX_STACK_LINE(692)
 	::haxe::ds::StringMap tmp = ::haxe::ui::toolkit::controls::Button_obj::_groups;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(691)
+	HX_STACK_LINE(692)
 	::String tmp1 = value;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(691)
+	HX_STACK_LINE(692)
 	Array< ::Dynamic > arr = tmp->get(tmp1);		HX_STACK_VAR(arr,"arr");
-	HX_STACK_LINE(692)
+	HX_STACK_LINE(693)
 	bool tmp2 = (arr != null());		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(692)
+	HX_STACK_LINE(693)
 	if ((tmp2)){
-		HX_STACK_LINE(693)
+		HX_STACK_LINE(694)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(693)
+		HX_STACK_LINE(694)
 		while((true)){
-			HX_STACK_LINE(693)
+			HX_STACK_LINE(694)
 			bool tmp3 = (_g < arr->length);		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(693)
+			HX_STACK_LINE(694)
 			bool tmp4 = !(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(693)
+			HX_STACK_LINE(694)
 			if ((tmp4)){
-				HX_STACK_LINE(693)
+				HX_STACK_LINE(694)
 				break;
 			}
-			HX_STACK_LINE(693)
+			HX_STACK_LINE(694)
 			::haxe::ui::toolkit::controls::Button tmp5 = arr->__get(_g).StaticCast< ::haxe::ui::toolkit::controls::Button >();		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(693)
+			HX_STACK_LINE(694)
 			::haxe::ui::toolkit::controls::Button test = tmp5;		HX_STACK_VAR(test,"test");
-			HX_STACK_LINE(693)
+			HX_STACK_LINE(694)
 			++(_g);
-			HX_STACK_LINE(694)
+			HX_STACK_LINE(695)
 			bool tmp6 = (test == option);		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(694)
+			HX_STACK_LINE(695)
 			if ((tmp6)){
-				HX_STACK_LINE(695)
-				exists = true;
 				HX_STACK_LINE(696)
+				exists = true;
+				HX_STACK_LINE(697)
 				break;
 			}
 		}
 	}
-	HX_STACK_LINE(700)
+	HX_STACK_LINE(701)
 	bool tmp3 = exists;		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(700)
+	HX_STACK_LINE(701)
 	return tmp3;
 }
 

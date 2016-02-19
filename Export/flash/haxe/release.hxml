@@ -3,8 +3,8 @@
 -D haxeui-rich-text=0.1.2
 -cp /home/notalentgeek/haxelib/actuate/1,8,6
 -D actuate=1.8.6
--cp /home/notalentgeek/haxelib/haxeui/1,8,6
--D haxeui=1.8.6
+-cp /home/notalentgeek/haxelib/haxeui/1,8,17
+-D haxeui=1.8.17
 -cp /home/notalentgeek/haxelib/hscript/2,0,5
 -D hscript=2.0.5
 -cp /home/notalentgeek/haxelib/lime/2,9,0

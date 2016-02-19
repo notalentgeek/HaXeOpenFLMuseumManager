@@ -5,7 +5,7 @@
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Visitor" />
-        <listSelector id="UIPopupEditObjectVisitor_SelectVisitor" text=" " width="100%">
+        <listSelector id="UIPopupEditObjectVisitor_SelectVisitor" text="" width="100%">
         </listSelector>
 
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
@@ -15,8 +15,8 @@
         <!--##################################################-->
 
         <text text="Current/Move Exhibition" />
-        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayCurrentExhibition" multiline="true" style="borderColor:0x000000;borderSize:1"  text=" " width="100%" wrapLines="true" />
-        <listSelector disabled="true" id="UIPopupEditObjectVisitor_SelectCurrentExhibition" text=" " width="100%" >
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayCurrentExhibition" multiline="true" style="borderColor:0x000000;borderSize:1"  text="" width="100%" wrapLines="true" />
+        <listSelector disabled="true" id="UIPopupEditObjectVisitor_SelectCurrentExhibition" text="" width="100%" >
         </listSelector>
 
         <!--##################################################-->
@@ -27,7 +27,7 @@
         <!--##################################################-->
 
         <text text="Mode" />
-        <listSelector disabled="true" id="UIPopupEditObjectVisitor_SelectMode" text=" " width="100%" >
+        <listSelector disabled="true" id="UIPopupEditObjectVisitor_SelectMode" text="" width="100%" >
             <array>
                 Hardware Manual,
                 Software Auto,
@@ -41,12 +41,12 @@
         <!--##################################################-->
 
         <text text="Name" />
-        <textInput disabled="true" id="UIPopupEditObjectVisitor_InputName" text=" " width="100%" />
+        <textInput disabled="true" id="UIPopupEditObjectVisitor_InputName" text="" width="100%" />
 
         <!--##################################################-->
 
         <text text="Previous Visitor" />
-        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPreviousVisitor" multiline="true" style="borderColor:0x000000;borderSize:1" text=" " width="100%" wrapLines="true" />
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayPreviousVisitor" multiline="true" style="borderColor:0x000000;borderSize:1" text="" width="100%" wrapLines="true" />
 
         <!--##################################################-->
 
@@ -67,17 +67,17 @@
         <!--##################################################-->
 
         <text text="Target Exhibition" />
-        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayTargetExhibition" multiline="true" style="borderColor:0x000000;borderSize:1" text=" " width="100%" wrapLines="true" />
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayTargetExhibition" multiline="true" style="borderColor:0x000000;borderSize:1" text="" width="100%" wrapLines="true" />
 
         <!--##################################################-->
 
         <text text="Visitor Index Global" />
-        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayVisitorIndexGlobal" multiline="true" style="borderColor:0x000000;borderSize:1"  text=" " width="100%" wrapLines="true" />
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayVisitorIndexGlobal" multiline="true" style="borderColor:0x000000;borderSize:1"  text="" width="100%" wrapLines="true" />
 
         <!--##################################################-->
 
         <text text="Visitor Index Local" />
-        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayVisitorIndexLocal" multiline="true" style="borderColor:0x000000;borderSize:1"  text=" " width="100%" wrapLines="true" />
+        <text disabled="true" id="UIPopupEditObjectVisitor_DisplayVisitorIndexLocal" multiline="true" style="borderColor:0x000000;borderSize:1"  text="" width="100%" wrapLines="true" />
 
         <!--##################################################-->
 

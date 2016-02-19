@@ -5,7 +5,7 @@
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Type" />
-        <listSelector id="UIPopupRemoveObjectMuseum_SelectType" text=" " width="100%" >
+        <listSelector id="UIPopupRemoveObjectMuseum_SelectType" text="" width="100%" >
             <array>Exhibition, Floor, Room</array>
         </listSelector>
 
@@ -16,7 +16,7 @@
         <!--##################################################-->
 
         <text text="Museum Object" />
-        <listSelector disabled="true" id="UIPopupRemoveObjectMuseum_SelectObjectMuseum" text=" " width="100%" ></listSelector>
+        <listSelector disabled="true" id="UIPopupRemoveObjectMuseum_SelectObjectMuseum" text="" width="100%" ></listSelector>
 
         <!--##################################################-->
 

@@ -3,10 +3,10 @@
     <grid id="UIPopupRemoveObjectVisitor_Grid" width="100%" >
 
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-        
+
         <text text="Visitor" />
-        <listSelector id="UIPopupRemoveObjectVisitor_SelectObjectVisitor" text=" " width="100%" ></listSelector>
-        
+        <listSelector id="UIPopupRemoveObjectVisitor_SelectObjectVisitor" text="" width="100%" ></listSelector>
+
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
     </grid>

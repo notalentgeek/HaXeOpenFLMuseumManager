@@ -200,7 +200,9 @@ class ObjectGeneratorSentence{
                     var loopCounter1Int:Int = 0;
                     while(loopCounter1Int < companyWordStringArray.length){
 
-                        companyWordStringArray[loopCounter1Int] = companyWordStringArray[loopCounter1Int].substring(0, 1).toUpperCase() + companyWordStringArray[loopCounter1Int].substring(1, companyWordStringArray[loopCounter1Int].length);
+                        companyWordStringArray[loopCounter1Int] =
+                            companyWordStringArray[loopCounter1Int].substring(0, 1).toUpperCase() +
+                            companyWordStringArray[loopCounter1Int].substring(1, companyWordStringArray[loopCounter1Int].length).toLowerCase();
                         if(loopCounter1Int == 0){ companyWordString = companyWordString + companyWordStringArray[loopCounter1Int]; }
                         else{ companyWordString = companyWordString + " " + companyWordStringArray[loopCounter1Int]; }
 

@@ -109,10 +109,10 @@ namespace controls{
 
 Void TextInputLayout_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","new",0x9c9bdec3,"haxe.ui.toolkit.controls.TextInputLayout.new","haxe/ui/toolkit/controls/TextInput.hx",454,0x28010717)
+HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","new",0x9c9bdec3,"haxe.ui.toolkit.controls.TextInputLayout.new","haxe/ui/toolkit/controls/TextInput.hx",456,0x28010717)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(454)
+	HX_STACK_LINE(456)
 	super::__construct();
 }
 ;
@@ -134,102 +134,102 @@ Dynamic TextInputLayout_obj::__Create(hx::DynamicArray inArgs)
 
 Void TextInputLayout_obj::resizeChildren( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","resizeChildren",0x5eee59d0,"haxe.ui.toolkit.controls.TextInputLayout.resizeChildren","haxe/ui/toolkit/controls/TextInput.hx",457,0x28010717)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","resizeChildren",0x5eee59d0,"haxe.ui.toolkit.controls.TextInputLayout.resizeChildren","haxe/ui/toolkit/controls/TextInput.hx",459,0x28010717)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(458)
+		HX_STACK_LINE(460)
 		this->super::resizeChildren();
-		HX_STACK_LINE(459)
+		HX_STACK_LINE(461)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp = this->get_container();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(459)
+		HX_STACK_LINE(461)
 		::openfl::_legacy::display::Sprite tmp1 = tmp->get_sprite();		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(459)
+		HX_STACK_LINE(461)
 		int tmp2 = tmp1->get_numChildren();		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(459)
+		HX_STACK_LINE(461)
 		bool tmp3 = (tmp2 > (int)0);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(459)
+		HX_STACK_LINE(461)
 		if ((tmp3)){
-			HX_STACK_LINE(460)
+			HX_STACK_LINE(462)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp4 = this->get_container();		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(460)
+			HX_STACK_LINE(462)
 			::haxe::ui::toolkit::controls::VScroll tmp5 = tmp4->findChildAs(hx::ClassOf< ::haxe::ui::toolkit::controls::VScroll >());		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(460)
+			HX_STACK_LINE(462)
 			::haxe::ui::toolkit::controls::VScroll vscroll = tmp5;		HX_STACK_VAR(vscroll,"vscroll");
-			HX_STACK_LINE(462)
+			HX_STACK_LINE(464)
 			::openfl::_legacy::text::TextField tmp6 = this->findTextField();		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(462)
+			HX_STACK_LINE(464)
 			::openfl::_legacy::text::TextField text = tmp6;		HX_STACK_VAR(text,"text");
-			HX_STACK_LINE(463)
+			HX_STACK_LINE(465)
 			bool tmp7 = (text != null());		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(463)
+			HX_STACK_LINE(465)
 			if ((tmp7)){
-				HX_STACK_LINE(464)
+				HX_STACK_LINE(466)
 				::openfl::_legacy::geom::Rectangle tmp8 = this->get_padding();		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(464)
+				HX_STACK_LINE(466)
 				Float tmp9 = tmp8->get_left();		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(464)
+				HX_STACK_LINE(466)
 				text->set_x(tmp9);
-				HX_STACK_LINE(465)
+				HX_STACK_LINE(467)
 				bool tmp10 = text->get_multiline();		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(465)
+				HX_STACK_LINE(467)
 				bool tmp11 = (tmp10 == true);		HX_STACK_VAR(tmp11,"tmp11");
-				HX_STACK_LINE(465)
+				HX_STACK_LINE(467)
 				if ((tmp11)){
-					HX_STACK_LINE(466)
+					HX_STACK_LINE(468)
 					::openfl::_legacy::geom::Rectangle tmp12 = this->get_padding();		HX_STACK_VAR(tmp12,"tmp12");
-					HX_STACK_LINE(466)
+					HX_STACK_LINE(468)
 					Float tmp13 = tmp12->get_top();		HX_STACK_VAR(tmp13,"tmp13");
-					HX_STACK_LINE(466)
+					HX_STACK_LINE(468)
 					text->set_y(tmp13);
-					HX_STACK_LINE(467)
+					HX_STACK_LINE(469)
 					Float tmp14 = this->get_usableHeight();		HX_STACK_VAR(tmp14,"tmp14");
-					HX_STACK_LINE(467)
+					HX_STACK_LINE(469)
 					text->set_height(tmp14);
 				}
 				else{
-					HX_STACK_LINE(469)
+					HX_STACK_LINE(471)
 					::openfl::_legacy::text::TextFormat tmp12 = text->get_defaultTextFormat();		HX_STACK_VAR(tmp12,"tmp12");
-					HX_STACK_LINE(469)
+					HX_STACK_LINE(471)
 					Dynamic tmp13 = tmp12->size;		HX_STACK_VAR(tmp13,"tmp13");
-					HX_STACK_LINE(469)
+					HX_STACK_LINE(471)
 					Float tmp14 = (tmp13 + (int)8);		HX_STACK_VAR(tmp14,"tmp14");
-					HX_STACK_LINE(469)
+					HX_STACK_LINE(471)
 					text->set_height(tmp14);
-					HX_STACK_LINE(470)
+					HX_STACK_LINE(472)
 					::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp15 = this->get_container();		HX_STACK_VAR(tmp15,"tmp15");
-					HX_STACK_LINE(470)
+					HX_STACK_LINE(472)
 					Float tmp16 = tmp15->get_height();		HX_STACK_VAR(tmp16,"tmp16");
-					HX_STACK_LINE(470)
+					HX_STACK_LINE(472)
 					Float tmp17 = (Float(tmp16) / Float((int)2));		HX_STACK_VAR(tmp17,"tmp17");
-					HX_STACK_LINE(470)
+					HX_STACK_LINE(472)
 					Float tmp18 = text->get_height();		HX_STACK_VAR(tmp18,"tmp18");
-					HX_STACK_LINE(470)
+					HX_STACK_LINE(472)
 					Float tmp19 = (Float(tmp18) / Float((int)2));		HX_STACK_VAR(tmp19,"tmp19");
-					HX_STACK_LINE(470)
+					HX_STACK_LINE(472)
 					Float tmp20 = (tmp17 - tmp19);		HX_STACK_VAR(tmp20,"tmp20");
-					HX_STACK_LINE(470)
+					HX_STACK_LINE(472)
 					text->set_y(tmp20);
 				}
-				HX_STACK_LINE(472)
+				HX_STACK_LINE(474)
 				Float tmp12 = this->get_usableWidth();		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(472)
+				HX_STACK_LINE(474)
 				text->set_width(tmp12);
-				HX_STACK_LINE(474)
+				HX_STACK_LINE(476)
 				::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp13 = this->get_container();		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(474)
+				HX_STACK_LINE(476)
 				::haxe::ui::toolkit::controls::Text tmp14 = tmp13->findChild(HX_HCSTRING("placeholder","\x73","\x73","\xf3","\xba"),null(),null());		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(474)
+				HX_STACK_LINE(476)
 				::haxe::ui::toolkit::controls::Text placeholder = tmp14;		HX_STACK_VAR(placeholder,"placeholder");
-				HX_STACK_LINE(475)
+				HX_STACK_LINE(477)
 				bool tmp15 = (placeholder != null());		HX_STACK_VAR(tmp15,"tmp15");
-				HX_STACK_LINE(475)
+				HX_STACK_LINE(477)
 				if ((tmp15)){
-					HX_STACK_LINE(476)
+					HX_STACK_LINE(478)
 					Float tmp16 = text->get_width();		HX_STACK_VAR(tmp16,"tmp16");
-					HX_STACK_LINE(476)
+					HX_STACK_LINE(478)
 					placeholder->set_width(tmp16);
-					HX_STACK_LINE(477)
+					HX_STACK_LINE(479)
 					Float tmp17 = text->get_height();		HX_STACK_VAR(tmp17,"tmp17");
-					HX_STACK_LINE(477)
+					HX_STACK_LINE(479)
 					placeholder->set_height(tmp17);
 				}
 			}
@@ -241,98 +241,98 @@ return null();
 
 Void TextInputLayout_obj::repositionChildren( ){
 {
-		HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","repositionChildren",0xbb5e99b8,"haxe.ui.toolkit.controls.TextInputLayout.repositionChildren","haxe/ui/toolkit/controls/TextInput.hx",483,0x28010717)
+		HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","repositionChildren",0xbb5e99b8,"haxe.ui.toolkit.controls.TextInputLayout.repositionChildren","haxe/ui/toolkit/controls/TextInput.hx",485,0x28010717)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(484)
+		HX_STACK_LINE(486)
 		this->super::repositionChildren();
-		HX_STACK_LINE(486)
+		HX_STACK_LINE(488)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp = this->get_container();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(486)
+		HX_STACK_LINE(488)
 		::haxe::ui::toolkit::controls::VScroll tmp1 = tmp->findChildAs(hx::ClassOf< ::haxe::ui::toolkit::controls::VScroll >());		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(486)
+		HX_STACK_LINE(488)
 		::haxe::ui::toolkit::controls::VScroll vscroll = tmp1;		HX_STACK_VAR(vscroll,"vscroll");
-		HX_STACK_LINE(487)
+		HX_STACK_LINE(489)
 		bool tmp2 = (vscroll != null());		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(487)
+		HX_STACK_LINE(489)
 		if ((tmp2)){
-			HX_STACK_LINE(488)
+			HX_STACK_LINE(490)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp3 = this->get_container();		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(488)
+			HX_STACK_LINE(490)
 			Float tmp4 = tmp3->get_width();		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(488)
+			HX_STACK_LINE(490)
 			Float tmp5 = vscroll->get_width();		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(488)
+			HX_STACK_LINE(490)
 			Float tmp6 = (tmp4 - tmp5);		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(488)
+			HX_STACK_LINE(490)
 			::openfl::_legacy::geom::Rectangle tmp7 = this->get_padding();		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(488)
+			HX_STACK_LINE(490)
 			Float tmp8 = tmp7->get_right();		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(488)
+			HX_STACK_LINE(490)
 			Float tmp9 = (tmp6 - tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(488)
+			HX_STACK_LINE(490)
 			vscroll->set_x(tmp9);
 		}
-		HX_STACK_LINE(490)
+		HX_STACK_LINE(492)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp3 = this->get_container();		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(490)
+		HX_STACK_LINE(492)
 		::haxe::ui::toolkit::controls::HScroll tmp4 = tmp3->findChildAs(hx::ClassOf< ::haxe::ui::toolkit::controls::HScroll >());		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(490)
+		HX_STACK_LINE(492)
 		::haxe::ui::toolkit::controls::HScroll hscroll = tmp4;		HX_STACK_VAR(hscroll,"hscroll");
-		HX_STACK_LINE(491)
+		HX_STACK_LINE(493)
 		bool tmp5 = (hscroll != null());		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(491)
+		HX_STACK_LINE(493)
 		if ((tmp5)){
-			HX_STACK_LINE(492)
+			HX_STACK_LINE(494)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp6 = this->get_container();		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(492)
+			HX_STACK_LINE(494)
 			Float tmp7 = tmp6->get_height();		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(492)
+			HX_STACK_LINE(494)
 			Float tmp8 = hscroll->get_height();		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(492)
+			HX_STACK_LINE(494)
 			Float tmp9 = (tmp7 - tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(492)
+			HX_STACK_LINE(494)
 			::openfl::_legacy::geom::Rectangle tmp10 = this->get_padding();		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(492)
+			HX_STACK_LINE(494)
 			Float tmp11 = tmp10->get_bottom();		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(492)
+			HX_STACK_LINE(494)
 			Float tmp12 = (tmp9 - tmp11);		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(492)
+			HX_STACK_LINE(494)
 			hscroll->set_y(tmp12);
 		}
-		HX_STACK_LINE(495)
+		HX_STACK_LINE(497)
 		::openfl::_legacy::text::TextField tmp6 = this->findTextField();		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(495)
+		HX_STACK_LINE(497)
 		::openfl::_legacy::text::TextField text = tmp6;		HX_STACK_VAR(text,"text");
-		HX_STACK_LINE(496)
+		HX_STACK_LINE(498)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp7 = this->get_container();		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(496)
+		HX_STACK_LINE(498)
 		::haxe::ui::toolkit::controls::Text tmp8 = tmp7->findChild(HX_HCSTRING("placeholder","\x73","\x73","\xf3","\xba"),null(),null());		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(496)
+		HX_STACK_LINE(498)
 		::haxe::ui::toolkit::controls::Text placeholder = tmp8;		HX_STACK_VAR(placeholder,"placeholder");
-		HX_STACK_LINE(497)
+		HX_STACK_LINE(499)
 		bool tmp9 = (text != null());		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(497)
+		HX_STACK_LINE(499)
 		bool tmp10;		HX_STACK_VAR(tmp10,"tmp10");
-		HX_STACK_LINE(497)
+		HX_STACK_LINE(499)
 		if ((tmp9)){
-			HX_STACK_LINE(497)
+			HX_STACK_LINE(499)
 			tmp10 = (placeholder != null());
 		}
 		else{
-			HX_STACK_LINE(497)
+			HX_STACK_LINE(499)
 			tmp10 = false;
 		}
-		HX_STACK_LINE(497)
+		HX_STACK_LINE(499)
 		if ((tmp10)){
-			HX_STACK_LINE(498)
+			HX_STACK_LINE(500)
 			Float tmp11 = text->get_x();		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(498)
+			HX_STACK_LINE(500)
 			placeholder->set_x(tmp11);
-			HX_STACK_LINE(499)
+			HX_STACK_LINE(501)
 			Float tmp12 = text->get_y();		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(499)
+			HX_STACK_LINE(501)
 			Float tmp13 = (tmp12 + (int)1);		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(499)
+			HX_STACK_LINE(501)
 			placeholder->set_y(tmp13);
 		}
 	}
@@ -341,163 +341,163 @@ return null();
 
 
 Float TextInputLayout_obj::get_usableWidth( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","get_usableWidth",0x8e045668,"haxe.ui.toolkit.controls.TextInputLayout.get_usableWidth","haxe/ui/toolkit/controls/TextInput.hx",504,0x28010717)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","get_usableWidth",0x8e045668,"haxe.ui.toolkit.controls.TextInputLayout.get_usableWidth","haxe/ui/toolkit/controls/TextInput.hx",506,0x28010717)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(505)
+	HX_STACK_LINE(507)
 	Float tmp = this->get_innerWidth();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(505)
+	HX_STACK_LINE(507)
 	Float ucx = tmp;		HX_STACK_VAR(ucx,"ucx");
-	HX_STACK_LINE(506)
+	HX_STACK_LINE(508)
 	::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp1 = this->get_container();		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(506)
+	HX_STACK_LINE(508)
 	::haxe::ui::toolkit::controls::VScroll tmp2 = tmp1->findChildAs(hx::ClassOf< ::haxe::ui::toolkit::controls::VScroll >());		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(506)
+	HX_STACK_LINE(508)
 	::haxe::ui::toolkit::controls::VScroll vscroll = tmp2;		HX_STACK_VAR(vscroll,"vscroll");
-	HX_STACK_LINE(507)
+	HX_STACK_LINE(509)
 	bool tmp3 = (vscroll != null());		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(507)
+	HX_STACK_LINE(509)
 	bool tmp4;		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(507)
+	HX_STACK_LINE(509)
 	if ((tmp3)){
-		HX_STACK_LINE(507)
+		HX_STACK_LINE(509)
 		bool tmp5 = vscroll->get_visible();		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(507)
+		HX_STACK_LINE(509)
 		bool tmp6 = tmp5;		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(507)
+		HX_STACK_LINE(509)
 		tmp4 = (tmp6 == true);
 	}
 	else{
-		HX_STACK_LINE(507)
+		HX_STACK_LINE(509)
 		tmp4 = false;
 	}
-	HX_STACK_LINE(507)
+	HX_STACK_LINE(509)
 	if ((tmp4)){
-		HX_STACK_LINE(508)
+		HX_STACK_LINE(510)
 		Float tmp5 = vscroll->get_width();		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(508)
+		HX_STACK_LINE(510)
 		int tmp6 = this->get_spacingX();		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(508)
+		HX_STACK_LINE(510)
 		Float tmp7 = (tmp5 + tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(508)
+		HX_STACK_LINE(510)
 		hx::SubEq(ucx,tmp7);
 	}
-	HX_STACK_LINE(510)
+	HX_STACK_LINE(512)
 	Float tmp5 = ucx;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(510)
+	HX_STACK_LINE(512)
 	return tmp5;
 }
 
 
 Float TextInputLayout_obj::get_usableHeight( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","get_usableHeight",0x6c16bd45,"haxe.ui.toolkit.controls.TextInputLayout.get_usableHeight","haxe/ui/toolkit/controls/TextInput.hx",513,0x28010717)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","get_usableHeight",0x6c16bd45,"haxe.ui.toolkit.controls.TextInputLayout.get_usableHeight","haxe/ui/toolkit/controls/TextInput.hx",515,0x28010717)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(514)
+	HX_STACK_LINE(516)
 	Float tmp = this->get_innerHeight();		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(514)
+	HX_STACK_LINE(516)
 	Float ucy = tmp;		HX_STACK_VAR(ucy,"ucy");
-	HX_STACK_LINE(515)
+	HX_STACK_LINE(517)
 	::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp1 = this->get_container();		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(515)
+	HX_STACK_LINE(517)
 	::haxe::ui::toolkit::controls::HScroll tmp2 = tmp1->findChildAs(hx::ClassOf< ::haxe::ui::toolkit::controls::HScroll >());		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(515)
+	HX_STACK_LINE(517)
 	::haxe::ui::toolkit::controls::HScroll hscroll = tmp2;		HX_STACK_VAR(hscroll,"hscroll");
-	HX_STACK_LINE(516)
+	HX_STACK_LINE(518)
 	bool tmp3 = (hscroll != null());		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(516)
+	HX_STACK_LINE(518)
 	bool tmp4;		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(516)
+	HX_STACK_LINE(518)
 	if ((tmp3)){
-		HX_STACK_LINE(516)
+		HX_STACK_LINE(518)
 		bool tmp5 = hscroll->get_visible();		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(516)
+		HX_STACK_LINE(518)
 		bool tmp6 = tmp5;		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(516)
+		HX_STACK_LINE(518)
 		tmp4 = (tmp6 == true);
 	}
 	else{
-		HX_STACK_LINE(516)
+		HX_STACK_LINE(518)
 		tmp4 = false;
 	}
-	HX_STACK_LINE(516)
+	HX_STACK_LINE(518)
 	if ((tmp4)){
-		HX_STACK_LINE(517)
+		HX_STACK_LINE(519)
 		Float tmp5 = hscroll->get_height();		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(517)
+		HX_STACK_LINE(519)
 		int tmp6 = this->get_spacingY();		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(517)
+		HX_STACK_LINE(519)
 		Float tmp7 = (tmp5 - tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(517)
+		HX_STACK_LINE(519)
 		hx::SubEq(ucy,tmp7);
 	}
-	HX_STACK_LINE(519)
+	HX_STACK_LINE(521)
 	Float tmp5 = ucy;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(519)
+	HX_STACK_LINE(521)
 	return tmp5;
 }
 
 
 ::openfl::_legacy::text::TextField TextInputLayout_obj::findTextField( ){
-	HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","findTextField",0x405bed77,"haxe.ui.toolkit.controls.TextInputLayout.findTextField","haxe/ui/toolkit/controls/TextInput.hx",522,0x28010717)
+	HX_STACK_FRAME("haxe.ui.toolkit.controls.TextInputLayout","findTextField",0x405bed77,"haxe.ui.toolkit.controls.TextInputLayout.findTextField","haxe/ui/toolkit/controls/TextInput.hx",524,0x28010717)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(523)
+	HX_STACK_LINE(525)
 	::openfl::_legacy::text::TextField tf = null();		HX_STACK_VAR(tf,"tf");
-	HX_STACK_LINE(524)
+	HX_STACK_LINE(526)
 	{
-		HX_STACK_LINE(524)
+		HX_STACK_LINE(526)
 		int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(524)
+		HX_STACK_LINE(526)
 		::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp = this->get_container();		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(524)
+		HX_STACK_LINE(526)
 		::openfl::_legacy::display::Sprite tmp1 = tmp->get_sprite();		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(524)
+		HX_STACK_LINE(526)
 		int tmp2 = tmp1->get_numChildren();		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(524)
+		HX_STACK_LINE(526)
 		int _g = tmp2;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(524)
+		HX_STACK_LINE(526)
 		while((true)){
-			HX_STACK_LINE(524)
+			HX_STACK_LINE(526)
 			bool tmp3 = (_g1 < _g);		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(524)
+			HX_STACK_LINE(526)
 			bool tmp4 = !(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(524)
+			HX_STACK_LINE(526)
 			if ((tmp4)){
-				HX_STACK_LINE(524)
+				HX_STACK_LINE(526)
 				break;
 			}
-			HX_STACK_LINE(524)
+			HX_STACK_LINE(526)
 			int tmp5 = (_g1)++;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(524)
+			HX_STACK_LINE(526)
 			int i = tmp5;		HX_STACK_VAR(i,"i");
-			HX_STACK_LINE(525)
+			HX_STACK_LINE(527)
 			::haxe::ui::toolkit::core::interfaces::IDisplayObjectContainer tmp6 = this->get_container();		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(525)
+			HX_STACK_LINE(527)
 			::openfl::_legacy::display::Sprite tmp7 = tmp6->get_sprite();		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(525)
+			HX_STACK_LINE(527)
 			int tmp8 = i;		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(525)
+			HX_STACK_LINE(527)
 			::openfl::_legacy::display::DisplayObject tmp9 = tmp7->getChildAt(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(525)
+			HX_STACK_LINE(527)
 			::openfl::_legacy::display::DisplayObject child = tmp9;		HX_STACK_VAR(child,"child");
-			HX_STACK_LINE(526)
+			HX_STACK_LINE(528)
 			::openfl::_legacy::display::DisplayObject tmp10 = child;		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(526)
+			HX_STACK_LINE(528)
 			bool tmp11 = ::Std_obj::is(tmp10,hx::ClassOf< ::openfl::_legacy::text::TextField >());		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(526)
+			HX_STACK_LINE(528)
 			if ((tmp11)){
-				HX_STACK_LINE(527)
+				HX_STACK_LINE(529)
 				::openfl::_legacy::text::TextField tmp12;		HX_STACK_VAR(tmp12,"tmp12");
-				HX_STACK_LINE(527)
+				HX_STACK_LINE(529)
 				tmp12 = hx::TCast< ::openfl::_legacy::text::TextField >::cast(child);
-				HX_STACK_LINE(527)
+				HX_STACK_LINE(529)
 				tf = tmp12;
-				HX_STACK_LINE(528)
+				HX_STACK_LINE(530)
 				break;
 			}
 		}
 	}
-	HX_STACK_LINE(531)
+	HX_STACK_LINE(533)
 	::openfl::_legacy::text::TextField tmp = tf;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(531)
+	HX_STACK_LINE(533)
 	return tmp;
 }
 

@@ -125,14 +125,14 @@ class Main extends Sprite{
         CollectionPremade       .PremadeExhibitionObjectVoid    (collectionGlobalObject);
         */
         /*Change the number (first parameter) to change the initial visitor when the application starts.*/
-        CollectionPremade       .PremadeVisitorObjectVoid       (10, collectionGlobalObject);
-
-        /*Refer UpdateVoid function as main loop function.*/
-        addEventListener(Event.ENTER_FRAME, UpdateVoid);
+        CollectionPremade       .PremadeVisitorObjectVoid       (30, collectionGlobalObject);
 
         tagAmountInt = collectionGlobalObject.GetTagGeneralObjectArray().length + collectionGlobalObject.GetTagObjectArray().length;
         uiPopupLoadingWordObject = PopupManager.instance.showBusy("Cooking words!!!");
         PopupManager.instance.showPopup(uiPopupLoadingWordObject);
+
+        /*Refer UpdateVoid function as main loop function.*/
+        addEventListener(Event.ENTER_FRAME, UpdateVoid);
 
     }
     /*==================================================*/

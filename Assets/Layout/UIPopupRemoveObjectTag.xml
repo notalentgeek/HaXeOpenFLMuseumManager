@@ -5,7 +5,7 @@
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="General Tag" />
-        <listSelector id="UIPopupRemoveObjectTag_SelectGeneralOrNot" text=" " width="100%" >
+        <listSelector id="UIPopupRemoveObjectTag_SelectGeneralOrNot" text="" width="100%" >
             <array>Yes, No</array>
         </listSelector>
 
@@ -16,7 +16,7 @@
         <!--##################################################-->
 
         <text text="Tag" />
-        <listSelector disabled="true" id="UIPopupRemoveObjectTag_SelectObjectTag" text=" " width="100%" >
+        <listSelector disabled="true" id="UIPopupRemoveObjectTag_SelectObjectTag" text="" width="100%" >
         </listSelector>
 
         <!--##################################################-->

@@ -303,11 +303,11 @@ Void Toolkit_obj::init( ){
 			}
 			HX_STACK_LINE(61)
 			{
-				HX_STACK_LINE(63)
+				HX_STACK_LINE(61)
 				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\n\t\"name\": \"openfl\",\n\t\"url\": \"http://www.openfl.org\",\n\t\"license\": \"MIT\",\n\t\"tags\": [],\n\t\"description\": \"The \\\"Open Flash Library\\\" for fast 2D development\",\n\t\"version\": \"3.6.0\",\n\t\"releasenote\": \"Standardized externs, enums, and inlining. Consistency improvements, fixes\",\n\t\"contributors\": [ \"singmajesty\" ]\n}","\xb6","\xa5","\xd9","\x00"));		HX_STACK_VAR(tmp,"tmp");
-				HX_STACK_LINE(63)
+				HX_STACK_LINE(61)
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
-				HX_STACK_LINE(63)
+				HX_STACK_LINE(61)
 				Dynamic value = tmp1;		HX_STACK_VAR(value,"value");
 				HX_STACK_LINE(61)
 				::haxe::ds::StringMap tmp2 = ::haxe::ui::toolkit::core::Toolkit_obj::_versionInfo;		HX_STACK_VAR(tmp2,"tmp2");
@@ -316,43 +316,43 @@ Void Toolkit_obj::init( ){
 				HX_STACK_LINE(61)
 				tmp2->set(HX_HCSTRING("openfl","\x90","\x63","\x94","\x21"),tmp3);
 			}
-			HX_STACK_LINE(75)
+			HX_STACK_LINE(72)
 			{
-				HX_STACK_LINE(75)
+				HX_STACK_LINE(74)
 				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\n\t\"name\": \"hxSerial\",\n\t\"license\": \"BSD\",\n\t\"tags\": [\"serial\",\"hardware\",\"cpp\",\"neko\"],\n\t\"description\": \"hxSerial is a library for serial port communication in Haxe (C++/Neko target).\",\n\t\"contributors\": [\"andyli\"],\n\t\"releasenote\": \"Fixes for haxe 3.1.3 and hxcpp 3.1.39.\",\n\t\"version\": \"0.1.2\",\n\t\"url\": \"http://github.com/andyli/hxSerial\",\n\t\"dependencies\": {\n\n\t}\n}","\x6d","\x97","\x10","\x02"));		HX_STACK_VAR(tmp,"tmp");
-				HX_STACK_LINE(75)
+				HX_STACK_LINE(74)
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
-				HX_STACK_LINE(75)
+				HX_STACK_LINE(74)
 				Dynamic value = tmp1;		HX_STACK_VAR(value,"value");
-				HX_STACK_LINE(75)
+				HX_STACK_LINE(72)
 				::haxe::ds::StringMap tmp2 = ::haxe::ui::toolkit::core::Toolkit_obj::_versionInfo;		HX_STACK_VAR(tmp2,"tmp2");
-				HX_STACK_LINE(75)
+				HX_STACK_LINE(72)
 				Dynamic tmp3 = value;		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(75)
+				HX_STACK_LINE(72)
 				tmp2->set(HX_HCSTRING("hxSerial","\x24","\xe5","\x4f","\x5d"),tmp3);
 			}
-			HX_STACK_LINE(94)
+			HX_STACK_LINE(93)
 			{
-				HX_STACK_LINE(97)
+				HX_STACK_LINE(93)
 				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\n\t\"name\": \"lime\",\n\t\"url\": \"https://github.com/openfl/lime\",\n\t\"license\": \"MIT\",\n\t\"tags\": [],\n\t\"description\": \"A flexible lightweight layer for Haxe cross-platform developers\",\n\t\"version\": \"2.9.0\",\n\t\"releasenote\": \"Updated SDL and Cairo, additional APIs and fixes\",\n\t\"contributors\": [ \"singmajesty\" ]\n}","\x8b","\x79","\x1d","\xdf"));		HX_STACK_VAR(tmp,"tmp");
-				HX_STACK_LINE(97)
+				HX_STACK_LINE(93)
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
-				HX_STACK_LINE(97)
+				HX_STACK_LINE(93)
 				Dynamic value = tmp1;		HX_STACK_VAR(value,"value");
-				HX_STACK_LINE(94)
+				HX_STACK_LINE(93)
 				::haxe::ds::StringMap tmp2 = ::haxe::ui::toolkit::core::Toolkit_obj::_versionInfo;		HX_STACK_VAR(tmp2,"tmp2");
-				HX_STACK_LINE(94)
+				HX_STACK_LINE(93)
 				Dynamic tmp3 = value;		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(94)
+				HX_STACK_LINE(93)
 				tmp2->set(HX_HCSTRING("lime","\x15","\x17","\xb3","\x47"),tmp3);
 			}
 			HX_STACK_LINE(107)
 			{
-				HX_STACK_LINE(108)
+				HX_STACK_LINE(107)
 				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\r\n  \"name\": \"hscript\",\r\n  \"url\": \"https://github.com/HaxeFoundation/hscript\",\r\n  \"license\": \"MIT\",\r\n  \"description\": \"Haxe Script is a scripting engine for a subset of the Haxe language\",\r\n  \"version\": \"2.0.5\",\r\n  \"releasenote\": \"switch and array comprehension support\",\r\n  \"contributors\": [\"ncannasse\"]\r\n}","\xdb","\x40","\xe4","\xe8"));		HX_STACK_VAR(tmp,"tmp");
-				HX_STACK_LINE(108)
+				HX_STACK_LINE(107)
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
-				HX_STACK_LINE(108)
+				HX_STACK_LINE(107)
 				Dynamic value = tmp1;		HX_STACK_VAR(value,"value");
 				HX_STACK_LINE(107)
 				::haxe::ds::StringMap tmp2 = ::haxe::ui::toolkit::core::Toolkit_obj::_versionInfo;		HX_STACK_VAR(tmp2,"tmp2");
@@ -361,28 +361,28 @@ Void Toolkit_obj::init( ){
 				HX_STACK_LINE(107)
 				tmp2->set(HX_HCSTRING("hscript","\x73","\x8c","\x18","\x2c"),tmp3);
 			}
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(116)
 			{
-				HX_STACK_LINE(117)
-				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\n    \"name\": \"haxeui\",\n    \"license\": \"MIT\",\n    \"tags\": [\n        \"rich\",\n        \"ui\"\n    ],\n    \"description\": \"Styleable application centric rich UI\",\n    \"contributors\": [\n        \"ianharrigan\"\n    ],\n    \"releasenote\": \"Filter and alpha fix\",\n    \"version\": \"1.8.6\",\n    \"url\": \"https://github.com/ianharrigan/haxeui\",\n    \"dependencies\": {\n        \"lime\": \"\",\n        \"actuate\": \"\",\n        \"openfl\": \"\",\n        \"hscript\": \"\"\n    }\n}","\xdc","\xfc","\x11","\x5a"));		HX_STACK_VAR(tmp,"tmp");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(116)
+				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\n    \"name\": \"haxeui\",\n    \"license\": \"MIT\",\n    \"tags\": [\n        \"rich\",\n        \"ui\"\n    ],\n    \"description\": \"Styleable application centric rich UI\",\n    \"contributors\": [\n        \"ianharrigan\"\n    ],\n    \"releasenote\": \"Ensure child is available before removing\",\n    \"version\": \"1.8.17\",\n    \"url\": \"https://github.com/ianharrigan/haxeui\",\n    \"dependencies\": {\n        \"lime\": \"\",\n        \"actuate\": \"\",\n        \"openfl\": \"\",\n        \"hscript\": \"\"\n    }\n}","\x43","\xef","\x5f","\x5a"));		HX_STACK_VAR(tmp,"tmp");
+				HX_STACK_LINE(116)
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(116)
 				Dynamic value = tmp1;		HX_STACK_VAR(value,"value");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(116)
 				::haxe::ds::StringMap tmp2 = ::haxe::ui::toolkit::core::Toolkit_obj::_versionInfo;		HX_STACK_VAR(tmp2,"tmp2");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(116)
 				Dynamic tmp3 = value;		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(116)
 				tmp2->set(HX_HCSTRING("haxeui","\xfa","\x6f","\x9a","\xbe"),tmp3);
 			}
 			HX_STACK_LINE(126)
 			{
-				HX_STACK_LINE(127)
+				HX_STACK_LINE(126)
 				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\r\n  \"name\": \"actuate\",\r\n  \"url\": \"http://github.com/openfl/actuate\",\r\n  \"license\": \"MIT\",\r\n  \"tags\": [ \"flash\", \"cpp\", \"neko\", \"js\" ],\r\n  \"description\": \"Actuate is a fast and flexible tween library that uses a jQuery-style \\\"chaining\\\" syntax. It out-performs other libraries (such as TweenLite) and is easy to extend with custom actuators.\",\r\n  \"version\": \"1.8.6\",\r\n  \"releasenote\": \"Patches for C++ type reflection, Actuate.update and Lime\",\r\n  \"contributors\": [ \"singmajesty\" ],\r\n  \"dependencies\": {}\r\n}\r\n","\x61","\x27","\x92","\x8f"));		HX_STACK_VAR(tmp,"tmp");
-				HX_STACK_LINE(127)
+				HX_STACK_LINE(126)
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
-				HX_STACK_LINE(127)
+				HX_STACK_LINE(126)
 				Dynamic value = tmp1;		HX_STACK_VAR(value,"value");
 				HX_STACK_LINE(126)
 				::haxe::ds::StringMap tmp2 = ::haxe::ui::toolkit::core::Toolkit_obj::_versionInfo;		HX_STACK_VAR(tmp2,"tmp2");
@@ -391,19 +391,19 @@ Void Toolkit_obj::init( ){
 				HX_STACK_LINE(126)
 				tmp2->set(HX_HCSTRING("actuate","\x0f","\xf9","\x11","\x6f"),tmp3);
 			}
-			HX_STACK_LINE(143)
+			HX_STACK_LINE(142)
 			{
-				HX_STACK_LINE(147)
+				HX_STACK_LINE(142)
 				::haxe::format::JsonParser tmp = ::haxe::format::JsonParser_obj::__new(HX_HCSTRING("{\r\n    \"name\"         : \"haxeui-rich-text\",\r\n    \"url\"          : \"https://github.com/ianharrigan/haxeui-rich-text\",\r\n    \"license\"      : \"MIT\",\r\n    \"tags\"         : [\"rich\", \"ui\", \"haxeui\"],\r\n    \"description\"  : \"Rich text for HaxeUI\",\r\n    \"version\"      : \"0.1.2\",\r\n    \"releasenote\"  : \"Improved RegExp syntax rules\",\r\n    \"contributors\" : [\"ianharrigan\"],\r\n    \"dependencies\" : {\r\n        \"openfl\"        : \"\",\r\n        \"actuate\"       : \"\",\r\n        \"hscript\"       : \"\",\r\n        \"haxeui\"       : \"\"\r\n    }\r\n}\r\n","\xc5","\x03","\x1f","\xd1"));		HX_STACK_VAR(tmp,"tmp");
-				HX_STACK_LINE(147)
+				HX_STACK_LINE(142)
 				Dynamic tmp1 = tmp->parseRec();		HX_STACK_VAR(tmp1,"tmp1");
-				HX_STACK_LINE(147)
+				HX_STACK_LINE(142)
 				Dynamic value = tmp1;		HX_STACK_VAR(value,"value");
-				HX_STACK_LINE(143)
+				HX_STACK_LINE(142)
 				::haxe::ds::StringMap tmp2 = ::haxe::ui::toolkit::core::Toolkit_obj::_versionInfo;		HX_STACK_VAR(tmp2,"tmp2");
-				HX_STACK_LINE(143)
+				HX_STACK_LINE(142)
 				Dynamic tmp3 = value;		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(143)
+				HX_STACK_LINE(142)
 				tmp2->set(HX_HCSTRING("haxeui-rich-text","\x6b","\xea","\x04","\x1f"),tmp3);
 			}
 		}
@@ -437,325 +437,325 @@ Void Toolkit_obj::init( ){
 			::haxe::ui::toolkit::core::ClassManager tmp6 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp6,"tmp6");
 			HX_STACK_LINE(71)
 			tmp6->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.ListView","\x5d","\x04","\xbc","\x9e"),HX_HCSTRING("listview","\xc3","\xd5","\x6a","\x43"));
-			HX_STACK_LINE(76)
+			HX_STACK_LINE(75)
 			::haxe::ui::toolkit::core::ClassManager tmp7 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(76)
+			HX_STACK_LINE(75)
 			tmp7->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.VBox","\xaf","\x60","\x24","\x63"),HX_HCSTRING("vbox","\x55","\xeb","\x49","\x4e"));
-			HX_STACK_LINE(82)
+			HX_STACK_LINE(80)
 			::haxe::ui::toolkit::core::ClassManager tmp8 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(82)
+			HX_STACK_LINE(80)
 			tmp8->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Menu","\xb5","\xfa","\xd5","\x8e"),HX_HCSTRING("menu","\x9f","\x45","\x59","\x48"));
-			HX_STACK_LINE(91)
+			HX_STACK_LINE(87)
 			::haxe::ui::toolkit::core::ClassManager tmp9 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(91)
+			HX_STACK_LINE(87)
 			tmp9->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.ContinuousHBox","\x2c","\x25","\xea","\x1f"),HX_HCSTRING("continuoushbox","\x32","\x27","\x89","\x1e"));
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(92)
 			::haxe::ui::toolkit::core::ClassManager tmp10 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(92)
 			tmp10->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.ItemRenderer","\xa1","\x20","\x3a","\x86"),HX_HCSTRING("itemrenderer","\x56","\x55","\x53","\xbd"));
-			HX_STACK_LINE(97)
+			HX_STACK_LINE(96)
 			::haxe::ui::toolkit::core::ClassManager tmp11 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(97)
+			HX_STACK_LINE(96)
 			tmp11->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.ComponentItemRenderer","\x48","\x29","\x63","\x3f"),HX_HCSTRING("componentitemrenderer","\x93","\xed","\xeb","\xf1"));
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(100)
 			::haxe::ui::toolkit::core::ClassManager tmp12 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(100)
 			tmp12->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.Component","\x10","\x17","\x45","\x40"),HX_HCSTRING("component","\xbd","\xf0","\x53","\x0f"));
-			HX_STACK_LINE(107)
+			HX_STACK_LINE(106)
 			::haxe::ui::toolkit::core::ClassManager tmp13 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp13,"tmp13");
-			HX_STACK_LINE(107)
+			HX_STACK_LINE(106)
 			tmp13->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.HBox","\xfd","\x63","\xe3","\x59"),HX_HCSTRING("hbox","\xa3","\xee","\x08","\x45"));
-			HX_STACK_LINE(108)
+			HX_STACK_LINE(107)
 			::haxe::ui::toolkit::core::ClassManager tmp14 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp14,"tmp14");
-			HX_STACK_LINE(108)
+			HX_STACK_LINE(107)
 			tmp14->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.HSplitter","\x15","\xc4","\xfe","\x57"),HX_HCSTRING("hsplitter","\xaf","\xdf","\xc2","\x85"));
-			HX_STACK_LINE(112)
+			HX_STACK_LINE(111)
 			::haxe::ui::toolkit::core::ClassManager tmp15 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp15,"tmp15");
-			HX_STACK_LINE(112)
+			HX_STACK_LINE(111)
 			tmp15->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.MenuItem","\x68","\xea","\x7a","\xb2"),HX_HCSTRING("menuitem","\x32","\xc6","\x55","\x61"));
-			HX_STACK_LINE(116)
+			HX_STACK_LINE(114)
 			::haxe::ui::toolkit::core::ClassManager tmp16 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp16,"tmp16");
-			HX_STACK_LINE(116)
+			HX_STACK_LINE(114)
 			tmp16->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.Container","\x87","\x9d","\xfd","\xb7"),HX_HCSTRING("container","\x41","\x75","\x73","\xbf"));
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(116)
 			::haxe::ui::toolkit::core::ClassManager tmp17 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp17,"tmp17");
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(116)
 			tmp17->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.MenuSeparator","\xf0","\xc6","\x93","\xef"),HX_HCSTRING("menuseparator","\xe6","\xee","\x95","\x16"));
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(118)
 			::haxe::ui::toolkit::core::ClassManager tmp18 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp18,"tmp18");
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(118)
 			tmp18->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Spacer","\x82","\x47","\x39","\x1f"),HX_HCSTRING("spacer","\xec","\xa0","\x54","\xb8"));
-			HX_STACK_LINE(122)
+			HX_STACK_LINE(120)
 			::haxe::ui::toolkit::core::ClassManager tmp19 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp19,"tmp19");
-			HX_STACK_LINE(122)
+			HX_STACK_LINE(120)
 			tmp19->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.VSplitterGripper","\x68","\x8d","\x7a","\xd5"),HX_HCSTRING("vsplittergripper","\x2e","\x51","\x47","\x95"));
-			HX_STACK_LINE(125)
+			HX_STACK_LINE(123)
 			::haxe::ui::toolkit::core::ClassManager tmp20 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp20,"tmp20");
-			HX_STACK_LINE(125)
+			HX_STACK_LINE(123)
 			tmp20->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.VScroll","\xcd","\x25","\x0b","\x48"),HX_HCSTRING("vscroll","\x03","\x95","\x49","\x72"));
-			HX_STACK_LINE(126)
+			HX_STACK_LINE(125)
 			::haxe::ui::toolkit::core::ClassManager tmp21 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp21,"tmp21");
-			HX_STACK_LINE(126)
+			HX_STACK_LINE(125)
 			tmp21->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.MenuBar","\x3a","\x9c","\x90","\x06"),HX_HCSTRING("menubar","\x94","\x79","\x63","\xba"));
-			HX_STACK_LINE(128)
+			HX_STACK_LINE(126)
 			::haxe::ui::toolkit::core::ClassManager tmp22 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp22,"tmp22");
-			HX_STACK_LINE(128)
+			HX_STACK_LINE(126)
 			tmp22->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Value","\x9b","\x3d","\x5a","\x98"),HX_HCSTRING("value","\x71","\x7f","\xb8","\x31"));
-			HX_STACK_LINE(129)
+			HX_STACK_LINE(128)
 			::haxe::ui::toolkit::core::ClassManager tmp23 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp23,"tmp23");
-			HX_STACK_LINE(129)
+			HX_STACK_LINE(128)
 			tmp23->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.DefaultScrollViewRefreshPrompt","\xa6","\xf6","\x3f","\x10"),HX_HCSTRING("defaultscrollviewrefreshprompt","\xec","\x5c","\x51","\xf0"));
-			HX_STACK_LINE(133)
+			HX_STACK_LINE(130)
 			::haxe::ui::toolkit::core::ClassManager tmp24 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp24,"tmp24");
-			HX_STACK_LINE(133)
+			HX_STACK_LINE(130)
 			tmp24->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.CheckBoxValue","\x78","\xbe","\x5c","\xcc"),HX_HCSTRING("checkboxvalue","\x4e","\x9a","\x52","\x28"));
-			HX_STACK_LINE(137)
+			HX_STACK_LINE(136)
 			::haxe::ui::toolkit::core::ClassManager tmp25 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp25,"tmp25");
-			HX_STACK_LINE(137)
+			HX_STACK_LINE(136)
 			tmp25->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.HScroll","\x3f","\xa7","\xde","\x01"),HX_HCSTRING("hscroll","\x75","\x16","\x1d","\x2c"));
-			HX_STACK_LINE(143)
+			HX_STACK_LINE(139)
 			::haxe::ui::toolkit::core::ClassManager tmp26 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp26,"tmp26");
-			HX_STACK_LINE(143)
+			HX_STACK_LINE(139)
 			tmp26->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.ScrollViewRefreshing","\x13","\xef","\x2b","\xa9"),HX_HCSTRING("refreshing","\xe7","\x8d","\x3e","\x07"));
-			HX_STACK_LINE(150)
+			HX_STACK_LINE(147)
 			::haxe::ui::toolkit::core::ClassManager tmp27 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp27,"tmp27");
-			HX_STACK_LINE(150)
+			HX_STACK_LINE(147)
 			tmp27->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.ScrollViewRefreshPrompt","\x33","\x98","\x8d","\x7e"),HX_HCSTRING("refreshprompt","\xbf","\x81","\xfe","\x7e"));
-			HX_STACK_LINE(155)
+			HX_STACK_LINE(151)
 			::haxe::ui::toolkit::core::ClassManager tmp28 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp28,"tmp28");
-			HX_STACK_LINE(155)
+			HX_STACK_LINE(151)
 			tmp28->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.TabView","\x20","\x72","\x0a","\x93"),HX_HCSTRING("tabview","\x3a","\xdb","\xeb","\x5b"));
-			HX_STACK_LINE(158)
+			HX_STACK_LINE(155)
 			::haxe::ui::toolkit::core::ClassManager tmp29 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp29,"tmp29");
-			HX_STACK_LINE(158)
+			HX_STACK_LINE(155)
 			tmp29->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Progress","\xc3","\xef","\x76","\xec"),HX_HCSTRING("progress","\xad","\xf7","\x2a","\x86"));
-			HX_STACK_LINE(161)
+			HX_STACK_LINE(159)
 			::haxe::ui::toolkit::core::ClassManager tmp30 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp30,"tmp30");
-			HX_STACK_LINE(161)
+			HX_STACK_LINE(159)
 			tmp30->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.ExpandablePanel","\x36","\x06","\xc6","\xb8"),HX_HCSTRING("expandablepanel","\x90","\xf5","\x21","\x70"));
-			HX_STACK_LINE(164)
+			HX_STACK_LINE(161)
 			::haxe::ui::toolkit::core::ClassManager tmp31 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp31,"tmp31");
-			HX_STACK_LINE(164)
+			HX_STACK_LINE(161)
 			tmp31->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Slider","\xb7","\x6c","\xe9","\xd6"),HX_HCSTRING("slider","\x21","\xc6","\x04","\x70"));
-			HX_STACK_LINE(170)
+			HX_STACK_LINE(164)
 			::haxe::ui::toolkit::core::ClassManager tmp32 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp32,"tmp32");
-			HX_STACK_LINE(170)
+			HX_STACK_LINE(164)
 			tmp32->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.ToolTip","\x8d","\x81","\xa1","\x0b"),HX_HCSTRING("tooltip","\x03","\xad","\x8c","\x6a"));
-			HX_STACK_LINE(173)
+			HX_STACK_LINE(170)
 			::haxe::ui::toolkit::core::ClassManager tmp33 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp33,"tmp33");
-			HX_STACK_LINE(173)
+			HX_STACK_LINE(170)
 			tmp33->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.MenuButton","\x87","\x46","\xaf","\x47"),HX_HCSTRING("menubutton","\xd1","\x28","\xd0","\x87"));
-			HX_STACK_LINE(177)
+			HX_STACK_LINE(173)
 			::haxe::ui::toolkit::core::ClassManager tmp34 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp34,"tmp34");
-			HX_STACK_LINE(177)
+			HX_STACK_LINE(173)
 			tmp34->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.VSplitter","\x23","\x82","\x32","\xe1"),HX_HCSTRING("vsplitter","\xbd","\x9d","\xf6","\x0e"));
-			HX_STACK_LINE(182)
+			HX_STACK_LINE(177)
 			::haxe::ui::toolkit::core::ClassManager tmp35 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp35,"tmp35");
-			HX_STACK_LINE(182)
+			HX_STACK_LINE(177)
 			tmp35->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.selection.DropDownList","\x27","\xf5","\x45","\x0e"),HX_HCSTRING("dropdownlist","\xef","\x6c","\x7c","\x4d"));
-			HX_STACK_LINE(185)
+			HX_STACK_LINE(182)
 			::haxe::ui::toolkit::core::ClassManager tmp36 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp36,"tmp36");
-			HX_STACK_LINE(185)
+			HX_STACK_LINE(182)
 			tmp36->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.ExpandableButton","\x80","\xa2","\x86","\xe3"),HX_HCSTRING("expandablebutton","\xe6","\x21","\x9c","\x9c"));
-			HX_STACK_LINE(189)
+			HX_STACK_LINE(185)
 			::haxe::ui::toolkit::core::ClassManager tmp37 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp37,"tmp37");
-			HX_STACK_LINE(189)
+			HX_STACK_LINE(185)
 			tmp37->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.CalendarView","\xbd","\xbb","\xfe","\x29"),HX_HCSTRING("calendarview","\x23","\xc8","\xa1","\x26"));
-			HX_STACK_LINE(195)
+			HX_STACK_LINE(189)
 			::haxe::ui::toolkit::core::ClassManager tmp38 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp38,"tmp38");
-			HX_STACK_LINE(195)
+			HX_STACK_LINE(189)
 			tmp38->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Link","\x10","\xcd","\x2f","\x8e"),HX_HCSTRING("link","\xfa","\x17","\xb3","\x47"));
-			HX_STACK_LINE(198)
+			HX_STACK_LINE(195)
 			::haxe::ui::toolkit::core::ClassManager tmp39 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp39,"tmp39");
-			HX_STACK_LINE(198)
+			HX_STACK_LINE(195)
 			tmp39->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.StateComponent","\x39","\x9d","\xb2","\x70"),HX_HCSTRING("statecomponent","\x8c","\xb0","\x1b","\x4a"));
-			HX_STACK_LINE(201)
+			HX_STACK_LINE(198)
 			::haxe::ui::toolkit::core::ClassManager tmp40 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp40,"tmp40");
-			HX_STACK_LINE(201)
+			HX_STACK_LINE(198)
 			tmp40->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.VSlider","\xe1","\x13","\xab","\x70"),HX_HCSTRING("vslider","\x17","\x83","\xe9","\x9a"));
-			HX_STACK_LINE(204)
+			HX_STACK_LINE(201)
 			::haxe::ui::toolkit::core::ClassManager tmp41 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp41,"tmp41");
-			HX_STACK_LINE(204)
+			HX_STACK_LINE(201)
 			tmp41->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.CalendarDay","\xe8","\x93","\x59","\x96"),HX_HCSTRING("calendarday","\x5e","\x22","\x68","\x40"));
-			HX_STACK_LINE(209)
+			HX_STACK_LINE(202)
 			::haxe::ui::toolkit::core::ClassManager tmp42 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp42,"tmp42");
-			HX_STACK_LINE(209)
+			HX_STACK_LINE(202)
 			tmp42->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.VProgress","\x6d","\x35","\x50","\xb7"),HX_HCSTRING("vprogress","\x23","\x5e","\x71","\xc1"));
-			HX_STACK_LINE(216)
+			HX_STACK_LINE(209)
 			::haxe::ui::toolkit::core::ClassManager tmp43 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp43,"tmp43");
-			HX_STACK_LINE(216)
+			HX_STACK_LINE(209)
 			tmp43->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.ContinuousVBox","\xde","\x21","\x2b","\x29"),HX_HCSTRING("continuousvbox","\xe4","\x23","\xca","\x27"));
-			HX_STACK_LINE(220)
+			HX_STACK_LINE(215)
 			::haxe::ui::toolkit::core::ClassManager tmp44 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp44,"tmp44");
-			HX_STACK_LINE(220)
+			HX_STACK_LINE(215)
 			tmp44->registerComponentClassName(HX_HCSTRING("haxe.ui.richtext.RTFView","\x36","\x9d","\xf2","\x6f"),HX_HCSTRING("rtfview","\xc9","\x1a","\x23","\xef"));
-			HX_STACK_LINE(224)
+			HX_STACK_LINE(218)
 			::haxe::ui::toolkit::core::ClassManager tmp45 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp45,"tmp45");
-			HX_STACK_LINE(224)
+			HX_STACK_LINE(218)
 			tmp45->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.TabBar","\x14","\x19","\x22","\xe3"),HX_HCSTRING("tabbar","\x9e","\xba","\x55","\x7c"));
-			HX_STACK_LINE(227)
+			HX_STACK_LINE(222)
 			::haxe::ui::toolkit::core::ClassManager tmp46 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp46,"tmp46");
-			HX_STACK_LINE(227)
+			HX_STACK_LINE(222)
 			tmp46->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Image","\x85","\xdd","\x0a","\x24"),HX_HCSTRING("image","\x5b","\x1f","\x69","\xbd"));
-			HX_STACK_LINE(229)
+			HX_STACK_LINE(225)
 			::haxe::ui::toolkit::core::ClassManager tmp47 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp47,"tmp47");
-			HX_STACK_LINE(229)
+			HX_STACK_LINE(225)
 			tmp47->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.OptionBoxValue","\x91","\x22","\x52","\x2c"),HX_HCSTRING("optionboxvalue","\xfb","\xc9","\x04","\xb1"));
-			HX_STACK_LINE(236)
+			HX_STACK_LINE(228)
 			::haxe::ui::toolkit::core::ClassManager tmp48 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp48,"tmp48");
-			HX_STACK_LINE(236)
+			HX_STACK_LINE(228)
 			tmp48->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.ScrollViewRefreshing","\x13","\xef","\x2b","\xa9"),HX_HCSTRING("scrollviewrefreshing","\x59","\x85","\xf6","\x04"));
-			HX_STACK_LINE(239)
+			HX_STACK_LINE(235)
 			::haxe::ui::toolkit::core::ClassManager tmp49 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp49,"tmp49");
-			HX_STACK_LINE(239)
+			HX_STACK_LINE(235)
 			tmp49->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.HSlider","\x53","\x95","\x7e","\x2a"),HX_HCSTRING("hslider","\x89","\x04","\xbd","\x54"));
-			HX_STACK_LINE(243)
+			HX_STACK_LINE(238)
 			::haxe::ui::toolkit::core::ClassManager tmp50 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp50,"tmp50");
-			HX_STACK_LINE(243)
+			HX_STACK_LINE(238)
 			tmp50->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.TableView","\xd9","\x5d","\x6e","\xb4"),HX_HCSTRING("tableview","\x73","\x09","\x0b","\xd1"));
-			HX_STACK_LINE(246)
+			HX_STACK_LINE(242)
 			::haxe::ui::toolkit::core::ClassManager tmp51 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp51,"tmp51");
-			HX_STACK_LINE(246)
+			HX_STACK_LINE(242)
 			tmp51->registerComponentClassName(HX_HCSTRING("haxe.ui.richtext.Code","\xc0","\x7c","\xcb","\xea"),HX_HCSTRING("code","\x2d","\xb1","\xc4","\x41"));
-			HX_STACK_LINE(248)
+			HX_STACK_LINE(244)
 			::haxe::ui::toolkit::core::ClassManager tmp52 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp52,"tmp52");
-			HX_STACK_LINE(248)
+			HX_STACK_LINE(244)
 			tmp52->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.CheckBox","\x39","\x82","\x29","\x13"),HX_HCSTRING("checkbox","\x43","\xd2","\xf5","\xac"));
-			HX_STACK_LINE(253)
+			HX_STACK_LINE(247)
 			::haxe::ui::toolkit::core::ClassManager tmp53 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp53,"tmp53");
-			HX_STACK_LINE(253)
+			HX_STACK_LINE(247)
 			tmp53->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.TableViewRow","\xc1","\xa9","\xd7","\x4c"),HX_HCSTRING("tableviewrow","\x87","\x02","\x1b","\x67"));
-			HX_STACK_LINE(259)
+			HX_STACK_LINE(252)
 			::haxe::ui::toolkit::core::ClassManager tmp54 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp54,"tmp54");
-			HX_STACK_LINE(259)
+			HX_STACK_LINE(252)
 			tmp54->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.DisplayObject","\x74","\x86","\x60","\xd8"),HX_HCSTRING("displayobject","\x81","\xc6","\x0d","\xa2"));
-			HX_STACK_LINE(261)
+			HX_STACK_LINE(259)
 			::haxe::ui::toolkit::core::ClassManager tmp55 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp55,"tmp55");
-			HX_STACK_LINE(261)
+			HX_STACK_LINE(259)
 			tmp55->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.OptionBox","\xc0","\x94","\x80","\x9e"),HX_HCSTRING("optionbox","\xb6","\xc1","\x6b","\x82"));
-			HX_STACK_LINE(264)
+			HX_STACK_LINE(261)
 			::haxe::ui::toolkit::core::ClassManager tmp56 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp56,"tmp56");
-			HX_STACK_LINE(264)
+			HX_STACK_LINE(261)
 			tmp56->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.Root","\xaf","\x68","\x55","\x8b"),HX_HCSTRING("root","\x22","\xee","\xae","\x4b"));
-			HX_STACK_LINE(265)
+			HX_STACK_LINE(262)
 			::haxe::ui::toolkit::core::ClassManager tmp57 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp57,"tmp57");
-			HX_STACK_LINE(265)
+			HX_STACK_LINE(262)
 			tmp57->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.DisplayObjectContainer","\x2d","\x60","\x63","\x99"),HX_HCSTRING("displayobjectcontainer","\xa0","\x56","\x03","\x72"));
-			HX_STACK_LINE(270)
+			HX_STACK_LINE(264)
 			::haxe::ui::toolkit::core::ClassManager tmp58 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp58,"tmp58");
-			HX_STACK_LINE(270)
+			HX_STACK_LINE(264)
 			tmp58->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.Box","\xd1","\xcd","\x05","\xcf"),HX_HCSTRING("box","\x0b","\xbe","\x4a","\x00"));
-			HX_STACK_LINE(275)
+			HX_STACK_LINE(267)
 			::haxe::ui::toolkit::core::ClassManager tmp59 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp59,"tmp59");
-			HX_STACK_LINE(275)
+			HX_STACK_LINE(267)
 			tmp59->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.HProgress","\x5f","\x77","\x1c","\x2e"),HX_HCSTRING("hprogress","\x15","\xa0","\x3d","\x38"));
-			HX_STACK_LINE(282)
+			HX_STACK_LINE(273)
 			::haxe::ui::toolkit::core::ClassManager tmp60 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp60,"tmp60");
-			HX_STACK_LINE(282)
+			HX_STACK_LINE(273)
 			tmp60->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.StyleableDisplayObject","\x23","\xba","\x48","\xc4"),HX_HCSTRING("styleabledisplayobject","\x56","\xd4","\xc2","\x22"));
-			HX_STACK_LINE(287)
+			HX_STACK_LINE(278)
 			::haxe::ui::toolkit::core::ClassManager tmp61 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp61,"tmp61");
-			HX_STACK_LINE(287)
+			HX_STACK_LINE(278)
 			tmp61->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.Stack","\x8e","\x74","\x7e","\xc3"),HX_HCSTRING("stack","\x48","\x67","\x0b","\x84"));
-			HX_STACK_LINE(289)
+			HX_STACK_LINE(282)
 			::haxe::ui::toolkit::core::ClassManager tmp62 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp62,"tmp62");
-			HX_STACK_LINE(289)
+			HX_STACK_LINE(282)
 			tmp62->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.HSplitterGripper","\xb6","\x4d","\xd8","\xf0"),HX_HCSTRING("hsplittergripper","\x7c","\x11","\xa5","\xb0"));
-			HX_STACK_LINE(291)
+			HX_STACK_LINE(287)
 			::haxe::ui::toolkit::core::ClassManager tmp63 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp63,"tmp63");
-			HX_STACK_LINE(291)
+			HX_STACK_LINE(287)
 			tmp63->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.AccordionButton","\x60","\x77","\xfa","\xab"),HX_HCSTRING("accordionbutton","\x7a","\x62","\xef","\xc1"));
-			HX_STACK_LINE(297)
+			HX_STACK_LINE(290)
 			::haxe::ui::toolkit::core::ClassManager tmp64 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp64,"tmp64");
-			HX_STACK_LINE(297)
+			HX_STACK_LINE(290)
 			tmp64->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.Grid","\x40","\x94","\x5e","\x59"),HX_HCSTRING("grid","\xc6","\xd6","\x6b","\x44"));
-			HX_STACK_LINE(300)
+			HX_STACK_LINE(293)
 			::haxe::ui::toolkit::core::ClassManager tmp65 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp65,"tmp65");
-			HX_STACK_LINE(300)
+			HX_STACK_LINE(293)
 			tmp65->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.SpriteContainer","\x42","\xf1","\xff","\x78"),HX_HCSTRING("spritecontainer","\x9c","\x70","\xb6","\x21"));
-			HX_STACK_LINE(304)
+			HX_STACK_LINE(297)
 			::haxe::ui::toolkit::core::ClassManager tmp66 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp66,"tmp66");
-			HX_STACK_LINE(304)
+			HX_STACK_LINE(297)
 			tmp66->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Divider","\x83","\x77","\x04","\x12"),HX_HCSTRING("divider","\xd9","\x5a","\xd7","\x70"));
-			HX_STACK_LINE(307)
+			HX_STACK_LINE(300)
 			::haxe::ui::toolkit::core::ClassManager tmp67 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp67,"tmp67");
-			HX_STACK_LINE(307)
+			HX_STACK_LINE(300)
 			tmp67->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.selection.ListSelector","\x95","\x39","\x31","\x16"),HX_HCSTRING("listselector","\x7d","\xdd","\x40","\x40"));
-			HX_STACK_LINE(313)
+			HX_STACK_LINE(304)
 			::haxe::ui::toolkit::core::ClassManager tmp68 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp68,"tmp68");
-			HX_STACK_LINE(313)
+			HX_STACK_LINE(304)
 			tmp68->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.containers.Accordion","\xce","\x92","\x06","\x61"),HX_HCSTRING("accordion","\x88","\x6a","\x7c","\x68"));
-			HX_STACK_LINE(314)
+			HX_STACK_LINE(307)
 			::haxe::ui::toolkit::core::ClassManager tmp69 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp69,"tmp69");
-			HX_STACK_LINE(314)
+			HX_STACK_LINE(307)
 			tmp69->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Button","\x88","\x08","\xc5","\x40"),HX_HCSTRING("button","\xf2","\x61","\xe0","\xd9"));
-			HX_STACK_LINE(317)
+			HX_STACK_LINE(310)
 			::haxe::ui::toolkit::core::ClassManager tmp70 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp70,"tmp70");
-			HX_STACK_LINE(317)
+			HX_STACK_LINE(310)
 			tmp70->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Scroll","\xa3","\x7e","\x49","\xae"),HX_HCSTRING("scroll","\x0d","\xd8","\x64","\x47"));
-			HX_STACK_LINE(321)
+			HX_STACK_LINE(313)
 			::haxe::ui::toolkit::core::ClassManager tmp71 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp71,"tmp71");
-			HX_STACK_LINE(321)
+			HX_STACK_LINE(313)
 			tmp71->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.core.renderers.BasicItemRenderer","\x39","\xea","\xaa","\x15"),HX_HCSTRING("basicitemrenderer","\x04","\xcd","\x79","\x17"));
-			HX_STACK_LINE(325)
+			HX_STACK_LINE(317)
 			::haxe::ui::toolkit::core::ClassManager tmp72 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp72,"tmp72");
-			HX_STACK_LINE(325)
+			HX_STACK_LINE(317)
 			tmp72->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.Calendar","\xd4","\x56","\x75","\xe5"),HX_HCSTRING("calendar","\xbe","\x5e","\x29","\x7f"));
-			HX_STACK_LINE(329)
+			HX_STACK_LINE(321)
 			::haxe::ui::toolkit::core::ClassManager tmp73 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp73,"tmp73");
-			HX_STACK_LINE(329)
+			HX_STACK_LINE(321)
 			tmp73->registerComponentClassName(HX_HCSTRING("haxe.ui.toolkit.controls.selection.DateSelector","\x65","\xc3","\x67","\x65"),HX_HCSTRING("dateselector","\x4d","\x67","\x77","\x8f"));
-			HX_STACK_LINE(331)
+			HX_STACK_LINE(325)
 			::haxe::ui::toolkit::core::ClassManager tmp74 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp74,"tmp74");
-			HX_STACK_LINE(331)
+			HX_STACK_LINE(325)
 			tmp74->registerDataSourceClassName(HX_HCSTRING("haxe.ui.toolkit.data.ArrayDataSource","\xfc","\x86","\xd9","\xfa"),HX_HCSTRING("array","\x99","\x6d","\x8f","\x25"));
-			HX_STACK_LINE(336)
+			HX_STACK_LINE(326)
 			::haxe::ui::toolkit::core::ClassManager tmp75 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp75,"tmp75");
-			HX_STACK_LINE(336)
+			HX_STACK_LINE(326)
 			tmp75->registerDataSourceClassName(HX_HCSTRING("haxe.ui.toolkit.data.XMLDataSource","\x3a","\xb1","\x99","\xf4"),HX_HCSTRING("xml","\xd7","\x6d","\x5b","\x00"));
-			HX_STACK_LINE(341)
+			HX_STACK_LINE(330)
 			::haxe::ui::toolkit::core::ClassManager tmp76 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp76,"tmp76");
-			HX_STACK_LINE(341)
+			HX_STACK_LINE(330)
 			tmp76->registerDataSourceClassName(HX_HCSTRING("haxe.ui.toolkit.data.JSONDataSource","\x2f","\x43","\x0a","\x4d"),HX_HCSTRING("json","\x28","\x42","\x68","\x46"));
-			HX_STACK_LINE(343)
+			HX_STACK_LINE(332)
 			::haxe::ui::toolkit::core::ClassManager tmp77 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp77,"tmp77");
-			HX_STACK_LINE(343)
+			HX_STACK_LINE(332)
 			tmp77->registerDataSourceClassName(HX_HCSTRING("haxe.ui.toolkit.data.FilesDataSource","\x5a","\xf9","\xef","\x6a"),HX_HCSTRING("files","\x77","\xde","\x98","\x00"));
-			HX_STACK_LINE(349)
+			HX_STACK_LINE(337)
 			::haxe::ui::toolkit::core::ClassManager tmp78 = ::haxe::ui::toolkit::core::ClassManager_obj::get_instance();		HX_STACK_VAR(tmp78,"tmp78");
-			HX_STACK_LINE(349)
+			HX_STACK_LINE(337)
 			tmp78->registerDataSourceClassName(HX_HCSTRING("haxe.ui.toolkit.data.MySQLDataSource","\xa5","\x64","\x03","\x14"),HX_HCSTRING("mysql","\x22","\xb2","\xff","\x12"));
-			HX_STACK_LINE(349)
+			HX_STACK_LINE(341)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("__PUBLIC__","\x29","\x2f","\x12","\xa8"),HX_HCSTRING("css/rtf.css","\x2d","\xaf","\xb3","\x39"));
-			HX_STACK_LINE(353)
+			HX_STACK_LINE(344)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("__PUBLIC__","\x29","\x2f","\x12","\xa8"),HX_HCSTRING("css/code.css","\x0e","\x53","\xe4","\xd4"));
-			HX_STACK_LINE(354)
+			HX_STACK_LINE(348)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("gradient","\xf0","\x39","\x3f","\x2a"),HX_HCSTRING("styles/gradient/gradient.css","\x17","\x58","\x42","\x93"));
-			HX_STACK_LINE(359)
+			HX_STACK_LINE(349)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("default","\xc1","\xd8","\xc3","\x9b"),hx::ClassOf< ::haxe::ui::toolkit::style::DefaultStyles >());
-			HX_STACK_LINE(360)
+			HX_STACK_LINE(350)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("gradient_mobile","\x11","\xa2","\x43","\x34"),HX_HCSTRING("styles/gradient/gradient_mobile.css","\x54","\x7f","\x21","\x4c"));
-			HX_STACK_LINE(362)
+			HX_STACK_LINE(353)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/windows.css","\xdf","\x23","\x84","\x38"));
-			HX_STACK_LINE(367)
+			HX_STACK_LINE(358)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/buttons.css","\x9d","\x4e","\x5c","\x95"));
-			HX_STACK_LINE(368)
+			HX_STACK_LINE(359)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/tabs.css","\xec","\xbd","\x3f","\xd1"));
-			HX_STACK_LINE(371)
+			HX_STACK_LINE(360)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/listview.css","\x31","\xea","\xcd","\xee"));
-			HX_STACK_LINE(372)
+			HX_STACK_LINE(362)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/scrolls.css","\xa2","\xd6","\x8e","\x91"));
-			HX_STACK_LINE(377)
+			HX_STACK_LINE(367)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/sliders.css","\x0e","\x60","\x93","\xb7"));
-			HX_STACK_LINE(383)
+			HX_STACK_LINE(368)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/accordion.css","\x24","\xc6","\x8b","\x6c"));
-			HX_STACK_LINE(385)
+			HX_STACK_LINE(371)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/rtf.css","\xc0","\x20","\x8e","\x65"));
-			HX_STACK_LINE(388)
+			HX_STACK_LINE(372)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/calendar.css","\xac","\x0c","\x04","\xe6"));
-			HX_STACK_LINE(388)
+			HX_STACK_LINE(376)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/popups.css","\xf5","\xba","\x62","\xd7"));
-			HX_STACK_LINE(388)
+			HX_STACK_LINE(383)
 			::haxe::ui::toolkit::themes::Theme_obj::addAsset(HX_HCSTRING("windows","\x83","\xde","\x74","\xe8"),HX_HCSTRING("styles/windows/menus.css","\x10","\x38","\x00","\xbe"));
 		}
 		HX_STACK_LINE(51)

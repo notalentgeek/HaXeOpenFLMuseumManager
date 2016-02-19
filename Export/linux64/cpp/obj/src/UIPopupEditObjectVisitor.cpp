@@ -424,49 +424,47 @@ HX_STACK_ARG(_root,"_root")
 				HX_STACK_LINE(108)
 				::String tmp48 = ::Std_obj::string(tmp47);		HX_STACK_VAR(tmp48,"tmp48");
 				HX_STACK_LINE(108)
-				::String tmp49 = (HX_HCSTRING("","\x00","\x00","\x00","\x00") + tmp48);		HX_STACK_VAR(tmp49,"tmp49");
-				HX_STACK_LINE(108)
-				::String string = tmp49;		HX_STACK_VAR(string,"string");
+				::String string = tmp48;		HX_STACK_VAR(string,"string");
 				HX_STACK_LINE(109)
 				Array< ::String > stringArray = string.split(HX_HCSTRING("*","\x2a","\x00","\x00","\x00"));		HX_STACK_VAR(stringArray,"stringArray");
 				HX_STACK_LINE(110)
-				::String tmp50 = stringArray->__get((int)1);		HX_STACK_VAR(tmp50,"tmp50");
+				::String tmp49 = stringArray->__get((int)1);		HX_STACK_VAR(tmp49,"tmp49");
 				HX_STACK_LINE(110)
-				::String nameString = tmp50;		HX_STACK_VAR(nameString,"nameString");
+				::String nameString = tmp49;		HX_STACK_VAR(nameString,"nameString");
 				HX_STACK_LINE(111)
-				::CollectionGlobal tmp51 = _g->collectionGlobalObject;		HX_STACK_VAR(tmp51,"tmp51");
+				::CollectionGlobal tmp50 = _g->collectionGlobalObject;		HX_STACK_VAR(tmp50,"tmp50");
 				HX_STACK_LINE(111)
-				::String tmp52 = nameString;		HX_STACK_VAR(tmp52,"tmp52");
+				::String tmp51 = nameString;		HX_STACK_VAR(tmp51,"tmp51");
 				HX_STACK_LINE(111)
-				::ObjectVisitor tmp53 = ::CollectionFunction_obj::FindVisitorObject(tmp51,tmp52);		HX_STACK_VAR(tmp53,"tmp53");
+				::ObjectVisitor tmp52 = ::CollectionFunction_obj::FindVisitorObject(tmp50,tmp51);		HX_STACK_VAR(tmp52,"tmp52");
 				HX_STACK_LINE(111)
-				::ObjectVisitor visitorObject = tmp53;		HX_STACK_VAR(visitorObject,"visitorObject");
+				::ObjectVisitor visitorObject = tmp52;		HX_STACK_VAR(visitorObject,"visitorObject");
 				HX_STACK_LINE(113)
-				bool tmp54 = (visitorObject != null());		HX_STACK_VAR(tmp54,"tmp54");
+				bool tmp53 = (visitorObject != null());		HX_STACK_VAR(tmp53,"tmp53");
 				HX_STACK_LINE(113)
-				if ((tmp54)){
+				if ((tmp53)){
 					HX_STACK_LINE(115)
 					_g->selectedVisitorObject = visitorObject;
 					HX_STACK_LINE(116)
-					::String tmp55 = _g->selectedVisitorObject->GetNameString();		HX_STACK_VAR(tmp55,"tmp55");
+					::String tmp54 = _g->selectedVisitorObject->GetNameString();		HX_STACK_VAR(tmp54,"tmp54");
 					HX_STACK_LINE(116)
-					_g->inputNameTextInputObject->set_text(tmp55);
+					_g->inputNameTextInputObject->set_text(tmp54);
 					HX_STACK_LINE(117)
 					_g->selectCurrentExhibitionListSelectorObject->set_selectedIndex((int)0);
 					HX_STACK_LINE(118)
 					_g->selectVisitorListSelectorObject->set_selectedIndex((int)0);
 					HX_STACK_LINE(119)
-					::String tmp56 = _g->selectedVisitorObject->GetNameString();		HX_STACK_VAR(tmp56,"tmp56");
+					::String tmp55 = _g->selectedVisitorObject->GetNameString();		HX_STACK_VAR(tmp55,"tmp55");
 					HX_STACK_LINE(119)
-					_g->selectVisitorListSelectorObject->set_text(tmp56);
+					_g->selectVisitorListSelectorObject->set_text(tmp55);
 					HX_STACK_LINE(120)
+					::String tmp56 = _g->selectVisitorListSelectorObject->get_text();		HX_STACK_VAR(tmp56,"tmp56");
+					HX_STACK_LINE(120)
+					_g->selectVisitorListSelectorString = tmp56;
+					HX_STACK_LINE(121)
 					::String tmp57 = _g->selectVisitorListSelectorObject->get_text();		HX_STACK_VAR(tmp57,"tmp57");
-					HX_STACK_LINE(120)
-					_g->selectVisitorListSelectorString = tmp57;
 					HX_STACK_LINE(121)
-					::String tmp58 = _g->selectVisitorListSelectorObject->get_text();		HX_STACK_VAR(tmp58,"tmp58");
-					HX_STACK_LINE(121)
-					_g->selectVisitorListSelectorPrevString = tmp58;
+					_g->selectVisitorListSelectorPrevString = tmp57;
 					HX_STACK_LINE(123)
 					_g->ResetSelectVisitorListSelectorObjectVoid();
 				}
@@ -678,7 +676,7 @@ HX_STACK_ARG(_root,"_root")
 						HX_STACK_LINE(172)
 						int tmp51 = tmp50->__Field(HX_HCSTRING("tagCounterInt","\x4d","\x2e","\x20","\xff"), hx::paccDynamic );		HX_STACK_VAR(tmp51,"tmp51");
 						HX_STACK_LINE(172)
-						::String tmp52 = (tmp51 + HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));		HX_STACK_VAR(tmp52,"tmp52");
+						::String tmp52 = (tmp51 + HX_HCSTRING("","\x00","\x00","\x00","\x00"));		HX_STACK_VAR(tmp52,"tmp52");
 						HX_STACK_LINE(174)
 						Dynamic tmp53 = _g->selectedVisitorObject->GetTagCounterStructArray()->__GetItem(loopCounter1Int);		HX_STACK_VAR(tmp53,"tmp53");
 						HX_STACK_LINE(174)
@@ -1211,7 +1209,7 @@ Void UIPopupEditObjectVisitor_obj::ResetDisplayCurrentExhibitionTextObjectVoid( 
 			HX_STACK_LINE(311)
 			::haxe::ui::toolkit::controls::Text tmp2 = this->displayCurrentExhibitionTextObject;		HX_STACK_VAR(tmp2,"tmp2");
 			HX_STACK_LINE(311)
-			tmp2->set_text(HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));
+			tmp2->set_text(HX_HCSTRING("","\x00","\x00","\x00","\x00"));
 		}
 	}
 return null();
@@ -1323,7 +1321,7 @@ Void UIPopupEditObjectVisitor_obj::ResetDisplayTargetExhibitionTextObjectVoid( )
 			HX_STACK_LINE(330)
 			::haxe::ui::toolkit::controls::Text tmp2 = this->displayTargetExhibitionTextObject;		HX_STACK_VAR(tmp2,"tmp2");
 			HX_STACK_LINE(330)
-			tmp2->set_text(HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));
+			tmp2->set_text(HX_HCSTRING("","\x00","\x00","\x00","\x00"));
 		}
 	}
 return null();
@@ -1345,7 +1343,7 @@ Void UIPopupEditObjectVisitor_obj::ResetDisplayVisitorIndexGlobalTextObjectVoid(
 			HX_STACK_LINE(333)
 			::haxe::ui::toolkit::controls::Text tmp2 = this->displayVisitorIndexGlobalTextObject;		HX_STACK_VAR(tmp2,"tmp2");
 			HX_STACK_LINE(333)
-			tmp2->set_text(HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));
+			tmp2->set_text(HX_HCSTRING("","\x00","\x00","\x00","\x00"));
 		}
 	}
 return null();
@@ -1367,7 +1365,7 @@ Void UIPopupEditObjectVisitor_obj::ResetDisplayVisitorIndexLocalTextObjectVoid( 
 			HX_STACK_LINE(336)
 			::haxe::ui::toolkit::controls::Text tmp2 = this->displayVisitorIndexLocalTextObject;		HX_STACK_VAR(tmp2,"tmp2");
 			HX_STACK_LINE(336)
-			tmp2->set_text(HX_HCSTRING(" ","\x20","\x00","\x00","\x00"));
+			tmp2->set_text(HX_HCSTRING("","\x00","\x00","\x00","\x00"));
 		}
 	}
 return null();
@@ -2324,7 +2322,7 @@ Void UIPopupEditObjectVisitor_obj::UpdateDisplayVisitorIndexGlobalTextObjectVoid
 			HX_STACK_LINE(497)
 			int tmp4 = tmp3->GetIndexGlobalInt();		HX_STACK_VAR(tmp4,"tmp4");
 			HX_STACK_LINE(497)
-			::String tmp5 = (HX_HCSTRING("","\x00","\x00","\x00","\x00") + tmp4);		HX_STACK_VAR(tmp5,"tmp5");
+			::String tmp5 = ::Std_obj::string(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
 			HX_STACK_LINE(497)
 			tmp2->set_text(tmp5);
 		}
@@ -2352,7 +2350,7 @@ Void UIPopupEditObjectVisitor_obj::UpdateDisplayVisitorIndexLocalTextObjectVoid(
 			HX_STACK_LINE(501)
 			int tmp4 = tmp3->GetIndexLocalInt();		HX_STACK_VAR(tmp4,"tmp4");
 			HX_STACK_LINE(501)
-			::String tmp5 = (HX_HCSTRING("","\x00","\x00","\x00","\x00") + tmp4);		HX_STACK_VAR(tmp5,"tmp5");
+			::String tmp5 = ::Std_obj::string(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
 			HX_STACK_LINE(501)
 			tmp2->set_text(tmp5);
 		}

@@ -74,6 +74,7 @@ class HXCPP_CLASS_ATTRIBUTES  ListSelector_obj : public ::haxe::ui::toolkit::con
 		::String _method;
 		int _selectedIndex;
 		Array< ::haxe::ui::toolkit::core::interfaces::IItemRenderer > _selectedItems;
+		bool lazyLoad;
 		virtual Void preInitialize( );
 
 		virtual Void initialize( );
@@ -82,6 +83,7 @@ class HXCPP_CLASS_ATTRIBUTES  ListSelector_obj : public ::haxe::ui::toolkit::con
 
 		virtual Void applyStyle( );
 
+		bool _dataSourceDirty;
 		virtual ::haxe::ui::toolkit::data::IDataSource get_dataSource( );
 		Dynamic get_dataSource_dyn();
 

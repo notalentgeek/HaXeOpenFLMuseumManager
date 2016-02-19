@@ -5,12 +5,12 @@
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Name" />
-        <textInput text=" " id="UIPopupAddObjectVisitor_InputName" width="100%" />
+        <textInput text="" id="UIPopupAddObjectVisitor_InputName" width="100%" />
 
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
         <text text="Previous Visitor" />
-        <listSelector text=" " id="UIPopupAddObjectVisitor_SelectPreviousVisitor" width="100%" ></listSelector>
+        <listSelector text="" id="UIPopupAddObjectVisitor_SelectPreviousVisitor" width="100%" ></listSelector>
 
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 

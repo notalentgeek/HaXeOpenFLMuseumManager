@@ -59,10 +59,10 @@ namespace selection{
 
 Void DropDownList_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ui.toolkit.controls.selection.DropDownList","new",0xd440b599,"haxe.ui.toolkit.controls.selection.DropDownList.new","haxe/ui/toolkit/controls/selection/ListSelector.hx",325,0x5c9ca828)
+HX_STACK_FRAME("haxe.ui.toolkit.controls.selection.DropDownList","new",0xd440b599,"haxe.ui.toolkit.controls.selection.DropDownList.new","haxe/ui/toolkit/controls/selection/ListSelector.hx",348,0x5c9ca828)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(325)
+	HX_STACK_LINE(348)
 	super::__construct();
 }
 ;
