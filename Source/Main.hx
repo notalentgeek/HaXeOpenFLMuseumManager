@@ -26,7 +26,6 @@ class Main extends Sprite{
 
 
 
-
     /*Global variable database for the whole application.*/
     var collectionGlobalObject                  :CollectionGlobal               = new CollectionGlobal();
     /*Main loop counter.
@@ -151,6 +150,7 @@ class Main extends Sprite{
             if(serialEstablishedBool == false){
                 if(serialObject == null){
                     serialObject = new hxSerial.Serial(hxSerial.Serial.getDeviceList()[serialIndexInt], 9600, true);
+                    trace(serialObject.portName);
                 }
                 else if(serialObject != null){
                     if(serialObject.available() > 0){
@@ -185,8 +185,9 @@ class Main extends Sprite{
     This is to prevent null pointer exception.*/
     private function UpdateVoid(event:Event){
 
-        if(updateAfterBool == true){ UpdateAfterCompanyWordVoid(); }
-        else if(updateAfterBool == false){ UpdateBeforeCompanyWordVoid(); }
+        UpdateAfterCompanyWordVoid();
+        //if(updateAfterBool == true){ UpdateAfterCompanyWordVoid(); }
+        //else if(updateAfterBool == false){ UpdateBeforeCompanyWordVoid(); }
 
     }
     /*==================================================*/
@@ -235,6 +236,7 @@ class Main extends Sprite{
             if(soundProgressBool == true){
                 if(serialObject.available() > 0){
                     var string:String = serialObject.readBytes(1);
+                    trace(string);
                     if(string == "O"){
                         trace(sendInstructionToArduinoStringArray[0]);
                         serialObject.writeBytes(sendInstructionToArduinoStringArray[0]);

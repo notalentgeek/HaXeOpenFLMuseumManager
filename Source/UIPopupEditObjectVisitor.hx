@@ -104,6 +104,8 @@ class UIPopupEditObjectVisitor{
             selectModeListSelectorObject.method                 = "default";
             selectVisitorListSelectorObject.method              = "default";
 
+            ResetSelectVisitorListSelectorObjectVoid();
+
             if(_e.component.userData != null){
                 var string:String = Std.string(_e.component.userData);
                 var stringArray:Array<String> = string.split("*");
