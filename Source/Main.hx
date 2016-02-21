@@ -146,26 +146,47 @@ class Main extends Sprite{
     private function SearchForSerialConnectionVoid(){
 
         #if (cpp)
+
+            /*So how it is work here is to check which serial port is returning "HANDSHAKE".
+            The first serial port is checked based on serialIndexInt if the serial port is not returning "HANDSHAKE"
+                wait for 300 system tick before increment in serialIndexInt.
+            Increment in serialIndexInt means this program is checking into new serial port.
+            If the serialIndexInt is exceed the number of available port in the computer than this program know that
+                there is no Arduino device connected to the computer that sends "HANDSHAKE" into the serial port.*/
             if(serialIndexInt >= serialLength){ return; }
+
             if(serialEstablishedBool == false){
+
                 if(serialObject == null){
+
                     serialObject = new hxSerial.Serial(hxSerial.Serial.getDeviceList()[serialIndexInt], 9600, true);
                     trace(serialObject.portName);
+
                 }
                 else if(serialObject != null){
+
                     if(serialObject.available() > 0){
+
                         if(serialObject.readBytes(9) == "HANDSHAKE"){
+
                             serialEstablishedBool = true;
                             return;
+
                         }
+
                     }
+
                 }
+
                 serialCounterInt ++;
                 if(serialCounterInt >= 300){
+
                     serialObject = null;
                     serialIndexInt ++;
                     serialCounterInt = 0;
+
                 }
+
             }
         #end
 
@@ -185,9 +206,9 @@ class Main extends Sprite{
     This is to prevent null pointer exception.*/
     private function UpdateVoid(event:Event){
 
-        UpdateAfterCompanyWordVoid();
-        //if(updateAfterBool == true){ UpdateAfterCompanyWordVoid(); }
-        //else if(updateAfterBool == false){ UpdateBeforeCompanyWordVoid(); }
+        //UpdateAfterCompanyWordVoid();
+        if(updateAfterBool == true){ UpdateAfterCompanyWordVoid(); }
+        else if(updateAfterBool == false){ UpdateBeforeCompanyWordVoid(); }
 
     }
     /*==================================================*/
@@ -196,55 +217,78 @@ class Main extends Sprite{
 
 
 
+    /*==================================================
+    Normal update function*/
     private function UpdateAfterCompanyWordVoid(){
 
         PopupManager.instance.hidePopup(uiPopupLoadingWordObject);
 
+        /*If the HaXe program is compiled using C++ then activate serial connection.*/
         #if (cpp)
+
             SearchForSerialConnectionVoid();
             if(serialEstablishedBool == true && soundProgressBool == false){
+
+                /*Check data availability in the serial port.*/
                 if(serialObject.available() > 0){
-                    var string:String = serialObject.readBytes(7);
-                    if(string.substring(0, 3) == "EXH"){
+
+                    /*Read 7 bytes within the serial port in one go.*/
+                    var targetExhibitionString:String = serialObject.readBytes(7);
+
+                    /*If the first three words is "EXH" then proceed to send instruction to Arduino Device.*/
+                    if(targetExhibitionString.substring(0, 3) == "EXH"){
 
                         if(collectionGlobalObject.GetVisitorObjectArray()[0].GetVisitorModeEnum() == HARDWARE_MANUAL){
-                            collectionGlobalObject.GetVisitorObjectArray()[0].ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, string));
-                            serialObject.writeBytes("I");
-                            sendInstructionToArduinoStringArray.push("Y");
-                            sendInstructionToArduinoStringArray.push("Q");
-                            sendInstructionToArduinoStringArray.push("W");
-                            sendInstructionToArduinoStringArray.push("E");
+
+                            collectionGlobalObject.GetVisitorObjectArray()[0].ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, targetExhibitionString));
+                            serialObject.writeBytes("I"); /*Arduimo device start listening to instruction.*/
+                            sendInstructionToArduinoStringArray.push("Y"); /*Play audio file that says "Welcome.".*/
+                            sendInstructionToArduinoStringArray.push("Q"); /*Play "Exhibition".*/
+                            sendInstructionToArduinoStringArray.push("W"); /*Play the index number of visitor's recent visited exhibition.*/ /*Play audio file that says "Explanation.".*/
+                            sendInstructionToArduinoStringArray.push("E"); /*Play audio file that says "Explanation.".*/
                             sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExplanationCurrentIndexInt() + 1));
-                            sendInstructionToArduinoStringArray.push("T");
-                            sendInstructionToArduinoStringArray.push("Q");
+                            sendInstructionToArduinoStringArray.push("T"); /*Play audio file that says "Please visit and tap into.".*/
+                            sendInstructionToArduinoStringArray.push("Q"); /*Play "Exhibition".*/
                             sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[0].GetIndexGlobalInt() + 1));
-                            sendInstructionToArduinoStringArray.push("R");
-                            sendInstructionToArduinoStringArray.push("Q");
+                            sendInstructionToArduinoStringArray.push("R"); /*Play audio file that says "Or.".*/
+                            sendInstructionToArduinoStringArray.push("Q"); /*Play "Exhibition".*/
                             sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[1].GetIndexGlobalInt() + 1));
-                            sendInstructionToArduinoStringArray.push("R");
-                            sendInstructionToArduinoStringArray.push("Q");
+                            sendInstructionToArduinoStringArray.push("R"); /*Play audio file that says "Or.".*/
+                            sendInstructionToArduinoStringArray.push("Q"); /*Play "Exhibition".*/
                             sendInstructionToArduinoStringArray.push(Std.string(collectionGlobalObject.GetVisitorObjectArray()[0].GetExhibitionTargetObjectArray()[2].GetIndexGlobalInt() + 1));
-                            sendInstructionToArduinoStringArray.push("U");
+                            sendInstructionToArduinoStringArray.push("U"); /*Stop playing audio file from Arduino device.*/
                             soundProgressBool = true;
+
                         }
 
-                        trace(string);
+                        trace(targetExhibitionString);
 
                     }
+
                 }
+
             }
             if(soundProgressBool == true){
+
                 if(serialObject.available() > 0){
+
                     var string:String = serialObject.readBytes(1);
-                    trace(string);
-                    if(string == "O"){
-                        trace(sendInstructionToArduinoStringArray[0]);
+
+                    if(string == "O"){ /*If received instruction from Arduino device that this device has finished playing an audio file.*/
+
                         serialObject.writeBytes(sendInstructionToArduinoStringArray[0]);
+
+                        trace(sendInstructionToArduinoStringArray[0]);
+
                         sendInstructionToArduinoStringArray.remove(sendInstructionToArduinoStringArray[0]);
                         if(sendInstructionToArduinoStringArray.length == 0){ soundProgressBool = false; }
+
                     }
+
                 }
+
             }
+
         #end
 
         UpdateSlowVoid();
@@ -259,28 +303,77 @@ class Main extends Sprite{
         uiPopupRemoveVisitorObject      .UpdateVoid();
 
     }
+    /*==================================================*/
+
+
+
+
+    
+    /*==================================================
+    This is a loading function to parse data from Wordnik API.
+    However this function will only works in C++, Neko, PHP, and Python.
+    Since OpenFL does not support Python and PHP I need to create a new interface for HaXe that targets
+    PHP or Python.*/
     private function UpdateBeforeCompanyWordVoid(){
 
         var tagString:String = "";
+
         if(collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterCompanyWordInt] != null){
+
+            /*Generate the company words for tag general object array.*/
             collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterCompanyWordInt].GenerateCompanyWordVoid();
             tagString = collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterCompanyWordInt].GetNameOriginalString();
+
         }
+        /*If at certain index tag general is a null then it is the time to get into the normal tags.*/
         else if(collectionGlobalObject.GetTagGeneralObjectArray()[loopCounterCompanyWordInt] == null){
+
             if(collectionGlobalObject.GetTagObjectArray()[loopCounterCompanyWordInt - collectionGlobalObject.GetTagGeneralObjectArray().length] != null){
+
+                /*Generate company words for normal tags.*/
                 collectionGlobalObject.GetTagObjectArray()[loopCounterCompanyWordInt - collectionGlobalObject.GetTagGeneralObjectArray().length].GenerateCompanyWordVoid();
                 tagString = collectionGlobalObject.GetTagObjectArray()[loopCounterCompanyWordInt - collectionGlobalObject.GetTagGeneralObjectArray().length].GetNameOriginalString();
+
             }
             else if(collectionGlobalObject.GetTagObjectArray()[loopCounterCompanyWordInt - collectionGlobalObject.GetTagGeneralObjectArray().length] == null){ updateAfterBool = true; }
+
         }
+
+        /*Update the loading message accordingly.*/
         #if (!cpp && !neko && !php)
-            Std.instance(uiPopupLoadingWordObject.content, SimplePopupContent).SetTextControlStringVoid("Wordnik API only works on CPP, Neko, and PHP target.\nCooking words!!! " + tagString + " " + loopCounterCompanyWordInt + "/" + tagAmountInt);
+
+            Std.instance(
+                uiPopupLoadingWordObject.content,
+                SimplePopupContent
+            ).SetTextControlStringVoid(
+                "Wordnik API only works on CPP, Neko, and PHP target.\nCooking words!!! " +
+                tagString +
+                " " +
+                loopCounterCompanyWordInt +
+                "/" +
+                tagAmountInt
+            );
+        
         #else
-            Std.instance(uiPopupLoadingWordObject.content, SimplePopupContent).SetTextControlStringVoid("Cooking words!!! " + tagString + " " + loopCounterCompanyWordInt + "/" + tagAmountInt);
+
+            Std.instance(
+                uiPopupLoadingWordObject.content,
+                SimplePopupContent
+            ).SetTextControlStringVoid(
+                "Cooking words!!! " +
+                tagString +
+                " " +
+                loopCounterCompanyWordInt +
+                "/" +
+                tagAmountInt
+            );
+        
         #end
+
         loopCounterCompanyWordInt ++;
 
     }
+    /*==================================================*/
 
 
 
