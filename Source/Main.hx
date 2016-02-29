@@ -206,9 +206,11 @@ class Main extends Sprite{
     This is to prevent null pointer exception.*/
     private function UpdateVoid(event:Event){
 
-        //UpdateAfterCompanyWordVoid();
+        UpdateAfterCompanyWordVoid();
+        /*
         if(updateAfterBool == true){ UpdateAfterCompanyWordVoid(); }
         else if(updateAfterBool == false){ UpdateBeforeCompanyWordVoid(); }
+        */
 
     }
     /*==================================================*/

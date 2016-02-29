@@ -3,33 +3,45 @@ import CollectionFunction;
 import CollectionStruct;
 
 class ObjectVisitor{
-    private var collectionGlobalObject:CollectionGlobal = null;
-    private var exhibitionCurrentObject:ObjectMuseum = null;
-    private var exhibitionTargetObjectArray:Array<ObjectMuseum> = new Array<ObjectMuseum>();
-    private var exhibitionVisitedObjectArray:Array<ObjectMuseum> = new Array<ObjectMuseum>();
-    private var explanationCurrentIndexInt:Int = -1;
-    private var explanationCurrentString:String = "";
-    private var explanationStringArray:Array<String> = new Array<String>();
-    private var finishedBool:Bool = false;
-    private var floorCurrentObject:ObjectMuseum = null;
-    private var generatorSentenceObject:ObjectGeneratorSentence = null;
-    private var indexGlobalInt:Int = -1;
-    private var indexLocalInt:Int = -1;
-    private var nameString:String = "";
-    private var roomCurrentObject:ObjectMuseum = null;
-    private var scoreInt:Int = 0;
-    private var sentenceStringArray:Array<String> = new Array<String>();
-    private var tagCounterStructArray:Array<StructTagCounter> = new Array<StructTagCounter>();
-    private var tagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
-    private var targetInt:Int = 3;
-    private var timeAIAutoExhibitionChangeFloat:Float = 0;
-    private var timeExhibitionInt:Int = 0;
-    private var timeMuseumInt:Int = 0;
-    private var visitedCorrectExhibitionBool:Bool = true;
-    private var visitExhibitionStructArray:Array<StructVisitorVisitExhibition> = new Array<StructVisitorVisitExhibition>();
-    private var visitMuseumStructArray:Array<StructVisitorVisitMuseum> = new Array<StructVisitorVisitMuseum>(); /*PENDING:*/
-    private var visitorModeEnum:EnumVisitorMode = null;
-    private var visitorUIObject:ObjectVisitorUI = null;
+
+
+
+
+
+    private var explanationCurrentIndexInt          :Int                                    = -1;
+    private var explanationCurrentString            :String                                 = "";
+    private var explanationStringArray              :Array<String>                          = new Array<String>();
+    private var finishedBool                        :Bool                                   = false;
+    private var indexGlobalInt                      :Int                                    = -1;
+    private var indexLocalInt                       :Int                                    = -1;
+    private var nameString                          :String                                 = "";
+    private var scoreInt                            :Int                                    = 0;
+    private var sentenceStringArray                 :Array<String>                          = new Array<String>();
+    private var targetInt                           :Int                                    = 3;
+    private var timeAIAutoExhibitionChangeFloat     :Float                                  = 0;
+    private var timeExhibitionInt                   :Int                                    = 0;
+    private var timeMuseumInt                       :Int                                    = 0;
+    private var visitedCorrectExhibitionBool        :Bool                                   = true;
+
+
+
+    private var collectionGlobalObject              :CollectionGlobal                       = null;
+    private var exhibitionCurrentObject             :ObjectMuseum                           = null;
+    private var exhibitionTargetObjectArray         :Array<ObjectMuseum>                    = new Array<ObjectMuseum>();
+    private var exhibitionVisitedObjectArray        :Array<ObjectMuseum>                    = new Array<ObjectMuseum>();
+    private var floorCurrentObject                  :ObjectMuseum                           = null;
+    private var generatorSentenceObject             :ObjectGeneratorSentence                = null;
+    private var roomCurrentObject                   :ObjectMuseum                           = null;
+    private var tagCounterStructArray               :Array<StructTagCounter>                = new Array<StructTagCounter>();
+    private var tagObjectArray                      :Array<ObjectTag>                       = new Array<ObjectTag>();
+    private var visitExhibitionStructArray          :Array<StructVisitorVisitExhibition>    = new Array<StructVisitorVisitExhibition>();
+    private var visitMuseumStructArray              :Array<StructVisitorVisitMuseum>        = new Array<StructVisitorVisitMuseum>();        /*PENDING:*/
+    private var visitorModeEnum                     :EnumVisitorMode                        = null;
+    private var visitorUIObject                     :ObjectVisitorUI                        = null;
+
+
+
+
 
     public function new(
         _collectionGlobalObject:CollectionGlobal,
