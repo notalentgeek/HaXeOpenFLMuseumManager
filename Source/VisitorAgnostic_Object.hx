@@ -1,46 +1,61 @@
-class VisitorAgnostic_Object{
-
-    private var explanationCurrent_String                                                           :String         = "";
-    private var explanationCurrentIndex_Int                                                         :Int            = -1;
-    private var finish_Bool                                                                         :Bool           = null;
-    private var indexLocal_Int                                                                      :Int            = -1;
-    private var score_Int                                                                           :Int            = -1;
-    private var sentenceAmount_Int                                                                  :Int            = -1;
-    private var timeAIAutoExhibitionChange_Float                                                    :Float          = -1.0;
-    private var timeCurrentExhibition_Int                                                           :Int            = -1;
-    private var timeCurrentMuseumVisit_Int                                                          :Int            = -1;
-    public  var indexGlobal_Int                                                 (null, default)     :Int            = -1;
-    public  var name_String                                                     (null, default)     :String         = "";
-
-
-
-    private var explanation_String_Array                                                            :Array<String>  = null;
-    private var sentence_String_Array                                                               :Array<String>  = null;
-
-
-
-    private var floorCurrentNameAlt_String                                                          :String         = "";
-    private var roomCurrentNameAlt_String                                                           :String         = "";
-    public  var exhibitionCurrentNameAlt_String                                 (null, default)     :String         = "";
-    public  var visitorMode_String                                              (null, default)     :String         = "";
-
-
-
-    private var exhibitionTargetNameAlt_String_Array                                                :Array<String>  = null;
-    private var exhibitionVisitedNameAlt_String_Array                                               :Array<String>  = null;
-    private var tagCounter_Int_Array                                            (default, default)  :Array<Int>     = null;
-    private var tagCounterTagName_String_Array                                  (default, default)  :Array<String>  = null;
-    private var tagName_String_Array                                            (default, default)  :Array<String>  = null;
-    private var visitorVisitMuseum_VisitorVisitExhibitionNameAlt_String_Array                       :Array<String>  = null;
-    private var visitorVisitMuseum_VisitorVisitExhibitionTime_Int_Array                             :Array<Int>     = null;
-    private var visitorVisitMuseumTime_Int_Array                                                    :Array<Int>     = null;
-    private var visitorVisitMuseumVisit_Int_Array                                                   :Array<Int>     = null;
+class VisitorAgnostic_Object extends MuseumAndVisitorAgnostic_Object{
 
 
 
 
 
-    public function new(){}
+    private var amountOfPreviousVisitedExhibition_Int                           (null, null)        :Int            = -1;
+    private var amountTargetExhibition_Int                                      (null, null)        :Int            = -1;
+    private var explanationCurrent_String                                       (null, null)        :String         = "";
+    private var explanationCurrentIndex_Int                                     (null, null)        :Int            = -1;
+    private var finished_Bool                                                   (null, null)        :Bool           = null;
+    private var indexGlobal_Int                                                 (null, null)        :Int            = -1;
+    private var indexLocal_Int                                                  (null, null)        :Int            = -1;
+    private var name_String                                                     (null, null)        :String         = "";
+    private var score_Int                                                       (null, null)        :Int            = -1;
+    private var sentenceCurrent_String                                          (null, null)        :String         = "";
+    private var timeAIAutoExhibitionChange_Float                                (null, null)        :Float          = -1.0;
+    private var timeCurrentExhibition_Int                                       (null, null)        :Int            = -1;
+    private var timeCurrentMuseumVisit_Int                                      (null, null)        :Int            = -1;
+    private var visitedCorrectExhibition_Bool                                   (null, null)        :Bool           = null;
+
+
+
+    private var explanation_String_Array                                        (null, null)        :Array<String>  = null; /*PENDING: Put this in super class.*/
+    private var sentence_String_Array                                           (null, null)        :Array<String>  = null;
+
+
+
+    private var exhibitionCurrentNameAlt_String                                 (null, null)        :String         = "";
+    private var floorCurrentNameAlt_String                                      (null, null)        :String         = "";
+    private var roomCurrentNameAlt_String                                       (null, null)        :String         = "";
+    private var visitorMode_String                                              (null, null)        :String         = "";
+
+
+
+    private var exhibitionTargetNameAlt_String_Array                            (null, null)        :Array<String>  = null;
+    private var exhibitionVisitedNameAlt_String_Array                           (null, null)        :Array<String>  = null;
+    private var tagCounter_Int_Array                                            (null, null)        :Array<Int>     = null;
+    private var tagCounterTagName_String_Array                                  (null, null)        :Array<String>  = null;
+    private var tagName_String_Array                                            (null, null)        :Array<String>  = null; /*PENDING: Put this in super class.*/
+    private var visitorVisitMuseum_VisitorVisitExhibitionNameAlt_String_Array   (null, null)        :Array<String>  = null;
+    private var visitorVisitMuseum_VisitorVisitExhibitionTime_Int_Array         (null, null)        :Array<Int>     = null;
+    private var visitorVisitMuseumTime_Int_Array                                (null, null)        :Array<Int>     = null;
+    private var visitorVisitMuseumVisit_Int_Array                               (null, null)        :Array<Int>     = null;
+
+
+
+
+
+    public function new(
+        _amountOfPreviousVisitedExhibition_Int  :Int,
+        _amountTargetExhibition_Int             :Int
+    ):Void{
+
+        amountOfPreviousVisitedExhibition_Int   = _amountOfPreviousVisitedExhibition_Int;
+        amountTargetExhibition_Int              = _amountTargetExhibition_Int;
+
+    }
 
 
 

@@ -132,6 +132,9 @@ class ObjectVisitor{
             exhibitionVisitedObjectArray.push(exhibitionCurrentObject);
             AddTagCounterVoid();
             GenerateExhibitionTargetVoid(targetInt);
+
+
+
             var indexIntArray:Array<Int> = new Array<Int>();
             var loopCounter1Int:Int = 0;
             while(loopCounter1Int < exhibitionCurrentObject.GetExplanationStringArray().length){
@@ -144,7 +147,7 @@ class ObjectVisitor{
             explanationCurrentIndexInt = indexRandomInt;
             loopCounter1Int = 0;
             while(
-                (CollectionFunction.IsExistInArrayBool(explanationStringArray, explanationCurrentString) == true)&&
+                (CollectionFunction.IsExistInArrayBool(explanationStringArray, explanationCurrentString) == true) &&
                 (loopCounter1Int < exhibitionCurrentObject.GetExplanationStringArray().length)
             ){
                 indexRandomInt = indexIntArray[Math.round(Math.random()*(indexIntArray.length - 1))];
@@ -154,6 +157,7 @@ class ObjectVisitor{
                 loopCounter1Int ++;
             }
             explanationStringArray.push(explanationCurrentString);
+
             visitedCorrectExhibitionBool = false;
             loopCounter1Int = 0;
             while(loopCounter1Int < exhibitionTargetObjectArray.length){
@@ -162,6 +166,13 @@ class ObjectVisitor{
             }
             if(visitedCorrectExhibitionBool == true ){ scoreInt ++; }
             else if(visitedCorrectExhibitionBool == false){ scoreInt --; }
+
+            var threeSentenceString:String = generatorSentenceObject.GenerateSentence3String(collectionGlobalObject);
+            if(exhibitionVisitedObjectArray.length > 1){
+                sentenceStringArray.push(threeSentenceString);
+            }
+
+
             roomCurrentObject = exhibitionCurrentObject.GetParentObject();
             floorCurrentObject = roomCurrentObject.GetParentObject();
             floorCurrentObject.SetVisitorCurrentIntVoid(roomCurrentObject.GetVisitorCurrentInt() + 1);
@@ -169,15 +180,13 @@ class ObjectVisitor{
             roomCurrentObject.SetVisitorCurrentIntVoid(floorCurrentObject.GetVisitorCurrentInt() + 1);
             roomCurrentObject.SetVisitorTotalIntVoid(floorCurrentObject.GetVisitorTotalInt() + 1);
 
-            var threeSentenceString:String = generatorSentenceObject.GenerateSentence3String(collectionGlobalObject);
+            
 
             UpdateHeavyVoid();
 
-            if(exhibitionVisitedObjectArray.length > 1){
-                sentenceStringArray.push(threeSentenceString);
-            }
+
             if(exhibitionVisitedObjectArray.length >= collectionGlobalObject.GetExhibitionObjectArray().length){ finishedBool = true; }
-            timeExhibitionInt = 0;
+            //timeExhibitionInt = 0;
         }
     }
     private function SortTagCounterVoid(){ tagCounterStructArray.sort(function(_a:StructTagCounter, _b:StructTagCounter){ return _b.tagCounterInt - _a.tagCounterInt; }); }
