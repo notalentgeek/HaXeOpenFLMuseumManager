@@ -222,7 +222,7 @@ class ObjectVisitor{
         loopCounter1Int = 0;
         while(loopCounter1Int < exhibitionTargetObjectArray.length){
             if(exhibitionTargetObjectArray[loopCounter1Int].GetMuseumModeEnum() == MRK_DEL){
-                exhibitionTargetObjectArray.remove (exhibitionTargetObjectArray[loopCounter1Int]);
+                exhibitionTargetObjectArray.remove(exhibitionTargetObjectArray[loopCounter1Int]);
                 loopCounter1Int --;
             }
             if(exhibitionTargetObjectArray.length <= _targetInt){ return; }
