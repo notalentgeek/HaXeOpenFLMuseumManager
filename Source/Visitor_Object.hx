@@ -133,15 +133,15 @@ class Visitor_Object extends MuseumAndVisitor_Object{
     PENDING: Put this function into super class.*/
     private function AddOrRemoveThisFromParent_Dynamic(
         _add_Bool                                       :Bool,
-        _parentChild_MuseumOrVisitor_Object_Array       :Array<MuseumOrVisitor_Object>,
+        _parentChild_MuseumAndVisitor_Object_Array      :Array<MuseumAndVisitor_Object>,
         _parentChildMuseumOrVisitorName_String_Array    :Array<String>
-    ):MuseumOrVisitor_Object{
+    ):MuseumAndVisitor_Object{
 
         if(_add_Bool == true){
 
             CollectionStaticFunction_Object.SyncPush_T_Array(
                 this,
-                _parentChild_MuseumOrVisitor_Object_Array,
+                _parentChild_MuseumAndVisitor_Object_Array,
                 this._VisitorAgnostic_Object.name_String,
                 _parentChildMuseumOrVisitorName_String_Array
             );
@@ -151,7 +151,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
             CollectionStaticFunction_Object.SyncRemove_T_Array(
                 this,
-                _parentChild_MuseumOrVisitor_Object_Array,
+                _parentChild_MuseumAndVisitor_Object_Array,
                 this._VisitorAgnostic_Object.name_String,
                 _parentChildMuseumOrVisitorName_String_Array
             );
@@ -170,33 +170,122 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
+    /*Function to determine index local.
+    PENDING: Move this function to the super class.*/
+    private function DetermineIndexLocal_MuseumAndVisitor_Object():MuseumAndVisitor_Object{
+
+        if(Std.is(this, Museum_Object)){
+
+            /*For the exhibition and room museum objects.*/
+            if(this._TypeMuseum_Enum != FLOOR){
+
+                this._MuseumAgnostic_Object.indexLocal_Int = 0;
+                while(this._MuseumAgnostic_Object.indexLocal_Int < parent_Museum_Object._Child_Struct.childMuseum_Object_Array.length){
+
+                    if(
+                        this._Name_Struct.nameAlt_String    == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAgnostic_Object.indexLocal_Int]._Name_Struct.nameAlt_String      ||
+                        this._Name_Struct.nameFull_String   == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAgnostic_Object.indexLocal_Int]._Name_Struct.nameFull_String
+                    ){ return this; }
+
+                    this._MuseumAgnostic_Object.indexLocal_Int ++;
+
+                }
+
+            }
+            /*If this is a floor museum object then the local index is the global index.*/
+            else{ this._MuseumAgnostic_Object.indexLocal_Int = this._MuseumAgnostic_Object.indexGlobal_Int; }
+
+        }
+        else if(Std.is(this, Visitor_Object)){
+
+            this._VisitorAgnostic_Object.indexLocal_Int = 0;
+            while(this._VisitorAgnostic_Object.indexLocal_Int < exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array.length){
+
+                if(this.name_String == exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array[this._VisitorAgnostic_Object.indexLocal_Int].name_String)
+                    { return this; }
+
+                this._VisitorAgnostic_Object.indexLocal_Int ++;
+
+            }
+
+        }
+
+
+
+        return this;
+
+    }
+
+
+
+
+
+
+
+
+
+
     /*PENDING: Put this function in the super class.*/
-    private function Reset_MuseumAndVisitor_Object(){
+    private function Reset_MuseumAndVisitor_Object():MuseumAndVisitor_Object{
 
-        _VisitorAgnostic_Object.Reset_MuseumAndVisitor_Object();
+        /*Check wether the current object is a museum or visitor object.*/
+        if(Std.is(this, Museum_Object)){}
+        else if(Std.is(this, Visitor_Object)){
 
-        /*
-        There are this object variables that should not be reset back.
-        The current exhibition, floor, and room is not reset back to the initial value when this
-            function is ran, because the visitor object always need references on museum object.
-        PENDING: Or add another pseudo exhibition called lobby.
-        _CollectionGlobal_Object                = null;
-        _GeneratorSentence_Object               = null;
-        _VisitorAgnostic_Object                 = null;
-        _VisitorAgnostic_Object                 = null;
-        exhibitionCurrent_Museum_Object         = null;
-        floorCurrent_Museum_Object              = null;
-        roomCurrent_Museum_Object               = null;
-        */
+            this._VisitorAgnostic_Object.Reset_MuseumAndVisitor_Object();
 
-        _VisitorMode_Enum                       = SOFTWARE_AUTO;
+            /*
+            There are this object variables that should not be reset back.
+            The current exhibition, floor, and room is not reset back to the initial value when this
+                function is ran, because the visitor object always need references on museum object.
+            PENDING: Or add another pseudo exhibition called lobby.
+            _CollectionGlobal_Object                    = null;
+            _GeneratorSentence_Object                   = null;
+            _VisitorAgnostic_Object                     = null;
+            _VisitorAgnostic_Object                     = null;
+            exhibitionCurrent_Museum_Object             = null;
+            floorCurrent_Museum_Object                  = null;
+            roomCurrent_Museum_Object                   = null;
+            */
 
-        _Tag_Object_Array                       = CollectionStaticFunction_Object.Clear_T_Array(_Tag_Object_Array);
-        _TagCounter_Struct_Array                = CollectionStaticFunction_Object.Clear_T_Array(_TagCounter_Struct_Array);
-        _VisitorVisitExhibition_Struct_Array    = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitExhibition_Struct_Array);
-        _VisitorVisitMuseum_Struct_Array        = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitMuseum_Struct_Array);
-        exhibitionTarget_Museum_Object_Array    = CollectionStaticFunction_Object.Clear_T_Array(exhibitionTarget_Museum_Object_Array);
-        exhibitionVisited_Museum_Object_Array   = CollectionStaticFunction_Object.Clear_T_Array(exhibitionVisited_Museum_Object_Array);
+            this._VisitorMode_Enum                      = SOFTWARE_AUTO;
+
+            this._Tag_Object_Array                      = CollectionStaticFunction_Object.Clear_T_Array(_Tag_Object_Array);
+            this._TagCounter_Struct_Array               = CollectionStaticFunction_Object.Clear_T_Array(_TagCounter_Struct_Array);
+            this._VisitorVisitExhibition_Struct_Array   = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitExhibition_Struct_Array);
+            this._VisitorVisitMuseum_Struct_Array       = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitMuseum_Struct_Array);
+            this.exhibitionTarget_Museum_Object_Array   = CollectionStaticFunction_Object.Clear_T_Array(exhibitionTarget_Museum_Object_Array);
+            this.exhibitionVisited_Museum_Object_Array  = CollectionStaticFunction_Object.Clear_T_Array(exhibitionVisited_Museum_Object_Array);
+
+        }
+
+        return this;
+
+    }
+
+
+
+
+
+
+
+
+
+
+    /*An update function for both museum and visitor object.
+    PENDING: Put this function in super class.*/
+    private function Update_MuseumAndVisitor_Object(){
+
+        /*Check wether the current object is a museum or visitor object.*/
+        if(Std.is(this, Museum_Object)){}
+        else if(Std.is(this, Visitor_Object)){
+
+            if(
+                this._VisitorAgnostic_Object.finished_Bool  == false
+                this._VisitorMode_Enum                      == SOFTWARE_AUTO &&
+            ){ this.AI_Visitor_Object(); }
+
+        }
 
         return this;
 
@@ -240,6 +329,52 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         /*Determine exhibition full threshild for everytime there is a new visitor goes to museum.*/
         _CollectionGlobal_Object.DetermineExhibitionFullThreshold_Void();
         GenerateExhibitionTarget_Void();
+
+    }
+
+
+
+
+
+
+
+
+
+
+    /*Simple artificial intelligent function to control this visitor object.*/
+    private function AI_Visitor_Object():Visitor_Object{
+
+        /*I need to make sure that this visitor is not yet finished this current museum visit.*/
+        if(_VisitorAgnostic_Object.finished_Bool == false){
+
+            /*Generate random chance of this visitor moving into new exhibition.*/
+            var randomMoveChance_Float:Float = Math.random();
+            /*For everytime this visitor is not changing exhibition, the next chance of this
+                visitor would or would not change exhibition will increase.*/
+            _VisitorAgnostic_Object.aiNextChanceChangeExhibition_Float += 0.01;
+
+
+
+            /*This if statement is to determine whether this visitor will move into new exhibition
+                or not.*/
+            if(randomMoveChance_Float > (1.0 - _VisitorAgnostic_Object.aiNextChanceChangeExhibition_Float)){
+
+                /*Get random index from the target exhibition object array.*/
+                var randomExhibitionTargetIndex_Int:Int =
+                    Math.round(Math.random()*(exhibitionTarget_Museum_Object_Array.length - 1));
+                /*Then change into random target exhibition.*/
+                exhibitionCurrent_Museum_Object = exhibitionTarget_Museum_Object_Array[randomExhibitionTargetIndex_Int];
+                
+                /*Set the random counter back to 0.*/
+                _VisitorAgnostic_Object.aiNextChanceChangeExhibition_Float = 0;
+
+            }
+
+        }
+
+
+
+        return this;
 
     }
 
@@ -479,6 +614,10 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
         if(exhibitionVisited_Museum_Object_Array.length >= _CollectionGlobal_Object.exhibition_Museum_Object_Array.length)
             { _VisitorAgnostic_Object.finished_Bool = true; }
+
+
+
+        return this;
 
     }
 
@@ -1251,9 +1390,12 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
+    /*Setter function to set new current exhibition.
+    If this function ran means that this visitor is arrived in the new exhibition.
+    PENDING: Create calculation to calculate user interface layout.
+    PENDING: For that I need to check the necessary height and necessary width variable in the old
+        ObjectVisitor.hx.*/
     private function set_exhibitionCurrent_Museum_Object(__Museum_Object:Museum_Object):Museum_Object{
-
-        
 
         /*If the exhibition current is the archive exhibition then...*/
         if(
@@ -1267,9 +1409,11 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             _CollectionGlobal_Object._Visitor_Object_Array.remove(this);
 
             /*Before I change the current exhibition, I need to remove this visitor from the child array
-                of the parent object (exhibition object) and then reduce the amount of current visitor
-                from the previous exhibition by one.
-            Because this visitor just leave the exhibition into the new exhibition.*/
+                of the parent object (exhibition object).
+            Then reduce the amount of current visitor from the previous exhibition by one.
+            After that I need to calculate whether the exhibition, room, and floor is crowded or not.
+            And re - calculate its children local index for the exhibition object.
+            This visitor just leave the exhibition into the new exhibition.*/
             if(exhibitionCurrent_Museum_Object != null){
 
                 AddOrRemoveThisFromParent_Dynamic(
@@ -1278,8 +1422,21 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                 );
 
                 exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  --;
-                floorCurrent_Museum_Object._VisitorCounter.visitorCurrent       --;
-                roomCurrent_Museum_Object._VisitorCounter.visitorCurrent        --;
+                exhibitionCurrent_Museum_Object
+                    .DetermineChild_Museum_Object()
+                    .DetermineFull_Museum_Object();
+
+                if(
+                    floorCurrent_Museum_Object  != null &&
+                    roomCurrent_Museum_Object   != null
+                ){
+
+                    floorCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
+                    floorCurrent_Museum_Object.DetermineFull_Museum_Object();
+                    roomCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
+                    roomCurrent_Museum_Object.DetermineFull_Museum_Object();
+
+                }
 
             }
 
@@ -1297,17 +1454,39 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                 exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array
             );
 
-            /*Update most objects within this program.
-            The things that I update is museum object, like exhibition, floor, and room object,
-                and the visitor object.
-            At this moment I have not yet found a reason on why the tag object should be also in
-                UpdateAll_Visitor_Object() function.
-            PENDING: I think this function is very heavy and take so much processing poIr.
-            PENDING: What I need to is to just update the necessary part.
-            PENDING: Or I could just incorporate the UpdateAll_Visitor_Object() function into
-                each objects.*/
-            UpdateAll_MuseumAndVisitor_Object();
+            /*Add one integer in current visitor and total visitor of the corresponding museum
+                object.*/
+            exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  ++;
+            exhibitionCurrent_Museum_Object._VisitorCounter.visitorTotal    ++;
 
+            /*Determine whether the current museum object is full or not.
+            And then calculate children local index for each visitor object.*/
+            exhibitionCurrent_Museum_Object
+                .DetermineChild_Museum_Object()
+
+            /*When a visitor change into archive exhibition there are only these two functions
+                that is need to be ran.
+            Determine index local.*/
+            var loopCounter1_Int:Int = 0;
+            while(loopCounter1_Int < exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array.length){
+
+                exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array[loopCounter1_Int].DetermineIndexLocal_MuseumAndVisitor_Object();
+
+                loopCounter1_Int ++;
+
+            }
+            /*Generate exhibition target array.*/
+            loopCounter1_Int = 0;
+            while(loopCounter1_Int < _CollectionGlobal_Object._Visitor_Object_Array.length){
+
+                _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int].
+                    GenerateExhibitionTarget_Visitor_Object(
+                        _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int]._VisitorAgnostic_Object.amountOfTargetExhibition_Int
+                    );
+
+                loopCounter1_Int ++;
+
+            }
         }
         /*If the visited exhibition is other than archive exhibition.*/
         else{
@@ -1323,9 +1502,11 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             }
 
             /*Before I change the current exhibition, I need to remove this visitor from the child array
-                of the parent object (exhibition object) and then reduce the amount of current visitor
-                from the previous exhibition by one.
-            Because this visitor just leave the exhibition into the new exhibition.*/
+                of the parent object (exhibition object).
+            Then reduce the amount of current visitor from the previous exhibition by one.
+            After that I need to calculate whether the exhibition, room, and floor is crowded or not.
+            And re - calculate its children local index for the exhibition object.
+            This visitor just leave the exhibition into the new exhibition.*/
             if(exhibitionCurrent_Museum_Object != null){
 
                 AddOrRemoveThisFromParent_Dynamic(
@@ -1334,8 +1515,21 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                 );
 
                 exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  --;
-                floorCurrent_Museum_Object._VisitorCounter.visitorCurrent       --;
-                roomCurrent_Museum_Object._VisitorCounter.visitorCurrent        --;
+                exhibitionCurrent_Museum_Object
+                    .DetermineChild_Museum_Object()
+                    .DetermineFull_Museum_Object();
+
+                if(
+                    floorCurrent_Museum_Object  != null &&
+                    roomCurrent_Museum_Object   != null
+                ){
+
+                    floorCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
+                    floorCurrent_Museum_Object.DetermineFull_Museum_Object();
+                    roomCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
+                    roomCurrent_Museum_Object.DetermineFull_Museum_Object();
+
+                }
 
             }
 
@@ -1360,6 +1554,14 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             roomCurrent_Museum_Object._VisitorCounter.visitorCurrent        ++;
             roomCurrent_Museum_Object._VisitorCounter.visitorTotal          ++;
 
+            /*Determine whether the current museum object is full or not.
+            And then calculate children local index for each visitor object.*/
+            exhibitionCurrent_Museum_Object
+                .DetermineChild_Museum_Object()
+                .DetermineFull_Museum_Object();
+            floorCurrent_Museum_Object.DetermineFull_Museum_Object();
+            roomCurrent_Museum_Object.DetermineFull_Museum_Object();
+
             /*Put the newly visited exhibition into the array of visited exhibition.
             And sync it with the agnostic object.*/
             CollectionStaticFunction_Object.SyncPush_T_Array(
@@ -1374,21 +1576,29 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             CalculateTagCounter_Visitor_Object
                 (_VisitorAgnostic_Object.amountOfPreviousVisitedExhibition_Int).
             DetermineFinished_Visitor_Object().
-            GenerateExhibitionTarget_Visitor_Object
-                (_VisitorAgnostic_Object.amountOfTargetExhibition_Int).
             GenerateSentence_Visitor_Object().
             RetrieveExplanation_Visitor_Object();
+            /*Determine index local.*/
+            var loopCounter1_Int:Int = 0;
+            while(loopCounter1_Int < exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array.length){
 
-            /*Update most objects within this program.
-            The things that I update is museum object, like exhibition, floor, and room object,
-                and the visitor object.
-            At this moment I have not yet found a reason on why the tag object should be also in
-                UpdateAll_Visitor_Object() function.
-            PENDING: I think this function is very heavy and take so much processing poIr.
-            PENDING: What I need to is to just update the necessary part.
-            PENDING: Or I could just incorporate the UpdateAll_Visitor_Object() function into
-                each objects.*/
-            UpdateAll_MuseumAndVisitor_Object();
+                exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array[loopCounter1_Int].DetermineIndexLocal_MuseumAndVisitor_Object();
+
+                loopCounter1_Int ++;
+
+            }
+            /*Generate exhibition target array.*/
+            loopCounter1_Int = 0;
+            while(loopCounter1_Int < _CollectionGlobal_Object._Visitor_Object_Array.length){
+
+                _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int].
+                    GenerateExhibitionTarget_Visitor_Object(
+                        _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int]._VisitorAgnostic_Object.amountOfTargetExhibition_Int
+                    );
+
+                loopCounter1_Int ++;
+
+            }
 
         }
 
@@ -1504,6 +1714,11 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         return this;
 
     }
+
+
+
+
+
 
 
 

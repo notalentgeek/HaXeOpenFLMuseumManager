@@ -4,6 +4,7 @@ class VisitorAgnostic_Object extends MuseumAndVisitorAgnostic_Object{
 
 
 
+    private var aiNextChanceChangeExhibition_Float                              (null, null)        :Float          = -1.0;
     private var amountOfPreviousVisitedExhibition_Int                           (null, null)        :Int            = -1;
     private var amountTargetExhibition_Int                                      (null, null)        :Int            = -1;
     private var explanationCurrent_String                                       (null, null)        :String         = "";
@@ -14,7 +15,6 @@ class VisitorAgnostic_Object extends MuseumAndVisitorAgnostic_Object{
     private var name_String                                                     (null, null)        :String         = "";
     private var score_Int                                                       (null, null)        :Int            = -1;
     private var sentenceCurrent_String                                          (null, null)        :String         = "";
-    private var timeAIAutoExhibitionChange_Float                                (null, null)        :Float          = -1.0;
     private var timeCurrentExhibition_Int                                       (null, null)        :Int            = -1;
     private var timeCurrentMuseumVisit_Int                                      (null, null)        :Int            = -1;
     private var visitedCorrectExhibition_Bool                                   (null, null)        :Bool           = null;
