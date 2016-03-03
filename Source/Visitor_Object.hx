@@ -9,24 +9,25 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
-    private var _VisitorAgnostic_Object                 (null, null)        :VisitorAgnostic_Object             = null;
+    private var _VisitorAgnostic_Object                 (null, null)        :VisitorAgnostic_Object                 = null;
 
 
 
-    private var _CollectionGlobal_Object                (null, null)        :CollectionGlobal_Object            = null;
-    private var _GeneratorSentence_Object               (null, null)        :GeneratorSentence_Object           = null;
-    private var _VisitorMode_Enum                       (null, set)         :VisitorMode_Enum                   = null;
-    private var exhibitionCurrent_Museum_Object         (null, set)         :Museum_Object                      = null;
-    private var floorCurrent_Museum_Object              (null, null)        :Museum_Object                      = null;
-    private var roomCurrent_Museum_Object               (null, null)        :Museum_Object                      = null;
+    private var _CollectionGlobal_Object                (null, null)        :CollectionGlobal_Object                = null;
+    private var _GeneratorSentence_Object               (null, null)        :GeneratorSentence_Object               = null;
+    private var _VisitorMode_Enum                       (null, set)         :VisitorMode_Enum                       = null;
+    private var exhibitionCurrent_Museum_Object         (null, set)         :Museum_Object                          = null;
+    private var floorCurrent_Museum_Object              (null, null)        :Museum_Object                          = null;
+    private var roomCurrent_Museum_Object               (null, null)        :Museum_Object                          = null;
 
 
 
-    private var _Tag_Object_Array                       (null, set)         :Array<Tag_Object>                  = new Array<Tag_Object>(); /*PENDING: Put in super class.*/
-    private var _TagCounter_Struct_Array                (null, set)         :Array<TagCounter_Struct>           = new Array<TagCounter_Struct>();
-    private var _VisitorVisitMuseum_Struct_Array        (null, null)        :Array<VisitorVisitMuseum_Struct>   = new Array<VisitorVisitMuseum_Struct>();
-    private var exhibitionTarget_Museum_Object_Array    (null, set)         :Array<Museum_Object>               = new Array<Museum_Object>();
-    private var exhibitionVisited_Museum_Object_Array   (null, set)         :Array<Museum_Object>               = new Array<Museum_Object>();
+    private var _Tag_Object_Array                       (null, set)         :Array<Tag_Object>                      = new Array<Tag_Object>();                      /*PENDING: Put in super class.*/
+    private var _TagCounter_Struct_Array                (null, set)         :Array<TagCounter_Struct>               = new Array<TagCounter_Struct>();
+    private var _VisitorVisitMuseum_Struct_Array        (null, set)         :Array<VisitorVisitMuseum_Struct>       = new Array<VisitorVisitMuseum_Struct>();
+    private var _VisitorVisitExhibition_Struct_Array    (null, set)         :Array<VisitorVisitExhibition_Struct>   = new Array<VisitorVisitExhibition_Struct>();
+    private var exhibitionTarget_Museum_Object_Array    (null, set)         :Array<Museum_Object>                   = new Array<Museum_Object>();
+    private var exhibitionVisited_Museum_Object_Array   (null, set)         :Array<Museum_Object>                   = new Array<Museum_Object>();
 
 
 
@@ -156,6 +157,47 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             );
 
         }
+        return this;
+
+    }
+
+
+
+
+
+
+
+
+
+
+    /*PENDING: Put this function in the super class.*/
+    private function Reset_MuseumAndVisitor_Object(){
+
+        _VisitorAgnostic_Object.Reset_MuseumAndVisitor_Object();
+
+        /*
+        There are this object variables that should not be reset back.
+        The current exhibition, floor, and room is not reset back to the initial value when this
+            function is ran, because the visitor object always need references on museum object.
+        PENDING: Or add another pseudo exhibition called lobby.
+        _CollectionGlobal_Object                = null;
+        _GeneratorSentence_Object               = null;
+        _VisitorAgnostic_Object                 = null;
+        _VisitorAgnostic_Object                 = null;
+        exhibitionCurrent_Museum_Object         = null;
+        floorCurrent_Museum_Object              = null;
+        roomCurrent_Museum_Object               = null;
+        */
+
+        _VisitorMode_Enum                       = SOFTWARE_AUTO;
+
+        _Tag_Object_Array                       = CollectionStaticFunction_Object.Clear_T_Array(_Tag_Object_Array);
+        _TagCounter_Struct_Array                = CollectionStaticFunction_Object.Clear_T_Array(_TagCounter_Struct_Array);
+        _VisitorVisitExhibition_Struct_Array    = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitExhibition_Struct_Array);
+        _VisitorVisitMuseum_Struct_Array        = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitMuseum_Struct_Array);
+        exhibitionTarget_Museum_Object_Array    = CollectionStaticFunction_Object.Clear_T_Array(exhibitionTarget_Museum_Object_Array);
+        exhibitionVisited_Museum_Object_Array   = CollectionStaticFunction_Object.Clear_T_Array(exhibitionVisited_Museum_Object_Array);
+
         return this;
 
     }
@@ -508,7 +550,79 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
-        /*Sort level 2.
+        /*Sort exhibition target level 2.
+        In this level I need to remove all exhibitions that is marked for deletion.*/
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < exhibitionTarget_Museum_Object_Array.length){
+
+            if(exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Museum_Mode_Enum == MRK_DEL){
+
+                CollectionStaticFunction_Object.SyncRemove_T_Array(
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
+                    exhibitionTarget_Museum_Object_Array,
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                    _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                );
+
+
+
+                /*This if statement below is to make sure that the tarhet exhibitions should always be
+                    three.*/
+                if(exhibitionTarget_Museum_Object_Array.length <= _amountOfTargetExhibition_Int)
+                    { return this; }
+
+
+
+                loopCounter1_Int --;
+
+            }
+
+
+
+            loopCounter1_Int ++;
+
+        }
+
+
+
+
+
+        /*This is sort level 3.
+        In this level I remove all exhibitions that is crowded.*/
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < exhibitionTarget_Museum_Object_Array.length){
+
+            if(exhibitionTarget_Museum_Object_Array[loopCounter1_Int].full_Bool == true){
+
+                CollectionStaticFunction_Object.SyncRemove_T_Array(
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
+                    exhibitionTarget_Museum_Object_Array,
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                    _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                );
+
+
+
+                if(exhibitionTarget_Museum_Object_Array.length <= _amountOfTargetExhibition_Int)
+                    { return this; }
+
+
+
+                loopCounter1_Int --;
+                
+            }
+
+
+
+            loopCounter1_Int ++;
+
+        }
+
+
+
+
+
+        /*Sort level 4.
         In this sort I give chance for every exhibitions that have been visited to be visited again.
         For example if exhibition number one has been visited by this visitor it has 10% chance to
             be still listed as a target exhibition.*/
@@ -573,181 +687,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
-        /*Sort exhibition target level 3.
-        In this level I need to remove all exhibitions that is marked for deletion.*/
-        loopCounter1_Int = 0;
-        while(loopCounter1_Int < exhibitionTarget_Museum_Object_Array.length){
-
-            if(exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Museum_Mode_Enum == MRK_DEL){
-
-                CollectionStaticFunction_Object.SyncRemove_T_Array(
-                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
-                    exhibitionTarget_Museum_Object_Array,
-                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                    _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
-                );
-
-
-
-                /*This if statement below is to make sure that the tarhet exhibitions should always be
-                    three.*/
-                if(exhibitionTarget_Museum_Object_Array.length <= _amountOfTargetExhibition_Int)
-                    { return this; }
-
-
-
-                loopCounter1_Int --;
-
-            }
-
-
-
-            loopCounter1_Int ++;
-
-        }
-
-
-
-
-
-        /*This is sort level 4.
-        In this level I remove all exhibitions that is crowded.*/
-        loopCounter1_Int = 0;
-        while(loopCounter1_Int < exhibitionTarget_Museum_Object_Array.length){
-
-            if(exhibitionTarget_Museum_Object_Array[loopCounter1_Int].full_Bool == true){
-
-                CollectionStaticFunction_Object.SyncRemove_T_Array(
-                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
-                    exhibitionTarget_Museum_Object_Array,
-                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                    _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
-                );
-
-
-
-                if(exhibitionTarget_Museum_Object_Array.length <= _amountOfTargetExhibition_Int)
-                    { return this; }
-
-
-
-                loopCounter1_Int --;
-                
-            }
-
-
-
-            loopCounter1_Int ++;
-
-        }
-
-
-
-
-
-        /*Sort level 5.
-        In this level 5 sort I need to make sure that the target exhibitions has atleast some
-            of this visitor preferences.
-        CAUTION: This is quite complicated. So I create a simple scoring system.
-        CAUTION: The scoring system calculates every tags that is inputed from the possible
-            exhibition targets.
-        CAUTION: If a tag received has a small index in this visitor tag counter array. Then the exhibition
-            that has that tag get bigger score.
-        CAUTION: Small index in tag counter array mean that tag has the highest preference from this
-            visitor, hence this program gives bigger value.
-        First I need to iterate through the exhibition target object array.*/
-        loopCounter1_Int = 0;
-        while(loopCounter1_Int < exhibitionTarget_Museum_Object_Array.length){
-
-            /*The score gathered from current iteration of target exhibition.*/
-            var scoreReference_Int              :Int    = 0;
-            /*The variable below is for calculating the possible maximum score from a target exhibition.
-            CAUTION: The formula is the adding factorial (I do not know the name, but it is like factorization
-                but instead of multiplication it uses addition see this
-                http://math.stackexchange.com/questions/593318/factorial-but-with-addition/593320)
-            PENDING: This is not ideal number. I hope I can fix more specifically on this level of sort.*/
-            var scoreReferenceTotal_Int         :Int    =
-                Std.int(
-                    (Math.pow(_TagCounter_Struct_Array.length, 2) + _TagCounter_Struct_Array.length)/2
-                );
-
-            /*Then I need to iterate to target exhibition tag object array.*/
-            var loopCounter2_Int                :Int    = 0;
-            while(loopCounter2_Int < exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Tag_Object_Array.length){
-
-
-                /*Then I need to iterate through THIS visitor tag counter.
-                CAUTION: Remember! Tag counter array contain preference of this visitor.
-                CAUTION: Still with me? So the first iteration is to iterate the possible target exhibition.
-                CAUTION: The second iteration is for iterating the target exhibition tag.
-                CAUTION: The latest iteration is for iterating THIS visitor tag counter.*/
-                var loopCounter3_Int:Int = 0;
-                while(loopCounter3_Int < _TagCounter_Struct_Array.length){
-
-                    if(exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Tag_Object_Array[loopCounter2_Int].name_String == _TagCounter_Struct_Array[loopCounter3_Int]._Tag_Object.name_String){
-
-                        /*
-                        var chanceToStayAsTargetExhibition_Float:Float =
-                            ((_TagCounter_Struct_Array.length - loopCounter3_Int)/_TagCounter_Struct_Array.length) - 0.05;
-                        if(chanceToStayAsTargetExhibition_Float <= 0.05){ chanceToStayAsTargetExhibition_Float = 0.05; }
-                        if(Math.random() > chanceToStayAsTargetExhibition_Float){}
-                        */
-
-                        scoreReference_Int = scoreReference_Int + (_TagCounter_Struct_Array.length - loopCounter3_Int);
-
-                    }
-
-
-
-                    loopCounter3_Int ++;
-
-                }
-
-
-
-                loopCounter2_Int ++;
-
-            }
-
-
-
-            /*If the score if half from the possible maximum score the currently inpected target
-                exhibition has 70% chance of being removed from exhibition target array.*/
-            if((scoreReference_Int/scoreReferenceTotal_Int) <= 0.5){
-
-                if(Math.random() > 0.3){
-
-                    CollectionStaticFunction_Object.SyncRemove_T_Array(
-                        exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
-                        exhibitionTarget_Museum_Object_Array,
-                        exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                        _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
-                    );
-
-
-
-                    if(exhibitionTarget_Museum_Object_Array.length <= _amountOfTargetExhibition_Int)
-                        { return this; }
-
-
-
-                    loopCounter1_Int --;
-
-                }
-
-            }
-
-
-
-            loopCounter1_Int ++;
-
-        }
-
-
-
-
-
-        /*Sort level 6 the latest sort.
+        /*Sort level 5 the latest sort.
         Here I sort the exhibition target based on whether the target exhibition is in the same room
             or in the same floor with the current exhibition that the visitor visit.*/
         loopCounter1_Int = 0;
@@ -854,6 +794,108 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
         }
 
+
+
+
+
+
+        /*Sort level 6.
+        In this level 6 sort I need to make sure that the target exhibitions has atleast some
+            of this visitor preferences.
+        CAUTION: This is quite complicated. So I create a simple scoring system.
+        CAUTION: The scoring system calculates every tags that is inputed from the possible
+            exhibition targets.
+        CAUTION: If a tag received has a small index in this visitor tag counter array. Then the exhibition
+            that has that tag get bigger score.
+        CAUTION: Small index in tag counter array mean that tag has the highest preference from this
+            visitor, hence this program gives bigger value.
+        First I need to iterate through the exhibition target object array.*/
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < exhibitionTarget_Museum_Object_Array.length){
+
+            /*The score gathered from current iteration of target exhibition.*/
+            var scoreReference_Int              :Int    = 0;
+            /*The variable below is for calculating the possible maximum score from a target exhibition.
+            CAUTION: The formula is the adding factorial (I do not know the name, but it is like factorization
+                but instead of multiplication it uses addition see this
+                http://math.stackexchange.com/questions/593318/factorial-but-with-addition/593320)
+            PENDING: This is not ideal number. I hope I can fix more specifically on this level of sort.*/
+            var scoreReferenceTotal_Int         :Int    =
+                Std.int(
+                    (Math.pow(_TagCounter_Struct_Array.length, 2) + _TagCounter_Struct_Array.length)/2
+                );
+
+            /*Then I need to iterate to target exhibition tag object array.*/
+            var loopCounter2_Int                :Int    = 0;
+            while(loopCounter2_Int < exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Tag_Object_Array.length){
+
+
+                /*Then I need to iterate through THIS visitor tag counter.
+                CAUTION: Remember! Tag counter array contain preference of this visitor.
+                CAUTION: Still with me? So the first iteration is to iterate the possible target exhibition.
+                CAUTION: The second iteration is for iterating the target exhibition tag.
+                CAUTION: The latest iteration is for iterating THIS visitor tag counter.*/
+                var loopCounter3_Int:Int = 0;
+                while(loopCounter3_Int < _TagCounter_Struct_Array.length){
+
+                    if(exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Tag_Object_Array[loopCounter2_Int].name_String == _TagCounter_Struct_Array[loopCounter3_Int]._Tag_Object.name_String){
+
+                        /*
+                        var chanceToStayAsTargetExhibition_Float:Float =
+                            ((_TagCounter_Struct_Array.length - loopCounter3_Int)/_TagCounter_Struct_Array.length) - 0.05;
+                        if(chanceToStayAsTargetExhibition_Float <= 0.05){ chanceToStayAsTargetExhibition_Float = 0.05; }
+                        if(Math.random() > chanceToStayAsTargetExhibition_Float){}
+                        */
+
+                        scoreReference_Int = scoreReference_Int + (_TagCounter_Struct_Array.length - loopCounter3_Int);
+
+                    }
+
+
+
+                    loopCounter3_Int ++;
+
+                }
+
+
+
+                loopCounter2_Int ++;
+
+            }
+
+
+
+            /*If the score if half from the possible maximum score the currently inpected target
+                exhibition has 70% chance of being removed from exhibition target array.*/
+            if((scoreReference_Int/scoreReferenceTotal_Int) <= 0.5){
+
+                if(Math.random() > 0.3){
+
+                    CollectionStaticFunction_Object.SyncRemove_T_Array(
+                        exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
+                        exhibitionTarget_Museum_Object_Array,
+                        exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                        _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                    );
+
+
+
+                    if(exhibitionTarget_Museum_Object_Array.length <= _amountOfTargetExhibition_Int)
+                        { return this; }
+
+
+
+                    loopCounter1_Int --;
+
+                }
+
+            }
+
+
+
+            loopCounter1_Int ++;
+
+        }
 
 
 
@@ -1099,6 +1141,104 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         _VisitorMode_Enum = __VisitorMode_Enum;
         _VisitorAgnostic_Object.visitorMode_String = Std.string(_VisitorMode_Enum);
         return _VisitorMode_Enum;
+
+    }
+
+
+
+
+
+
+
+
+
+
+    private function set__VisitorVisitExhibition_Struct_Array(
+        __VisitorVisitExhibition_Struct_Array:Array<VisitorVisitExhibition_Struct>
+    ):Array<VisitorVisitExhibition_Struct>{
+
+        _VisitorVisitExhibition_Struct_Array = __VisitorVisitExhibition_Struct_Array;
+
+        _VisitorAgnostic_Object.visitorVisitExhibitionNameAlt_String_Array =
+            CollectionStaticFunction_Object.Clear_T_Array(
+                _VisitorAgnostic_Object.visitorVisitExhibitionNameAlt_String_Array
+            );
+
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < _VisitorVisitExhibition_Struct_Array.length){
+
+            _VisitorAgnostic_Object.visitorVisitExhibitionNameAlt_String_Array.push(
+                _VisitorVisitExhibition_Struct_Array[loopCounter1_Int].exhibition_Museum_Object._Name_Struct.nameAlt_String
+            );
+            loopCounter1_Int ++;
+
+        }
+
+        _VisitorAgnostic_Object.visitorVisitExhibitionTime_Int_Array =
+            CollectionStaticFunction_Object.Clear_T_Array(
+                _VisitorAgnostic_Object.visitorVisitExhibitionTime_Int_Array
+            );
+
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < _VisitorVisitExhibition_Struct_Array.length){
+
+            _VisitorAgnostic_Object.visitorVisitExhibitionTime_Int_Array.push(
+                _VisitorVisitExhibition_Struct_Array[loopCounter1_Int].time_Int
+            );
+            loopCounter1_Int ++;
+
+        }
+
+        return _VisitorVisitExhibition_Struct_Array
+
+    }
+
+
+
+
+
+
+
+
+
+
+    private function set__VisitorVisitMuseum_Struct_Array(
+        __VisitorVisitMuseum_Struct_Array:Array<VisitorVisitMuseum_Struct>
+    ):Array<VisitorVisitMuseum_Struct>{
+
+        _VisitorVisitMuseum_Struct_Array = __VisitorVisitMuseum_Struct_Array;
+
+        _VisitorAgnostic_Object.visitorVisitMuseumTime_Int_Array =
+            CollectionStaticFunction_Object.Clear_T_Array(
+                _VisitorAgnostic_Object.visitorVisitMuseumTime_Int_Array
+            );
+
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < _VisitorVisitMuseum_Struct_Array.length){
+
+            _VisitorAgnostic_Object.visitorVisitMuseumTime_Int_Array.push(
+                _VisitorVisitMuseum_Struct_Array[loopCounter1_Int].time_Int
+            );
+            loopCounter1_Int ++;
+
+        }
+
+        _VisitorAgnostic_Object.visitorVisitMuseumVisit_Int_Array =
+            CollectionStaticFunction_Object.Clear_T_Array(
+                _VisitorAgnostic_Object.visitorVisitMuseumVisit_Int_Array
+            );
+
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < _VisitorVisitMuseum_Struct_Array.length){
+
+            _VisitorAgnostic_Object.visitorVisitMuseumVisit_Int_Array.push(
+                _VisitorVisitMuseum_Struct_Array[loopCounter1_Int].visit_Int
+            );
+            loopCounter1_Int ++;
+
+        }
+
+        return _VisitorVisitMuseum_Struct_Array
 
     }
 
