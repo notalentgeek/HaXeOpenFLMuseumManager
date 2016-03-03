@@ -129,9 +129,59 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
+/*Function to remove this object from main object array.
+PENDING: Please put this function into super class.*/
+private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool){
+    
+    /*Create temporary array.*/
+    var main_MuseumAndVisitor_Object_Array:Array<MuseumAndVisitor_Object_Array> = null;
+    /*Assign proper array into the temporary array.*/
+    if(Std.is(this, Museum_Object)){
+
+        if(this._MuseumType_Enum == EXHIBITION)
+            { main_MuseumAndVisitor_Object_Array = this._CollectionGlobal_Object.exhibition_Museum_Object_Array; }
+        else if(this._MuseumType_Enum == FLOOR)
+            { main_MuseumAndVisitor_Object_Array = this._CollectionGlobal_Object.floor_Museum_Object_Array; }
+        else if(this._MuseumType_Enum == ROOM)
+            { main_MuseumAndVisitor_Object_Array = this._CollectionGlobal_Object.room_Museum_Object_Array; }
+
+    }
+    else if(Std.is(this, Visitor_Object))
+        { main_MuseumAndVisitor_Object_Array. = this._CollectionGlobal_Object._Visitor_Object_Array; }
+
+    /*In this function I do not need to push and remove using the sync functions,
+        because the CollectionGlobal_Object does not have an agnotic class.*/
+    if(_add_Bool == true){
+
+        if(main_MuseumAndVisitor_Object_Array.indefOf(this) == -1){
+
+            /*If this object is not in the main visitor array then add it.*/
+            main_MuseumAndVisitor_Object_Array.push(this);
+
+        }
+
+    }
+    else if(_add_Bool == false)
+        { main_MuseumAndVisitor_Object_Array.remove(this); }
+
+
+
+    return this;
+
+}
+
+
+
+
+
+
+
+
+
+
     /*Simple function to either add or remove this object from parent object.
     PENDING: Put this function into super class.*/
-    private function AddOrRemoveThisFromParent_Dynamic(
+    private function AddOrRemoveThisFromParent_MuseumAndVisitor_Object(
         _add_Bool                                       :Bool,
         _parentChild_MuseumAndVisitor_Object_Array      :Array<MuseumAndVisitor_Object>,
         _parentChildMuseumOrVisitorName_String_Array    :Array<String>
@@ -157,6 +207,9 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             );
 
         }
+
+
+
         return this;
 
     }
@@ -177,7 +230,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         if(Std.is(this, Museum_Object)){
 
             /*For the exhibition and room museum objects.*/
-            if(this._TypeMuseum_Enum != FLOOR){
+            if(this._MuseumType_Enum != FLOOR){
 
                 this._MuseumAgnostic_Object.indexLocal_Int = 0;
                 while(this._MuseumAgnostic_Object.indexLocal_Int < parent_Museum_Object._Child_Struct.childMuseum_Object_Array.length){
@@ -863,6 +916,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                             exhibitionTarget_Museum_Object_Array,
                             exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
                             _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                        );
                         
 
 
@@ -914,8 +968,8 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
-                        if(exhibitionTarget_Museum_Object_Array.length <= _amountOfTargetExhibition_Int)
-                            { return this; }
+                        //if(exhibitionTarget_Museum_Object_Array.length <= _amountOfTargetExhibition_Int)
+                        //    { return this; }
 
 
 
@@ -1406,7 +1460,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
             /*If the newly visited exhibition is the exhibition archive then remove this visitor
                 from main visitor array in collection global object.*/
-            _CollectionGlobal_Object._Visitor_Object_Array.remove(this);
+            AddOrRemoveThisFromMain_MuseumAndVisitor_Object(false);
 
             /*Before I change the current exhibition, I need to remove this visitor from the child array
                 of the parent object (exhibition object).
@@ -1414,31 +1468,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             After that I need to calculate whether the exhibition, room, and floor is crowded or not.
             And re - calculate its children local index for the exhibition object.
             This visitor just leave the exhibition into the new exhibition.*/
-            if(exhibitionCurrent_Museum_Object != null){
-
-                AddOrRemoveThisFromParent_Dynamic(
-                    false,
-                    exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array
-                );
-
-                exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  --;
-                exhibitionCurrent_Museum_Object
-                    .DetermineChild_Museum_Object()
-                    .DetermineFull_Museum_Object();
-
-                if(
-                    floorCurrent_Museum_Object  != null &&
-                    roomCurrent_Museum_Object   != null
-                ){
-
-                    floorCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
-                    floorCurrent_Museum_Object.DetermineFull_Museum_Object();
-                    roomCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
-                    roomCurrent_Museum_Object.DetermineFull_Museum_Object();
-
-                }
-
-            }
+            SetupBeforeSetExhibitionCurrent_Visitor_Object();
 
             /*Change the current exhibition into archive exhibition.*/
             exhibitionCurrent_Museum_Object     = __Museum_Object;
@@ -1448,45 +1478,8 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             floorCurrent_Museum_Object          = null;
             roomCurrent_Museum_Object           = null;
 
-            /*Push this visitor in the child object array from the new current exhibition.*/
-            AddOrRemoveThisFromParent_Dynamic(
-                true,
-                exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array
-            );
+            SetupAfterSetExhibitionCurrent_Visitor_Object(true);
 
-            /*Add one integer in current visitor and total visitor of the corresponding museum
-                object.*/
-            exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  ++;
-            exhibitionCurrent_Museum_Object._VisitorCounter.visitorTotal    ++;
-
-            /*Determine whether the current museum object is full or not.
-            And then calculate children local index for each visitor object.*/
-            exhibitionCurrent_Museum_Object
-                .DetermineChild_Museum_Object()
-
-            /*When a visitor change into archive exhibition there are only these two functions
-                that is need to be ran.
-            Determine index local.*/
-            var loopCounter1_Int:Int = 0;
-            while(loopCounter1_Int < exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array.length){
-
-                exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array[loopCounter1_Int].DetermineIndexLocal_MuseumAndVisitor_Object();
-
-                loopCounter1_Int ++;
-
-            }
-            /*Generate exhibition target array.*/
-            loopCounter1_Int = 0;
-            while(loopCounter1_Int < _CollectionGlobal_Object._Visitor_Object_Array.length){
-
-                _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int].
-                    GenerateExhibitionTarget_Visitor_Object(
-                        _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int]._VisitorAgnostic_Object.amountOfTargetExhibition_Int
-                    );
-
-                loopCounter1_Int ++;
-
-            }
         }
         /*If the visited exhibition is other than archive exhibition.*/
         else{
@@ -1494,12 +1487,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             /*Check this visitor whether this this visitor is in the main visitor array or not.
             If not then I need to put this visitor in the main array.
             So I need to check the existence of this object in the visitor main array first.*/
-            if(_CollectionGlobal_Object._Visitor_Object_Array.indefOf(this) == -1){
-
-                /*If this object is not in the main visitor array then add it.*/
-                _CollectionGlobal_Object._Visitor_Object_Array.push(this);
-
-            }
+            AddOrRemoveThisFromMain_MuseumAndVisitor_Object(true);
 
             /*Before I change the current exhibition, I need to remove this visitor from the child array
                 of the parent object (exhibition object).
@@ -1507,98 +1495,15 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             After that I need to calculate whether the exhibition, room, and floor is crowded or not.
             And re - calculate its children local index for the exhibition object.
             This visitor just leave the exhibition into the new exhibition.*/
-            if(exhibitionCurrent_Museum_Object != null){
-
-                AddOrRemoveThisFromParent_Dynamic(
-                    false,
-                    exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array
-                );
-
-                exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  --;
-                exhibitionCurrent_Museum_Object
-                    .DetermineChild_Museum_Object()
-                    .DetermineFull_Museum_Object();
-
-                if(
-                    floorCurrent_Museum_Object  != null &&
-                    roomCurrent_Museum_Object   != null
-                ){
-
-                    floorCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
-                    floorCurrent_Museum_Object.DetermineFull_Museum_Object();
-                    roomCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
-                    roomCurrent_Museum_Object.DetermineFull_Museum_Object();
-
-                }
-
-            }
+            SetupBeforeSetExhibitionCurrent_Visitor_Object();
 
             /*Change the current new exhibition.*/
-            exhibitionCurrent_Museum_Object = __Museum_Object;
+            exhibitionCurrent_Museum_Object     = __Museum_Object;
             /*Assign the current room and floor object accordingly.*/
-            roomCurrent_Museum_Object       = exhibitionCurrent_Museum_Object.parent_Museum_Object;
-            floorCurrent_Museum_Object      = roomCurrent_Museum_Object.parent_Museum_Object;
+            roomCurrent_Museum_Object           = exhibitionCurrent_Museum_Object.parent_Museum_Object;
+            floorCurrent_Museum_Object          = roomCurrent_Museum_Object.parent_Museum_Object;
 
-            /*Push this visitor in the child object array from the new current exhibition.*/
-            AddOrRemoveThisFromParent_Dynamic(
-                true,
-                exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array
-            );
-
-            /*Add one integer in current visitor and total visitor of the corresponding museum
-                object.*/
-            exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  ++;
-            exhibitionCurrent_Museum_Object._VisitorCounter.visitorTotal    ++;
-            floorCurrent_Museum_Object._VisitorCounter.visitorCurrent       ++;
-            floorCurrent_Museum_Object._VisitorCounter.visitorTotal         ++;
-            roomCurrent_Museum_Object._VisitorCounter.visitorCurrent        ++;
-            roomCurrent_Museum_Object._VisitorCounter.visitorTotal          ++;
-
-            /*Determine whether the current museum object is full or not.
-            And then calculate children local index for each visitor object.*/
-            exhibitionCurrent_Museum_Object
-                .DetermineChild_Museum_Object()
-                .DetermineFull_Museum_Object();
-            floorCurrent_Museum_Object.DetermineFull_Museum_Object();
-            roomCurrent_Museum_Object.DetermineFull_Museum_Object();
-
-            /*Put the newly visited exhibition into the array of visited exhibition.
-            And sync it with the agnostic object.*/
-            CollectionStaticFunction_Object.SyncPush_T_Array(
-                exhibitionCurrent_Museum_Object,
-                exhibitionVisited_Museum_Object_Array,
-                exhibitionCurrent_Museum_Object._Name_Struct.nameAlt_String,
-                _VisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array
-            );
-
-            /*Set of functions that need to be executed when this visitor visit a new exhibition.*/
-            CalculateScore_Visitor_Object().
-            CalculateTagCounter_Visitor_Object
-                (_VisitorAgnostic_Object.amountOfPreviousVisitedExhibition_Int).
-            DetermineFinished_Visitor_Object().
-            GenerateSentence_Visitor_Object().
-            RetrieveExplanation_Visitor_Object();
-            /*Determine index local.*/
-            var loopCounter1_Int:Int = 0;
-            while(loopCounter1_Int < exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array.length){
-
-                exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array[loopCounter1_Int].DetermineIndexLocal_MuseumAndVisitor_Object();
-
-                loopCounter1_Int ++;
-
-            }
-            /*Generate exhibition target array.*/
-            loopCounter1_Int = 0;
-            while(loopCounter1_Int < _CollectionGlobal_Object._Visitor_Object_Array.length){
-
-                _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int].
-                    GenerateExhibitionTarget_Visitor_Object(
-                        _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int]._VisitorAgnostic_Object.amountOfTargetExhibition_Int
-                    );
-
-                loopCounter1_Int ++;
-
-            }
+            SetupAfterSetExhibitionCurrent_Visitor_Object(false);
 
         }
 
@@ -1681,6 +1586,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             _VisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array.push(
                 exhibitionVisited_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String
             );
+
             loopCounter1_Int ++;
 
         }
@@ -1688,6 +1594,160 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
         return exhibitionVisited_Museum_Object_Array;
+
+    }
+
+
+
+
+
+
+
+
+
+
+    /*Function that is collection of operations that are neccessary to be done after a visitor
+        arrive at new exhibition.*/
+    private function SetupAfterSetExhibitionCurrent_Visitor_Object(
+        _exhibitionArchive_Bool:Bool
+    ):Visitor_Object{
+
+        if(_exhibitionArchive_Bool == true){
+
+            /*Push this visitor in the child object array from the new current exhibition.*/
+            AddOrRemoveThisFromParent_MuseumAndVisitor_Object(
+                true,
+                exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array
+            );
+
+            /*Add one integer in current visitor and total visitor of the corresponding museum
+                object.*/
+            exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  ++;
+            exhibitionCurrent_Museum_Object._VisitorCounter.visitorTotal    ++;
+
+            /*Determine whether the current museum object is full or not.
+            And then calculate children local index for each visitor object.*/
+            exhibitionCurrent_Museum_Object.DetermineChild_Museum_Object();
+
+        }
+        else if(_exhibitionArchive_Bool == false){
+
+            /*Push this visitor in the child object array from the new current exhibition.*/
+            AddOrRemoveThisFromParent_MuseumAndVisitor_Object(
+                true,
+                exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array
+            );
+
+            /*Add one integer in current visitor and total visitor of the corresponding museum
+                object.*/
+            exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  ++;
+            exhibitionCurrent_Museum_Object._VisitorCounter.visitorTotal    ++;
+            floorCurrent_Museum_Object._VisitorCounter.visitorCurrent       ++;
+            floorCurrent_Museum_Object._VisitorCounter.visitorTotal         ++;
+            roomCurrent_Museum_Object._VisitorCounter.visitorCurrent        ++;
+            roomCurrent_Museum_Object._VisitorCounter.visitorTotal          ++;
+
+            /*Determine whether the current museum object is full or not.
+            And then calculate children local index for each visitor object.*/
+            exhibitionCurrent_Museum_Object
+                .DetermineChild_Museum_Object()
+                .DetermineFull_Museum_Object();
+            floorCurrent_Museum_Object.DetermineFull_Museum_Object();
+            roomCurrent_Museum_Object.DetermineFull_Museum_Object();
+
+            /*Put the newly visited exhibition into the array of visited exhibition.
+            And sync it with the agnostic object.*/
+            CollectionStaticFunction_Object.SyncPush_T_Array(
+                exhibitionCurrent_Museum_Object,
+                exhibitionVisited_Museum_Object_Array,
+                exhibitionCurrent_Museum_Object._Name_Struct.nameAlt_String,
+                _VisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array
+            );
+
+            /*Set of functions that need to be executed when this visitor visit a new exhibition.*/
+            CalculateScore_Visitor_Object().
+            CalculateTagCounter_Visitor_Object
+                (_VisitorAgnostic_Object.amountOfPreviousVisitedExhibition_Int).
+            DetermineFinished_Visitor_Object().
+            GenerateSentence_Visitor_Object().
+            RetrieveExplanation_Visitor_Object();
+
+        }
+
+
+
+        /*When a visitor change into archive exhibition there are only these two functions
+            that is need to be ran.
+        Determine index local.*/
+        var loopCounter1_Int:Int = 0;
+        while(loopCounter1_Int < exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array.length){
+
+            exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array[loopCounter1_Int].DetermineIndexLocal_MuseumAndVisitor_Object();
+
+            loopCounter1_Int ++;
+
+        }
+        /*Generate exhibition target array.*/
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < _CollectionGlobal_Object._Visitor_Object_Array.length){
+
+            _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int].
+                GenerateExhibitionTarget_Visitor_Object(
+                    _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int]._VisitorAgnostic_Object.amountOfTargetExhibition_Int
+                );
+
+            loopCounter1_Int ++;
+
+        }
+
+
+
+        return this;
+
+    }
+
+
+
+
+
+
+
+
+
+
+    /*Set of operation that is necessary before changing current exhibition into new exhibition
+        (this visitor is moving into new exhibition).*/
+    private function SetupBeforeSetExhibitionCurrent_Visitor_Object():Visitor_Object{
+
+        if(exhibitionCurrent_Museum_Object != null){
+
+            AddOrRemoveThisFromParent_MuseumAndVisitor_Object(
+                false,
+                exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array
+            );
+
+            exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  --;
+            exhibitionCurrent_Museum_Object
+                .DetermineChild_Museum_Object()
+                .DetermineFull_Museum_Object();
+
+            if(
+                floorCurrent_Museum_Object  != null &&
+                roomCurrent_Museum_Object   != null
+            ){
+
+                floorCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
+                floorCurrent_Museum_Object.DetermineFull_Museum_Object();
+                roomCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
+                roomCurrent_Museum_Object.DetermineFull_Museum_Object();
+
+            }
+
+        }
+
+
+
+        return this;
 
     }
 
