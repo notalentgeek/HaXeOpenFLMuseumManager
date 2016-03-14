@@ -11,7 +11,7 @@ namespace io{
 
 Void BytesBuffer_obj::__construct()
 {
-HX_STACK_FRAME("haxe.io.BytesBuffer","new",0x022790dd,"haxe.io.BytesBuffer.new","/usr/share/haxe/std/haxe/io/BytesBuffer.hx",54,0x054745ce)
+HX_STACK_FRAME("haxe.io.BytesBuffer","new",0x022790dd,"haxe.io.BytesBuffer.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/BytesBuffer.hx",54,0xe2731be8)
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(54)
@@ -35,7 +35,7 @@ Dynamic BytesBuffer_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::haxe::io::Bytes BytesBuffer_obj::getBytes( ){
-	HX_STACK_FRAME("haxe.io.BytesBuffer","getBytes",0x1e9f7258,"haxe.io.BytesBuffer.getBytes","/usr/share/haxe/std/haxe/io/BytesBuffer.hx",191,0x054745ce)
+	HX_STACK_FRAME("haxe.io.BytesBuffer","getBytes",0x1e9f7258,"haxe.io.BytesBuffer.getBytes","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/BytesBuffer.hx",191,0xe2731be8)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(212)
 	int tmp = this->b->length;		HX_STACK_VAR(tmp,"tmp");

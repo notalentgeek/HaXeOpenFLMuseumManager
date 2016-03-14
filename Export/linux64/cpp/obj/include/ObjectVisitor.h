@@ -46,29 +46,29 @@ class HXCPP_CLASS_ATTRIBUTES  ObjectVisitor_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("ObjectVisitor","\x8f","\x02","\xe3","\xd9"); }
 
-		::CollectionGlobal collectionGlobalObject;
-		::ObjectMuseum exhibitionCurrentObject;
-		Array< ::Dynamic > exhibitionTargetObjectArray;
-		Array< ::Dynamic > exhibitionVisitedObjectArray;
 		int explanationCurrentIndexInt;
 		::String explanationCurrentString;
 		Array< ::String > explanationStringArray;
 		bool finishedBool;
-		::ObjectMuseum floorCurrentObject;
-		::ObjectGeneratorSentence generatorSentenceObject;
 		int indexGlobalInt;
 		int indexLocalInt;
 		::String nameString;
-		::ObjectMuseum roomCurrentObject;
 		int scoreInt;
 		Array< ::String > sentenceStringArray;
-		cpp::ArrayBase tagCounterStructArray;
-		Array< ::Dynamic > tagObjectArray;
 		int targetInt;
 		Float timeAIAutoExhibitionChangeFloat;
 		int timeExhibitionInt;
 		int timeMuseumInt;
 		bool visitedCorrectExhibitionBool;
+		::CollectionGlobal collectionGlobalObject;
+		::ObjectMuseum exhibitionCurrentObject;
+		Array< ::Dynamic > exhibitionTargetObjectArray;
+		Array< ::Dynamic > exhibitionVisitedObjectArray;
+		::ObjectMuseum floorCurrentObject;
+		::ObjectGeneratorSentence generatorSentenceObject;
+		::ObjectMuseum roomCurrentObject;
+		cpp::ArrayBase tagCounterStructArray;
+		Array< ::Dynamic > tagObjectArray;
 		cpp::ArrayBase visitExhibitionStructArray;
 		cpp::ArrayBase visitMuseumStructArray;
 		::EnumVisitorMode visitorModeEnum;

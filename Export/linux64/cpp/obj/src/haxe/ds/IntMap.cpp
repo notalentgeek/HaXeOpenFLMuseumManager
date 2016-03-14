@@ -11,7 +11,7 @@ namespace ds{
 
 Void IntMap_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ds.IntMap","new",0x7222c4b6,"haxe.ds.IntMap.new","/usr/share/haxe/std/cpp/_std/haxe/ds/IntMap.hx",52,0x7404b096)
+HX_STACK_FRAME("haxe.ds.IntMap","new",0x7222c4b6,"haxe.ds.IntMap.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/haxe/ds/IntMap.hx",52,0x7b3e9bb0)
 HX_STACK_THIS(this)
 {
 }
@@ -41,7 +41,7 @@ IntMap_obj::operator ::haxe::IMap_obj *()
 	{ return new ::haxe::IMap_delegate_< IntMap_obj >(this); }
 Void IntMap_obj::set( int key,Dynamic value){
 {
-		HX_STACK_FRAME("haxe.ds.IntMap","set",0x72268ff8,"haxe.ds.IntMap.set","/usr/share/haxe/std/cpp/_std/haxe/ds/IntMap.hx",55,0x7404b096)
+		HX_STACK_FRAME("haxe.ds.IntMap","set",0x72268ff8,"haxe.ds.IntMap.set","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/haxe/ds/IntMap.hx",55,0x7b3e9bb0)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(key,"key")
 		HX_STACK_ARG(value,"value")
@@ -55,7 +55,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC2(IntMap_obj,set,(void))
 
 Dynamic IntMap_obj::get( int key){
-	HX_STACK_FRAME("haxe.ds.IntMap","get",0x721d74ec,"haxe.ds.IntMap.get","/usr/share/haxe/std/cpp/_std/haxe/ds/IntMap.hx",58,0x7404b096)
+	HX_STACK_FRAME("haxe.ds.IntMap","get",0x721d74ec,"haxe.ds.IntMap.get","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/haxe/ds/IntMap.hx",58,0x7b3e9bb0)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(key,"key")
 	HX_STACK_LINE(59)
@@ -68,7 +68,7 @@ Dynamic IntMap_obj::get( int key){
 HX_DEFINE_DYNAMIC_FUNC1(IntMap_obj,get,return )
 
 bool IntMap_obj::exists( int key){
-	HX_STACK_FRAME("haxe.ds.IntMap","exists",0x63ba0346,"haxe.ds.IntMap.exists","/usr/share/haxe/std/cpp/_std/haxe/ds/IntMap.hx",62,0x7404b096)
+	HX_STACK_FRAME("haxe.ds.IntMap","exists",0x63ba0346,"haxe.ds.IntMap.exists","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/haxe/ds/IntMap.hx",62,0x7b3e9bb0)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(key,"key")
 	HX_STACK_LINE(63)
@@ -81,7 +81,7 @@ bool IntMap_obj::exists( int key){
 HX_DEFINE_DYNAMIC_FUNC1(IntMap_obj,exists,return )
 
 bool IntMap_obj::remove( int key){
-	HX_STACK_FRAME("haxe.ds.IntMap","remove",0xa86281ae,"haxe.ds.IntMap.remove","/usr/share/haxe/std/cpp/_std/haxe/ds/IntMap.hx",66,0x7404b096)
+	HX_STACK_FRAME("haxe.ds.IntMap","remove",0xa86281ae,"haxe.ds.IntMap.remove","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/haxe/ds/IntMap.hx",66,0x7b3e9bb0)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(key,"key")
 	HX_STACK_LINE(67)

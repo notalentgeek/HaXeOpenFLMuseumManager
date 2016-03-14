@@ -20,7 +20,7 @@ namespace zip{
 
 Void Compress_obj::__construct(int level)
 {
-HX_STACK_FRAME("haxe.zip.Compress","new",0x4ddc50a9,"haxe.zip.Compress.new","/usr/share/haxe/std/cpp/_std/haxe/zip/Compress.hx",29,0xced35369)
+HX_STACK_FRAME("haxe.zip.Compress","new",0x4ddc50a9,"haxe.zip.Compress.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/haxe/zip/Compress.hx",29,0xb78dd48f)
 HX_STACK_THIS(this)
 HX_STACK_ARG(level,"level")
 {
@@ -49,7 +49,7 @@ Dynamic Compress_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 Dynamic Compress_obj::execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos){
-	HX_STACK_FRAME("haxe.zip.Compress","execute",0xd015e2fe,"haxe.zip.Compress.execute","/usr/share/haxe/std/cpp/_std/haxe/zip/Compress.hx",33,0xced35369)
+	HX_STACK_FRAME("haxe.zip.Compress","execute",0xd015e2fe,"haxe.zip.Compress.execute","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/haxe/zip/Compress.hx",33,0xb78dd48f)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(src,"src")
 	HX_STACK_ARG(srcPos,"srcPos")
@@ -72,7 +72,7 @@ HX_DEFINE_DYNAMIC_FUNC4(Compress_obj,execute,return )
 
 Void Compress_obj::setFlushMode( ::haxe::zip::FlushMode f){
 {
-		HX_STACK_FRAME("haxe.zip.Compress","setFlushMode",0x35ab82dc,"haxe.zip.Compress.setFlushMode","/usr/share/haxe/std/cpp/_std/haxe/zip/Compress.hx",37,0xced35369)
+		HX_STACK_FRAME("haxe.zip.Compress","setFlushMode",0x35ab82dc,"haxe.zip.Compress.setFlushMode","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/haxe/zip/Compress.hx",37,0xb78dd48f)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(f,"f")
 		HX_STACK_LINE(38)
@@ -92,7 +92,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Compress_obj,setFlushMode,(void))
 
 Void Compress_obj::close( ){
 {
-		HX_STACK_FRAME("haxe.zip.Compress","close",0x6942fc41,"haxe.zip.Compress.close","/usr/share/haxe/std/cpp/_std/haxe/zip/Compress.hx",41,0xced35369)
+		HX_STACK_FRAME("haxe.zip.Compress","close",0x6942fc41,"haxe.zip.Compress.close","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/haxe/zip/Compress.hx",41,0xb78dd48f)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(42)
 		Dynamic tmp = this->s;		HX_STACK_VAR(tmp,"tmp");
@@ -106,7 +106,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(Compress_obj,close,(void))
 
 ::haxe::io::Bytes Compress_obj::run( ::haxe::io::Bytes s,int level){
-	HX_STACK_FRAME("haxe.zip.Compress","run",0x4ddf6794,"haxe.zip.Compress.run","/usr/share/haxe/std/cpp/_std/haxe/zip/Compress.hx",45,0xced35369)
+	HX_STACK_FRAME("haxe.zip.Compress","run",0x4ddf6794,"haxe.zip.Compress.run","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/haxe/zip/Compress.hx",45,0xb78dd48f)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(level,"level")
 	HX_STACK_LINE(46)

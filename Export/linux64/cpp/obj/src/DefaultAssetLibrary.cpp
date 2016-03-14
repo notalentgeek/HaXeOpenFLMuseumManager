@@ -155,9 +155,9 @@ HX_STACK_THIS(this)
 	HX_STACK_LINE(56)
 	super::__construct();
 	HX_STACK_LINE(130)
-	::openfl::_legacy::text::Font_obj::registerFont(hx::ClassOf< ::__ASSET__fonts_oxygen_bold_ttf >());
-	HX_STACK_LINE(132)
 	::openfl::_legacy::text::Font_obj::registerFont(hx::ClassOf< ::__ASSET__fonts_oxygen_ttf >());
+	HX_STACK_LINE(132)
+	::openfl::_legacy::text::Font_obj::registerFont(hx::ClassOf< ::__ASSET__fonts_oxygen_bold_ttf >());
 	HX_STACK_LINE(189)
 	bool useManifest = false;		HX_STACK_VAR(useManifest,"useManifest");
 	HX_STACK_LINE(190)

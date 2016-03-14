@@ -20,7 +20,7 @@ namespace io{
 
 Void BytesOutput_obj::__construct()
 {
-HX_STACK_FRAME("haxe.io.BytesOutput","new",0x130b775e,"haxe.io.BytesOutput.new","/usr/share/haxe/std/haxe/io/BytesOutput.hx",35,0x39036a6d)
+HX_STACK_FRAME("haxe.io.BytesOutput","new",0x130b775e,"haxe.io.BytesOutput.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/BytesOutput.hx",35,0x162f4087)
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(40)
@@ -47,7 +47,7 @@ Dynamic BytesOutput_obj::__Create(hx::DynamicArray inArgs)
 
 Void BytesOutput_obj::writeByte( int c){
 {
-		HX_STACK_FRAME("haxe.io.BytesOutput","writeByte",0xed1b0d05,"haxe.io.BytesOutput.writeByte","/usr/share/haxe/std/haxe/io/BytesOutput.hx",55,0x39036a6d)
+		HX_STACK_FRAME("haxe.io.BytesOutput","writeByte",0xed1b0d05,"haxe.io.BytesOutput.writeByte","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/BytesOutput.hx",55,0x162f4087)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(c,"c")
 		HX_STACK_LINE(55)
@@ -62,7 +62,7 @@ return null();
 
 
 int BytesOutput_obj::writeBytes( ::haxe::io::Bytes buf,int pos,int len){
-	HX_STACK_FRAME("haxe.io.BytesOutput","writeBytes",0x8a9057ce,"haxe.io.BytesOutput.writeBytes","/usr/share/haxe/std/haxe/io/BytesOutput.hx",59,0x39036a6d)
+	HX_STACK_FRAME("haxe.io.BytesOutput","writeBytes",0x8a9057ce,"haxe.io.BytesOutput.writeBytes","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/BytesOutput.hx",59,0x162f4087)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(buf,"buf")
 	HX_STACK_ARG(pos,"pos")
@@ -156,7 +156,7 @@ int BytesOutput_obj::writeBytes( ::haxe::io::Bytes buf,int pos,int len){
 
 
 ::haxe::io::Bytes BytesOutput_obj::getBytes( ){
-	HX_STACK_FRAME("haxe.io.BytesOutput","getBytes",0x9fe35837,"haxe.io.BytesOutput.getBytes","/usr/share/haxe/std/haxe/io/BytesOutput.hx",125,0x39036a6d)
+	HX_STACK_FRAME("haxe.io.BytesOutput","getBytes",0x9fe35837,"haxe.io.BytesOutput.getBytes","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/BytesOutput.hx",125,0x162f4087)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(131)
 	::haxe::io::BytesBuffer tmp = this->b;		HX_STACK_VAR(tmp,"tmp");

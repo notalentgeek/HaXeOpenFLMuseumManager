@@ -13,6 +13,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
+    /*PENDING: Make index struct.*/
     private var _CollectionGlobal_Object                (null, null)        :CollectionGlobal_Object                = null;
     private var _GeneratorSentence_Object               (null, null)        :GeneratorSentence_Object               = null;
     private var _VisitorMode_Enum                       (null, set)         :VisitorMode_Enum                       = null;
@@ -22,7 +23,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
-    private var _Tag_Object_Array                       (null, set)         :Array<Tag_Object>                      = new Array<Tag_Object>();                      /*PENDING: Put in super class.*/
+    private var _Tag_Object_Array                       (null, set)         :Array<Tag_Object>                      = new Array<Tag_Object>(); /*PENDING: Put in super class.*/
     private var _TagCounter_Struct_Array                (null, set)         :Array<TagCounter_Struct>               = new Array<TagCounter_Struct>();
     private var _VisitorVisitMuseum_Struct_Array        (null, set)         :Array<VisitorVisitMuseum_Struct>       = new Array<VisitorVisitMuseum_Struct>();
     private var _VisitorVisitExhibition_Struct_Array    (null, set)         :Array<VisitorVisitExhibition_Struct>   = new Array<VisitorVisitExhibition_Struct>();
@@ -232,32 +233,32 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
             /*For the exhibition and room museum objects.*/
             if(this._MuseumType_Enum != FLOOR){
 
-                this._MuseumAgnostic_Object.indexLocal_Int = 0;
-                while(this._MuseumAgnostic_Object.indexLocal_Int < parent_Museum_Object._Child_Struct.childMuseum_Object_Array.length){
+                this._MuseumAgnostic_Object._Index_Struct.local_Int = 0;
+                while(this._MuseumAgnostic_Object._Index_Struct.local_Int < parent_Museum_Object._Child_Struct.childMuseum_Object_Array.length){
 
                     if(
-                        this._Name_Struct.nameAlt_String    == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAgnostic_Object.indexLocal_Int]._Name_Struct.nameAlt_String      ||
-                        this._Name_Struct.nameFull_String   == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAgnostic_Object.indexLocal_Int]._Name_Struct.nameFull_String
+                        this._Name_Struct.nameAlt_String    == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAgnostic_Object._Index_Struct.local_Int]._Name_Struct.nameAlt_String      ||
+                        this._Name_Struct.nameFull_String   == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAgnostic_Object._Index_Struct.local_Int]._Name_Struct.nameFull_String
                     ){ return this; }
 
-                    this._MuseumAgnostic_Object.indexLocal_Int ++;
+                    this._MuseumAgnostic_Object._Index_Struct.local_Int ++;
 
                 }
 
             }
             /*If this is a floor museum object then the local index is the global index.*/
-            else{ this._MuseumAgnostic_Object.indexLocal_Int = this._MuseumAgnostic_Object.indexGlobal_Int; }
+            else{ this._MuseumAgnostic_Object._Index_Struct.local_Int = this._MuseumAgnostic_Object._Index_Struct.global_Int; }
 
         }
         else if(Std.is(this, Visitor_Object)){
 
-            this._VisitorAgnostic_Object.indexLocal_Int = 0;
-            while(this._VisitorAgnostic_Object.indexLocal_Int < exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array.length){
+            this._VisitorAgnostic_Object._Index_Struct.local_Int = 0;
+            while(this._VisitorAgnostic_Object._Index_Struct.local_Int < exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array.length){
 
-                if(this.name_String == exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array[this._VisitorAgnostic_Object.indexLocal_Int].name_String)
+                if(this.name_String == exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array[this._VisitorAgnostic_Object._Index_Struct.local_Int].name_String)
                     { return this; }
 
-                this._VisitorAgnostic_Object.indexLocal_Int ++;
+                this._VisitorAgnostic_Object._Index_Struct.local_Int ++;
 
             }
 
@@ -355,20 +356,20 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
     public function new(
         __CollectionGlobal_Object   :CollectionGlobal_Object,
-        _indexGlobal_Int            :Int,
+        __Index_Struct.global_Int            :Int,
         _name_String                :String
     ):Void{
 
         /*Assign all parameters.*/
         _CollectionGlobal_Object                    = __CollectionGlobal_Object;
-        _VisitorAgnostic_Object.indexGlobal_Int     = _indexGlobal_Int;
+        _VisitorAgnostic_Object._Index_Struct.global_Int     = __Index_Struct.global_Int;
         _VisitorAgnostic_Object.name_String         = _name_String;
 
         /*Instantiate the sentence generator.*/
         _GeneratorSentence_Object                   = new GeneratorSentence_Object();
         /*Instantiate the agnostic object.*/
         _VisitorAgnostic_Object                     = new VisitorAgnostic_Object(
-            _CollectionGlobal_Object.amountOfPreviousVisitedExhibition_Int,
+            _CollectionGlobal_Object.amountOfPreviousVisitedExhibitionCheck_Int,
             _CollectionGlobal_Object.amountOfTargetExhibition_Int
         );
 
@@ -482,7 +483,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
     /*Function to count how many tag a visitor get.
     This function basically calculate the preferences of a visitor toward certain topics.*/
-    private function CalculateTagCounter_Visitor_Object(_amountOfPreviousVisitedExhibition_Int:Int):Visitor_Object{
+    private function CalculateTagCounter_Visitor_Object(_amountOfPreviousVisitedExhibitionCheck_Int:Int):Visitor_Object{
 
         /*Tag array is a recycle array that contain tag object from current exhibition and
             previously visited exhibition.*/
@@ -497,11 +498,11 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
             var loopCounter1_Int:Int = 0;
             /*Iterate through tag objects within previous visited exhibition.
-            _amountOfPreviousVisitedExhibition_Int is a variable to determine how many previously
+            _amountOfPreviousVisitedExhibitionCheck_Int is a variable to determine how many previously
                 visited exhibition I want to capture.
-            The more value in _amountOfPreviousVisitedExhibition_Int the more diverse sentences will
+            The more value in _amountOfPreviousVisitedExhibitionCheck_Int the more diverse sentences will
                 be generated.*/
-            while(loopCounter1_Int < _amountOfPreviousVisitedExhibition_Int - 1){
+            while(loopCounter1_Int < _amountOfPreviousVisitedExhibitionCheck_Int - 1){
 
                 var exhibitionPrevious_Museum_Object:Museum_Object =
                     exhibitionVisited_Museum_Object_Array[exhibitionVisited_Museum_Object_Array.length - (loopCounter1_Int + 2)];
@@ -747,7 +748,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
         loopCounter1_Int = 0;
         while(loopCounter1_Int < exhibitionTarget_Museum_Object_Array.length){
 
-            if(exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Museum_Mode_Enum == MRK_DEL){
+            if(exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumMode_Enum == MRK_DEL){
 
                 CollectionStaticFunction_Object.SyncRemove_T_Array(
                     exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
@@ -1622,8 +1623,8 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
             /*Add one integer in current visitor and total visitor of the corresponding museum
                 object.*/
-            exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  ++;
-            exhibitionCurrent_Museum_Object._VisitorCounter.visitorTotal    ++;
+            exhibitionCurrent_Museum_Object._VisitorCount_Struct.current_Int  ++;
+            exhibitionCurrent_Museum_Object._VisitorCount_Struct.total_Int    ++;
 
             /*Determine whether the current museum object is full or not.
             And then calculate children local index for each visitor object.*/
@@ -1640,12 +1641,12 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
             /*Add one integer in current visitor and total visitor of the corresponding museum
                 object.*/
-            exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  ++;
-            exhibitionCurrent_Museum_Object._VisitorCounter.visitorTotal    ++;
-            floorCurrent_Museum_Object._VisitorCounter.visitorCurrent       ++;
-            floorCurrent_Museum_Object._VisitorCounter.visitorTotal         ++;
-            roomCurrent_Museum_Object._VisitorCounter.visitorCurrent        ++;
-            roomCurrent_Museum_Object._VisitorCounter.visitorTotal          ++;
+            exhibitionCurrent_Museum_Object._VisitorCount_Struct.current_Int  ++;
+            exhibitionCurrent_Museum_Object._VisitorCount_Struct.total_Int    ++;
+            floorCurrent_Museum_Object._VisitorCount_Struct.current_Int       ++;
+            floorCurrent_Museum_Object._VisitorCount_Struct.total_Int         ++;
+            roomCurrent_Museum_Object._VisitorCount_Struct.current_Int        ++;
+            roomCurrent_Museum_Object._VisitorCount_Struct.total_Int          ++;
 
             /*Determine whether the current museum object is full or not.
             And then calculate children local index for each visitor object.*/
@@ -1667,7 +1668,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
             /*Set of functions that need to be executed when this visitor visit a new exhibition.*/
             CalculateScore_Visitor_Object().
             CalculateTagCounter_Visitor_Object
-                (_VisitorAgnostic_Object.amountOfPreviousVisitedExhibition_Int).
+                (_VisitorAgnostic_Object.amountOfPreviousVisitedExhibitionCheck_Int).
             DetermineFinished_Visitor_Object().
             GenerateSentence_Visitor_Object().
             RetrieveExplanation_Visitor_Object();
@@ -1726,7 +1727,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                 exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array
             );
 
-            exhibitionCurrent_Museum_Object._VisitorCounter.visitorCurrent  --;
+            exhibitionCurrent_Museum_Object._VisitorCount_Struct.current_Int  --;
             exhibitionCurrent_Museum_Object
                 .DetermineChild_Museum_Object()
                 .DetermineFull_Museum_Object();
@@ -1736,9 +1737,9 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                 roomCurrent_Museum_Object   != null
             ){
 
-                floorCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
+                floorCurrent_Museum_Object._VisitorCount_Struct.current_Int --;
                 floorCurrent_Museum_Object.DetermineFull_Museum_Object();
-                roomCurrent_Museum_Object._VisitorCounter.visitorCurrent --;
+                roomCurrent_Museum_Object._VisitorCount_Struct.current_Int --;
                 roomCurrent_Museum_Object.DetermineFull_Museum_Object();
 
             }

@@ -15,7 +15,7 @@
 
 Void EReg_obj::__construct(::String r,::String opt)
 {
-HX_STACK_FRAME("EReg","new",0x8b859e81,"EReg.new","/usr/share/haxe/std/cpp/_std/EReg.hx",28,0x3bcaa0cb)
+HX_STACK_FRAME("EReg","new",0x8b859e81,"EReg.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",28,0x199c8765)
 HX_STACK_THIS(this)
 HX_STACK_ARG(r,"r")
 HX_STACK_ARG(opt,"opt")
@@ -62,7 +62,7 @@ Dynamic EReg_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 bool EReg_obj::match( ::String s){
-	HX_STACK_FRAME("EReg","match",0x18fda1a6,"EReg.match","/usr/share/haxe/std/cpp/_std/EReg.hx",36,0x3bcaa0cb)
+	HX_STACK_FRAME("EReg","match",0x18fda1a6,"EReg.match","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",36,0x199c8765)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_LINE(37)
@@ -96,7 +96,7 @@ bool EReg_obj::match( ::String s){
 HX_DEFINE_DYNAMIC_FUNC1(EReg_obj,match,return )
 
 ::String EReg_obj::matched( int n){
-	HX_STACK_FRAME("EReg","matched",0x8ce62f85,"EReg.matched","/usr/share/haxe/std/cpp/_std/EReg.hx",45,0x3bcaa0cb)
+	HX_STACK_FRAME("EReg","matched",0x8ce62f85,"EReg.matched","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",45,0x199c8765)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(n,"n")
 	HX_STACK_LINE(46)
@@ -117,7 +117,7 @@ HX_DEFINE_DYNAMIC_FUNC1(EReg_obj,match,return )
 HX_DEFINE_DYNAMIC_FUNC1(EReg_obj,matched,return )
 
 Dynamic EReg_obj::matchedPos( ){
-	HX_STACK_FRAME("EReg","matchedPos",0x7007a70f,"EReg.matchedPos","/usr/share/haxe/std/cpp/_std/EReg.hx",61,0x3bcaa0cb)
+	HX_STACK_FRAME("EReg","matchedPos",0x7007a70f,"EReg.matchedPos","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",61,0x199c8765)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(62)
 	Dynamic tmp = this->r;		HX_STACK_VAR(tmp,"tmp");
@@ -132,7 +132,7 @@ HX_DEFINE_DYNAMIC_FUNC0(EReg_obj,matchedPos,return )
 
 bool EReg_obj::matchSub( ::String s,int pos,hx::Null< int >  __o_len){
 int len = __o_len.Default(-1);
-	HX_STACK_FRAME("EReg","matchSub",0xbc75cb7a,"EReg.matchSub","/usr/share/haxe/std/cpp/_std/EReg.hx",65,0x3bcaa0cb)
+	HX_STACK_FRAME("EReg","matchSub",0xbc75cb7a,"EReg.matchSub","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",65,0x199c8765)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(pos,"pos")
@@ -183,7 +183,7 @@ int len = __o_len.Default(-1);
 HX_DEFINE_DYNAMIC_FUNC3(EReg_obj,matchSub,return )
 
 ::String EReg_obj::replace( ::String s,::String by){
-	HX_STACK_FRAME("EReg","replace",0xae923ad5,"EReg.replace","/usr/share/haxe/std/cpp/_std/EReg.hx",98,0x3bcaa0cb)
+	HX_STACK_FRAME("EReg","replace",0xae923ad5,"EReg.replace","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",98,0x199c8765)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(by,"by")
@@ -465,7 +465,7 @@ HX_DEFINE_DYNAMIC_FUNC3(EReg_obj,matchSub,return )
 HX_DEFINE_DYNAMIC_FUNC2(EReg_obj,replace,return )
 
 ::String EReg_obj::map( ::String s,Dynamic f){
-	HX_STACK_FRAME("EReg","map",0x8b84d8bd,"EReg.map","/usr/share/haxe/std/cpp/_std/EReg.hx",149,0x3bcaa0cb)
+	HX_STACK_FRAME("EReg","map",0x8b84d8bd,"EReg.map","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",149,0x199c8765)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(f,"f")
@@ -802,7 +802,7 @@ void EReg_obj::__boot()
 {
 struct _Function_0_1{
 	inline static Dynamic Block( ){
-		HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/cpp/_std/EReg.hx",174,0x3bcaa0cb)
+		HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",174,0x199c8765)
 		{
 			HX_STACK_LINE(174)
 			Dynamic tmp = ::cpp::Lib_obj::load(HX_HCSTRING("regexp","\xc9","\xbf","\x89","\x00"),HX_HCSTRING("regexp_new_options","\x89","\x34","\xba","\x56"),(int)2);		HX_STACK_VAR(tmp,"tmp");
@@ -815,7 +815,7 @@ struct _Function_0_1{
 	regexp_new_options= _Function_0_1::Block();
 struct _Function_0_2{
 	inline static Dynamic Block( ){
-		HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/cpp/_std/EReg.hx",175,0x3bcaa0cb)
+		HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",175,0x199c8765)
 		{
 			HX_STACK_LINE(175)
 			Dynamic tmp = ::cpp::Lib_obj::load(HX_HCSTRING("regexp","\xc9","\xbf","\x89","\x00"),HX_HCSTRING("regexp_match","\x0f","\xcd","\x47","\xb6"),(int)4);		HX_STACK_VAR(tmp,"tmp");
@@ -828,7 +828,7 @@ struct _Function_0_2{
 	regexp_match= _Function_0_2::Block();
 struct _Function_0_3{
 	inline static Dynamic Block( ){
-		HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/cpp/_std/EReg.hx",176,0x3bcaa0cb)
+		HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",176,0x199c8765)
 		{
 			HX_STACK_LINE(176)
 			Dynamic tmp = ::cpp::Lib_obj::load(HX_HCSTRING("regexp","\xc9","\xbf","\x89","\x00"),HX_HCSTRING("regexp_matched","\x2e","\xc7","\xa0","\xb1"),(int)2);		HX_STACK_VAR(tmp,"tmp");
@@ -841,7 +841,7 @@ struct _Function_0_3{
 	regexp_matched= _Function_0_3::Block();
 struct _Function_0_4{
 	inline static Dynamic Block( ){
-		HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/cpp/_std/EReg.hx",177,0x3bcaa0cb)
+		HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/EReg.hx",177,0x199c8765)
 		{
 			HX_STACK_LINE(177)
 			Dynamic tmp = ::cpp::Lib_obj::load(HX_HCSTRING("regexp","\xc9","\xbf","\x89","\x00"),HX_HCSTRING("regexp_matched_pos","\xc3","\x98","\x9f","\x7a"),(int)2);		HX_STACK_VAR(tmp,"tmp");

@@ -17,7 +17,7 @@ namespace ds{
 
 Void GenericStack_hscript_Token_obj::__construct()
 {
-HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","new",0xda5f4ac8,"haxe.ds.GenericStack_hscript_Token.new","/usr/share/haxe/std/haxe/ds/GenericStack.hx",67,0x427260fb)
+HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","new",0xda5f4ac8,"haxe.ds.GenericStack_hscript_Token.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",67,0xeba1e1a1)
 HX_STACK_THIS(this)
 {
 }
@@ -40,7 +40,7 @@ Dynamic GenericStack_hscript_Token_obj::__Create(hx::DynamicArray inArgs)
 
 Void GenericStack_hscript_Token_obj::add( ::hscript::Token item){
 {
-		HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","add",0xda556c89,"haxe.ds.GenericStack_hscript_Token.add","/usr/share/haxe/std/haxe/ds/GenericStack.hx",73,0x427260fb)
+		HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","add",0xda556c89,"haxe.ds.GenericStack_hscript_Token.add","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",73,0xeba1e1a1)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(item,"item")
 		HX_STACK_LINE(74)
@@ -59,7 +59,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(GenericStack_hscript_Token_obj,add,(void))
 
 ::hscript::Token GenericStack_hscript_Token_obj::first( ){
-	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","first",0x104a5c98,"haxe.ds.GenericStack_hscript_Token.first","/usr/share/haxe/std/haxe/ds/GenericStack.hx",82,0x427260fb)
+	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","first",0x104a5c98,"haxe.ds.GenericStack_hscript_Token.first","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",82,0xeba1e1a1)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(83)
 	::haxe::ds::GenericCell_hscript_Token tmp = this->head;		HX_STACK_VAR(tmp,"tmp");
@@ -86,7 +86,7 @@ HX_DEFINE_DYNAMIC_FUNC1(GenericStack_hscript_Token_obj,add,(void))
 HX_DEFINE_DYNAMIC_FUNC0(GenericStack_hscript_Token_obj,first,return )
 
 ::hscript::Token GenericStack_hscript_Token_obj::pop( ){
-	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","pop",0xda60d7f9,"haxe.ds.GenericStack_hscript_Token.pop","/usr/share/haxe/std/haxe/ds/GenericStack.hx",91,0x427260fb)
+	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","pop",0xda60d7f9,"haxe.ds.GenericStack_hscript_Token.pop","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",91,0xeba1e1a1)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(92)
 	::haxe::ds::GenericCell_hscript_Token tmp = this->head;		HX_STACK_VAR(tmp,"tmp");
@@ -115,7 +115,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GenericStack_hscript_Token_obj,first,return )
 HX_DEFINE_DYNAMIC_FUNC0(GenericStack_hscript_Token_obj,pop,return )
 
 bool GenericStack_hscript_Token_obj::isEmpty( ){
-	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","isEmpty",0x0c5cacab,"haxe.ds.GenericStack_hscript_Token.isEmpty","/usr/share/haxe/std/haxe/ds/GenericStack.hx",104,0x427260fb)
+	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","isEmpty",0x0c5cacab,"haxe.ds.GenericStack_hscript_Token.isEmpty","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",104,0xeba1e1a1)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(105)
 	::haxe::ds::GenericCell_hscript_Token tmp = this->head;		HX_STACK_VAR(tmp,"tmp");
@@ -129,7 +129,7 @@ bool GenericStack_hscript_Token_obj::isEmpty( ){
 HX_DEFINE_DYNAMIC_FUNC0(GenericStack_hscript_Token_obj,isEmpty,return )
 
 bool GenericStack_hscript_Token_obj::remove( ::hscript::Token v){
-	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","remove",0xac2392dc,"haxe.ds.GenericStack_hscript_Token.remove","/usr/share/haxe/std/haxe/ds/GenericStack.hx",117,0x427260fb)
+	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","remove",0xac2392dc,"haxe.ds.GenericStack_hscript_Token.remove","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",117,0xeba1e1a1)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(v,"v")
 	HX_STACK_LINE(118)
@@ -182,7 +182,7 @@ bool GenericStack_hscript_Token_obj::remove( ::hscript::Token v){
 HX_DEFINE_DYNAMIC_FUNC1(GenericStack_hscript_Token_obj,remove,return )
 
 Dynamic GenericStack_hscript_Token_obj::iterator( ){
-	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","iterator",0x90d21686,"haxe.ds.GenericStack_hscript_Token.iterator","/usr/share/haxe/std/haxe/ds/GenericStack.hx",139,0x427260fb)
+	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","iterator",0x90d21686,"haxe.ds.GenericStack_hscript_Token.iterator","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",139,0xeba1e1a1)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(140)
 	::haxe::ds::GenericCell_hscript_Token tmp = this->head;		HX_STACK_VAR(tmp,"tmp");
@@ -196,7 +196,7 @@ Dynamic GenericStack_hscript_Token_obj::iterator( ){
 HX_DEFINE_DYNAMIC_FUNC0(GenericStack_hscript_Token_obj,iterator,return )
 
 ::String GenericStack_hscript_Token_obj::toString( ){
-	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","toString",0x35a69d44,"haxe.ds.GenericStack_hscript_Token.toString","/usr/share/haxe/std/haxe/ds/GenericStack.hx",166,0x427260fb)
+	HX_STACK_FRAME("haxe.ds.GenericStack_hscript_Token","toString",0x35a69d44,"haxe.ds.GenericStack_hscript_Token.toString","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",166,0xeba1e1a1)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(167)
 	Array< ::Dynamic > a = Array_obj< ::Dynamic >::__new();		HX_STACK_VAR(a,"a");

@@ -11,7 +11,7 @@ namespace io{
 
 Void Bytes_obj::__construct(int length,Array< unsigned char > b)
 {
-HX_STACK_FRAME("haxe.io.Bytes","new",0x3938d57d,"haxe.io.Bytes.new","/usr/share/haxe/std/haxe/io/Bytes.hx",33,0xb829beee)
+HX_STACK_FRAME("haxe.io.Bytes","new",0x3938d57d,"haxe.io.Bytes.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Bytes.hx",33,0x95fba588)
 HX_STACK_THIS(this)
 HX_STACK_ARG(length,"length")
 HX_STACK_ARG(b,"b")
@@ -40,7 +40,7 @@ Dynamic Bytes_obj::__Create(hx::DynamicArray inArgs)
 
 Void Bytes_obj::blit( int pos,::haxe::io::Bytes src,int srcpos,int len){
 {
-		HX_STACK_FRAME("haxe.io.Bytes","blit",0xd098ac78,"haxe.io.Bytes.blit","/usr/share/haxe/std/haxe/io/Bytes.hx",79,0xb829beee)
+		HX_STACK_FRAME("haxe.io.Bytes","blit",0xd098ac78,"haxe.io.Bytes.blit","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Bytes.hx",79,0x95fba588)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(pos,"pos")
 		HX_STACK_ARG(src,"src")
@@ -148,7 +148,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC4(Bytes_obj,blit,(void))
 
 ::haxe::io::Bytes Bytes_obj::sub( int pos,int len){
-	HX_STACK_FRAME("haxe.io.Bytes","sub",0x393cae9d,"haxe.io.Bytes.sub","/usr/share/haxe/std/haxe/io/Bytes.hx",133,0xb829beee)
+	HX_STACK_FRAME("haxe.io.Bytes","sub",0x393cae9d,"haxe.io.Bytes.sub","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Bytes.hx",133,0x95fba588)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(pos,"pos")
 	HX_STACK_ARG(len,"len")
@@ -209,7 +209,7 @@ HX_DEFINE_DYNAMIC_FUNC4(Bytes_obj,blit,(void))
 HX_DEFINE_DYNAMIC_FUNC2(Bytes_obj,sub,return )
 
 ::String Bytes_obj::getString( int pos,int len){
-	HX_STACK_FRAME("haxe.io.Bytes","getString",0xa16beae4,"haxe.io.Bytes.getString","/usr/share/haxe/std/haxe/io/Bytes.hx",357,0xb829beee)
+	HX_STACK_FRAME("haxe.io.Bytes","getString",0xa16beae4,"haxe.io.Bytes.getString","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Bytes.hx",357,0x95fba588)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(pos,"pos")
 	HX_STACK_ARG(len,"len")
@@ -270,7 +270,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Bytes_obj,sub,return )
 HX_DEFINE_DYNAMIC_FUNC2(Bytes_obj,getString,return )
 
 ::String Bytes_obj::toString( ){
-	HX_STACK_FRAME("haxe.io.Bytes","toString",0x0291226f,"haxe.io.Bytes.toString","/usr/share/haxe/std/haxe/io/Bytes.hx",416,0xb829beee)
+	HX_STACK_FRAME("haxe.io.Bytes","toString",0x0291226f,"haxe.io.Bytes.toString","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Bytes.hx",416,0x95fba588)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(433)
 	int tmp = this->length;		HX_STACK_VAR(tmp,"tmp");
@@ -284,7 +284,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Bytes_obj,getString,return )
 HX_DEFINE_DYNAMIC_FUNC0(Bytes_obj,toString,return )
 
 ::haxe::io::Bytes Bytes_obj::alloc( int length){
-	HX_STACK_FRAME("haxe.io.Bytes","alloc",0x2199ead2,"haxe.io.Bytes.alloc","/usr/share/haxe/std/haxe/io/Bytes.hx",455,0xb829beee)
+	HX_STACK_FRAME("haxe.io.Bytes","alloc",0x2199ead2,"haxe.io.Bytes.alloc","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Bytes.hx",455,0x95fba588)
 	HX_STACK_ARG(length,"length")
 	HX_STACK_LINE(465)
 	Array< unsigned char > a = Array_obj< unsigned char >::__new();		HX_STACK_VAR(a,"a");
@@ -307,7 +307,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Bytes_obj,toString,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Bytes_obj,alloc,return )
 
 ::haxe::io::Bytes Bytes_obj::ofString( ::String s){
-	HX_STACK_FRAME("haxe.io.Bytes","ofString",0x6e53bb0b,"haxe.io.Bytes.ofString","/usr/share/haxe/std/haxe/io/Bytes.hx",482,0xb829beee)
+	HX_STACK_FRAME("haxe.io.Bytes","ofString",0x6e53bb0b,"haxe.io.Bytes.ofString","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Bytes.hx",482,0x95fba588)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_LINE(493)
 	Array< unsigned char > a = Array_obj< unsigned char >::__new();		HX_STACK_VAR(a,"a");
@@ -323,7 +323,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Bytes_obj,alloc,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Bytes_obj,ofString,return )
 
 ::haxe::io::Bytes Bytes_obj::ofData( Array< unsigned char > b){
-	HX_STACK_FRAME("haxe.io.Bytes","ofData",0x4f3005e4,"haxe.io.Bytes.ofData","/usr/share/haxe/std/haxe/io/Bytes.hx",540,0xb829beee)
+	HX_STACK_FRAME("haxe.io.Bytes","ofData",0x4f3005e4,"haxe.io.Bytes.ofData","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Bytes.hx",540,0x95fba588)
 	HX_STACK_ARG(b,"b")
 	HX_STACK_LINE(550)
 	::haxe::io::Bytes tmp = ::haxe::io::Bytes_obj::__new(b->length,b);		HX_STACK_VAR(tmp,"tmp");

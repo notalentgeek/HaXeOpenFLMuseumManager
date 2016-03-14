@@ -1,7 +1,16 @@
+/*==================================================
+This is an enum that control company word position.
+So when you asked for company words from Wordnik API the company word can be after
+    or before the primary word.
+So for every company word that I received from Wordnik API I need to determine
+    whether the word is after or before the primary word.
+Hence this enum is for determine whether a company word is after or before the
+    primary word.*/
 enum EnumCompanyWordPosition{
     PRE;
     SUF;
 }
+/*==================================================*/
 
 
 

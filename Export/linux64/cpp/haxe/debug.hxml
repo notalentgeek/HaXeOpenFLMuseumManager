@@ -1,23 +1,23 @@
 -main ApplicationMain 
--cp /home/notalentgeek/haxelib/haxeui-rich-text/0,1,2
+-cp /home/notalentgeek/Mikael Data/Programming Resouce/SDK/haxe-3.2.1 HaXeLib/haxeui-rich-text/0,1,2
 -D haxeui-rich-text=0.1.2
--cp /home/notalentgeek/haxelib/actuate/1,8,6
+-cp /home/notalentgeek/Mikael Data/Programming Resouce/SDK/haxe-3.2.1 HaXeLib/actuate/1,8,6
 -D actuate=1.8.6
--cp /home/notalentgeek/haxelib/haxeui/1,8,17
+-cp /home/notalentgeek/Mikael Data/Programming Resouce/SDK/haxe-3.2.1 HaXeLib/haxeui/1,8,17
 -D haxeui=1.8.17
--cp /home/notalentgeek/haxelib/hscript/2,0,5
+-cp /home/notalentgeek/Mikael Data/Programming Resouce/SDK/haxe-3.2.1 HaXeLib/hscript/2,0,5
 -D hscript=2.0.5
--cp /home/notalentgeek/haxelib/lime/2,9,0
+-cp /home/notalentgeek/Mikael Data/Programming Resouce/SDK/haxe-3.2.1 HaXeLib/lime/2,9,0
 -D lime=2.9.0
--cp /home/notalentgeek/haxelib/hxSerial/0,1,2
+-cp /home/notalentgeek/Mikael Data/Programming Resouce/SDK/haxe-3.2.1 HaXeLib/hxSerial/0,1,2
 -D hxSerial=0.1.2
--cp /home/notalentgeek/haxelib/openfl/3,6,0
+-cp /home/notalentgeek/Mikael Data/Programming Resouce/SDK/haxe-3.2.1 HaXeLib/openfl/3,6,0
 -D openfl=3.6.0
--cp /home/notalentgeek/haxelib/hxcpp/3,2,205
+-cp /home/notalentgeek/Mikael Data/Programming Resouce/SDK/haxe-3.2.1 HaXeLib/hxcpp/3,2,205
 -D hxcpp=3.2.205
 -cp Source
--cp /home/notalentgeek/haxelib/haxeui-rich-text/0,1,2/assets
--cp /home/notalentgeek/haxelib/lime/2,9,0/legacy
+-cp /home/notalentgeek/Mikael Data/Programming Resouce/SDK/haxe-3.2.1 HaXeLib/haxeui-rich-text/0,1,2/assets
+-cp /home/notalentgeek/Mikael Data/Programming Resouce/SDK/haxe-3.2.1 HaXeLib/lime/2,9,0/legacy
 -D openfl-legacy
 -D tools=2.9.0
 -D lime-legacy

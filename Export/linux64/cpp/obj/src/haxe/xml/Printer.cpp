@@ -20,7 +20,7 @@ namespace xml{
 
 Void Printer_obj::__construct(bool pretty)
 {
-HX_STACK_FRAME("haxe.xml.Printer","new",0x896dce4d,"haxe.xml.Printer.new","/usr/share/haxe/std/haxe/xml/Printer.hx",42,0x1415cbea)
+HX_STACK_FRAME("haxe.xml.Printer","new",0x896dce4d,"haxe.xml.Printer.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/xml/Printer.hx",42,0x5bc28190)
 HX_STACK_THIS(this)
 HX_STACK_ARG(pretty,"pretty")
 {
@@ -50,7 +50,7 @@ Dynamic Printer_obj::__Create(hx::DynamicArray inArgs)
 
 Void Printer_obj::writeNode( ::Xml value,::String tabs){
 {
-		HX_STACK_FRAME("haxe.xml.Printer","writeNode",0x6952ac2e,"haxe.xml.Printer.writeNode","/usr/share/haxe/std/haxe/xml/Printer.hx",48,0x1415cbea)
+		HX_STACK_FRAME("haxe.xml.Printer","writeNode",0x6952ac2e,"haxe.xml.Printer.writeNode","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/xml/Printer.hx",48,0x5bc28190)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(value,"value")
 		HX_STACK_ARG(tabs,"tabs")
@@ -747,7 +747,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC2(Printer_obj,writeNode,(void))
 
 bool Printer_obj::hasChildren( ::Xml value){
-	HX_STACK_FRAME("haxe.xml.Printer","hasChildren",0xeb7e31a6,"haxe.xml.Printer.hasChildren","/usr/share/haxe/std/haxe/xml/Printer.hx",110,0x1415cbea)
+	HX_STACK_FRAME("haxe.xml.Printer","hasChildren",0xeb7e31a6,"haxe.xml.Printer.hasChildren","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/xml/Printer.hx",110,0x5bc28190)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(value,"value")
 	HX_STACK_LINE(111)
@@ -873,7 +873,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Printer_obj,hasChildren,return )
 
 ::String Printer_obj::print( ::Xml xml,Dynamic __o_pretty){
 Dynamic pretty = __o_pretty.Default(false);
-	HX_STACK_FRAME("haxe.xml.Printer","print",0x4a926b5a,"haxe.xml.Printer.print","/usr/share/haxe/std/haxe/xml/Printer.hx",33,0x1415cbea)
+	HX_STACK_FRAME("haxe.xml.Printer","print",0x4a926b5a,"haxe.xml.Printer.print","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/xml/Printer.hx",33,0x5bc28190)
 	HX_STACK_ARG(xml,"xml")
 	HX_STACK_ARG(pretty,"pretty")
 {

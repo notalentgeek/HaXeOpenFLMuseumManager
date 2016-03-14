@@ -8,7 +8,7 @@ namespace io{
 
 Void Path_obj::__construct(::String path)
 {
-HX_STACK_FRAME("haxe.io.Path","new",0x1b96d677,"haxe.io.Path.new","/usr/share/haxe/std/haxe/io/Path.hx",76,0x457392de)
+HX_STACK_FRAME("haxe.io.Path","new",0x1b96d677,"haxe.io.Path.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Path.hx",76,0x8d9efd84)
 HX_STACK_THIS(this)
 HX_STACK_ARG(path,"path")
 {
@@ -120,7 +120,7 @@ Dynamic Path_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::String Path_obj::directory( ::String path){
-	HX_STACK_FRAME("haxe.io.Path","directory",0xbcfe23c4,"haxe.io.Path.directory","/usr/share/haxe/std/haxe/io/Path.hx",147,0x457392de)
+	HX_STACK_FRAME("haxe.io.Path","directory",0xbcfe23c4,"haxe.io.Path.directory","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Path.hx",147,0x8d9efd84)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(148)
 	::haxe::io::Path tmp = ::haxe::io::Path_obj::__new(path);		HX_STACK_VAR(tmp,"tmp");
@@ -143,7 +143,7 @@ Dynamic Path_obj::__Create(hx::DynamicArray inArgs)
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Path_obj,directory,return )
 
 ::String Path_obj::removeTrailingSlashes( ::String path){
-	HX_STACK_FRAME("haxe.io.Path","removeTrailingSlashes",0x2dc73462,"haxe.io.Path.removeTrailingSlashes","/usr/share/haxe/std/haxe/io/Path.hx",290,0x457392de)
+	HX_STACK_FRAME("haxe.io.Path","removeTrailingSlashes",0x2dc73462,"haxe.io.Path.removeTrailingSlashes","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Path.hx",290,0x8d9efd84)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(291)
 	while((true)){

@@ -15,7 +15,7 @@ namespace _GenericStack{
 
 Void GenericStackIterator_hscript_Token_obj::__construct(::haxe::ds::GenericCell_hscript_Token head)
 {
-HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","new",0xbf5d5a94,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.new","/usr/share/haxe/std/haxe/ds/GenericStack.hx",40,0x427260fb)
+HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","new",0xbf5d5a94,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",40,0xeba1e1a1)
 HX_STACK_THIS(this)
 HX_STACK_ARG(head,"head")
 {
@@ -40,7 +40,7 @@ Dynamic GenericStackIterator_hscript_Token_obj::__Create(hx::DynamicArray inArgs
 	return _result_;}
 
 bool GenericStackIterator_hscript_Token_obj::hasNext( ){
-	HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","hasNext",0xccb359a1,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.hasNext","/usr/share/haxe/std/haxe/ds/GenericStack.hx",37,0x427260fb)
+	HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","hasNext",0xccb359a1,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.hasNext","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",37,0xeba1e1a1)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(37)
 	::haxe::ds::GenericCell_hscript_Token tmp = this->current;		HX_STACK_VAR(tmp,"tmp");
@@ -54,7 +54,7 @@ bool GenericStackIterator_hscript_Token_obj::hasNext( ){
 HX_DEFINE_DYNAMIC_FUNC0(GenericStackIterator_hscript_Token_obj,hasNext,return )
 
 ::hscript::Token GenericStackIterator_hscript_Token_obj::next( ){
-	HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","next",0xb251e83f,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.next","/usr/share/haxe/std/haxe/ds/GenericStack.hx",38,0x427260fb)
+	HX_STACK_FRAME("haxe.ds._GenericStack.GenericStackIterator_hscript_Token","next",0xb251e83f,"haxe.ds._GenericStack.GenericStackIterator_hscript_Token.next","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",38,0xeba1e1a1)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(38)
 	::haxe::ds::GenericCell_hscript_Token tmp = this->current;		HX_STACK_VAR(tmp,"tmp");

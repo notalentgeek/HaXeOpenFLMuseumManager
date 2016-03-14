@@ -20,7 +20,7 @@ namespace io{
 
 Void FileOutput_obj::__construct(Dynamic f)
 {
-HX_STACK_FRAME("sys.io.FileOutput","new",0x19e22a16,"sys.io.FileOutput.new","/usr/share/haxe/std/cpp/_std/sys/io/FileOutput.hx",31,0x2c93d53e)
+HX_STACK_FRAME("sys.io.FileOutput","new",0x19e22a16,"sys.io.FileOutput.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/io/FileOutput.hx",31,0x154e5664)
 HX_STACK_THIS(this)
 HX_STACK_ARG(f,"f")
 {
@@ -46,7 +46,7 @@ Dynamic FileOutput_obj::__Create(hx::DynamicArray inArgs)
 
 Void FileOutput_obj::writeByte( int c){
 {
-		HX_STACK_FRAME("sys.io.FileOutput","writeByte",0x887099bd,"sys.io.FileOutput.writeByte","/usr/share/haxe/std/cpp/_std/sys/io/FileOutput.hx",35,0x2c93d53e)
+		HX_STACK_FRAME("sys.io.FileOutput","writeByte",0x887099bd,"sys.io.FileOutput.writeByte","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/io/FileOutput.hx",35,0x154e5664)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(c,"c")
 		HX_STACK_LINE(35)
@@ -81,7 +81,7 @@ return null();
 
 
 int FileOutput_obj::writeBytes( ::haxe::io::Bytes s,int p,int l){
-	HX_STACK_FRAME("sys.io.FileOutput","writeBytes",0xda15ec16,"sys.io.FileOutput.writeBytes","/usr/share/haxe/std/cpp/_std/sys/io/FileOutput.hx",38,0x2c93d53e)
+	HX_STACK_FRAME("sys.io.FileOutput","writeBytes",0xda15ec16,"sys.io.FileOutput.writeBytes","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/io/FileOutput.hx",38,0x154e5664)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(p,"p")
@@ -123,7 +123,7 @@ int FileOutput_obj::writeBytes( ::haxe::io::Bytes s,int p,int l){
 
 Void FileOutput_obj::close( ){
 {
-		HX_STACK_FRAME("sys.io.FileOutput","close",0xa583caee,"sys.io.FileOutput.close","/usr/share/haxe/std/cpp/_std/sys/io/FileOutput.hx",46,0x2c93d53e)
+		HX_STACK_FRAME("sys.io.FileOutput","close",0xa583caee,"sys.io.FileOutput.close","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/io/FileOutput.hx",46,0x154e5664)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(47)
 		this->super::close();

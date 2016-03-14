@@ -15,7 +15,7 @@
 
 Void Xml_obj::__construct(int nodeType)
 {
-HX_STACK_FRAME("Xml","new",0x2e496e29,"Xml.new","/usr/share/haxe/std/Xml.hx",316,0xc11f2162)
+HX_STACK_FRAME("Xml","new",0x2e496e29,"Xml.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",316,0xb8e3a37c)
 HX_STACK_THIS(this)
 HX_STACK_ARG(nodeType,"nodeType")
 {
@@ -55,7 +55,7 @@ Dynamic Xml_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::String Xml_obj::get( ::String att){
-	HX_STACK_FRAME("Xml","get",0x2e441e5f,"Xml.get","/usr/share/haxe/std/Xml.hx",166,0xc11f2162)
+	HX_STACK_FRAME("Xml","get",0x2e441e5f,"Xml.get","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",166,0xb8e3a37c)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(att,"att")
 	HX_STACK_LINE(167)
@@ -90,7 +90,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,get,return )
 
 Void Xml_obj::set( ::String att,::String value){
 {
-		HX_STACK_FRAME("Xml","set",0x2e4d396b,"Xml.set","/usr/share/haxe/std/Xml.hx",177,0xc11f2162)
+		HX_STACK_FRAME("Xml","set",0x2e4d396b,"Xml.set","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",177,0xb8e3a37c)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(att,"att")
 		HX_STACK_ARG(value,"value")
@@ -125,7 +125,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC2(Xml_obj,set,(void))
 
 bool Xml_obj::exists( ::String att){
-	HX_STACK_FRAME("Xml","exists",0x446683b3,"Xml.exists","/usr/share/haxe/std/Xml.hx",199,0xc11f2162)
+	HX_STACK_FRAME("Xml","exists",0x446683b3,"Xml.exists","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",199,0xb8e3a37c)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(att,"att")
 	HX_STACK_LINE(200)
@@ -157,7 +157,7 @@ bool Xml_obj::exists( ::String att){
 HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,exists,return )
 
 Dynamic Xml_obj::attributes( ){
-	HX_STACK_FRAME("Xml","attributes",0x1ab5462e,"Xml.attributes","/usr/share/haxe/std/Xml.hx",209,0xc11f2162)
+	HX_STACK_FRAME("Xml","attributes",0x1ab5462e,"Xml.attributes","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",209,0xb8e3a37c)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(210)
 	int tmp = this->nodeType;		HX_STACK_VAR(tmp,"tmp");
@@ -186,7 +186,7 @@ Dynamic Xml_obj::attributes( ){
 HX_DEFINE_DYNAMIC_FUNC0(Xml_obj,attributes,return )
 
 Dynamic Xml_obj::elements( ){
-	HX_STACK_FRAME("Xml","elements",0x0310ffce,"Xml.elements","/usr/share/haxe/std/Xml.hx",229,0xc11f2162)
+	HX_STACK_FRAME("Xml","elements",0x0310ffce,"Xml.elements","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",229,0xb8e3a37c)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(230)
 	{
@@ -282,7 +282,7 @@ Dynamic Xml_obj::elements( ){
 HX_DEFINE_DYNAMIC_FUNC0(Xml_obj,elements,return )
 
 ::Xml Xml_obj::firstElement( ){
-	HX_STACK_FRAME("Xml","firstElement",0xc103a583,"Xml.firstElement","/usr/share/haxe/std/Xml.hx",256,0xc11f2162)
+	HX_STACK_FRAME("Xml","firstElement",0xc103a583,"Xml.firstElement","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",256,0xb8e3a37c)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(257)
 	{
@@ -368,7 +368,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Xml_obj,firstElement,return )
 
 Void Xml_obj::addChild( ::Xml x){
 {
-		HX_STACK_FRAME("Xml","addChild",0x3e639952,"Xml.addChild","/usr/share/haxe/std/Xml.hx",272,0xc11f2162)
+		HX_STACK_FRAME("Xml","addChild",0x3e639952,"Xml.addChild","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",272,0xb8e3a37c)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(x,"x")
 		HX_STACK_LINE(273)
@@ -431,7 +431,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,addChild,(void))
 
 bool Xml_obj::removeChild( ::Xml x){
-	HX_STACK_FRAME("Xml","removeChild",0x9bd39581,"Xml.removeChild","/usr/share/haxe/std/Xml.hx",285,0xc11f2162)
+	HX_STACK_FRAME("Xml","removeChild",0x9bd39581,"Xml.removeChild","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",285,0xb8e3a37c)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(x,"x")
 	HX_STACK_LINE(286)
@@ -504,7 +504,7 @@ int Xml_obj::ProcessingInstruction;
 int Xml_obj::Document;
 
 ::Xml Xml_obj::parse( ::String str){
-	HX_STACK_FRAME("Xml","parse",0x8a44f23c,"Xml.parse","/usr/share/haxe/std/Xml.hx",43,0xc11f2162)
+	HX_STACK_FRAME("Xml","parse",0x8a44f23c,"Xml.parse","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",43,0xb8e3a37c)
 	HX_STACK_ARG(str,"str")
 	HX_STACK_LINE(44)
 	::String tmp = str;		HX_STACK_VAR(tmp,"tmp");
@@ -518,7 +518,7 @@ int Xml_obj::Document;
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,parse,return )
 
 ::Xml Xml_obj::createElement( ::String name){
-	HX_STACK_FRAME("Xml","createElement",0x97359a29,"Xml.createElement","/usr/share/haxe/std/Xml.hx",104,0xc11f2162)
+	HX_STACK_FRAME("Xml","createElement",0x97359a29,"Xml.createElement","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",104,0xb8e3a37c)
 	HX_STACK_ARG(name,"name")
 	HX_STACK_LINE(105)
 	int tmp = ::Xml_obj::Element;		HX_STACK_VAR(tmp,"tmp");
@@ -554,7 +554,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,parse,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createElement,return )
 
 ::Xml Xml_obj::createPCData( ::String data){
-	HX_STACK_FRAME("Xml","createPCData",0x3cc9ead0,"Xml.createPCData","/usr/share/haxe/std/Xml.hx",113,0xc11f2162)
+	HX_STACK_FRAME("Xml","createPCData",0x3cc9ead0,"Xml.createPCData","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",113,0xb8e3a37c)
 	HX_STACK_ARG(data,"data")
 	HX_STACK_LINE(114)
 	int tmp = ::Xml_obj::PCData;		HX_STACK_VAR(tmp,"tmp");
@@ -609,7 +609,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createElement,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createPCData,return )
 
 ::Xml Xml_obj::createCData( ::String data){
-	HX_STACK_FRAME("Xml","createCData",0xaf49365a,"Xml.createCData","/usr/share/haxe/std/Xml.hx",122,0xc11f2162)
+	HX_STACK_FRAME("Xml","createCData",0xaf49365a,"Xml.createCData","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",122,0xb8e3a37c)
 	HX_STACK_ARG(data,"data")
 	HX_STACK_LINE(123)
 	int tmp = ::Xml_obj::CData;		HX_STACK_VAR(tmp,"tmp");
@@ -664,7 +664,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createPCData,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createCData,return )
 
 ::Xml Xml_obj::createComment( ::String data){
-	HX_STACK_FRAME("Xml","createComment",0x125165cc,"Xml.createComment","/usr/share/haxe/std/Xml.hx",131,0xc11f2162)
+	HX_STACK_FRAME("Xml","createComment",0x125165cc,"Xml.createComment","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",131,0xb8e3a37c)
 	HX_STACK_ARG(data,"data")
 	HX_STACK_LINE(132)
 	int tmp = ::Xml_obj::Comment;		HX_STACK_VAR(tmp,"tmp");
@@ -719,7 +719,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createCData,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createComment,return )
 
 ::Xml Xml_obj::createDocType( ::String data){
-	HX_STACK_FRAME("Xml","createDocType",0x696de8bf,"Xml.createDocType","/usr/share/haxe/std/Xml.hx",140,0xc11f2162)
+	HX_STACK_FRAME("Xml","createDocType",0x696de8bf,"Xml.createDocType","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",140,0xb8e3a37c)
 	HX_STACK_ARG(data,"data")
 	HX_STACK_LINE(141)
 	int tmp = ::Xml_obj::DocType;		HX_STACK_VAR(tmp,"tmp");
@@ -774,7 +774,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createComment,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createDocType,return )
 
 ::Xml Xml_obj::createProcessingInstruction( ::String data){
-	HX_STACK_FRAME("Xml","createProcessingInstruction",0x632a1f28,"Xml.createProcessingInstruction","/usr/share/haxe/std/Xml.hx",149,0xc11f2162)
+	HX_STACK_FRAME("Xml","createProcessingInstruction",0x632a1f28,"Xml.createProcessingInstruction","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",149,0xb8e3a37c)
 	HX_STACK_ARG(data,"data")
 	HX_STACK_LINE(150)
 	int tmp = ::Xml_obj::ProcessingInstruction;		HX_STACK_VAR(tmp,"tmp");
@@ -829,7 +829,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createDocType,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,createProcessingInstruction,return )
 
 ::Xml Xml_obj::createDocument( ){
-	HX_STACK_FRAME("Xml","createDocument",0xcf00030e,"Xml.createDocument","/usr/share/haxe/std/Xml.hx",158,0xc11f2162)
+	HX_STACK_FRAME("Xml","createDocument",0xcf00030e,"Xml.createDocument","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/Xml.hx",158,0xb8e3a37c)
 	HX_STACK_LINE(159)
 	int tmp = ::Xml_obj::Document;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(159)

@@ -11,7 +11,7 @@ namespace ds{
 
 Void GenericCell_hscript_Token_obj::__construct(::hscript::Token elt,::haxe::ds::GenericCell_hscript_Token next)
 {
-HX_STACK_FRAME("haxe.ds.GenericCell_hscript_Token","new",0x1c0e2ea2,"haxe.ds.GenericCell_hscript_Token.new","/usr/share/haxe/std/haxe/ds/GenericStack.hx",30,0x427260fb)
+HX_STACK_FRAME("haxe.ds.GenericCell_hscript_Token","new",0x1c0e2ea2,"haxe.ds.GenericCell_hscript_Token.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/ds/GenericStack.hx",30,0xeba1e1a1)
 HX_STACK_THIS(this)
 HX_STACK_ARG(elt,"elt")
 HX_STACK_ARG(next,"next")

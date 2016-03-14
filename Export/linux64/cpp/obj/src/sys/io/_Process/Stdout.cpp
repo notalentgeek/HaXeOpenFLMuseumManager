@@ -24,7 +24,7 @@ namespace _Process{
 
 Void Stdout_obj::__construct(Dynamic p,bool out)
 {
-HX_STACK_FRAME("sys.io._Process.Stdout","new",0xc765a8f4,"sys.io._Process.Stdout.new","/usr/share/haxe/std/cpp/_std/sys/io/Process.hx",64,0x2d961692)
+HX_STACK_FRAME("sys.io._Process.Stdout","new",0xc765a8f4,"sys.io._Process.Stdout.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/io/Process.hx",64,0x34d001ac)
 HX_STACK_THIS(this)
 HX_STACK_ARG(p,"p")
 HX_STACK_ARG(out,"out")
@@ -56,7 +56,7 @@ Dynamic Stdout_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 int Stdout_obj::readByte( ){
-	HX_STACK_FRAME("sys.io._Process.Stdout","readByte",0xa72b886a,"sys.io._Process.Stdout.readByte","/usr/share/haxe/std/cpp/_std/sys/io/Process.hx",70,0x2d961692)
+	HX_STACK_FRAME("sys.io._Process.Stdout","readByte",0xa72b886a,"sys.io._Process.Stdout.readByte","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/io/Process.hx",70,0x34d001ac)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(71)
 	::haxe::io::Bytes tmp = this->buf;		HX_STACK_VAR(tmp,"tmp");
@@ -79,7 +79,7 @@ int Stdout_obj::readByte( ){
 
 
 int Stdout_obj::readBytes( ::haxe::io::Bytes str,int pos,int len){
-	HX_STACK_FRAME("sys.io._Process.Stdout","readBytes",0x9eebd4c9,"sys.io._Process.Stdout.readBytes","/usr/share/haxe/std/cpp/_std/sys/io/Process.hx",76,0x2d961692)
+	HX_STACK_FRAME("sys.io._Process.Stdout","readBytes",0x9eebd4c9,"sys.io._Process.Stdout.readBytes","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/io/Process.hx",76,0x34d001ac)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(str,"str")
 	HX_STACK_ARG(pos,"pos")

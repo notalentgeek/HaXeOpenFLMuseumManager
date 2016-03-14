@@ -37,7 +37,7 @@ Dynamic File_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::String File_obj::getContent( ::String path){
-	HX_STACK_FRAME("sys.io.File","getContent",0xb28b4a0e,"sys.io.File.getContent","/usr/share/haxe/std/cpp/_std/sys/io/File.hx",27,0xa9f746ff)
+	HX_STACK_FRAME("sys.io.File","getContent",0xb28b4a0e,"sys.io.File.getContent","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/io/File.hx",27,0x5326c7a5)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(28)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -55,7 +55,7 @@ Dynamic File_obj::__Create(hx::DynamicArray inArgs)
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(File_obj,getContent,return )
 
 ::haxe::io::Bytes File_obj::getBytes( ::String path){
-	HX_STACK_FRAME("sys.io.File","getBytes",0xbe457600,"sys.io.File.getBytes","/usr/share/haxe/std/cpp/_std/sys/io/File.hx",32,0xa9f746ff)
+	HX_STACK_FRAME("sys.io.File","getBytes",0xbe457600,"sys.io.File.getBytes","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/io/File.hx",32,0x5326c7a5)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(33)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -72,7 +72,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(File_obj,getBytes,return )
 
 ::sys::io::FileInput File_obj::read( ::String path,hx::Null< bool >  __o_binary){
 bool binary = __o_binary.Default(true);
-	HX_STACK_FRAME("sys.io.File","read",0x203d07e1,"sys.io.File.read","/usr/share/haxe/std/cpp/_std/sys/io/File.hx",49,0xa9f746ff)
+	HX_STACK_FRAME("sys.io.File","read",0x203d07e1,"sys.io.File.read","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/io/File.hx",49,0x5326c7a5)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_ARG(binary,"binary")
 {

@@ -5570,14 +5570,14 @@
    <depend name="include/StringBuf.h"/>
    <depend name="include/cpp/Lib.h"/>
   </file>
-  <file name="src/__ASSET__fonts_oxygen_ttf.cpp">
-   <depend name="include/__ASSET__fonts_oxygen_ttf.h"/>
+  <file name="src/__ASSET__fonts_oxygen_bold_ttf.cpp">
+   <depend name="include/__ASSET__fonts_oxygen_bold_ttf.h"/>
    <depend name="include/openfl/_legacy/text/Font.h"/>
    <depend name="include/openfl/_legacy/text/FontStyle.h"/>
    <depend name="include/openfl/_legacy/text/FontType.h"/>
   </file>
-  <file name="src/__ASSET__fonts_oxygen_bold_ttf.cpp">
-   <depend name="include/__ASSET__fonts_oxygen_bold_ttf.h"/>
+  <file name="src/__ASSET__fonts_oxygen_ttf.cpp">
+   <depend name="include/__ASSET__fonts_oxygen_ttf.h"/>
    <depend name="include/openfl/_legacy/text/Font.h"/>
    <depend name="include/openfl/_legacy/text/FontStyle.h"/>
    <depend name="include/openfl/_legacy/text/FontType.h"/>

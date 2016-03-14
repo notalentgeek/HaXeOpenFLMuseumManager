@@ -35,7 +35,7 @@ Dynamic DateTools_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::String DateTools_obj::__format_get( ::Date d,::String e){
-	HX_STACK_FRAME("DateTools","__format_get",0xabb90f8f,"DateTools.__format_get","/usr/share/haxe/std/DateTools.hx",36,0x278d762c)
+	HX_STACK_FRAME("DateTools","__format_get",0xabb90f8f,"DateTools.__format_get","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/DateTools.hx",36,0x69cd87c6)
 	HX_STACK_ARG(d,"d")
 	HX_STACK_ARG(e,"e")
 	HX_STACK_LINE(37)
@@ -281,7 +281,7 @@ Dynamic DateTools_obj::__Create(hx::DynamicArray inArgs)
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(DateTools_obj,__format_get,return )
 
 ::String DateTools_obj::__format( ::Date d,::String f){
-	HX_STACK_FRAME("DateTools","__format",0x77c4edf8,"DateTools.__format","/usr/share/haxe/std/DateTools.hx",91,0x278d762c)
+	HX_STACK_FRAME("DateTools","__format",0x77c4edf8,"DateTools.__format","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/DateTools.hx",91,0x69cd87c6)
 	HX_STACK_ARG(d,"d")
 	HX_STACK_ARG(f,"f")
 	HX_STACK_LINE(92)
@@ -352,7 +352,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(DateTools_obj,__format_get,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(DateTools_obj,__format,return )
 
 ::String DateTools_obj::format( ::Date d,::String f){
-	HX_STACK_FRAME("DateTools","format",0x1113a898,"DateTools.format","/usr/share/haxe/std/DateTools.hx",116,0x278d762c)
+	HX_STACK_FRAME("DateTools","format",0x1113a898,"DateTools.format","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/DateTools.hx",116,0x69cd87c6)
 	HX_STACK_ARG(d,"d")
 	HX_STACK_ARG(f,"f")
 	HX_STACK_LINE(122)

@@ -43,7 +43,7 @@ Dynamic Parser_obj::__Create(hx::DynamicArray inArgs)
 
 ::Xml Parser_obj::parse( ::String str,hx::Null< bool >  __o_strict){
 bool strict = __o_strict.Default(false);
-	HX_STACK_FRAME("haxe.xml.Parser","parse",0x937905c3,"haxe.xml.Parser.parse","/usr/share/haxe/std/haxe/xml/Parser.hx",65,0x2e27fb39)
+	HX_STACK_FRAME("haxe.xml.Parser","parse",0x937905c3,"haxe.xml.Parser.parse","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/xml/Parser.hx",65,0x91343c53)
 	HX_STACK_ARG(str,"str")
 	HX_STACK_ARG(strict,"strict")
 {
@@ -71,7 +71,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Parser_obj,parse,return )
 
 int Parser_obj::doParse( ::String str,bool strict,hx::Null< int >  __o_p,::Xml parent){
 int p = __o_p.Default(0);
-	HX_STACK_FRAME("haxe.xml.Parser","doParse",0x2e9a6a38,"haxe.xml.Parser.doParse","/usr/share/haxe/std/haxe/xml/Parser.hx",72,0x2e27fb39)
+	HX_STACK_FRAME("haxe.xml.Parser","doParse",0x2e9a6a38,"haxe.xml.Parser.doParse","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/xml/Parser.hx",72,0x91343c53)
 	HX_STACK_ARG(str,"str")
 	HX_STACK_ARG(strict,"strict")
 	HX_STACK_ARG(p,"p")
@@ -2249,7 +2249,7 @@ void Parser_obj::__boot()
 {
 struct _Function_0_1{
 	inline static ::haxe::ds::StringMap Block( ){
-		HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/haxe/xml/Parser.hx",51,0x2e27fb39)
+		HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/xml/Parser.hx",51,0x91343c53)
 		{
 			HX_STACK_LINE(52)
 			::haxe::ds::StringMap tmp = ::haxe::ds::StringMap_obj::__new();		HX_STACK_VAR(tmp,"tmp");

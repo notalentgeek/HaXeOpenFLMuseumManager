@@ -8,7 +8,7 @@ namespace io{
 
 Void Eof_obj::__construct()
 {
-HX_STACK_FRAME("haxe.io.Eof","new",0x2166e64e,"haxe.io.Eof.new","/usr/share/haxe/std/haxe/io/Eof.hx",28,0x07e3967d)
+HX_STACK_FRAME("haxe.io.Eof","new",0x2166e64e,"haxe.io.Eof.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Eof.hx",28,0x677ec297)
 HX_STACK_THIS(this)
 {
 }
@@ -30,7 +30,7 @@ Dynamic Eof_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::String Eof_obj::toString( ){
-	HX_STACK_FRAME("haxe.io.Eof","toString",0xf9ff7bfe,"haxe.io.Eof.toString","/usr/share/haxe/std/haxe/io/Eof.hx",31,0x07e3967d)
+	HX_STACK_FRAME("haxe.io.Eof","toString",0xf9ff7bfe,"haxe.io.Eof.toString","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/Eof.hx",31,0x677ec297)
 	HX_STACK_THIS(this)
 	HX_STACK_LINE(31)
 	return HX_HCSTRING("Eof","\x9c","\xbc","\x34","\x00");

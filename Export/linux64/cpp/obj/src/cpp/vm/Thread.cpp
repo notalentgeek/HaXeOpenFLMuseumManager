@@ -8,7 +8,7 @@ namespace vm{
 
 Void Thread_obj::__construct(Dynamic h)
 {
-HX_STACK_FRAME("cpp.vm.Thread","new",0x66262c28,"cpp.vm.Thread.new","/usr/share/haxe/std/cpp/vm/Thread.hx",31,0x70514563)
+HX_STACK_FRAME("cpp.vm.Thread","new",0x66262c28,"cpp.vm.Thread.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/vm/Thread.hx",31,0x4e232bfd)
 HX_STACK_THIS(this)
 HX_STACK_ARG(h,"h")
 {
@@ -34,7 +34,7 @@ Dynamic Thread_obj::__Create(hx::DynamicArray inArgs)
 
 Void Thread_obj::sendMessage( Dynamic msg){
 {
-		HX_STACK_FRAME("cpp.vm.Thread","sendMessage",0x48dced27,"cpp.vm.Thread.sendMessage","/usr/share/haxe/std/cpp/vm/Thread.hx",38,0x70514563)
+		HX_STACK_FRAME("cpp.vm.Thread","sendMessage",0x48dced27,"cpp.vm.Thread.sendMessage","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/vm/Thread.hx",38,0x4e232bfd)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(msg,"msg")
 		HX_STACK_LINE(38)
@@ -47,7 +47,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Thread_obj,sendMessage,(void))
 
 int Thread_obj::__compare( Dynamic t){
-	HX_STACK_FRAME("cpp.vm.Thread","__compare",0x3204cb4d,"cpp.vm.Thread.__compare","/usr/share/haxe/std/cpp/vm/Thread.hx",65,0x70514563)
+	HX_STACK_FRAME("cpp.vm.Thread","__compare",0x3204cb4d,"cpp.vm.Thread.__compare","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/vm/Thread.hx",65,0x4e232bfd)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(t,"t")
 	HX_STACK_LINE(66)
@@ -75,7 +75,7 @@ int Thread_obj::__compare( Dynamic t){
 HX_DEFINE_DYNAMIC_FUNC1(Thread_obj,__compare,return )
 
 ::cpp::vm::Thread Thread_obj::current( ){
-	HX_STACK_FRAME("cpp.vm.Thread","current",0x21a37c01,"cpp.vm.Thread.current","/usr/share/haxe/std/cpp/vm/Thread.hx",45,0x70514563)
+	HX_STACK_FRAME("cpp.vm.Thread","current",0x21a37c01,"cpp.vm.Thread.current","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/vm/Thread.hx",45,0x4e232bfd)
 	HX_STACK_LINE(46)
 	Dynamic tmp = ::__hxcpp_thread_current();		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(46)
@@ -88,7 +88,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Thread_obj,__compare,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Thread_obj,current,return )
 
 ::cpp::vm::Thread Thread_obj::create( Dynamic callb){
-	HX_STACK_FRAME("cpp.vm.Thread","create",0xb01a9834,"cpp.vm.Thread.create","/usr/share/haxe/std/cpp/vm/Thread.hx",52,0x70514563)
+	HX_STACK_FRAME("cpp.vm.Thread","create",0xb01a9834,"cpp.vm.Thread.create","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/vm/Thread.hx",52,0x4e232bfd)
 	HX_STACK_ARG(callb,"callb")
 	HX_STACK_LINE(53)
 	Dynamic tmp = ::__hxcpp_thread_create(callb);		HX_STACK_VAR(tmp,"tmp");
@@ -102,7 +102,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Thread_obj,current,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Thread_obj,create,return )
 
 Dynamic Thread_obj::readMessage( bool block){
-	HX_STACK_FRAME("cpp.vm.Thread","readMessage",0x11bc2cd9,"cpp.vm.Thread.readMessage","/usr/share/haxe/std/cpp/vm/Thread.hx",61,0x70514563)
+	HX_STACK_FRAME("cpp.vm.Thread","readMessage",0x11bc2cd9,"cpp.vm.Thread.readMessage","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/vm/Thread.hx",61,0x4e232bfd)
 	HX_STACK_ARG(block,"block")
 	HX_STACK_LINE(62)
 	Dynamic tmp = ::__hxcpp_thread_read_message(block);		HX_STACK_VAR(tmp,"tmp");

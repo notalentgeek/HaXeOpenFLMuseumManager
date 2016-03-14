@@ -8,7 +8,7 @@ namespace vm{
 
 Void Deque_obj::__construct()
 {
-HX_STACK_FRAME("cpp.vm.Deque","new",0xa6685326,"cpp.vm.Deque.new","/usr/share/haxe/std/cpp/vm/Deque.hx",27,0xcc527a4f)
+HX_STACK_FRAME("cpp.vm.Deque","new",0xa6685326,"cpp.vm.Deque.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/vm/Deque.hx",27,0x147de4f5)
 HX_STACK_THIS(this)
 {
 	HX_STACK_LINE(28)
@@ -35,7 +35,7 @@ Dynamic Deque_obj::__Create(hx::DynamicArray inArgs)
 
 Void Deque_obj::add( Dynamic i){
 {
-		HX_STACK_FRAME("cpp.vm.Deque","add",0xa65e74e7,"cpp.vm.Deque.add","/usr/share/haxe/std/cpp/vm/Deque.hx",31,0xcc527a4f)
+		HX_STACK_FRAME("cpp.vm.Deque","add",0xa65e74e7,"cpp.vm.Deque.add","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/vm/Deque.hx",31,0x147de4f5)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(i,"i")
 		HX_STACK_LINE(31)
@@ -48,7 +48,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Deque_obj,add,(void))
 
 Dynamic Deque_obj::pop( bool block){
-	HX_STACK_FRAME("cpp.vm.Deque","pop",0xa669e057,"cpp.vm.Deque.pop","/usr/share/haxe/std/cpp/vm/Deque.hx",36,0xcc527a4f)
+	HX_STACK_FRAME("cpp.vm.Deque","pop",0xa669e057,"cpp.vm.Deque.pop","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/vm/Deque.hx",36,0x147de4f5)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(block,"block")
 	HX_STACK_LINE(37)

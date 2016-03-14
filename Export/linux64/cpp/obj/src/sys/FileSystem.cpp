@@ -36,7 +36,7 @@ Dynamic FileSystem_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 bool FileSystem_obj::exists( ::String path){
-	HX_STACK_FRAME("sys.FileSystem","exists",0xf55bed9e,"sys.FileSystem.exists","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",33,0xcabeeced)
+	HX_STACK_FRAME("sys.FileSystem","exists",0xf55bed9e,"sys.FileSystem.exists","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/FileSystem.hx",33,0xd1f8d807)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(34)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -52,7 +52,7 @@ bool FileSystem_obj::exists( ::String path){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,exists,return )
 
 Dynamic FileSystem_obj::stat( ::String path){
-	HX_STACK_FRAME("sys.FileSystem","stat",0xa630df16,"sys.FileSystem.stat","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",42,0xcabeeced)
+	HX_STACK_FRAME("sys.FileSystem","stat",0xa630df16,"sys.FileSystem.stat","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/FileSystem.hx",42,0xd1f8d807)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(43)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -72,7 +72,7 @@ Dynamic FileSystem_obj::stat( ::String path){
 		::Date tmp5 = ::Date_obj::fromTime((int)0);		HX_STACK_VAR(tmp5,"tmp5");
 		struct _Function_2_1{
 			inline static Dynamic Block( ::Date &tmp5,::Date &tmp4,::Date &tmp3){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",45,0xcabeeced)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/FileSystem.hx",45,0xd1f8d807)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_HCSTRING("gid","\x02","\x84","\x4e","\x00") , (int)0,false);
@@ -124,7 +124,7 @@ Dynamic FileSystem_obj::stat( ::String path){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,stat,return )
 
 ::String FileSystem_obj::fullPath( ::String relPath){
-	HX_STACK_FRAME("sys.FileSystem","fullPath",0xc6463316,"sys.FileSystem.fullPath","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",52,0xcabeeced)
+	HX_STACK_FRAME("sys.FileSystem","fullPath",0xc6463316,"sys.FileSystem.fullPath","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/FileSystem.hx",52,0xd1f8d807)
 	HX_STACK_ARG(relPath,"relPath")
 	HX_STACK_LINE(53)
 	::String tmp = relPath;		HX_STACK_VAR(tmp,"tmp");
@@ -140,7 +140,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,stat,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,fullPath,return )
 
 ::sys::_FileSystem::FileKind FileSystem_obj::kind( ::String path){
-	HX_STACK_FRAME("sys.FileSystem","kind",0xa0dedc96,"sys.FileSystem.kind","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",61,0xcabeeced)
+	HX_STACK_FRAME("sys.FileSystem","kind",0xa0dedc96,"sys.FileSystem.kind","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/FileSystem.hx",61,0xd1f8d807)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(62)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -180,7 +180,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,fullPath,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,kind,return )
 
 bool FileSystem_obj::isDirectory( ::String path){
-	HX_STACK_FRAME("sys.FileSystem","isDirectory",0x6c577a21,"sys.FileSystem.isDirectory","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",70,0xcabeeced)
+	HX_STACK_FRAME("sys.FileSystem","isDirectory",0x6c577a21,"sys.FileSystem.isDirectory","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/FileSystem.hx",70,0xd1f8d807)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(71)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");
@@ -196,7 +196,7 @@ bool FileSystem_obj::isDirectory( ::String path){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(FileSystem_obj,isDirectory,return )
 
 Array< ::String > FileSystem_obj::readDirectory( ::String path){
-	HX_STACK_FRAME("sys.FileSystem","readDirectory",0x0619f8b5,"sys.FileSystem.readDirectory","/usr/share/haxe/std/cpp/_std/sys/FileSystem.hx",98,0xcabeeced)
+	HX_STACK_FRAME("sys.FileSystem","readDirectory",0x0619f8b5,"sys.FileSystem.readDirectory","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/FileSystem.hx",98,0xd1f8d807)
 	HX_STACK_ARG(path,"path")
 	HX_STACK_LINE(99)
 	::String tmp = path;		HX_STACK_VAR(tmp,"tmp");

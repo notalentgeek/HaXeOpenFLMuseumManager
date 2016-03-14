@@ -17,7 +17,7 @@ namespace io{
 
 Void StringInput_obj::__construct(::String s)
 {
-HX_STACK_FRAME("haxe.io.StringInput","new",0x8fd1998b,"haxe.io.StringInput.new","/usr/share/haxe/std/haxe/io/StringInput.hx",26,0x80bf6ce0)
+HX_STACK_FRAME("haxe.io.StringInput","new",0x8fd1998b,"haxe.io.StringInput.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/haxe/io/StringInput.hx",26,0x5deb42fa)
 HX_STACK_THIS(this)
 HX_STACK_ARG(s,"s")
 {

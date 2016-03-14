@@ -1,3 +1,4 @@
+#This Python script is using Python3. Do not use Python2.
 from wordnik import *
 import sys
 def WordnikGetPhrase(_searchString):

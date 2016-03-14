@@ -24,7 +24,7 @@ Dynamic Lib_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 Dynamic Lib_obj::load( ::String lib,::String prim,int nargs){
-	HX_STACK_FRAME("cpp.Lib","load",0xd2b2dcba,"cpp.Lib.load","/usr/share/haxe/std/cpp/Lib.hx",30,0x195878e0)
+	HX_STACK_FRAME("cpp.Lib","load",0xd2b2dcba,"cpp.Lib.load","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/Lib.hx",30,0x52f10ffa)
 	HX_STACK_ARG(lib,"lib")
 	HX_STACK_ARG(prim,"prim")
 	HX_STACK_ARG(nargs,"nargs")
@@ -38,7 +38,7 @@ Dynamic Lib_obj::load( ::String lib,::String prim,int nargs){
 STATIC_HX_DEFINE_DYNAMIC_FUNC3(Lib_obj,load,return )
 
 Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
-	HX_STACK_FRAME("cpp.Lib","loadLazy",0x865efe4e,"cpp.Lib.loadLazy","/usr/share/haxe/std/cpp/Lib.hx",65,0x195878e0)
+	HX_STACK_FRAME("cpp.Lib","loadLazy",0x865efe4e,"cpp.Lib.loadLazy","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/Lib.hx",65,0x52f10ffa)
 	HX_STACK_ARG(lib,"lib")
 	HX_STACK_ARG(prim,"prim")
 	HX_STACK_ARG(nargs,"nargs")
@@ -66,7 +66,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e)
 						int __ArgCount() const { return 0; }
 						Void run(){
-							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/usr/share/haxe/std/cpp/Lib.hx",70,0x195878e0)
+							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/Lib.hx",70,0x52f10ffa)
 							{
 								HX_STACK_LINE(70)
 								Dynamic tmp1 = e;		HX_STACK_VAR(tmp1,"tmp1");
@@ -86,7 +86,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e)
 						int __ArgCount() const { return 2; }
 						Void run(Dynamic _1,Dynamic _2){
-							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/usr/share/haxe/std/cpp/Lib.hx",71,0x195878e0)
+							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/Lib.hx",71,0x52f10ffa)
 							HX_STACK_ARG(_1,"_1")
 							HX_STACK_ARG(_2,"_2")
 							{
@@ -108,7 +108,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e)
 						int __ArgCount() const { return 3; }
 						Void run(Dynamic _1,Dynamic _2,Dynamic _3){
-							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/usr/share/haxe/std/cpp/Lib.hx",72,0x195878e0)
+							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/Lib.hx",72,0x52f10ffa)
 							HX_STACK_ARG(_1,"_1")
 							HX_STACK_ARG(_2,"_2")
 							HX_STACK_ARG(_3,"_3")
@@ -131,7 +131,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e)
 						int __ArgCount() const { return 4; }
 						Void run(Dynamic _1,Dynamic _2,Dynamic _3,Dynamic _4){
-							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/usr/share/haxe/std/cpp/Lib.hx",73,0x195878e0)
+							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/Lib.hx",73,0x52f10ffa)
 							HX_STACK_ARG(_1,"_1")
 							HX_STACK_ARG(_2,"_2")
 							HX_STACK_ARG(_3,"_3")
@@ -155,7 +155,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e)
 						int __ArgCount() const { return 5; }
 						Void run(Dynamic _1,Dynamic _2,Dynamic _3,Dynamic _4,Dynamic _5){
-							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/usr/share/haxe/std/cpp/Lib.hx",74,0x195878e0)
+							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/Lib.hx",74,0x52f10ffa)
 							HX_STACK_ARG(_1,"_1")
 							HX_STACK_ARG(_2,"_2")
 							HX_STACK_ARG(_3,"_3")
@@ -180,7 +180,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e)
 						int __ArgCount() const { return 1; }
 						Void run(Dynamic _1){
-							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/usr/share/haxe/std/cpp/Lib.hx",75,0x195878e0)
+							HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/Lib.hx",75,0x52f10ffa)
 							HX_STACK_ARG(_1,"_1")
 							{
 								HX_STACK_LINE(75)
@@ -208,7 +208,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(Lib_obj,loadLazy,return )
 
 Void Lib_obj::rethrow( Dynamic inExp){
 {
-		HX_STACK_FRAME("cpp.Lib","rethrow",0x3bf8427f,"cpp.Lib.rethrow","/usr/share/haxe/std/cpp/Lib.hx",81,0x195878e0)
+		HX_STACK_FRAME("cpp.Lib","rethrow",0x3bf8427f,"cpp.Lib.rethrow","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/Lib.hx",81,0x52f10ffa)
 		HX_STACK_ARG(inExp,"inExp")
 		HX_STACK_LINE(81)
 		Dynamic tmp = inExp;		HX_STACK_VAR(tmp,"tmp");

@@ -24,7 +24,7 @@ Dynamic StringTools_obj::__Create(hx::DynamicArray inArgs)
 	return _result_;}
 
 ::String StringTools_obj::urlEncode( ::String s){
-	HX_STACK_FRAME("StringTools","urlEncode",0x06afdce1,"StringTools.urlEncode","/usr/share/haxe/std/StringTools.hx",36,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","urlEncode",0x06afdce1,"StringTools.urlEncode","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",36,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_LINE(44)
 	::String tmp = s.__URLEncode();		HX_STACK_VAR(tmp,"tmp");
@@ -36,7 +36,7 @@ Dynamic StringTools_obj::__Create(hx::DynamicArray inArgs)
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,urlEncode,return )
 
 ::String StringTools_obj::urlDecode( ::String s){
-	HX_STACK_FRAME("StringTools","urlDecode",0x71b947f9,"StringTools.urlDecode","/usr/share/haxe/std/StringTools.hx",61,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","urlDecode",0x71b947f9,"StringTools.urlDecode","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",61,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_LINE(69)
 	::String tmp = s.__URLDecode();		HX_STACK_VAR(tmp,"tmp");
@@ -48,7 +48,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,urlEncode,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,urlDecode,return )
 
 ::String StringTools_obj::htmlEscape( ::String s,Dynamic quotes){
-	HX_STACK_FRAME("StringTools","htmlEscape",0x0e1a5dd0,"StringTools.htmlEscape","/usr/share/haxe/std/StringTools.hx",97,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","htmlEscape",0x0e1a5dd0,"StringTools.htmlEscape","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",97,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(quotes,"quotes")
 	HX_STACK_LINE(98)
@@ -82,7 +82,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,urlDecode,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(StringTools_obj,htmlEscape,return )
 
 bool StringTools_obj::startsWith( ::String s,::String start){
-	HX_STACK_FRAME("StringTools","startsWith",0x5f4e6efb,"StringTools.startsWith","/usr/share/haxe/std/StringTools.hx",127,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","startsWith",0x5f4e6efb,"StringTools.startsWith","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",127,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(start,"start")
 	HX_STACK_LINE(133)
@@ -134,7 +134,7 @@ bool StringTools_obj::startsWith( ::String s,::String start){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(StringTools_obj,startsWith,return )
 
 bool StringTools_obj::endsWith( ::String s,::String end){
-	HX_STACK_FRAME("StringTools","endsWith",0x0eb5bfe2,"StringTools.endsWith","/usr/share/haxe/std/StringTools.hx",153,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","endsWith",0x0eb5bfe2,"StringTools.endsWith","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",153,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(end,"end")
 	HX_STACK_LINE(159)
@@ -186,7 +186,7 @@ bool StringTools_obj::endsWith( ::String s,::String end){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(StringTools_obj,endsWith,return )
 
 bool StringTools_obj::isSpace( ::String s,int pos){
-	HX_STACK_FRAME("StringTools","isSpace",0xe0290778,"StringTools.isSpace","/usr/share/haxe/std/StringTools.hx",183,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","isSpace",0xe0290778,"StringTools.isSpace","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",183,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(pos,"pos")
 	HX_STACK_LINE(187)
@@ -231,7 +231,7 @@ bool StringTools_obj::isSpace( ::String s,int pos){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(StringTools_obj,isSpace,return )
 
 ::String StringTools_obj::ltrim( ::String s){
-	HX_STACK_FRAME("StringTools","ltrim",0x24d2234a,"StringTools.ltrim","/usr/share/haxe/std/StringTools.hx",200,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","ltrim",0x24d2234a,"StringTools.ltrim","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",200,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_LINE(204)
 	int l = s.length;		HX_STACK_VAR(l,"l");
@@ -297,7 +297,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(StringTools_obj,isSpace,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,ltrim,return )
 
 ::String StringTools_obj::rtrim( ::String s){
-	HX_STACK_FRAME("StringTools","rtrim",0x99399e50,"StringTools.rtrim","/usr/share/haxe/std/StringTools.hx",225,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","rtrim",0x99399e50,"StringTools.rtrim","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",225,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_LINE(229)
 	int l = s.length;		HX_STACK_VAR(l,"l");
@@ -367,7 +367,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,ltrim,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,rtrim,return )
 
 ::String StringTools_obj::trim( ::String s){
-	HX_STACK_FRAME("StringTools","trim",0x2908d066,"StringTools.trim","/usr/share/haxe/std/StringTools.hx",247,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","trim",0x2908d066,"StringTools.trim","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",247,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_LINE(253)
 	::String tmp = s;		HX_STACK_VAR(tmp,"tmp");
@@ -383,7 +383,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,rtrim,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,trim,return )
 
 ::String StringTools_obj::lpad( ::String s,::String c,int l){
-	HX_STACK_FRAME("StringTools","lpad",0x23bd8feb,"StringTools.lpad","/usr/share/haxe/std/StringTools.hx",269,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","lpad",0x23bd8feb,"StringTools.lpad","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",269,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(c,"c")
 	HX_STACK_ARG(l,"l")
@@ -422,7 +422,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,trim,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC3(StringTools_obj,lpad,return )
 
 ::String StringTools_obj::replace( ::String s,::String sub,::String by){
-	HX_STACK_FRAME("StringTools","replace",0x6d651f30,"StringTools.replace","/usr/share/haxe/std/StringTools.hx",312,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","replace",0x6d651f30,"StringTools.replace","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",312,0x386adca9)
 	HX_STACK_ARG(s,"s")
 	HX_STACK_ARG(sub,"sub")
 	HX_STACK_ARG(by,"by")
@@ -440,7 +440,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(StringTools_obj,lpad,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC3(StringTools_obj,replace,return )
 
 ::String StringTools_obj::hex( int n,Dynamic digits){
-	HX_STACK_FRAME("StringTools","hex",0xd91debd7,"StringTools.hex","/usr/share/haxe/std/StringTools.hx",334,0xd8cfb08f)
+	HX_STACK_FRAME("StringTools","hex",0xd91debd7,"StringTools.hex","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/StringTools.hx",334,0x386adca9)
 	HX_STACK_ARG(n,"n")
 	HX_STACK_ARG(digits,"digits")
 	HX_STACK_LINE(340)

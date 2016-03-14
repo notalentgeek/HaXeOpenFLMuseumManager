@@ -21,7 +21,7 @@ namespace _Socket{
 
 Void SocketOutput_obj::__construct(Dynamic s)
 {
-HX_STACK_FRAME("sys.net._Socket.SocketOutput","new",0x717472d4,"sys.net._Socket.SocketOutput.new","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",80,0xb72d4153)
+HX_STACK_FRAME("sys.net._Socket.SocketOutput","new",0x717472d4,"sys.net._Socket.SocketOutput.new","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/net/Socket.hx",80,0xbe672c6d)
 HX_STACK_THIS(this)
 HX_STACK_ARG(s,"s")
 {
@@ -47,7 +47,7 @@ Dynamic SocketOutput_obj::__Create(hx::DynamicArray inArgs)
 
 Void SocketOutput_obj::writeByte( int c){
 {
-		HX_STACK_FRAME("sys.net._Socket.SocketOutput","writeByte",0xbfd704fb,"sys.net._Socket.SocketOutput.writeByte","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",83,0xb72d4153)
+		HX_STACK_FRAME("sys.net._Socket.SocketOutput","writeByte",0xbfd704fb,"sys.net._Socket.SocketOutput.writeByte","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/net/Socket.hx",83,0xbe672c6d)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(c,"c")
 		HX_STACK_LINE(84)
@@ -100,7 +100,7 @@ return null();
 
 
 int SocketOutput_obj::writeBytes( ::haxe::io::Bytes buf,int pos,int len){
-	HX_STACK_FRAME("sys.net._Socket.SocketOutput","writeBytes",0x1c4d5718,"sys.net._Socket.SocketOutput.writeBytes","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",96,0xb72d4153)
+	HX_STACK_FRAME("sys.net._Socket.SocketOutput","writeBytes",0x1c4d5718,"sys.net._Socket.SocketOutput.writeBytes","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/net/Socket.hx",96,0xbe672c6d)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(buf,"buf")
 	HX_STACK_ARG(pos,"pos")
@@ -151,7 +151,7 @@ int SocketOutput_obj::writeBytes( ::haxe::io::Bytes buf,int pos,int len){
 
 Void SocketOutput_obj::close( ){
 {
-		HX_STACK_FRAME("sys.net._Socket.SocketOutput","close",0xbcc83f2c,"sys.net._Socket.SocketOutput.close","/usr/share/haxe/std/cpp/_std/sys/net/Socket.hx",107,0xb72d4153)
+		HX_STACK_FRAME("sys.net._Socket.SocketOutput","close",0xbcc83f2c,"sys.net._Socket.SocketOutput.close","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/sys/net/Socket.hx",107,0xbe672c6d)
 		HX_STACK_THIS(this)
 		HX_STACK_LINE(108)
 		this->super::close();

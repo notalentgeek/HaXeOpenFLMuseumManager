@@ -33,7 +33,7 @@ Dynamic Sys_obj::__Create(hx::DynamicArray inArgs)
 
 Void Sys_obj::print( Dynamic v){
 {
-		HX_STACK_FRAME("Sys","print",0x483745ec,"Sys.print","/usr/share/haxe/std/cpp/_std/Sys.hx",25,0x4e14a6b5)
+		HX_STACK_FRAME("Sys","print",0x483745ec,"Sys.print","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",25,0x9640115b)
 		HX_STACK_ARG(v,"v")
 		HX_STACK_LINE(25)
 		::__hxcpp_print(v);
@@ -46,7 +46,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,print,(void))
 
 Void Sys_obj::println( Dynamic v){
 {
-		HX_STACK_FRAME("Sys","println",0x3905f76e,"Sys.println","/usr/share/haxe/std/cpp/_std/Sys.hx",28,0x4e14a6b5)
+		HX_STACK_FRAME("Sys","println",0x3905f76e,"Sys.println","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",28,0x9640115b)
 		HX_STACK_ARG(v,"v")
 		HX_STACK_LINE(29)
 		Dynamic tmp = v;		HX_STACK_VAR(tmp,"tmp");
@@ -62,7 +62,7 @@ return null();
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,println,(void))
 
 ::haxe::io::Output Sys_obj::_stderr( ){
-	HX_STACK_FRAME("Sys","stderr",0x3eb04003,"Sys.stderr","/usr/share/haxe/std/cpp/_std/Sys.hx",41,0x4e14a6b5)
+	HX_STACK_FRAME("Sys","stderr",0x3eb04003,"Sys.stderr","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",41,0x9640115b)
 	HX_STACK_LINE(42)
 	Dynamic tmp = ::Sys_obj::file_stderr();		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(42)
@@ -75,7 +75,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,println,(void))
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Sys_obj,_stderr,return )
 
 Array< ::String > Sys_obj::args( ){
-	HX_STACK_FRAME("Sys","args",0xeaeddc7e,"Sys.args","/usr/share/haxe/std/cpp/_std/Sys.hx",50,0x4e14a6b5)
+	HX_STACK_FRAME("Sys","args",0xeaeddc7e,"Sys.args","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",50,0x9640115b)
 	HX_STACK_LINE(50)
 	return ::__get_args();
 }
@@ -85,7 +85,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Sys_obj,args,return )
 
 Void Sys_obj::sleep( Float seconds){
 {
-		HX_STACK_FRAME("Sys","sleep",0xfe70aad6,"Sys.sleep","/usr/share/haxe/std/cpp/_std/Sys.hx",64,0x4e14a6b5)
+		HX_STACK_FRAME("Sys","sleep",0xfe70aad6,"Sys.sleep","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",64,0x9640115b)
 		HX_STACK_ARG(seconds,"seconds")
 		HX_STACK_LINE(65)
 		Float tmp = seconds;		HX_STACK_VAR(tmp,"tmp");
@@ -99,7 +99,7 @@ return null();
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,sleep,(void))
 
 ::String Sys_obj::getCwd( ){
-	HX_STACK_FRAME("Sys","getCwd",0xd9ded99b,"Sys.getCwd","/usr/share/haxe/std/cpp/_std/Sys.hx",72,0x4e14a6b5)
+	HX_STACK_FRAME("Sys","getCwd",0xd9ded99b,"Sys.getCwd","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",72,0x9640115b)
 	HX_STACK_LINE(73)
 	::String tmp = ::Sys_obj::get_cwd();		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(73)
@@ -113,7 +113,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Sys_obj,getCwd,return )
 
 Void Sys_obj::setCwd( ::String s){
 {
-		HX_STACK_FRAME("Sys","setCwd",0xa6272e0f,"Sys.setCwd","/usr/share/haxe/std/cpp/_std/Sys.hx",76,0x4e14a6b5)
+		HX_STACK_FRAME("Sys","setCwd",0xa6272e0f,"Sys.setCwd","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",76,0x9640115b)
 		HX_STACK_ARG(s,"s")
 		HX_STACK_LINE(77)
 		::String tmp = s;		HX_STACK_VAR(tmp,"tmp");
@@ -127,7 +127,7 @@ return null();
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,setCwd,(void))
 
 ::String Sys_obj::systemName( ){
-	HX_STACK_FRAME("Sys","systemName",0xbea5b6bb,"Sys.systemName","/usr/share/haxe/std/cpp/_std/Sys.hx",80,0x4e14a6b5)
+	HX_STACK_FRAME("Sys","systemName",0xbea5b6bb,"Sys.systemName","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",80,0x9640115b)
 	HX_STACK_LINE(81)
 	::String tmp = ::Sys_obj::sys_string();		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(81)
@@ -138,7 +138,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,setCwd,(void))
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Sys_obj,systemName,return )
 
 ::String Sys_obj::escapeArgument( ::String arg){
-	HX_STACK_FRAME("Sys","escapeArgument",0xb9d4397f,"Sys.escapeArgument","/usr/share/haxe/std/cpp/_std/Sys.hx",84,0x4e14a6b5)
+	HX_STACK_FRAME("Sys","escapeArgument",0xb9d4397f,"Sys.escapeArgument","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",84,0x9640115b)
 	HX_STACK_ARG(arg,"arg")
 	HX_STACK_LINE(85)
 	bool ok = true;		HX_STACK_VAR(ok,"ok");
@@ -220,7 +220,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Sys_obj,systemName,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,escapeArgument,return )
 
 int Sys_obj::command( ::String cmd,Array< ::String > args){
-	HX_STACK_FRAME("Sys","command",0x363f8cca,"Sys.command","/usr/share/haxe/std/cpp/_std/Sys.hx",98,0x4e14a6b5)
+	HX_STACK_FRAME("Sys","command",0x363f8cca,"Sys.command","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",98,0x9640115b)
 	HX_STACK_ARG(cmd,"cmd")
 	HX_STACK_ARG(args,"args")
 	HX_STACK_LINE(99)
@@ -291,7 +291,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Sys_obj,command,return )
 
 Void Sys_obj::exit( int code){
 {
-		HX_STACK_FRAME("Sys","exit",0xed97463f,"Sys.exit","/usr/share/haxe/std/cpp/_std/Sys.hx",109,0x4e14a6b5)
+		HX_STACK_FRAME("Sys","exit",0xed97463f,"Sys.exit","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",109,0x9640115b)
 		HX_STACK_ARG(code,"code")
 		HX_STACK_LINE(109)
 		::__hxcpp_exit(code);
@@ -303,7 +303,7 @@ return null();
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,exit,(void))
 
 ::String Sys_obj::executablePath( ){
-	HX_STACK_FRAME("Sys","executablePath",0xfc9406f0,"Sys.executablePath","/usr/share/haxe/std/cpp/_std/Sys.hx",120,0x4e14a6b5)
+	HX_STACK_FRAME("Sys","executablePath",0xfc9406f0,"Sys.executablePath","/home/notalentgeek//Mikael Data/Programming Resouce/SDK/haxe-3.2.1/std/cpp/_std/Sys.hx",120,0x9640115b)
 	HX_STACK_LINE(121)
 	::String tmp = ::Sys_obj::sys_exe_path();		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(121)
