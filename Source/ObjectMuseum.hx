@@ -62,8 +62,8 @@ class ObjectMuseum{
         collectionGlobalObject.DetermineExhibitionFullThresholdVoid();
 
     }
-    private function AddChildVisitorVoid(_visitorObject:ObjectVisitor){ childStruct.childVisitorObjectArray.push(_visitorObject); }
-    private function AddTagVoid(_tagObject:ObjectTag){ tagObjectArray.push(_tagObject); }
+    //private function AddChildVisitorVoid(_visitorObject:ObjectVisitor){ childStruct.childVisitorObjectArray.push(_visitorObject); }
+    //private function AddTagVoid(_tagObject:ObjectTag){ tagObjectArray.push(_tagObject); }
     private function AddThisToArray(_typeEnum:EnumMuseumType){
         if(_typeEnum == EXH){ collectionGlobalObject.GetExhibitionObjectArray().push(this); }
         else if(_typeEnum == FLR){ collectionGlobalObject.GetFloorObjectArray().push(this); }

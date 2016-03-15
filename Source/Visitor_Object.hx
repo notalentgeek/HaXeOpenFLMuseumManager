@@ -9,12 +9,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
-    private var _VisitorAgnostic_Object                 (null, null)        :VisitorAgnostic_Object                 = null;
 
-
-
-    /*PENDING: Make index struct.*/
-    private var _CollectionGlobal_Object                (null, null)        :CollectionGlobal_Object                = null;
     private var _GeneratorSentence_Object               (null, null)        :GeneratorSentence_Object               = null;
     private var _VisitorMode_Enum                       (null, set)         :VisitorMode_Enum                       = null;
     private var exhibitionCurrent_Museum_Object         (null, set)         :Museum_Object                          = null;
@@ -23,7 +18,6 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
-    private var _Tag_Object_Array                       (null, set)         :Array<Tag_Object>                      = new Array<Tag_Object>(); /*PENDING: Put in super class.*/
     private var _TagCounter_Struct_Array                (null, set)         :Array<TagCounter_Struct>               = new Array<TagCounter_Struct>();
     private var _VisitorVisitMuseum_Struct_Array        (null, set)         :Array<VisitorVisitMuseum_Struct>       = new Array<VisitorVisitMuseum_Struct>();
     private var _VisitorVisitExhibition_Struct_Array    (null, set)         :Array<VisitorVisitExhibition_Struct>   = new Array<VisitorVisitExhibition_Struct>();
@@ -39,347 +33,39 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
-    /*Push object and also push the accompanying variable into the agnostic object.
-    PENDING: Make this function static.*/
-    public static function SyncPush_T_Array<T, U, V, W, X, Y>(
-        _elementNonAgnostic_T   :T,
-        _nonAgnostic_T_Array    :Array<T>,
-        _elementAgnostic_U      :U,
-        _agnostic_U_Array       :Array<U>,
-        ?_elementAgnostic_V     :V,
-        ?_agnostic_V_Array      :Array<V>,
-        ?_elementAgnostic_W     :W,
-        ?_agnostic_W_Array      :Array<W>,
-        ?_elementAgnostic_X     :X,
-        ?_agnostic_X_Array      :Array<X>,
-        ?_elementAgnostic_Y     :Y,
-        ?_agnostic_Y_Array      :Array<Y>
-    ):Array<T>{
-
-        _nonAgnostic_T_Array    .push(_elementNonAgnostic_T);
-        _agnostic_U_Array       .push(_elementAgnostic_U);
-
-
-
-        if(_elementAgnostic_V != null && _agnostic_V_Array != null)
-            { _agnostic_V_Array.push(_elementAgnostic_V); }
-        if(_elementAgnostic_W != null && _agnostic_W_Array != null)
-            { _agnostic_W_Array.push(_elementAgnostic_W); }
-        if(_elementAgnostic_X != null && _agnostic_X_Array != null)
-            { _agnostic_X_Array.push(_elementAgnostic_X); }
-        if(_elementAgnostic_Y != null && _agnostic_Y_Array != null)
-            { _agnostic_Y_Array.push(_elementAgnostic_Y); }
-
-
-
-        return _nonAgnostic_T_Array;
-
-    }
-
-
-
-
-
-
-
-
-
-
-    /*Sync function to remove an element from an array within agnostic and non - agnostic object.*/
-    public static function SyncRemove_T_Array<T, U, V, W, X, Y>(
-        _elementNonAgnostic_T   :T,
-        _nonAgnostic_T_Array    :Array<T>,
-        _elementAgnostic_U      :U,
-        _agnostic_U_Array       :Array<U>,
-        ?_elementAgnostic_V     :V,
-        ?_agnostic_V_Array      :Array<V>,
-        ?_elementAgnostic_W     :W,
-        ?_agnostic_W_Array      :Array<W>,
-        ?_elementAgnostic_X     :X,
-        ?_agnostic_X_Array      :Array<X>,
-        ?_elementAgnostic_Y     :Y,
-        ?_agnostic_Y_Array      :Array<Y>
-    ):Array<T>{
-
-        _nonAgnostic_T_Array    .remove(_elementNonAgnostic_T);
-        _agnostic_U_Array       .remove(_elementAgnostic_U);
-
-
-
-        if(_elementAgnostic_V != null && _agnostic_V_Array != null)
-            { _agnostic_V_Array.remove(_elementAgnostic_V); }
-        if(_elementAgnostic_W != null && _agnostic_W_Array != null)
-            { _agnostic_W_Array.remove(_elementAgnostic_W); }
-        if(_elementAgnostic_X != null && _agnostic_X_Array != null)
-            { _agnostic_X_Array.remove(_elementAgnostic_X); }
-        if(_elementAgnostic_Y != null && _agnostic_Y_Array != null)
-            { _agnostic_Y_Array.remove(_elementAgnostic_Y); }
-
-
-
-        return _nonAgnostic_T_Array;
-
-    }
-
-
-
-
-
-
-
-
-
-
-/*Function to remove this object from main object array.
-PENDING: Please put this function into super class.*/
-private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool){
-    
-    /*Create temporary array.*/
-    var main_MuseumAndVisitor_Object_Array:Array<MuseumAndVisitor_Object_Array> = null;
-    /*Assign proper array into the temporary array.*/
-    if(Std.is(this, Museum_Object)){
-
-        if(this._MuseumType_Enum == EXHIBITION)
-            { main_MuseumAndVisitor_Object_Array = this._CollectionGlobal_Object.exhibition_Museum_Object_Array; }
-        else if(this._MuseumType_Enum == FLOOR)
-            { main_MuseumAndVisitor_Object_Array = this._CollectionGlobal_Object.floor_Museum_Object_Array; }
-        else if(this._MuseumType_Enum == ROOM)
-            { main_MuseumAndVisitor_Object_Array = this._CollectionGlobal_Object.room_Museum_Object_Array; }
-
-    }
-    else if(Std.is(this, Visitor_Object))
-        { main_MuseumAndVisitor_Object_Array. = this._CollectionGlobal_Object._Visitor_Object_Array; }
-
-    /*In this function I do not need to push and remove using the sync functions,
-        because the CollectionGlobal_Object does not have an agnotic class.*/
-    if(_add_Bool == true){
-
-        if(main_MuseumAndVisitor_Object_Array.indefOf(this) == -1){
-
-            /*If this object is not in the main visitor array then add it.*/
-            main_MuseumAndVisitor_Object_Array.push(this);
-
-        }
-
-    }
-    else if(_add_Bool == false)
-        { main_MuseumAndVisitor_Object_Array.remove(this); }
-
-
-
-    return this;
-
-}
-
-
-
-
-
-
-
-
-
-
-    /*Simple function to either add or remove this object from parent object.
-    PENDING: Put this function into super class.*/
-    private function AddOrRemoveThisFromParent_MuseumAndVisitor_Object(
-        _add_Bool                                       :Bool,
-        _parentChild_MuseumAndVisitor_Object_Array      :Array<MuseumAndVisitor_Object>,
-        _parentChildMuseumOrVisitorName_String_Array    :Array<String>
-    ):MuseumAndVisitor_Object{
-
-        if(_add_Bool == true){
-
-            CollectionStaticFunction_Object.SyncPush_T_Array(
-                this,
-                _parentChild_MuseumAndVisitor_Object_Array,
-                this._VisitorAgnostic_Object.name_String,
-                _parentChildMuseumOrVisitorName_String_Array
-            );
-
-        }
-        else if (_add_Bool == false){
-
-            CollectionStaticFunction_Object.SyncRemove_T_Array(
-                this,
-                _parentChild_MuseumAndVisitor_Object_Array,
-                this._VisitorAgnostic_Object.name_String,
-                _parentChildMuseumOrVisitorName_String_Array
-            );
-
-        }
-
-
-
-        return this;
-
-    }
-
-
-
-
-
-
-
-
-
-
-    /*Function to determine index local.
-    PENDING: Move this function to the super class.*/
-    private function DetermineIndexLocal_MuseumAndVisitor_Object():MuseumAndVisitor_Object{
-
-        if(Std.is(this, Museum_Object)){
-
-            /*For the exhibition and room museum objects.*/
-            if(this._MuseumType_Enum != FLOOR){
-
-                this._MuseumAgnostic_Object._Index_Struct.local_Int = 0;
-                while(this._MuseumAgnostic_Object._Index_Struct.local_Int < parent_Museum_Object._Child_Struct.childMuseum_Object_Array.length){
-
-                    if(
-                        this._Name_Struct.nameAlt_String    == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAgnostic_Object._Index_Struct.local_Int]._Name_Struct.nameAlt_String      ||
-                        this._Name_Struct.nameFull_String   == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAgnostic_Object._Index_Struct.local_Int]._Name_Struct.nameFull_String
-                    ){ return this; }
-
-                    this._MuseumAgnostic_Object._Index_Struct.local_Int ++;
-
-                }
-
-            }
-            /*If this is a floor museum object then the local index is the global index.*/
-            else{ this._MuseumAgnostic_Object._Index_Struct.local_Int = this._MuseumAgnostic_Object._Index_Struct.global_Int; }
-
-        }
-        else if(Std.is(this, Visitor_Object)){
-
-            this._VisitorAgnostic_Object._Index_Struct.local_Int = 0;
-            while(this._VisitorAgnostic_Object._Index_Struct.local_Int < exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array.length){
-
-                if(this.name_String == exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array[this._VisitorAgnostic_Object._Index_Struct.local_Int].name_String)
-                    { return this; }
-
-                this._VisitorAgnostic_Object._Index_Struct.local_Int ++;
-
-            }
-
-        }
-
-
-
-        return this;
-
-    }
-
-
-
-
-
-
-
-
-
-
-    /*PENDING: Put this function in the super class.*/
-    private function Reset_MuseumAndVisitor_Object():MuseumAndVisitor_Object{
-
-        /*Check wether the current object is a museum or visitor object.*/
-        if(Std.is(this, Museum_Object)){}
-        else if(Std.is(this, Visitor_Object)){
-
-            this._VisitorAgnostic_Object.Reset_MuseumAndVisitor_Object();
-
-            /*
-            There are this object variables that should not be reset back.
-            The current exhibition, floor, and room is not reset back to the initial value when this
-                function is ran, because the visitor object always need references on museum object.
-            PENDING: Or add another pseudo exhibition called lobby.
-            _CollectionGlobal_Object                    = null;
-            _GeneratorSentence_Object                   = null;
-            _VisitorAgnostic_Object                     = null;
-            _VisitorAgnostic_Object                     = null;
-            exhibitionCurrent_Museum_Object             = null;
-            floorCurrent_Museum_Object                  = null;
-            roomCurrent_Museum_Object                   = null;
-            */
-
-            this._VisitorMode_Enum                      = SOFTWARE_AUTO;
-
-            this._Tag_Object_Array                      = CollectionStaticFunction_Object.Clear_T_Array(_Tag_Object_Array);
-            this._TagCounter_Struct_Array               = CollectionStaticFunction_Object.Clear_T_Array(_TagCounter_Struct_Array);
-            this._VisitorVisitExhibition_Struct_Array   = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitExhibition_Struct_Array);
-            this._VisitorVisitMuseum_Struct_Array       = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitMuseum_Struct_Array);
-            this.exhibitionTarget_Museum_Object_Array   = CollectionStaticFunction_Object.Clear_T_Array(exhibitionTarget_Museum_Object_Array);
-            this.exhibitionVisited_Museum_Object_Array  = CollectionStaticFunction_Object.Clear_T_Array(exhibitionVisited_Museum_Object_Array);
-
-        }
-
-        return this;
-
-    }
-
-
-
-
-
-
-
-
-
-
-    /*An update function for both museum and visitor object.
-    PENDING: Put this function in super class.*/
-    private function Update_MuseumAndVisitor_Object(){
-
-        /*Check wether the current object is a museum or visitor object.*/
-        if(Std.is(this, Museum_Object)){}
-        else if(Std.is(this, Visitor_Object)){
-
-            if(
-                this._VisitorAgnostic_Object.finished_Bool  == false
-                this._VisitorMode_Enum                      == SOFTWARE_AUTO &&
-            ){ this.AI_Visitor_Object(); }
-
-        }
-
-        return this;
-
-    }
-
-
-
-
-
-
-
-
-
-
     public function new(
         __CollectionGlobal_Object   :CollectionGlobal_Object,
-        __Index_Struct.global_Int            :Int,
+        __global_Int                :Int,
         _name_String                :String
     ):Void{
 
-        /*Assign all parameters.*/
-        _CollectionGlobal_Object                    = __CollectionGlobal_Object;
-        _VisitorAgnostic_Object._Index_Struct.global_Int     = __Index_Struct.global_Int;
-        _VisitorAgnostic_Object.name_String         = _name_String;
+        super(__CollectionGlobal_Object);
 
-        /*Instantiate the sentence generator.*/
-        _GeneratorSentence_Object                   = new GeneratorSentence_Object();
+
+
+        /*Assign all parameters.*/
+        _MuseumAndVisitorAgnostic_Object._Index_Struct.global_Int   = __global_Int;
+        _MuseumAndVisitorAgnostic_Object.name_String                = _name_String;
+
+
+
         /*Instantiate the agnostic object.*/
-        _VisitorAgnostic_Object                     = new VisitorAgnostic_Object(
+        _MuseumAndVisitorAgnostic_Object                            = new VisitorAgnostic_Object(
             _CollectionGlobal_Object.amountOfPreviousVisitedExhibitionCheck_Int,
             _CollectionGlobal_Object.amountOfTargetExhibition_Int
         );
 
+
+
+        /*Instantiate the sentence generator.*/
+        _GeneratorSentence_Object                                   = new GeneratorSentence_Object();
         /*Set default visitor mode.*/
-        _VisitorMode_Enum                           = SOFTWARE_AUTO;
+        _VisitorMode_Enum                                           = SOFTWARE_AUTO;
 
 
 
         /*Put this object into main visitor array.*/
-        _CollectionGlobal_Object._Visitor_Object_Array.push(this);
+        AddOrRemoveThisFromMain_MuseumAndVisitor_Object(true);
         /*Determine exhibition full threshild for everytime there is a new visitor goes to museum.*/
         _CollectionGlobal_Object.DetermineExhibitionFullThreshold_Void();
         GenerateExhibitionTarget_Void();
@@ -399,19 +85,19 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
     private function AI_Visitor_Object():Visitor_Object{
 
         /*I need to make sure that this visitor is not yet finished this current museum visit.*/
-        if(_VisitorAgnostic_Object.finished_Bool == false){
+        if(_MuseumAndVisitorAgnostic_Object.finished_Bool == false){
 
             /*Generate random chance of this visitor moving into new exhibition.*/
             var randomMoveChance_Float:Float = Math.random();
             /*For everytime this visitor is not changing exhibition, the next chance of this
                 visitor would or would not change exhibition will increase.*/
-            _VisitorAgnostic_Object.aiNextChanceChangeExhibition_Float += 0.01;
+            _MuseumAndVisitorAgnostic_Object.aiNextChanceChangeExhibition_Float += 0.01;
 
 
 
             /*This if statement is to determine whether this visitor will move into new exhibition
                 or not.*/
-            if(randomMoveChance_Float > (1.0 - _VisitorAgnostic_Object.aiNextChanceChangeExhibition_Float)){
+            if(randomMoveChance_Float > (1.0 - _MuseumAndVisitorAgnostic_Object.aiNextChanceChangeExhibition_Float)){
 
                 /*Get random index from the target exhibition object array.*/
                 var randomExhibitionTargetIndex_Int:Int =
@@ -420,7 +106,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                 exhibitionCurrent_Museum_Object = exhibitionTarget_Museum_Object_Array[randomExhibitionTargetIndex_Int];
                 
                 /*Set the random counter back to 0.*/
-                _VisitorAgnostic_Object.aiNextChanceChangeExhibition_Float = 0;
+                _MuseumAndVisitorAgnostic_Object.aiNextChanceChangeExhibition_Float = 0;
 
             }
 
@@ -447,7 +133,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
         exhibitions.*/
     private function CalculateScore_Visitor_Object():Visitor_Object{
 
-        _VisitorAgnostic_Object.visitedCorrectExhibition_Bool = false;
+        _MuseumAndVisitorAgnostic_Object.visitedCorrectExhibition_Bool = false;
 
         var loopCounter1_Int:Int = 0;
         while(loopCounter1_Int < exhibitionTarget_Museum_Object_Array.length){
@@ -455,18 +141,18 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
             /*Check if the newly visited exhibition is actually an exhibition that is listed in
                 exhibition target object array.*/
             if(
-                exhibitionCurrent_Museum_Object._Name_Struct.nameAlt_String     == exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String   ||
-                exhibitionCurrent_Museum_Object._Name_Struct.nameFull_String    == exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameFull_String
-            ){ _VisitorAgnostic_Object.visitedCorrectExhibition_Bool = true; break; }
+                exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String    == exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String  ||
+                exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String    == exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String
+            ){ _MuseumAndVisitorAgnostic_Object.visitedCorrectExhibition_Bool = true; break; }
             loopCounter1_Int ++;
 
         }
 
         /*Decrease or increase the player score.*/
-        if(_VisitorAgnostic_Object.visitedCorrectExhibition_Bool == true)
-            { _VisitorAgnostic_Object.score_Int ++; }
-        else if(_VisitorAgnostic_Object.visitedCorrectExhibition_Bool == false)
-            { _VisitorAgnostic_Object.score_Int --; }
+        if(_MuseumAndVisitorAgnostic_Object.visitedCorrectExhibition_Bool == true)
+            { _MuseumAndVisitorAgnostic_Object.score_Int ++; }
+        else if(_MuseumAndVisitorAgnostic_Object.visitedCorrectExhibition_Bool == false)
+            { _MuseumAndVisitorAgnostic_Object.score_Int --; }
 
         return this;
 
@@ -528,7 +214,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                                 _Tag_Object,
                                 _Tag_Object_Array,
                                 _Tag_Object.name_String,
-                                _VisitorAgnostic_Object.tagName_String_Array
+                                _MuseumAndVisitorAgnostic_Object.tagName_String_Array
                             );
 
                         }
@@ -574,7 +260,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                     _Tag_Object,
                     _Tag_Object_Array,
                     _Tag_Object.name_String,
-                    _VisitorAgnostic_Object.tagName_String_Array
+                    _MuseumAndVisitorAgnostic_Object.tagName_String_Array
                 );
 
             }
@@ -624,9 +310,9 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                     _TagCounter_Struct,
                     _TagCounter_Struct_Array,
                     _TagCounter_Struct._Int,
-                    _VisitorAgnostic_Object.tagCounter_Int_Array,
+                    _MuseumAndVisitorAgnostic_Object.tagCounter_Int_Array,
                     _TagCounter_Struct._Tag_Object.name_String,
-                    _VisitorAgnostic_Object.tagCounterTagName_String_Array
+                    _MuseumAndVisitorAgnostic_Object.tagCounterTagName_String_Array
                 );
 
             }
@@ -667,7 +353,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
     private function DetermineFinished_Visitor_Object():Visitor_Object{
 
         if(exhibitionVisited_Museum_Object_Array.length >= _CollectionGlobal_Object.exhibition_Museum_Object_Array.length)
-            { _VisitorAgnostic_Object.finished_Bool = true; }
+            { _MuseumAndVisitorAgnostic_Object.finished_Bool = true; }
 
 
 
@@ -710,7 +396,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                     _CollectionGlobal_Object.exhibition_Museum_Object_Array[loopCounter1_Int],
                     exhibitionTarget_Museum_Object_Array,
                     _CollectionGlobal_Object.exhibition_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                    _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                    _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                 );
 
             }
@@ -726,7 +412,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                         _CollectionGlobal_Object.exhibition_Museum_Object_Array[loopCounter1_Int],
                         exhibitionTarget_Museum_Object_Array,
                         _CollectionGlobal_Object.exhibition_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                        _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                        _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                     );
 
                 }
@@ -754,7 +440,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                     exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                     exhibitionTarget_Museum_Object_Array,
                     exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                    _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                    _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                 );
 
 
@@ -791,7 +477,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                     exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                     exhibitionTarget_Museum_Object_Array,
                     exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                    _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                    _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                 );
 
 
@@ -826,9 +512,12 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
             while(loopCounter2_Int < exhibitionVisited_Museum_Object_Array.length){
 
                 if(
-                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]                              == exhibitionVisited_Museum_Object_Array[loopCounter2_Int]                                  ||
-                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String  == exhibitionVisited_Museum_Object_Array[loopCounter2_Int]._Name_Struct.nameAlt_String      ||
-                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameFull_String == exhibitionVisited_Museum_Object_Array[loopCounter2_Int]._Name_Struct.nameFull_String
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]
+                        == exhibitionVisited_Museum_Object_Array[loopCounter2_Int] ||
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String
+                        == exhibitionVisited_Museum_Object_Array[loopCounter2_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String ||
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String
+                        == exhibitionVisited_Museum_Object_Array[loopCounter2_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String
                 ){
 
                     /*The visited exhibitions have chance of 10% to be visited again.*/
@@ -838,7 +527,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                             exhibitionVisited_Museum_Object_Array[loopCounter2_Int],
                             exhibitionTarget_Museum_Object_Array,
                             exhibitionVisited_Museum_Object_Array[loopCounter2_Int]._Name_Struct.nameAlt_String,
-                            _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                            _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                         );
 
 
@@ -896,14 +585,20 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                 /*If either current floor or current room is the same with the floor and room from
                     the target exhibition then add score.*/
                 if(
-                    floorTarget_Museum_Object                               == floorCurrent_Museum_Object                               ||
-                    floorTarget_Museum_Object._Name_Struct.nameAlt_String   == floorCurrent_Museum_Object._Name_Struct.nameAlt_String   ||
-                    floorTarget_Museum_Object._Name_Struct.nameFull_String  == floorCurrent_Museum_Object._Name_Struct.nameFull_String
+                    floorTarget_Museum_Object
+                        == floorCurrent_Museum_Object ||
+                    floorTarget_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String 
+                        == floorCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String ||
+                    floorTarget_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String 
+                        == floorCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String
                 ){ sameCounter_Int ++; }
                 if(
-                    roomTarget_Museum_Object                                == roomCurrent_Museum_Object                                ||
-                    roomTarget_Museum_Object._Name_Struct.nameAlt_String    == roomCurrent_Museum_Object._Name_Struct.nameAlt_String    ||
-                    roomTarget_Museum_Object._Name_Struct.nameFull_String   == roomCurrent_Museum_Object._Name_Struct.nameFull_String
+                    roomTarget_Museum_Object
+                        == roomCurrent_Museum_Object ||
+                    roomTarget_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String  
+                        == roomCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String ||
+                    roomTarget_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String  
+                        == roomCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String
                 ){ sameCounter_Int ++; }
 
                 /*Based on the score add a chance whether the target exhibition should be excluded
@@ -916,7 +611,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                             exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                             exhibitionTarget_Museum_Object_Array,
                             exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                            _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                            _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                         );
                         
 
@@ -940,7 +635,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                             exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                             exhibitionTarget_Museum_Object_Array,
                             exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                            _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                            _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                         );
 
 
@@ -964,13 +659,13 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                             exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                             exhibitionTarget_Museum_Object_Array,
                             exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                            _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                            _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                         );
 
 
 
-                        //if(exhibitionTarget_Museum_Object_Array.length <= _amountOfTargetExhibition_Int)
-                        //    { return this; }
+                        if(exhibitionTarget_Museum_Object_Array.length <= _amountOfTargetExhibition_Int)
+                            { return this; }
 
 
 
@@ -1069,7 +764,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                         exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                         exhibitionTarget_Museum_Object_Array,
                         exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
-                        _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                        _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                     );
 
 
@@ -1102,7 +797,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                 exhibitionTarget_Museum_Object_Array[exhibitionTarget_Museum_Object_Array.length - 1],
                 exhibitionTarget_Museum_Object_Array,
                 exhibitionTarget_Museum_Object_Array[exhibitionTarget_Museum_Object_Array.length - 1]._Name_Struct.nameAlt_String,
-                _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
             );
 
         }
@@ -1129,13 +824,13 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
         for how many amount of sentence I want to generate.*/
     private function GenerateSentence_Visitor_Object():Visitor_Object{
 
-        _VisitorAgnostic_Object.sentenceCurrent_String =
+        _MuseumAndVisitorAgnostic_Object.sentenceCurrent_String =
             _GeneratorSentence_Object.GenerateSentence3String(_CollectionGlobal_Object);
 
         /*Only generate sentences when this visitor visit the his/her second exhibition.*/
         if(exhibitionVisited_Museum_Object_Array.length > 1){
-            _VisitorAgnostic_Object.sentence_String_Array.push
-                (_VisitorAgnostic_Object.sentenceCurrent_String);
+            _MuseumAndVisitorAgnostic_Object.sentence_String_Array.push
+                (_MuseumAndVisitorAgnostic_Object.sentenceCurrent_String);
         }
 
     }
@@ -1144,6 +839,20 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
 
 
+    private function Reset_Visitor_Object():VisitorObject(){
+
+        super.Reset_MuseumAndVisitor_Object();
+
+        _VisitorMode_Enum                      = SOFTWARE_AUTO;
+
+        _TagCounter_Struct_Array               = CollectionStaticFunction_Object.Clear_T_Array(_TagCounter_Struct_Array);
+        _VisitorVisitExhibition_Struct_Array   = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitExhibition_Struct_Array);
+        _VisitorVisitMuseum_Struct_Array       = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitMuseum_Struct_Array);
+        exhibitionTarget_Museum_Object_Array   = CollectionStaticFunction_Object.Clear_T_Array(exhibitionTarget_Museum_Object_Array);
+        exhibitionVisited_Museum_Object_Array  = CollectionStaticFunction_Object.Clear_T_Array(exhibitionVisited_Museum_Object_Array);
+
+
+    }
 
 
 
@@ -1159,7 +868,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
         var loopCounter1_Int            :Int            = 0;
         /*Fill the explanation index integer array with all possible explanation index from an
             exhibition.*/
-        while(loopCounter1_Int < _exhibitionCurrent_Museum_Object._MuseumAgnostic_Object.explanation_String_Array.length){
+        while(loopCounter1_Int < _exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object.explanation_String_Array.length){
 
             explanationIndex_Int_Array.push(loopCounter1_Int);
             loopCounter1_Int ++;
@@ -1169,21 +878,21 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
 
         /*Get random explanation index.*/
-        _VisitorAgnostic_Object.explanationCurrentIndex_Int     = explanationIndex_Int_Array[Math.random()*(explanationIndex_Int_Array.length - 1)];
-        _VisitorAgnostic_Object.explanationCurrent_String       = exhibitionCurrent_Museum_Object._MuseumAgnostic_Object.explanation_String_Array[_VisitorAgnostic_Object.explanationCurrentIndex_Int];
+        _MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int     = explanationIndex_Int_Array[Math.random()*(explanationIndex_Int_Array.length - 1)];
+        _MuseumAndVisitorAgnostic_Object.explanationCurrent_String       = exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object.explanation_String_Array[_MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int];
         /*Iterate until the newly get explanation is unique.*/
         while(
-            _VisitorAgnostic_Object.explanation_String_Array.indexOf(_VisitorAgnostic_Object.explanationCurrent_String) != -1 &&
+            _MuseumAndVisitorAgnostic_Object.explanation_String_Array.indexOf(_MuseumAndVisitorAgnostic_Object.explanationCurrent_String) != -1 &&
             explanationIndex_Int_Array.length > 0
         ){
 
             /*Remove the explanation index that this player got from previous visit to the
                 current exhibition.*/
-            explanationIndex_Int_Array.remove(_VisitorAgnostic_Object.explanationCurrentIndex_Int);
+            explanationIndex_Int_Array.remove(_MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int);
             
             /*Then I need to generate again random explanation.*/
-            _VisitorAgnostic_Object.explanationCurrentIndex_Int     = explanationIndex_Int_Array[Math.random()*(explanationIndex_Int_Array.length - 1)];
-            _VisitorAgnostic_Object.explanationCurrent_String       = exhibitionCurrent_Museum_Object._MuseumAgnostic_Object.explanation_String_Array[_VisitorAgnostic_Object.explanationCurrentIndex_Int];
+            _MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int     = explanationIndex_Int_Array[Math.random()*(explanationIndex_Int_Array.length - 1)];
+            _MuseumAndVisitorAgnostic_Object.explanationCurrent_String       = exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object.explanation_String_Array[_MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int];
 
         }
 
@@ -1194,12 +903,12 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
         If this statement return false means that the visitor already collected all explanations
             from this current exhibition.*/
         if(
-            _VisitorAgnostic_Object.explanation_String_Array.indexOf
-                (_VisitorAgnostic_Object.explanationCurrent_String) == -1
+            _MuseumAndVisitorAgnostic_Object.explanation_String_Array.indexOf
+                (_MuseumAndVisitorAgnostic_Object.explanationCurrent_String) == -1
         ){
 
-            _VisitorAgnostic_Object.explanation_String_Array.push
-                (_VisitorAgnostic_Object.explanationCurrent_String);
+            _MuseumAndVisitorAgnostic_Object.explanation_String_Array.push
+                (_MuseumAndVisitorAgnostic_Object.explanationCurrent_String);
 
         }
 
@@ -1229,15 +938,15 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
         ================================================*/
 
         /*Basically here before I refill the array I emptied it first.*/
-        _VisitorAgnostic_Object.tagCounter_Int_Array =
+        _MuseumAndVisitorAgnostic_Object.tagCounter_Int_Array =
             CollectionStaticFunction_Object.Clear_T_Array(
-                _VisitorAgnostic_Object.tagCounter_Int_Array
+                _MuseumAndVisitorAgnostic_Object.tagCounter_Int_Array
             );
 
         var loopCounter1_Int:Int = 0;
         while(loopCounter1_Int < _TagCounter_Struct_Array.length){
 
-            _VisitorAgnostic_Object.tagCounter_Int_Array.push(
+            _MuseumAndVisitorAgnostic_Object.tagCounter_Int_Array.push(
                 _TagCounter_Struct_Array[loopCounter1_Int]._Int
             );
             loopCounter1_Int ++;
@@ -1254,15 +963,15 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
         PROCESSING TAG COUNTER NAME STRING
         ================================================*/
 
-        _VisitorAgnostic_Object.tagCounterTagName_String_Array =
+        _MuseumAndVisitorAgnostic_Object.tagCounterTagName_String_Array =
             CollectionStaticFunction_Object.Clear_T_Array(
-                _VisitorAgnostic_Object.tagCounterTagName_String_Array
+                _MuseumAndVisitorAgnostic_Object.tagCounterTagName_String_Array
             );
 
         loopCounter1_Int = 0;
         while(loopCounter1_Int < _TagCounter_Struct_Array.length){
 
-            _VisitorAgnostic_Object.tagCounterTagName_String_Array.push(
+            _MuseumAndVisitorAgnostic_Object.tagCounterTagName_String_Array.push(
                 _TagCounter_Struct_Array[loopCounter1_Int]._Tag_Object.name_String
             );
             loopCounter1_Int ++;
@@ -1288,52 +997,10 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
 
 
-    private function set__Tag_Object_Array(__Tag_Object_Array:Array<Tag_Object>):Array<Tag_Object>{
-
-        _Tag_Object_Array = __Tag_Object_Array;
-
-
-
-        /*When I set tag array in this visitor object,
-            I need to clean the name tag array in the agnostic object.*/
-        _VisitorAgnostic_Object.tagName_String_Array =
-            CollectionStaticFunction_Object.Clear_T_Array(
-                _VisitorAgnostic_Object.tagName_String_Array
-            );
-
-
-
-        /*After emptying the tag name array in the agnostic object,
-            I fill it back with new tag array from this object.*/
-        var loopCounter1_Int:Int = 0;
-        while(loopCounter1_Int < _Tag_Object_Array.length){
-
-            _VisitorAgnostic_Object.tagName_String_Array.push(
-                _Tag_Object_Array[loopCounter1_Int].name_String
-            );
-            loopCounter1_Int ++;
-
-        }
-
-
-
-        return _Tag_Object_Array;
-
-    }
-
-
-
-
-
-
-
-
-
-
     private function set__VisitorMode_Enum(__VisitorMode_Enum:VisitorMode_Enum):VisitorMode_Enum{
 
         _VisitorMode_Enum = __VisitorMode_Enum;
-        _VisitorAgnostic_Object.visitorMode_String = Std.string(_VisitorMode_Enum);
+        _MuseumAndVisitorAgnostic_Object.visitorMode_String = Std.string(_VisitorMode_Enum);
         return _VisitorMode_Enum;
 
     }
@@ -1353,30 +1020,30 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
         _VisitorVisitExhibition_Struct_Array = __VisitorVisitExhibition_Struct_Array;
 
-        _VisitorAgnostic_Object.visitorVisitExhibitionNameAlt_String_Array =
+        _MuseumAndVisitorAgnostic_Object.visitorVisitExhibitionNameAlt_String_Array =
             CollectionStaticFunction_Object.Clear_T_Array(
-                _VisitorAgnostic_Object.visitorVisitExhibitionNameAlt_String_Array
+                _MuseumAndVisitorAgnostic_Object.visitorVisitExhibitionNameAlt_String_Array
             );
 
         loopCounter1_Int = 0;
         while(loopCounter1_Int < _VisitorVisitExhibition_Struct_Array.length){
 
-            _VisitorAgnostic_Object.visitorVisitExhibitionNameAlt_String_Array.push(
+            _MuseumAndVisitorAgnostic_Object.visitorVisitExhibitionNameAlt_String_Array.push(
                 _VisitorVisitExhibition_Struct_Array[loopCounter1_Int].exhibition_Museum_Object._Name_Struct.nameAlt_String
             );
             loopCounter1_Int ++;
 
         }
 
-        _VisitorAgnostic_Object.visitorVisitExhibitionTime_Int_Array =
+        _MuseumAndVisitorAgnostic_Object.visitorVisitExhibitionTime_Int_Array =
             CollectionStaticFunction_Object.Clear_T_Array(
-                _VisitorAgnostic_Object.visitorVisitExhibitionTime_Int_Array
+                _MuseumAndVisitorAgnostic_Object.visitorVisitExhibitionTime_Int_Array
             );
 
         loopCounter1_Int = 0;
         while(loopCounter1_Int < _VisitorVisitExhibition_Struct_Array.length){
 
-            _VisitorAgnostic_Object.visitorVisitExhibitionTime_Int_Array.push(
+            _MuseumAndVisitorAgnostic_Object.visitorVisitExhibitionTime_Int_Array.push(
                 _VisitorVisitExhibition_Struct_Array[loopCounter1_Int].time_Int
             );
             loopCounter1_Int ++;
@@ -1402,30 +1069,30 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
         _VisitorVisitMuseum_Struct_Array = __VisitorVisitMuseum_Struct_Array;
 
-        _VisitorAgnostic_Object.visitorVisitMuseumTime_Int_Array =
+        _MuseumAndVisitorAgnostic_Object.visitorVisitMuseumTime_Int_Array =
             CollectionStaticFunction_Object.Clear_T_Array(
-                _VisitorAgnostic_Object.visitorVisitMuseumTime_Int_Array
+                _MuseumAndVisitorAgnostic_Object.visitorVisitMuseumTime_Int_Array
             );
 
         loopCounter1_Int = 0;
         while(loopCounter1_Int < _VisitorVisitMuseum_Struct_Array.length){
 
-            _VisitorAgnostic_Object.visitorVisitMuseumTime_Int_Array.push(
+            _MuseumAndVisitorAgnostic_Object.visitorVisitMuseumTime_Int_Array.push(
                 _VisitorVisitMuseum_Struct_Array[loopCounter1_Int].time_Int
             );
             loopCounter1_Int ++;
 
         }
 
-        _VisitorAgnostic_Object.visitorVisitMuseumVisit_Int_Array =
+        _MuseumAndVisitorAgnostic_Object.visitorVisitMuseumVisit_Int_Array =
             CollectionStaticFunction_Object.Clear_T_Array(
-                _VisitorAgnostic_Object.visitorVisitMuseumVisit_Int_Array
+                _MuseumAndVisitorAgnostic_Object.visitorVisitMuseumVisit_Int_Array
             );
 
         loopCounter1_Int = 0;
         while(loopCounter1_Int < _VisitorVisitMuseum_Struct_Array.length){
 
-            _VisitorAgnostic_Object.visitorVisitMuseumVisit_Int_Array.push(
+            _MuseumAndVisitorAgnostic_Object.visitorVisitMuseumVisit_Int_Array.push(
                 _VisitorVisitMuseum_Struct_Array[loopCounter1_Int].visit_Int
             );
             loopCounter1_Int ++;
@@ -1454,9 +1121,9 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
         /*If the exhibition current is the archive exhibition then...*/
         if(
-            __Museum_Object._Name_Struct.nameAlt_String   == "EXH_ARC"                ||
-            __Museum_Object._Name_Struct.nameFull_String  == "Exhibition Archive"     ||
-            __Museum_Object._Name_Struct.nameFull_String  == "Archive Exhibition"
+            __Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String  == "EXH_ARC"                ||
+            __Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String  == "Exhibition Archive"     ||
+            __Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String  == "Archive Exhibition"
         ){
 
             /*If the newly visited exhibition is the exhibition archive then remove this visitor
@@ -1510,7 +1177,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
 
 
-        _VisitorAgnostic_Object.exhibitionCurrentNameAlt_String =
+        _MuseumAndVisitorAgnostic_Object.exhibitionCurrentNameAlt_String =
             exhibitionCurrent_Museum_Object._Name_Struct.nameAlt_String;
 
 
@@ -1536,16 +1203,16 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
 
         /*Clear the agnostic array.*/
-        _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array =
+        _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array =
             CollectionStaticFunction_Object.Clear_T_Array(
-                _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
+                _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
             );
 
         /*Re - fill the agnostic array.*/
         var loopCounter1_Int:Int = 0;
         while(loopCounter1_Int < exhibitionTarget_Museum_Object_Array.length){
 
-            _VisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array.push(
+            _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array.push(
                 exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String
             );
             loopCounter1_Int ++;
@@ -1575,16 +1242,16 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
 
         /*Clear the agnostic array.*/
-        _VisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array =
+        _MuseumAndVisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array =
             CollectionStaticFunction_Object.Clear_T_Array(
-                _VisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array
+                _MuseumAndVisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array
             );
 
         /*Re - fill the agnostic array.*/
         var loopCounter1_Int:Int = 0;
         while(loopCounter1_Int < exhibitionVisited_Museum_Object_Array.length){
 
-            _VisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array.push(
+            _MuseumAndVisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array.push(
                 exhibitionVisited_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String
             );
 
@@ -1662,13 +1329,13 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
                 exhibitionCurrent_Museum_Object,
                 exhibitionVisited_Museum_Object_Array,
                 exhibitionCurrent_Museum_Object._Name_Struct.nameAlt_String,
-                _VisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array
+                _MuseumAndVisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array
             );
 
             /*Set of functions that need to be executed when this visitor visit a new exhibition.*/
             CalculateScore_Visitor_Object().
             CalculateTagCounter_Visitor_Object
-                (_VisitorAgnostic_Object.amountOfPreviousVisitedExhibitionCheck_Int).
+                (_MuseumAndVisitorAgnostic_Object.amountOfPreviousVisitedExhibitionCheck_Int).
             DetermineFinished_Visitor_Object().
             GenerateSentence_Visitor_Object().
             RetrieveExplanation_Visitor_Object();
@@ -1694,7 +1361,7 @@ private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool)
 
             _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int].
                 GenerateExhibitionTarget_Visitor_Object(
-                    _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int]._VisitorAgnostic_Object.amountOfTargetExhibition_Int
+                    _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object.amountOfTargetExhibition_Int
                 );
 
             loopCounter1_Int ++;

@@ -20,6 +20,11 @@ class CollectionFunction{
 
 
 
+
+
+
+
+
     /*==================================================
     A function to clear array.*/
     public static function ClearArray(_dynamicArray:Array<Dynamic>){
@@ -177,6 +182,47 @@ class CollectionFunction{
 
 
     /*==================================================
+    A function to generate greater common divisor.
+    Indonesian of FPB (Faktor Persekutuan Besar)*/
+    public static function GenerateGreatestCommonDivisorFloat(
+        _number1Float:Float,
+        _number2Float:Float
+    ):Float{
+
+        if(_number2Float == 0){ return _number1Float; }
+        else{
+
+            return GenerateGreatestCommonDivisorFloat(
+                _number2Float, _number1Float%_number2Float
+            );
+
+        }
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================
+    A function to generate least common multiple.
+    Indonesian of KPK (Kelipatan Persekutuan Kecil)*/
+    public static function GenerateLeastCommonMultipleFloat(
+        _number1Float:Float,
+        _number2Float:Float
+    ):Float{
+
+        return (_number1Float*_number2Float)/GenerateGreatestCommonDivisorFloat(_number1Float, _number2Float);
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================
     A function to check whether an element is exist in an array or not.*/
     public static function IsExistInArrayBool(
         _dynamicArray       :Array<Dynamic>,
@@ -249,21 +295,39 @@ class CollectionFunction{
 
 
     /*==================================================
-    A function to generate greater common divisor.
-    Indonesian of FPB (Faktor Persekutuan Besar)*/
-    public static function GenerateGreatestCommonDivisorFloat(
-        _number1Float:Float,
-        _number2Float:Float
-    ){
+    Push object and also push the accompanying variable into the agnostic object.*/
+    public static function SyncPush_T_Array<T, U, V, W, X, Y>(
+        _elementNonAgnostic_T   :T,
+        _nonAgnostic_T_Array    :Array<T>,
+        _elementAgnostic_U      :U,
+        _agnostic_U_Array       :Array<U>,
+        ?_elementAgnostic_V     :V,
+        ?_agnostic_V_Array      :Array<V>,
+        ?_elementAgnostic_W     :W,
+        ?_agnostic_W_Array      :Array<W>,
+        ?_elementAgnostic_X     :X,
+        ?_agnostic_X_Array      :Array<X>,
+        ?_elementAgnostic_Y     :Y,
+        ?_agnostic_Y_Array      :Array<Y>
+    ):Array<T>{
 
-        if(_number2Float == 0){ return _number1Float; }
-        else{
+        _nonAgnostic_T_Array    .push(_elementNonAgnostic_T);
+        _agnostic_U_Array       .push(_elementAgnostic_U);
 
-            return GenerateGreatestCommonDivisorFloat(
-                _number2Float, _number1Float%_number2Float
-            );
 
-        }
+
+        if(_elementAgnostic_V != null && _agnostic_V_Array != null)
+            { _agnostic_V_Array.push(_elementAgnostic_V); }
+        if(_elementAgnostic_W != null && _agnostic_W_Array != null)
+            { _agnostic_W_Array.push(_elementAgnostic_W); }
+        if(_elementAgnostic_X != null && _agnostic_X_Array != null)
+            { _agnostic_X_Array.push(_elementAgnostic_X); }
+        if(_elementAgnostic_Y != null && _agnostic_Y_Array != null)
+            { _agnostic_Y_Array.push(_elementAgnostic_Y); }
+
+
+
+        return _nonAgnostic_T_Array;
 
     }
     /*==================================================*/
@@ -273,14 +337,39 @@ class CollectionFunction{
 
 
     /*==================================================
-    A function to generate least common multiple.
-    Indonesian of KPK (Kelipatan Persekutuan Kecil)*/
-    public static function GenerateLeastCommonMultipleFloat(
-        _number1Float:Float,
-        _number2Float:Float
-    ){
+    Sync function to remove an element from an array within agnostic and non - agnostic object.*/
+    public static function SyncRemove_T_Array<T, U, V, W, X, Y>(
+        _elementNonAgnostic_T   :T,
+        _nonAgnostic_T_Array    :Array<T>,
+        _elementAgnostic_U      :U,
+        _agnostic_U_Array       :Array<U>,
+        ?_elementAgnostic_V     :V,
+        ?_agnostic_V_Array      :Array<V>,
+        ?_elementAgnostic_W     :W,
+        ?_agnostic_W_Array      :Array<W>,
+        ?_elementAgnostic_X     :X,
+        ?_agnostic_X_Array      :Array<X>,
+        ?_elementAgnostic_Y     :Y,
+        ?_agnostic_Y_Array      :Array<Y>
+    ):Array<T>{
 
-        return (_number1Float*_number2Float)/GenerateGreatestCommonDivisorFloat(_number1Float, _number2Float);
+        _nonAgnostic_T_Array    .remove(_elementNonAgnostic_T);
+        _agnostic_U_Array       .remove(_elementAgnostic_U);
+
+
+
+        if(_elementAgnostic_V != null && _agnostic_V_Array != null)
+            { _agnostic_V_Array.remove(_elementAgnostic_V); }
+        if(_elementAgnostic_W != null && _agnostic_W_Array != null)
+            { _agnostic_W_Array.remove(_elementAgnostic_W); }
+        if(_elementAgnostic_X != null && _agnostic_X_Array != null)
+            { _agnostic_X_Array.remove(_elementAgnostic_X); }
+        if(_elementAgnostic_Y != null && _agnostic_Y_Array != null)
+            { _agnostic_Y_Array.remove(_elementAgnostic_Y); }
+
+
+
+        return _nonAgnostic_T_Array;
 
     }
     /*==================================================*/
