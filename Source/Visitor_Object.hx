@@ -39,6 +39,14 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         _name_String                :String
     ):Void{
 
+        /*Instantiate the agnostic object.*/
+        _MuseumAndVisitorAgnostic_Object = new VisitorAgnostic_Object(
+            _CollectionGlobal_Object.amountOfPreviousVisitedExhibitionCheck_Int,
+            _CollectionGlobal_Object.amountOfTargetExhibition_Int
+        );
+
+
+
         super(__CollectionGlobal_Object);
 
 
@@ -46,14 +54,6 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         /*Assign all parameters.*/
         _MuseumAndVisitorAgnostic_Object._Index_Struct.global_Int   = __global_Int;
         _MuseumAndVisitorAgnostic_Object.name_String                = _name_String;
-
-
-
-        /*Instantiate the agnostic object.*/
-        _MuseumAndVisitorAgnostic_Object                            = new VisitorAgnostic_Object(
-            _CollectionGlobal_Object.amountOfPreviousVisitedExhibitionCheck_Int,
-            _CollectionGlobal_Object.amountOfTargetExhibition_Int
-        );
 
 
 
@@ -66,7 +66,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
         /*Put this object into main visitor array.*/
         AddOrRemoveThisFromMain_MuseumAndVisitor_Object(true);
-        /*Determine exhibition full threshild for everytime there is a new visitor goes to museum.*/
+        /*Determine exhibition full threshold for everytime there is a new visitor goes to museum.*/
         _CollectionGlobal_Object.DetermineExhibitionFullThreshold_Void();
         GenerateExhibitionTarget_Void();
 
@@ -141,8 +141,10 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             /*Check if the newly visited exhibition is actually an exhibition that is listed in
                 exhibition target object array.*/
             if(
-                exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String    == exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String  ||
-                exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String    == exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String
+                exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String ==
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String ||
+                exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String ==
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String
             ){ _MuseumAndVisitorAgnostic_Object.visitedCorrectExhibition_Bool = true; break; }
             loopCounter1_Int ++;
 
@@ -395,7 +397,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                 CollectionStaticFunction_Object.SyncPush_T_Array(
                     _CollectionGlobal_Object.exhibition_Museum_Object_Array[loopCounter1_Int],
                     exhibitionTarget_Museum_Object_Array,
-                    _CollectionGlobal_Object.exhibition_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                    _CollectionGlobal_Object.exhibition_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                     _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                 );
 
@@ -411,7 +413,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                     CollectionStaticFunction_Object.SyncPush_T_Array(
                         _CollectionGlobal_Object.exhibition_Museum_Object_Array[loopCounter1_Int],
                         exhibitionTarget_Museum_Object_Array,
-                        _CollectionGlobal_Object.exhibition_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                        _CollectionGlobal_Object.exhibition_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                         _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                     );
 
@@ -439,7 +441,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                 CollectionStaticFunction_Object.SyncRemove_T_Array(
                     exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                     exhibitionTarget_Museum_Object_Array,
-                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                     _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                 );
 
@@ -476,7 +478,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                 CollectionStaticFunction_Object.SyncRemove_T_Array(
                     exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                     exhibitionTarget_Museum_Object_Array,
-                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                    exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                     _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                 );
 
@@ -526,7 +528,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                         CollectionStaticFunction_Object.SyncRemove_T_Array(
                             exhibitionVisited_Museum_Object_Array[loopCounter2_Int],
                             exhibitionTarget_Museum_Object_Array,
-                            exhibitionVisited_Museum_Object_Array[loopCounter2_Int]._Name_Struct.nameAlt_String,
+                            exhibitionVisited_Museum_Object_Array[loopCounter2_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                             _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                         );
 
@@ -610,7 +612,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                         CollectionStaticFunction_Object.SyncRemove_T_Array(
                             exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                             exhibitionTarget_Museum_Object_Array,
-                            exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                            exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                             _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                         );
                         
@@ -634,7 +636,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                         CollectionStaticFunction_Object.SyncRemove_T_Array(
                             exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                             exhibitionTarget_Museum_Object_Array,
-                            exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                            exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                             _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                         );
 
@@ -658,7 +660,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                         CollectionStaticFunction_Object.SyncRemove_T_Array(
                             exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                             exhibitionTarget_Museum_Object_Array,
-                            exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                            exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                             _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                         );
 
@@ -704,6 +706,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
             /*The score gathered from current iteration of target exhibition.*/
             var scoreReference_Int              :Int    = 0;
+
             /*The variable below is for calculating the possible maximum score from a target exhibition.
             CAUTION: The formula is the adding factorial (I do not know the name, but it is like factorization
                 but instead of multiplication it uses addition see this
@@ -763,7 +766,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                     CollectionStaticFunction_Object.SyncRemove_T_Array(
                         exhibitionTarget_Museum_Object_Array[loopCounter1_Int],
                         exhibitionTarget_Museum_Object_Array,
-                        exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String,
+                        exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                         _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
                     );
 
@@ -796,7 +799,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             CollectionStaticFunction_Object.SyncRemove_T_Array(
                 exhibitionTarget_Museum_Object_Array[exhibitionTarget_Museum_Object_Array.length - 1],
                 exhibitionTarget_Museum_Object_Array,
-                exhibitionTarget_Museum_Object_Array[exhibitionTarget_Museum_Object_Array.length - 1]._Name_Struct.nameAlt_String,
+                exhibitionTarget_Museum_Object_Array[exhibitionTarget_Museum_Object_Array.length - 1]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                 _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array
             );
 
@@ -839,20 +842,43 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
+
+
+
+
+
+    /*This class has these variables.
+    _GeneratorSentence_Object                       NO      need to change.
+    _TagCounter_Struct_Array                        CHANGE  empty array.
+    _VisitorMode_Enum                               CHANGE  to SOFTWARE_MANUAL.
+    _VisitorVisitExhibition_Struct_Array            CHANGE  empty array.
+    _VisitorVisitMuseum_Struct_Array                CHANGE  empty array.
+    exhibitionCurrent_Museum_Object                 CHANGE  to exhibition lobby.
+    exhibitionTarget_Museum_Object_Array            CHANGE  empty array.
+    floorCurrent_Museum_Object                      CHANGE  to null.
+    roomCurrent_Museum_Object                       CHANGE  to null.
+    PENDING: exhibitionVisited_Museum_Object_Array  CHANGE  empty array.*/
     private function Reset_Visitor_Object():VisitorObject(){
 
         super.Reset_MuseumAndVisitor_Object();
 
-        _VisitorMode_Enum                      = SOFTWARE_AUTO;
-
         _TagCounter_Struct_Array               = CollectionStaticFunction_Object.Clear_T_Array(_TagCounter_Struct_Array);
+        _VisitorMode_Enum                      = SOFTWARE_MANUAL;
         _VisitorVisitExhibition_Struct_Array   = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitExhibition_Struct_Array);
         _VisitorVisitMuseum_Struct_Array       = CollectionStaticFunction_Object.Clear_T_Array(_VisitorVisitMuseum_Struct_Array);
+        exhibitionCurrent_Museum_Object        = CollectionStaticFunction.Find_Museum_Object("EXH_LOB");
         exhibitionTarget_Museum_Object_Array   = CollectionStaticFunction_Object.Clear_T_Array(exhibitionTarget_Museum_Object_Array);
         exhibitionVisited_Museum_Object_Array  = CollectionStaticFunction_Object.Clear_T_Array(exhibitionVisited_Museum_Object_Array);
+        floorCurrent_Museum_Object             = null;
+        roomCurrent_Museum_Object              = null;
 
 
     }
+
+
+
+
+
 
 
 
@@ -879,7 +905,8 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
         /*Get random explanation index.*/
         _MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int     = explanationIndex_Int_Array[Math.random()*(explanationIndex_Int_Array.length - 1)];
-        _MuseumAndVisitorAgnostic_Object.explanationCurrent_String       = exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object.explanation_String_Array[_MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int];
+        _MuseumAndVisitorAgnostic_Object.explanationCurrent_String       =
+            exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object.explanation_String_Array[_MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int];
         /*Iterate until the newly get explanation is unique.*/
         while(
             _MuseumAndVisitorAgnostic_Object.explanation_String_Array.indexOf(_MuseumAndVisitorAgnostic_Object.explanationCurrent_String) != -1 &&
@@ -892,7 +919,8 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             
             /*Then I need to generate again random explanation.*/
             _MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int     = explanationIndex_Int_Array[Math.random()*(explanationIndex_Int_Array.length - 1)];
-            _MuseumAndVisitorAgnostic_Object.explanationCurrent_String       = exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object.explanation_String_Array[_MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int];
+            _MuseumAndVisitorAgnostic_Object.explanationCurrent_String       =
+                exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object.explanation_String_Array[_MuseumAndVisitorAgnostic_Object.explanationCurrentIndex_Int];
 
         }
 
@@ -1029,7 +1057,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         while(loopCounter1_Int < _VisitorVisitExhibition_Struct_Array.length){
 
             _MuseumAndVisitorAgnostic_Object.visitorVisitExhibitionNameAlt_String_Array.push(
-                _VisitorVisitExhibition_Struct_Array[loopCounter1_Int].exhibition_Museum_Object._Name_Struct.nameAlt_String
+                _VisitorVisitExhibition_Struct_Array[loopCounter1_Int].exhibition_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String
             );
             loopCounter1_Int ++;
 
@@ -1178,7 +1206,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
         _MuseumAndVisitorAgnostic_Object.exhibitionCurrentNameAlt_String =
-            exhibitionCurrent_Museum_Object._Name_Struct.nameAlt_String;
+            exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String;
 
 
 
@@ -1213,7 +1241,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         while(loopCounter1_Int < exhibitionTarget_Museum_Object_Array.length){
 
             _MuseumAndVisitorAgnostic_Object.exhibitionTargetNameAlt_String_Array.push(
-                exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String
+                exhibitionTarget_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String
             );
             loopCounter1_Int ++;
 
@@ -1252,7 +1280,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         while(loopCounter1_Int < exhibitionVisited_Museum_Object_Array.length){
 
             _MuseumAndVisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array.push(
-                exhibitionVisited_Museum_Object_Array[loopCounter1_Int]._Name_Struct.nameAlt_String
+                exhibitionVisited_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String
             );
 
             loopCounter1_Int ++;
@@ -1328,7 +1356,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
             CollectionStaticFunction_Object.SyncPush_T_Array(
                 exhibitionCurrent_Museum_Object,
                 exhibitionVisited_Museum_Object_Array,
-                exhibitionCurrent_Museum_Object._Name_Struct.nameAlt_String,
+                exhibitionCurrent_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String,
                 _MuseumAndVisitorAgnostic_Object.exhibitionVisitedNameAlt_String_Array
             );
 

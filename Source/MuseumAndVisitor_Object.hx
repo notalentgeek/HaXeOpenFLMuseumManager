@@ -12,6 +12,7 @@ class MuseumAndVisitor_Object{
     private var _CollectionGlobal_Object                (null, null)        :CollectionGlobal_Object                = null;
     private var _MuseumAndVisitorAgnostic_Object        (null, null)        :MuseumAndVisitorAgnostic_Object        = null;
     private var _Tag_Object_Array                       (null, set)         :Array<Tag_Object>                      = new Array<Tag_Object>();
+    private var sibling_MuseumAndVisitor_Object_Array   (null, null)        :Array<Museum_Object>       = new Array<Museum_Object>();
 
 
 
@@ -127,6 +128,7 @@ class MuseumAndVisitor_Object{
 
 
     private function DetermineIndex_MuseumAndVisitor_Object():MuseumAndVisitor_Object{
+
         DetermineIndexGlobal_MuseumAndVisitor_Object();
         DetermineIndexLocal_MuseumAndVisitor_Object();
 
@@ -169,8 +171,8 @@ class MuseumAndVisitor_Object{
         while(this._MuseumAndVisitorAgnostic_Object._Index_Struct.global_Int < _CollectionGlobal_Object.floor_Museum_Object_Array.length){
 
             if(
-                this._Name_Struct.nameAlt_String    == main_MuseumAndVisitor_Object_Array[this._MuseumAndVisitorAgnostic_Object._Index_Struct.global_Int]._Name_Struct.nameAlt_String ||
-                this._Name_Struct.nameFull_String   == main_MuseumAndVisitor_Object_Array[this._MuseumAndVisitorAgnostic_Object._Index_Struct.global_Int]._Name_Struct.nameFull_String
+                this._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String    == main_MuseumAndVisitor_Object_Array[this._MuseumAndVisitorAgnostic_Object._Index_Struct.global_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String ||
+                this._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String   == main_MuseumAndVisitor_Object_Array[this._MuseumAndVisitorAgnostic_Object._Index_Struct.global_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String
             ){ return this; }
 
             this._MuseumAndVisitorAgnostic_Object._Index_Struct.global_Int ++;
@@ -204,8 +206,8 @@ class MuseumAndVisitor_Object{
                 while(this._MuseumAndVisitorAgnostic_Object._Index_Struct.local_Int < parent_Museum_Object._Child_Struct.childMuseum_Object_Array.length){
 
                     if(
-                        this._Name_Struct.nameAlt_String    == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAndVisitorAgnostic_Object._Index_Struct.local_Int]._Name_Struct.nameAlt_String ||
-                        this._Name_Struct.nameFull_String   == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAndVisitorAgnostic_Object._Index_Struct.local_Int]._Name_Struct.nameFull_String
+                        this._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String    == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAndVisitorAgnostic_Object._Index_Struct.local_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String ||
+                        this._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String   == parent_Museum_Object._Child_Struct.childMuseum_Object_Array[this._MuseumAndVisitorAgnostic_Object._Index_Struct.local_Int]._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String
                     ){ return this; }
 
                     this._MuseumAndVisitorAgnostic_Object._Index_Struct.local_Int ++;
@@ -246,7 +248,50 @@ class MuseumAndVisitor_Object{
 
 
 
-    /*Function to reset this object value*/
+    /*Create function to determine local sibling objects.
+    CAUTION: This is actually not so necessary because I can just check everything from the object's parent.*/
+    private function DetermineSibling_MuseumAndVisitor_Object():MuseumAndVisitor_Object{
+
+        if(Std.is(this, Museum_Object)){
+
+            /*If this object is a floor object then the sibling is the global floor object array.*/
+            if(this._MuseumType_Enum == FLR){
+
+                sibling_MuseumAndVisitor_Object_Array = this._CollectionGlobal_Object.floor_Museum_Object_Array;
+
+            }
+            else if(this._MuseumType_Enum != FLR){
+
+                sibling_MuseumAndVisitor_Object_Array = this.parent_Museum_Object._Child_Struct._Museum_Object_Array;
+
+            }
+
+        }
+        else if(Std.is(this, Visitor_Object)){
+
+            sibling_MuseumAndVisitor_Object_Array = this.exhibitionCurrent_Museum_Object._Child_Struct._Visitor_Object_Array;
+
+        }
+
+        return this;
+
+    }
+
+
+
+
+
+
+
+
+
+
+    /*This class has these variables.
+    _CollectionGlobal_Object                NO          need to change.
+    _MuseumAndVisitorAgnostic_Object        NO          need to change.
+    _Tag_Object_Array                       CHANGE      empty array         IF this object is visitor object.
+    sibling_MuseumAndVisitor_Object_Array   NO          need to change.
+    PENDING: Create a static function to sync remove.*/
     private function Reset_MuseumAndVisitor_Object():MuseumAndVisitor_Object{
 
         /*Check wether the current object is a museum or visitor object.*/

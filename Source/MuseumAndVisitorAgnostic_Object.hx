@@ -1,13 +1,13 @@
 class MuseumAndVisitorAgnostic_Object{
-	
+    
 
 
 
 
     private var _Index_Struct                                                   (null, null)        :Index_Struct   = {
 
-        global_Int  : -1;
-        local_Int   : -1;
+        global_Int  : null;
+        local_Int   : null;
 
     };
     private var explanation_String_Array                                        (null, null)        :Array<String>  = null;
@@ -17,17 +17,24 @@ class MuseumAndVisitorAgnostic_Object{
 
 
 
-	public function new(){}
+    public function new(){}
 
 
 
 
 
-	private function Reset_MuseumAndVisitorAgnostic_Object():MuseumAndVisitor_Object{
+    /*This class has these variables.
+    _Index_Struct               NO      need to change.
+    explanation_String_Array    CHANGE  empty array         IF  this object is visitor object.
+    tagName_String_Array        CHANGE  empty array         IF  this object is visitor object.*/
+    private function Reset_MuseumAndVisitorAgnostic_Object():MuseumAndVisitor_Object{
 
-        _Index_Struct.global_Int                    = -1;
-        _Index_Struct.local_Int                     = -1;
-        explanation_String_Array                    = CollectionStaticFunction_Object.Clear_T_Array(explanation_String_Array);
+        if(Std.is(this, VisitorAgnostic_Object)){
+            
+            explanation_String_Array    = CollectionStaticFunction_Object.Clear_T_Array(explanation_String_Array);
+            tagName_String_Array        = CollectionStaticFunction_Object.Clear_T_Array(tagName_String_Array);
+        
+        }
 
         return this;
 
