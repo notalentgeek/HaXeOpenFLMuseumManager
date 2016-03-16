@@ -27,7 +27,7 @@ class CollectionFunction{
 
     /*==================================================
     A function to clear array.*/
-    public static function ClearArray(_dynamicArray:Array<Dynamic>){
+    public static function Clear_T_Array(_dynamicArray:Array<Dynamic>){
 
         #if(cpp||php)
             _dynamicArray.splice(0, _dynamicArray.length);
@@ -337,7 +337,7 @@ class CollectionFunction{
 
 
     /*==================================================
-    Sync function to remove an element from an array within agnostic and non - agnostic object.*/
+    Sync function to remove an element from an array within agnostic and non - agnostic arrays.*/
     public static function SyncRemove_T_Array<T, U, V, W, X, Y>(
         _elementNonAgnostic_T   :T,
         _nonAgnostic_T_Array    :Array<T>,
@@ -370,6 +370,72 @@ class CollectionFunction{
 
 
         return _nonAgnostic_T_Array;
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================
+    Sync function to remove all elements from an array within agnostic and non - agnostic arrays.*/
+    public static function SyncRemoveAll_T_Array<T, U, V, W, X, Y>(
+        _nonAgnostic_T_Array    :Array<T>,
+        _agnostic_U_Array       :Array<U>,
+        ?_agnostic_V_Array      :Array<V>,
+        ?_agnostic_W_Array      :Array<W>,
+        ?_agnostic_X_Array      :Array<X>,
+        ?_agnostic_Y_Array      :Array<Y>
+    ):Array<T>{
+
+        while(_nonAgnostic_T_Array.length > 0){ _nonAgnostic_T_Array.pop(); }
+        while(_agnostic_U_Array.length > 0){ _agnostic_U_Array.pop(); }
+
+
+
+        if(_agnostic_V_Array != null){ while(_agnostic_V_Array.length > 0){ _agnostic_U_Array.pop(); } }
+        if(_agnostic_W_Array != null){ while(_agnostic_W_Array.length > 0){ _agnostic_U_Array.pop(); } }
+        if(_agnostic_X_Array != null){ while(_agnostic_X_Array.length > 0){ _agnostic_U_Array.pop(); } }
+        if(_agnostic_Y_Array != null){ while(_agnostic_Y_Array.length > 0){ _agnostic_U_Array.pop(); } }
+
+
+
+        return _nonAgnostic_T_Array;
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================
+    Set function to sync two values.*/
+    public static function SyncSet_T<T, U, V, W, X, Y>(
+        _valueNonAgnostic_T :T,
+        _nonAgnostic_T      :T,
+        _valueAgnostic_U    :U,
+        _agnostic_U         :U,
+        ?_valueAgnostic_V   :V,
+        ?_agnostic_V        :V,
+        ?_valueAgnostic_W   :W,
+        ?_agnostic_W        :W,
+        ?_valueAgnostic_X   :X,
+        ?_agnostic_X        :X,
+        ?_valueAgnostic_Y   :Y,
+        ?_agnostic_Y        :Y
+    ){
+
+        _nonAgnostic_T  = _valueNonAgnostic_T;
+        _agnostic_U     = _valueAgnostic_U;
+
+        if(_valueAgnostic_V != null && _agnostic_V != null){ _agnostic_V = _valueAgnostic_V; }
+        if(_valueAgnostic_W != null && _agnostic_W != null){ _agnostic_W = _valueAgnostic_W; }
+        if(_valueAgnostic_X != null && _agnostic_X != null){ _agnostic_X = _valueAgnostic_X; }
+        if(_valueAgnostic_Y != null && _agnostic_Y != null){ _agnostic_Y = _valueAgnostic_Y; }
+
+        return _nonAgnostic_T
 
     }
     /*==================================================*/

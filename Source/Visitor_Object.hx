@@ -68,7 +68,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         AddOrRemoveThisFromMain_MuseumAndVisitor_Object(true);
         /*Determine exhibition full threshold for everytime there is a new visitor goes to museum.*/
         _CollectionGlobal_Object.DetermineExhibitionFullThreshold_Void();
-        GenerateExhibitionTarget_Void();
+        GenerateExhibitionTarget_Visitor_Object(_MuseumAndVisitorAgnostic_Object.amountTargetExhibition_Int);
 
     }
 

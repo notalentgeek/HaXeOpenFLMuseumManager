@@ -22,7 +22,7 @@ class MuseumAgnostic_Object extends MuseumAndVisitorAgnostic_Object{
     private var parentMuseumNameAlt_String          (null, null)        :String                     = null;
 
     private var childMuseumNameAlt_String_Array     (null, null)        :Array<String>              = new Array<String>();
-    private var childVisitorName_StringArray        (null, null)        :Array<String>              = new Array<String>();
+    private var childVisitorNameAlt_StringArray        (null, null)        :Array<String>              = new Array<String>();
     private var explanation_String_Array            (null, null)        :Array<String>              = new Array<String>();
     private var siblingMuseumNameAlt_String_Array   (null, null)        :Array<String>              = new Array<String>();
     private var tagName_String_Array                (null, null)        :Array<String>              = new Array<String>();
