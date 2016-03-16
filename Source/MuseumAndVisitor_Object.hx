@@ -11,8 +11,12 @@ class MuseumAndVisitor_Object{
 
     private var _CollectionGlobal_Object                (null, null)        :CollectionGlobal_Object                = null;
     private var _MuseumAndVisitorAgnostic_Object        (null, null)        :MuseumAndVisitorAgnostic_Object        = null;
+    private var _MuseumAndVisitorUI_Object              (null, null)        :MuseumAndVisitorUI_Object              = null;
+    
+
+
     private var _Tag_Object_Array                       (null, set)         :Array<Tag_Object>                      = new Array<Tag_Object>();
-    private var sibling_MuseumAndVisitor_Object_Array   (null, null)        :Array<Museum_Object>       = new Array<Museum_Object>();
+    private var sibling_MuseumAndVisitor_Object_Array   (null, null)        :Array<Museum_Object>                   = new Array<Museum_Object>();
 
 
 

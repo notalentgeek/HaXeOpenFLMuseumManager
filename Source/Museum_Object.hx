@@ -19,8 +19,8 @@ class Museum_Object extends MuseumAndVisitor_Object{
     /*PENDING - DONE: Setter for museum type.*/
     /*PENDING - DONE: Shrink update whole function into more compact function. Create smaller functions.*/
     /*PENDING - DONE: Sync array for _Child_Struct.*/
-    /*PENDING: Comment on user interface class.*/
-    /*PENDING: Revert back object in top of ui class.*/
+    /*PENDING - DONE: Comment on user interface class.*/
+    /*PENDING - DONE: Revert back object in top of ui class.*/
 
 
 
@@ -64,6 +64,8 @@ class Museum_Object extends MuseumAndVisitor_Object{
         _MuseumAndVisitorAgnostic_Object.explanation_String_Array   = _explanation_String_Array;
         _MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String    = _nameAlt_String;
         _MuseumAndVisitorAgnostic_Object._Name_Struct.full_String   = _nameFull_String;
+
+        _MuseumAndVisitorUI_Object = new MuseumUI_Object(_CollectionGlobal_Object, this);
 
         /*Put this object into main array.*/
         if(
@@ -209,8 +211,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
         
 
 
-        /*PENDING: User interface variables.*/
-        _main_Museum_Object_Array[_index_Int]._MuseumUI_Object.Draw_MuseumUI_Object(
+        _main_Museum_Object_Array[_index_Int]._MuseumAndVisitorUI_Object.Draw_MuseumUI_Object(
             _main_Museum_Object_Array[_index_Int],
             Lib.current.stage.stageWidth
         );
@@ -223,49 +224,25 @@ class Museum_Object extends MuseumAndVisitor_Object{
 
 
 
-    /*Mini function to remove floor or room object.*/
-    private function FloorAndRoomRemoveHandler_Museum_Object(_main_Museum_Object_Array:Array<Museum_Object>):Museum_Object{
-
-        /*Check if this object still has a children museum object.*/
-        if(_Child_Struct._Museum_Object_Array.length != 0){
-
-            /*Loop through main array to check if which object is this object's children.
-            PENDING: Use child object array instead from child Struct.
-            PENDING: Actually make it automatically so that every museum object that is marked for deletion has its children
-                requested to change parent object. If an object's parent is no longer mark for deletion then change the 
-                museum mode enum to null.*/
-            var loopCounter1_Int:Int = 0;
-            while(loopCounter1_Int < _main_Museum_Object_Array.length){
-
-                if(_MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String == _main_Museum_Object_Array[loopCounter1_Int].parent_Museum_Object._Name_Struct.alt_String){
-
-                    /*Change the children object to request to change parent.*/
-                    _main_Museum_Object_Array[loopCounter1_Int]._MuseumMode_Enum = REQ_CH_PARENT;
-                    UpdateWhole_Museum_Object();
-
-                }
-
-                loopCounter1_Int ++;
-
-            }
-
-        }
-        else if(_Child_Struct._Museum_Object_Array.length == 0){ RemoveUI_Museum_Object(); }
-
-    }
-
-
-
-
-
     /*Function to remove this object from main array.*/
     private function RemoveUI_Museum_Object():Museum_Object{
 
-        /*PENDING: To fix the hierarchy of UI object into the top of object.*/
-        //_CollectionGlobal_Object._Absolute.removeChild(_MuseumUI_Object._Button);
+        /*PENDING - DONE: To fix the hierarchy of UI object into the top of object (I revert this back).*/
+        
+
+
+        /*Removing the button object from the main absolute layout object.*/
+        _CollectionGlobal_Object._Absolute.removeChild(_MuseumAndVisitorUI_Object._Button);
+        /*Removing this object from the main array.*/
         _CollectionGlobal_Object.exhibition_Museum_Object_Array.remove(this);
-        //_MuseumUI_Object = null;
+        /*Delete the user interface object because there are no more calculation necessary
+            since the button object is deleted.*/
+        _MuseumAndVisitorUI_Object = null;
+        /*Update all museum objects in the main array.*/
         UpdateWhole_Museum_Object();
+
+
+
         return this;
 
     }
@@ -384,6 +361,18 @@ class Museum_Object extends MuseumAndVisitor_Object{
 
                 if(_Child_Struct._Visitor_Object_Array.length != 0){
 
+                    /*PENDING: Especially for exhibition museum object, if exhibition object is marked
+                        for deletion the exhibition will check for how many visitor are there in
+                        itself.
+                    PENDING: At this moment visitor that have finished visit the museum are still in
+                        last exhibition before they visit the museum.
+                    PENDING: So this codes below is checking for any visitor that is finished BUT
+                        still inside this exhibition.
+                    PENDING: The visitors that are finished and but still in this exhibition will
+                        be moved to exhibition archive.
+                    PENDING: However, finished visitor should go to archive exhibition immediately
+                        instead of stayin in an exhibition.
+                    PENDING: So this fix should be done from the visitor class.*/
                     var loopCounter1_Int:Int = 0;
                     while(loopCounter1_Int < _Child_Struct._Visitor_Object_Array.length){
 
@@ -402,16 +391,14 @@ class Museum_Object extends MuseumAndVisitor_Object{
                 else if(_Child_Struct._Visitor_Object_Array.length == 0){ RemoveUI_Museum_Object(); }
 
             }
-            else if(_MuseumType_Enum == FLR){
+            else if(_MuseumType_Enum != EXH){
 
-                var main_Museum_Object_Array:Array<Museum_Object> = __CollectionGlobal_Object.floor_Museum_Object_Array;
-                FloorAndRoomRemoveHandler_Museum_Object(main_Museum_Object_Array);
-
-            }
-            else if(_MuseumType_Enum == ROM){
-
-                var main_Museum_Object_Array:Array<Museum_Object> = __CollectionGlobal_Object.exhibition_Museum_Object_Array;
-                FloorAndRoomRemoveHandler_Museum_Object(main_Museum_Object_Array);
+                /*If a museum object is marked for deletion then it needs to wait until there is
+                    no more children attached to this object before deletion.
+                If there is no more children attached then the deletion process begin with the 
+                    deletion of user interface object and then the object itself by removing this
+                    object reference from main array.*/
+                if(_Child_Struct._Museum_Object_Array.length == 0){ RemoveUI_Museum_Object(); }
 
             }
 
@@ -449,7 +436,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
     private function UpdateWhole_Museum_Object():Museum_Object{
 
         /*The necessary width variable is a variable to hold the maximum amount of absolute width.*/
-        var absoluteNecessaryWidth_Int:Int = 0; /*PENDING: Important UI variable.*/
+        var absoluteNecessaryWidth_Int:Int = 0; /*PENDING - DONE: Important UI variable.*/
 
         /*Basically in this function I need to re - determine all children object, all sibling object, and all index for the lopped objects.*/
 
@@ -463,8 +450,8 @@ class Museum_Object extends MuseumAndVisitor_Object{
             /*It is not necessary to have absoluteNecessaryWidth_Int added for every loop because I did the calculation in regard of
                 the x position of the button object.*/
             var tempAbsoluteNecessaryWidth_Int:Int = Math.round(
-                _CollectionGlobal_Object.floor_Museum_Object_Array[loopCounter1_Int]._MuseumUI_Object._Button.x +
-                _CollectionGlobal_Object.floor_Museum_Object_Array[loopCounter1_Int]._MuseumUI_Object._Button.width
+                _CollectionGlobal_Object.floor_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorUI_Object._Button.x +
+                _CollectionGlobal_Object.floor_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorUI_Object._Button.width
             );
 
             /*Always make sure to check for the biggest value of absoluteNecessaryWidth_Int possible.*/
@@ -530,7 +517,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
             _CollectionGlobal_Object.visitor_Object_Array[loopCounter1_Int]
                 .DetermineIndex_MuseumAndVisitor_Object()
                 .GenerateExhibitionTarget_Visitor_Object(loopCounter1_Int)
-                ._VisitorUI_Object.Create_VisitorUI_Object(); /*PENDING: UI object.*/
+                ._VisitorUI_Object.Create_VisitorUI_Object(); /*PENDING - DONE: UI object.*/
             loopCounter1_Int ++;
 
         }
