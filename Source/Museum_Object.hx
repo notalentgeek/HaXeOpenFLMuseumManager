@@ -7,6 +7,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
     /*PENDING - DONE: Check in visitor class for the remnants of nameAlt_String.*/
     /*PENDING - DONE: Create sync value for struct variable in collection static function class.*/
     /*PENDING - DONE: Fix a function to reset museum object (create a simple comments documentation, etc).*/
+    /*PENDING - DONE: Fix museum user interface class.*/
     /*PENDING - DONE: Fix request changing parent in update function.*/
     /*PENDING - DONE: Give comment on update whole.*/
     /*PENDING - DONE: Make a function to determine child.*/
@@ -18,7 +19,8 @@ class Museum_Object extends MuseumAndVisitor_Object{
     /*PENDING - DONE: Setter for museum type.*/
     /*PENDING - DONE: Shrink update whole function into more compact function. Create smaller functions.*/
     /*PENDING - DONE: Sync array for _Child_Struct.*/
-    /*PENDING: Fix museum user interface class.*/
+    /*PENDING: Comment on user interface class.*/
+    /*PENDING: Revert back object in top of ui class.*/
 
 
 
@@ -208,7 +210,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
 
 
         /*PENDING: User interface variables.*/
-        _main_Museum_Object_Array[_index_Int]._MuseumUI_Object.Create_MuseumUI_Object(
+        _main_Museum_Object_Array[_index_Int]._MuseumUI_Object.Draw_MuseumUI_Object(
             _main_Museum_Object_Array[_index_Int],
             Lib.current.stage.stageWidth
         );
@@ -365,7 +367,8 @@ class Museum_Object extends MuseumAndVisitor_Object{
         PENDING: Create UI button to remove deletion mark of a museum object.*/
         if(parent_Museum_Object._MuseumMode_Enum == MRK_DEL){
 
-            if(_MuseumMode_Enum != MRK_DEL || _MuseumMode_Enum == null){ _MuseumMode_Enum = REQ_CH_PARENT; }
+            if(_MuseumMode_Enum != MRK_DEL || _MuseumMode_Enum == null)
+                { _MuseumMode_Enum = REQ_CH_PARENT; }
 
         }
 
@@ -527,7 +530,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
             _CollectionGlobal_Object.visitor_Object_Array[loopCounter1_Int]
                 .DetermineIndex_MuseumAndVisitor_Object()
                 .GenerateExhibitionTarget_Visitor_Object(loopCounter1_Int)
-                ._VisitorUI_Object.Create_MuseumUI_Object(); /*PENDING: UI object.*/
+                ._VisitorUI_Object.Create_VisitorUI_Object(); /*PENDING: UI object.*/
             loopCounter1_Int ++;
 
         }
