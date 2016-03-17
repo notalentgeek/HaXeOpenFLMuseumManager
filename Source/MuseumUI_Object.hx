@@ -43,7 +43,7 @@ class MuseumUI_Object extends MuseumAndVisitorUI_Object{
         object.
     PENDING: Instead of executing this function for all museum object I need so that only the museum ui
         object from the previous parent and the destined parent that have this function executed.*/
-    private function Draw_MuseumUI_Object(){
+    private function Draw_MuseumUI_Object():MuseumUI_Object{
 
         /*If this is the floor object then the y - axis position will be fixed.
         Since floor object will always be the highest from exhibition or room museum object.
@@ -81,6 +81,10 @@ class MuseumUI_Object extends MuseumAndVisitorUI_Object{
             );
 
         }
+
+
+
+        return this;
 
     }
 

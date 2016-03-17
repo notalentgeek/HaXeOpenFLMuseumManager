@@ -31,7 +31,7 @@ class MuseumAndVisitorUI_Object{
         _buttonWidth_Int    :Int,
         _buttonX_Int        :Int,
         _buttonY_Int        :Int
-    ){
+    ):MuseumAndVisitorUI_Object{
 
         _Button.autoSize    = false;
         _Button.height      = _buttonHeight_Int;
@@ -40,6 +40,8 @@ class MuseumAndVisitorUI_Object{
         _Button.width       = _buttonWidth_Int;
         _Button.x           = _buttonX_Int;
         _Button.y           = _buttonY_Int;
+
+        return this;
 
     }
 

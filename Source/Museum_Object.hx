@@ -60,11 +60,13 @@ class Museum_Object extends MuseumAndVisitor_Object{
         _Tag_Object_Array       = __Tag_Object_Array;
         parent_Museum_Object    = _parent_Museum_Object;
 
-        /*Assign variables to agnostic object.*/
+        /*Assign function parameters to agnostic object.*/
         _MuseumAndVisitorAgnostic_Object.explanation_String_Array   = _explanation_String_Array;
         _MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String    = _nameAlt_String;
         _MuseumAndVisitorAgnostic_Object._Name_Struct.full_String   = _nameFull_String;
 
+
+        /*Create the user interface object.*/
         _MuseumAndVisitorUI_Object = new MuseumUI_Object(_CollectionGlobal_Object, this);
 
         /*Put this object into main array.*/

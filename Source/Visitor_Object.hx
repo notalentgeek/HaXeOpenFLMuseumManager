@@ -9,6 +9,10 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
+    /*PENDING: Create user interface for this class.
+    PENDING: Update user interface for this class.*/
+
+
 
     private var _GeneratorSentence_Object               (null, null)        :GeneratorSentence_Object               = null;
     private var _VisitorMode_Enum                       (null, set)         :VisitorMode_Enum                       = null;
@@ -54,6 +58,11 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         /*Assign all parameters.*/
         _MuseumAndVisitorAgnostic_Object._Index_Struct.global_Int   = __global_Int;
         _MuseumAndVisitorAgnostic_Object.name_String                = _name_String;
+
+
+
+        /*Create the user interface object.*/
+        _MuseumAndVisitorUI_Object = new MuseumUI_Object(_CollectionGlobal_Object, this);
 
 
 
@@ -712,7 +721,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
                 but instead of multiplication it uses addition see this
                 http://math.stackexchange.com/questions/593318/factorial-but-with-addition/593320)
             PENDING: This is not ideal number. I hope I can fix more specifically on this level of sort.*/
-            var scoreReferenceTotal_Int         :Int    =
+            var scoreReferenceMax_Int           :Int    =
                 Std.int(
                     (Math.pow(_TagCounter_Struct_Array.length, 2) + _TagCounter_Struct_Array.length)/2
                 );
@@ -759,7 +768,7 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
             /*If the score if half from the possible maximum score the currently inpected target
                 exhibition has 70% chance of being removed from exhibition target array.*/
-            if((scoreReference_Int/scoreReferenceTotal_Int) <= 0.5){
+            if((scoreReference_Int/scoreReferenceMax_Int) <= 0.5){
 
                 if(Math.random() > 0.3){
 
@@ -855,9 +864,9 @@ class Visitor_Object extends MuseumAndVisitor_Object{
     _VisitorVisitMuseum_Struct_Array                CHANGE  empty array.
     exhibitionCurrent_Museum_Object                 CHANGE  to exhibition lobby.
     exhibitionTarget_Museum_Object_Array            CHANGE  empty array.
+    exhibitionVisited_Museum_Object_Array           CHANGE  empty array.
     floorCurrent_Museum_Object                      CHANGE  to null.
-    roomCurrent_Museum_Object                       CHANGE  to null.
-    PENDING: exhibitionVisited_Museum_Object_Array  CHANGE  empty array.*/
+    roomCurrent_Museum_Object                       CHANGE  to null.*/
     private function Reset_Visitor_Object():VisitorObject(){
 
         super.Reset_MuseumAndVisitor_Object();
@@ -1142,8 +1151,8 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
     /*Setter function to set new current exhibition.
     If this function ran means that this visitor is arrived in the new exhibition.
-    PENDING: Create calculation to calculate user interface layout.
-    PENDING: For that I need to check the necessary height and necessary width variable in the old
+    PENDING - DONE: Create calculation to calculate user interface layout.
+    PENDING - DONE: For that I need to check the necessary height and necessary width variable in the old
         ObjectVisitor.hx.*/
     private function set_exhibitionCurrent_Museum_Object(__Museum_Object:Museum_Object):Museum_Object{
 
@@ -1155,7 +1164,9 @@ class Visitor_Object extends MuseumAndVisitor_Object{
         ){
 
             /*If the newly visited exhibition is the exhibition archive then remove this visitor
-                from main visitor array in collection global object.*/
+                from main visitor array in collection global object.
+            CAUTION: Visitor object that is in the exhibition archive is not in the main
+                visitor object array in collection global object.*/
             AddOrRemoveThisFromMain_MuseumAndVisitor_Object(false);
 
             /*Before I change the current exhibition, I need to remove this visitor from the child array
@@ -1182,7 +1193,9 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
             /*Check this visitor whether this this visitor is in the main visitor array or not.
             If not then I need to put this visitor in the main array.
-            So I need to check the existence of this object in the visitor main array first.*/
+            So I need to check the existence of this object in the visitor main array first.
+        CAUTION: Visitor object that is in the exhibition archive is not in the main
+            visitor object array in collection global object.*/
             AddOrRemoveThisFromMain_MuseumAndVisitor_Object(true);
 
             /*Before I change the current exhibition, I need to remove this visitor from the child array
@@ -1372,26 +1385,15 @@ class Visitor_Object extends MuseumAndVisitor_Object{
 
 
 
-        /*When a visitor change into archive exhibition there are only these two functions
-            that is need to be ran.
-        Determine index local.*/
-        var loopCounter1_Int:Int = 0;
-        while(loopCounter1_Int < exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array.length){
-
-            exhibitionCurrent_Museum_Object._Child_Struct.childVisitor_Object_Array[loopCounter1_Int].DetermineIndexLocal_MuseumAndVisitor_Object();
-
-            loopCounter1_Int ++;
-
-        }
-        /*Generate exhibition target array.*/
+        /*Generate exhibition target array.
+        CAUTION: These line below will be quite heavy to process.*/
         loopCounter1_Int = 0;
-        while(loopCounter1_Int < _CollectionGlobal_Object._Visitor_Object_Array.length){
+        while(loopCounter1_Int < _CollectionGlobal_Object.visitor_Object_Array.length){
 
-            _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int].
-                GenerateExhibitionTarget_Visitor_Object(
-                    _CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object.amountOfTargetExhibition_Int
-                );
-
+            _CollectionGlobal_Object.visitor_Object_Array[loopCounter1_Int]
+                .DetermineIndex_MuseumAndVisitor_Object()
+                .GenerateExhibitionTarget_Visitor_Object(loopCounter1_Int)
+                ._VisitorUI_Object.Create_VisitorUI_Object(); /*PENDING - DONE: UI object.*/
             loopCounter1_Int ++;
 
         }
