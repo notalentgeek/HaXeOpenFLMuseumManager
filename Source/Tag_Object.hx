@@ -5,7 +5,9 @@ class Tag_Object{
 
 
     /*PENDING - DONE: Create function to remove this tag object from main array. Name it RemoveThisFromMain_Tag_Object
-    PENDING - DONE: Create function to add this object into main array.*/
+    PENDING - DONE: Create function to add this object into main array.
+    PENDING: Create function to generate company words.
+    PENDING: Create the constructor.*/
 
 
 
@@ -18,7 +20,7 @@ class Tag_Object{
 
 
     private var _CollectionGlobal_Object    (null, null)    :CollectionGlobal_Object    = null;
-    private var _Feel_Enum                  (null, null)    :Feel_Enum                  = NEUTRAL;                          /*PENDING: Create setter function to tied this variable wit its agnostic couterpart.*/
+    private var _TagFeelEnum                (null, null)    :TagFeel_Enum               = NEUTRAL;                          /*PENDING: Create setter function to tied this variable wit its agnostic couterpart.*/
     private var _TagType_Enum               (null, null)    :TagType_Enum               = null;                             /*PENDING: Create setter function to tied this variable wit its agnostic couterpart.*/
 
 
@@ -86,11 +88,11 @@ class Tag_Object{
 
 
 
-    private function set__Feel_Enum(__Feel_Enum:Feel_Enum):Feel_Enum{
+    private function set__Feel_Enum(__Feel_Enum:TagFeel_Enum):TagFeel_Enum{
 
-        _Feel_Enum = __Feel_Enum;
-        _TagAgnostic_Object.feel_String = Std.string(_Feel_Enum);
-        return _Feel_Enum;
+        _TagFeelEnum = __Feel_Enum;
+        _TagAgnostic_Object.feel_String = Std.string(_TagFeelEnum);
+        return _TagFeelEnum;
 
     }
     
