@@ -57,7 +57,7 @@ class ObjectTag{
     public function GenerateCompanyWordVoid(){
 
         #if (cpp || neko || php)
-            /*PENDING: Change this into a function.*/
+            /*PENDING - DONE: Change this into a function.*/
             if(
                 typeEnum != ADJ &&
                 typeEnum != ADV &&

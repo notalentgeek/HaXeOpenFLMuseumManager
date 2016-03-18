@@ -39,7 +39,7 @@ class MuseumAndVisitor_Object{
 
 
     /*Function to add or remove this object from main object array.
-    PENDING: Please put this function into super class.*/
+    PENDING - DONE: Please put this function into super class.*/
     private function AddOrRemoveThisFromMain_MuseumAndVisitor_Object(_add_Bool:Bool){
         
         /*Create temporary array.*/

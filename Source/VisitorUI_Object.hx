@@ -2,6 +2,8 @@ class VisitorUI_Object{
 
 
 
+
+
     public function new(
         __CollectionGlobal_Object:CollectionGlobal_Object,
         __MuseumAndVisitor_Object:MuseumAndVisitor_Object
