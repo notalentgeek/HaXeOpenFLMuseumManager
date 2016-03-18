@@ -20,19 +20,18 @@ class CollectionFunction{
 
 
 
-
-
-
-
-
     /*==================================================
     A function to clear array.*/
-    public static function Clear_T_Array(_dynamicArray:Array<Dynamic>){
+    public static function Clear_T_Array<T>(__T_Array:Array<T>):Array<T>{
 
         #if(cpp||php)
-            _dynamicArray.splice(0, _dynamicArray.length);
+
+            __T_Array.splice(0, __T_Array.length);
+
         #else
-            untyped _dynamicArray.length = 0;
+
+            untyped __T_Array.length = 0;
+
         #end
 
     }
@@ -44,47 +43,65 @@ class CollectionFunction{
 
     /*==================================================
     A function to find museum object based alternate name string or
-        full name string.*/
-    public static function FindMuseumObject(
-        _collectionGlobalObject     :CollectionGlobal   ,
-        _enumMuseumType             :EnumMuseumType     ,
-        _nameString                 :String
-    ){
+        full name string.
+    PENDING: Change file name of CollectionGlobalObject.hx into Global_Object.*/
+    public static function Find_Museum_Object(
+        __CollectionGlobal_Object   :CollectionGlobal,
+        __MuseumType_Enum           :MuseumType_Enum,
+        _name_String                :String
+    ):Museum_Object{
 
         /*Put array of museum object type into temporary array.*/
-        var tempObjectArray:Array<ObjectMuseum> = new Array<ObjectMuseum>();
-        if (_enumMuseumType == EXH){
-            tempObjectArray =
-                _collectionGlobalObject.GetExhibitionObjectArray();
-        }
-        else if(_enumMuseumType == FLR){
-            tempObjectArray =
-                _collectionGlobalObject.GetFloorObjectArray();
-        }
-        else if(_enumMuseumType == ROM){
-            tempObjectArray =
-                _collectionGlobalObject.GetRoomObjectArray();
-        }
+        var main_Museum_Object_Array:Array<ObjectMuseum> = new Array<ObjectMuseum>();
+        if(__MuseumType_Enum == EXH)
+            { main_Museum_Object_Array = __CollectionGlobal_Object.exhibition_Museum_Object_Array; }
+        else if(__MuseumType_Enum == FLR)
+            { main_Museum_Object_Array = __CollectionGlobal_Object.floor_Museum_Object_Array; }
+        else if(__MuseumType_Enum == ROM)
+            { main_Museum_Object_Array = __CollectionGlobal_Object.room_Museum_Object_Array; }
+
+
+
+
 
         /*Loop through the corresponding array to find the object.
         For each loop compare the target alternate name string and full
             name string with the corresponding loop object museum.*/
-        var loopCounter1Int:Int =  0;
-        while(loopCounter1Int < tempObjectArray.length){
+        var loopCounter1_Int:Int =  0;
+        while(loopCounter1_Int < main_Museum_Object_Array.length){
 
-            if(_nameString == tempObjectArray[loopCounter1Int].GetNameStruct().nameAltString){
-                return tempObjectArray[loopCounter1Int];
-            }
-            if(_nameString == tempObjectArray[loopCounter1Int].GetNameStruct().nameFullString){
-                return tempObjectArray[loopCounter1Int];
-            }
+            /*Search based on alternative name,*/
+            if(_name_String ==
+                main_Museum_Object_Array[loopCounter1_Int]
+                    ._MuseumAndVisitorAgnostic_Object
+                    ._Name_Struct.alt_String
+            ){ return main_Museum_Object_Array[loopCounter1_Int]; }
 
-            loopCounter1Int ++;
+
+
+
+
+            /*Search based on full name.*/
+            if(_name_String ==
+                    main_Museum_Object_Array[loopCounter1_Int]
+                        ._MuseumAndVisitorAgnostic_Object
+                        ._Name_Struct.full_String
+            ){ return main_Museum_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+            loopCounter1_Int ++;
 
         }
 
-        /*Returns null if the target alternate name and full name string is
-            not found within the array.*/
+
+
+
+
+        /*If this function returns a null then the object this program wants to search is not
+            available.*/
         return null;
 
     }
@@ -97,54 +114,306 @@ class CollectionFunction{
     /*==================================================
     Find tag object based on the name and whether it is a general tag or
         not.*/
-    public static function FindTagObject(
-        _collectionGlobalObject     :CollectionGlobal   ,
-        _isGeneral                  :Bool               ,
-        _nameString                 :String
-    ){
+    public static function Find_Tag_Object(
+        __CollectionGlobal_Object       :CollectionGlobal,
+        _general_Bool                   :Bool,
+        _name_String                    :String
+    ):Tag_Object{
 
         /*General tags are tag words that are contain common words
             and not specifically toward an exhibition.*/
-        if(_isGeneral == true ){
+        if(_general_Bool == true ){
 
-            var loopCounter1Int:Int = 0;
-            while(loopCounter1Int < _collectionGlobalObject.GetTagGeneralObjectArray().length){
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetNameString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetAdjectiveString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetAdverbString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetNounPosString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetNounSPosString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetNounSString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetNounString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetVerb1String()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetVerb2String()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetVerb3String()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetVerbIngString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int].GetVerbSString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                loopCounter1Int ++;
+            var loopCounter1_Int:Int = 0;
+            while(loopCounter1_Int < __CollectionGlobal_Object.general_Tag_Object_Array.length){
+
+                if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .name_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .adjective_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .adverb_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .nounPos_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .nounSPos_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .nounS_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .noun_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .verb1_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .verb2_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .verb3_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .verbIng_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                else if(_name_String ==
+                        __CollectionGlobal_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .verbS_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                loopCounter1_Int ++;
+
             }
 
         }
-        else if(_isGeneral == false){
 
-            var loopCounter1Int:Int = 0;
-            while(loopCounter1Int < _collectionGlobalObject.GetTagObjectArray().length){
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString()){ return _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetAdjectiveString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetAdverbString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNounPosString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNounSPosString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNounSString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNounString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetVerb1String()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetVerb2String()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetVerb3String()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetVerbIngString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                if(_nameString == _collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetVerbSString()){ return _collectionGlobalObject.GetTagGeneralObjectArray()[loopCounter1Int]; }
-                loopCounter1Int ++;
+
+
+
+
+        else if(_general_Bool == false){
+
+            var loopCounter1_Int:Int = 0;
+            while(loopCounter1_Int < __CollectionGlobal_Object._Tag_Object_Array.length){
+
+                if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .name_String
+                ){ return __CollectionGlobal_Object._Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .adjective_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .adverb_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .nounPos_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .nounSPos_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            .nounS_String)
+                { return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .noun_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .verb1_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .verb2_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .verb3_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .verbIng_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+                else if(_name_String == 
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .verbS_String
+                ){ return __CollectionGlobal_Object.general_Tag_Object_Array[loopCounter1_Int]; }
+                
+
+
+
+
+                loopCounter1_Int ++;
+
             }
 
         }
+
+
+
+
 
         /*If this function cannot find the corresponding tag object then
             returns null.*/
@@ -160,18 +429,32 @@ class CollectionFunction{
     /*==================================================
     A function to find visitor object from the main object array of
         visitor.*/
-    public static function FindVisitorObject(
-        _collectionGlobalObject     :CollectionGlobal,
-        _nameString                 :String
-    ){
+    public static function Find_Visitor_Object(
+        __CollectionGlobal_Object     :CollectionGlobal,
+        _name_String                 :String
+    ):Visitor_Object{
 
-        var loopCounter1Int:Int = 0;
-        while(loopCounter1Int < _collectionGlobalObject.GetVisitorObjectArray().length){
-            if(_nameString == _collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetNameString()){
-                return _collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int];
-            }
-            loopCounter1Int ++;
+        var loopCounter1_Int:Int = 0;
+        while(loopCounter1_Int < __CollectionGlobal_Object._Visitor_Object_Array.length){
+
+            if(_name_String ==
+                __CollectionGlobal_Object
+                    ._Visitor_Object_Array[loopCounter1_Int]
+                    ._MuseumAndVisitorAgnostic_Object.name_String
+            ){ return __CollectionGlobal_Object._Visitor_Object_Array[loopCounter1_Int]; }
+
+
+
+
+
+            loopCounter1_Int ++;
+
         }
+
+
+
+
+
         return null;
 
     }
@@ -184,16 +467,16 @@ class CollectionFunction{
     /*==================================================
     A function to generate greater common divisor.
     Indonesian of FPB (Faktor Persekutuan Besar)*/
-    public static function GenerateGreatestCommonDivisorFloat(
-        _number1Float:Float,
-        _number2Float:Float
+    public static function GenerateGreatestCommonDivisor_Float(
+        _number1_Float:Float,
+        _number2_Float:Float
     ):Float{
 
-        if(_number2Float == 0){ return _number1Float; }
+        if(_number2_Float == 0){ return _number1_Float; }
         else{
 
-            return GenerateGreatestCommonDivisorFloat(
-                _number2Float, _number1Float%_number2Float
+            return GenerateGreatestCommonDivisor_Float(
+                _number2_Float, _number1_Float%_number2_Float
             );
 
         }
@@ -208,33 +491,12 @@ class CollectionFunction{
     /*==================================================
     A function to generate least common multiple.
     Indonesian of KPK (Kelipatan Persekutuan Kecil)*/
-    public static function GenerateLeastCommonMultipleFloat(
-        _number1Float:Float,
-        _number2Float:Float
+    public static function GenerateLeastCommonMultiple_Float(
+        _number1_Float:Float,
+        _number2_Float:Float
     ):Float{
 
-        return (_number1Float*_number2Float)/GenerateGreatestCommonDivisorFloat(_number1Float, _number2Float);
-
-    }
-    /*==================================================*/
-
-
-
-
-
-    /*==================================================
-    A function to check whether an element is exist in an array or not.*/
-    public static function IsExistInArrayBool(
-        _dynamicArray       :Array<Dynamic>,
-        _dynamicElement     :Dynamic
-    ){
-
-        var loopCounter1Int:Int = 0;
-        while(loopCounter1Int < _dynamicArray.length){
-            if(_dynamicArray[loopCounter1Int] == _dynamicElement){ return true; }
-            loopCounter1Int ++;
-        }
-        return false;
+        return (_number1_Float*_number2_Float)/GenerateGreatestCommonDivisor_Float(_number1_Float, _number2_Float);
 
     }
     /*==================================================*/
@@ -245,11 +507,11 @@ class CollectionFunction{
 
     /*==================================================
     Generic function to pick a random element from an array*/
-    public static function PickRandomFromArrayT<T>(_tArray:Array<T>){
+    public static function PickRandomTFrom_Array_T<T>(__T_Array:Array<T>):Array<T>{
 
-        var     randomInt   :Int    = Math.round(Math.random()*(_tArray.length - 1));
-        var     elementT    :T      = _tArray[randomInt];
-        return  elementT;
+        var     random_Int  :Int    = Math.round(Math.random()*(__T_Array.length - 1));
+        var     element_T   :T      = __T_Array[random_Int];
+        return  element_T;
 
     }
     /*==================================================*/
@@ -262,30 +524,64 @@ class CollectionFunction{
     Pick some elements in the tag main array.
     The chance of element get added is diminished as more element put
         into the new array.*/
-    public static function PickRandomTagObjectArray(_collectionGlobalObject:CollectionGlobal){
+    public static function PickRandomTagFrom_Tag_Object_Array(
+        __CollectionGlobal_Object:CollectionGlobal
+    ):Array<Tag_Object>{
 
         /*Temporary array.*/
-        var tempTagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
+        var temp_Tag_Object_Array:Array<Tag_Object> = new Array<Tag_Object>();
         /*Initial chance so that at least one element shuold be in the
             temporary array.*/
-        var chanceFloat:Float = 1.0;
+        var chance_Float:Float = 1.0;
 
-        while(chanceFloat > Math.random()){
 
-            var randomIndexInt :Int = Math.round(Math.random()*(_collectionGlobalObject.GetTagObjectArray().length - 1));
-            while(tempTagObjectArray.indexOf(_collectionGlobalObject.GetTagObjectArray()[randomIndexInt]) > -1){
-                randomIndexInt = Math.round(Math.random()*(_collectionGlobalObject.GetTagObjectArray().length - 1));
+
+
+
+        while(chance_Float > Math.random()){
+
+            var randomIndex_Int:Int = Math.round(
+                Math.random()*(__CollectionGlobal_Object._Tag_Object_Array.length - 1)
+            );
+            while(
+                temp_Tag_Object_Array
+                    .indexOf(
+                        __CollectionGlobal_Object
+                            ._Tag_Object_Array[randomIndex_Int]
+                    ) >
+                -1
+            ){
+
+                randomIndex_Int = Math.round(
+                    Math.random()*(__CollectionGlobal_Object._Tag_Object_Array.length - 1)
+                );
+
             }
-            tempTagObjectArray.push(_collectionGlobalObject.GetTagObjectArray()[randomIndexInt]);
+
+
+
+
+
+            temp_Tag_Object_Array.push(
+                __CollectionGlobal_Object._Tag_Object_Array[randomIndex_Int]
+            );
+
+
+
+
 
             /*Everytime an element added to the temporary array then the
                 chance of another element added to the temporary array is
                 diminished.*/
-            chanceFloat -= 0.05;
+            chance_Float -= 0.05;
 
         }
 
-        return tempTagObjectArray;
+
+
+
+
+        return temp_Tag_Object_Array;
 
     }
     /*==================================================*/
@@ -316,6 +612,8 @@ class CollectionFunction{
 
 
 
+
+
         if(_elementAgnostic_V != null && _agnostic_V_Array != null)
             { _agnostic_V_Array.push(_elementAgnostic_V); }
         if(_elementAgnostic_W != null && _agnostic_W_Array != null)
@@ -324,6 +622,8 @@ class CollectionFunction{
             { _agnostic_X_Array.push(_elementAgnostic_X); }
         if(_elementAgnostic_Y != null && _agnostic_Y_Array != null)
             { _agnostic_Y_Array.push(_elementAgnostic_Y); }
+
+
 
 
 
@@ -358,6 +658,8 @@ class CollectionFunction{
 
 
 
+
+
         if(_elementAgnostic_V != null && _agnostic_V_Array != null)
             { _agnostic_V_Array.remove(_elementAgnostic_V); }
         if(_elementAgnostic_W != null && _agnostic_W_Array != null)
@@ -366,6 +668,8 @@ class CollectionFunction{
             { _agnostic_X_Array.remove(_elementAgnostic_X); }
         if(_elementAgnostic_Y != null && _agnostic_Y_Array != null)
             { _agnostic_Y_Array.remove(_elementAgnostic_Y); }
+
+
 
 
 
@@ -394,10 +698,14 @@ class CollectionFunction{
 
 
 
+
+
         if(_agnostic_V_Array != null){ while(_agnostic_V_Array.length > 0){ _agnostic_U_Array.pop(); } }
         if(_agnostic_W_Array != null){ while(_agnostic_W_Array.length > 0){ _agnostic_U_Array.pop(); } }
         if(_agnostic_X_Array != null){ while(_agnostic_X_Array.length > 0){ _agnostic_U_Array.pop(); } }
         if(_agnostic_Y_Array != null){ while(_agnostic_Y_Array.length > 0){ _agnostic_U_Array.pop(); } }
+
+
 
 
 
@@ -430,10 +738,18 @@ class CollectionFunction{
         _nonAgnostic_T  = _valueNonAgnostic_T;
         _agnostic_U     = _valueAgnostic_U;
 
+
+
+
+
         if(_valueAgnostic_V != null && _agnostic_V != null){ _agnostic_V = _valueAgnostic_V; }
         if(_valueAgnostic_W != null && _agnostic_W != null){ _agnostic_W = _valueAgnostic_W; }
         if(_valueAgnostic_X != null && _agnostic_X != null){ _agnostic_X = _valueAgnostic_X; }
         if(_valueAgnostic_Y != null && _agnostic_Y != null){ _agnostic_Y = _valueAgnostic_Y; }
+
+
+
+
 
         return _nonAgnostic_T
 
