@@ -1,20 +1,3 @@
-import CollectionEnum;
-import CollectionFunction;
-import CollectionStruct;
-import flash.display.*;
-import flash.events.*;
-import haxe.ui.toolkit.core.PopupManager;
-import haxe.ui.toolkit.containers.*;
-import haxe.ui.toolkit.controls.*;
-import haxe.ui.toolkit.controls.popups.*;
-import haxe.ui.toolkit.controls.selection.*;
-import haxe.ui.toolkit.core.*;
-import haxe.ui.toolkit.core.interfaces.*;
-import haxe.ui.toolkit.data.*;
-import haxe.ui.toolkit.events.*;
-
-
-
 class UIPopupAddObjectMuseum{
 
 
