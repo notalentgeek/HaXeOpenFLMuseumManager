@@ -96,6 +96,28 @@ enum TagType_Enum{
 
 
 /*==================================================
+Enumeration for tag sub types.
+Used in sentence generation.*/
+enum TagTypeSub_Enum{
+    ADJ;
+    ADV;
+    NOUN;
+    NOUN_POS;
+    NOUN_S;
+    NOUN_S_POS;
+    VERB_1;
+    VERB_2;
+    VERB_3;
+    VERB_ING;
+    VERB_S;
+}
+/*==================================================*/
+
+
+
+
+
+/*==================================================
 An enum to control how a visitor object updated for each ticks.
 HARDWARE_MANUAL is for visitor object that is controlled by hardware.
 SOFTWARE_AUTO is for visitor object so that it is controlled by this program

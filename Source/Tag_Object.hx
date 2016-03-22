@@ -20,7 +20,7 @@ class Tag_Object{
 
 
     private var _Global_Object              (null, null)    :Global_Object              = null;
-    private var _TagFeelEnum                (null, null)    :TagFeel_Enum               = NEUTRAL;                          /*PENDING: Create setter function to tied this variable wit its agnostic couterpart.*/
+    private var _TagFeel_Enum               (null, null)    :TagFeel_Enum               = NEUTRAL;                          /*PENDING: Create setter function to tied this variable wit its agnostic couterpart.*/
     private var _TagType_Enum               (null, null)    :TagType_Enum               = null;                             /*PENDING: Create setter function to tied this variable wit its agnostic couterpart.*/
 
 
@@ -222,9 +222,9 @@ class Tag_Object{
     /*==================================================*/
     private function set__Feel_Enum(__Feel_Enum:TagFeel_Enum):TagFeel_Enum{
 
-        _TagFeelEnum = __Feel_Enum;
-        _TagAgnostic_Object.feel_String = Std.string(_TagFeelEnum);
-        return _TagFeelEnum;
+        _TagFeel_Enum = __Feel_Enum;
+        _TagAgnostic_Object.feel_String = Std.string(_TagFeel_Enum);
+        return _TagFeel_Enum;
 
     }
     /*==================================================*/
