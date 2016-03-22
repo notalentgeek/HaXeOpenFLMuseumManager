@@ -1,18 +1,20 @@
-class UIPopupRemoveTag_Object{
+class TagRemoveUIPopup_Object{
 
 
 
 
 
-    var _Button                 :Button         = null;
-    var _Global_Object          :Global_Object  = null;
-    var _Popup                  :Popup          = null;
-    var _Tag_Object             :Tag_Object     = null;
-    var general_ListSelector    :ListSelector   = null;
-    var general_String          :String         = null;
-    var generalPrev_String      :String         = null;
-    var tag_ListSelector        :ListSelector   = null;
-    var tagName_String          :String         = null;
+    /*==================================================*/
+    private var _Button                 (null, null)        :Button         = null;
+    private var _Global_Object          (null, null)        :Global_Object  = null;
+    private var _Popup                  (null, null)        :Popup          = null;
+    private var _Tag_Object             (null, null)        :Tag_Object     = null;
+    private var general_ListSelector    (null, null)        :ListSelector   = null;
+    private var general_String          (null, null)        :String         = null;
+    private var generalPrev_String      (null, null)        :String         = null;
+    private var tag_ListSelector        (null, null)        :ListSelector   = null;
+    private var tagName_String          (null, null)        :String         = null;
+    /*==================================================*/
 
 
 

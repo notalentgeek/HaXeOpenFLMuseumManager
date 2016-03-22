@@ -1,85 +1,95 @@
-class UIPopupRemoveObjectMuseum{
+class MuseumRemoveUIPopup_Object{
 
-    var buttonObject:Button = null;
-    var collectionGlobalObject:CollectionGlobal = null;
-    var popupObject:Popup = null;
-    var selectObjectMuseumListSelectorObject:ListSelector = null;
-    var selectTypeListSelectorObject:ListSelector = null;
-    var selectTypeListSelectorTextString:String = "";
-    var selectTypeListSelectorTextPrevString:String = "";
 
-    public function new(_collectionGlobalObject:CollectionGlobal, _root:Root){
 
-        collectionGlobalObject = _collectionGlobalObject;
+
+
+    /*==================================================*/
+    var _Button                     (null, null)        :Button             = null;
+    var _Global_Object              (null, null)        :Global_Object      = null;
+    var _Popup                      (null, null)        :Popup              = null;
+    var museum_ListSelector         (null, null)        :ListSelector       = null;
+    var museumType_ListSelector     (null, null)        :ListSelector       = null;
+    var museumType_String           (null, null)        :String             = null;
+    var museumTypePrev_String       (null, null)        :String             = null;
+    /*==================================================*/
+
+
+
+
+
+    public function new(__Global_Object:Global_Object, _root:Root){
+
+        _Global_Object = __Global_Object;
 
         /*Find the main button to actovate the popup in the main screen.*/
-        buttonObject = _root.findChild("UIPopupRemoveMuseumObjectButton", Button, true);
+        _Button = _root.findChild("UIPopupRemoveMuseumObjectButton", Button, true);
         /*Adding a callback function of when the button is pressed.*/
-        buttonObject.onClick = function(_e){
+        _Button.onClick = function(_e){
 
             /*Adding OK and CANCEL button for the popup.*/
             var buttonControlInt:Int = 0;
             buttonControlInt |= PopupButton.OK;
             buttonControlInt |= PopupButton.CANCEL;
 
-            var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupRemoveObjectMuseum.xml");
-            popupObject = PopupManager.instance.showCustom(iDisplayObject, "Remove Museum Object", buttonControlInt, function(_button){
+            var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/MuseumRemoveUIPopup_Object.xml");
+            _Popup = PopupManager.instance.showCustom(iDisplayObject, "Remove Museum Object", buttonControlInt, function(_button){
 
                 if(_button == PopupButton.OK){
 
                     var typeEnum:EnumMuseumType = null;
-                    if(selectTypeListSelectorObject.text == "Exhibition"){ typeEnum = EXH; }
-                    else if(selectTypeListSelectorObject.text == "Floor"){ typeEnum = FLR; }
-                    else if(selectTypeListSelectorObject.text == "Room"){ typeEnum = ROM; }
-                    var museumObject:ObjectMuseum = CollectionFunction.FindMuseumObject(_collectionGlobalObject, typeEnum, selectObjectMuseumListSelectorObject.text);
+                    if(museumType_ListSelector.text == "Exhibition"){ typeEnum = EXH; }
+                    else if(museumType_ListSelector.text == "Floor"){ typeEnum = FLR; }
+                    else if(museumType_ListSelector.text == "Room"){ typeEnum = ROM; }
+                    var museumObject:ObjectMuseum = CollectionFunction.FindMuseumObject(__Global_Object, typeEnum, museum_ListSelector.text);
                     museumObject.SetMuseumModeEnumVoid(MRK_DEL);
 
                 }
 
             });
             
-            selectObjectMuseumListSelectorObject = popupObject.content.findChild("UIPopupRemoveObjectMuseum_SelectObjectMuseum", ListSelector, true);
-            selectTypeListSelectorObject = popupObject.content.findChild("UIPopupRemoveObjectMuseum_SelectType", ListSelector, true);
-            selectObjectMuseumListSelectorObject.method = "default";
-            selectTypeListSelectorObject.method = "default";
+            museum_ListSelector = _Popup.content.findChild("MuseumRemoveUIPopup_Object_SelectObjectMuseum", ListSelector, true);
+            museumType_ListSelector = _Popup.content.findChild("MuseumRemoveUIPopup_Object_SelectType", ListSelector, true);
+            museum_ListSelector.method = "default";
+            museumType_ListSelector.method = "default";
 
         }
 
     }
     public function UpdateVoid(){
 
-        if(popupObject != null && selectTypeListSelectorObject != null && selectObjectMuseumListSelectorObject != null){
+        if(_Popup != null && museumType_ListSelector != null && museum_ListSelector != null){
 
             if(
-                selectTypeListSelectorObject.selectedIndex          == -1   ||
-                selectTypeListSelectorObject.text                   == " "  ||
-                selectTypeListSelectorObject.text                   == ""
+                museumType_ListSelector.selectedIndex          == -1   ||
+                museumType_ListSelector.text                   == " "  ||
+                museumType_ListSelector.text                   == ""
             ){
-                selectObjectMuseumListSelectorObject.disabled       = true;
-                selectObjectMuseumListSelectorObject.selectedIndex  = -1;
-                selectObjectMuseumListSelectorObject.text           = " ";
+                museum_ListSelector.disabled       = true;
+                museum_ListSelector.selectedIndex  = -1;
+                museum_ListSelector.text           = " ";
             }
-            else{ selectObjectMuseumListSelectorObject.disabled     = false; }
+            else{ museum_ListSelector.disabled     = false; }
 
-            selectTypeListSelectorTextString = selectTypeListSelectorObject.text;
-            if(selectTypeListSelectorTextString != selectTypeListSelectorTextPrevString){
-                selectObjectMuseumListSelectorObject.selectedIndex = -1;
-                selectObjectMuseumListSelectorObject.dataSource.removeAll();
+            museumType_String = museumType_ListSelector.text;
+            if(museumType_String != museumTypePrev_String){
+                museum_ListSelector.selectedIndex = -1;
+                museum_ListSelector.dataSource.removeAll();
 
                 var tempMuseumObjectArray:Array<ObjectMuseum> = null;
-                if(selectTypeListSelectorTextString == "Exhibition"){ tempMuseumObjectArray = collectionGlobalObject.GetExhibitionObjectArray(); }
-                else if(selectTypeListSelectorTextString == "Floor"){ tempMuseumObjectArray = collectionGlobalObject.GetFloorObjectArray(); }
-                else if(selectTypeListSelectorTextString == "Room"){ tempMuseumObjectArray = collectionGlobalObject.GetRoomObjectArray(); }
+                if(museumType_String == "Exhibition"){ tempMuseumObjectArray = _Global_Object.GetExhibitionObjectArray(); }
+                else if(museumType_String == "Floor"){ tempMuseumObjectArray = _Global_Object.GetFloorObjectArray(); }
+                else if(museumType_String == "Room"){ tempMuseumObjectArray = _Global_Object.GetRoomObjectArray(); }
 
-                if(selectTypeListSelectorTextString == "Exhibition" || selectTypeListSelectorTextString == "Floor" || selectTypeListSelectorTextString == "Room"){
+                if(museumType_String == "Exhibition" || museumType_String == "Floor" || museumType_String == "Room"){
                     var loopCounter1Int:Int = 0;
                     while(loopCounter1Int < tempMuseumObjectArray.length){
-                        selectObjectMuseumListSelectorObject.dataSource.createFromString(tempMuseumObjectArray[loopCounter1Int].GetNameStruct().nameAltString);
+                        museum_ListSelector.dataSource.createFromString(tempMuseumObjectArray[loopCounter1Int].GetNameStruct().nameAltString);
                         loopCounter1Int ++;
                     }
                 }
 
-                selectTypeListSelectorTextPrevString = selectTypeListSelectorTextString;
+                museumTypePrev_String = museumType_String;
             }
         }
 

@@ -1,61 +1,69 @@
-class UIPopupEditObjectVisitor{
+class VisitorEditUIPopup_Object{
 
 
 
-    private var changeAllHardwareManualButtonObject             :Button                     = null;
-    private var changeAllSoftwareAutoButtonObject               :Button                     = null;
-    private var changeAllSoftwareManualButtonObject             :Button                     = null;
-    private var collectionGlobalObject                          :CollectionGlobal           = null;
-    private var displayCurrentExhibitionTextObject              :Text                       = null;
-    private var displayExplanationButtonObject                  :Button                     = null;
-    private var displayExplanationPopupObject                   :Popup                      = null;
-    private var displayPopularTagButtonObject                   :Button                     = null;
-    private var displayPopularTagPopupObject                    :Popup                      = null;
-    private var displayPreviousVisitorTextObject                :Text                       = null;
-    private var displaySentenceButtonObject                     :Button                     = null;
-    private var displaySentencePopupObject                      :Popup                      = null;
-    private var displayTargetExhibitionTextObject               :Text                       = null;
-    private var displayVisitorIndexGlobalTextObject             :Text                       = null;
-    private var displayVisitorIndexLocalTextObject              :Text                       = null;
-    private var gridObject                                      :Grid                       = null;
-    private var inputNameTextInputObject                        :TextInput                  = null;
-    private var mainButtonObject                                :Button                     = null;
-    private var popupObject                                     :Popup                      = null;
-    private var resetAllButtonObject                            :Button                     = null;
-    private var resetButtonObject                               :Button                     = null;
-    private var selectCurrentExhibitionListSelectorObject       :ListSelector               = null;
-    private var selectedVisitorExplanationStringArray           :Array<String>              = new Array<String>();
-    private var selectedVisitorObject                           :ObjectVisitor              = null;
-    private var selectedVisitorPopularTagCountIntArray          :Array<Int>                 = new Array<Int>();
-    private var selectedVisitorPopularTagObjectStringArray      :Array<String>              = new Array<String>();
-    private var selectedVisitorSentenceStringArray              :Array<String>              = new Array<String>();
-    private var selectModeListSelectorObject                    :ListSelector               = null;
-    private var selectVisitorListSelectorObject                 :ListSelector               = null;
-    private var selectVisitorListSelectorPrevString             :String                     = "";
-    private var selectVisitorListSelectorString                 :String                     = "";
-    private var visitorButtonObjectArray                        :Array<Button>              = new Array<Button>();
-    private var visitorModePrevString                           :String                     = "asd";
+
+
+    /*==================================================*/
+    private var _Button                                         (null, null)        :Button             = null;
+    private var _Global_Object                                  (null, null)        :CollectionGlobal   = null;
+    private var _Grid                                           (null, null)        :Grid               = null;
+    private var _Popup                                          (null, null)        :Popup              = null;
+    private var allHardwareManual_Button                        (null, null)        :Button             = null;
+    private var allSoftwareAuto_Button                          (null, null)        :Button             = null;
+    private var allSoftwareManual_Button                        (null, null)        :Button             = null;
+    private var currentExhibition_ListSelector                  (null, null)        :ListSelector       = null;
+    private var exhibitionCurrent_Text                          (null, null)        :Text               = null;
+    private var exhibitionTarget_Text                           (null, null)        :Text               = null;
+    private var explanation_Button                              (null, null)        :Button             = null;
+    private var explanation_Popup                               (null, null)        :Popup              = null;
+    private var indexGlobal_Text                                (null, null)        :Text               = null;
+    private var indexLocal_Text                                 (null, null)        :Text               = null;
+    private var name_TextInput                                  (null, null)        :TextInput          = null;
+    private var reset_Button                                    (null, null)        :Button             = null;
+    private var resetAll_Button                                 (null, null)        :Button             = null;
+    private var selected_Visitor_Object                         (null, null)        :ObjectVisitor      = null;
+    private var selectedVisitorExplanation_String_Array         (null, null)        :Array<String>      = new Array<String>();
+    private var selectedVisitorSentence_String_Array            (null, null)        :Array<String>      = new Array<String>();
+    private var selectedVisitorTagPopularCount_Int_Array        (null, null)        :Array<Int>         = new Array<Int>();
+    private var selectedVisitorTagPopularName_String_Array      (null, null)        :Array<String>      = new Array<String>();
+    private var sentence_Button                                 (null, null)        :Button             = null;
+    private var sentence_Popup                                  (null, null)        :Popup              = null;
+    private var tagPopular_Button                               (null, null)        :Button             = null;
+    private var tagPopular_Popup                                (null, null)        :Popup              = null;
+    private var visitor_Button_Array                            (null, null)        :Array<Button>      = new Array<Button>();
+    private var visitor_ListSelector                            (null, null)        :ListSelector       = null;
+    private var visitorMode_ListSelector                        (null, null)        :ListSelector       = null;
+    private var visitorModePrev_String                          (null, null)        :String             = null;
+    private var visitorName_String                              (null, null)        :String             = null;
+    private var visitorNamePrev_String                          (null, null)        :String             = null;
+    private var visitorPrevious_Text                            (null, null)        :Text               = null;
+    /*==================================================*/
+
+
+
+
 
     public function new(
-        _collectionGlobalObject     :CollectionGlobal,
+        __Global_Object     :CollectionGlobal,
         _root                       :Root
     ){
 
-        collectionGlobalObject      = _collectionGlobalObject;
-        mainButtonObject            = _root.findChild("UIPopupEditVisitorObjectButton", Button, true);
-        mainButtonObject.onClick    = function(_e){
+        _Global_Object      = __Global_Object;
+        _Button            = _root.findChild("UIPopupEditVisitorObjectButton", Button, true);
+        _Button.onClick    = function(_e){
 
             var buttonControlInt:Int = 0;
             buttonControlInt |= PopupButton.OK;
             buttonControlInt |= PopupButton.CANCEL;
 
             var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupEditObjectVisitor.xml");
-            popupObject = PopupManager.instance.showCustom(iDisplayObject, "Edit Visitor", buttonControlInt, function(_button){
+            _Popup = PopupManager.instance.showCustom(iDisplayObject, "Edit Visitor", buttonControlInt, function(_button){
 
                 if(_button == PopupButton.OK){
-                    if(selectedVisitorObject != null){
+                    if(selected_Visitor_Object != null){
 
-                        selectedVisitorObject.SetNameStringVoid(inputNameTextInputObject.text, this);
+                        selected_Visitor_Object.SetNameStringVoid(name_TextInput.text, this);
 
                     }
                 }
@@ -63,28 +71,28 @@ class UIPopupEditObjectVisitor{
 
             });
 
-            changeAllHardwareManualButtonObject                 = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonChangeAllHardwareManual"    , Button        , true);
-            changeAllSoftwareAutoButtonObject                   = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonChangeAllSoftwareAuto"      , Button        , true);
-            changeAllSoftwareManualButtonObject                 = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonChangeAllSoftwareManual"    , Button        , true);
-            displayCurrentExhibitionTextObject                  = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayCurrentExhibition"         , Text          , true);
-            displayExplanationButtonObject                      = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonDisplayExplanation"         , Button        , true);
-            displayPopularTagButtonObject                       = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonDisplayPopularTag"          , Button        , true);
-            displayPreviousVisitorTextObject                    = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayPreviousVisitor"           , Text          , true);
-            displaySentenceButtonObject                         = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonDisplaySentence"            , Button        , true);
-            displayTargetExhibitionTextObject                   = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayTargetExhibition"          , Text          , true);
-            displayVisitorIndexGlobalTextObject                 = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayVisitorIndexGlobal"        , Text          , true);
-            displayVisitorIndexLocalTextObject                  = popupObject.content.findChild("UIPopupEditObjectVisitor_DisplayVisitorIndexLocal"         , Text          , true);
-            gridObject                                          = popupObject.content.findChild("UIPopupEditObjectVisitor_Grid"                             , Grid          , true);
-            inputNameTextInputObject                            = popupObject.content.findChild("UIPopupEditObjectVisitor_InputName"                        , TextInput     , true);
-            resetAllButtonObject                                = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonResetAll"                   , Button        , true);
-            resetButtonObject                                   = popupObject.content.findChild("UIPopupEditObjectVisitor_ButtonReset"                      , Button        , true);
-            selectCurrentExhibitionListSelectorObject           = popupObject.content.findChild("UIPopupEditObjectVisitor_SelectCurrentExhibition"          , ListSelector  , true);
-            selectModeListSelectorObject                        = popupObject.content.findChild("UIPopupEditObjectVisitor_SelectMode"                       , ListSelector  , true);
-            selectVisitorListSelectorObject                     = popupObject.content.findChild("UIPopupEditObjectVisitor_SelectVisitor"                    , ListSelector  , true);
+            allHardwareManual_Button                 = _Popup.content.findChild("UIPopupEditObjectVisitor_ButtonChangeAllHardwareManual"    , Button        , true);
+            allSoftwareAuto_Button                   = _Popup.content.findChild("UIPopupEditObjectVisitor_ButtonChangeAllSoftwareAuto"      , Button        , true);
+            allSoftwareManual_Button                 = _Popup.content.findChild("UIPopupEditObjectVisitor_ButtonChangeAllSoftwareManual"    , Button        , true);
+            exhibitionCurrent_Text                  = _Popup.content.findChild("UIPopupEditObjectVisitor_DisplayCurrentExhibition"         , Text          , true);
+            explanation_Button                      = _Popup.content.findChild("UIPopupEditObjectVisitor_ButtonDisplayExplanation"         , Button        , true);
+            tagPopular_Button                       = _Popup.content.findChild("UIPopupEditObjectVisitor_ButtonDisplayPopularTag"          , Button        , true);
+            visitorPrevious_Text                    = _Popup.content.findChild("UIPopupEditObjectVisitor_DisplayPreviousVisitor"           , Text          , true);
+            sentence_Button                         = _Popup.content.findChild("UIPopupEditObjectVisitor_ButtonDisplaySentence"            , Button        , true);
+            exhibitionTarget_Text                   = _Popup.content.findChild("UIPopupEditObjectVisitor_DisplayTargetExhibition"          , Text          , true);
+            indexGlobal_Text                 = _Popup.content.findChild("UIPopupEditObjectVisitor_DisplayVisitorIndexGlobal"        , Text          , true);
+            indexLocal_Text                  = _Popup.content.findChild("UIPopupEditObjectVisitor_DisplayVisitorIndexLocal"         , Text          , true);
+            _Grid                                          = _Popup.content.findChild("UIPopupEditObjectVisitor_Grid"                             , Grid          , true);
+            name_TextInput                            = _Popup.content.findChild("UIPopupEditObjectVisitor_InputName"                        , TextInput     , true);
+            resetAll_Button                                = _Popup.content.findChild("UIPopupEditObjectVisitor_ButtonResetAll"                   , Button        , true);
+            reset_Button                                   = _Popup.content.findChild("UIPopupEditObjectVisitor_ButtonReset"                      , Button        , true);
+            currentExhibition_ListSelector           = _Popup.content.findChild("UIPopupEditObjectVisitor_SelectCurrentExhibition"          , ListSelector  , true);
+            visitorMode_ListSelector                        = _Popup.content.findChild("UIPopupEditObjectVisitor_SelectMode"                       , ListSelector  , true);
+            visitor_ListSelector                     = _Popup.content.findChild("UIPopupEditObjectVisitor_SelectVisitor"                    , ListSelector  , true);
 
-            selectCurrentExhibitionListSelectorObject.method    = "default";
-            selectModeListSelectorObject.method                 = "default";
-            selectVisitorListSelectorObject.method              = "default";
+            currentExhibition_ListSelector.method    = "default";
+            visitorMode_ListSelector.method                 = "default";
+            visitor_ListSelector.method              = "default";
 
             ResetSelectVisitorListSelectorObjectVoid();
 
@@ -92,105 +100,105 @@ class UIPopupEditObjectVisitor{
                 var string:String = Std.string(_e.component.userData);
                 var stringArray:Array<String> = string.split("*");
                 var nameString:String = stringArray[1];
-                var visitorObject:ObjectVisitor = CollectionFunction.FindVisitorObject(collectionGlobalObject, nameString);
+                var visitorObject:ObjectVisitor = CollectionFunction.FindVisitorObject(_Global_Object, nameString);
 
                 if(visitorObject != null){
 
-                    selectedVisitorObject = visitorObject;
-                    inputNameTextInputObject.text = selectedVisitorObject.GetNameString();
-                    selectCurrentExhibitionListSelectorObject.selectedIndex = 0;
-                    selectVisitorListSelectorObject.selectedIndex = 0;
-                    selectVisitorListSelectorObject.text = selectedVisitorObject.GetNameString();
-                    selectVisitorListSelectorString = selectVisitorListSelectorObject.text;
-                    selectVisitorListSelectorPrevString = selectVisitorListSelectorObject.text;
+                    selected_Visitor_Object = visitorObject;
+                    name_TextInput.text = selected_Visitor_Object.GetNameString();
+                    currentExhibition_ListSelector.selectedIndex = 0;
+                    visitor_ListSelector.selectedIndex = 0;
+                    visitor_ListSelector.text = selected_Visitor_Object.GetNameString();
+                    visitorName_String = visitor_ListSelector.text;
+                    visitorNamePrev_String = visitor_ListSelector.text;
 
                     ResetSelectVisitorListSelectorObjectVoid();
 
                 }
             }
 
-            changeAllHardwareManualButtonObject.onClick = function(_e){
+            allHardwareManual_Button.onClick = function(_e){
                 var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-                    collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].SetVisitorModeEnumVoid(HARDWARE_MANUAL);
-                    selectModeListSelectorObject.text = "Hardware Manual";
+                while(loopCounter1Int < _Global_Object.GetVisitorObjectArray().length){
+                    _Global_Object.GetVisitorObjectArray()[loopCounter1Int].SetVisitorModeEnumVoid(HARDWARE_MANUAL);
+                    visitorMode_ListSelector.text = "Hardware Manual";
                     loopCounter1Int ++;
                 }
             }
-            changeAllSoftwareAutoButtonObject.onClick = function(_e){
+            allSoftwareAuto_Button.onClick = function(_e){
                 var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-                    collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].SetVisitorModeEnumVoid(SOFTWARE_AUTO);
-                    selectModeListSelectorObject.text = "Software Auto";
+                while(loopCounter1Int < _Global_Object.GetVisitorObjectArray().length){
+                    _Global_Object.GetVisitorObjectArray()[loopCounter1Int].SetVisitorModeEnumVoid(SOFTWARE_AUTO);
+                    visitorMode_ListSelector.text = "Software Auto";
                     loopCounter1Int ++;
                 }
             }
-            changeAllSoftwareManualButtonObject.onClick = function(_e){
+            allSoftwareManual_Button.onClick = function(_e){
                 var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-                    collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].SetVisitorModeEnumVoid(SOFTWARE_MANUAL);
-                    selectModeListSelectorObject.text = "Software Manual";
+                while(loopCounter1Int < _Global_Object.GetVisitorObjectArray().length){
+                    _Global_Object.GetVisitorObjectArray()[loopCounter1Int].SetVisitorModeEnumVoid(SOFTWARE_MANUAL);
+                    visitorMode_ListSelector.text = "Software Manual";
                     loopCounter1Int ++;
                 }
             }
             UpdateDisplayCurrentExhibitionTextObjectVoid();
-            displayExplanationButtonObject.onClick = function(_e){
+            explanation_Button.onClick = function(_e){
 
                 var buttonControlInt:Int = 0;
                 buttonControlInt |= PopupButton.OK;
 
-                displayExplanationPopupObject = PopupManager.instance.showList(selectedVisitorObject.GetExplanationStringArray(), -1, "Display Explanation", buttonControlInt, function(_button){});
-                Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
-                displayExplanationPopupObject.y = popupObject.y;
+                explanation_Popup = PopupManager.instance.showList(selected_Visitor_Object.GetExplanationStringArray(), -1, "Display Explanation", buttonControlInt, function(_button){});
+                Std.instance(explanation_Popup.GetContentObject(), ListPopupContent).GetListObject().height = 205;
+                explanation_Popup.y = _Popup.y;
 
             }
-            displayPopularTagButtonObject.onClick = function(_e){
+            tagPopular_Button.onClick = function(_e){
 
                 var buttonControlInt:Int = 0;
                 buttonControlInt |= PopupButton.OK;
 
                 var displayStringArray:Array<String> = new Array<String>();
                 var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < selectedVisitorObject.GetTagCounterStructArray().length){
+                while(loopCounter1Int < selected_Visitor_Object.GetTagCounterStructArray().length){
 
-                    var displayString:String = selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt +
+                    var displayString:String = selected_Visitor_Object.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt +
                         "" +
-                        selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString();
+                        selected_Visitor_Object.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString();
                     displayStringArray.push(displayString);
                     loopCounter1Int ++;
 
                 }
 
-                displayPopularTagPopupObject = PopupManager.instance.showList(displayStringArray, -1, "Display Popular Tag", buttonControlInt, function(_button){});
-                Std.instance(displayPopularTagPopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
-                displayPopularTagPopupObject.y = popupObject.y;
+                tagPopular_Popup = PopupManager.instance.showList(displayStringArray, -1, "Display Popular Tag", buttonControlInt, function(_button){});
+                Std.instance(tagPopular_Popup.GetContentObject(), ListPopupContent).GetListObject().height = 205;
+                tagPopular_Popup.y = _Popup.y;
 
             }
-            displaySentenceButtonObject.onClick = function(_e){
+            sentence_Button.onClick = function(_e){
 
                 var buttonControlInt:Int = 0;
                 buttonControlInt |= PopupButton.OK;
 
-                displaySentencePopupObject = PopupManager.instance.showList(selectedVisitorObject.GetSentenceStringArray(), -1, "Display Sentence", buttonControlInt, function(_button){});
-                Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
-                displaySentencePopupObject.y = popupObject.y;
+                sentence_Popup = PopupManager.instance.showList(selected_Visitor_Object.GetSentenceStringArray(), -1, "Display Sentence", buttonControlInt, function(_button){});
+                Std.instance(sentence_Popup.GetContentObject(), ListPopupContent).GetListObject().height = 205;
+                sentence_Popup.y = _Popup.y;
 
             }
             UpdateDisplayTargetExhibitionTextObjectVoid();
             UpdateDisplayVisitorIndexGlobalTextObjectVoid();
             UpdateDisplayVisitorIndexLocalTextObjectVoid();
-            resetButtonObject.onClick = function(_e){
+            reset_Button.onClick = function(_e){
 
-                if(selectedVisitorObject != null){
-                    selectedVisitorObject.ResetVoid();
+                if(selected_Visitor_Object != null){
+                    selected_Visitor_Object.ResetVoid();
                 }
 
             }
-            resetAllButtonObject.onClick = function(_e){
+            resetAll_Button.onClick = function(_e){
 
                 var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-                    collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].ResetVoid();
+                while(loopCounter1Int < _Global_Object.GetVisitorObjectArray().length){
+                    _Global_Object.GetVisitorObjectArray()[loopCounter1Int].ResetVoid();
                     loopCounter1Int ++;
                 }
 
@@ -204,12 +212,12 @@ class UIPopupEditObjectVisitor{
 
     public function UpdateVoid(){
         var updateVisitorButtonBool:Bool = false;
-        if(visitorButtonObjectArray.length != collectionGlobalObject.GetVisitorObjectArray().length){ updateVisitorButtonBool = true; }
+        if(visitor_Button_Array.length != _Global_Object.GetVisitorObjectArray().length){ updateVisitorButtonBool = true; }
         var loopCounter1Int:Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-            if(visitorButtonObjectArray[loopCounter1Int] != collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject()){
-                if(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().id != null){ updateVisitorButtonBool = true; }
-                else if(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().id == null){ updateVisitorButtonBool = false; }
+        while(loopCounter1Int < _Global_Object.GetVisitorObjectArray().length){
+            if(visitor_Button_Array[loopCounter1Int] != _Global_Object.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject()){
+                if(_Global_Object.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().id != null){ updateVisitorButtonBool = true; }
+                else if(_Global_Object.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().id == null){ updateVisitorButtonBool = false; }
             }
             else{ updateVisitorButtonBool = false; }
             loopCounter1Int ++;
@@ -217,21 +225,21 @@ class UIPopupEditObjectVisitor{
         if(updateVisitorButtonBool == true){
             UpdateVisitorButtonObjectArrayVoid();
         }
-        if(popupObject != null){
+        if(_Popup != null){
 
-            selectVisitorListSelectorString = selectVisitorListSelectorObject.text;
-            if(selectVisitorListSelectorString != selectVisitorListSelectorPrevString){
+            visitorName_String = visitor_ListSelector.text;
+            if(visitorName_String != visitorNamePrev_String){
 
-                selectedVisitorObject = CollectionFunction.FindVisitorObject(collectionGlobalObject, selectVisitorListSelectorString);
-                if(selectCurrentExhibitionListSelectorObject != null && selectedVisitorObject != null){
-                    if(selectedVisitorObject.GetExhibitionCurrentObject() == null){
-                        selectCurrentExhibitionListSelectorObject.text = "In Lobby";
+                selected_Visitor_Object = CollectionFunction.FindVisitorObject(_Global_Object, visitorName_String);
+                if(currentExhibition_ListSelector != null && selected_Visitor_Object != null){
+                    if(selected_Visitor_Object.GetExhibitionCurrentObject() == null){
+                        currentExhibition_ListSelector.text = "In Lobby";
                     }
                     else{
-                        selectCurrentExhibitionListSelectorObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
+                        currentExhibition_ListSelector.text = selected_Visitor_Object.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
                     }
                 }
-                selectVisitorListSelectorPrevString = selectVisitorListSelectorString;
+                visitorNamePrev_String = visitorName_String;
 
                 ResetDisplayCurrentExhibitionTextObjectVoid();
                 ResetDisplayExplanationTextObjectVoid();
@@ -248,17 +256,17 @@ class UIPopupEditObjectVisitor{
 
             }
 
-            if(selectedVisitorObject != null){
+            if(selected_Visitor_Object != null){
 
-                displayExplanationButtonObject.disabled = false;
-                displayPopularTagButtonObject.disabled = false;
-                displayPopularTagButtonObject.disabled = false;
-                displaySentenceButtonObject.disabled = false;
-                displaySentenceButtonObject.disabled = false;
-                inputNameTextInputObject.disabled = false;
-                resetButtonObject.disabled = false;
-                selectCurrentExhibitionListSelectorObject.disabled = false;
-                selectModeListSelectorObject.disabled = false;
+                explanation_Button.disabled = false;
+                tagPopular_Button.disabled = false;
+                tagPopular_Button.disabled = false;
+                sentence_Button.disabled = false;
+                sentence_Button.disabled = false;
+                name_TextInput.disabled = false;
+                reset_Button.disabled = false;
+                currentExhibition_ListSelector.disabled = false;
+                visitorMode_ListSelector.disabled = false;
 
                 UpdateDisplayCurrentExhibitionTextObjectVoid();
                 UpdateDisplayExplanationTextObjectVoid();
@@ -272,17 +280,17 @@ class UIPopupEditObjectVisitor{
 
             }
 
-            if(selectVisitorListSelectorObject.selectedIndex == -1){
+            if(visitor_ListSelector.selectedIndex == -1){
 
-                displayExplanationButtonObject.disabled = true;
-                displayPopularTagButtonObject.disabled = true;
-                displayPopularTagButtonObject.disabled = true;
-                displaySentenceButtonObject.disabled = true;
-                displaySentenceButtonObject.disabled = true;
-                inputNameTextInputObject.disabled = true;
-                resetButtonObject.disabled = true;
-                selectCurrentExhibitionListSelectorObject.disabled = true;
-                selectModeListSelectorObject.disabled = true;
+                explanation_Button.disabled = true;
+                tagPopular_Button.disabled = true;
+                tagPopular_Button.disabled = true;
+                sentence_Button.disabled = true;
+                sentence_Button.disabled = true;
+                name_TextInput.disabled = true;
+                reset_Button.disabled = true;
+                currentExhibition_ListSelector.disabled = true;
+                visitorMode_ListSelector.disabled = true;
 
             }
 
@@ -291,64 +299,64 @@ class UIPopupEditObjectVisitor{
     }
 
     private function ResetDisplayCurrentExhibitionTextObjectVoid(){
-        if(displayCurrentExhibitionTextObject != null){
-            displayCurrentExhibitionTextObject.text = "";
+        if(exhibitionCurrent_Text != null){
+            exhibitionCurrent_Text.text = "";
         }
     }
     private function ResetDisplayExplanationTextObjectVoid(){
-        if(displayExplanationPopupObject != null){
-            Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
+        if(explanation_Popup != null){
+            Std.instance(explanation_Popup.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
         }
     }
     private function ResetDisplayPopularTagListSelectorObjectVoid(){
-        if(displayPopularTagPopupObject != null){
-            Std.instance(displayPopularTagPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
+        if(tagPopular_Popup != null){
+            Std.instance(tagPopular_Popup.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
         }
     }
     private function ResetDisplaySentenceListViewObjectVoid(){
-        if(displaySentencePopupObject != null){
-            Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
+        if(sentence_Popup != null){
+            Std.instance(sentence_Popup.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
         }
     }
     private function ResetDisplayTargetExhibitionTextObjectVoid(){
-        if(displayTargetExhibitionTextObject != null){ displayTargetExhibitionTextObject.text = ""; }
+        if(exhibitionTarget_Text != null){ exhibitionTarget_Text.text = ""; }
     }
     private function ResetDisplayVisitorIndexGlobalTextObjectVoid(){
-        if(displayVisitorIndexGlobalTextObject != null){ displayVisitorIndexGlobalTextObject.text = ""; }
+        if(indexGlobal_Text != null){ indexGlobal_Text.text = ""; }
     }
     private function ResetDisplayVisitorIndexLocalTextObjectVoid(){
-        if(displayVisitorIndexLocalTextObject != null){ displayVisitorIndexLocalTextObject.text = ""; }
+        if(indexLocal_Text != null){ indexLocal_Text.text = ""; }
     }
     private function ResetInputNameTextInputObjectVoid(){
-        if(inputNameTextInputObject != null && selectedVisitorObject != null){ inputNameTextInputObject.text = selectedVisitorObject.GetNameString(); }
+        if(name_TextInput != null && selected_Visitor_Object != null){ name_TextInput.text = selected_Visitor_Object.GetNameString(); }
     }
     private function ResetSelectCurrentExhibitionListSelectorObject(){
-        if(selectCurrentExhibitionListSelectorObject != null && selectedVisitorObject != null){
-            selectCurrentExhibitionListSelectorObject.selectedIndex = -1;
-            if(selectedVisitorObject.GetExhibitionCurrentObject() != null){
-                selectCurrentExhibitionListSelectorObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
+        if(currentExhibition_ListSelector != null && selected_Visitor_Object != null){
+            currentExhibition_ListSelector.selectedIndex = -1;
+            if(selected_Visitor_Object.GetExhibitionCurrentObject() != null){
+                currentExhibition_ListSelector.text = selected_Visitor_Object.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
             }
             else{
-                selectCurrentExhibitionListSelectorObject.text = "In Lobby";
+                currentExhibition_ListSelector.text = "In Lobby";
             }
 
         }
     }
     private function ResetSelectModeListSelectorObjectVoid(){
-        if(selectModeListSelectorObject != null && selectedVisitorObject != null){
-            if(selectedVisitorObject.GetVisitorModeEnum() == HARDWARE_MANUAL){ selectModeListSelectorObject.text = "Hardware Manual"; }
-            else if(selectedVisitorObject.GetVisitorModeEnum() == SOFTWARE_AUTO){ selectModeListSelectorObject.text = "Software Auto"; }
-            else if(selectedVisitorObject.GetVisitorModeEnum() == SOFTWARE_MANUAL){ selectModeListSelectorObject.text = "Software Manual"; }
+        if(visitorMode_ListSelector != null && selected_Visitor_Object != null){
+            if(selected_Visitor_Object.GetVisitorModeEnum() == HARDWARE_MANUAL){ visitorMode_ListSelector.text = "Hardware Manual"; }
+            else if(selected_Visitor_Object.GetVisitorModeEnum() == SOFTWARE_AUTO){ visitorMode_ListSelector.text = "Software Auto"; }
+            else if(selected_Visitor_Object.GetVisitorModeEnum() == SOFTWARE_MANUAL){ visitorMode_ListSelector.text = "Software Manual"; }
         }
     }
 
     private function ResetSelectVisitorListSelectorObjectVoid(){
 
-        selectVisitorListSelectorObject.dataSource.removeAll();
+        visitor_ListSelector.dataSource.removeAll();
         var loopCounter1Int:Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
+        while(loopCounter1Int < _Global_Object.GetVisitorObjectArray().length){
 
-            selectVisitorListSelectorObject.dataSource.createFromString(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetNameString());
+            visitor_ListSelector.dataSource.createFromString(_Global_Object.GetVisitorObjectArray()[loopCounter1Int].GetNameString());
             loopCounter1Int ++;
 
         }
@@ -356,37 +364,37 @@ class UIPopupEditObjectVisitor{
     }
 
     private function UpdateDisplayCurrentExhibitionTextObjectVoid(){
-        if(selectedVisitorObject != null){
-            if(selectedVisitorObject.GetExhibitionCurrentObject() == null){
-                displayCurrentExhibitionTextObject.text = "In Lobby";
+        if(selected_Visitor_Object != null){
+            if(selected_Visitor_Object.GetExhibitionCurrentObject() == null){
+                exhibitionCurrent_Text.text = "In Lobby";
             }
             else{
-                displayCurrentExhibitionTextObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
+                exhibitionCurrent_Text.text = selected_Visitor_Object.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
             }
         }
     }
     private function UpdateDisplayExplanationTextObjectVoid(){
-        if(displayExplanationPopupObject != null){
-            Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
-            displayExplanationPopupObject.y = popupObject.y;
+        if(explanation_Popup != null){
+            Std.instance(explanation_Popup.GetContentObject(), ListPopupContent).GetListObject().height = 205;
+            explanation_Popup.y = _Popup.y;
             var updateExplanationBool:Bool = false;
             var loopCounter1Int:Int = 0;
-            if(selectedVisitorExplanationStringArray.length != selectedVisitorObject.GetExplanationStringArray().length){ updateExplanationBool = true; }
-            while(loopCounter1Int < selectedVisitorObject.GetExplanationStringArray().length){
+            if(selectedVisitorExplanation_String_Array.length != selected_Visitor_Object.GetExplanationStringArray().length){ updateExplanationBool = true; }
+            while(loopCounter1Int < selected_Visitor_Object.GetExplanationStringArray().length){
                 if(updateExplanationBool == true){ break; }
-                if(selectedVisitorExplanationStringArray[loopCounter1Int] != selectedVisitorObject.GetExplanationStringArray()[loopCounter1Int]){
+                if(selectedVisitorExplanation_String_Array[loopCounter1Int] != selected_Visitor_Object.GetExplanationStringArray()[loopCounter1Int]){
                     updateExplanationBool = true;
                     break;
                 }
                 loopCounter1Int ++;
             }
             if(updateExplanationBool == true){
-                CollectionFunction.ClearArray(selectedVisitorExplanationStringArray);
-                Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
+                CollectionFunction.ClearArray(selectedVisitorExplanation_String_Array);
+                Std.instance(explanation_Popup.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
                 var loopCounter2Int:Int = 0;
-                while(loopCounter2Int < selectedVisitorObject.GetExplanationStringArray().length){
-                    selectedVisitorExplanationStringArray.push(selectedVisitorObject.GetExplanationStringArray()[loopCounter2Int]);
-                    Std.instance(displayExplanationPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selectedVisitorObject.GetExplanationStringArray()[loopCounter2Int]);
+                while(loopCounter2Int < selected_Visitor_Object.GetExplanationStringArray().length){
+                    selectedVisitorExplanation_String_Array.push(selected_Visitor_Object.GetExplanationStringArray()[loopCounter2Int]);
+                    Std.instance(explanation_Popup.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selected_Visitor_Object.GetExplanationStringArray()[loopCounter2Int]);
                     loopCounter2Int ++;
                 }
             }
@@ -394,35 +402,35 @@ class UIPopupEditObjectVisitor{
     }
 
     private function UpdateDisplayPopularTagListSelectorObjectVoid(){
-        if(displayPopularTagPopupObject != null){
-            Std.instance(displayPopularTagPopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
-            displayPopularTagPopupObject.y = popupObject.y;
+        if(tagPopular_Popup != null){
+            Std.instance(tagPopular_Popup.GetContentObject(), ListPopupContent).GetListObject().height = 205;
+            tagPopular_Popup.y = _Popup.y;
             var updateTagBool:Bool = false;
             var loopCounter1Int:Int = 0;
             if(
-                selectedVisitorPopularTagCountIntArray.length       != selectedVisitorObject.GetTagCounterStructArray().length ||
-                selectedVisitorPopularTagObjectStringArray.length   != selectedVisitorObject.GetTagCounterStructArray().length
+                selectedVisitorTagPopularCount_Int_Array.length       != selected_Visitor_Object.GetTagCounterStructArray().length ||
+                selectedVisitorTagPopularName_String_Array.length   != selected_Visitor_Object.GetTagCounterStructArray().length
             ){ updateTagBool = true; }
-            while(loopCounter1Int < selectedVisitorObject.GetTagCounterStructArray().length){
+            while(loopCounter1Int < selected_Visitor_Object.GetTagCounterStructArray().length){
                 if(updateTagBool == true){ break; }
-                if(selectedVisitorPopularTagCountIntArray[loopCounter1Int] != selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt){ updateTagBool = true; break; }
-                if(selectedVisitorPopularTagObjectStringArray[loopCounter1Int] != selectedVisitorObject.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString()){ updateTagBool = true; break; }
+                if(selectedVisitorTagPopularCount_Int_Array[loopCounter1Int] != selected_Visitor_Object.GetTagCounterStructArray()[loopCounter1Int].tagCounterInt){ updateTagBool = true; break; }
+                if(selectedVisitorTagPopularName_String_Array[loopCounter1Int] != selected_Visitor_Object.GetTagCounterStructArray()[loopCounter1Int].tagObject.GetNameString()){ updateTagBool = true; break; }
                 loopCounter1Int ++;
             }
             if(updateTagBool == true){
-                CollectionFunction.ClearArray(selectedVisitorPopularTagCountIntArray);
-                CollectionFunction.ClearArray(selectedVisitorPopularTagObjectStringArray);
-                Std.instance(displayPopularTagPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
+                CollectionFunction.ClearArray(selectedVisitorTagPopularCount_Int_Array);
+                CollectionFunction.ClearArray(selectedVisitorTagPopularName_String_Array);
+                Std.instance(tagPopular_Popup.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
                 var loopCounter2Int:Int = 0;
-                while(loopCounter2Int < selectedVisitorObject.GetTagCounterStructArray().length){
+                while(loopCounter2Int < selected_Visitor_Object.GetTagCounterStructArray().length){
 
-                    selectedVisitorPopularTagCountIntArray.push(selectedVisitorObject.GetTagCounterStructArray()[loopCounter2Int].tagCounterInt);
-                    selectedVisitorPopularTagObjectStringArray.push(selectedVisitorObject.GetTagCounterStructArray()[loopCounter2Int].tagObject.GetNameString());
+                    selectedVisitorTagPopularCount_Int_Array.push(selected_Visitor_Object.GetTagCounterStructArray()[loopCounter2Int].tagCounterInt);
+                    selectedVisitorTagPopularName_String_Array.push(selected_Visitor_Object.GetTagCounterStructArray()[loopCounter2Int].tagObject.GetNameString());
 
-                    Std.instance(displayPopularTagPopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(
-                        selectedVisitorObject.GetTagCounterStructArray()[loopCounter2Int].tagCounterInt +
+                    Std.instance(tagPopular_Popup.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(
+                        selected_Visitor_Object.GetTagCounterStructArray()[loopCounter2Int].tagCounterInt +
                         " " +
-                        selectedVisitorObject.GetTagCounterStructArray()[loopCounter2Int].tagObject.GetNameString()
+                        selected_Visitor_Object.GetTagCounterStructArray()[loopCounter2Int].tagObject.GetNameString()
                     );
                     loopCounter2Int ++;
                 }
@@ -431,28 +439,28 @@ class UIPopupEditObjectVisitor{
     }
 
     private function UpdateDisplaySentenceListViewObjectVoid(){
-        if(displaySentencePopupObject != null){
-            Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().height = 205;
-            displaySentencePopupObject.y = popupObject.y;
+        if(sentence_Popup != null){
+            Std.instance(sentence_Popup.GetContentObject(), ListPopupContent).GetListObject().height = 205;
+            sentence_Popup.y = _Popup.y;
             var updateSentenceBool:Bool = false;
             var loopCounter1Int:Int = 0;
-            if(selectedVisitorSentenceStringArray.length != selectedVisitorObject.GetSentenceStringArray().length){ updateSentenceBool = true; }
-            while(loopCounter1Int < selectedVisitorObject.GetSentenceStringArray().length){
+            if(selectedVisitorSentence_String_Array.length != selected_Visitor_Object.GetSentenceStringArray().length){ updateSentenceBool = true; }
+            while(loopCounter1Int < selected_Visitor_Object.GetSentenceStringArray().length){
                 if(updateSentenceBool == true){ break; }
-                if(selectedVisitorSentenceStringArray[loopCounter1Int] != selectedVisitorObject.GetSentenceStringArray()[loopCounter1Int]){
+                if(selectedVisitorSentence_String_Array[loopCounter1Int] != selected_Visitor_Object.GetSentenceStringArray()[loopCounter1Int]){
                     updateSentenceBool = true;
                     break;
                 }
                 loopCounter1Int ++;
             }
             if(updateSentenceBool == true){
-                CollectionFunction.ClearArray(selectedVisitorSentenceStringArray);
-                Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
+                CollectionFunction.ClearArray(selectedVisitorSentence_String_Array);
+                Std.instance(sentence_Popup.GetContentObject(), ListPopupContent).GetListObject().dataSource.removeAll();
                 var loopCounter2Int:Int = 0;
-                while(loopCounter2Int < selectedVisitorObject.GetSentenceStringArray().length){
-                    if(selectedVisitorObject.GetNameString() == "Visitor 1"){ trace(selectedVisitorObject.GetSentenceStringArray()[loopCounter2Int]); }
-                    selectedVisitorSentenceStringArray.push(selectedVisitorObject.GetSentenceStringArray()[loopCounter2Int]);
-                    Std.instance(displaySentencePopupObject.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selectedVisitorSentenceStringArray[selectedVisitorSentenceStringArray.length - 1]);
+                while(loopCounter2Int < selected_Visitor_Object.GetSentenceStringArray().length){
+                    if(selected_Visitor_Object.GetNameString() == "Visitor 1"){ trace(selected_Visitor_Object.GetSentenceStringArray()[loopCounter2Int]); }
+                    selectedVisitorSentence_String_Array.push(selected_Visitor_Object.GetSentenceStringArray()[loopCounter2Int]);
+                    Std.instance(sentence_Popup.GetContentObject(), ListPopupContent).GetListObject().dataSource.createFromString(selectedVisitorSentence_String_Array[selectedVisitorSentence_String_Array.length - 1]);
 
                     loopCounter2Int ++;
                 }
@@ -461,64 +469,64 @@ class UIPopupEditObjectVisitor{
     }
 
     private function UpdateDisplayTargetExhibitionTextObjectVoid(){
-        if(selectedVisitorObject != null){
+        if(selected_Visitor_Object != null){
             var targetExhibitionNameFullString:String = "";
             var loopCounter1Int:Int = 0;
-            while(loopCounter1Int < selectedVisitorObject.GetExhibitionTargetObjectArray().length){
-                if(loopCounter1Int == selectedVisitorObject.GetExhibitionTargetObjectArray().length - 1){
-                    targetExhibitionNameFullString = targetExhibitionNameFullString + selectedVisitorObject.GetExhibitionTargetObjectArray()[loopCounter1Int].GetNameStruct().nameFullString;
+            while(loopCounter1Int < selected_Visitor_Object.GetExhibitionTargetObjectArray().length){
+                if(loopCounter1Int == selected_Visitor_Object.GetExhibitionTargetObjectArray().length - 1){
+                    targetExhibitionNameFullString = targetExhibitionNameFullString + selected_Visitor_Object.GetExhibitionTargetObjectArray()[loopCounter1Int].GetNameStruct().nameFullString;
                 }
                 else{
-                    targetExhibitionNameFullString = targetExhibitionNameFullString + selectedVisitorObject.GetExhibitionTargetObjectArray()[loopCounter1Int].GetNameStruct().nameFullString + "\n";
+                    targetExhibitionNameFullString = targetExhibitionNameFullString + selected_Visitor_Object.GetExhibitionTargetObjectArray()[loopCounter1Int].GetNameStruct().nameFullString + "\n";
                 }
                 loopCounter1Int ++;
             }
-            displayTargetExhibitionTextObject.text = targetExhibitionNameFullString;
+            exhibitionTarget_Text.text = targetExhibitionNameFullString;
         }
     }
 
     private function UpdateDisplayVisitorIndexGlobalTextObjectVoid(){
-        if(selectedVisitorObject != null){ displayVisitorIndexGlobalTextObject.text = Std.string(selectedVisitorObject.GetIndexGlobalInt()); }
+        if(selected_Visitor_Object != null){ indexGlobal_Text.text = Std.string(selected_Visitor_Object.GetIndexGlobalInt()); }
     }
 
     private function UpdateDisplayVisitorIndexLocalTextObjectVoid(){
-        if(selectedVisitorObject != null){ displayVisitorIndexLocalTextObject.text = Std.string(selectedVisitorObject.GetIndexLocalInt()); }
+        if(selected_Visitor_Object != null){ indexLocal_Text.text = Std.string(selected_Visitor_Object.GetIndexLocalInt()); }
     }
 
     private function UpdateSelectCurrentExhibitionListSelectorObjectVoid(){
-        if(selectedVisitorObject != null){
-            if(selectModeListSelectorObject.text != "Software Manual"){
-                selectCurrentExhibitionListSelectorObject.disabled = true;
+        if(selected_Visitor_Object != null){
+            if(visitorMode_ListSelector.text != "Software Manual"){
+                currentExhibition_ListSelector.disabled = true;
                 ResetSelectCurrentExhibitionListSelectorObject();
-                selectCurrentExhibitionListSelectorObject.text = "Please change to Software Manual.";
+                currentExhibition_ListSelector.text = "Please change to Software Manual.";
             }
             else{
-                selectCurrentExhibitionListSelectorObject.disabled = false;
-                if(selectCurrentExhibitionListSelectorObject.dataSource.size() != collectionGlobalObject.GetExhibitionObjectArray().length){
-                    selectCurrentExhibitionListSelectorObject.dataSource.removeAll();
+                currentExhibition_ListSelector.disabled = false;
+                if(currentExhibition_ListSelector.dataSource.size() != _Global_Object.GetExhibitionObjectArray().length){
+                    currentExhibition_ListSelector.dataSource.removeAll();
                     var loopCounter1Int:Int = 0;
-                    while(loopCounter1Int < collectionGlobalObject.GetExhibitionObjectArray().length){
-                        selectCurrentExhibitionListSelectorObject.dataSource.createFromString(collectionGlobalObject.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameFullString);
-                        selectCurrentExhibitionListSelectorObject.selectedIndex = -1;
-                        if(selectedVisitorObject.GetExhibitionCurrentObject() == null){
-                            selectCurrentExhibitionListSelectorObject.text = "In Lobby";
+                    while(loopCounter1Int < _Global_Object.GetExhibitionObjectArray().length){
+                        currentExhibition_ListSelector.dataSource.createFromString(_Global_Object.GetExhibitionObjectArray()[loopCounter1Int].GetNameStruct().nameFullString);
+                        currentExhibition_ListSelector.selectedIndex = -1;
+                        if(selected_Visitor_Object.GetExhibitionCurrentObject() == null){
+                            currentExhibition_ListSelector.text = "In Lobby";
                         }
                         else{
-                            selectCurrentExhibitionListSelectorObject.text = selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
+                            currentExhibition_ListSelector.text = selected_Visitor_Object.GetExhibitionCurrentObject().GetNameStruct().nameFullString;
                         }
                         loopCounter1Int ++;
                     }
                 }
-                if(selectedVisitorObject.GetExhibitionCurrentObject() != null){
-                    if(selectCurrentExhibitionListSelectorObject.text != selectedVisitorObject.GetExhibitionCurrentObject().GetNameStruct().nameFullString){
-                        if(selectCurrentExhibitionListSelectorObject.text != "Please change to Software Manual."){
-                            selectedVisitorObject.ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, selectCurrentExhibitionListSelectorObject.text));
+                if(selected_Visitor_Object.GetExhibitionCurrentObject() != null){
+                    if(currentExhibition_ListSelector.text != selected_Visitor_Object.GetExhibitionCurrentObject().GetNameStruct().nameFullString){
+                        if(currentExhibition_ListSelector.text != "Please change to Software Manual."){
+                            selected_Visitor_Object.ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(_Global_Object, EXH, currentExhibition_ListSelector.text));
                         }
                     }
                 }
                 else{
-                    if(selectCurrentExhibitionListSelectorObject.selectedIndex != -1){
-                       selectedVisitorObject.ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(collectionGlobalObject, EXH, selectCurrentExhibitionListSelectorObject.text));
+                    if(currentExhibition_ListSelector.selectedIndex != -1){
+                       selected_Visitor_Object.ChangeExhibitionCurrentVoid(CollectionFunction.FindMuseumObject(_Global_Object, EXH, currentExhibition_ListSelector.text));
                     }
                 }
             }
@@ -526,21 +534,21 @@ class UIPopupEditObjectVisitor{
     }
 
     private function UpdateSelectModeListSelectorObjectVoid(){
-        if(selectedVisitorObject != null){
-            if(selectModeListSelectorObject.text == "Hardware Manual"){ selectedVisitorObject.SetVisitorModeEnumVoid(HARDWARE_MANUAL); }
-            else if(selectModeListSelectorObject.text == "Software Auto"){ selectedVisitorObject.SetVisitorModeEnumVoid(SOFTWARE_AUTO); }
-            else if(selectModeListSelectorObject.text == "Software Manual"){ selectedVisitorObject.SetVisitorModeEnumVoid(SOFTWARE_MANUAL); }
+        if(selected_Visitor_Object != null){
+            if(visitorMode_ListSelector.text == "Hardware Manual"){ selected_Visitor_Object.SetVisitorModeEnumVoid(HARDWARE_MANUAL); }
+            else if(visitorMode_ListSelector.text == "Software Auto"){ selected_Visitor_Object.SetVisitorModeEnumVoid(SOFTWARE_AUTO); }
+            else if(visitorMode_ListSelector.text == "Software Manual"){ selected_Visitor_Object.SetVisitorModeEnumVoid(SOFTWARE_MANUAL); }
         }
     }
 
     public function UpdateVisitorButtonObjectArrayVoid(){
-        CollectionFunction.ClearArray(visitorButtonObjectArray);
+        CollectionFunction.ClearArray(visitor_Button_Array);
         var loopCounter1Int:Int = 0;
-        while(loopCounter1Int < collectionGlobalObject.GetVisitorObjectArray().length){
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().userData
-                = collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().id;
-            visitorButtonObjectArray.push(collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject());
-            collectionGlobalObject.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().onClick = mainButtonObject.onClick;
+        while(loopCounter1Int < _Global_Object.GetVisitorObjectArray().length){
+            _Global_Object.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().userData
+                = _Global_Object.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().id;
+            visitor_Button_Array.push(_Global_Object.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject());
+            _Global_Object.GetVisitorObjectArray()[loopCounter1Int].GetVisitorUIObject().GetButtonObject().onClick = _Button.onClick;
             loopCounter1Int ++;
         }
     }

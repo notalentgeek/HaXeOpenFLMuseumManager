@@ -1,158 +1,166 @@
-class UIPopupEditObjectTag{
+class TagEditUIPopup_Object{
 
 
-    /*Most variable mostly comes from the inputText and text object.*/
-    private var buttonObject                        :Button                     = null;
-    private var collectionGlobalObject              :CollectionGlobal           = null;
-    private var gridObject                          :Grid                       = null;
-    private var inputAdjTextInputObject             :TextInput                  = null;
-    private var inputAdjTextObject                  :Text                       = null;
-    private var inputAdvTextInputObject             :TextInput                  = null;
-    private var inputAdvTextObject                  :Text                       = null;
-    private var inputNounPosTextInputObject         :TextInput                  = null;
-    private var inputNounPosTextObject              :Text                       = null;
-    private var inputNounSPosTextInputObject        :TextInput                  = null;
-    private var inputNounSPosTextObject             :Text                       = null;
-    private var inputNounSTextInputObject           :TextInput                  = null;
-    private var inputNounSTextObject                :Text                       = null;
-    private var inputNounTextInputObject            :TextInput                  = null;
-    private var inputNounTextObject                 :Text                       = null;
-    private var inputTagNameTextInputObject         :TextInput                  = null;
-    private var inputVerb1TextInputObject           :TextInput                  = null;
-    private var inputVerb1TextObject                :Text                       = null;
-    private var inputVerb2TextInputObject           :TextInput                  = null;
-    private var inputVerb2TextObject                :Text                       = null;
-    private var inputVerb3TextInputObject           :TextInput                  = null;
-    private var inputVerb3TextObject                :Text                       = null;
-    private var inputVerbIngTextInputObject         :TextInput                  = null;
-    private var inputVerbIngTextObject              :Text                       = null;
-    private var inputVerbSTextInputObject           :TextInput                  = null;
-    private var inputVerbSTextObject                :Text                       = null;
-    private var popupObject                         :Popup                      = null;
-    private var selectedTagObject                   :ObjectTag                  = null;
-    private var selectFeelListSelectorObject        :ListSelector               = null;
-    private var selectGeneralListSelectorObject     :ListSelector               = null;
-    private var selectTagListSelectorObject         :ListSelector               = null;
-    private var selectTagNameListSelectorPrevString :String                     = "";
-    private var selectTagNameListSelectorString     :String                     = "";
-    private var selectTagTypeListSelectorObject     :ListSelector               = null;
-    private var textInputStructArray                :Array<StructTextInput>     = new Array<StructTextInput>();
 
-    public function new(_collectionGlobalObject:CollectionGlobal, _root:Root){
 
-        collectionGlobalObject = _collectionGlobalObject;
+
+    /*==================================================*/
+    private var _Button                     (null, null)        :Button                     = null;
+    private var _Global_Object              (null, null)        :Global_Object              = null;
+    private var _Grid                       (null, null)        :Grid                       = null;
+    private var _Popup                      (null, null)        :Popup                      = null;
+    private var _TextInput_Struct_Array     (null, null)        :Array<TextInput_Struct>    = new Array<TextInput_Struct>();
+    private var adjective_Text              (null, null)        :Text                       = null;
+    private var adjective_TextInput         (null, null)        :TextInput                  = null;
+    private var adverb_Text                 (null, null)        :Text                       = null;
+    private var adverb_TextInput            (null, null)        :TextInput                  = null;
+    private var general_ListSelector        (null, null)        :ListSelector               = null;
+    private var noun_Text                   (null, null)        :Text                       = null;
+    private var noun_TextInput              (null, null)        :TextInput                  = null;
+    private var nounPos_Text                (null, null)        :Text                       = null;
+    private var nounPos_TextInput           (null, null)        :TextInput                  = null;
+    private var nounS_Text                  (null, null)        :Text                       = null;
+    private var nounS_TextInput             (null, null)        :TextInput                  = null;
+    private var nounSPos_Text               (null, null)        :Text                       = null;
+    private var nounSPos_TextInput          (null, null)        :TextInput                  = null;
+    private var selected_Tag_Object         (null, null)        :Tag_Object                 = null;
+    private var tag_ListSelector            (null, null)        :ListSelector               = null;
+    private var tagFeel_ListSelector        (null, null)        :ListSelector               = null;
+    private var tagName_String              (null, null)        :String                     = null;
+    private var tagName_TextInput           (null, null)        :TextInput                  = null;
+    private var tagNamePrev_String          (null, null)        :String                     = null;
+    private var tagType_ListSelector        (null, null)        :ListSelector               = null;
+    private var verb1_Text                  (null, null)        :Text                       = null;
+    private var verb1_TextInput             (null, null)        :TextInput                  = null;
+    private var verb2_Text                  (null, null)        :Text                       = null;
+    private var verb2_TextInput             (null, null)        :TextInput                  = null;
+    private var verb3_Text                  (null, null)        :Text                       = null;
+    private var verb3_TextInput             (null, null)        :TextInput                  = null;
+    private var verbIng_Text                (null, null)        :Text                       = null;
+    private var verbIng_TextInput           (null, null)        :TextInput                  = null;
+    private var verbS_Text                  (null, null)        :Text                       = null;
+    private var verbS_TextInput             (null, null)        :TextInput                  = null;
+    /*==================================================*/
+
+
+
+
+
+    public function new(__Global_Object:Global_Object, _root:Root){
+
+        _Global_Object = __Global_Object;
 
         /*Find the main button to actovate the popup in the main screen.*/
-        buttonObject = _root.findChild("UIPopupEditTagObjectButton", Button, true);
+        _Button = _root.findChild("UIPopupEditTagObjectButton", Button, true);
         /*Editing a callback function of when the button is pressed.*/
-        buttonObject.onClick = function(_e){
+        _Button.onClick = function(_e){
 
             /*Editing OK and CANCEL button for the popup.*/
             var buttonControlInt:Int = 0;
             buttonControlInt |= PopupButton.OK;
             buttonControlInt |= PopupButton.CANCEL;
 
-            var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupEditObjectTag.xml");
-            popupObject = PopupManager.instance.showCustom(iDisplayObject, "Edit Tag", buttonControlInt, function(_button){
+            var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupEditTag_Object.xml");
+            _Popup = PopupManager.instance.showCustom(iDisplayObject, "Edit Tag", buttonControlInt, function(_button){
 
                 /*You can actually have this done with checking the component of a Popup controller.
                 If a popup controller/component returns null then the popup is not active.*/
                 if(_button == PopupButton.OK){
 
-                    if(selectedTagObject != null){
+                    if(selected_Tag_Object != null){
 
                         var feelEnum            :EnumTagFeelType    = null;
-                        var feelString          :String             = selectFeelListSelectorObject.text;
+                        var feelString          :String             = tagFeel_ListSelector.text;
                         var generalBool         :Bool               = false;
-                        var generalString       :String             = selectGeneralListSelectorObject.text;
+                        var generalString       :String             = general_ListSelector.text;
                         if     (feelString == "POSITIVE"){ feelEnum = POSITIVE; }
                         else if(feelString == "NEUTRAL" ){ feelEnum = NEUTRAL ; }
                         else if(feelString == "NEGATIVE"){ feelEnum = NEGATIVE; }
                         if     (generalString == "Yes"){ generalBool = true ; }
                         else if(generalString == "No" ){ generalBool = false; }
-                        selectedTagObject.SetFeelEnumObject(feelEnum);
-                        selectedTagObject.SetGeneralTagBoolObject(generalBool);
-                        selectedTagObject.SetNameStringObject(inputTagNameTextInputObject.text);
-                        if(selectTagTypeListSelectorObject.text == "ADJ"){
-                            selectedTagObject
-                                .SetAdjectiveStringObject   (inputAdjTextInputObject        .text);
+                        selected_Tag_Object.SetFeelEnumObject(feelEnum);
+                        selected_Tag_Object.SetGeneralTagBoolObject(generalBool);
+                        selected_Tag_Object.SetNameStringObject(tagName_TextInput.text);
+                        if(tagType_ListSelector.text == "ADJ"){
+                            selected_Tag_Object
+                                .SetAdjectiveStringObject   (adjective_TextInput        .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "ADV"){
-                            selectedTagObject
-                                .SetAdverbStringObject      (inputAdvTextInputObject        .text);
+                        else if(tagType_ListSelector.text == "ADV"){
+                            selected_Tag_Object
+                                .SetAdverbStringObject      (adverb_TextInput        .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_ABSTRACT"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text)
-                                .SetNounPosStringObject     (inputNounPosTextInputObject    .text)
-                                .SetNounSStringObject       (inputNounSTextInputObject      .text)
-                                .SetNounSPosStringObject    (inputNounSPosTextInputObject   .text);
+                        else if(tagType_ListSelector.text == "NOUN_ALIVE_ABSTRACT"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text)
+                                .SetNounPosStringObject     (nounPos_TextInput    .text)
+                                .SetNounSStringObject       (nounS_TextInput      .text)
+                                .SetNounSPosStringObject    (nounSPos_TextInput   .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_CONCRETE"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text)
-                                .SetNounPosStringObject     (inputNounPosTextInputObject    .text);
+                        else if(tagType_ListSelector.text == "NOUN_ALIVE_CONCRETE"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text)
+                                .SetNounPosStringObject     (nounPos_TextInput    .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_ABSTRACT"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text)
-                                .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                        else if(tagType_ListSelector.text == "NOUN_INANIMATE_HOLD_ABSTRACT"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text)
+                                .SetNounSStringObject       (nounS_TextInput      .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_CONCRETE"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text)
-                                .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                        else if(tagType_ListSelector.text == "NOUN_INANIMATE_HOLD_CONCRETE"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text)
+                                .SetNounSStringObject       (nounS_TextInput      .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_ABSTRACT"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text)
-                                .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                        else if(tagType_ListSelector.text == "NOUN_INANIMATE_PLACE_ABSTRACT"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text)
+                                .SetNounSStringObject       (nounS_TextInput      .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"){
-                            selectedTagObject.SetNounStringObject(inputNounTextInputObject.text);
+                        else if(tagType_ListSelector.text == "NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"){
+                            selected_Tag_Object.SetNounStringObject(noun_TextInput.text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_OWNER"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text)
-                                .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                        else if(tagType_ListSelector.text == "NOUN_INANIMATE_PLACE_CONCRETE_OWNER"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text)
+                                .SetNounSStringObject       (nounS_TextInput      .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_ABSTRACT"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text);
+                        else if(tagType_ListSelector.text == "NOUN_INANIMATE_SEE_ABSTRACT"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_CONCRETE"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text);
+                        else if(tagType_ListSelector.text == "NOUN_INANIMATE_SEE_CONCRETE"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_TITLE"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text)
-                                .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                        else if(tagType_ListSelector.text == "NOUN_INANIMATE_TITLE"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text)
+                                .SetNounSStringObject       (nounS_TextInput      .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_ABSTRACT"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text);
+                        else if(tagType_ListSelector.text == "NOUN_INANIMATE_WEAR_ABSTRACT"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_CONCRETE"){
-                            selectedTagObject
-                                .SetNounStringObject        (inputNounTextInputObject       .text)
-                                .SetNounSStringObject       (inputNounSTextInputObject      .text);
+                        else if(tagType_ListSelector.text == "NOUN_INANIMATE_WEAR_CONCRETE"){
+                            selected_Tag_Object
+                                .SetNounStringObject        (noun_TextInput       .text)
+                                .SetNounSStringObject       (nounS_TextInput      .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "VERB_INTRANSITIVE"){
-                            selectedTagObject
-                                .SetVerb1StringObject       (inputVerb1TextInputObject      .text)
-                                .SetVerb2StringObject       (inputVerb2TextInputObject      .text)
-                                .SetVerb3StringObject       (inputVerb3TextInputObject      .text)
-                                .SetVerbIngStringObject     (inputVerbIngTextInputObject    .text)
-                                .SetVerbSStringObject       (inputVerbSTextInputObject      .text);
+                        else if(tagType_ListSelector.text == "VERB_INTRANSITIVE"){
+                            selected_Tag_Object
+                                .SetVerb1StringObject       (verb1_TextInput      .text)
+                                .SetVerb2StringObject       (verb2_TextInput      .text)
+                                .SetVerb3StringObject       (verb3_TextInput      .text)
+                                .SetVerbIngStringObject     (verbIng_TextInput    .text)
+                                .SetVerbSStringObject       (verbS_TextInput      .text);
                         }
-                        else if(selectTagTypeListSelectorObject.text == "VERB_TRANSITIVE"){
-                            selectedTagObject
-                                .SetVerb1StringObject       (inputVerb1TextInputObject      .text)
-                                .SetVerb2StringObject       (inputVerb2TextInputObject      .text)
-                                .SetVerb3StringObject       (inputVerb3TextInputObject      .text)
-                                .SetVerbIngStringObject     (inputVerbIngTextInputObject    .text)
-                                .SetVerbSStringObject       (inputVerbSTextInputObject      .text);
+                        else if(tagType_ListSelector.text == "VERB_TRANSITIVE"){
+                            selected_Tag_Object
+                                .SetVerb1StringObject       (verb1_TextInput      .text)
+                                .SetVerb2StringObject       (verb2_TextInput      .text)
+                                .SetVerb3StringObject       (verb3_TextInput      .text)
+                                .SetVerbIngStringObject     (verbIng_TextInput    .text)
+                                .SetVerbSStringObject       (verbS_TextInput      .text);
                         }
 
                     }
@@ -161,21 +169,21 @@ class UIPopupEditObjectTag{
 
             });
 
-            gridObject                                  = popupObject.content.findChild("UIPopupEditObjectTag_Grid"             , Grid          , true);
-            inputTagNameTextInputObject                 = popupObject.content.findChild("UIPopupEditObjectTag_InputName"        , TextInput     , true);
-            selectFeelListSelectorObject                = popupObject.content.findChild("UIPopupEditObjectTag_SelectFeel"       , ListSelector  , true);
-            selectFeelListSelectorObject.method         = "default";
-            selectGeneralListSelectorObject             = popupObject.content.findChild("UIPopupEditObjectTag_SelectGeneral"    , ListSelector  , true);
-            selectGeneralListSelectorObject.method      = "default";
-            selectTagListSelectorObject                 = popupObject.content.findChild("UIPopupEditObjectTag_SelectTag"        , ListSelector  , true);
-            selectTagListSelectorObject.method          = "default";
-            selectTagTypeListSelectorObject             = popupObject.content.findChild("UIPopupEditObjectTag_SelectTagType"    , ListSelector  , true);
-            selectTagTypeListSelectorObject.method      = "default";
+            _Grid                                  = _Popup.content.findChild("UIPopupEditTag_Object_Grid"             , Grid          , true);
+            tagName_TextInput                 = _Popup.content.findChild("UIPopupEditTag_Object_InputName"        , TextInput     , true);
+            tagFeel_ListSelector                = _Popup.content.findChild("UIPopupEditTag_Object_SelectFeel"       , ListSelector  , true);
+            tagFeel_ListSelector.method         = "default";
+            general_ListSelector             = _Popup.content.findChild("UIPopupEditTag_Object_SelectGeneral"    , ListSelector  , true);
+            general_ListSelector.method      = "default";
+            tag_ListSelector                 = _Popup.content.findChild("UIPopupEditTag_Object_SelectTag"        , ListSelector  , true);
+            tag_ListSelector.method          = "default";
+            tagType_ListSelector             = _Popup.content.findChild("UIPopupEditTag_Object_SelectTagType"    , ListSelector  , true);
+            tagType_ListSelector.method      = "default";
 
             var loopCounter1Int:Int = 0;
-            while(loopCounter1Int < collectionGlobalObject.GetTagObjectArray().length){
+            while(loopCounter1Int < _Global_Object.GetTagObjectArray().length){
 
-                selectTagListSelectorObject.dataSource.createFromString(collectionGlobalObject.GetTagObjectArray()[loopCounter1Int].GetNameString());
+                tag_ListSelector.dataSource.createFromString(_Global_Object.GetTagObjectArray()[loopCounter1Int].GetNameString());
                 loopCounter1Int ++;
 
             }
@@ -189,363 +197,363 @@ class UIPopupEditObjectTag{
 
 
 
-        if(popupObject != null){
+        if(_Popup != null){
 
             if(
-                selectGeneralListSelectorObject.text            == ""   ||
-                selectGeneralListSelectorObject.text            == " "  ||
-                selectGeneralListSelectorObject.selectedIndex   == -1
+                general_ListSelector.text            == ""   ||
+                general_ListSelector.text            == " "  ||
+                general_ListSelector.selectedIndex   == -1
             ){
-                selectTagListSelectorObject.disabled            = true;
-                selectTagListSelectorObject.selectedIndex       = -1;
-                selectTagListSelectorObject.text                = " ";
+                tag_ListSelector.disabled            = true;
+                tag_ListSelector.selectedIndex       = -1;
+                tag_ListSelector.text                = " ";
             }
-            else{ selectTagListSelectorObject.disabled          = false; }
+            else{ tag_ListSelector.disabled          = false; }
             if(
-                selectTagListSelectorObject.text                == ""   ||
-                selectTagListSelectorObject.text                == " "  ||
-                selectTagListSelectorObject.selectedIndex       == -1
+                tag_ListSelector.text                == ""   ||
+                tag_ListSelector.text                == " "  ||
+                tag_ListSelector.selectedIndex       == -1
             ){
-                inputTagNameTextInputObject.disabled            = true;
-                selectFeelListSelectorObject.disabled           = true;
-                selectTagTypeListSelectorObject.disabled        = true;
+                tagName_TextInput.disabled            = true;
+                tagFeel_ListSelector.disabled           = true;
+                tagType_ListSelector.disabled        = true;
             }
             else{
-                inputTagNameTextInputObject.disabled            = false;
-                selectFeelListSelectorObject.disabled           = false;
-                selectTagTypeListSelectorObject.disabled        = false;
+                tagName_TextInput.disabled            = false;
+                tagFeel_ListSelector.disabled           = false;
+                tagType_ListSelector.disabled        = false;
             }
 
-            selectTagNameListSelectorString = selectTagListSelectorObject.text;
-            if(selectTagNameListSelectorString != selectTagNameListSelectorPrevString){
+            tagName_String = tag_ListSelector.text;
+            if(tagName_String != tagNamePrev_String){
 
-                selectedTagObject = CollectionFunction.FindTagObject(collectionGlobalObject, false, selectTagNameListSelectorString);
+                selected_Tag_Object = CollectionFunction.FindTagObject(_Global_Object, false, tagName_String);
 
-                if(selectedTagObject != null){
+                if(selected_Tag_Object != null){
 
-                    inputTagNameTextInputObject.text = selectedTagObject.GetNameString();
-                    selectFeelListSelectorObject.text = Std.string(selectedTagObject.GetFeelEnum());
-                    if     (selectedTagObject.GetGeneralTagBool() == true ){ selectGeneralListSelectorObject.text = "Yes"; }
-                    else if(selectedTagObject.GetGeneralTagBool() == false){ selectGeneralListSelectorObject.text = "No" ; }
-                    selectTagTypeListSelectorObject.text = Std.string(selectedTagObject.GetTypeEnum());
+                    tagName_TextInput.text = selected_Tag_Object.GetNameString();
+                    tagFeel_ListSelector.text = Std.string(selected_Tag_Object.GetFeelEnum());
+                    if     (selected_Tag_Object.GetGeneralTagBool() == true ){ general_ListSelector.text = "Yes"; }
+                    else if(selected_Tag_Object.GetGeneralTagBool() == false){ general_ListSelector.text = "No" ; }
+                    tagType_ListSelector.text = Std.string(selected_Tag_Object.GetTypeEnum());
 
                     var loopCounter1Int:Int = 0;
-                    while(loopCounter1Int < textInputStructArray.length){
+                    while(loopCounter1Int < _TextInput_Struct_Array.length){
 
-                        gridObject.removeChild(textInputStructArray[loopCounter1Int].textObject);
-                        gridObject.removeChild(textInputStructArray[loopCounter1Int].textInputObject);
+                        _Grid.removeChild(_TextInput_Struct_Array[loopCounter1Int].textObject);
+                        _Grid.removeChild(_TextInput_Struct_Array[loopCounter1Int].textInputObject);
                         loopCounter1Int ++;
 
                     }
-                    CollectionFunction.ClearArray(textInputStructArray);
+                    CollectionFunction.ClearArray(_TextInput_Struct_Array);
                     CreateGUIObjectVoid();
 
-                    if(selectTagTypeListSelectorObject.text == "ADJ"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputAdjTextObject,
-                            textInputObject :inputAdjTextInputObject
+                    if(tagType_ListSelector.text == "ADJ"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :adjective_Text,
+                            textInputObject :adjective_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputAdjTextInputObject.text = selectedTagObject.GetAdjectiveString();
-                        gridObject.addChild(inputAdjTextObject);
-                        gridObject.addChild(inputAdjTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        adjective_TextInput.text = selected_Tag_Object.GetAdjectiveString();
+                        _Grid.addChild(adjective_Text);
+                        _Grid.addChild(adjective_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "ADV"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputAdvTextObject,
-                            textInputObject :inputAdvTextInputObject
+                    else if(tagType_ListSelector.text == "ADV"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :adverb_Text,
+                            textInputObject :adverb_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputAdvTextInputObject.text = selectedTagObject.GetAdverbString();
-                        gridObject.addChild(inputAdvTextObject);
-                        gridObject.addChild(inputAdvTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        adverb_TextInput.text = selected_Tag_Object.GetAdverbString();
+                        _Grid.addChild(adverb_Text);
+                        _Grid.addChild(adverb_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_ABSTRACT"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_ALIVE_ABSTRACT"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounPosTextObject,
-                            textInputObject :inputNounPosTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :nounPos_Text,
+                            textInputObject :nounPos_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounSTextObject,
-                            textInputObject :inputNounSTextInputObject,
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :nounS_Text,
+                            textInputObject :nounS_TextInput,
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounSPosTextObject,
-                            textInputObject :inputNounSPosTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :nounSPos_Text,
+                            textInputObject :nounSPos_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        inputNounPosTextInputObject.text = selectedTagObject.GetNounPosString();
-                        inputNounSTextInputObject.text = selectedTagObject.GetNounSString();
-                        inputNounSPosTextInputObject.text = selectedTagObject.GetNounSPosString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
-                        gridObject.addChild(inputNounPosTextObject);
-                        gridObject.addChild(inputNounPosTextInputObject);
-                        gridObject.addChild(inputNounSTextObject);
-                        gridObject.addChild(inputNounSTextInputObject);
-                        gridObject.addChild(inputNounSPosTextObject);
-                        gridObject.addChild(inputNounSPosTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        nounPos_TextInput.text = selected_Tag_Object.GetNounPosString();
+                        nounS_TextInput.text = selected_Tag_Object.GetNounSString();
+                        nounSPos_TextInput.text = selected_Tag_Object.GetNounSPosString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
+                        _Grid.addChild(nounPos_Text);
+                        _Grid.addChild(nounPos_TextInput);
+                        _Grid.addChild(nounS_Text);
+                        _Grid.addChild(nounS_TextInput);
+                        _Grid.addChild(nounSPos_Text);
+                        _Grid.addChild(nounSPos_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_ALIVE_CONCRETE"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_ALIVE_CONCRETE"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounPosTextObject,
-                            textInputObject :inputNounPosTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :nounPos_Text,
+                            textInputObject :nounPos_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        inputNounPosTextInputObject.text = selectedTagObject.GetNounPosString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
-                        gridObject.addChild(inputNounPosTextObject);
-                        gridObject.addChild(inputNounPosTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        nounPos_TextInput.text = selected_Tag_Object.GetNounPosString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
+                        _Grid.addChild(nounPos_Text);
+                        _Grid.addChild(nounPos_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_ABSTRACT"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_INANIMATE_HOLD_ABSTRACT"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounSTextObject,
-                            textInputObject :inputNounSTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :nounS_Text,
+                            textInputObject :nounS_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        inputNounSTextInputObject.text = selectedTagObject.GetNounSString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
-                        gridObject.addChild(inputNounSTextObject);
-                        gridObject.addChild(inputNounSTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        nounS_TextInput.text = selected_Tag_Object.GetNounSString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
+                        _Grid.addChild(nounS_Text);
+                        _Grid.addChild(nounS_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_HOLD_CONCRETE"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_INANIMATE_HOLD_CONCRETE"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounSTextObject,
-                            textInputObject :inputNounSTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :nounS_Text,
+                            textInputObject :nounS_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        inputNounSTextInputObject.text = selectedTagObject.GetNounSString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
-                        gridObject.addChild(inputNounSTextObject);
-                        gridObject.addChild(inputNounSTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        nounS_TextInput.text = selected_Tag_Object.GetNounSString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
+                        _Grid.addChild(nounS_Text);
+                        _Grid.addChild(nounS_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_ABSTRACT"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_INANIMATE_PLACE_ABSTRACT"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounSTextObject,
-                            textInputObject :inputNounSTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :nounS_Text,
+                            textInputObject :nounS_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        inputNounSTextInputObject.text = selectedTagObject.GetNounSString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
-                        gridObject.addChild(inputNounSTextObject);
-                        gridObject.addChild(inputNounSTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        nounS_TextInput.text = selected_Tag_Object.GetNounSString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
+                        _Grid.addChild(nounS_Text);
+                        _Grid.addChild(nounS_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_INANIMATE_PLACE_CONCRETE_NO_OWNER"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_PLACE_CONCRETE_OWNER"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_INANIMATE_PLACE_CONCRETE_OWNER"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounSTextObject,
-                            textInputObject :inputNounSTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :nounS_Text,
+                            textInputObject :nounS_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        inputNounSTextInputObject.text = selectedTagObject.GetNounSString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
-                        gridObject.addChild(inputNounSTextObject);
-                        gridObject.addChild(inputNounSTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        nounS_TextInput.text = selected_Tag_Object.GetNounSString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
+                        _Grid.addChild(nounS_Text);
+                        _Grid.addChild(nounS_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_ABSTRACT"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_INANIMATE_SEE_ABSTRACT"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_SEE_CONCRETE"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_INANIMATE_SEE_CONCRETE"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_TITLE"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject,
+                    else if(tagType_ListSelector.text == "NOUN_INANIMATE_TITLE"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput,
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounSTextObject,
-                            textInputObject :inputNounSTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :nounS_Text,
+                            textInputObject :nounS_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        inputNounSTextInputObject.text = selectedTagObject.GetNounSString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
-                        gridObject.addChild(inputNounSTextObject);
-                        gridObject.addChild(inputNounSTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        nounS_TextInput.text = selected_Tag_Object.GetNounSString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
+                        _Grid.addChild(nounS_Text);
+                        _Grid.addChild(nounS_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_ABSTRACT"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_INANIMATE_WEAR_ABSTRACT"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "NOUN_INANIMATE_WEAR_CONCRETE"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounTextObject,
-                            textInputObject :inputNounTextInputObject
+                    else if(tagType_ListSelector.text == "NOUN_INANIMATE_WEAR_CONCRETE"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :noun_Text,
+                            textInputObject :noun_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputNounSTextObject,
-                            textInputObject :inputNounSTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :nounS_Text,
+                            textInputObject :nounS_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputNounTextInputObject.text = selectedTagObject.GetNounString();
-                        inputNounSTextInputObject.text = selectedTagObject.GetNounSString();
-                        gridObject.addChild(inputNounTextObject);
-                        gridObject.addChild(inputNounTextInputObject);
-                        gridObject.addChild(inputNounSTextObject);
-                        gridObject.addChild(inputNounSTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        noun_TextInput.text = selected_Tag_Object.GetNounString();
+                        nounS_TextInput.text = selected_Tag_Object.GetNounSString();
+                        _Grid.addChild(noun_Text);
+                        _Grid.addChild(noun_TextInput);
+                        _Grid.addChild(nounS_Text);
+                        _Grid.addChild(nounS_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "VERB_INTRANSITIVE"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputVerb1TextObject,
-                            textInputObject :inputVerb1TextInputObject
+                    else if(tagType_ListSelector.text == "VERB_INTRANSITIVE"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :verb1_Text,
+                            textInputObject :verb1_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputVerb2TextObject,
-                            textInputObject :inputVerb2TextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :verb2_Text,
+                            textInputObject :verb2_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputVerb3TextObject,
-                            textInputObject :inputVerb3TextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :verb3_Text,
+                            textInputObject :verb3_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputVerbIngTextObject,
-                            textInputObject :inputVerbIngTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :verbIng_Text,
+                            textInputObject :verbIng_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputVerbSTextObject,
-                            textInputObject :inputVerbSTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :verbS_Text,
+                            textInputObject :verbS_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputVerb1TextInputObject.text = selectedTagObject.GetVerb1String();
-                        inputVerb2TextInputObject.text = selectedTagObject.GetVerb2String();
-                        inputVerb3TextInputObject.text = selectedTagObject.GetVerb3String();
-                        inputVerbIngTextInputObject.text = selectedTagObject.GetVerbIngString();
-                        inputVerbSTextInputObject.text = selectedTagObject.GetVerbSString();
-                        gridObject.addChild(inputVerb1TextObject);
-                        gridObject.addChild(inputVerb1TextInputObject);
-                        gridObject.addChild(inputVerb2TextObject);
-                        gridObject.addChild(inputVerb2TextInputObject);
-                        gridObject.addChild(inputVerb3TextObject);
-                        gridObject.addChild(inputVerb3TextInputObject);
-                        gridObject.addChild(inputVerbIngTextObject);
-                        gridObject.addChild(inputVerbIngTextInputObject);
-                        gridObject.addChild(inputVerbSTextObject);
-                        gridObject.addChild(inputVerbSTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        verb1_TextInput.text = selected_Tag_Object.GetVerb1String();
+                        verb2_TextInput.text = selected_Tag_Object.GetVerb2String();
+                        verb3_TextInput.text = selected_Tag_Object.GetVerb3String();
+                        verbIng_TextInput.text = selected_Tag_Object.GetVerbIngString();
+                        verbS_TextInput.text = selected_Tag_Object.GetVerbSString();
+                        _Grid.addChild(verb1_Text);
+                        _Grid.addChild(verb1_TextInput);
+                        _Grid.addChild(verb2_Text);
+                        _Grid.addChild(verb2_TextInput);
+                        _Grid.addChild(verb3_Text);
+                        _Grid.addChild(verb3_TextInput);
+                        _Grid.addChild(verbIng_Text);
+                        _Grid.addChild(verbIng_TextInput);
+                        _Grid.addChild(verbS_Text);
+                        _Grid.addChild(verbS_TextInput);
                     }
-                    else if(selectTagTypeListSelectorObject.text == "VERB_TRANSITIVE"){
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputVerb1TextObject,
-                            textInputObject :inputVerb1TextInputObject
+                    else if(tagType_ListSelector.text == "VERB_TRANSITIVE"){
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :verb1_Text,
+                            textInputObject :verb1_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputVerb2TextObject,
-                            textInputObject :inputVerb2TextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :verb2_Text,
+                            textInputObject :verb2_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputVerb3TextObject,
-                            textInputObject :inputVerb3TextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :verb3_Text,
+                            textInputObject :verb3_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputVerbIngTextObject,
-                            textInputObject :inputVerbIngTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :verbIng_Text,
+                            textInputObject :verbIng_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        var textInputStruct:StructTextInput = {
-                            textObject      :inputVerbSTextObject,
-                            textInputObject :inputVerbSTextInputObject
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        var textInputStruct:TextInput_Struct = {
+                            textObject      :verbS_Text,
+                            textInputObject :verbS_TextInput
                         }
-                        textInputStructArray.push(textInputStruct);
-                        inputVerb1TextInputObject.text = selectedTagObject.GetVerb1String();
-                        inputVerb2TextInputObject.text = selectedTagObject.GetVerb2String();
-                        inputVerb3TextInputObject.text = selectedTagObject.GetVerb3String();
-                        inputVerbIngTextInputObject.text = selectedTagObject.GetVerbIngString();
-                        inputVerbSTextInputObject.text = selectedTagObject.GetVerbSString();
-                        gridObject.addChild(inputVerb1TextObject);
-                        gridObject.addChild(inputVerb1TextInputObject);
-                        gridObject.addChild(inputVerb2TextObject);
-                        gridObject.addChild(inputVerb2TextInputObject);
-                        gridObject.addChild(inputVerb3TextObject);
-                        gridObject.addChild(inputVerb3TextInputObject);
-                        gridObject.addChild(inputVerbIngTextObject);
-                        gridObject.addChild(inputVerbIngTextInputObject);
-                        gridObject.addChild(inputVerbSTextObject);
-                        gridObject.addChild(inputVerbSTextInputObject);
+                        _TextInput_Struct_Array.push(textInputStruct);
+                        verb1_TextInput.text = selected_Tag_Object.GetVerb1String();
+                        verb2_TextInput.text = selected_Tag_Object.GetVerb2String();
+                        verb3_TextInput.text = selected_Tag_Object.GetVerb3String();
+                        verbIng_TextInput.text = selected_Tag_Object.GetVerbIngString();
+                        verbS_TextInput.text = selected_Tag_Object.GetVerbSString();
+                        _Grid.addChild(verb1_Text);
+                        _Grid.addChild(verb1_TextInput);
+                        _Grid.addChild(verb2_Text);
+                        _Grid.addChild(verb2_TextInput);
+                        _Grid.addChild(verb3_Text);
+                        _Grid.addChild(verb3_TextInput);
+                        _Grid.addChild(verbIng_Text);
+                        _Grid.addChild(verbIng_TextInput);
+                        _Grid.addChild(verbS_Text);
+                        _Grid.addChild(verbS_TextInput);
                     }
 
-                    selectTagNameListSelectorPrevString = selectTagNameListSelectorString;
+                    tagNamePrev_String = tagName_String;
 
                 }
 
@@ -561,72 +569,72 @@ class UIPopupEditObjectTag{
 
         
 
-        inputAdjTextInputObject                     = new TextInput();
-        inputAdjTextInputObject.id                  = "UIPopupEditObjectTag_InputAdj";
-        inputAdjTextInputObject.percentWidth        = 100;
-        inputAdjTextInputObject.text                = " ";
-        inputAdjTextObject                          = new Text();
-        inputAdjTextObject.text                     = "Adjective";
-        inputAdvTextInputObject                     = new TextInput();
-        inputAdvTextInputObject.id                  = "UIPopupEditObjectTag_InputAdv";
-        inputAdvTextInputObject.percentWidth        = 100;
-        inputAdvTextInputObject.text                = " ";
-        inputAdvTextObject                          = new Text();
-        inputAdvTextObject.text                     = "Adverb";
-        inputNounPosTextInputObject                 = new TextInput();
-        inputNounPosTextInputObject.id              = "UIPopupEditObjectTag_InputNounPos";
-        inputNounPosTextInputObject.percentWidth    = 100;
-        inputNounPosTextInputObject.text            = " ";
-        inputNounPosTextObject                      = new Text();
-        inputNounPosTextObject.text                 = "Noun Possesion";
-        inputNounSPosTextInputObject                = new TextInput();
-        inputNounSPosTextInputObject.id             = "UIPopupEditObjectTag_InputNounSPos";
-        inputNounSPosTextInputObject.percentWidth   = 100;
-        inputNounSPosTextInputObject.text           = " ";
-        inputNounSPosTextObject                     = new Text();
-        inputNounSPosTextObject.text                = "Noun Plural Possesion";
-        inputNounSTextInputObject                   = new TextInput();
-        inputNounSTextInputObject.id                = "UIPopupEditObjectTag_InputNounS";
-        inputNounSTextInputObject.percentWidth      = 100;
-        inputNounSTextInputObject.text              = " ";
-        inputNounSTextObject                        = new Text();
-        inputNounSTextObject.text                   = "Noun Plural";
-        inputNounTextInputObject                    = new TextInput();
-        inputNounTextInputObject.id                 = "UIPopupEditObjectTag_InputNoun";
-        inputNounTextInputObject.percentWidth       = 100;
-        inputNounTextInputObject.text               = " ";
-        inputNounTextObject                         = new Text();
-        inputNounTextObject.text                    = "Noun";
-        inputVerb1TextInputObject                   = new TextInput();
-        inputVerb1TextInputObject.id                = "UIPopupEditObjectTag_InputVerb1";
-        inputVerb1TextInputObject.percentWidth      = 100;
-        inputVerb1TextInputObject.text              = " ";
-        inputVerb1TextObject                        = new Text();
-        inputVerb1TextObject.text                   = "Verb 1";
-        inputVerb2TextInputObject                   = new TextInput();
-        inputVerb2TextInputObject.id                = "UIPopupEditObjectTag_InputVerb2";
-        inputVerb2TextInputObject.percentWidth      = 100;
-        inputVerb2TextInputObject.text              = " ";
-        inputVerb2TextObject                        = new Text();
-        inputVerb2TextObject.text                   = "Verb 2";
-        inputVerb3TextInputObject                   = new TextInput();
-        inputVerb3TextInputObject.id                = "UIPopupEditObjectTag_InputVerb3";
-        inputVerb3TextInputObject.percentWidth      = 100;
-        inputVerb3TextInputObject.text              = " ";
-        inputVerb3TextObject                        = new Text();
-        inputVerb3TextObject.text                   = "Verb 3";
-        inputVerbIngTextInputObject                 = new TextInput();
-        inputVerbIngTextInputObject.id              = "UIPopupEditObjectTag_InputVerbIng";
-        inputVerbIngTextInputObject.percentWidth    = 100;
-        inputVerbIngTextInputObject.text            = " ";
-        inputVerbIngTextObject                      = new Text();
-        inputVerbIngTextObject.text                 = "Verb + Ing";
-        inputVerbSTextInputObject                   = new TextInput();
-        inputVerbSTextInputObject.id                = "UIPopupEditObjectTag_InputVerbS";
-        inputVerbSTextInputObject.percentWidth      = 100;
-        inputVerbSTextInputObject.text              = " ";
-        inputVerbSTextObject                        = new Text();
-        inputVerbSTextObject.text                   = "Verb + S";
+        adjective_TextInput                     = new TextInput();
+        adjective_TextInput.id                  = "UIPopupEditTag_Object_InputAdj";
+        adjective_TextInput.percentWidth        = 100;
+        adjective_TextInput.text                = " ";
+        adjective_Text                          = new Text();
+        adjective_Text.text                     = "Adjective";
+        adverb_TextInput                     = new TextInput();
+        adverb_TextInput.id                  = "UIPopupEditTag_Object_InputAdv";
+        adverb_TextInput.percentWidth        = 100;
+        adverb_TextInput.text                = " ";
+        adverb_Text                          = new Text();
+        adverb_Text.text                     = "Adverb";
+        nounPos_TextInput                 = new TextInput();
+        nounPos_TextInput.id              = "UIPopupEditTag_Object_InputNounPos";
+        nounPos_TextInput.percentWidth    = 100;
+        nounPos_TextInput.text            = " ";
+        nounPos_Text                      = new Text();
+        nounPos_Text.text                 = "Noun Possesion";
+        nounSPos_TextInput                = new TextInput();
+        nounSPos_TextInput.id             = "UIPopupEditTag_Object_InputNounSPos";
+        nounSPos_TextInput.percentWidth   = 100;
+        nounSPos_TextInput.text           = " ";
+        nounSPos_Text                     = new Text();
+        nounSPos_Text.text                = "Noun Plural Possesion";
+        nounS_TextInput                   = new TextInput();
+        nounS_TextInput.id                = "UIPopupEditTag_Object_InputNounS";
+        nounS_TextInput.percentWidth      = 100;
+        nounS_TextInput.text              = " ";
+        nounS_Text                        = new Text();
+        nounS_Text.text                   = "Noun Plural";
+        noun_TextInput                    = new TextInput();
+        noun_TextInput.id                 = "UIPopupEditTag_Object_InputNoun";
+        noun_TextInput.percentWidth       = 100;
+        noun_TextInput.text               = " ";
+        noun_Text                         = new Text();
+        noun_Text.text                    = "Noun";
+        verb1_TextInput                   = new TextInput();
+        verb1_TextInput.id                = "UIPopupEditTag_Object_InputVerb1";
+        verb1_TextInput.percentWidth      = 100;
+        verb1_TextInput.text              = " ";
+        verb1_Text                        = new Text();
+        verb1_Text.text                   = "Verb 1";
+        verb2_TextInput                   = new TextInput();
+        verb2_TextInput.id                = "UIPopupEditTag_Object_InputVerb2";
+        verb2_TextInput.percentWidth      = 100;
+        verb2_TextInput.text              = " ";
+        verb2_Text                        = new Text();
+        verb2_Text.text                   = "Verb 2";
+        verb3_TextInput                   = new TextInput();
+        verb3_TextInput.id                = "UIPopupEditTag_Object_InputVerb3";
+        verb3_TextInput.percentWidth      = 100;
+        verb3_TextInput.text              = " ";
+        verb3_Text                        = new Text();
+        verb3_Text.text                   = "Verb 3";
+        verbIng_TextInput                 = new TextInput();
+        verbIng_TextInput.id              = "UIPopupEditTag_Object_InputVerbIng";
+        verbIng_TextInput.percentWidth    = 100;
+        verbIng_TextInput.text            = " ";
+        verbIng_Text                      = new Text();
+        verbIng_Text.text                 = "Verb + Ing";
+        verbS_TextInput                   = new TextInput();
+        verbS_TextInput.id                = "UIPopupEditTag_Object_InputVerbS";
+        verbS_TextInput.percentWidth      = 100;
+        verbS_TextInput.text              = " ";
+        verbS_Text                        = new Text();
+        verbS_Text.text                   = "Verb + S";
 
     }
 

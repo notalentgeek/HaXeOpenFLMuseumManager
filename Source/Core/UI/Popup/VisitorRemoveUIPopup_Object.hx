@@ -5,12 +5,12 @@ class VisitorRemoveUIPopup_Object{
 
 
     /*==================================================*/
-    var _Button                     :Button             = null;
-    var _Global_Object              :Global_Object      = null;
-    var _Popup                      :Popup              = null;
-    var selected_Visitor_Object     :Visitor_Object     = null;
-    var selectedVisitorName_String  :String             = null;
-    var visitor_ListSelector        :ListSelector       = null;
+    private var _Button                     (null, null)        :Button             = null;
+    private var _Global_Object              (null, null)        :Global_Object      = null;
+    private var _Popup                      (null, null)        :Popup              = null;
+    private var selected_Visitor_Object     (null, null)        :Visitor_Object     = null;
+    private var selectedVisitorName_String  (null, null)        :String             = null;
+    private var visitor_ListSelector        (null, null)        :ListSelector       = null;
     /*==================================================*/
 
 
