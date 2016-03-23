@@ -41,7 +41,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
 
 
     public function new(
-        __CollectionGlobal_Object   :CollectionGlobal_Object,
+        __Global_Object             :Global_Object,
         __MuseumType_Enum           :MuseumType_Enum,
         __Tag_Object_Array          :Array<Tag_Object>,
         _explanation_String_Array   :Array<String>,
@@ -53,7 +53,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
         /*Instantiate agnostic object.*/
         _MuseumAndVisitorAgnostic_Object = new MuseumAgnostic_Object();
 
-        super(__CollectionGlobal_Object);
+        super(__Global_Object);
 
         /*Assign all parameter.*/
         _MuseumType_Enum        = __MuseumType_Enum;
@@ -67,7 +67,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
 
 
         /*Create the user interface object.*/
-        _MuseumAndVisitorUI_Object = new MuseumUI_Object(_CollectionGlobal_Object, this);
+        _MuseumAndVisitorUI_Object = new MuseumUI_Object(_Global_Object, this);
 
         /*Put this object into main array.*/
         if(
@@ -187,8 +187,8 @@ class Museum_Object extends MuseumAndVisitor_Object{
     /*A function to determine whether this museum object is full or not.*/
     private function DetermineFull_Museum_Object()Museum_Object{
 
-        if(_MuseumAndVisitorAgnostic_Object._VisitorCount_Struct.current_Int        >= _CollectionGlobal_Object.fullThreshold_Int){ full_Bool = true ; }
-        else if(_MuseumAndVisitorAgnostic_Object._VisitorCount_Struct.current_Int   <  _CollectionGlobal_Object.fullThreshold_Int){ full_Bool = false; }
+        if(_MuseumAndVisitorAgnostic_Object._VisitorCount_Struct.current_Int        >= _Global_Object.fullThreshold_Int){ full_Bool = true ; }
+        else if(_MuseumAndVisitorAgnostic_Object._VisitorCount_Struct.current_Int   <  _Global_Object.fullThreshold_Int){ full_Bool = false; }
 
         return this;
 
@@ -234,9 +234,9 @@ class Museum_Object extends MuseumAndVisitor_Object{
 
 
         /*Removing the button object from the main absolute layout object.*/
-        _CollectionGlobal_Object._Absolute.removeChild(_MuseumAndVisitorUI_Object._Button);
+        _Global_Object._Absolute.removeChild(_MuseumAndVisitorUI_Object._Button);
         /*Removing this object from the main array.*/
-        _CollectionGlobal_Object.exhibition_Museum_Object_Array.remove(this);
+        _Global_Object.exhibition_Museum_Object_Array.remove(this);
         /*Delete the user interface object because there are no more calculation necessary
             since the button object is deleted.*/
         _MuseumAndVisitorUI_Object = null;
@@ -380,7 +380,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
 
                         if(_Child_Struct._Visitor_Object_Array[loopCounter1_Int]._MuseumAndVisitorAgnostic_Object.finished_Bool == true){
 
-                            _Child_Struct._Visitor_Object_Array[loopCounter1_Int].exhibitionCurrent_Museum_Object = _CollectionGlobal_Object.exhibitionArchive_Museum_Object;
+                            _Child_Struct._Visitor_Object_Array[loopCounter1_Int].exhibitionCurrent_Museum_Object = _Global_Object.exhibitionArchive_Museum_Object;
                             UpdateWhole_Museum_Object();
 
                         }
@@ -445,15 +445,15 @@ class Museum_Object extends MuseumAndVisitor_Object{
         /*Loop through all floor museum object because floor objects are the largest object button in the scene
             hence they responsible to determine the maximum width of the absolute layout.*/
         var loopCounter1_Int:Int = 0;
-        while(loopCounter1_Int < _CollectionGlobal_Object.floor_Museum_Object_Array.length){
+        while(loopCounter1_Int < _Global_Object.floor_Museum_Object_Array.length){
 
-            DetermineMuseumField_Museum_Object(loopCounter1_Int, _CollectionGlobal_Object.floor_Museum_Object_Array);
+            DetermineMuseumField_Museum_Object(loopCounter1_Int, _Global_Object.floor_Museum_Object_Array);
 
             /*It is not necessary to have absoluteNecessaryWidth_Int added for every loop because I did the calculation in regard of
                 the x position of the button object.*/
             var tempAbsoluteNecessaryWidth_Int:Int = Math.round(
-                _CollectionGlobal_Object.floor_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorUI_Object._Button.x +
-                _CollectionGlobal_Object.floor_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorUI_Object._Button.width
+                _Global_Object.floor_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorUI_Object._Button.x +
+                _Global_Object.floor_Museum_Object_Array[loopCounter1_Int]._MuseumAndVisitorUI_Object._Button.width
             );
 
             /*Always make sure to check for the biggest value of absoluteNecessaryWidth_Int possible.*/
@@ -474,15 +474,15 @@ class Museum_Object extends MuseumAndVisitor_Object{
                 _MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String    != "EXH_LOB" &&
                 _MuseumAndVisitorAgnostic_Object._Name_Struct.full_String   != "Exhibition Lobby"
             )
-        ){ _CollectionGlobal_Object._Absolute.width = absoluteNecessaryWidth_Int; }
+        ){ _Global_Object._Absolute.width = absoluteNecessaryWidth_Int; }
 
 
 
         /*Update all properties on room museum object.*/
         loopCounter1_Int = 0;
-        while(loopCounter1_Int < _CollectionGlobal_Object.room_Museum_Object_Array.length){
+        while(loopCounter1_Int < _Global_Object.room_Museum_Object_Array.length){
 
-            DetermineMuseumField_Museum_Object(loopCounter1_Int, _CollectionGlobal_Object.room_Museum_Object_Array);
+            DetermineMuseumField_Museum_Object(loopCounter1_Int, _Global_Object.room_Museum_Object_Array);
             loopCounter1_Int ++;
 
         }
@@ -502,9 +502,9 @@ class Museum_Object extends MuseumAndVisitor_Object{
         ){
 
             loopCounter1_Int = 0;
-            while(loopCounter1_Int < _CollectionGlobal_Object.exhibition_Museum_Object_Array.length){
+            while(loopCounter1_Int < _Global_Object.exhibition_Museum_Object_Array.length){
 
-                DetermineMuseumField_Museum_Object(loopCounter1_Int, _CollectionGlobal_Object.exhibition_Museum_Object_Array);
+                DetermineMuseumField_Museum_Object(loopCounter1_Int, _Global_Object.exhibition_Museum_Object_Array);
                 loopCounter1_Int ++;
 
             }
@@ -514,9 +514,9 @@ class Museum_Object extends MuseumAndVisitor_Object{
 
 
         loopCounter1_Int = 0;
-        while(loopCounter1_Int < _CollectionGlobal_Object.visitor_Object_Array.length){
+        while(loopCounter1_Int < _Global_Object.visitor_Object_Array.length){
 
-            _CollectionGlobal_Object.visitor_Object_Array[loopCounter1_Int]
+            _Global_Object.visitor_Object_Array[loopCounter1_Int]
                 .DetermineIndex_MuseumAndVisitor_Object()
                 .GenerateExhibitionTarget_Visitor_Object(loopCounter1_Int)
                 ._VisitorUI_Object.Create_VisitorUI_Object(); /*PENDING - DONE: UI object.*/

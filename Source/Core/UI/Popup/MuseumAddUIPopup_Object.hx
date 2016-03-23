@@ -63,6 +63,152 @@ class MuseumAddUIPopup_Object extends UIPopup_Object{
 
         super.Button_Void();
 
+
+
+
+
+        var _MuseumType_Enum            :MuseumType_Enum    = null;
+        var _Tag_Object_Array           :Array<Tag_Object>  = new Array<Tag_Object>();
+        var explanation_String_Array    :Array<String>      = new Array<String>();
+        var nameAlt_String              :String             = nameAlt_TextInput.text;
+        var nameFull_String             :String             = nameFull_TextInput.text;
+        var parent_Museum_Object        :Museum_Object      = null;
+        var parentNameAlt_String        :String             = parent_ListSelector.text;
+
+
+
+
+
+        /*Assign museum type enum.*/
+        if(type_ListSelector.text == "Exhibition"   && type_ListSelector.text != null)
+            { _MuseumType_Enum = EXH; }
+        else if(type_ListSelector.text == "Floor"   && type_ListSelector.text != null)
+            { _MuseumType_Enum = FLR; }
+        else if(type_ListSelector.text == "Room"    && type_ListSelector.text != null)
+            { _MuseumType_Enum = ROM; }
+
+
+
+
+
+        /*Assign tag object array.*/
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < tag_ListSelector_Struct_Array.length){
+
+            var tagName_String:String =
+                tag_ListSelector_Struct_Array[loopCounter1_Int]._ListSelector.text;
+            var _Tag_Object:Tag_Object =
+                StaticFunction_Collection.Find_Tag_Object(
+                    _Global_Object,
+                    false,
+                    tagName_String
+                );
+            
+
+
+
+
+            /*If the previously searched tag is returned false, then search from the general tag object.*/
+            if(_Tag_Object == null){
+
+                _Tag_Object = StaticFunction_Collection.Find_Tag_Object(
+                    _Global_Object,
+                    true,
+                    tagName_String
+                );
+
+            }
+
+
+
+
+
+            /*If the tag object is not null then I can enter it into the temporary tag array.*/
+            if(_Tag_Object != null){ _Tag_Object_Array.push(_Tag_Object); }
+
+
+
+
+
+            loopCounter1_Int ++;
+
+        }
+
+
+
+
+
+        /*Assign explanation String array.*/
+        var loopCounter1_Int:Int = 0;
+        while(loopCounter1_Int < explanation_TextInput_Struct_Array.length){
+
+            if(
+                explanation_TextInput_Struct_Array[loopCounter1_Int]._Text_Input.text   != ""       &&
+                explanation_TextInput_Struct_Array[loopCounter1_Int]._Text_Input.text   != " "      &&
+                explanation_TextInput_Struct_Array[loopCounter1_Int]._Text_Input        != null
+            ){
+                explanation_String_Array.push
+                    (explanation_TextInput_Struct_Array[loopCounter1_Int]._Text_Input.text);
+            }
+            
+
+
+
+
+            loopCounter1_Int ++;
+
+        }
+
+
+
+
+
+        /*Assign parent museum object.*/
+        if(_MuseumType_Enum == FLR && type_ListSelector.text != null){
+
+            parent_Museum_Object = null;
+            parentNameAlt_String = "XXX_XXX";
+
+        }
+        else if(type_ListSelector.text != null){
+
+            parent_Museum_Object = StaticFunction_Collection.Find_Museum_Object(
+                _Global_Object,
+                _MuseumType_Enum,
+                parentNameAlt_String
+            );
+
+        }
+
+
+
+
+
+        /*Do some validations here.*/
+        if(
+            (_MuseumType_Enum != null)                                                                      &&
+            (_Tag_Object_Array.length > 0)                                                                  &&
+            (explanation_String_Array.length > 0)                                                           &&
+            (nameAlt_String != "" && nameAlt_String != " " && nameAlt_String != null)                       &&
+            (nameFull_String != "" && nameFull_String != " " && nameFull_String != null )                   &&
+            (parent_Museum_Object != null)                                                                  &&
+            (parentNameAlt_String != "" && parentNameAlt_String != " " && parentNameAlt_String != null)
+        ){
+
+            /*Finally add the museum object.*/
+            var _Museum_Object:Museum_Object = new Museum_Object(
+                _Global_Object,
+                _MuseumType_Enum,
+                _Tag_Object_Array,
+                explanation_String_Array,
+                nameAlt_String,
+                nameFull_String,
+                parent_Museum_Object
+
+            );
+
+        }
+
     }
     /*==================================================*/
 
