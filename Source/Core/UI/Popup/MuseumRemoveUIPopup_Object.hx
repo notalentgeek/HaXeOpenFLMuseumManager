@@ -5,13 +5,13 @@ class MuseumRemoveUIPopup_Object{
 
 
     /*==================================================*/
-    var _Button                     (null, null)        :Button             = null;
-    var _Global_Object              (null, null)        :Global_Object      = null;
-    var _Popup                      (null, null)        :Popup              = null;
-    var museum_ListSelector         (null, null)        :ListSelector       = null;
-    var museumType_ListSelector     (null, null)        :ListSelector       = null;
-    var museumType_String           (null, null)        :String             = null;
-    var museumTypePrev_String       (null, null)        :String             = null;
+    private var _Button                     (null, null)        :Button             = null;
+    private var _Global_Object              (null, null)        :Global_Object      = null;
+    private var _Popup                      (null, null)        :Popup              = null;
+    private var museum_ListSelector         (null, null)        :ListSelector       = null;
+    private var museumType_ListSelector     (null, null)        :ListSelector       = null;
+    private var museumType_String           (null, null)        :String             = null;
+    private var museumTypePrev_String       (null, null)        :String             = null;
     /*==================================================*/
 
 
