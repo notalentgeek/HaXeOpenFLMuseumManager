@@ -1,14 +1,10 @@
-class VisitorEditUIPopup_Object{
+class VisitorEditUIPopup_Object extends UIPopup_Object{
 
 
 
 
 
     /*==================================================*/
-    private var _Button                                         (null, null)        :Button             = null;
-    private var _Global_Object                                  (null, null)        :CollectionGlobal   = null;
-    private var _Grid                                           (null, null)        :Grid               = null;
-    private var _Popup                                          (null, null)        :Popup              = null;
     private var allHardwareManual_Button                        (null, null)        :Button             = null;
     private var allSoftwareAuto_Button                          (null, null)        :Button             = null;
     private var allSoftwareManual_Button                        (null, null)        :Button             = null;
@@ -38,6 +34,78 @@ class VisitorEditUIPopup_Object{
     private var visitorName_String                              (null, null)        :String             = null;
     private var visitorNamePrev_String                          (null, null)        :String             = null;
     private var visitorPrevious_Text                            (null, null)        :Text               = null;
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function new(
+        __Global_Object     :Global_Object,
+        __Root              :Root
+    ):Void{
+
+        super(
+            __Global_Object,
+            __Root,
+            Assign_Void,
+            Button_Void,
+            "VisitorEditUIPopup_Button",
+            Init_Void,
+            "layout/VisitorEditUIPopup_Object.xml",
+            "Add Museum Object"
+        );
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Assign_Void():Void(){
+
+        super.Assign_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Button_Void():Void(){
+
+        super.Button_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Init_Void():Void(){
+
+        super.Init_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Update_Void():Void(){
+
+        super.Update_Void();
+
+    }
     /*==================================================*/
 
 

@@ -1,14 +1,10 @@
-class MuseumAddUIPopup_Object{
+class MuseumAddUIPopup_Object extends UIPopup_Object{
 
 
 
 
 
     /*==================================================*/
-    private var _Button                                 (null, null)        :Button                         = null;
-    private var _Global_Object                          (null, null)        :Global_Object                  = null;
-    private var _Grid                                   (null, null)        :Grid                           = null;
-    private var _Popup                                  (null, null)        :Popup                          = null;
     private var explanation_TextInput                   (null, null)        :TextInput                      = null;
     private var explanation_TextInput_Struct_Array      (null, null)        :Array<TextInput_Struct>        = new Array<TextInput_Struct>();
     private var explanationIndex_Int                    (null, null)        :Int                            = null;
@@ -20,6 +16,78 @@ class MuseumAddUIPopup_Object{
     private var type_Int                                (null, null)        :Int                            = null;
     private var type_ListSelector                       (null, null)        :ListSelector                   = null;
     private var typePrev_Int                            (null, null)        :Int                            = null;
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function new(
+        __Global_Object     :Global_Object,
+        __Root              :Root
+    ):Void{
+
+        super(
+            __Global_Object,
+            __Root,
+            Assign_Void,
+            Button_Void,
+            "MuseumAddUIPopup_Button",
+            Init_Void,
+            "layout/MuseumAddUIPopup_Object.xml",
+            "Add Museum Object"
+        );
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Assign_Void():Void(){
+
+        super.Assign_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Button_Void():Void(){
+
+        super.Button_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Init_Void():Void(){
+
+        super.Init_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Update_Void():Void(){
+
+        super.Update_Void();
+
+    }
     /*==================================================*/
 
 

@@ -1,16 +1,84 @@
-class VisitorAddUIPopup_Object{
+class VisitorAddUIPopup_Object extends UIPopup_Object{
 
 
 
 
 
     /*==================================================*/
-    private var _Button                         (null, null)        :Button             = null;
-    private var _Global_Object                  (null, null)        :Global_Object      = null;
-    private var _Grid                           (null, null)        :Grid               = null;
-    private var _Popup                          (null, null)        :Popup              = null;
     private var name_TextInput                  (null, null)        :TextInput          = null;
     private var previousVisitor_ListSelector    (null, null)        :ListSelector       = null;
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function new(
+        __Global_Object     :Global_Object,
+        __Root              :Root
+    ):Void{
+
+        super(
+            __Global_Object,
+            __Root,
+            Assign_Void,
+            Button_Void,
+            "VisitorAddUIPopup_Button",
+            Init_Void,
+            "layout/VisitorAddUIPopup_Object.xml",
+            "Add Museum Object"
+        );
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Assign_Void():Void(){
+
+        super.Assign_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Button_Void():Void(){
+
+        super.Button_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Init_Void():Void(){
+
+        super.Init_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Update_Void():Void(){
+
+        super.Update_Void();
+
+    }
     /*==================================================*/
 
 

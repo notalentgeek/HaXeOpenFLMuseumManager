@@ -1,19 +1,88 @@
-class TagRemoveUIPopup_Object{
+class TagRemoveUIPopup_Object extends UIPopup_Object{
 
 
 
 
 
     /*==================================================*/
-    private var _Button                 (null, null)        :Button         = null;
-    private var _Global_Object          (null, null)        :Global_Object  = null;
-    private var _Popup                  (null, null)        :Popup          = null;
     private var _Tag_Object             (null, null)        :Tag_Object     = null;
     private var general_ListSelector    (null, null)        :ListSelector   = null;
     private var general_String          (null, null)        :String         = null;
     private var generalPrev_String      (null, null)        :String         = null;
     private var tag_ListSelector        (null, null)        :ListSelector   = null;
     private var tagName_String          (null, null)        :String         = null;
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function new(
+        __Global_Object     :Global_Object,
+        __Root              :Root
+    ):Void{
+
+        super(
+            __Global_Object,
+            __Root,
+            Assign_Void,
+            Button_Void,
+            "TagRemoveUIPopup_Button",
+            Init_Void,
+            "layout/TagRemoveUIPopup_Object.xml",
+            "Add Tag Object"
+        );
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Assign_Void():Void(){
+
+        super.Assign_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Button_Void():Void(){
+
+        super.Button_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Init_Void():Void(){
+
+        super.Init_Void();
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    public function Update_Void():Void(){
+
+        super.Update_Void();
+
+    }
     /*==================================================*/
 
 
