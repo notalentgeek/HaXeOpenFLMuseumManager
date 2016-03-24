@@ -1,4 +1,4 @@
-class MuseumEditPopupUI_Object extends UIPopup_Object{
+class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
@@ -17,8 +17,8 @@ class MuseumEditPopupUI_Object extends UIPopup_Object{
     private var selectedPrev_Museum_Object              (null, null)        :Museum_Object                  = null;
     private var tag_ListSelector_Struct_Array           (null, null)        :Array<ListSelector_Struct>     = new Array<ListSelector_Struct>();
     private var type_ListSelector                       (null, null)        :ListSelector                   = null;
-    private var type_String                             (null, null)        :String                         = null;
-    private var typePrev_String                         (null, null)        :String                         = null;
+    private var museumType_String                       (null, null)        :String                         = null;
+    private var museumTypePrev_String                   (null, null)        :String                         = null;
     private var visitorCurrent_Text                     (null, null)        :Text                           = null;
     private var visitorTotal_Text                       (null, null)        :Text                           = null;
     /*==================================================*/
@@ -64,9 +64,21 @@ class MuseumEditPopupUI_Object extends UIPopup_Object{
 
 
     /*==================================================*/
-    public function Button_Void():Void(){
+    public function Button_Void():Void(){ super.Button_Void(Edit_Void); }
+    /*==================================================*/
 
-        super.Button_Void();
+
+
+
+
+    /*==================================================*/
+    private function Edit_Void(){
+
+        selected_Museum_Object._MuseumAndVisitorAgnostic_Object._explanation_String_Array = explanation_String_Array;
+        selected_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String = nameAlt_String;
+        selected_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String = nameFull_String;
+        selected_Museum_Object._Tag_Object_Array = _Tag_Object_Array);
+        selected_Museum_Object.parent_Museum_Object = parent_Museum_Object;
 
     }
     /*==================================================*/
@@ -174,8 +186,8 @@ class MuseumEditPopupUI_Object extends UIPopup_Object{
 
             });
 
-            type_String = "";
-            typePrev_String = "";
+            museumType_String = "";
+            museumTypePrev_String = "";
 
             full_Text = _Popup.content.findChild("UIPopupEditMuseum_Object_DisplayFull", Text, true);
             visitorCurrent_Text = _Popup.content.findChild("UIPopupEditMuseum_Object_DisplayVisitorCurrent", Text, true);
@@ -224,13 +236,13 @@ class MuseumEditPopupUI_Object extends UIPopup_Object{
                     else if(enumString == "FLR"){ nameFullEnumString = "Floor" ;}
                     else if(enumString == "ROM"){ nameFullEnumString = "Room" ;}
                     type_ListSelector.text = nameFullEnumString;
-                    type_String = type_ListSelector.text;
-                    typePrev_String = type_ListSelector.text;
+                    museumType_String = type_ListSelector.text;
+                    museumTypePrev_String = type_ListSelector.text;
 
                     var tempObjectArray:Array<Museum_Object> = new Array<Museum_Object>();
-                    if(type_String == "Exhibition"){ tempObjectArray = _Global_Object.GetExhibitionObjectArray(); }
-                    else if(type_String == "Floor"){ tempObjectArray = _Global_Object.GetFloorObjectArray(); }
-                    else if(type_String == "Room"){ tempObjectArray = _Global_Object.GetRoomObjectArray(); }
+                    if(museumType_String == "Exhibition"){ tempObjectArray = _Global_Object.GetExhibitionObjectArray(); }
+                    else if(museumType_String == "Floor"){ tempObjectArray = _Global_Object.GetFloorObjectArray(); }
+                    else if(museumType_String == "Room"){ tempObjectArray = _Global_Object.GetRoomObjectArray(); }
 
                     var loopCounter1Int:Int = 0;
                     while(loopCounter1Int < tempObjectArray.length){
@@ -385,8 +397,8 @@ class MuseumEditPopupUI_Object extends UIPopup_Object{
 
             if(type_ListSelector.selectedIndex != -1){
 
-                type_String = type_ListSelector.text;
-                if(type_String != typePrev_String){
+                museumType_String = type_ListSelector.text;
+                if(museumType_String != museumTypePrev_String){
 
                     nameAlt_TextInput.disabled = false;
                     nameAlt_TextInput.text = " ";
@@ -399,9 +411,9 @@ class MuseumEditPopupUI_Object extends UIPopup_Object{
                     parentNameFull_ListSelector.selectedIndex = -1;
 
                     var tempObjectArray:Array<Museum_Object> = new Array<Museum_Object>();
-                    if(type_String == "Exhibition"){ tempObjectArray = _Global_Object.GetExhibitionObjectArray(); }
-                    else if(type_String == "Floor"){ tempObjectArray = _Global_Object.GetFloorObjectArray(); }
-                    else if(type_String == "Room"){ tempObjectArray = _Global_Object.GetRoomObjectArray(); }
+                    if(museumType_String == "Exhibition"){ tempObjectArray = _Global_Object.GetExhibitionObjectArray(); }
+                    else if(museumType_String == "Floor"){ tempObjectArray = _Global_Object.GetFloorObjectArray(); }
+                    else if(museumType_String == "Room"){ tempObjectArray = _Global_Object.GetRoomObjectArray(); }
 
                     var loopCounter1Int:Int = 0;
                     while(loopCounter1Int < tempObjectArray.length){
@@ -409,7 +421,7 @@ class MuseumEditPopupUI_Object extends UIPopup_Object{
                         loopCounter1Int ++;
                     }
 
-                    typePrev_String = type_String;
+                    museumTypePrev_String = museumType_String;
 
                 }
 
@@ -425,9 +437,9 @@ class MuseumEditPopupUI_Object extends UIPopup_Object{
             if(museum_ListSelector.selectedIndex != -1){
 
                 var typeEnum:EnumMuseumType = null;
-                if(type_String == "Exhibition"){ typeEnum = EXH; }
-                else if(type_String == "Floor"){ typeEnum = FLR; }
-                else if(type_String == "Room"){ typeEnum = ROM; }
+                if(museumType_String == "Exhibition"){ typeEnum = EXH; }
+                else if(museumType_String == "Floor"){ typeEnum = FLR; }
+                else if(museumType_String == "Room"){ typeEnum = ROM; }
 
                 selected_Museum_Object = CollectionFunction.FindMuseumObject(_Global_Object, typeEnum, museum_ListSelector.text);
 
@@ -556,12 +568,12 @@ class MuseumEditPopupUI_Object extends UIPopup_Object{
                     }
                     nameAlt_TextInput.text = selected_Museum_Object.GetNameStruct().nameAltString;
                     nameFull_TextInput.text = selected_Museum_Object.GetNameStruct().nameFullString;
-                    if(type_String != "Floor"){
+                    if(museumType_String != "Floor"){
                         parentNameFull_ListSelector.text = selected_Museum_Object.GetParentObject().GetNameStruct().nameFullString;
 
                         var tempObjectArray:Array<Museum_Object> = null;
-                        if(type_String == "Exhibition"){ tempObjectArray = _Global_Object.GetRoomObjectArray(); }
-                        else if(type_String == "Room"){ tempObjectArray = _Global_Object.GetFloorObjectArray(); }
+                        if(museumType_String == "Exhibition"){ tempObjectArray = _Global_Object.GetRoomObjectArray(); }
+                        else if(museumType_String == "Room"){ tempObjectArray = _Global_Object.GetFloorObjectArray(); }
 
                         loopCounter1Int = 0;
                         while(loopCounter1Int < tempObjectArray.length){
@@ -572,7 +584,7 @@ class MuseumEditPopupUI_Object extends UIPopup_Object{
                         }
 
                     }
-                    else if(type_String == "Floor"){ parentNameFull_ListSelector.disabled = true; }
+                    else if(museumType_String == "Floor"){ parentNameFull_ListSelector.disabled = true; }
 
                     selectedPrev_Museum_Object = selected_Museum_Object;
 

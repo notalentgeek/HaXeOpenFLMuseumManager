@@ -58,6 +58,22 @@ class TagRemoveUIPopup_Object extends UIPopup_Object{
 
         super.Button_Void();
 
+
+
+
+        if(general_String == "Yes"){
+
+            _Tag_Object = StaticFunction_Collection.Find_Tag_Object(_Global_Object, true, tagName_String);
+            _Tag_Object.AddOrRemoveThisFromMain_Tag_Object(false);
+
+        }
+        else if(general_String == "No"){
+
+            _Tag_Object = StaticFunction_Collection.Find_Tag_Object(_Global_Object, false, tagName_String);
+            _Tag_Object.AddOrRemoveThisFromMain_Tag_Object(false);
+
+        }
+
     }
     /*==================================================*/
 
@@ -119,11 +135,11 @@ class TagRemoveUIPopup_Object extends UIPopup_Object{
                 if(_button == PopupButton.OK){
 
                     if(general_String == "Yes"){
-                        _Tag_Object = CollectionFunction.FindTagObject(_Global_Object, true, tagName_String);
+                        _Tag_Object = StaticFunction_Collection.Find_Tag_Object(_Global_Object, true, tagName_String);
                         _Tag_Object.RemoveFromArray();
                     }
                     else if(general_String == "No"){
-                        _Tag_Object = CollectionFunction.FindTagObject(_Global_Object, false, tagName_String);
+                        _Tag_Object = StaticFunction_Collection.Find_Tag_Object(_Global_Object, false, tagName_String);
                         _Tag_Object.RemoveFromArray();
                     }
 

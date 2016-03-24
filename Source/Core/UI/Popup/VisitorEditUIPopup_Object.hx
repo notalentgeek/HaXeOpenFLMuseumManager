@@ -81,6 +81,13 @@ class VisitorEditUIPopup_Object extends UIPopup_Object{
 
         super.Button_Void();
 
+
+
+
+
+        if(selected_Visitor_Object != null)
+            { selected_Visitor_Object._VisitorAgnostic_Object.name_String = name_TextInput.text; }
+
     }
     /*==================================================*/
 

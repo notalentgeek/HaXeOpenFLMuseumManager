@@ -66,15 +66,19 @@ class MuseumRemoveUIPopup_Object extends UIPopup_Object{
 
 
 
-        /*Assign museum type.*/
-        if(museumType_ListSelector.text == "Exhibition")    { _MuseumType_Enum = EXH; }
-        else if(museumType_ListSelector.text == "Floor")    { _MuseumType_Enum = FLR; }
-        else if(museumType_ListSelector.text == "Room")     { _MuseumType_Enum = ROM; }
+
+        if(museumType_ListSelector != null){
+
+            if(museumType_ListSelector.text == "Exhibition")    { _MuseumType_Enum = EXH; }
+            else if(museumType_ListSelector.text == "Floor")    { _MuseumType_Enum = FLR; }
+            else if(museumType_ListSelector.text == "Room")     { _MuseumType_Enum = ROM; }
+
+        }
 
 
 
 
-        /*Assign museum object.*/
+
         _Museum_Object = StaticFunction_Collection.Find_Museum_Object(
             _Global_Object,
             _MuseumType_Enum,
@@ -83,8 +87,9 @@ class MuseumRemoveUIPopup_Object extends UIPopup_Object{
 
 
 
-        /*Set the museum object for deletion.*/
-        _Museum_Object._MuseumMode_Enum = MRK_DEL;
+
+
+        if(_Museum_Object != null){ _Museum_Object._MuseumMode_Enum = MRK_DEL; }
 
     }
     /*==================================================*/

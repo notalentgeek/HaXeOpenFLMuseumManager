@@ -1,4 +1,4 @@
-class TagEditUIPopup_Object extends UIPopup_Object{
+class TagEditUIPopup_Object extends TagAddAndEditUIPopup_Object{
 
 
 
@@ -67,7 +67,7 @@ class TagEditUIPopup_Object extends UIPopup_Object{
 
 
     /*==================================================*/
-    public function Assign_Void():Void(){
+    private function Assign_Void():Void(){
 
         super.Assign_Void();
 
@@ -79,9 +79,22 @@ class TagEditUIPopup_Object extends UIPopup_Object{
 
 
     /*==================================================*/
-    public function Button_Void():Void(){
+    private function Button_Void():Void(){ super.Button_Void(Edit_Void); }
+    /*==================================================*/
 
-        super.Button_Void();
+
+
+
+
+    /*==================================================*/
+    private function Edit_Void():Void{
+
+        /*The difference between add and edit tag object is that in the edit tag object there is
+            no need to update the tag type.*/
+
+        selected_Tag_Object._Tag_Feel_Enum                      = _Tag_Feel_Enum;
+        selected_Tag_Object._TagAgnostic_Object.general_Bool    = general_Bool;
+        selected_Tag_Object._TagAgnostic_Object.name_String     = tagName_TextInput.text;
 
     }
     /*==================================================*/
@@ -91,7 +104,7 @@ class TagEditUIPopup_Object extends UIPopup_Object{
 
 
     /*==================================================*/
-    public function Init_Void():Void(){
+    private function Init_Void():Void(){
 
         super.Init_Void();
 
@@ -103,7 +116,7 @@ class TagEditUIPopup_Object extends UIPopup_Object{
 
 
     /*==================================================*/
-    public function Update_Void():Void(){
+    private function Update_Void():Void(){
 
         super.Update_Void();
 
@@ -114,7 +127,7 @@ class TagEditUIPopup_Object extends UIPopup_Object{
 
 
 
-    public function new(__Global_Object:Global_Object, _root:Root){
+    private function new(__Global_Object:Global_Object, _root:Root){
 
         _Global_Object = __Global_Object;
 
@@ -261,7 +274,7 @@ class TagEditUIPopup_Object extends UIPopup_Object{
         }
 
     }
-    public function UpdateVoid(){
+    private function UpdateVoid(){
 
 
 
@@ -705,6 +718,8 @@ class TagEditUIPopup_Object extends UIPopup_Object{
         verbS_Text.text                   = "Verb + S";
 
     }
+
+
 
 
 

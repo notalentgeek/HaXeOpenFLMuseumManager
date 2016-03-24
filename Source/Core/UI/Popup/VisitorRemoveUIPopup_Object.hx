@@ -55,6 +55,19 @@ class VisitorRemoveUIPopup_Object extends UIPopup_Object{
 
         super.Button_Void();
 
+
+
+
+
+        selected_Visitor_Object =
+            StaticFunction_Collection.Find_Visitor_Object(
+                _Global_Object,
+                selectedVisitorName_String
+            );
+        _Global_Object._Visitor_Object_Array.remove(selected_Visitor_Object);
+        selected_Visitor_Object.exhibitionCurrent_Museum_Object =
+            _Global_Object.archiveExhibition_Museum_Object;
+
     }
     /*==================================================*/
 

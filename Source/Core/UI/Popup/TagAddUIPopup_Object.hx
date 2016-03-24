@@ -1,4 +1,4 @@
-class TagAddUIPopup_Object extends UIPopup_Object{
+class TagAddUIPopup_Object extends TagAddAndEditUIPopup_Object{
 
 
 
@@ -65,6 +65,27 @@ class TagAddUIPopup_Object extends UIPopup_Object{
 
 
     /*==================================================*/
+    private function Add_Void():Void{
+
+        _Tag_Object:Tag_Object = new Tag_Object(
+            _Global_Object,
+            _TagFeel_Enum,
+            Type.createEnum(
+                TagType_Enum,
+                tagType_ListSelector.text
+            ),
+            general_Bool,
+            tagName_TextInput.text
+        );
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
     public function Assign_Void():Void(){
 
         super.Assign_Void();
@@ -77,11 +98,7 @@ class TagAddUIPopup_Object extends UIPopup_Object{
 
 
     /*==================================================*/
-    public function Button_Void():Void(){
-
-        super.Button_Void();
-
-    }
+    public function Button_Void():Void(){ super.Button_Void(Add_Void); }
     /*==================================================*/
 
 

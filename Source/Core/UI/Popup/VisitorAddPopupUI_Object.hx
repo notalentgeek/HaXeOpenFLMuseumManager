@@ -54,6 +54,16 @@ class VisitorAddUIPopup_Object extends UIPopup_Object{
 
         super.Button_Void();
 
+
+
+
+
+        var _Visitor_Object:Visitor_Object = new Visitor_Object(
+            _Global_Object,
+            _Global_Object.IncrementIndexGlobalVisitor_Int(),
+            name_TextInput.text
+        );
+
     }
     /*==================================================*/
 

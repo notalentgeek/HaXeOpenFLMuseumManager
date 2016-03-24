@@ -1,4 +1,4 @@
-class CollectionGlobal{
+class Global_Object{
 
 
 
@@ -9,7 +9,7 @@ class CollectionGlobal{
     PENDING: Change every deleted exhibition object into archive room object array.
     PENDING: Change every deleted room object into archive floor object array.
     PENDING: Change every finished and deleted visitor into archive exhibition object array.
-    PENDING: Change this class name from CollectionGlobal.hx into Global_Object.hx*/
+    PENDING: Change this class name from Global_Object.hx into Global_Object.hx*/
     /*Absolute layout object for all object museum buttons and all visitor object buttons.*/
     private var _Absolute(null, null):Absolute = null;
     /*Main user interface when the program first starts.*/
