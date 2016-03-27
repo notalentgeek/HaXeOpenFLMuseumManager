@@ -71,6 +71,34 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
         super.Assign_Void();
 
+
+
+
+        StaticFunction_Collection.Clear_T_Array(explanation_TextInput_Struct_Array);
+        StaticFunction_Collection.Clear_T_Array(tag_ListSelector_Struct_Array);
+        _Grid                                   = _Popup.content.findChild("MuseumAddUIPopup_Object__Grid"                          , Grid          , true);
+        explanation_TextInput                   = _Popup.content.findChild("MuseumAddUIPopup_Object_explanation_TextInput_1"        , TextInput     , true);
+        nameAlt_TextInput                       = _Popup.content.findChild("MuseumAddUIPopup_Object_nameAlt_TextInput"              , TextInput     , true);
+        nameFull_TextInput                      = _Popup.content.findChild("MuseumAddUIPopup_Object_nameFull_TextInput"             , TextInput     , true);
+        parent_ListSelector                     = _Popup.content.findChild("MuseumAddUIPopup_Object_parent_ListSelector"            , ListSelector  , true);
+        tag_ListSelector                        = _Popup.content.findChild("MuseumAddUIPopup_Object_tag_ListSelector_1"             , ListSelector  , true);
+        type_ListSelector                       = _Popup.content.findChild("MuseumAddUIPopup_Object_type_ListSelector"              , ListSelector  , true);
+        var explanationTextInput_Text   :Text   = _Popup.content.findChild("MuseumAddUIPopup_Object_explanationTextInput_Text_1"    , Text          , true);
+        var tagListSelector_Text        :Text   = _Popup.content.findChild("MuseumAddUIPopup_Object_tagListSelector_Text_1"         , Text          , true);
+
+
+
+
+
+        var _ListSelector_Struct    :ListSelector_Struct = {
+            _ListSelector           :tag_ListSelector,
+            _Text                   :tagListSelector_Text
+        };
+        var _TextInput_Struct       :TextInput_Struct = {
+            _TextInput              :explanation_TextInput,
+            _Text                   :explanationTextInput_Text
+        }
+
     }
     /*==================================================*/
 
@@ -91,6 +119,57 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
         super.Init_Void();
 
+
+
+
+        /*Push the first element of the explanation into explanation_TextInput_Struct_Array*/
+        explanation_TextInput_Struct_Array.push(_TextInput_Struct);
+        /*Set the next index an explanation would be added into the form.*/
+        explanationIndex_Int =
+            _Grid.indexOfChild(
+                explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1]
+                    ._TextInput
+            ) + 1;
+
+
+
+
+
+        /*Push the first element into the tag_ListSelector_Struct_Array.*/
+        tag_ListSelector_Struct_Array.push(_ListSelector_Struct);
+        /*Then create the first element of the list selector.*/
+        tag_ListSelector.dataSource.createFromString("Remove");
+        /*I have put the first element in the tag_ListSelector.
+        Next thing to do is to put all possible array into the tag_ListSelector
+            so that user can choose which tag they want for the newly created
+            museum object.
+        First I need to add the non general tag.*/
+        var loopCounter1_Int:Int = 0;
+        while(loopCounter1_Int < _Global_Object._Tag_Object_Array.length){
+
+            tag_ListSelector.dataSource.createFromString(
+                _Global_Object
+                    ._Tag_Object_Array[loopCounter1_Int]
+                    ._TagAgnostic_Object
+                    .name_String
+            );
+            loopCounter1_Int ++;
+
+        }
+        /*Then I need to add the general tag array.*/
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < _Global_Object.general_Tag_Object_Array.length){
+
+            tag_ListSelector.dataSource.createFromString(
+                _Global_Object
+                    .general_Tag_Object_Array[loopCounter1_Int]
+                    ._TagAgnostic_Object
+                    .name_String
+            );
+            loopCounter1_Int ++;
+
+        }
+
     }
     /*==================================================*/
 
@@ -106,124 +185,6 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
     }
     /*==================================================*/
 
-
-
-
-
-    public function new(__Global_Object:Global_Object, _root:Root){
-
-        _Global_Object = __Global_Object;
-
-        /*Find the main button to actovate the popup in the main screen.*/
-        _Button = _root.findChild("UIPopupAddMuseumObjectButton", Button, true);
-        /*Adding a callback function of when the button is pressed.*/
-        _Button.onClick = function(_e){
-
-            /*Adding OK and CANCEL button for the popup.*/
-            var buttonControlInt:Int = 0;
-            buttonControlInt |= PopupButton.OK;
-            buttonControlInt |= PopupButton.CANCEL;
-
-            var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupAddObjectMuseum.xml");
-            _Popup = PopupManager.instance.showCustom(iDisplayObject, "Add Museum Object", buttonControlInt, function(_button){
-
-                /*You can actually have this done with checking the component of a Popup controller.
-                If a popup controller/component returns null then the popup is not active.*/
-                if(_button == PopupButton.OK){
-
-                    /*If button OK is pressed then add a museum object according to the inputted value.
-                    PENDING: Check whethe the data inputted valid.
-                    PENDING: Check how to make disable OK button of this popup.*/
-                    var nameAltString:String = nameAlt_TextInput.text;
-                    var nameFullString:String = nameFull_TextInput.text;
-                    var parentNameAltString:String = parent_ListSelector.text;
-                    var explanationStringArray:Array<String> = new Array<String>();
-                    var tagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
-                    var typeEnum:EnumMuseumType = null;
-                    if(type_ListSelector.text == "Exhibition"){ typeEnum = EXH; }
-                    else if(type_ListSelector.text == "Floor"){ typeEnum = FLR; }
-                    else if(type_ListSelector.text == "Room"){ typeEnum = ROM; }
-
-                    if(typeEnum == FLR){ parentNameAltString = "XXX_XXX"; }
-
-                    var loopCounter1Int:Int = 0;
-                    while(loopCounter1Int < explanation_TextInput_Struct_Array.length){
-                        if(
-                            explanation_TextInput_Struct_Array[loopCounter1Int].textInputObject.text != "" &&
-                            explanation_TextInput_Struct_Array[loopCounter1Int].textInputObject.text != " "
-                        ){
-                            explanationStringArray.push(explanation_TextInput_Struct_Array[loopCounter1Int].textInputObject.text);
-                        }
-                        loopCounter1Int ++;
-                    }
-                    loopCounter1Int = 0;
-                    while(loopCounter1Int < tag_ListSelector_Struct_Array.length){
-                        var tagNameString:String = tag_ListSelector_Struct_Array[loopCounter1Int].listSelectorObject.text;
-                        var tagObject:ObjectTag = CollectionFunction.FindTagObject(_Global_Object, false, tagNameString);
-                        if(tagObject == null){ tagObject = CollectionFunction.FindTagObject(_Global_Object, true, tagNameString); }
-                        if(tagObject != null){ tagObjectArray.push(tagObject); }
-                        loopCounter1Int ++;
-                    }
-
-                    /*PENDING: Adding notification if user is not properly input new museum object information.*/
-                    if(
-                        nameAltString                   != "" || nameAltString          != " " || nameAltString         != null ||
-                        nameFullString                  != "" || nameFullString         != " " || nameFullString        != null ||
-                        parentNameAltString             != "" || parentNameAltString    != " " || parentNameAltString   != null ||
-                        explanationStringArray.length   != 0  || tagObjectArray.length  != 0
-                    ){
-
-                        /*Adding the museum object here.*/
-                        var museumObject:ObjectMuseum = new ObjectMuseum(_Global_Object, explanationStringArray, nameAltString, nameFullString, parentNameAltString, tagObjectArray, typeEnum);
-
-                    }
-
-                }
-
-            });
-
-            nameFull_TextInput = _Popup.content.findChild("UIPopupAddObjectMuseum_InputFullName", TextInput, true);
-            nameAlt_TextInput = _Popup.content.findChild("UIPopupAddObjectMuseum_InputAltName", TextInput, true);
-            _Grid = _Popup.content.findChild("UIPopupAddObjectMuseum_Grid", Grid, true);
-            parent_ListSelector = _Popup.content.findChild("UIPopupAddObjectMuseum_SelectObjectParent", ListSelector, true);
-            parent_ListSelector.method = "default";
-            parent_ListSelector.selectedIndex = -1;
-            type_ListSelector = _Popup.content.findChild("UIPopupAddObjectMuseum_SelectType", ListSelector, true);
-            type_ListSelector.method = "default";
-
-            /*Adding dynamic tag list selector.*/
-            CollectionFunction.ClearArray(tag_ListSelector_Struct_Array);
-            tag_ListSelector = _Popup.content.findChild("UIPopupAddObjectMuseum_SelectTag_1", ListSelector, true);
-            tag_ListSelector.method = "default";
-            var listSelectorTagTextObject:Text = _Popup.content.findChild("UIPopupAddObjectMuseum_SelectTagText_1", Text, true);
-            var listSelectorTagStruct   :ListSelector_Struct = {
-                listSelectorObject      :tag_ListSelector,
-                textObject              :listSelectorTagTextObject
-            };
-            tag_ListSelector_Struct_Array.push(listSelectorTagStruct);
-
-            tag_ListSelector.dataSource.createFromString("Remove");
-
-            var loopCounter1Int:Int = 0;
-            while(loopCounter1Int < _Global_Object.GetTagObjectArray().length){
-                tag_ListSelector.dataSource.createFromString(_Global_Object.GetTagObjectArray()[loopCounter1Int].GetNameString());
-                loopCounter1Int ++;
-            }
-
-            /*Adding dynamic explanation text input.*/
-            CollectionFunction.ClearArray(explanation_TextInput_Struct_Array);
-            explanation_TextInput = _Popup.content.findChild("UIPopupAddObjectMuseum_InputExplanation_1", TextInput, true);
-            var textInputExplanationTextObject:Text = _Popup.content.findChild("UIPopupAddObjectMuseum_InputExplanationText_1", Text, true);
-            var textInputExplanationStruct  :TextInput_Struct = {
-                textInputObject             :explanation_TextInput,
-                textObject                  :textInputExplanationTextObject
-            }
-            explanation_TextInput_Struct_Array.push(textInputExplanationStruct);
-            explanationIndex_Int = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject) + 1;
-
-        }
-
-    }
 
 
 
