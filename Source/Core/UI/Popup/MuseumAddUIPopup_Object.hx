@@ -8,11 +8,13 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
     private var explanation_TextInput                   (null, null)        :TextInput                      = null;
     private var explanation_TextInput_Struct_Array      (null, null)        :Array<TextInput_Struct>        = new Array<TextInput_Struct>();
     private var explanationIndex_Int                    (null, null)        :Int                            = null;
+    private var explanationTextInput_Text               (null, null)        :Text                           = null;
     private var nameAlt_TextInput                       (null, null)        :TextInput                      = null;
     private var nameFull_TextInput                      (null, null)        :TextInput                      = null;
     private var parent_ListSelector                     (null, null)        :ListSelector                   = null;
     private var tag_ListSelector                        (null, null)        :ListSelector                   = null;
     private var tag_ListSelector_Struct_Array           (null, null)        :Array<ListSelector_Struct>     = new Array<ListSelector_Struct>();
+    private var tagListSelector_Text                    (null, null)        :Text                           = null;
     private var type_Int                                (null, null)        :Int                            = null;
     private var type_ListSelector                       (null, null)        :ListSelector                   = null;
     private var typePrev_Int                            (null, null)        :Int                            = null;
@@ -74,30 +76,15 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-        StaticFunction_Collection.Clear_T_Array(explanation_TextInput_Struct_Array);
-        StaticFunction_Collection.Clear_T_Array(tag_ListSelector_Struct_Array);
-        _Grid                                   = _Popup.content.findChild("MuseumAddUIPopup_Object__Grid"                          , Grid          , true);
-        explanation_TextInput                   = _Popup.content.findChild("MuseumAddUIPopup_Object_explanation_TextInput_1"        , TextInput     , true);
-        nameAlt_TextInput                       = _Popup.content.findChild("MuseumAddUIPopup_Object_nameAlt_TextInput"              , TextInput     , true);
-        nameFull_TextInput                      = _Popup.content.findChild("MuseumAddUIPopup_Object_nameFull_TextInput"             , TextInput     , true);
-        parent_ListSelector                     = _Popup.content.findChild("MuseumAddUIPopup_Object_parent_ListSelector"            , ListSelector  , true);
-        tag_ListSelector                        = _Popup.content.findChild("MuseumAddUIPopup_Object_tag_ListSelector_1"             , ListSelector  , true);
-        type_ListSelector                       = _Popup.content.findChild("MuseumAddUIPopup_Object_type_ListSelector"              , ListSelector  , true);
-        var explanationTextInput_Text   :Text   = _Popup.content.findChild("MuseumAddUIPopup_Object_explanationTextInput_Text_1"    , Text          , true);
-        var tagListSelector_Text        :Text   = _Popup.content.findChild("MuseumAddUIPopup_Object_tagListSelector_Text_1"         , Text          , true);
-
-
-
-
-
-        var _ListSelector_Struct    :ListSelector_Struct = {
-            _ListSelector           :tag_ListSelector,
-            _Text                   :tagListSelector_Text
-        };
-        var _TextInput_Struct       :TextInput_Struct = {
-            _TextInput              :explanation_TextInput,
-            _Text                   :explanationTextInput_Text
-        }
+        _Grid                       = _Popup.content.findChild("MuseumAddUIPopup_Object__Grid"                          , Grid          , true);
+        explanation_TextInput       = _Popup.content.findChild("MuseumAddUIPopup_Object_explanation_TextInput_1"        , TextInput     , true);
+        explanationTextInput_Text   = _Popup.content.findChild("MuseumAddUIPopup_Object_explanationTextInput_Text_1"    , Text          , true);
+        nameAlt_TextInput           = _Popup.content.findChild("MuseumAddUIPopup_Object_nameAlt_TextInput"              , TextInput     , true);
+        nameFull_TextInput          = _Popup.content.findChild("MuseumAddUIPopup_Object_nameFull_TextInput"             , TextInput     , true);
+        parent_ListSelector         = _Popup.content.findChild("MuseumAddUIPopup_Object_parent_ListSelector"            , ListSelector  , true);
+        tag_ListSelector            = _Popup.content.findChild("MuseumAddUIPopup_Object_tag_ListSelector_1"             , ListSelector  , true);
+        tagListSelector_Text        = _Popup.content.findChild("MuseumAddUIPopup_Object_tagListSelector_Text_1"         , Text          , true);
+        type_ListSelector           = _Popup.content.findChild("MuseumAddUIPopup_Object_type_ListSelector"              , ListSelector  , true);
 
     }
     /*==================================================*/
@@ -122,7 +109,37 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-        /*Push the first element of the explanation into explanation_TextInput_Struct_Array*/
+
+        StaticFunction_Collection.Clear_T_Array(explanation_TextInput_Struct_Array);
+        StaticFunction_Collection.Clear_T_Array(tag_ListSelector_Struct_Array);
+
+
+
+
+
+        var _ListSelector_Struct    :ListSelector_Struct = {
+            _ListSelector           :tag_ListSelector,
+            _Text                   :tagListSelector_Text
+        };
+        var _TextInput_Struct       :TextInput_Struct = {
+            _TextInput              :explanation_TextInput,
+            _Text                   :explanationTextInput_Text
+        }
+
+
+
+
+
+        parent_ListSelector.method          = "default";
+        parent_ListSelector.selectedIndex   = -1;
+        tag_ListSelector.method             = "default";
+        type_ListSelector.method            = "default";
+
+
+
+
+
+        o/*Push the first element of the explanation into explanation_TextInput_Struct_Array*/
         explanation_TextInput_Struct_Array.push(_TextInput_Struct);
         /*Set the next index an explanation would be added into the form.*/
         explanationIndex_Int =

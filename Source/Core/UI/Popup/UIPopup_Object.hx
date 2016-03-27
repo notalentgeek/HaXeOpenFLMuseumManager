@@ -6,6 +6,7 @@ public class UIPopup{
 
     /*==================================================*/
     private var _Button         (null, null)        :Button             = null;
+    private var _Event          (null, null)        :Event              = null;
     private var _Global_Object  (null, null)        :CollectionGlobal   = null;
     private var _Grid           (null, null)        :Grid               = null;
     private var _Popup          (null, null)        :Popup              = null;
@@ -47,6 +48,13 @@ public class UIPopup{
 
         /*Button on click callback function.*/
         _Button.onClick = function(__Event){
+
+            /*Assign the event so that this can be used for the sub class.*/
+            _Event = __Event;
+
+
+
+
 
             /*Button control.
             Usually I only need okay and cancel button.*/

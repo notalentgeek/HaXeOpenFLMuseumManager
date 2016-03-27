@@ -56,6 +56,20 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
         super.Assign_Void();
 
+
+
+
+
+        _Grid                           = _Popup.content.findChild("MuseumEditUIPopup_Object__Grid"                         , Grid              , true);
+        full_Text                       = _Popup.content.findChild("MuseumEditUIPopup_Object_full_Text"                     , Text              , true);
+        museum_ListSelector             = _Popup.content.findChild("MuseumEditUIPopup_Object_museum_ListSelector"           , ListSelector      , true);
+        nameAlt_TextInput               = _Popup.content.findChild("MuseumEditUIPopup_Object_nameAlt_TextInput"             , TextInput         , true);
+        nameFull_TextInput              = _Popup.content.findChild("MuseumEditUIPopup_Object_nameFull_TextInput"            , TextInput         , true);
+        parentNameFull_ListSelector     = _Popup.content.findChild("MuseumEditUIPopup_Object_parentNameFull_ListSelector"   , ListSelector      , true);
+        type_ListSelector               = _Popup.content.findChild("MuseumEditUIPopup_Object_type_ListSelector"             , ListSelector      , true);
+        visitorCurrent_Text             = _Popup.content.findChild("MuseumEditUIPopup_Object_visitorCurrent_Text"           , Text              , true);
+        visitorTotal_Text               = _Popup.content.findChild("MuseumEditUIPopup_Object_visitorTotal_Text"             , Text              , true);
+
     }
     /*==================================================*/
 
@@ -65,6 +79,123 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
     /*==================================================*/
     public function Button_Void():Void(){ super.Button_Void(Edit_Void); }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================
+    This is a function so that I can call a museum button with different kind of characteristic.
+    For example when I click the Exhibition XXX button this popup will appears with the value from
+         the Exhibition XXX.*/
+    private function CallbackEachMuseum_Void():Void{
+
+        /*Adding callback for the museum specific button.
+        Here inject a String into _Event.componen.userData from the button object.
+        It is like a build in field that can be put with any type data.*/
+        if(_Event.component.userData != null){
+
+            var full_String                 :String             = null;
+            var museumTypeFull_String       :String             = null;
+            var userData_String             :String             = "" + _Event.component.userData;
+            var userData_String_Array       :Array<String>      = userData_String.split("*");
+            var nameAlt_String              :String             = userData_String_Array[1];
+            var nameAlt_String_Array        :Array<String>      = nameAlt_String.split("_");
+            var museumType_String           :String             = nameAlt_String_Array[0];
+            var _MuseumType_Enum            :MuseumType_Enum    = Type.createEnum(MuseumType_Enum, museumType_String);
+            var _Museum_Object              :Museum_Object      = StaticFunction_Collection.Find_Museum_Object(_Global_Object, _MuseumType_Enum, nameAlt_String);
+
+
+
+
+
+            if(_Museum_Object != null){
+
+                /*Set the selected museum object.
+                This function only happen when the user selec the object directly from the main user interface.*/
+                selected_Museum_Object = _Museum_Object;
+                /*Set the full String.
+                In these if statement I need to translate boolean value into String value.*/
+                if(selected_Museum_Object._MuseumAndVisitorAgnostic_Object.full_Bool        == true)    { full_String = "True"; }
+                else if(selected_Museum_Object._MuseumAndVisitorAgnostic_Object.full_Bool   == false)   { full_String = "False"; }
+                /*Convert museum type into String.
+                The museum type is an enumeration.
+                However, since the user interface element cannot comprehend enumeration I need to convert
+                    the enumerations into String.*/
+                if(museumType_String        == "EXH"){ museumTypeFull_String = "Exhibition";}
+                else if(museumType_String   == "FLR"){ museumTypeFull_String = "Floor";}
+                else if(museumType_String   == "ROM"){ museumTypeFull_String = "Room";}
+
+
+
+
+
+                /*Initiate basic setup for elements in the popup object based on the selected museum object.*/
+                full_Text.text                      = full_String;
+                museum_ListSelector.disabled        = false;
+                museum_ListSelector.selectedIndex   = 0;
+                nameAlt_TextInput.disabled          = false;
+                nameAlt_TextInput.text              = selected_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String;
+                nameFull_TextInput.disabled         = false;
+                nameFull_TextInput.text             = selected_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String;
+                type_ListSelector.disabled          = false;
+                type_ListSelector.text              = museumTypeFull_String;
+                visitorCurrent_Text.text            = "" + selected_Museum_Object._MuseumAndVisitorAgnostic_Object._VisitorCount_Struct.current_Int;
+                visitorTotal_Text.text              = "" + selected_Museum_Object._MuseumAndVisitorAgnostic_Object._VisitorCount_Struct.total_Int;
+                /*Set the main array based on the selected museum object.
+                For example if the selected object is an exhibition object, the main array will be
+                    exhibition_Museum_Object_Array for the whole operations.
+                This is for adding all museum object based on the selected museum type into
+                    list selector.*/
+                var main_Museum_Object_Array:Array<Museum_Object> = new Array<Museum_Object>();
+                if(museumType_String        == "Exhibition")    { main_Museum_Object_Array = _Global_Object.exhibition_Museum_Object_Array; }
+                else if(museumType_String   == "Floor")         { main_Museum_Object_Array = _Global_Object.floor_Museum_Object_Array; }
+                else if(museumType_String   == "Room")          { main_Museum_Object_Array = _Global_Object.room_Museum_Object_Array; }
+                var loopCounter1_Int:Int = 0;
+                while(loopCounter1_Int < main_Museum_Object_Array.length){
+
+                    museum_ListSelector
+                        .dataSource
+                        .createFromString(
+                            main_Museum_Object_Array[loopCounter1_Int]
+                                ._MuseumAndVisitorAgnostic_Object
+                                ._Name_Struct
+                                .full_String
+                        );
+
+
+
+
+
+                    loopCounter1_Int ++;
+
+                }
+                /*If the selected museum object is not a floor object.*/
+                if(
+                    selected_Museum_Object._MuseumType_Enum         != FLR  &&
+                    selected_Museum_Object.parent_Museum_Object     != null
+                ){
+
+                    parentNameFull_ListSelector.disabled    = false;
+                    parentNameFull_ListSelector.text        =
+                        selected_Museum_Object.parent_Museum_Object
+                            ._MuseumAndVisitorAgnostic_Object
+                            ._Name_Struct
+                            .full_String;
+
+                }
+                /*After other popup elements are initiated before I setup these elements..*/
+                museum_ListSelector.text            = nameFull_TextInput.text;
+                /*Setting up previous String to detect change.
+                Because I need to reset the list selector if there is change in the museum type.*/
+                museumTypePrev_String               = type_ListSelector.text;
+
+            }
+
+        }
+
+    }
     /*==================================================*/
 
 
@@ -92,6 +223,84 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
         super.Init_Void();
 
+
+
+
+        CollectionFunction.Clear_T_Array(explanation_TextInput_Struct_Array);
+        CollectionFunction.Clear_T_Array(tag_ListSelector_Struct_Array);
+
+
+
+
+
+        museumType_String               = "";
+        museumTypePrev_String           = "";
+
+
+
+
+
+        explanation_Text.text                   = "Explanation";
+        explanation_TextInput.disabled          = true;
+        explanation_TextInput.percentWidth      = 100;
+        museum_ListSelector.disabled            = true;
+        museum_ListSelector.method              = "default";
+        nameAlt_TextInput.disabled              = true;
+        nameFull_TextInput.disabled             = true;
+        parentNameFull_ListSelector.disabled    = true;
+        parentNameFull_ListSelector.method      = "default";
+        type_ListSelector.method                = "default";
+
+
+
+
+
+
+        CallbackEachMuseum_Void();
+
+
+
+
+
+        /*Adding the first explanation box.*/
+        var explanation_Text        :Text               = new Text();
+        var explanation_TextInput   :TextInput          = new TextInput();
+        var _TextInput_Struct       :TextInput_Struct   = {
+
+            _Text                   :explanation_Text,
+            _TextInput              :explanation_TextInput
+
+        };
+        _Grid.addChild(explanation_Text);
+        _Grid.addChild(explanation_TextInput);
+        explanation_TextInput_Struct_Array.push(_TextInput_Struct);
+        explanation_Text.id         ="MuseumEditUIPopup_Object_explanation_Text_"          + explanation_TextInput_Struct_Array.length;
+        explanation_TextInput.id    ="MuseumEditUIPopup_Object_explanation_TextInput_"     + explanation_TextInput_Struct_Array.length;
+        explanationLastIndex_Int    = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].explanation_TextInput) + 1;
+
+
+
+
+
+        /*Adding the first tag selection box.*/
+        var tag_Text:Text = new Text();
+        var tag_ListSelector:ListSelector = new ListSelector();
+        var _ListSelector_Struct   :ListSelector_Struct = {
+            _ListSelector   :tag_ListSelector,
+            _Text           :tag_Text
+        };
+        _Grid.addChild(tag_Text);
+        _Grid.addChild(tag_ListSelector);
+        tag_ListSelector_Struct_Array.push(_ListSelector_Struct);
+        tag_ListSelector.disabled           = true;
+        tag_ListSelector.id                 = "MuseumEditUIPopup_Object_tag_ListSelector_" + tag_ListSelector_Struct_Array.length;
+        tag_ListSelector.method             = "default";
+        tag_ListSelector.percentWidth       = 100;
+        tag_ListSelector.selectedIndex      = -1;
+        tag_ListSelector.text               = "";
+        tag_Text.id                         = "MuseumEditUIPopup_Object_tag_Text_" + tag_ListSelector_Struct_Array.length;
+        tag_Text.text                       = "Tags";
+
     }
     /*==================================================*/
 
@@ -111,194 +320,6 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-    public function new(
-        __Global_Object     :Global_Object,
-        _root                       :Root
-    ){
-
-        _Global_Object = __Global_Object;
-
-        _Button = _root.findChild("UIPopupEditMuseumObjectButton", Button, true);
-        _Button.onClick = function(_e){
-
-            /*Adding OK and CANCEL button for the popup.*/
-            var buttonControlInt:Int = 0;
-            buttonControlInt |= PopupButton.OK;
-            buttonControlInt |= PopupButton.CANCEL;
-
-            var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupEditMuseum_Object.xml");
-            _Popup = PopupManager.instance.showCustom(iDisplayObject, "Edit Museum Object", buttonControlInt, function(_button){
-
-                /*You can actually have this done with checking the component of a Popup controller.
-                If a popup controller/component returns null then the popup is not active.*/
-                if(_button == PopupButton.OK){
-                    /*If button OK is pressed then add a museum object according to the inputted value.
-                    PENDING: Check whethe the data inputted valid.
-                    PENDING: Check how to make disable OK button of this popup.*/
-                    var nameAltString:String = nameAlt_TextInput.text;
-                    var nameFullString:String = nameFull_TextInput.text;
-                    var parentNameAltString:String = parentNameFull_ListSelector.text;
-                    var explanationStringArray:Array<String> = new Array<String>();
-                    var tagObjectArray:Array<ObjectTag> = new Array<ObjectTag>();
-                    var typeEnum:EnumMuseumType = null;
-                    if(parentNameFull_ListSelector.text == "Exhibition"){ typeEnum = EXH; }
-                    else if(parentNameFull_ListSelector.text == "Floor"){ typeEnum = FLR; }
-                    else if(parentNameFull_ListSelector.text == "Room"){ typeEnum = ROM; }
-
-                    if(typeEnum == FLR){ parentNameAltString = "XXX_XXX"; }
-
-                    var loopCounter1Int:Int = 0;
-                    while(loopCounter1Int < explanation_TextInput_Struct_Array.length){
-                        if(
-                            explanation_TextInput_Struct_Array[loopCounter1Int].textInputObject.text != "" &&
-                            explanation_TextInput_Struct_Array[loopCounter1Int].textInputObject.text != " "
-                        ){
-                            explanationStringArray.push(explanation_TextInput_Struct_Array[loopCounter1Int].textInputObject.text);
-                        }
-                        loopCounter1Int ++;
-                    }
-                    loopCounter1Int = 0;
-                    while(loopCounter1Int < listSelectorTagStructArray.length){
-                        var tagNameString:String = listSelectorTagStructArray[loopCounter1Int].listSelectorObject.text;
-                        var tagObject:ObjectTag = CollectionFunction.FindTagObject(_Global_Object, false, tagNameString);
-                        if(tagObject == null){ tagObject = CollectionFunction.FindTagObject(_Global_Object, true, tagNameString); }
-                        if(tagObject != null){ tagObjectArray.push(tagObject); }
-                        loopCounter1Int ++;
-                    }
-
-                    /*PENDING: Adding notification if user is not properly input new museum object information.*/
-                    if(
-                        nameAltString                   != "" || nameAltString          != " " || nameAltString         != null ||
-                        nameFullString                  != "" || nameFullString         != " " || nameFullString        != null ||
-                        parentNameAltString             != "" || parentNameAltString    != " " || parentNameAltString   != null ||
-                        explanationStringArray.length   != 0  || tagObjectArray.length  != 0
-                    ){
-
-                        selected_Museum_Object.SetNameAltStringVoid(nameAltString);
-                        selected_Museum_Object.SetNameFullStringVoid(nameFullString);
-                        selected_Museum_Object.ChangeParentObject(parentNameAltString);
-                        selected_Museum_Object.SetExplanationStringArrayVoid(explanationStringArray);
-                        selected_Museum_Object.SetTagObjectArrayVoid(tagObjectArray);
-
-                    }
-
-                }
-
-            });
-
-            museumType_String = "";
-            museumTypePrev_String = "";
-
-            full_Text = _Popup.content.findChild("UIPopupEditMuseum_Object_DisplayFull", Text, true);
-            visitorCurrent_Text = _Popup.content.findChild("UIPopupEditMuseum_Object_DisplayVisitorCurrent", Text, true);
-            visitorTotal_Text = _Popup.content.findChild("UIPopupEditMuseum_Object_DisplayVisitorTotal", Text, true);
-            _Grid = _Popup.content.findChild("UIPopupEditMuseum_Object_Grid", Grid, true);
-            nameAlt_TextInput = _Popup.content.findChild("UIPopupEditMuseum_Object_InputAltName", TextInput, true);
-            nameAlt_TextInput.disabled = true;
-            nameFull_TextInput = _Popup.content.findChild("UIPopupEditMuseum_Object_InputFullName", TextInput, true);
-            nameFull_TextInput.disabled = true;
-            museum_ListSelector = _Popup.content.findChild("UIPopupEditMuseum_Object_SelectMuseum_Object", ListSelector, true);
-            museum_ListSelector.disabled = true;
-            museum_ListSelector.method = "default";
-            parentNameFull_ListSelector = _Popup.content.findChild("UIPopupEditMuseum_Object_SelectParentObject", ListSelector, true);
-            parentNameFull_ListSelector.disabled = true;
-            parentNameFull_ListSelector.method = "default";
-            type_ListSelector = _Popup.content.findChild("UIPopupEditMuseum_Object_SelectType", ListSelector, true);
-            type_ListSelector.method = "default";
-
-            /*Adding callback for the museum specific button.*/
-            if(_e.component.userData != null){
-                var string:String = "" + _e.component.userData;
-                var stringArray:Array<String> = string.split("*");
-                var nameAltString:String = stringArray[1];
-                stringArray = nameAltString.split("_");
-                var enumString:String = stringArray[0];
-                var typeEnum:EnumMuseumType = Type.createEnum(EnumMuseumType, enumString);
-                var museumObject:Museum_Object = CollectionFunction.FindMuseumObject(_Global_Object, typeEnum, nameAltString);
-
-                if(museumObject != null){
-
-                    selected_Museum_Object = museumObject;
-
-                    var fullString:String = "";
-                    if(selected_Museum_Object.GetFullBool() == true){ fullString = "True"; }
-                    else if(selected_Museum_Object.GetFullBool() == false){ fullString = "False"; }
-                    full_Text.text = fullString;
-                    visitorCurrent_Text.text = "" + selected_Museum_Object.GetVisitorCurrentInt();
-                    visitorTotal_Text.text = "" + selected_Museum_Object.GetVisitorTotalInt();
-                    nameAlt_TextInput.disabled = false;
-                    nameAlt_TextInput.text = selected_Museum_Object.GetNameStruct().nameAltString;
-                    nameFull_TextInput.disabled = false;
-                    nameFull_TextInput.text = selected_Museum_Object.GetNameStruct().nameFullString;
-                    type_ListSelector.disabled = false;
-                    var nameFullEnumString:String = "";
-                    if(enumString == "EXH"){ nameFullEnumString = "Exhibition" ;}
-                    else if(enumString == "FLR"){ nameFullEnumString = "Floor" ;}
-                    else if(enumString == "ROM"){ nameFullEnumString = "Room" ;}
-                    type_ListSelector.text = nameFullEnumString;
-                    museumType_String = type_ListSelector.text;
-                    museumTypePrev_String = type_ListSelector.text;
-
-                    var tempObjectArray:Array<Museum_Object> = new Array<Museum_Object>();
-                    if(museumType_String == "Exhibition"){ tempObjectArray = _Global_Object.GetExhibitionObjectArray(); }
-                    else if(museumType_String == "Floor"){ tempObjectArray = _Global_Object.GetFloorObjectArray(); }
-                    else if(museumType_String == "Room"){ tempObjectArray = _Global_Object.GetRoomObjectArray(); }
-
-                    var loopCounter1Int:Int = 0;
-                    while(loopCounter1Int < tempObjectArray.length){
-                        museum_ListSelector.dataSource.createFromString(tempObjectArray[loopCounter1Int].GetNameStruct().nameFullString);
-                        loopCounter1Int ++;
-                    }
-                    museum_ListSelector.disabled = false;
-                    museum_ListSelector.selectedIndex = 0;
-                    museum_ListSelector.text = nameFull_TextInput.text;
-                    if(museumObject.GetParentObject() != null){
-                        parentNameFull_ListSelector.disabled = false;
-                        parentNameFull_ListSelector.text = museumObject.GetParentObject().GetNameStruct().nameFullString;
-                    }
-                }
-            }
-
-            /*Adding the first explanation box.*/
-            CollectionFunction.ClearArray(explanation_TextInput_Struct_Array);
-            var textObject:Text = new Text();
-            var textInputObject:TextInput = new TextInput();
-            var textInputExplanationStruct  :TextInput_Struct = {
-                textInputObject             :textInputObject,
-                textObject                  :textObject
-            };
-            explanation_TextInput_Struct_Array.push(textInputExplanationStruct);
-            textObject.id = "UIPopupEditMuseum_Object_InputExplanationText_" + explanation_TextInput_Struct_Array.length;
-            textObject.text = "Explanation";
-            textInputObject.disabled = true;
-            textInputObject.id = "UIPopupEditMuseum_Object_InputExplanation_" + explanation_TextInput_Struct_Array.length;
-            textInputObject.percentWidth = 100;
-            _Grid.addChild(textInputObject);
-            explanationLastIndex_Int = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject) + 1;
-
-            /*Adding the first tag selection box.*/
-            CollectionFunction.ClearArray(listSelectorTagStructArray);
-            var textObject:Text = new Text();
-            var listSelectorObject:ListSelector = new ListSelector();
-            var listSelectorTagStruct   :ListSelector_Struct = {
-                listSelectorObject      :listSelectorObject,
-                textObject              :textObject
-            };
-            listSelectorTagStructArray.push(listSelectorTagStruct);
-            textObject.id = "UIPopupEditMuseum_Object_SelectTagText_" + listSelectorTagStructArray.length;
-            textObject.text = "Tags";
-            _Grid.addChild(textObject);
-            listSelectorObject.disabled = true;
-            listSelectorObject.id = "UIPopupEditMuseum_Object_SelectTag_" + listSelectorTagStructArray.length;
-            listSelectorObject.percentWidth = 100;
-            listSelectorObject.selectedIndex = -1;
-            listSelectorObject.text = " ";
-            _Grid.addChild(listSelectorObject);
-            listSelectorObject.method = "default";
-
-        }
-
-    }
     public function UpdateVoid(){
 
         var updateMuseumButtonBool:Bool = false;
