@@ -42,6 +42,13 @@ class VisitorAddUIPopup_Object extends UIPopup_Object{
 
         super.Assign_Void();
 
+
+
+
+        _Grid                           = _Popup.content.findChild("VisitorAddPopupUI_Object__Grid"                             , Grid          , true);
+        name_TextInput                  = _Popup.content.findChild("VisitorAddPopupUI_Object_name_TextInput"                    , TextInput     , true);
+        previousVisitor_ListSelector    = _Popup.content.findChild("VisitorAddPopupUI_Object_previousVisitor_ListSelector"      , ListSelector  , true);
+
     }
     /*==================================================*/
 
@@ -76,6 +83,28 @@ class VisitorAddUIPopup_Object extends UIPopup_Object{
 
         super.Init_Void();
 
+
+
+
+        var loopCounter1_Int:Int = 0;
+        while(loopCounter1_Int < _Global_Object._Visitor_Object_Array.length){
+
+            previousVisitor_ListSelector.dataSource.createFromString(
+                _Global_Object
+                    ._Visitor_Object_Array[loopCounter1_Int]
+                    ._MuseumAndVisitorAgnostic_Object
+                    .name_String
+            );
+
+
+
+
+
+            loopCounter1_Int ++;
+
+        }
+        previousVisitor_ListSelector.method = "default";
+
     }
     /*==================================================*/
 
@@ -84,58 +113,7 @@ class VisitorAddUIPopup_Object extends UIPopup_Object{
 
 
     /*==================================================*/
-    public function Update_Void():Void(){
-
-        super.Update_Void();
-
-    }
+    public function Update_Void():Void(){ super.Update_Void(); }
     /*==================================================*/
-
-
-
-
-
-    public function new(__Global_Object:Global_Object, _root:Root){
-
-        _Global_Object = __Global_Object;
-
-        /*Find the main button to actovate the popup in the main screen.*/
-        _Button = _root.findChild("UIPopupAddVisitorObjectButton", Button, true);
-        _Button.onClick = function(_e){
-
-            /*Adding OK and CANCEL button for the popup.*/
-            var buttonControlInt:Int = 0;
-            buttonControlInt |= PopupButton.OK;
-            buttonControlInt |= PopupButton.CANCEL;
-
-            var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/UIPopupAddObjectVisitor.xml");
-            _Popup = PopupManager.instance.showCustom(iDisplayObject, "Add Visitor", buttonControlInt, function(_button){
-
-                /*You can actually have this done with checking the component of a Popup controller.
-                If a popup controller/component returns null then the popup is not active.*/
-                if(_button == PopupButton.OK){
-
-                    var visitorObject:ObjectVisitor = new ObjectVisitor(_Global_Object, _Global_Object.PutIndexGlobalVisitorInt(), name_TextInput.text);
-
-                }
-
-            });
-
-            _Grid                              = _Popup.content.findChild("UIPopupAddObjectVisitor_Grid"                  , Grid            , true);
-            name_TextInput                = _Popup.content.findChild("UIPopupAddObjectVisitor_InputName"             , TextInput       , true);
-            previousVisitor_ListSelector = _Popup.content.findChild("UIPopupAddObjectVisitor_SelectPreviousVisitor" , ListSelector    , true);
-
-            previousVisitor_ListSelector.method = "default";
-
-            var loopCounter1Int:Int = 0;
-            while(loopCounter1Int < _Global_Object.GetVisitorObjectArray().length){
-                previousVisitor_ListSelector.dataSource.createFromString(_Global_Object.GetVisitorObjectArray()[loopCounter1Int].GetNameString());
-                loopCounter1Int ++;
-            }
-
-        };
-
-    }
-    public function UpdateVoid(){}
 
 }

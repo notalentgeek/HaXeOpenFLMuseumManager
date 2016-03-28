@@ -113,7 +113,7 @@ class TagRemoveUIPopup_Object extends UIPopup_Object{
             loopCounter1_Int ++;
 
         }
-        /*Assign other basi properties.*/
+        /*Assign other basic properties.*/
         general_ListSelector    .method             = "default";
         general_ListSelector    .selectedIndex      = -1;
         tag_ListSelector        .method             = "default";
@@ -130,88 +130,6 @@ class TagRemoveUIPopup_Object extends UIPopup_Object{
     public function Update_Void():Void(){
 
         super.Update_Void();
-
-    }
-    /*==================================================*/
-
-
-
-
-
-    /*==================================================*/
-    public function new(__Global_Object:Global_Object, _root:Root){
-
-        /*Assign the parameters.*/
-        _Global_Object = __Global_Object;
-
-
-
-
-
-        /*Button object click function.*/
-        _Button = _root.findChild("UIPopupRemoveTagObjectButton", Button, true);
-        _Button.onClick = function(_e){
-
-            /*Button control.*/
-            var buttonControlInt:Int = 0;
-            buttonControlInt |= PopupButton.OK;
-            buttonControlInt |= PopupButton.CANCEL;
-
-
-
-
-            /*Popup control.
-            If button clicked this popup appears.*/
-            var iDisplayObject:IDisplayObject = Toolkit.processXmlResource("layout/TagRemoveUIPopup.xml");
-            _Popup = PopupManager.instance.showCustom(iDisplayObject, "Remove Tag", buttonControlInt, function(_button){
-
-                if(_button == PopupButton.OK){
-
-                    if(general_String == "Yes"){
-                        _Tag_Object = StaticFunction_Collection.Find_Tag_Object(_Global_Object, true, tagName_String);
-                        _Tag_Object.RemoveFromArray();
-                    }
-                    else if(general_String == "No"){
-                        _Tag_Object = StaticFunction_Collection.Find_Tag_Object(_Global_Object, false, tagName_String);
-                        _Tag_Object.RemoveFromArray();
-                    }
-
-                }
-
-            });
-
-
-
-
-
-            /*Find all object in the popup object.*/
-            general_ListSelector    = _Popup.content.findChild("TagRemoveUIPopup_GeneralListSelector", ListSelector, true);
-            tag_ListSelector        = _Popup.content.findChild("TagRemoveUIPopup_TagListSelector", ListSelector, true);
-
-
-
-
-
-            /*Fill all object in the popup object.
-            And assign the default value.*/
-            var loopCounter1_Int:Int = 0;
-            while(loopCounter1_Int < _Global_Object._Tag_Object_Array.length){
-
-                tag_ListSelector.dataSource.createFromString(_Global_Object._Tag_Object_Array[loopCounter1_Int]._TagAgnostic_Object.name_String);
-                loopCounter1_Int ++;
-
-            }
-            tag_ListSelector    .method         = "default";
-            tag_ListSelector    .selectedIndex  = -1;
-
-
-
-
-
-            general_ListSelector    .method         = "default";
-            general_ListSelector    .selectedIndex  = -1;
-
-        }
 
     }
     /*==================================================*/
