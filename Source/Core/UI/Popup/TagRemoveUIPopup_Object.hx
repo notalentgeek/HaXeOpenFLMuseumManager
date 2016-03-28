@@ -46,6 +46,12 @@ class TagRemoveUIPopup_Object extends UIPopup_Object{
 
         super.Assign_Void();
 
+
+
+
+        general_ListSelector    = _Popup.content.findChild("TagRemoveUIPopup_Object_general_ListSelector"   , ListSelector, true);
+        tag_ListSelector        = _Popup.content.findChild("TagRemoveUIPopup_Object_tag_ListSelector"       , ListSelector, true);
+
     }
     /*==================================================*/
 
@@ -85,6 +91,33 @@ class TagRemoveUIPopup_Object extends UIPopup_Object{
     public function Init_Void():Void(){
 
         super.Init_Void();
+
+
+
+
+        /*Fill in tag objec into the list selector.*/
+        var loopCounter1_Int:Int = 0;
+        while(loopCounter1_Int < _Global_Object._Tag_Object_Array.length){
+
+            tag_ListSelector.dataSource.createFromString(
+                _Global_Object
+                    ._Tag_Object_Array[loopCounter1_Int]
+                    ._TagAgnostic_Object
+                    .name_String
+            );
+
+
+
+
+
+            loopCounter1_Int ++;
+
+        }
+        /*Assign other basi properties.*/
+        general_ListSelector    .method             = "default";
+        general_ListSelector    .selectedIndex      = -1;
+        tag_ListSelector        .method             = "default";
+        tag_ListSelector        .selectedIndex      = -1;
 
     }
     /*==================================================*/
