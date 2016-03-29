@@ -255,13 +255,6 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-
-        CallbackEachMuseum_Void();
-
-
-
-
-
         /*Adding the first explanation box.*/
         var explanation_Text        :Text               = new Text();
         var explanation_TextInput   :TextInput          = new TextInput();
@@ -300,6 +293,13 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
         tag_ListSelector.text               = "";
         tag_Text.id                         = "MuseumEditUIPopup_Object_tag_Text_" + tag_ListSelector_Struct_Array.length;
         tag_Text.text                       = "Tags";
+
+
+
+
+
+
+        CallbackEachMuseum_Void();
 
     }
     /*==================================================*/
