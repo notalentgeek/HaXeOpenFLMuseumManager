@@ -200,6 +200,10 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
         super.Update_Void();
 
+
+
+
+
         /*Check if the requirements.
         Check for null pointer references.*/
         if(
@@ -439,6 +443,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
+                tagIndexInt = _Grid.indexOfChild(tag_ListSelector_Struct_Array[tag_ListSelector_Struct_Array.length - 1]._ListSelector) + 1;
                 loopCounter1_Int ++;
 
             }
@@ -448,49 +453,87 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
             /*This if statement is to insert a new element into into the popup user interface.
-            PENDING: Make this as a function to insert element.*/
+            Check the latest index of this */
             if(
                 tag_ListSelector_Struct_Array[tag_ListSelector_Struct_Array.length - 1].listSelectorObject.selectedIndex != -1 &&
                 tag_ListSelector_Struct_Array[tag_ListSelector_Struct_Array.length - 1].listSelectorObject.selectedIndex != 0
             ){
 
+                /*Create a temporary struct to hold the user interface object.*/
                 var tag_ListSelector    :ListSelector   = new ListSelector();
                 var tag_Text            :Text           = new Text();
                 var _ListSelector_Struct = {
                     listSelectorObject  :tag_ListSelector,
                     textObject          :tag_Text
                 };
+                /*Push the struct into the struct user interface array.*/
                 tag_ListSelector_Struct_Array.push(_ListSelector_Struct);
 
 
 
 
 
-                tag_Text.id     =
+                /*The first user interface element.*/
+                tag_Text.id =
                     "UIPopupAddMuseum_Object_SelectTagText_" + tag_ListSelector_Struct_Array.length;
-                tag_Text.text   = "Tags";
-                _Grid.addChild(tag_Text);
+                tag_Text.text = "Tags";
+                _Grid.addChildAt(tag_Text, tagIndex_Int);
+                /*CAUTION: Do not forget to always set the latest index.
+                CAUTION: So that any new user interface element will be added after this index.*/
+                tagIndex_Int = _Grid.indexOfChild(tag_Text) + 1;
 
 
 
 
 
+
+                /*The second user interrace element.*/
                 tag_ListSelector.dataSource.createFromString("Remove");
-                tag_ListSelector.id             =
+                tag_ListSelector.id =
                     "UIPopupAddMuseum_Object_SelectTag_" + tag_ListSelector_Struct_Array.length;
-                tag_ListSelector.percentWidth   = 100;
-                tag_ListSelector.text           = " ";
-                _Grid.addChild(tag_ListSelector);
+                tag_ListSelector.percentWidth = 100;
+                tag_ListSelector.text = " ";
+                _Grid.addChildAt(tag_ListSelector, tagIndex_Int);
+                /*CAUTION: Do not forget to always set the latest index.
+                CAUTION: So that any new user interface element will be added after this index.*/
+                tagIndex_Int = _Grid.indexOfChild(tag_ListSelector) + 1;
 
 
 
 
 
-                var tempUsedTagStringArray:Array<String> = new Array<String>();
+
+                /*Here I need to put every array from both general and non general array into
+                    my temporary array for tag object.
+                This below is for non general tag.*/
+                var temp_Tag_Object_Array:Array<String> = new Array<String>();
                 var loopCounter1_Int:Int = 0;
-                while(loopCounter1_Int < _Global_Object.GetTagObjectArray().length){
+                while(loopCounter1_Int < _Global_Object._Tag_Object_Array.length){
 
-                    tempUsedTagStringArray.push(_Global_Object.GetTagObjectArray()[loopCounter1_Int].GetNameString());
+                    temp_Tag_Object_Array.push(
+                        _Global_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .name_String
+                    );
+
+
+
+
+
+                    loopCounter1_Int ++;
+
+                }
+                /*This below is for general tag.*/
+                loopCounter1_Int = 0;
+                while(loopCounter1_Int < _Global_Object.general_Tag_Object_Array.length){
+
+                    temp_Tag_Object_Array.push(
+                        _Global_Object
+                            .general_Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .name_String
+                    );
 
 
 
@@ -504,6 +547,9 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
+
+                /*This loop is to remve all tags those have been choosed before so that it
+                    will not appeared again.*/
                 loopCounter1_Int = 1;
                 while(loopCounter1_Int <= tag_ListSelector_Struct_Array.length){
 
@@ -513,7 +559,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
                             ListSelector,
                             true
                         );
-                    tempUsedTagStringArray.remove(tempTag_ListSelector.text);
+                    temp_Tag_Object_Array.remove(tempTag_ListSelector.text);
 
 
 
@@ -527,12 +573,13 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
+                /*Finaly push all temporary tag into the list selector.*/
                 loopCounter1_Int = 0;
-                while(loopCounter1_Int < tempUsedTagStringArray.length){
+                while(loopCounter1_Int < temp_Tag_Object_Array.length){
 
                     tag_ListSelector
                         .dataSource
-                        .createFromString(tempUsedTagStringArray[loopCounter1_Int]);
+                        .createFromString(temp_Tag_Object_Array[loopCounter1_Int]);
 
 
 
@@ -560,9 +607,15 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
         if(_Popup != null && explanation_TextInput_Struct_Array.length > 0){
 
+            /*For explanation I need to make sure to remove all list selector
+                hat is not in the last index of the text input struct and also not the first.
+            If the struct is either in the first position or in the last position then
+                just do nothing about it.*/
             var loopCounter1_Int:Int = 0;
             while(loopCounter1_Int < explanation_TextInput_Struct_Array.length){
 
+                /*If there is nothing written in the text input or just a space
+                    and the lenght of the struct is larger than 1 then delete the user interface element.*/
                 if(
                     (
                         explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject.text == "" ||
@@ -571,8 +624,11 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
                     explanation_TextInput_Struct_Array.length > 1
                 ){
 
-                    /*PENDING: Might need some checking here due to it it quite different than the original
-                        codes.*/
+                    /*If the explanation text inputt is the latest in the array, then I simply need to
+                        reset the vaue and it is not neccessary to delete it.
+                    Because if it is the latest text input in the array if I delete it it will just created
+                        a new one because the new latest index is filled with a valid value.
+                    So this if statement is made to prevent unecessary loop.*/
                     if(loopCounter1_Int != explanation_TextInput_Struct_Array.length - 1){
 
                         _Grid.removeChild
@@ -586,6 +642,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
+                        /*Re - adjust all explanation text input id.*/
                         var loopCounter2_Int:Int = 1;
                         while(loopCounter2_Int <= explanation_TextInput_Struct_Array.length){
 
@@ -604,12 +661,6 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
                         }
 
-
-
-
-
-                        explanationIndex_Int = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject) + 1;
-
                     }
 
                 }
@@ -618,6 +669,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
+                explanationIndex_Int = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject) + 1;
                 loopCounter1_Int ++;
 
             }
@@ -626,40 +678,50 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
+            /*This if statement is to insert a new element into into the popup user interface.
+            Check the latest index of the struct array.*/
             if(
                 explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject.text != "" &&
                 explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject.text != " "
             ){
 
+                /*Create a temporary struct to hold the user interface object.*/
                 var explanation_Text        :Text       = new Text();
                 var explanation_TextInput   :TextInput  = new TextInput();
                 var _TextInput_Struct = {
                     textInputObject     : explanation_TextInput,
                     textObject          : explanation_Text
                 };
+                /*Push the struct into the struct user interface array.*/
                 explanation_TextInput_Struct_Array.push(_TextInput_Struct);
 
 
 
 
 
-                explanation_Text.id                     =
+                /*The first user interface element.*/
+                explanation_Text.id =
                     "UIPopupAddMuseum_Object_InputExplanationText_" +
                     explanation_TextInput_Struct_Array.length;
-                explanation_Text.text                   = "Explanation";
+                explanation_Text.text = "Explanation";
                 _Grid.addChildAt(explanation_Text, explanationIndex_Int);
-                explanationIndex_Int                    = _Grid.indexOfChild(explanation_Text) + 1;
+                /*CAUTION: Do not forget to always set the latest index.
+                CAUTION: So that any new user interface element will be added after this index.*/
+                explanationIndex_Int = _Grid.indexOfChild(explanation_Text) + 1;
 
 
 
 
 
-                explanation_TextInput.id                =
+                /*The second user interrace element.*/
+                explanation_TextInput.id =
                     "UIPopupAddMuseum_Object_InputExplanation_" +
                     explanation_TextInput_Struct_Array.length;
-                explanation_TextInput.percentWidth      = 100;
+                explanation_TextInput.percentWidth = 100;
                 _Grid.addChildAt(explanation_TextInput, explanationIndex_Int);
-                explanationIndex_Int                    = _Grid.indexOfChild(explanation_TextInput) + 1;
+                /*CAUTION: Do not forget to always set the latest index.
+                CAUTION: So that any new user interface element will be added after this index.*/
+                explanationIndex_Int = _Grid.indexOfChild(explanation_TextInput) + 1;
 
             }
 
