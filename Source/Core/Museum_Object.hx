@@ -20,7 +20,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
     /*PENDING - DONE: Shrink update whole function into more compact function. Create smaller functions.*/
     /*PENDING - DONE: Sync array for _Child_Struct.*/
     /*PENDING - DONE: Comment on user interface class.*/
-    /*PENDING - DONE: Revert back object in top of ui class.*/
+    /*PENDING - DONE: Revert back object in top of user interface class.*/
 
 
 
@@ -210,7 +210,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
             .DetermineChild_Museum_Object()
             .DetermineSibling_MuseumAndVisitor_Object()
             .DetermineIndex_MuseumAndVisitor_Object();
-        
+
 
 
         _main_Museum_Object_Array[_index_Int]._MuseumAndVisitorUI_Object.Draw_MuseumUI_Object(
@@ -230,7 +230,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
     private function RemoveUI_Museum_Object():Museum_Object{
 
         /*PENDING - DONE: To fix the hierarchy of UI object into the top of object (I revert this back).*/
-        
+
 
 
         /*Removing the button object from the main absolute layout object.*/
@@ -397,7 +397,7 @@ class Museum_Object extends MuseumAndVisitor_Object{
 
                 /*If a museum object is marked for deletion then it needs to wait until there is
                     no more children attached to this object before deletion.
-                If there is no more children attached then the deletion process begin with the 
+                If there is no more children attached then the deletion process begin with the
                     deletion of user interface object and then the object itself by removing this
                     object reference from main array.*/
                 if(_Child_Struct._Museum_Object_Array.length == 0){ RemoveUI_Museum_Object(); }

@@ -6,7 +6,7 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
     /*==================================================*/
     private var explanation_TextInput_Struct_Array      (null, null)        :Array<TextInput_Struct>        = new Array<TextInput_Struct>();
-    private var explanationLastIndex_Int                (null, null)        :Int                            = null;
+    private var explanationIndex_Int                (null, null)        :Int                            = null;
     private var full_Text                               (null, null)        :Text                           = null;
     private var museum_Button_Array                     (null, null)        :Array<Button>                  = new Array<Button>();
     private var museum_ListSelector                     (null, null)        :ListSelector                   = null;
@@ -87,12 +87,12 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
     /*==================================================
     This is a function so that I can call a museum button with different kind of characteristic.
-    For example when I click the Exhibition XXX button this popup will appears with the value from
+    For example when I click the Exhibition XXX button this pop up will appears with the value from
          the Exhibition XXX.*/
     private function CallbackEachMuseum_Void():Void{
 
         /*Adding callback for the museum specific button.
-        Here inject a String into _Event.componen.userData from the button object.
+        Here inject a String into _Event.component.userData from the button object.
         It is like a build in field that can be put with any type data.*/
         if(_Event.component.userData != null){
 
@@ -113,7 +113,7 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
             if(_Museum_Object != null){
 
                 /*Set the selected museum object.
-                This function only happen when the user selec the object directly from the main user interface.*/
+                This function only happen when the user select the object directly from the main user interface.*/
                 selected_Museum_Object = _Museum_Object;
                 /*Set the full String.
                 In these if statement I need to translate boolean value into String value.*/
@@ -131,7 +131,7 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-                /*Initiate basic setup for elements in the popup object based on the selected museum object.*/
+                /*Initiate basic setup for elements in the pop up object based on the selected museum object.*/
                 full_Text.text                      = full_String;
                 museum_ListSelector.disabled        = false;
                 museum_ListSelector.selectedIndex   = 0;
@@ -185,7 +185,7 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
                             .full_String;
 
                 }
-                /*After other popup elements are initiated before I setup these elements..*/
+                /*After other pop up elements are initiated before I setup these elements..*/
                 museum_ListSelector.text            = nameFull_TextInput.text;
                 /*Setting up previous String to detect change.
                 Because I need to reset the list selector if there is change in the museum type.*/
@@ -226,8 +226,8 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-        CollectionFunction.Clear_T_Array(explanation_TextInput_Struct_Array);
-        CollectionFunction.Clear_T_Array(tag_ListSelector_Struct_Array);
+        StaticFunction_Collection.Clear_T_Array(explanation_TextInput_Struct_Array);
+        StaticFunction_Collection.Clear_T_Array(tag_ListSelector_Struct_Array);
 
 
 
@@ -269,7 +269,7 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
         explanation_TextInput_Struct_Array.push(_TextInput_Struct);
         explanation_Text.id         ="MuseumEditUIPopup_Object_explanation_Text_"          + explanation_TextInput_Struct_Array.length;
         explanation_TextInput.id    ="MuseumEditUIPopup_Object_explanation_TextInput_"     + explanation_TextInput_Struct_Array.length;
-        explanationLastIndex_Int    = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].explanation_TextInput) + 1;
+        explanationIndex_Int    = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].explanation_TextInput) + 1;
 
 
 
@@ -322,125 +322,320 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
     public function UpdateVoid(){
 
-        var updateMuseumButtonBool:Bool = false;
+        var updateMuseum_Bool:Bool = false;
         if(
             museum_Button_Array.length != (
-                _Global_Object.GetExhibitionObjectArray()   .length +
-                _Global_Object.GetFloorObjectArray()        .length +
-                _Global_Object.GetRoomObjectArray()         .length
+                _Global_Object.exhibition_Museum_Object_Array   .length +
+                _Global_Object.floor_Museum_Object_Array        .length +
+                _Global_Object.room_Museum_Object_Array         .length
             )
-        ){ updateMuseumButtonBool = true; }
-        var loopCounter1Int:Int = 0;
-        while(loopCounter1Int < _Global_Object.GetExhibitionObjectArray().length){
+        ){ updateMuseum_Bool = true; }
 
-            if(updateMuseumButtonBool == true){ break; }
-            if(museum_Button_Array[loopCounter1Int] != _Global_Object.GetExhibitionObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject()){
-                updateMuseumButtonBool = true;
+
+
+
+
+        var loopCounter1_Int:Int = 0;
+        while(loopCounter1_Int < _Global_Object.exhibition_Museum_Object_Array.length){
+
+            if(updateMuseum_Bool == true){ break; }
+
+
+
+
+
+            if(
+                museum_Button_Array[loopCounter1_Int] !=
+                    _Global_Object
+                        .exhibition_Museum_Object_Array[loopCounter1_Int]
+                        ._MuseumAndVisitorUI_Object
+                        ._Button
+            ){
+                updateMuseum_Bool = true;
                 break;
             }
-            loopCounter1Int ++;
+
+
+
+
+
+            loopCounter1_Int ++;
 
         }
-        loopCounter1Int = 0;
-        while(loopCounter1Int < _Global_Object.GetFloorObjectArray().length){
 
-            if(updateMuseumButtonBool == true){ break; }
-            if(museum_Button_Array[loopCounter1Int + _Global_Object.GetExhibitionObjectArray().length] != _Global_Object.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject()){
-                updateMuseumButtonBool = true;
+
+
+
+
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < _Global_Object.floor_Museum_Object_Array.length){
+
+            if(updateMuseum_Bool == true){ break; }
+
+
+
+
+
+            if(
+                museum_Button_Array[loopCounter1_Int + _Global_Object.exhibition_Museum_Object_Array.length] !=
+                    _Global_Object
+                        .floor_Museum_Object_Array[loopCounter1_Int]
+                        ._MuseumAndVisitorUI_Object
+                        ._Button
+            ){
+                updateMuseum_Bool = true;
                 break;
             }
-            loopCounter1Int ++;
+
+
+
+
+
+            loopCounter1_Int ++;
 
         }
-        loopCounter1Int = 0;
-        while(loopCounter1Int < _Global_Object.GetRoomObjectArray().length){
 
-            if(updateMuseumButtonBool == true){ break; }
-            if(museum_Button_Array[loopCounter1Int + _Global_Object.GetExhibitionObjectArray().length + _Global_Object.GetFloorObjectArray().length] != _Global_Object.GetRoomObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject()){
-                updateMuseumButtonBool = true;
+
+
+
+
+        loopCounter1_Int = 0;
+        while(loopCounter1_Int < _Global_Object.room_Museum_Object_Array.length){
+
+            if(updateMuseum_Bool == true){ break; }
+
+
+
+
+
+            if(
+                museum_Button_Array[loopCounter1_Int +
+                    _Global_Object.exhibition_Museum_Object_Array.length +
+                    _Global_Object.floor_Museum_Object_Array.length] !=
+                _Global_Object
+                    .room_Museum_Object_Array[loopCounter1_Int]
+                    ._MuseumAndVisitorUI_Object
+                    ._Button
+            ){
+                updateMuseum_Bool = true;
                 break;
             }
-            loopCounter1Int ++;
+
+
+
+
+
+            loopCounter1_Int ++;
 
         }
-        if(updateMuseumButtonBool == true){
-            CollectionFunction.ClearArray(museum_Button_Array);
-            var loopCounter1Int:Int = 0;
-            while(loopCounter1Int < _Global_Object.GetExhibitionObjectArray().length){
-                _Global_Object.GetExhibitionObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().userData
-                    = _Global_Object.GetExhibitionObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().id;
-                museum_Button_Array.push(_Global_Object.GetExhibitionObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject());
-                _Global_Object.GetExhibitionObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().onClick = _Button.onClick;
-                loopCounter1Int ++;
+
+
+
+
+
+        if(updateMuseum_Bool == true){
+
+            StaticFunction_Collection.Clear_T_Array(museum_Button_Array);
+
+
+
+
+
+            var loopCounter1_Int:Int = 0;
+            while(loopCounter1_Int < _Global_Object.exhibition_Museum_Object_Array.length){
+
+                _Global_Object
+                    .exhibition_Museum_Object_Array[loopCounter1_Int]
+                    ._MuseumAndVisitorUI_Object
+                    ._Button
+                    .userData =
+                        _Global_Object
+                            .exhibition_Museum_Object_Array[loopCounter1_Int]
+                            ._MuseumAndVisitorUI_Object
+                            ._Button
+                            .id;
+                museum_Button_Array.push(
+                    _Global_Object
+                        .exhibition_Museum_Object_Array[loopCounter1_Int]
+                        ._MuseumAndVisitorUI_Object
+                        ._Button
+                );
+                _Global_Object
+                    .exhibition_Museum_Object_Array[loopCounter1_Int]
+                    ._MuseumAndVisitorUI_Object
+                    ._Button
+                    .onClick = _Button.onClick;
+
+
+
+
+
+                loopCounter1_Int ++;
+
             }
-            loopCounter1Int = 0;
-            while(loopCounter1Int < _Global_Object.GetFloorObjectArray().length){
-                _Global_Object.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().userData
-                    = _Global_Object.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().id;
-                museum_Button_Array.push(_Global_Object.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject());
-                _Global_Object.GetFloorObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().onClick = _Button.onClick;
-                loopCounter1Int ++;
+
+
+
+
+
+            loopCounter1_Int = 0;
+            while(loopCounter1_Int < _Global_Object.floor_Museum_Object_Array.length){
+
+                _Global_Object
+                    .floor_Museum_Object_Array[loopCounter1_Int]
+                    ._MuseumAndVisitorUI_Object
+                    ._Button
+                    .userData =
+                        _Global_Object
+                            .floor_Museum_Object_Array[loopCounter1_Int]
+                            ._MuseumAndVisitorUI_Object
+                            ._Button
+                            .id;
+                museum_Button_Array.push(
+                    _Global_Object
+                        .floor_Museum_Object_Array[loopCounter1_Int]
+                        ._MuseumAndVisitorUI_Object
+                        ._Button
+                );
+                _Global_Object
+                    .floor_Museum_Object_Array[loopCounter1_Int]
+                    ._MuseumAndVisitorUI_Object
+                    ._Button
+                    .onClick = _Button.onClick;
+
+
+
+
+
+                loopCounter1_Int ++;
+
             }
-            loopCounter1Int = 0;
-            while(loopCounter1Int < _Global_Object.GetRoomObjectArray().length){
-                _Global_Object.GetRoomObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().userData
-                    = _Global_Object.GetRoomObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().id;
-                museum_Button_Array.push(_Global_Object.GetRoomObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject());
-                _Global_Object.GetRoomObjectArray()[loopCounter1Int].GetMuseumUIObject().GetButtonObject().onClick = _Button.onClick;
-                loopCounter1Int ++;
+
+
+
+
+
+            loopCounter1_Int = 0;
+            while(loopCounter1_Int < _Global_Object.room_Museum_Object_Array.length){
+
+                _Global_Object
+                    .room_Museum_Object_Array[loopCounter1_Int]
+                    ._MuseumAndVisitorUI_Object
+                    ._Button
+                    .userData =
+                        _Global_Object
+                            .room_Museum_Object_Array[loopCounter1_Int]
+                            ._MuseumAndVisitorUI_Object
+                            ._Button
+                            .id;
+                museum_Button_Array.push(
+                    _Global_Object
+                        .room_Museum_Object_Array[loopCounter1_Int]
+                        ._MuseumAndVisitorUI_Object
+                        ._Button
+                );
+                _Global_Object
+                    .room_Museum_Object_Array[loopCounter1_Int]
+                    ._MuseumAndVisitorUI_Object
+                    ._Button
+                    .onClick = _Button.onClick;
+
+
+
+
+
+                loopCounter1_Int ++;
+
             }
+
         }
+
+
+
+
 
         if(_Popup != null){
 
             if(
-                type_ListSelector.text                   == ""   ||
-                type_ListSelector.text                   == " "
+                type_ListSelector.text == ""    ||
+                type_ListSelector.text == " "
             ){
                 museum_ListSelector.disabled       = true;
                 museum_ListSelector.selectedIndex  = -1;
                 museum_ListSelector.text           = " ";
             }
             else{ museum_ListSelector.disabled = false; }
+
+
+
+
+
             if(
-                museum_ListSelector.text           == ""   ||
-                museum_ListSelector.text           == " "
+                museum_ListSelector.text == ""  ||
+                museum_ListSelector.text == " "
             ){
-                nameAlt_TextInput.disabled                     = true;
-                nameFull_TextInput.disabled                    = true;
-                parentNameFull_ListSelector.disabled     = true;
+                nameAlt_TextInput.disabled              = true;
+                nameFull_TextInput.disabled             = true;
+                parentNameFull_ListSelector.disabled    = true;
             }
             else{
-                nameAlt_TextInput.disabled                     = false;
-                nameFull_TextInput.disabled                    = false;
-                parentNameFull_ListSelector.disabled     = false;
+                nameAlt_TextInput.disabled              = false;
+                nameFull_TextInput.disabled             = false;
+                parentNameFull_ListSelector.disabled    = false;
             }
+
+
+
+
 
             if(type_ListSelector.selectedIndex != -1){
 
                 museumType_String = type_ListSelector.text;
                 if(museumType_String != museumTypePrev_String){
 
-                    nameAlt_TextInput.disabled = false;
-                    nameAlt_TextInput.text = " ";
-                    nameFull_TextInput.disabled = false;
-                    nameFull_TextInput.text = " ";
                     museum_ListSelector.dataSource.removeAll();
-                    museum_ListSelector.disabled = false;
-                    museum_ListSelector.selectedIndex = -1;
-                    parentNameFull_ListSelector.disabled = false;
-                    parentNameFull_ListSelector.selectedIndex = -1;
+                    museum_ListSelector.disabled                = false;
+                    museum_ListSelector.selectedIndex           = -1;
+                    nameAlt_TextInput.disabled                  = false;
+                    nameAlt_TextInput.text                      = " ";
+                    nameFull_TextInput.disabled                 = false;
+                    nameFull_TextInput.text                     = " ";
+                    parentNameFull_ListSelector.disabled        = false;
+                    parentNameFull_ListSelector.selectedIndex   = -1;
 
-                    var tempObjectArray:Array<Museum_Object> = new Array<Museum_Object>();
-                    if(museumType_String == "Exhibition"){ tempObjectArray = _Global_Object.GetExhibitionObjectArray(); }
-                    else if(museumType_String == "Floor"){ tempObjectArray = _Global_Object.GetFloorObjectArray(); }
-                    else if(museumType_String == "Room"){ tempObjectArray = _Global_Object.GetRoomObjectArray(); }
 
-                    var loopCounter1Int:Int = 0;
-                    while(loopCounter1Int < tempObjectArray.length){
-                        museum_ListSelector.dataSource.createFromString(tempObjectArray[loopCounter1Int].GetNameStruct().nameFullString);
-                        loopCounter1Int ++;
+
+
+
+                    var main_Museum_Object_Array:Array<Museum_Object> = new Array<Museum_Object>();
+                    if(museumType_String == "Exhibition")   { main_Museum_Object_Array = _Global_Object.exhibition_Museum_Object_Array; }
+                    else if(museumType_String == "Floor")   { main_Museum_Object_Array = _Global_Object.floor_Museum_Object_Array; }
+                    else if(museumType_String == "Room")    { main_Museum_Object_Array = _Global_Object.room_Museum_Object_Array; }
+
+
+
+
+
+                    var loopCounter1_Int:Int = 0;
+                    while(loopCounter1_Int < main_Museum_Object_Array.length){
+
+                        museum_ListSelector.dataSource.createFromString(
+                            main_Museum_Object_Array[loopCounter1_Int]
+                                ._MuseumAndVisitorAgnostic_Object
+                                ._Name_Struct
+                                .full_String
+                        );
+
+
+
+
+                        loopCounter1_Int ++;
+
                     }
+
+
+
+
 
                     museumTypePrev_String = museumType_String;
 
@@ -448,164 +643,364 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
             }
 
+
+
+
+
             if(type_ListSelector.text == "Floor"){ parentNameFull_ListSelector.disabled = true; }
             else if(
                 type_ListSelector.text == "Exhibition" ||
                 type_ListSelector.text == "Room"
             ){ parentNameFull_ListSelector.disabled = false; }
 
+
+
+
+
             /*Check which object museum is selected.*/
             if(museum_ListSelector.selectedIndex != -1){
 
-                var typeEnum:EnumMuseumType = null;
-                if(museumType_String == "Exhibition"){ typeEnum = EXH; }
-                else if(museumType_String == "Floor"){ typeEnum = FLR; }
-                else if(museumType_String == "Room"){ typeEnum = ROM; }
+                var _MuseumType_Enum:MuseumType_Enum = null;
+                if(museumType_String == "Exhibition")   { _MuseumType_Enum = EXH; }
+                else if(museumType_String == "Floor")   { _MuseumType_Enum = FLR; }
+                else if(museumType_String == "Room")    { _MuseumType_Enum = ROM; }
 
-                selected_Museum_Object = CollectionFunction.FindMuseumObject(_Global_Object, typeEnum, museum_ListSelector.text);
+
+
+
+
+                selected_Museum_Object = StaticFunction_Collection.Find_Museum_Object(
+                    _Global_Object,
+                    _MuseumType_Enum,
+                    museum_ListSelector.text
+                );
+
+
+
+
 
                 if(selected_Museum_Object != selectedPrev_Museum_Object){
 
-                    var loopCounter1Int:Int = 1;
-                    while(loopCounter1Int <= listSelectorTagStructArray.length){
+                    var loopCounter1_Int:Int = 1;
+                    while(loopCounter1_Int <= tag_ListSelector_Struct_Array.length){
 
-                        var textObject:Text = _Popup.content.findChild("UIPopupEditMuseum_Object_SelectTagText_" + loopCounter1Int, Text, true);
-                        var listSelectorObject:ListSelector = _Popup.content.findChild("UIPopupEditMuseum_Object_SelectTag_" + loopCounter1Int, ListSelector, true);
-                        _Grid.removeChild(textObject);
-                        _Grid.removeChild(listSelectorObject);
-                        loopCounter1Int ++;
+                        var _Text:Text =
+                            _Popup
+                                .content
+                                .findChild(
+                                    "UIPopupEditMuseum_Object_SelectTagText_" + loopCounter1_Int,
+                                    Text,
+                                    true
+                                );
+                        var _ListSelector:ListSelector =
+                            _Popup
+                                .content
+                                .findChild(
+                                    "UIPopupEditMuseum_Object_SelectTag_" + loopCounter1_Int,
+                                    ListSelector,
+                                    true
+                                );
+                        _Grid.removeChild(_Text);
+                        _Grid.removeChild(_ListSelector);
+
+
+
+
+
+                        loopCounter1_Int ++;
 
                     }
-                    CollectionFunction.ClearArray(listSelectorTagStructArray);
+                    StaticFunction_Collection.Clear_T_Array(tag_ListSelector_Struct_Array);
 
-                    loopCounter1Int = 1;
-                    while(loopCounter1Int <= explanation_TextInput_Struct_Array.length){
 
-                        var textObject:Text = _Popup.content.findChild("UIPopupEditMuseum_Object_InputExplanationText_" + loopCounter1Int, Text, true);
-                        var textInputObject:TextInput = _Popup.content.findChild("UIPopupEditMuseum_Object_InputExplanation_" + loopCounter1Int, TextInput, true);
-                        _Grid.removeChild(textObject);
-                        _Grid.removeChild(textInputObject);
-                        loopCounter1Int ++;
+
+
+
+                    loopCounter1_Int = 1;
+                    while(loopCounter1_Int <= explanation_TextInput_Struct_Array.length){
+
+                        var _Text:Text =
+                            _Popup
+                                .content
+                                .findChild(
+                                    "UIPopupEditMuseum_Object_InputExplanationText_" + loopCounter1_Int,
+                                    Text,
+                                    true
+                                );
+                        var _TextInput:TextInput =
+                            _Popup
+                                .content
+                                .findChild(
+                                    "UIPopupEditMuseum_Object_InputExplanation_" + loopCounter1_Int,
+                                    TextInput,
+                                    true
+                                );
+                        _Grid.removeChild(_Text);
+                        _Grid.removeChild(_TextInput);
+
+
+
+
+
+                        loopCounter1_Int ++;
 
                     }
-                    CollectionFunction.ClearArray(explanation_TextInput_Struct_Array);
+                    StaticFunction_Collection.Clear_T_Array(explanation_TextInput_Struct_Array);
 
-                    var fullString:String = "";
-                    if(selected_Museum_Object.GetFullBool() == true){ fullString = "True"; }
-                    else if(selected_Museum_Object.GetFullBool() == false){ fullString = "False"; }
-                    full_Text.text = fullString;
-                    visitorCurrent_Text.text = "" + selected_Museum_Object.GetVisitorCurrentInt();
-                    visitorTotal_Text.text = "" + selected_Museum_Object.GetVisitorTotalInt();
-                    nameAlt_TextInput.disabled = false;
-                    nameAlt_TextInput.text = "";
-                    nameFull_TextInput.disabled = false;
-                    nameFull_TextInput.text = "";
-                    parentNameFull_ListSelector.disabled = false;
-                    parentNameFull_ListSelector.selectedIndex = -1;
 
-                    var explanationAmountInt:Int = 0;
-                    explanationAmountInt = selected_Museum_Object.GetExplanationStringArray().length;
-                    explanationLastIndex_Int = _Grid.indexOfChild(visitorTotal_Text) + 1;
-                    loopCounter1Int = 0;
-                    while(loopCounter1Int < explanationAmountInt){
 
-                        var textObject:Text = new Text();
-                        var textInputObject:TextInput = new TextInput();
+
+
+                    var booleanFull_String:String = "";
+                    if(selected_Museum_Object.GetFullBool()         == true)    { booleanFull_String = "True"; }
+                    else if(selected_Museum_Object.GetFullBool()    == false)   { booleanFull_String = "False"; }
+
+
+
+
+
+                    full_Text.text                              = booleanFull_String;
+                    nameAlt_TextInput.disabled                  = false;
+                    nameAlt_TextInput.text                      = "";
+                    nameFull_TextInput.disabled                 = false;
+                    nameFull_TextInput.text                     = "";
+                    parentNameFull_ListSelector.disabled        = false;
+                    parentNameFull_ListSelector.selectedIndex   = -1;
+                    visitorCurrent_Text.text                    =
+                        "" + selected_Museum_Object._VisitorAgnostic_Object._Visitor_Struct.current_Int;
+                    visitorTotal_Text.text                      =
+                        "" + selected_Museum_Object._VisitorAgnostic_Object._Visitor_Struct.total_Int;
+
+                    var explanationAmount_Int:Int = 0;
+                    explanationAmount_Int =
+                        selected_Museum_Object
+                            ._MuseumAndVisitorAgnostic_Object
+                            .explanation_String_Array
+                            .length;
+                    explanationIndex_Int = _Grid.indexOfChild(visitorTotal_Text) + 1;
+
+
+
+
+
+                    loopCounter1_Int = 0;
+                    while(loopCounter1_Int < explanationAmount_Int){
+
+                        var _Text:Text = new Text();
+                        var _TextInput:TextInput = new TextInput();
                         var textInputExplanationStruct:TextInput_Struct = {
 
-                            textInputObject     :textInputObject,
-                            textObject          :textObject
+                            _TextInput     :_TextInput,
+                            _Text          :_Text
 
                         };
+
+
+
+
+
                         explanation_TextInput_Struct_Array.push(textInputExplanationStruct);
-                        textObject.id = "UIPopupEditMuseum_Object_InputExplanationText_" + explanation_TextInput_Struct_Array.length;
-                        textObject.text = "Explanation";
-                        _Grid.addChildAt(textObject, explanationLastIndex_Int);
-                        explanationLastIndex_Int = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textObject) + 1;
+                        _Text.id = "UIPopupEditMuseum_Object_InputExplanationText_" + explanation_TextInput_Struct_Array.length;
+                        _Text.text = "Explanation";
+                        _Grid.addChildAt(_Text, explanationIndex_Int);
+                        explanationIndex_Int =
+                            _Grid
+                                .indexOfChild(
+                                    explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1]
+                                        ._Text
+                                ) + 1;
 
-                        textInputObject.disabled = false;
-                        textInputObject.id = "UIPopupEditMuseum_Object_InputExplanation_" + explanation_TextInput_Struct_Array.length;
-                        textInputObject.percentWidth = 100;
-                        textInputObject.text = selected_Museum_Object.GetExplanationStringArray()[loopCounter1Int];
-                        _Grid.addChildAt(textInputObject, explanationLastIndex_Int);
-                        explanationLastIndex_Int = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject) + 1;
 
-                        loopCounter1Int ++;
+
+
+
+                        _TextInput.disabled = false;
+                        _TextInput.id = "UIPopupEditMuseum_Object_InputExplanation_" + explanation_TextInput_Struct_Array.length;
+                        _TextInput.percentWidth = 100;
+                        _TextInput.text =
+                            selected_Museum_Object
+                                ._MuseumAndVisitorAgnostic_Object
+                                .explanation_String_Array[loopCounter1_Int];
+                        _Grid.addChildAt(_TextInput, explanationIndex_Int);
+                        explanationIndex_Int =
+                            _Grid
+                                .indexOfChild(
+                                    explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1]
+                                        ._TextInput
+                                ) + 1;
+
+
+
+
+
+                        loopCounter1_Int ++;
 
                     }
-                    /*Set the GUI here.
-                    So everytime the selected object change we reset the GUI so that it matched with information
-                        received from the museum_ListSelector.*/
-                    var tagAmountInt:Int = 0;
-                    tagAmountInt = selected_Museum_Object.GetTagObjectArray().length;
-                    loopCounter1Int = 0;
-                    while(loopCounter1Int < tagAmountInt){
 
-                        var textObject:Text = new Text();
-                        var listSelectorObject:ListSelector = new ListSelector();
+
+
+
+
+                    /*Set the GUI here.
+                    So every time the selected object change we reset the GUI so that it matched with information
+                        received from the museum_ListSelector.*/
+                    var tagAmount_Int:Int = 0;
+                    tagAmount_Int = selected_Museum_Object._Tag_Object_Array.length;
+
+
+
+
+
+                    loopCounter1_Int = 0;
+                    while(loopCounter1_Int < tagAmount_Int){
+
+                        var _Text:Text = new Text();
+                        var _ListSelector:ListSelector = new ListSelector();
                         var listSelectorTagStruct = {
 
-                            listSelectorObject  :listSelectorObject,
-                            textObject          :textObject
+                            _ListSelector  :_ListSelector,
+                            _Text          :_Text
 
                         }
-                        listSelectorTagStructArray.push(listSelectorTagStruct);
-                        textObject.id = "UIPopupEditMuseum_Object_SelectTagText_" + listSelectorTagStructArray.length;
-                        textObject.text = "Tags";
-                        _Grid.addChild(textObject);
-                        listSelectorObject.disabled = false;
-                        listSelectorObject.id = "UIPopupEditMuseum_Object_SelectTag_" + listSelectorTagStructArray.length;
-                        listSelectorObject.percentWidth = 100;
+
+
+
+
+
+                        tag_ListSelector_Struct_Array.push(listSelectorTagStruct);
+                        _Text.id = "UIPopupEditMuseum_Object_SelectTagText_" + tag_ListSelector_Struct_Array.length;
+                        _Text.text = "Tags";
+                        _Grid.addChild(_Text);
+                        _ListSelector.disabled = false;
+                        _ListSelector.id = "UIPopupEditMuseum_Object_SelectTag_" + tag_ListSelector_Struct_Array.length;
+                        _ListSelector.percentWidth = 100;
                         /*CAUTION: I mask the index so the text is actually what it is from the selected_Museum_Object but the selected index
                             is the index after Remove entry.*/
-                        listSelectorObject.selectedIndex = 1;
-                        listSelectorObject.text =  selected_Museum_Object.GetTagObjectArray()[loopCounter1Int].GetNameString();
-                        listSelectorObject.dataSource.createFromString("Remove");
+                        _ListSelector.selectedIndex = 1;
+                        _ListSelector.text =  selected_Museum_Object._Tag_Object_Array[loopCounter1_Int]._TagAgnostic_Object.name_String;
+                        _ListSelector.dataSource.createFromString("Remove");
+
+
+
+
+
                         /*Adding multiple data sources.*/
-                        var loopCounter2Int:Int = 0;
-                        while(loopCounter2Int < _Global_Object.GetTagObjectArray().length){
+                        var loopCounter2_Int:Int = 0;
+                        while(loopCounter2_Int < _Global_Object._Tag_Object_Array.length){
 
-                            var matchBool:Bool = false;
-                            var loopCounter3Int:Int = 0;
-                            while(loopCounter3Int < listSelectorTagStructArray.length){
+                            var match_Bool:Bool = false;
+                            var loopCounter3_Int:Int = 0;
+                            while(loopCounter3_Int < tag_ListSelector_Struct_Array.length){
 
-                                if(_Global_Object.GetTagObjectArray()[loopCounter2Int].GetNameString() == listSelectorTagStructArray[loopCounter3Int].listSelectorObject.text){ matchBool = true; }
-                                loopCounter3Int ++;
+                                if(_Global_Object._Tag_Object_Array[loopCounter2_Int]._TagAgnostic_Object.name_String == tag_ListSelector_Struct_Array[loopCounter3_Int]._ListSelector.text){ match_Bool = true; }
+
+
+
+
+
+                                loopCounter3_Int ++;
 
                             }
 
-                            if(matchBool == false){
-                                listSelectorObject.dataSource.createFromString(_Global_Object.GetTagObjectArray()[loopCounter2Int].GetNameString());
+
+
+
+
+
+                            if(match_Bool == false){
+
+                                _ListSelector
+                                    .dataSource
+                                    .createFromString(
+                                        _Global_Object
+                                            ._Tag_Object_Array[loopCounter2_Int]
+                                            ._TagAgnostic_Object
+                                            .name_String
+                                    );
+
                             }
 
-                            loopCounter2Int ++;
+
+
+
+
+                            loopCounter2_Int ++;
 
                         }
-                        _Grid.addChild(listSelectorObject);
-                        listSelectorObject.method = "default";
 
-                        loopCounter1Int ++;
+
+
+
+
+                        _Grid.addChild(_ListSelector);
+                        _ListSelector.method = "default";
+
+
+
+
+
+                        loopCounter1_Int ++;
 
                     }
-                    nameAlt_TextInput.text = selected_Museum_Object.GetNameStruct().nameAltString;
-                    nameFull_TextInput.text = selected_Museum_Object.GetNameStruct().nameFullString;
+
+
+
+
+
+                    nameAlt_TextInput.text  = selected_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.alt_String
+                    nameFull_TextInput.text = selected_Museum_Object._MuseumAndVisitorAgnostic_Object._Name_Struct.full_String;
+
+
+
+
+
                     if(museumType_String != "Floor"){
-                        parentNameFull_ListSelector.text = selected_Museum_Object.GetParentObject().GetNameStruct().nameFullString;
 
-                        var tempObjectArray:Array<Museum_Object> = null;
-                        if(museumType_String == "Exhibition"){ tempObjectArray = _Global_Object.GetRoomObjectArray(); }
-                        else if(museumType_String == "Room"){ tempObjectArray = _Global_Object.GetFloorObjectArray(); }
+                        parentNameFull_ListSelector.text = s
+                            elected_Museum_Object
+                                .parent_Museum_Object
+                                ._MuseumAndVisitorAgnostic_Object
+                                ._Name_Struct
+                                .full_String;
 
-                        loopCounter1Int = 0;
-                        while(loopCounter1Int < tempObjectArray.length){
 
-                            parentNameFull_ListSelector.dataSource.createFromString(tempObjectArray[loopCounter1Int].GetNameStruct().nameFullString);
-                            loopCounter1Int ++;
+
+
+
+                        var main_Museum_Object_Array:Array<Museum_Object> = null;
+                        if(museumType_String == "Exhibition"){ main_Museum_Object_Array = _Global_Object.room_Museum_Object_Array; }
+                        else if(museumType_String == "Room"){ main_Museum_Object_Array = _Global_Object.floor_Museum_Object_Array; }
+
+
+
+
+
+                        loopCounter1_Int = 0;
+                        while(loopCounter1_Int < main_Museum_Object_Array.length){
+
+                            parentNameFull_ListSelector
+                                .dataSource
+                                .createFromString(
+                                    main_Museum_Object_Array[loopCounter1_Int]
+                                        ._MuseumAndVisitorAgnostic_Object
+                                        ._Name_Struct
+                                        .full_String
+                                    );
+
+
+
+
+
+                            loopCounter1_Int ++;
 
                         }
 
                     }
                     else if(museumType_String == "Floor"){ parentNameFull_ListSelector.disabled = true; }
+
+
+
+
 
                     selectedPrev_Museum_Object = selected_Museum_Object;
 
@@ -615,159 +1010,308 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
         }
 
-        if(_Popup != null && listSelectorTagStructArray.length > 0){
 
-            /*For when the ListSelector struct array is having lenght equal to 1 and loopCounter1Int is not having index equal to the ListSelector array length minus 1,
+
+
+
+        if(_Popup != null && tag_ListSelector_Struct_Array.length > 0){
+
+            /*For when the ListSelector struct array is having length equal to 1 and loopCounter1_Int is not having index equal to the ListSelector array length minus 1,
                 reset the value of the of the following ListSelector.
             If the condition other than those, remove the ListSelector from the ListSelector struct array and from the grid layout.
             This codes below affects when user deleting tags.*/
-            var loopCounter1Int:Int = 0;
-            while(loopCounter1Int < listSelectorTagStructArray.length){
+            var loopCounter1_Int:Int = 0;
+            while(loopCounter1_Int < tag_ListSelector_Struct_Array.length){
 
                 if(
-                    listSelectorTagStructArray.length                                               >  1 &&
-                    listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex    == 0
+                    tag_ListSelector_Struct_Array.length >  1 &&
+                    tag_ListSelector_Struct_Array[loopCounter1_Int]._ListSelector.selectedIndex == 0
                 ){
-                    if(loopCounter1Int == listSelectorTagStructArray.length - 1){
-                        listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex = -1;
+
+                    if(loopCounter1_Int == tag_ListSelector_Struct_Array.length - 1){
+                        tag_ListSelector_Struct_Array[loopCounter1_Int]._ListSelector.selectedIndex = -1;
                     }
                     else{
-                        _Grid.removeChild(listSelectorTagStructArray[loopCounter1Int].listSelectorObject);
-                        _Grid.removeChild(listSelectorTagStructArray[loopCounter1Int].textObject);
-                        listSelectorTagStructArray.remove(listSelectorTagStructArray[loopCounter1Int]);
+                        _Grid.removeChild(tag_ListSelector_Struct_Array[loopCounter1_Int]._ListSelector);
+                        _Grid.removeChild(tag_ListSelector_Struct_Array[loopCounter1_Int]._Text);
+                        tag_ListSelector_Struct_Array.remove(tag_ListSelector_Struct_Array[loopCounter1_Int]);
 
                         /*Re - adjust the list selector id.*/
-                        var loopCounter2Int:Int = 1;
-                        while(loopCounter2Int <= listSelectorTagStructArray.length){
+                        var loopCounter2_Int:Int = 1;
+                        while(loopCounter2_Int <= tag_ListSelector_Struct_Array.length){
 
-                            listSelectorTagStructArray[loopCounter2Int - 1].listSelectorObject.id = "UIPopupEditMuseum_Object_SelectTag_" + loopCounter2Int;
-                            listSelectorTagStructArray[loopCounter2Int - 1].textObject.id = "UIPopupEditMuseum_Object_SelectTagText_" + loopCounter2Int;
-                            loopCounter2Int ++;
+                            tag_ListSelector_Struct_Array[loopCounter2_Int - 1]._ListSelector.id =
+                                "UIPopupEditMuseum_Object_SelectTag_" + loopCounter2_Int;
+                            tag_ListSelector_Struct_Array[loopCounter2_Int - 1]._Text.id =
+                                "UIPopupEditMuseum_Object_SelectTagText_" + loopCounter2_Int;
+
+
+
+
+
+                            loopCounter2_Int ++;
 
                         }
+
                     }
+
                 }
-                else if(listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex == 0 && listSelectorTagStructArray.length == 1){
-                    listSelectorTagStructArray[loopCounter1Int].listSelectorObject.selectedIndex = -1;
-                }
-                loopCounter1Int ++;
+                else if(
+                    tag_ListSelector_Struct_Array[loopCounter1_Int]._ListSelector.selectedIndex == 0 &&
+                    tag_ListSelector_Struct_Array.length == 1
+                ){ tag_ListSelector_Struct_Array[loopCounter1_Int]._ListSelector.selectedIndex = -1; }
+
+
+
+
+
+                loopCounter1_Int ++;
 
             }
 
-            if(listSelectorTagStructArray[listSelectorTagStructArray.length - 1].listSelectorObject.selectedIndex != -1 && listSelectorTagStructArray[listSelectorTagStructArray.length - 1].listSelectorObject.selectedIndex != 0){
 
-                var listSelectorTagTextObject:Text = new Text();
-                var listSelectorTagObject:ListSelector = new ListSelector();
+
+
+
+            if(tag_ListSelector_Struct_Array[tag_ListSelector_Struct_Array.length - 1]._ListSelector.selectedIndex != -1 && tag_ListSelector_Struct_Array[tag_ListSelector_Struct_Array.length - 1]._ListSelector.selectedIndex != 0){
+
+                var tag_ListSelector            :ListSelector   = new ListSelector();
+                var tagListSelector_Text        :Text           = new Text();
                 var listSelectorTagStruct = {
-                    listSelectorObject  :listSelectorTagObject,
-                    textObject          :listSelectorTagTextObject
+
+                    _ListSelector  :tag_ListSelector,
+                    _Text          :tagListSelector_Text
+
                 };
-                listSelectorTagStructArray.push(listSelectorTagStruct);
+                tag_ListSelector_Struct_Array.push(listSelectorTagStruct);
 
 
-                listSelectorTagTextObject = new Text();
-                listSelectorTagTextObject.text = "Tags";
-                listSelectorTagTextObject.id = "UIPopupEditMuseum_Object_SelectTagText_" + listSelectorTagStructArray.length;
-                _Grid.addChild(listSelectorTagTextObject);
 
-                listSelectorTagObject.dataSource.createFromString("Remove");
 
-                listSelectorTagObject.id = "UIPopupEditMuseum_Object_SelectTag_" + listSelectorTagStructArray.length;
-                listSelectorTagObject.percentWidth = 100;
-                listSelectorTagObject.text = " ";
-                _Grid.addChild(listSelectorTagObject);
 
-                var tempUsedTagStringArray:Array<String> = new Array<String>();
+                tagListSelector_Text        = new Text();
+                tagListSelector_Text.text   = "Tags";
+                tagListSelector_Text.id     = "UIPopupEditMuseum_Object_SelectTagText_" + tag_ListSelector_Struct_Array.length;
+                _Grid.addChild(tagListSelector_Text);
+
+
+
+
+
+                tag_ListSelector.dataSource.createFromString("Remove");
+
+
+
+
+
+                tag_ListSelector.id             = "UIPopupEditMuseum_Object_SelectTag_" + tag_ListSelector_Struct_Array.length;
+                tag_ListSelector.percentWidth   = 100;
+                tag_ListSelector.text           = " ";
+                _Grid.addChild(tag_ListSelector);
+
+
+
+
+
+
+                var tempTagName_String_Array:Array<String> = new Array<String>();
                 /*This loop is for adding every possible tags into the list selector.*/
-                var loopCounter1Int:Int = 0;
-                while(loopCounter1Int < _Global_Object.GetTagObjectArray().length){
-                    tempUsedTagStringArray.push(_Global_Object.GetTagObjectArray()[loopCounter1Int].GetNameString());
-                    loopCounter1Int ++;
+                var loopCounter1_Int:Int = 0;
+                while(loopCounter1_Int < _Global_Object._Tag_Object_Array.length){
+
+                    tempTagName_String_Array.push(
+                        _Global_Object
+                            ._Tag_Object_Array[loopCounter1_Int]
+                            ._TagAgnostic_Object
+                            .name_String
+                    );
+
+
+
+
+
+                    loopCounter1_Int ++;
+
                 }
+
+
+
+
+
                 /*This loop is for removing tag that is inputted in previous list selector.*/
-                loopCounter1Int = 1;
-                while(loopCounter1Int <= listSelectorTagStructArray.length){
+                loopCounter1_Int = 1;
+                while(loopCounter1_Int <= tag_ListSelector_Struct_Array.length){
 
-                    var tempListSelectorTagObject:ListSelector = _Popup.content.findChild("UIPopupEditMuseum_Object_SelectTag_" + loopCounter1Int, ListSelector, true);
-                    tempUsedTagStringArray.remove(tempListSelectorTagObject.text);
-                    loopCounter1Int ++;
+                    var tempTag_ListSelector:ListSelector =
+                        _Popup
+                            .content
+                            .findChild(
+                                "UIPopupEditMuseum_Object_SelectTag_" + loopCounter1_Int,
+                                ListSelector,
+                                true
+                            );
+                    tempTagName_String_Array.remove(tempTag_ListSelector.text);
+
+
+
+
+
+                    loopCounter1_Int ++;
 
                 }
+
+
+
+
+
                 /*Add every tag that is not yet added within the museum object into the list selector.*/
-                loopCounter1Int = 0;
-                while(loopCounter1Int < tempUsedTagStringArray.length){
+                loopCounter1_Int = 0;
+                while(loopCounter1_Int < tempTagName_String_Array.length){
 
-                    listSelectorTagObject.dataSource.createFromString(tempUsedTagStringArray[loopCounter1Int]);
-                    loopCounter1Int ++;
+                    tag_ListSelector.dataSource.createFromString(tempTagName_String_Array[loopCounter1_Int]);
+
+
+
+
+
+                    loopCounter1_Int ++;
 
                 }
 
-                listSelectorTagObject.method = "default"; /*For some reason you need this to be configured after the object is initialized in the screen.*/
+
+
+
+
+                /*For some reason you need this to be configured after the object is initialized in the screen.*/
+                tag_ListSelector.method = "default";
 
             }
 
         }
 
+
+
+
+
         if(_Popup != null && explanation_TextInput_Struct_Array.length > 0){
 
-            var loopCounter1Int:Int = 0;
-            while(loopCounter1Int < explanation_TextInput_Struct_Array.length){
+            /*For explanation I need to make sure to remove all list selector
+                hat is not in the last index of the text input struct and also not the first.
+            If the struct is either in the first position or in the last position then
+                just do nothing about it.*/
+            var loopCounter1_Int:Int = 0;
+            while(loopCounter1_Int < explanation_TextInput_Struct_Array.length){
 
+                /*If there is nothing written in the text input or just a space
+                    and the length of the struct is larger than 1 then delete the user interface element.*/
                 if(
                     (
-                        explanation_TextInput_Struct_Array[loopCounter1Int].textInputObject.text == "" ||
-                        explanation_TextInput_Struct_Array[loopCounter1Int].textInputObject.text == " "
+                        explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject.text == "" ||
+                        explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject.text == " "
                     ) &&
                     explanation_TextInput_Struct_Array.length > 1
                 ){
 
-                    /*PENDING: Might need some checking here due to it it quite different than the original
-                        codes.*/
-                    if(loopCounter1Int != explanation_TextInput_Struct_Array.length - 1){
+                    /*If the explanation text input is the latest in the array, then I simply need to
+                        reset the value and it is not necessary to delete it.
+                    Because if it is the latest text input in the array if I delete it it will just created
+                        a new one because the new latest index is filled with a valid value.
+                    So this if statement is made to prevent unnecessary loop.*/
+                    if(loopCounter1_Int != explanation_TextInput_Struct_Array.length - 1){
 
-                        _Grid.removeChild(explanation_TextInput_Struct_Array[loopCounter1Int].textInputObject);
-                        _Grid.removeChild(explanation_TextInput_Struct_Array[loopCounter1Int].textObject);
-                        explanation_TextInput_Struct_Array.remove(explanation_TextInput_Struct_Array[loopCounter1Int]);
+                        _Grid.removeChild
+                            (explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject);
+                        _Grid.removeChild
+                            (explanation_TextInput_Struct_Array[loopCounter1_Int].textObject);
+                        explanation_TextInput_Struct_Array.remove
+                            (explanation_TextInput_Struct_Array[loopCounter1_Int]);
 
-                        var loopCounter2Int:Int = 1;
-                        while(loopCounter2Int <= explanation_TextInput_Struct_Array.length){
 
-                            explanation_TextInput_Struct_Array[loopCounter2Int - 1].textInputObject.id = "UIPopupEditMuseum_Object_InputExplanation_" + loopCounter2Int;
-                            explanation_TextInput_Struct_Array[loopCounter2Int - 1].textObject.id = "UIPopupEditMuseum_Object_InputExplanationText_" + loopCounter2Int;
-                            loopCounter2Int ++;
+
+
+
+                        /*Re - adjust all explanation text input id.*/
+                        var loopCounter2_Int:Int = 1;
+                        while(loopCounter2_Int <= explanation_TextInput_Struct_Array.length){
+
+                            explanation_TextInput_Struct_Array[loopCounter2_Int - 1]
+                                .textInputObject.id =
+                                    "UIPopupEditMuseum_Object_InputExplanation_" + loopCounter2_Int;
+                            explanation_TextInput_Struct_Array[loopCounter2_Int - 1]
+                                .textObject.id =
+                                    "UIPopupEditMuseum_Object_InputExplanationText_" + loopCounter2_Int;
+
+
+
+
+
+                            loopCounter2_Int ++;
 
                         }
-                        explanationLastIndex_Int = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject) + 1;
 
                     }
 
                 }
-                loopCounter1Int ++;
+
+
+
+
+
+                explanationIndex_Int = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject) + 1;
+                loopCounter1_Int ++;
 
             }
 
+
+
+
+
+            /*This if statement is to insert a new element into into the popup user interface.
+            Check the latest index of the struct array.*/
             if(
                 explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject.text != "" &&
                 explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject.text != " "
             ){
 
-                var textInputExplanationTextObject:Text = new Text();
-                var textInputExplanationObject:TextInput = new TextInput();
-                var textInputExplanationStruct = {
-                    textInputObject     : textInputExplanationObject,
-                    textObject          : textInputExplanationTextObject
+                /*Create a temporary struct to hold the user interface object.*/
+                var explanation_Text        :Text       = new Text();
+                var explanation_TextInput   :TextInput  = new TextInput();
+                var _TextInput_Struct = {
+
+                    textInputObject     : explanation_TextInput,
+                    textObject          : explanation_Text
+
                 };
-                explanation_TextInput_Struct_Array.push(textInputExplanationStruct);
+                /*Push the struct into the struct user interface array.*/
+                explanation_TextInput_Struct_Array.push(_TextInput_Struct);
 
-                textInputExplanationTextObject.text = "Explanation";
-                textInputExplanationTextObject.id = "UIPopupEditMuseum_Object_InputExplanationText_" + explanation_TextInput_Struct_Array.length;
-                _Grid.addChildAt(textInputExplanationTextObject, explanationLastIndex_Int);
-                explanationLastIndex_Int = _Grid.indexOfChild(textInputExplanationTextObject) + 1;
 
-                textInputExplanationObject.id = "UIPopupEditMuseum_Object_InputExplanation_" + explanation_TextInput_Struct_Array.length;
-                textInputExplanationObject.percentWidth = 100;
-                _Grid.addChildAt(textInputExplanationObject, explanationLastIndex_Int);
-                explanationLastIndex_Int = _Grid.indexOfChild(textInputExplanationObject) + 1;
+
+
+
+                /*The first user interface element.*/
+                explanation_Text.id =
+                    "UIPopupEditMuseum_Object_InputExplanationText_" +
+                    explanation_TextInput_Struct_Array.length;
+                explanation_Text.text = "Explanation";
+                _Grid.addChildAt(explanation_Text, explanationIndex_Int);
+                /*CAUTION: Do not forget to always set the latest index.
+                CAUTION: So that any new user interface element will be added after this index.*/
+                explanationIndex_Int = _Grid.indexOfChild(explanation_Text) + 1;
+
+
+
+
+
+                /*The second user interrace element.*/
+                explanation_TextInput.id =
+                    "UIPopupEditMuseum_Object_InputExplanation_" +
+                    explanation_TextInput_Struct_Array.length;
+                explanation_TextInput.percentWidth = 100;
+                _Grid.addChildAt(explanation_TextInput, explanationIndex_Int);
+                /*CAUTION: Do not forget to always set the latest index.
+                CAUTION: So that any new user interface element will be added after this index.*/
+                explanationIndex_Int = _Grid.indexOfChild(explanation_TextInput) + 1;
 
             }
 

@@ -353,7 +353,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
         if(_Popup != null && tag_ListSelector_Struct_Array.length > 0){
 
-            /*For when the ListSelector struct array is having lenght equal to 1 and
+            /*For when the ListSelector struct array is having length equal to 1 and
                 loopCounter1_Int is not having an index equal to the ListSelector
                 array length minus 1 (last index), reset the value of the of the
                 following ListSelector.
@@ -374,10 +374,10 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
                 ){
 
                     /*If the tag list selector is the latest in the array, then I simply need to
-                        reset the vaue and it is not neccessary to delete it.
+                        reset the value and it is not necessary to delete it.
                     Because it is the latest list selector in the array if I delete it it will just created
                         a new one because the new latest index is filled with a valid value.
-                    So this if statement is made to prevent unecessary loop.*/
+                    So this if statement is made to prevent unnecessary loop.*/
                     if(loopCounter1_Int == tag_ListSelector_Struct_Array.length - 1){
 
                         tag_ListSelector_Struct_Array[loopCounter1_Int]
@@ -463,8 +463,10 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
                 var tag_ListSelector    :ListSelector   = new ListSelector();
                 var tag_Text            :Text           = new Text();
                 var _ListSelector_Struct = {
+
                     listSelectorObject  :tag_ListSelector,
                     textObject          :tag_Text
+
                 };
                 /*Push the struct into the struct user interface array.*/
                 tag_ListSelector_Struct_Array.push(_ListSelector_Struct);
@@ -615,7 +617,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
             while(loopCounter1_Int < explanation_TextInput_Struct_Array.length){
 
                 /*If there is nothing written in the text input or just a space
-                    and the lenght of the struct is larger than 1 then delete the user interface element.*/
+                    and the length of the struct is larger than 1 then delete the user interface element.*/
                 if(
                     (
                         explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject.text == "" ||
@@ -624,11 +626,11 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
                     explanation_TextInput_Struct_Array.length > 1
                 ){
 
-                    /*If the explanation text inputt is the latest in the array, then I simply need to
-                        reset the vaue and it is not neccessary to delete it.
+                    /*If the explanation text input is the latest in the array, then I simply need to
+                        reset the value and it is not necessary to delete it.
                     Because if it is the latest text input in the array if I delete it it will just created
                         a new one because the new latest index is filled with a valid value.
-                    So this if statement is made to prevent unecessary loop.*/
+                    So this if statement is made to prevent unnecessary loop.*/
                     if(loopCounter1_Int != explanation_TextInput_Struct_Array.length - 1){
 
                         _Grid.removeChild
@@ -689,8 +691,10 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
                 var explanation_Text        :Text       = new Text();
                 var explanation_TextInput   :TextInput  = new TextInput();
                 var _TextInput_Struct = {
+
                     textInputObject     : explanation_TextInput,
                     textObject          : explanation_Text
+
                 };
                 /*Push the struct into the struct user interface array.*/
                 explanation_TextInput_Struct_Array.push(_TextInput_Struct);
@@ -729,3 +733,9 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
     }
     /*==================================================*/
+
+
+
+
+
+}
