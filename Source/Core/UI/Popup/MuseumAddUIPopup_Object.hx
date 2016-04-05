@@ -204,132 +204,83 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-        /*Check if the requirements.
-        Check for null pointer references.*/
-        if(
-            _Popup                  != null &&  /*The main popup object.*/
-            parent_ListSelector     != null &&  /*List selector object to select parent object*/
-            type_ListSelector       != null     /*List selector object to select type of museum object that will be added.*/
-        ){
+        this
+            .UpdateExplanation_MuseumAddUIPopup_Object()
+            .UpdateTag_MuseumAddUIPopup_Object()
+            .UpdateType_MuseumAddUIPopup_Object();
 
-            /*If the type is not yet choosen, it will either,
-                has selectedIndex of -1,
-                has text of an empty String, or
-                has text of a String with only a space.*/
-            if(
-                type_ListSelector.selectedIndex     == -1   ||
-                type_ListSelector.text              == " "  ||
-                type_ListSelector.text              == ""
-            ){
-
-                /*If the type is not yet choosen I need to disable some of these components.
-                PENDING: Re - check if these components are the really necessary components
-                    to be disabled.*/
-                explanation_TextInput.disabled      = true;
-                nameAlt_TextInput.disabled          = true;
-                nameFull_TextInput.disabled         = true;
-                parent_ListSelector.disabled        = true;
-                tag_ListSelector.disabled           = true;
-
-            }
-            /*This else statement is happened when the type of the museum object is choosen.
-            If so enabled some of necessary user interface elements.*/
-            else{
-
-                explanation_TextInput.disabled      = false;
-                nameAlt_TextInput.disabled          = false;
-                nameFull_TextInput.disabled         = false;
-                tag_ListSelector.disabled           = false;
-
-            }
+    }
+    /*==================================================*/
 
 
 
 
 
-            /*Specifically if the type selected is floor then disable the
-                list selector object for choosing parent object.
-            Because floor object has no parent.*/
-            if(type_ListSelector.text != "Floor")
-                { parent_ListSelector.disabled = false; }
+    /*==================================================
+    Function to update explanation text input.
+    So when there is an explanation at least a String that is not empty (" ")
+        in the latest explanation text input this function automatically
+        add text input.
+    When there is explanation that is empty or has empty String this functions
+        removes that text input and re - adjust the the id name
+        of all explanation text input.*/
+    private function UpdateExplanation_MuseumAddUIPopup_Object(){
 
+        if(_Popup != null && explanation_TextInput_Struct_Array.length > 0){
 
+            /*For explanation I need to make sure to remove all list selector
+                hat is not in the last index of the text input struct and also not the first.
+            If the struct is either in the first position or in the last position then
+                just do nothing about it.*/
+            var loopCounter1_Int:Int = 0;
+            while(loopCounter1_Int < explanation_TextInput_Struct_Array.length){
 
-
-
-            /*Assign the type selector integer number.
-            This variable is exists so that I can detect change.
-            Because if there is change there are some user interface elements
-                should be re - set back.*/
-            type_Int = type_ListSelector.selectedIndex;
-            if(type_Int == -1){ parent_ListSelector.disabled = true; }
-
-
-
-
-
-            /*If there is a change in type integer number.*/
-            if(type_Int != typePrev_Int){
-
-                /*Remove all entry in the list selector for parent museum object.*/
-                parent_ListSelector.dataSource.removeAll();
-                /*Reset the index back to -1.*/
-                parent_ListSelector.selectedIndex = -1;
-
-
-
-
-
-                /*Determine from which array the parent object list selector should be
-                    filled.*/
-                var main_Museum_Object_Array:Array<Museum_Object> = null;
-                /*For exhibition and room object re - enable parent_ListSelector.
-                Type integer number 0 is an exhibition museum type object, hence
-                    the parent object should be taken from room museum object array*/
-                if(type_Int == 0){
-
-                    parent_ListSelector.disabled = false;
-                    main_Museum_Object_Array = _Global_Object.room_Museum_Object_Array;
-
-                }
-                /*Keep disable parent_ListSelector if type_Int refers to floor museum object.*/
-                else if(type_Int == 1){ parent_ListSelector.disabled = true; }
-                /*Type integer 2 is for room object.
-                Hence, I need to take floor object array as the contents of the parent list
-                    selector object.*/
-                else if(type_Int == 2){
-
-                    parent_ListSelector.disabled = false;
-                    main_Museum_Object_Array = _Global_Object.floor_Museum_Object_Array;
-
-                }
-
-
-
-
-
-                /*If the museum type is not floor object and is not the default -1
-                    then populate the parent_ListSelector with the object museum object.*/
+                /*If there is nothing written in the text input or just a space
+                    and the length of the struct is larger than 1 then delete the user interface element.*/
                 if(
-                    type_Int != -1 &&
-                    type_Int != 1
+                    (
+                        explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject.text == "" ||
+                        explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject.text == " "
+                    ) &&
+                    explanation_TextInput_Struct_Array.length > 1
                 ){
 
-                    var loopCounter1_Int:Int = 0;
-                    while(loopCounter1_Int < main_Museum_Object_Array.length){
+                    /*If the explanation text input is the latest in the array, then I simply need to
+                        reset the value and it is not necessary to delete it.
+                    Because if it is the latest text input in the array if I delete it it will just created
+                        a new one because the new latest index is filled with a valid value.
+                    So this if statement is made to prevent unnecessary loop.*/
+                    if(loopCounter1_Int != explanation_TextInput_Struct_Array.length - 1){
 
-                        parent_ListSelector.dataSource.createFromString(
-                            main_Museum_Object_Array[loopCounter1_Int]
-                                ._MuseumAndVisitorAgnostic_Object
-                                ._Name_Struct
-                                .alt_String
-                        );
+                        _Grid.removeChild
+                            (explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject);
+                        _Grid.removeChild
+                            (explanation_TextInput_Struct_Array[loopCounter1_Int].textObject);
+                        explanation_TextInput_Struct_Array.remove
+                            (explanation_TextInput_Struct_Array[loopCounter1_Int]);
 
 
 
 
 
-                        loopCounter1_Int ++;
+                        /*Re - adjust all explanation text input id.*/
+                        var loopCounter2_Int:Int = 1;
+                        while(loopCounter2_Int <= explanation_TextInput_Struct_Array.length){
+
+                            explanation_TextInput_Struct_Array[loopCounter2_Int - 1]
+                                .textInputObject.id =
+                                    "UIPopupAddMuseum_Object_InputExplanation_" + loopCounter2_Int;
+                            explanation_TextInput_Struct_Array[loopCounter2_Int - 1]
+                                .textObject.id =
+                                    "UIPopupAddMuseum_Object_InputExplanationText_" + loopCounter2_Int;
+
+
+
+
+
+                            loopCounter2_Int ++;
+
+                        }
 
                     }
 
@@ -339,9 +290,8 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-                /*Make sure to hae the type for both now and previous type integer the
-                    same again so that it can detect change.*/
-                typePrev_Int = type_Int;
+                explanationIndex_Int = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject) + 1;
+                loopCounter1_Int ++;
 
             }
 
@@ -349,7 +299,78 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
+            /*This if statement is to insert a new element into into the pop up user interface.
+            Check the latest index of the struct array.*/
+            if(
+                explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject.text != "" &&
+                explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject.text != " "
+            ){
+
+                /*Create a temporary struct to hold the user interface object.*/
+                var explanation_Text        :Text       = new Text();
+                var explanation_TextInput   :TextInput  = new TextInput();
+                var _TextInput_Struct = {
+
+                    textInputObject     : explanation_TextInput,
+                    textObject          : explanation_Text
+
+                };
+                /*Push the struct into the struct user interface array.*/
+                explanation_TextInput_Struct_Array.push(_TextInput_Struct);
+
+
+
+
+
+                /*The first user interface element.*/
+                explanation_Text.id =
+                    "UIPopupAddMuseum_Object_InputExplanationText_" +
+                    explanation_TextInput_Struct_Array.length;
+                explanation_Text.text = "Explanation";
+                _Grid.addChildAt(explanation_Text, explanationIndex_Int);
+                /*CAUTION: Do not forget to always set the latest index.
+                CAUTION: So that any new user interface element will be added after this index.*/
+                explanationIndex_Int = _Grid.indexOfChild(explanation_Text) + 1;
+
+
+
+
+
+                /*The second user interface element.*/
+                explanation_TextInput.id =
+                    "UIPopupAddMuseum_Object_InputExplanation_" +
+                    explanation_TextInput_Struct_Array.length;
+                explanation_TextInput.percentWidth = 100;
+                _Grid.addChildAt(explanation_TextInput, explanationIndex_Int);
+                /*CAUTION: Do not forget to always set the latest index.
+                CAUTION: So that any new user interface element will be added after this index.*/
+                explanationIndex_Int = _Grid.indexOfChild(explanation_TextInput) + 1;
+
+            }
+
         }
+
+
+
+
+
+        return this;
+
+    }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================
+    Function to update tag list selector.
+    So when there is a tag selected in the latest tag selector
+        this function automatically add new list selector.
+    When there is tag that is chosen to be removed this function
+        remove that list selector and re - adjust the the id name
+        of all tag list selector.*/
+    private void UpdateTag_MuseumAddUIPopup_Object(){
 
         if(_Popup != null && tag_ListSelector_Struct_Array.length > 0){
 
@@ -452,7 +473,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-            /*This if statement is to insert a new element into into the popup user interface.
+            /*This if statement is to insert a new element into into the pop up user interface.
             Check the latest index of this */
             if(
                 tag_ListSelector_Struct_Array[tag_ListSelector_Struct_Array.length - 1].listSelectorObject.selectedIndex != -1 &&
@@ -489,7 +510,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-                /*The second user interrace element.*/
+                /*The second user interface element.*/
                 tag_ListSelector.dataSource.createFromString("Remove");
                 tag_ListSelector.id =
                     "UIPopupAddMuseum_Object_SelectTag_" + tag_ListSelector_Struct_Array.length;
@@ -550,7 +571,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-                /*This loop is to remve all tags those have been choosed before so that it
+                /*This loop is to remove all tags those have been choose before so that it
                     will not appeared again.*/
                 loopCounter1_Int = 1;
                 while(loopCounter1_Int <= tag_ListSelector_Struct_Array.length){
@@ -575,7 +596,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-                /*Finaly push all temporary tag into the list selector.*/
+                /*Finally push all temporary tag into the list selector.*/
                 loopCounter1_Int = 0;
                 while(loopCounter1_Int < temp_Tag_Object_Array.length){
 
@@ -607,61 +628,147 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-        if(_Popup != null && explanation_TextInput_Struct_Array.length > 0){
+        return this;
 
-            /*For explanation I need to make sure to remove all list selector
-                hat is not in the last index of the text input struct and also not the first.
-            If the struct is either in the first position or in the last position then
-                just do nothing about it.*/
-            var loopCounter1_Int:Int = 0;
-            while(loopCounter1_Int < explanation_TextInput_Struct_Array.length){
+    }
+    /*==================================================*/
 
-                /*If there is nothing written in the text input or just a space
-                    and the length of the struct is larger than 1 then delete the user interface element.*/
+
+
+
+
+    /*==================================================
+    A function to update the pop up user interface when a new museum type is chosen.
+    So that I can re - generate the parent museum object list selector.*/
+    private function UpdateType_MuseumAddUIPopup_Object(){
+
+        /*Check if the requirements.
+        Check for null pointer references.*/
+        if(
+            _Popup                  != null &&  /*The main pop up object.*/
+            parent_ListSelector     != null &&  /*List selector object to select parent object*/
+            type_ListSelector       != null     /*List selector object to select type of museum object that will be added.*/
+        ){
+
+            /*If the type is not yet chosen, it will either,
+                has selectedIndex of -1,
+                has text of an empty String, or
+                has text of a String with only a space.*/
+            if(
+                type_ListSelector.selectedIndex     == -1   ||
+                type_ListSelector.text              == " "  ||
+                type_ListSelector.text              == ""
+            ){
+
+                /*If the type is not yet chosen I need to disable some of these components.
+                PENDING: Re - check if these components are the really necessary components
+                    to be disabled.*/
+                explanation_TextInput.disabled      = true;
+                nameAlt_TextInput.disabled          = true;
+                nameFull_TextInput.disabled         = true;
+                parent_ListSelector.disabled        = true;
+                tag_ListSelector.disabled           = true;
+
+            }
+            /*This else statement is happened when the type of the museum object is chosen.
+            If so enabled some of necessary user interface elements.*/
+            else{
+
+                explanation_TextInput.disabled      = false;
+                nameAlt_TextInput.disabled          = false;
+                nameFull_TextInput.disabled         = false;
+                tag_ListSelector.disabled           = false;
+
+            }
+
+
+
+
+
+            /*Specifically if the type selected is floor then disable the
+                list selector object for choosing parent object.
+            Because floor object has no parent.*/
+            if(type_ListSelector.text != "Floor")
+                { parent_ListSelector.disabled = false; }
+
+
+
+
+
+            /*Assign the type selector integer number.
+            This variable is exists so that I can detect change.
+            Because if there is change there are some user interface elements
+                should be re - set back.*/
+            type_Int = type_ListSelector.selectedIndex;
+            if(type_Int == -1){ parent_ListSelector.disabled = true; }
+
+
+
+
+
+            /*If there is a change in type integer number.*/
+            if(type_Int != typePrev_Int){
+
+                /*Remove all entry in the list selector for parent museum object.*/
+                parent_ListSelector.dataSource.removeAll();
+                /*Reset the index back to -1.*/
+                parent_ListSelector.selectedIndex = -1;
+
+
+
+
+
+                /*Determine from which array the parent object list selector should be
+                    filled.*/
+                var main_Museum_Object_Array:Array<Museum_Object> = null;
+                /*For exhibition and room object re - enable parent_ListSelector.
+                Type integer number 0 is an exhibition museum type object, hence
+                    the parent object should be taken from room museum object array*/
+                if(type_Int == 0){
+
+                    parent_ListSelector.disabled = false;
+                    main_Museum_Object_Array = _Global_Object.room_Museum_Object_Array;
+
+                }
+                /*Keep disable parent_ListSelector if type_Int refers to floor museum object.*/
+                else if(type_Int == 1){ parent_ListSelector.disabled = true; }
+                /*Type integer 2 is for room object.
+                Hence, I need to take floor object array as the contents of the parent list
+                    selector object.*/
+                else if(type_Int == 2){
+
+                    parent_ListSelector.disabled = false;
+                    main_Museum_Object_Array = _Global_Object.floor_Museum_Object_Array;
+
+                }
+
+
+
+
+
+                /*If the museum type is not floor object and is not the default -1
+                    then populate the parent_ListSelector with the object museum object.*/
                 if(
-                    (
-                        explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject.text == "" ||
-                        explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject.text == " "
-                    ) &&
-                    explanation_TextInput_Struct_Array.length > 1
+                    main_Museum_Object_Array    != null     &&
+                    type_Int                    != -1       &&
+                    type_Int                    != 1
                 ){
 
-                    /*If the explanation text input is the latest in the array, then I simply need to
-                        reset the value and it is not necessary to delete it.
-                    Because if it is the latest text input in the array if I delete it it will just created
-                        a new one because the new latest index is filled with a valid value.
-                    So this if statement is made to prevent unnecessary loop.*/
-                    if(loopCounter1_Int != explanation_TextInput_Struct_Array.length - 1){
+                    var loopCounter1_Int:Int = 0;
+                    while(loopCounter1_Int < main_Museum_Object_Array.length){
 
-                        _Grid.removeChild
-                            (explanation_TextInput_Struct_Array[loopCounter1_Int].textInputObject);
-                        _Grid.removeChild
-                            (explanation_TextInput_Struct_Array[loopCounter1_Int].textObject);
-                        explanation_TextInput_Struct_Array.remove
-                            (explanation_TextInput_Struct_Array[loopCounter1_Int]);
+                        parent_ListSelector.dataSource.createFromString(
+                            main_Museum_Object_Array[loopCounter1_Int]
+                                ._MuseumAndVisitorAgnostic_Object
+                                ._Name_Struct
+                                .alt_String
+                        );
 
 
 
 
 
-                        /*Re - adjust all explanation text input id.*/
-                        var loopCounter2_Int:Int = 1;
-                        while(loopCounter2_Int <= explanation_TextInput_Struct_Array.length){
-
-                            explanation_TextInput_Struct_Array[loopCounter2_Int - 1]
-                                .textInputObject.id =
-                                    "UIPopupAddMuseum_Object_InputExplanation_" + loopCounter2_Int;
-                            explanation_TextInput_Struct_Array[loopCounter2_Int - 1]
-                                .textObject.id =
-                                    "UIPopupAddMuseum_Object_InputExplanationText_" + loopCounter2_Int;
-
-
-
-
-
-                            loopCounter2_Int ++;
-
-                        }
+                        loopCounter1_Int ++;
 
                     }
 
@@ -671,65 +778,19 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-                explanationIndex_Int = _Grid.indexOfChild(explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject) + 1;
-                loopCounter1_Int ++;
-
-            }
-
-
-
-
-
-            /*This if statement is to insert a new element into into the popup user interface.
-            Check the latest index of the struct array.*/
-            if(
-                explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject.text != "" &&
-                explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject.text != " "
-            ){
-
-                /*Create a temporary struct to hold the user interface object.*/
-                var explanation_Text        :Text       = new Text();
-                var explanation_TextInput   :TextInput  = new TextInput();
-                var _TextInput_Struct = {
-
-                    textInputObject     : explanation_TextInput,
-                    textObject          : explanation_Text
-
-                };
-                /*Push the struct into the struct user interface array.*/
-                explanation_TextInput_Struct_Array.push(_TextInput_Struct);
-
-
-
-
-
-                /*The first user interface element.*/
-                explanation_Text.id =
-                    "UIPopupAddMuseum_Object_InputExplanationText_" +
-                    explanation_TextInput_Struct_Array.length;
-                explanation_Text.text = "Explanation";
-                _Grid.addChildAt(explanation_Text, explanationIndex_Int);
-                /*CAUTION: Do not forget to always set the latest index.
-                CAUTION: So that any new user interface element will be added after this index.*/
-                explanationIndex_Int = _Grid.indexOfChild(explanation_Text) + 1;
-
-
-
-
-
-                /*The second user interrace element.*/
-                explanation_TextInput.id =
-                    "UIPopupAddMuseum_Object_InputExplanation_" +
-                    explanation_TextInput_Struct_Array.length;
-                explanation_TextInput.percentWidth = 100;
-                _Grid.addChildAt(explanation_TextInput, explanationIndex_Int);
-                /*CAUTION: Do not forget to always set the latest index.
-                CAUTION: So that any new user interface element will be added after this index.*/
-                explanationIndex_Int = _Grid.indexOfChild(explanation_TextInput) + 1;
+                /*Make sure to have the type for both now and previous type integer the
+                    same again so that it can detect change.*/
+                typePrev_Int = type_Int;
 
             }
 
         }
+
+
+
+
+
+        return this;
 
     }
     /*==================================================*/

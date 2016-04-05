@@ -1266,7 +1266,7 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-            /*This if statement is to insert a new element into into the popup user interface.
+            /*This if statement is to insert a new element into into the pop up user interface.
             Check the latest index of the struct array.*/
             if(
                 explanation_TextInput_Struct_Array[explanation_TextInput_Struct_Array.length - 1].textInputObject.text != "" &&
@@ -1303,7 +1303,7 @@ class MuseumEditPopupUI_Object extends MuseumAddAndEditUIPopup_Object{
 
 
 
-                /*The second user interrace element.*/
+                /*The second user interface element.*/
                 explanation_TextInput.id =
                     "UIPopupEditMuseum_Object_InputExplanation_" +
                     explanation_TextInput_Struct_Array.length;
