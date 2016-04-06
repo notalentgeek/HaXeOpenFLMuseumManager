@@ -117,6 +117,14 @@ class TagAddAndEditUIPopup_Object extends UIPopup_Object{
 
 
     /*==================================================*/
+    private function Assign_Void():Void{ super.Assign_Void(); }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
     private function Button_Void(_addAndEdit_Function:Function):Void{
 
         super.Button_Void();
@@ -421,6 +429,14 @@ class TagAddAndEditUIPopup_Object extends UIPopup_Object{
         verbS_TextInput.text                = " ";
 
     }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    private function Update_Void():Void{ super.Update_Void(); }
     /*==================================================*/
 
 

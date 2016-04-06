@@ -224,7 +224,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
     When there is explanation that is empty or has empty String this functions
         removes that text input and re - adjust the the id name
         of all explanation text input.*/
-    private function UpdateExplanation_MuseumAddUIPopup_Object(){
+    private function UpdateExplanation_MuseumAddUIPopup_Object():MuseumAddUIPopup_Object{
 
         if(_Popup != null && explanation_TextInput_Struct_Array.length > 0){
 
@@ -370,7 +370,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
     When there is tag that is chosen to be removed this function
         remove that list selector and re - adjust the the id name
         of all tag list selector.*/
-    private void UpdateTag_MuseumAddUIPopup_Object(){
+    private function UpdateTag_MuseumAddUIPopup_Object():MuseumAddUIPopup_Object{
 
         if(_Popup != null && tag_ListSelector_Struct_Array.length > 0){
 
@@ -640,7 +640,7 @@ class MuseumAddUIPopup_Object extends MuseumAddAndEditUIPopup_Object{
     /*==================================================
     A function to update the pop up user interface when a new museum type is chosen.
     So that I can re - generate the parent museum object list selector.*/
-    private function UpdateType_MuseumAddUIPopup_Object(){
+    private function UpdateType_MuseumAddUIPopup_Object():MuseumAddUIPopup_Object{
 
         /*Check if the requirements.
         Check for null pointer references.*/

@@ -44,12 +44,21 @@ class MuseumAddAndEditUIPopup_Object extends UIPopup_Object{
 
     }
     /*==================================================*/
-    
+
+
 
 
 
     /*==================================================*/
-    private class Button_Void(_addAndEdit_Function:Function):Void{
+    private function Assign_Void():Void{ super.Assign_Void(); }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    private function Button_Void(_addAndEdit_Function:Function):Void{
 
         super.Button_Void();
 
@@ -80,7 +89,7 @@ class MuseumAddAndEditUIPopup_Object extends UIPopup_Object{
                     false,
                     tagName_String
                 );
-            
+
 
 
 
@@ -126,7 +135,7 @@ class MuseumAddAndEditUIPopup_Object extends UIPopup_Object{
                 explanation_String_Array.push
                     (explanation_TextInput_Struct_Array[loopCounter1_Int]._Text_Input.text);
             }
-            
+
 
 
 
@@ -174,6 +183,22 @@ class MuseumAddAndEditUIPopup_Object extends UIPopup_Object{
         ){ _addAndEdit_Function(); }
 
     }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    private function Init_Void():Void{ super.Init_Void(); }
+    /*==================================================*/
+
+
+
+
+
+    /*==================================================*/
+    private function Update_Void():Void{ super.Update_Void(); }
     /*==================================================*/
 
 
